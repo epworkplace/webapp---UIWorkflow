@@ -1,11 +1,22 @@
 {
-  "name": "EditPlace webapp",
+  "name": "EditPlace-webapp",
   "version": "1.0.0",
   "description": "UIWorkflow for WebApp a Web Application Development for Edit Place India.",
   "main": "index.js",
   "scripts": {
 
   },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/epworkplace/webapp-UIWorkflow.git"
+  },
+  "keywords": [ ],
+  "author": "Kathirr007",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epworkplace/webapp-UIWorkflow.git/issues"
+  },
+  "homepage": "https://github.com/epworkplace/webapp-UIWorkflow.git#readme",
   "author": "Edit Place India",
   "license": "ISC",
   "devDependencies": {

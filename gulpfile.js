@@ -1,20 +1,6 @@
  // Include gulp and plugins
  var
 	gulp = require('gulp'),
-	// newer = require('gulp-newer'),
-	// concat = require('gulp-concat'),
-	// preprocess = require('gulp-preprocess'),
-	// htmlclean = require('gulp-htmlclean'),
-	// imagemin = require('gulp-imagemin'),
-	// imacss = require('gulp-imacss'),
-	// sass = require('gulp-sass'),
-	// pleeease = require('gulp-pleeease'),
-	// sourcemaps = require('gulp-sourcemaps'),
-	// jshint = require('gulp-jshint'),
-	// deporder = require('gulp-deporder'),
-	// stripdebug = require('gulp-strip-debug'),
-	// uglify = require('gulp-uglify'),
-	// size = require('gulp-size'),
 	del = require('del'),
 	browsersync = require('browser-sync'),
 	pkg = require('./package.json'),
@@ -24,8 +10,8 @@
 var
 	devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),
 
-	source = 'source/',
-	dest = 'build/',
+	source = 'lbd/',
+	dest = devBuild ? 'builds/development/' : 'builds/production/',
 
 	html = {
 		in: source + '*.html',
@@ -39,24 +25,24 @@ var
 	},
 
 	images = {
-		in: source + 'images/*.*',
-		out: dest + 'images/'
+		in: source + 'img/**/*',
+		out: dest + 'img/'
 	},
 
-	imguri = {
-		in: source + 'images/inline/*',
-		out: source + 'scss/images/',
-		filename: '_datauri.scss',
-		namespace: 'img'
-	},
+	// imguri = {
+	// 	in: source + 'img/inline/*',
+	// 	out: source + 'scss/img/',
+	// 	filename: '_datauri.scss',
+	// 	namespace: 'img'
+	// },
 
 	css = {
-		in: source + 'scss/main.scss',
-		watch: [source + 'scss/**/*', '!' + imguri.out + imguri.filename],
+		in: source + 'sass/light-bootstrap-dashboard.scss',
+		watch: [source + 'sass/**/*'],
 		out: dest + 'css/',
 		sassOpts: {
 			outputStyle: 'nested',
-			imagePath: '../images',
+			imagePath: '../img',
 			precision: 3,
 			errLogToConsole: true
 		},
@@ -74,14 +60,20 @@ var
 
 	fonts = {
 		in: source + 'fonts/*.*',
-		out: css.out + 'fonts/'
+		out: dest + 'fonts/'
 	},
 
 	js = {
 		in: source + 'js/**/*',
-		out: dest + 'js/',
-		filename: 'main.js'
+		out: dest + 'js/'
+		// filename: 'main.js'
 	},
+
+  jsLibs = {
+    in: source + 'lib/**/*',
+    out: dest + 'lib/'
+    // filename: 'main.js'
+  },
 
 	syncOpts = {
 		server: {
@@ -123,12 +115,12 @@ gulp.task('images', function() {
 });
 
 // convert inline images to dataURIs in SCSS source
-gulp.task('imguri', function() {
-	return gulp.src(imguri.in)
-		.pipe($.imagemin())
-		.pipe($.imacss(imguri.filename, imguri.namespace))
-		.pipe(gulp.dest(imguri.out));
-});
+// gulp.task('imguri', function() {
+// 	return gulp.src(imguri.in)
+// 		.pipe($.imagemin())
+// 		.pipe($.imacss(imguri.filename, imguri.namespace))
+// 		.pipe(gulp.dest(imguri.out));
+// });
 
 // copy fonts
 gulp.task('fonts', function() {
@@ -138,7 +130,7 @@ gulp.task('fonts', function() {
 });
 
 // compile Sass
-gulp.task('sass', ['imguri'], function() {
+gulp.task('sass', [], function() {
 	return gulp.src(css.in)
 		.pipe($.sourcemaps.init())
 		.pipe($.sass(css.sassOpts))
@@ -150,13 +142,14 @@ gulp.task('sass', ['imguri'], function() {
 		.pipe(browsersync.reload({ stream: true }));
 });
 
+// js tasks
 gulp.task('js', function() {
 	if (devBuild) {
 		return gulp.src(js.in)
 			.pipe($.newer(js.out))
-			.pipe($.jshint())
-			.pipe($.jshint.reporter('default'))
-			.pipe($.jshint.reporter('fail'))
+			// .pipe($.jshint())
+			// .pipe($.jshint.reporter('default'))
+			// .pipe($.jshint.reporter('fail'))
 			.pipe(gulp.dest(js.out));
 	}
 	else {
@@ -174,27 +167,55 @@ gulp.task('js', function() {
 	}
 });
 
+// copy js libraries
+gulp.task('jslib', function() {
+  if (devBuild) {
+    return gulp.src(jsLibs.in)
+      .pipe($.newer(jsLibs.out))
+      // .pipe($.jshint())
+      // .pipe($.jshint.reporter('default'))
+      // .pipe($.jshint.reporter('fail'))
+      .pipe(gulp.dest(jsLibs.out));
+  }
+  else {
+    del([
+      dest + 'js/lib/*'
+    ]);
+    return gulp.src(jsLibs.in)
+      .pipe($.deporder())
+      .pipe($.concat(jsLibs.filename))
+      .pipe($.size({ title: 'JS libraries in '}))
+      .pipe($.stripDebug())
+      .pipe($.uglify())
+      .pipe($.size({ title: 'JS libraries out '}))
+      .pipe(gulp.dest(jsLibs.out));
+  }
+});
+
 // browser sync
 gulp.task('browsersync', function() {
 	browsersync(syncOpts);
 });
 
-// default task
-gulp.task('default', ['html', 'images', 'fonts', 'sass', 'js', 'browsersync'], function() {
+gulp.task('watch', function() {
+  // html changes
+  gulp.watch(html.watch, ['html', browsersync.reload]);
 
-	// html changes
-	gulp.watch(html.watch, ['html', browsersync.reload]);
+  // image changes
+  gulp.watch(images.in, ['images']);
 
-	// image changes
-	gulp.watch(images.in, ['images']);
+  // font changes
+  gulp.watch(fonts.in, ['fonts']);
 
-	// font changes
-	gulp.watch(fonts.in, ['fonts']);
+  // sass changes
+  gulp.watch([css.watch], ['sass']);
 
-	// sass changes
-	gulp.watch([css.watch, imguri.in], ['sass']);
+  // javascript changes
+  gulp.watch(js.in, ['js', browsersync.reload]);
 
-	// javascript changes
-	gulp.watch(js.in, ['js', browsersync.reload]);
-
+  // javascript libraries changes
+  gulp.watch(jsLibs.in, ['jslib', browsersync.reload]);
 });
+
+// default task
+gulp.task('default', ['html', 'images', 'fonts', 'sass', 'js', 'jslib', 'browsersync', 'watch']);
