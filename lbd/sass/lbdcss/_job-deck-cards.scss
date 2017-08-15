@@ -1,0 +1,432 @@
+/*Card Design Starts*/
+
+.card-container{
+  >ul{
+    white-space: nowrap;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: calc(100vh - 96px);
+    li.decks{
+      width: 350px;
+      margin: 0 -4px 0 0;
+      padding: 15px;
+      height: 100%;
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: top;
+      white-space: nowrap;
+      overflow-y: scroll;
+      .card-wrap{
+        padding: 15px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: flex; 
+        position: relative;
+        white-space: normal;
+        overflow-y: auto;
+      }
+    }
+    li.decks:nth-child(even){
+      background: #edeff1;
+    }
+  }
+}
+
+
+.card-box{
+  .card-header{
+    .card-icon{
+      padding: 0;
+      width: 15px;
+      margin-right: 10px;
+      i{
+        font-size: 20px;
+        color: #9a9fa9;
+        margin-top: -2px;
+      }
+    }
+    .header{
+      padding: 0;
+      color: #9a9fa9;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .check-card{
+      padding: 0;
+      label.checkbox{
+        float: right;
+        margin: 0;
+        padding: 0 15px 0 0;
+      }
+    }
+  }
+  .card-title{
+    text-align:center;
+    &.draft{
+      font-weight: 400;
+      color: #d7d9dc;
+      font-style: italic;
+    }
+    a{
+      font-size: 14px;
+      font-weight: 600;
+      color: #353f53;
+      &:hover{
+        color: #448AFF;
+      }
+    }
+  }
+  .card-label{
+    margin-bottom:5px;
+    padding:0px;
+  }
+  .card-body{
+    padding: 30px 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+  }
+  .card-footer{
+    @include clearfix();
+    padding-top: 15px;
+    border-top: 2px solid #f6f6f7;
+    .card-details{
+      padding: 0;
+      text-align: center;
+      font-size: 14px;
+      color: #353f53;
+      font-weight: 600;
+      span{
+        display: block; 
+        color: #9a9fa9;
+        font-size: 12px;
+      }
+      .btn-download {
+        background: #fec500;
+        color:#ffffff;
+        border: none;
+        &:hover {
+          background: #cea000;
+        }
+      }
+    }
+  }
+  &.selected {
+    border: 2px solid #448AFF;
+    input[checked] {
+      color: #448AFF;
+    }
+    .second-icon{
+      color: #448AFF;
+    }
+  }
+  &.draft{
+    color: #d7d9dc;
+  }  
+}
+
+.open-card{
+  a{
+    display: block;
+    color: #d7d9dc;
+    width: 40px;
+    height: 40px;
+    border: 2px dashed #d7d9dc;
+    border-radius: 50%;
+    position: relative;
+    i{
+      position: absolute;
+      top: 6px;
+      left: 6px;
+    }
+    &:hover{
+      color: #448AFF;
+      border: 2px solid #448AFF;
+    }
+  }
+}
+
+.card-user{
+  width: 82px!important;
+  height: 52px;
+  margin-right: 0;
+  /* &:nth-last-of-type(1){
+    margin-right: 0;
+  } */
+  padding: 0 15px;
+  img{
+    max-width: 52px;
+  }
+  .card-user-empty{
+    display: flex;
+    color: #353f53;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-weight:bold;
+    position: relative;
+  }
+  .card-user-empty.writer{
+    border: 2px dashed #d7d9dc;
+    color: #d7d9dc;
+  }
+  .card-user-empty.proofreader{
+    border: 2px solid #d7d9dc;
+    background: #d7d9dc;
+    color: #ffffff;
+  }
+  &.chevron{
+    position: relative;
+    &:before{
+      content: "\E5CC";
+      font-family: "Material Icons";
+      position: absolute;
+      top: 18px;
+      right: -5px;
+      font-size: 12px;
+      color: #d9dbde;
+    }
+  }
+}
+
+
+.new-card{
+  min-height: 180px;
+  .new-card-header{
+    margin-bottom: 5px;
+    .new-card-header{
+      padding: 0!important;
+      font-size: 16px;
+      font-weight: 600;
+      color: #353f53;
+    }
+    .close-new-card{
+      padding: 0!important;
+      a.close{
+        i{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .type-date{
+    margin-bottom: 15px;
+    .card-type{
+      padding-left: 0;
+      button{
+        border: 1px solid #eaebed;
+        height: 35px;
+        padding: 8px;
+        width: 120px;
+      }
+    }
+    .card-due{
+      padding-right: 0;
+      input[type="text"]{
+        border: 1px solid #eaebed;
+        height: 35px;
+      }
+      .bootstrap-datetimepicker-widget{
+        z-index: 99999!important;
+        position: relative!important;
+        top: 0px!important;
+      }
+    }
+  }
+  .new-card-title{
+    label{
+      text-align: center;
+      color: #a3a3a3;
+      width: 100%;
+      display: block;
+    }
+    textarea{
+      overflow: hidden;
+      width: 100%;
+      color: #ababab;
+      font-size:18px;
+      display: block;
+      border: transparent;
+      resize: none;
+      text-align: center;
+    }
+    button{
+      margin-top: 5px;
+      width: 100%;
+      font-weight: 600;
+    }
+  }
+}
+
+.deck-header{
+  margin-bottom: 20px;
+  .date-summary{
+    padding: 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: #353f53;
+    text-transform: uppercase;
+    span.summary{
+      display: block;
+      font-size: 12px;
+      color: #a2a7b0;
+      font-weight: 400;
+      text-transform: none;
+    }
+  }
+  .select-container{
+    text-align: right;
+    padding: 14px 0 0 0;
+    a{
+      font-size: 14px;
+      text-decoration: underline;
+      color: #448AFF;
+      &:hover, &:focus, &.active{
+        color: #353f53;
+      }
+    }
+    span{
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #353f53;
+    }
+  }
+}
+
+.select-card-actions{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button{
+    width: 90px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 5px;
+    padding: 8px;
+    border: none;
+    &.validate{
+      background: #d7d9dc;
+      &:hover{
+        background: #b9bbbf;
+      }
+    }
+    &.duplicate{
+      background: #448aff;
+      &:hover{
+        background: #2962FF;
+      }
+    }
+    &.delete{
+      background: #ee0a5f;
+      &:hover{
+        background: #b70a4a;
+      }
+    }
+  }
+  button:nth-of-type(1){
+    margin-left: 0;
+  }
+  button:nth-last-of-type(1){
+    margin-right: 0;
+  }
+}
+
+.add-new-card, .add-new-assessment, .add-new-block{
+  margin-bottom: 20px;
+  a.add-card{
+    display: block;
+    width: 100%;
+    height: 50px;
+    color: #D7D9DC;
+    text-align: center;
+    border: 2px dashed #D7D9DC;
+    border-radius: 4px;
+    transition: all .3s ease;
+    i{
+      line-height: 44px;
+    }
+    &:hover{
+      border: 2px solid #448AFF;
+      i{
+        color: #448AFF;
+      }
+    }
+  }
+}
+
+.add-new-assessment{
+  padding: 0;
+  ul.new-assessment-list{
+    width: 100%;
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    &:before, &:after{
+      border: none;
+      content: none;
+    }
+    li{
+      a{
+        font-size: 12px;
+        color: #9a9fa9;
+        &:hover{
+          color: #fff;
+          background: #448AFF;
+        }
+      }
+    }
+  }
+}
+
+/*Card Design Ends*/
+
+/* Slider for multiple user Starts*/
+
+.slider {
+  width: 60%;
+  margin: 0 auto;
+}
+.slick-slide {
+  margin: 0px;
+  padding: 0 15px;
+  outline: none;
+
+}
+.slick-list{
+  /* padding: 0px!important; */
+}
+.slick-slide img {
+  width: 52px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #353f53!important;
+}
+.slick-prev {
+  left: -60px!important;
+}
+.slick-next {
+  right: -60px!important;
+}
+
+/* Slider for multiple user Ends*/
+

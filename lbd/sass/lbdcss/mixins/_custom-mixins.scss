@@ -1,0 +1,22 @@
+/* Layout 5 , Job deck cards Mixins */
+
+@mixin add-card($bg-color) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+    color: #D7D9DC;
+    background: $bg-color;
+    text-align: center;
+    box-shadow: 1px 1px 2px 1px #eceeef;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+@mixin add-bordered-card($border-style, $bg-color) {
+    @include add-card($bg-color);
+
+    box-shadow: none;
+    border: 2px $border-style #D7D9DC;
+}
