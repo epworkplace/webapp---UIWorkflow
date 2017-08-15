@@ -1,12 +1,12 @@
 {
-  "name": "test",
+  "name": "EditPlace webapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "UIWorkflow for WebApp a Web Application Development for Edit Place India.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
-  "author": "",
+  "author": "Edit Place India",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^1.9.2",
