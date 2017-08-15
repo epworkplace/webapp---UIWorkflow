@@ -37,9 +37,14 @@ var
 	// },
 
 	css = {
-		in: source + 'sass/light-bootstrap-dashboard.scss',
+		in: [source + 'sass/light-bootstrap-dashboard.scss'],
 		watch: [source + 'sass/**/*'],
 		out: dest + 'css/',
+    pluginCSS: {
+      in: [source + 'css/**/*'],
+      watch: [source + 'css/**/*'],
+      out: dest + 'css/'
+    },
 		sassOpts: {
 			outputStyle: 'nested',
 			imagePath: '../img',
@@ -49,7 +54,7 @@ var
 		pleeeaseOpts: {
 			"autoprefixer": { browsers: ['last 2 versions', '> 2%'] },
 			"rem": ['16px'],
-			"sass": true,
+			"sass": false,
 			"import": true,
 			"sourcemaps": false,
 			"pseudoElements": true,
@@ -127,6 +132,19 @@ gulp.task('fonts', function() {
 	return gulp.src(fonts.in)
 		.pipe($.newer(fonts.out))
 		.pipe(gulp.dest(fonts.out));
+});
+
+// copy plugin css
+gulp.task('css', [], function() {
+  return gulp.src(css.pluginCSS.in)
+    .pipe($.sourcemaps.init())
+    // .pipe($.sass(css.sassOpts))
+    .pipe($.size({title: 'CSS in '}))
+    // .pipe($.pleeease(css.pleeeaseOpts))
+    // .pipe($.sourcemaps.write('./maps'))
+    .pipe($.size({title: 'CSS out '}))
+    .pipe(gulp.dest(css.out))
+    .pipe(browsersync.reload({ stream: true }));
 });
 
 // compile Sass
@@ -210,6 +228,9 @@ gulp.task('watch', function() {
   // sass changes
   gulp.watch([css.watch], ['sass']);
 
+  // pluginCSS changes
+  gulp.watch([css.pluginCSS.watch], ['css']);
+
   // javascript changes
   gulp.watch(js.in, ['js', browsersync.reload]);
 
@@ -218,4 +239,4 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'sass', 'js', 'jslib', 'browsersync', 'watch']);
+gulp.task('default', ['html', 'images', 'fonts', 'sass', 'css', 'js', 'jslib', 'browsersync', 'watch']);
