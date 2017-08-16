@@ -1368,6 +1368,29 @@ html {
 
 /* Steps Timeline Starts */
 
+.card-notification{
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #448AFF;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    &:before{
+      /* content: "\E834";
+      font-family: "Material Icons"; */
+      font-family: FontAwesome;
+      content: "\f046";
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      font-size: 18px;
+    }
+    span{
+      font-weight: 600;
+    }
+}
+
 .assessment-list-container {
     padding: 0 0 200px 0;
 
@@ -1563,12 +1586,15 @@ html {
                             margin-right: 5px;
                         }
 
-                        &.setup {
+                        &.done {
                             color: #448AFF;
 
                             i {
-                                margin-right: 15px;
+                                margin-right: 10px;
                             }
+                        }
+                        &.disable{
+                          color: #d9dbde;
                         }
 
                         &.timer {
@@ -4064,7 +4090,6 @@ html {
     align-items: center;
     border: 2px dashed #d2d4de;
     border-radius: 6px;
-
     .no-job-info {
         h4 {
             color: #9a9fa9;
@@ -4076,7 +4101,6 @@ html {
             color: #9a9fa9;
             text-align: center;
         }
-
         p {
             font-size: 14px;
             color: #9a9fa9;
@@ -4105,12 +4129,10 @@ html {
             text-align: center;
             font-weight: 700;
         }
-
         p {
             color: #9a9fa9;
             text-align: center;
         }
-
         a.add-card {
             display: block;
             width: 100%;
@@ -4120,11 +4142,9 @@ html {
             border: 2px dashed #9a9fa9;
             border-radius: 4px;
             transition: all .3s ease;
-
             i {
                 line-height: 44px;
             }
-
             &:hover, &:focus {
                 border: 2px solid #448AFF;
 
@@ -4134,6 +4154,43 @@ html {
             }
         }
     }
+}
+
+.update-job-container{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #d2d4de;
+  border-radius: 6px;
+  #upload-job{
+    display: none;
+  }
+  .update-job-info {
+    h4 {
+      color: #9a9fa9;
+      font-size: 16px;
+      text-align: center;
+      font-weight: 700;
+      padding: 0;
+      margin: 0;
+      color: #9a9fa9;
+      text-align: center;
+    }
+    p{
+      font-size: 14px;
+      color: #9a9fa9;
+      text-align: center;
+      color: #9a9fa9;
+      text-align: center;
+    }
+  }
 }
 
 .track-overview {
@@ -4149,7 +4206,6 @@ html {
         top: 15px;
         z-index: 9;
         font-size: 12px;
-
         a {
             color: #448AFF;
             text-decoration: underline;
@@ -4159,10 +4215,8 @@ html {
             }
         }
     }
-
     .track-elements {
         @include clearfix;
-
         padding: 0;
         margin: 0;
         list-style: none;
@@ -4177,7 +4231,6 @@ html {
         .track-element {
             text-align: center;
             padding: 0;
-
             .header {
                 padding: 0;
                 margin: 0 0 10px 0;
@@ -4185,13 +4238,11 @@ html {
                 color: #353f53;
                 font-weight: 600;
             }
-
             .numbers {
                 color: #353f53;
                 font-size: 17px;
                 font-weight: 600;
             }
-
             .tag {
                 font-size: 12px;
                 color: #a2a6b0;
@@ -4199,7 +4250,6 @@ html {
             }
         }
     }
-
     .track-date-due {
         @include clearfix;
 
@@ -4246,7 +4296,6 @@ html {
         display: block;
         width: 100%;
         height: 10px;
-
         svg {
             border-radius: 10px;
         }
@@ -4267,7 +4316,6 @@ html {
         }
     }
 }
-
 .drop-files {
     padding: 50px 0;
     text-align: center;
@@ -4388,72 +4436,6 @@ html {
 
 /*Step Settings for Layout Endss*/
 
-/* Time Picker Starts */
-
-.time-picker {
-    input {
-        width: 33.333% !important;
-        float: left !important;
-    }
-
-    input:nth-of-type(1) {
-        border-right: 0 !important;
-    }
-
-    .divider {
-        width: 0;
-        position: relative;
-
-        &:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 7px;
-            width: 1px;
-            height: 20px;
-            background: #eee;
-            z-index: 9;
-        }
-    }
-
-    input:nth-of-type(2) {
-        border-left: 0 !important;
-        border-right: 0 !important;
-    }
-
-    .input-group-addon {
-        width: 33.333% !important;
-        float: left !important;
-        padding: 0;
-
-        .btn-group {
-            border: 0 !important;
-            border-color: transparent !important;
-
-            button {
-                width: 100%;
-                border: 0;
-                position: relative;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 7px;
-                    width: 1px;
-                    height: 20px;
-                    background: #eee;
-                }
-            }
-        }
-    }
-
-    .bootstrap-select.open > .btn.dropdown-toggle, .bootstrap-select > .dropdown-toggle {
-        border: 1px solid transparent !important;
-    }
-}
-
-/* Time Picker Ends */
 
 /* Source Mission Default Assets Starts*/
 .source-turnover-jobs-wrap {
@@ -5007,6 +4989,14 @@ html {
 
     &:hover {
         background: #9C9696;
+    }
+}
+
+.pause-link {
+    background: #353f53;
+
+    &:hover {
+        background: #9a9fa9 ;
     }
 }
 
@@ -6346,12 +6336,271 @@ html {
 
 /*Nav Progress Steps Ends*/
 
+
+/* Job List Starts */
+
+.job-list-container{
+  margin-top: 20px;
+  .job-list-card{
+    margin-bottom: 20px;
+    .job-list{
+      min-height: 80px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      align-items: center;
+      .user-image{
+        width: 40px;
+        padding: 0;
+        margin-right: 5px;
+        img{
+          max-width: 100%;
+        }
+        i{
+          font-size: 27px;
+          color: #dfe2e5;
+          text-align: center;
+          display: block;
+        }
+      }
+      .job-content{
+        .file-name{
+          color: #353f53;
+          font-size: 14px;
+          font-weight: 600;
+        }
+        .update-info{
+          color: #a0a5af;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+      .plagiarism-similarity{
+        padding: 0;
+        .similarity-value{
+          padding: 5px;
+          background: #f3f5f7;
+          border-radius: 4px;
+          height: 50px;
+          text-align: center;
+          color: #d9dbde;
+          font-size: 14px;
+          color: #353f53;
+          font-weight: 700;
+          span{
+            display: block;
+            color: #a0a5af;
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+      }
+      .report{
+        padding: 0;
+        width: 34.333%;
+        a.report-files{
+          float: right;
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+          i{
+            font-size: 25px;
+            color: #353f53;
+          }
+        }
+      }
+      .job-list-actions{
+        padding: 0;
+        width: 35.333%;
+        .btn-yes, .btn-cancel{
+          margin-right: 10px;
+        }
+        .btn-yes, .btn-disapprove, .btn-cancel, .btn-confirm, .btn-download{
+          width: 48%!important;
+        }
+      }
+      .cta-container {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 43%;
+        height: 100%;
+        background: #fff;
+        .cta {
+          float: right;
+          display: flex;
+          -webkit-flex-flow: row wrap;
+          align-items: center;
+          height: 100%;
+          position: absolute;
+          right: 25px;
+          ul{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            li{
+              display: inline-block;
+              margin-right: 20px;
+              a{
+                cursor: pointer;
+                color: #DFE1E3;
+                span{
+                  cursor: pointer;
+                }
+                &:hover, &:focus {
+                  color: #485262;
+                } 
+              }
+            }
+            li:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      &:hover{
+        .cta-container{
+          visibility: visible;
+          opacity: 1;
+          transition: all .3s ease;
+        }
+      }
+    }
+    .rate-review{
+      margin-bottom: 10px;
+      .rating {
+        line-height: 19px;
+        border-right: 2px solid #f5f5f6;
+        .title {
+          float: left;
+          color: #9ea3ac;
+          font-weight: 600;
+          font-size: 12px;
+          margin-right: 2px;
+        }
+        .star-rating {
+          float: left;
+        }
+        .rate {
+          float: right;
+          color: #9ea3ac;
+          font-weight: 600;
+          font-size: 12px;
+        }
+      }
+      .review-link {
+        position: relative;
+        width: 17.666%;
+        a{
+          font-size: 14px;
+          color: #353f53;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        .review-show {
+          &:before {
+            content: "\E316";
+            font-family: "Material Icons";
+            position: absolute;
+            top: 0px;
+            right: 20px;
+          }
+        }
+        .review-hide {
+          &:before {
+            content: "\E313";
+            font-family: "Material Icons";
+            position: absolute;
+            top: 0px;
+            right: 20px;
+          }
+        }
+      }
+      .approval {
+        font-size: 14px;
+        color: #448AFF;
+        font-weight: 600;
+        text-align: right;
+      }
+      .disapproval {
+        font-size: 14px;
+        color: #ee0a5f;
+        font-weight: 600;
+        text-align: right;
+      }
+      .reviews {
+        margin-top: 10px;
+        overflow-y: auto;
+        max-height: calc(82vh - 250px);
+        .review {
+          background: #f7f9fa;
+          border-radius: 4px;
+          padding: 15px;
+          margin-top: 10px;
+          .review-post-head {
+            margin-bottom: 10px;
+            .review-author {
+              color: #353f53;
+              font-size: 14px;
+              font-weight: 600;
+            }
+            .post-time {
+              color: #a9aeb7;
+              text-align: right;
+              font-size: 12px;
+            }
+          }
+          .review-post {
+            color: #a9aeb7;
+            font-size: 14px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+  .previous-job-section{
+    margin-bottom: 20px;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #e5e7e9;
+      z-index: -1;
+    }
+    .title{
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #9a9fa9;
+      background: #FAFAFA;
+      padding-right: 12px;
+    }
+  }
+}
+
+/* Job List Ends */
+
+
 .btn-yes {
     width: 48.5% !important;
     color: #fff !important;
     background: #69A1FF !important;
     border: 1px solid #69A1FF !important;
-
     &:hover {
         color: #fff !important;
         background: #447DF7 !important;
@@ -6364,7 +6613,6 @@ html {
     color: #fff !important;
     background: #a9a9a9 !important;
     border: 1px solid #a9a9a9 !important;
-
     &:hover {
         color: #fff !important;
         background: #353F53 !important;
@@ -6377,11 +6625,34 @@ html {
     color: #fff !important;
     background: #ee0a5f !important;
     border: 1px solid #ee0a5f !important;
-
     &:hover {
         color: #fff !important;
         background: #b70a4a !important;
         border: 1px solid #b70a4a !important;
+    }
+}
+
+.btn-confirm {
+    width: 48.5% !important;
+    color: #fff !important;
+    background: #353f53 !important;
+    border: 1px solid #353f53 !important;
+    &:hover {
+        color: #fff !important;
+        background: #9a9fa9 !important;
+        border: 1px solid #9a9fa9 !important;
+    }
+}
+
+.btn-download {
+    width: 48.5% !important;
+    color: #fff !important;
+    background: #fec500 !important;
+    border: 1px solid #fec500 !important;
+    &:hover {
+        color: #fff !important;
+        background: #cea000 !important;
+        border: 1px solid #cea000 !important;
     }
 }
 
@@ -7064,8 +7335,12 @@ html {
                         color: #448AFF;
                         font-weight: 600;
                         text-align: right;
-
-                        i {}
+                    }
+                    .disapproval {
+                      font-size: 14px;
+                      color: #ee0a5f;
+                      font-weight: 600;
+                      text-align: right;
                     }
 
                     .reviews {
@@ -7266,6 +7541,58 @@ html {
 
 /*Share Announce Media Modal Ends*/
 
+/* Report File Modal Starts*/
+
+.report-file-modal {
+    .report-file-modal-title {
+        margin-bottom: 20px;
+
+        .candidate-image {
+            width: 52px;
+            padding: 0;
+
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+
+        .modal-title {
+            font-size: 20px;
+            color: #353f53;
+            font-weight: 600;
+            margin-bottom: 20px;
+
+            span {
+                display: block;
+                font-size: 14px;
+                color: #9ca1ab;
+                font-weight: 400;
+            }
+        }
+    }
+
+    label {
+        color: #9ca1ab;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .reason, .comment {
+        margin-bottom: 20px;
+    }
+
+    .confirm-action {
+        margin-top: 20px;
+
+        .btn-confirm {
+            width: 100%!important;
+        }
+    }
+}
+
+/* Report File Modal Ends*/
+
 /* Disapprove Modal Starts*/
 
 .disapprove-modal {
@@ -7340,16 +7667,8 @@ html {
     .confirm-action {
         margin-top: 20px;
 
-        .btn-confirm {
-            width: 100%;
-            background: #ee0a5f;
-            color: #fff;
-            border: none;
-            font-weight: 600;
-
-            &:hover {
-                background: #b70a4a;
-            }
+        .btn-disapprove {
+            width: 100%!important;
         }
     }
 
@@ -7464,16 +7783,8 @@ html {
     .confirm-action {
         margin-top: 20px;
 
-        .btn-confirm {
-            width: 100%;
-            background: #69A1FF;
-            color: #fff;
-            border: none;
-            font-weight: 600;
-
-            &:hover {
-                background: #447DF7;
-            }
+        .btn-disapprove {
+            width: 100%!important;
         }
     }
 
@@ -7514,6 +7825,51 @@ html {
 
 /* Approve Modal Ends*/
 
+/* Confirm Modal Starts*/
+
+.confirm-modal {
+  .confirm-modal-title {
+    margin-bottom: 20px;
+      .candidate-image {
+        width: 52px;
+        padding: 0;
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      .modal-title {
+        font-size: 20px;
+        color: #353f53;
+        font-weight: 600;
+        margin-bottom: 20px;
+        span {
+          display: block;
+          font-size: 14px;
+          color: #9ca1ab;
+          font-weight: 400;
+        }
+      }
+    }
+    label {
+      color: #9ca1ab;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .comment {
+      margin-bottom: 20px;
+    }
+    .confirm-action {
+      margin-top: 20px;
+      .btn-confirm {
+        width: 100%!important;
+    }
+  }
+}
+
+/* Confirm Modal Ends*/
+
+
 /* Send Message Display and Edit Starts */
 
 .send-message-container {
@@ -7523,28 +7879,28 @@ html {
             padding: 30px;
             color: #353f53;
             position: relative;
-
             a.edit-message {
                 position: absolute;
-                bottom: 45px;
+                bottom: 30px;
                 right: 30px;
             }
-
             p {
                 padding: 15px 0;
                 color: #353f53;
                 font-weight: 400;
                 font-size: 12px;
                 line-height: 1.6;
-
+                margin: 0;
                 strong, b {
-                    font-weight: 600;
+                  font-weight: 600;
                 }
-
+                span.important{
+                  font-weight: 600;
+                  color: #ee0a5f;
+                }
                 a {
                     color: #448AFF;
                     text-decoration: underline;
-
                     &:hover {
                         text-decoration: none;
                     }

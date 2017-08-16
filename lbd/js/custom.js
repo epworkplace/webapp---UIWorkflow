@@ -53,6 +53,7 @@ $(document).ready(function(){
 	    $("#upload:hidden").trigger('click');
 	});
 
+
 	//Custom Scrollbar
 	$(".floating-box-body .panel #panel-body, .month-values-panel").mCustomScrollbar({ 
 		autoDraggerLength: false,
@@ -446,6 +447,30 @@ $(document).ready(function(){
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
 	  });
+
+	//tinyMCE Send Job Confirm Message intregation
+	tinymce.init({
+	    selector: '#editSendJobConfirmMessage',
+	    statusbar: false,
+  		menubar : false,
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+	  });
+
+	//tinyMCE Send Job Cancel Message intregation
+	tinymce.init({
+	    selector: '#editSendJobCancelMessage',
+	    statusbar: false,
+  		menubar : false,
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+	  });
+
+	//tinyMCE Send Report File Message intregation
+	tinymce.init({
+	    selector: '#editReportFileMessage',
+	    statusbar: false,
+  		menubar : false,
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+	  });
 	
 
 
@@ -733,6 +758,14 @@ $(document).ready(function(){
 	$('.candidate-action-container .review-link a').click(function(){
 		$('.candidate-action-container .reviews').slideToggle(400);
 		$('.candidate-action-container .review-link').find(".review-show, .review-hide").toggle();
+	});
+
+		//Slide Review Job Task Review
+	$('.job-list-card .reviews').hide();
+	$('.job-list-cardr .review-show').hide();
+	$('.job-list-card .review-link a').click(function(){
+		$(this).parents('.rate-review').find('.reviews').slideToggle(400);
+		$(this).parents('.review-link').find(".review-show, .review-hide").toggle();
 	});
 
 	//Plagiarism content Candidate Task Test Article
