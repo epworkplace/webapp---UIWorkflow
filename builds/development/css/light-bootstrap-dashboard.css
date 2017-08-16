@@ -20864,7 +20864,7 @@ body.mce-content-body {
               align-items: center; }
       .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown {
         width: 450px;
-        padding: 15px;
+        padding: 0px;
         left: calc(-50% + 35px); }
         .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown:before, .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown:after {
           left: 50%; }
