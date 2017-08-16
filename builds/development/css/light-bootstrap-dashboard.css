@@ -20567,7 +20567,7 @@ body.mce-content-body {
       .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown {
         width: 400px;
         padding: 15px;
-        left: -50%; }
+        left: calc(-50% + 60px); }
         .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown:before, .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown:after {
           left: 50%; }
         .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown .date-filter div {
@@ -20617,6 +20617,8 @@ body.mce-content-body {
           border-left: 2px solid #eaebed; }
         .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .btn.cards-filter-dropup {
           width: 185px; }
+          .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .btn.cards-filter-dropup:hover, .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .btn.cards-filter-dropup:focus {
+            background: none; }
     .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .tab-panel-container {
       width: 33.333%;
       transition: all .3s ease; }

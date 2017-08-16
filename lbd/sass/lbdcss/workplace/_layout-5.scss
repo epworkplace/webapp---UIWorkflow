@@ -272,7 +272,7 @@
                             .cards-filter-dropdown {
                                 width: 400px;
                                 padding: 15px;
-                                left: -50%;
+                                left: calc(-50% + 60px);
 
                                 &:before, &:after {
                                     left: 50%;
@@ -337,6 +337,9 @@
 
                                 &.cards-filter-dropup {
                                     width: 185px;
+                                    &:hover, &:focus{
+                                        background: none;
+                                    }
                                 }
                             }
                         }
