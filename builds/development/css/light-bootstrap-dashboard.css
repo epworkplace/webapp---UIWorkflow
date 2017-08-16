@@ -14289,6 +14289,26 @@ html {
 
 /* Layout-2 Changes Ends */
 /* Steps Timeline Starts */
+.card-notification {
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #448AFF;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  position: relative; }
+  .card-notification:before {
+    /* content: "\E834";
+      font-family: "Material Icons"; */
+    font-family: FontAwesome;
+    content: "\f046";
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    font-size: 18px; }
+  .card-notification span {
+    font-weight: 600; }
+
 .assessment-list-container {
   padding: 0 0 200px 0; }
   .assessment-list-container ul {
@@ -14438,10 +14458,12 @@ html {
             font-weight: 700; }
             .assessment-list-container ul li .assessment-box .assessment-card .assessment-label i {
               margin-right: 5px; }
-            .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.setup {
+            .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.done {
               color: #448AFF; }
-              .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.setup i {
-                margin-right: 15px; }
+              .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.done i {
+                margin-right: 10px; }
+            .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.disable {
+              color: #d9dbde; }
             .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.timer {
               color: #353f53; }
               .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.timer i {
@@ -16119,6 +16141,39 @@ html {
       .no-card-container .no-card-placeholder a.add-card:hover i, .no-card-container .no-card-placeholder a.add-card:focus i {
         color: #448AFF; }
 
+.update-job-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px dashed #d2d4de;
+  border-radius: 6px; }
+  .update-job-container #upload-job {
+    display: none; }
+  .update-job-container .update-job-info h4 {
+    color: #9a9fa9;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    color: #9a9fa9;
+    text-align: center; }
+  .update-job-container .update-job-info p {
+    font-size: 14px;
+    color: #9a9fa9;
+    text-align: center;
+    color: #9a9fa9;
+    text-align: center; }
+
 .track-overview {
   padding: 35px 20px;
   position: relative; }
@@ -16296,55 +16351,6 @@ html {
           background: #448aff; }
 
 /*Step Settings for Layout Endss*/
-/* Time Picker Starts */
-.time-picker input {
-  width: 33.333% !important;
-  float: left !important; }
-
-.time-picker input:nth-of-type(1) {
-  border-right: 0 !important; }
-
-.time-picker .divider {
-  width: 0;
-  position: relative; }
-  .time-picker .divider:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 7px;
-    width: 1px;
-    height: 20px;
-    background: #eee;
-    z-index: 9; }
-
-.time-picker input:nth-of-type(2) {
-  border-left: 0 !important;
-  border-right: 0 !important; }
-
-.time-picker .input-group-addon {
-  width: 33.333% !important;
-  float: left !important;
-  padding: 0; }
-  .time-picker .input-group-addon .btn-group {
-    border: 0 !important;
-    border-color: transparent !important; }
-    .time-picker .input-group-addon .btn-group button {
-      width: 100%;
-      border: 0;
-      position: relative; }
-      .time-picker .input-group-addon .btn-group button:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 7px;
-        width: 1px;
-        height: 20px;
-        background: #eee; }
-
-.time-picker .bootstrap-select.open > .btn.dropdown-toggle, .time-picker .bootstrap-select > .dropdown-toggle {
-  border: 1px solid transparent !important; }
-
-/* Time Picker Ends */
 /* Source Mission Default Assets Starts*/
 .source-turnover-jobs-wrap {
   margin: 0 0 20px 0 !important; }
@@ -16710,6 +16716,11 @@ html {
   background: #353f53; }
   .cancel-link:hover {
     background: #9C9696; }
+
+.pause-link {
+  background: #353f53; }
+  .pause-link:hover {
+    background: #9a9fa9; }
 
 /*Contract-validate Colors End*/
 /* Layout-1 Changes Starts */
@@ -17586,6 +17597,208 @@ html {
 
 /* Disabled button*/
 /*Nav Progress Steps Ends*/
+/* Job List Starts */
+.job-list-container {
+  margin-top: 20px; }
+  .job-list-container .job-list-card {
+    margin-bottom: 20px; }
+    .job-list-container .job-list-card .job-list {
+      min-height: 80px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .job-list-container .job-list-card .job-list .user-image {
+        width: 40px;
+        padding: 0;
+        margin-right: 5px; }
+        .job-list-container .job-list-card .job-list .user-image img {
+          max-width: 100%; }
+        .job-list-container .job-list-card .job-list .user-image i {
+          font-size: 27px;
+          color: #dfe2e5;
+          text-align: center;
+          display: block; }
+      .job-list-container .job-list-card .job-list .job-content .file-name {
+        color: #353f53;
+        font-size: 14px;
+        font-weight: 600; }
+      .job-list-container .job-list-card .job-list .job-content .update-info {
+        color: #a0a5af;
+        font-size: 12px;
+        font-weight: 400; }
+      .job-list-container .job-list-card .job-list .plagiarism-similarity {
+        padding: 0; }
+        .job-list-container .job-list-card .job-list .plagiarism-similarity .similarity-value {
+          padding: 5px;
+          background: #f3f5f7;
+          border-radius: 4px;
+          height: 50px;
+          text-align: center;
+          color: #d9dbde;
+          font-size: 14px;
+          color: #353f53;
+          font-weight: 700; }
+          .job-list-container .job-list-card .job-list .plagiarism-similarity .similarity-value span {
+            display: block;
+            color: #a0a5af;
+            font-size: 12px;
+            font-weight: 400; }
+      .job-list-container .job-list-card .job-list .report {
+        padding: 0;
+        width: 34.333%; }
+        .job-list-container .job-list-card .job-list .report a.report-files {
+          float: right;
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+          .job-list-container .job-list-card .job-list .report a.report-files i {
+            font-size: 25px;
+            color: #353f53; }
+      .job-list-container .job-list-card .job-list .job-list-actions {
+        padding: 0;
+        width: 35.333%; }
+        .job-list-container .job-list-card .job-list .job-list-actions .btn-yes, .job-list-container .job-list-card .job-list .job-list-actions .btn-cancel {
+          margin-right: 10px; }
+        .job-list-container .job-list-card .job-list .job-list-actions .btn-yes, .job-list-container .job-list-card .job-list .job-list-actions .btn-disapprove, .job-list-container .job-list-card .job-list .job-list-actions .btn-cancel, .job-list-container .job-list-card .job-list .job-list-actions .btn-confirm, .job-list-container .job-list-card .job-list .job-list-actions .btn-download {
+          width: 48% !important; }
+      .job-list-container .job-list-card .job-list .cta-container {
+        visibility: hidden;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        transition: all .3s ease;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 43%;
+        height: 100%;
+        background: #fff; }
+        .job-list-container .job-list-card .job-list .cta-container .cta {
+          float: right;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 100%;
+          position: absolute;
+          right: 25px; }
+          .job-list-container .job-list-card .job-list .cta-container .cta ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none; }
+            .job-list-container .job-list-card .job-list .cta-container .cta ul li {
+              display: inline-block;
+              margin-right: 20px; }
+              .job-list-container .job-list-card .job-list .cta-container .cta ul li a {
+                cursor: pointer;
+                color: #DFE1E3; }
+                .job-list-container .job-list-card .job-list .cta-container .cta ul li a span {
+                  cursor: pointer; }
+                .job-list-container .job-list-card .job-list .cta-container .cta ul li a:hover, .job-list-container .job-list-card .job-list .cta-container .cta ul li a:focus {
+                  color: #485262; }
+            .job-list-container .job-list-card .job-list .cta-container .cta ul li:last-child {
+              margin-right: 0; }
+      .job-list-container .job-list-card .job-list:hover .cta-container {
+        visibility: visible;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        transition: all .3s ease; }
+    .job-list-container .job-list-card .rate-review {
+      margin-bottom: 10px; }
+      .job-list-container .job-list-card .rate-review .rating {
+        line-height: 19px;
+        border-right: 2px solid #f5f5f6; }
+        .job-list-container .job-list-card .rate-review .rating .title {
+          float: left;
+          color: #9ea3ac;
+          font-weight: 600;
+          font-size: 12px;
+          margin-right: 2px; }
+        .job-list-container .job-list-card .rate-review .rating .star-rating {
+          float: left; }
+        .job-list-container .job-list-card .rate-review .rating .rate {
+          float: right;
+          color: #9ea3ac;
+          font-weight: 600;
+          font-size: 12px; }
+      .job-list-container .job-list-card .rate-review .review-link {
+        position: relative;
+        width: 17.666%; }
+        .job-list-container .job-list-card .rate-review .review-link a {
+          font-size: 14px;
+          color: #353f53;
+          text-decoration: underline; }
+          .job-list-container .job-list-card .rate-review .review-link a:hover {
+            text-decoration: none; }
+        .job-list-container .job-list-card .rate-review .review-link .review-show:before {
+          content: "\E316";
+          font-family: "Material Icons";
+          position: absolute;
+          top: 0px;
+          right: 20px; }
+        .job-list-container .job-list-card .rate-review .review-link .review-hide:before {
+          content: "\E313";
+          font-family: "Material Icons";
+          position: absolute;
+          top: 0px;
+          right: 20px; }
+      .job-list-container .job-list-card .rate-review .approval {
+        font-size: 14px;
+        color: #448AFF;
+        font-weight: 600;
+        text-align: right; }
+      .job-list-container .job-list-card .rate-review .disapproval {
+        font-size: 14px;
+        color: #ee0a5f;
+        font-weight: 600;
+        text-align: right; }
+      .job-list-container .job-list-card .rate-review .reviews {
+        margin-top: 10px;
+        overflow-y: auto;
+        max-height: calc(82vh - 250px); }
+        .job-list-container .job-list-card .rate-review .reviews .review {
+          background: #f7f9fa;
+          border-radius: 4px;
+          padding: 15px;
+          margin-top: 10px; }
+          .job-list-container .job-list-card .rate-review .reviews .review .review-post-head {
+            margin-bottom: 10px; }
+            .job-list-container .job-list-card .rate-review .reviews .review .review-post-head .review-author {
+              color: #353f53;
+              font-size: 14px;
+              font-weight: 600; }
+            .job-list-container .job-list-card .rate-review .reviews .review .review-post-head .post-time {
+              color: #a9aeb7;
+              text-align: right;
+              font-size: 12px; }
+          .job-list-container .job-list-card .rate-review .reviews .review .review-post {
+            color: #a9aeb7;
+            font-size: 14px;
+            line-height: 1.6; }
+  .job-list-container .previous-job-section {
+    margin-bottom: 20px;
+    position: relative; }
+    .job-list-container .previous-job-section:before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #e5e7e9;
+      z-index: -1; }
+    .job-list-container .previous-job-section .title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #9a9fa9;
+      background: #FAFAFA;
+      padding-right: 12px; }
+
+/* Job List Ends */
 .btn-yes {
   width: 48.5% !important;
   color: #fff !important;
@@ -17615,6 +17828,26 @@ html {
     color: #fff !important;
     background: #b70a4a !important;
     border: 1px solid #b70a4a !important; }
+
+.btn-confirm {
+  width: 48.5% !important;
+  color: #fff !important;
+  background: #353f53 !important;
+  border: 1px solid #353f53 !important; }
+  .btn-confirm:hover {
+    color: #fff !important;
+    background: #9a9fa9 !important;
+    border: 1px solid #9a9fa9 !important; }
+
+.btn-download {
+  width: 48.5% !important;
+  color: #fff !important;
+  background: #fec500 !important;
+  border: 1px solid #fec500 !important; }
+  .btn-download:hover {
+    color: #fff !important;
+    background: #cea000 !important;
+    border: 1px solid #cea000 !important; }
 
 /*Labels Starts*/
 .label {
@@ -18061,6 +18294,11 @@ html {
     color: #448AFF;
     font-weight: 600;
     text-align: right; }
+  .candidate-action-container .candidate-container .candidate-container-right .test-article-task-container .rate-review .disapproval {
+    font-size: 14px;
+    color: #ee0a5f;
+    font-weight: 600;
+    text-align: right; }
   .candidate-action-container .candidate-container .candidate-container-right .test-article-task-container .rate-review .reviews {
     margin-top: 10px;
     overflow-y: auto;
@@ -18183,6 +18421,40 @@ html {
       margin-right: 0; }
 
 /*Share Announce Media Modal Ends*/
+/* Report File Modal Starts*/
+.report-file-modal .report-file-modal-title {
+  margin-bottom: 20px; }
+  .report-file-modal .report-file-modal-title .candidate-image {
+    width: 52px;
+    padding: 0; }
+    .report-file-modal .report-file-modal-title .candidate-image img {
+      display: block;
+      max-width: 100%; }
+  .report-file-modal .report-file-modal-title .modal-title {
+    font-size: 20px;
+    color: #353f53;
+    font-weight: 600;
+    margin-bottom: 20px; }
+    .report-file-modal .report-file-modal-title .modal-title span {
+      display: block;
+      font-size: 14px;
+      color: #9ca1ab;
+      font-weight: 400; }
+
+.report-file-modal label {
+  color: #9ca1ab;
+  font-size: 14px;
+  font-weight: 400; }
+
+.report-file-modal .reason, .report-file-modal .comment {
+  margin-bottom: 20px; }
+
+.report-file-modal .confirm-action {
+  margin-top: 20px; }
+  .report-file-modal .confirm-action .btn-confirm {
+    width: 100% !important; }
+
+/* Report File Modal Ends*/
 /* Disapprove Modal Starts*/
 .disapprove-modal .disapprove-modal-title {
   margin-bottom: 20px; }
@@ -18235,14 +18507,8 @@ html {
 
 .disapprove-modal .confirm-action {
   margin-top: 20px; }
-  .disapprove-modal .confirm-action .btn-confirm {
-    width: 100%;
-    background: #ee0a5f;
-    color: #fff;
-    border: none;
-    font-weight: 600; }
-    .disapprove-modal .confirm-action .btn-confirm:hover {
-      background: #b70a4a; }
+  .disapprove-modal .confirm-action .btn-disapprove {
+    width: 100% !important; }
 
 .disapprove-modal .notified-members-container {
   margin-top: 30px;
@@ -18324,14 +18590,8 @@ html {
 
 .approve-modal .confirm-action {
   margin-top: 20px; }
-  .approve-modal .confirm-action .btn-confirm {
-    width: 100%;
-    background: #69A1FF;
-    color: #fff;
-    border: none;
-    font-weight: 600; }
-    .approve-modal .confirm-action .btn-confirm:hover {
-      background: #447DF7; }
+  .approve-modal .confirm-action .btn-disapprove {
+    width: 100% !important; }
 
 .approve-modal .notified-members-container {
   margin-top: 30px;
@@ -18361,6 +18621,40 @@ html {
     font-weight: 600; }
 
 /* Approve Modal Ends*/
+/* Confirm Modal Starts*/
+.confirm-modal .confirm-modal-title {
+  margin-bottom: 20px; }
+  .confirm-modal .confirm-modal-title .candidate-image {
+    width: 52px;
+    padding: 0; }
+    .confirm-modal .confirm-modal-title .candidate-image img {
+      display: block;
+      max-width: 100%; }
+  .confirm-modal .confirm-modal-title .modal-title {
+    font-size: 20px;
+    color: #353f53;
+    font-weight: 600;
+    margin-bottom: 20px; }
+    .confirm-modal .confirm-modal-title .modal-title span {
+      display: block;
+      font-size: 14px;
+      color: #9ca1ab;
+      font-weight: 400; }
+
+.confirm-modal label {
+  color: #9ca1ab;
+  font-size: 14px;
+  font-weight: 400; }
+
+.confirm-modal .comment {
+  margin-bottom: 20px; }
+
+.confirm-modal .confirm-action {
+  margin-top: 20px; }
+  .confirm-modal .confirm-action .btn-confirm {
+    width: 100% !important; }
+
+/* Confirm Modal Ends*/
 /* Send Message Display and Edit Starts */
 .send-message-container .send-message-display .message-container {
   background: #f3f5f7;
@@ -18369,16 +18663,20 @@ html {
   position: relative; }
   .send-message-container .send-message-display .message-container a.edit-message {
     position: absolute;
-    bottom: 45px;
+    bottom: 30px;
     right: 30px; }
   .send-message-container .send-message-display .message-container p {
     padding: 15px 0;
     color: #353f53;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.6; }
+    line-height: 1.6;
+    margin: 0; }
     .send-message-container .send-message-display .message-container p strong, .send-message-container .send-message-display .message-container p b {
       font-weight: 600; }
+    .send-message-container .send-message-display .message-container p span.important {
+      font-weight: 600;
+      color: #ee0a5f; }
     .send-message-container .send-message-display .message-container p a {
       color: #448AFF;
       text-decoration: underline; }
