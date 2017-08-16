@@ -10,7 +10,7 @@
 var
 	devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),
 
-	source = 'lbd/',
+	source = './',
 	dest = devBuild ? 'builds/development/' : 'builds/production/',
 
 	html = {
@@ -25,8 +25,8 @@ var
 	},
 
 	images = {
-		in: source + 'img/**/*',
-		out: dest + 'img/'
+		in: source + 'lbd/img/**/*',
+		out: dest + 'lbd/img/'
 	},
 
 	// imguri = {
@@ -37,16 +37,16 @@ var
 	// },
 
 	css = {
-		in: [source + 'sass/light-bootstrap-dashboard.scss'],
-		watch: [source + 'sass/**/*'],
-		out: dest + 'css/',
+		in: [source + 'lbd/sass/light-bootstrap-dashboard.scss'],
+		watch: [source + 'lbd/sass/**/*'],
+		out: dest + 'lbd/css/',
     pluginCSS: {
-      in: [source + 'css/**/*'],
-      watch: [source + 'css/**/*'],
-      out: dest + 'css/'
+      in: [source + 'lbd/css/**/*'],
+      watch: [source + 'lbd/css/**/*'],
+      out: dest + 'lbd/css/'
     },
 		sassOpts: {
-			outputStyle: 'nested',
+			outputStyle: devBuild ? 'nested' : 'compressed',
 			imagePath: '../img',
 			precision: 3,
 			errLogToConsole: true
@@ -64,19 +64,19 @@ var
 	},
 
 	fonts = {
-		in: source + 'fonts/*.*',
-		out: dest + 'fonts/'
+		in: source + 'lbd/fonts/*.*',
+		out: dest + 'lbd/fonts/'
 	},
 
 	js = {
-		in: source + 'js/**/*',
-		out: dest + 'js/'
+		in: source + 'lbd/js/**/*',
+		out: dest + 'lbd/js/'
 		// filename: 'main.js'
 	},
 
   jsLibs = {
-    in: source + 'lib/**/*',
-    out: dest + 'lib/'
+    in: source + 'lbd/lib/**/*',
+    out: dest + 'lbd/lib/'
     // filename: 'main.js'
   },
 
@@ -172,11 +172,11 @@ gulp.task('js', function() {
 	}
 	else {
 		del([
-			dest + 'js/*'
+			dest + 'lbd/js/*'
 		]);
 		return gulp.src(js.in)
 			.pipe($.deporder())
-			.pipe($.concat(js.filename))
+			// .pipe($.concat(js.filename))
 			.pipe($.size({ title: 'JS in '}))
 			.pipe($.stripDebug())
 			.pipe($.uglify())
@@ -197,14 +197,14 @@ gulp.task('jslib', function() {
   }
   else {
     del([
-      dest + 'js/lib/*'
+      dest + 'lbd/lib/*'
     ]);
     return gulp.src(jsLibs.in)
       .pipe($.deporder())
-      .pipe($.concat(jsLibs.filename))
+      // .pipe($.concat(jsLibs.filename))
       .pipe($.size({ title: 'JS libraries in '}))
-      .pipe($.stripDebug())
-      .pipe($.uglify())
+      // .pipe($.stripDebug())
+      // .pipe($.uglify())
       .pipe($.size({ title: 'JS libraries out '}))
       .pipe(gulp.dest(jsLibs.out));
   }
