@@ -471,6 +471,14 @@ $(document).ready(function(){
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
 	  });
+
+	//tinyMCE Send Announce Message intregation
+	tinymce.init({
+	    selector: '#editSendAnnounceMessage',
+	    statusbar: false,
+  		menubar : false,
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+	  });
 	
 
 
@@ -775,9 +783,6 @@ $(document).ready(function(){
 		$(this).parents('.expanding-card').find('.results-container').slideToggle(400);
 		$(this).find('.hide-show').find(".content-show, .content-hide").toggle();
 	});
-
-
-
 });
 
 

@@ -1321,6 +1321,7 @@ html {
             display: flex;
             -webkit-flex-flow: row wrap;
             justify-content: flex-start;
+            flex-wrap: wrap;
 
             li {
                 margin: 0 20px 20px 0;
@@ -5104,7 +5105,7 @@ html {
                 a {
                     display: block;
                     padding: 0;
-                    font-size: 13px;
+                    font-size: 14px;
                     color: #9a9fa9;
                     font-weight: 400;
                 }
@@ -7540,6 +7541,36 @@ html {
 }
 
 /*Share Announce Media Modal Ends*/
+
+/*Share Send Message Modal Starts*/
+
+.send-share-message-modal {
+    .send-share-message-title {
+        font-size: 20px;
+        color: #353f53;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .back{
+        width: 5.333%;
+        padding-top: 4px;
+    }
+    label {
+        color: #9ca1ab;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    .send-share-message-subject{
+        margin-bottom: 20px;
+    }
+    .send-share-message-footer{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+/*Share Send Message Modal Ends*/
 
 /* Report File Modal Starts*/
 
