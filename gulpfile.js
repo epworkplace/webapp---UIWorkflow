@@ -46,7 +46,7 @@ var
       out: dest + 'lbd/css/'
     },
 		sassOpts: {
-			outputStyle: devBuild ? 'nested' : 'compressed',
+			outputStyle: devBuild ? 'compressed' : 'compressed',
 			imagePath: '../img',
 			precision: 3,
 			errLogToConsole: true

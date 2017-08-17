@@ -21894,7 +21894,13 @@ body.mce-content-body {
         width: 450px;
         padding: 0px;
         left: calc(-50% + 35px);
-        color: #353f53; }
+        color: #353f53;
+        position: absolute;
+        bottom: 45px;
+        background: #ffffff;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.125);
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.15); }
         .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown:before, .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown:after {
           left: 50%; }
         .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown .cards-filter-nav {
@@ -21942,9 +21948,18 @@ body.mce-content-body {
           .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown .tab-content #filterStatus .form-group {
             display: flex;
             width: 100%; }
-            .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown .tab-content #filterStatus .form-group .form-control {
+            .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown .tab-content #filterStatus .form-group .bootstrap-select {
               width: 80%;
               margin-left: 10px; }
+              .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown .tab-content #filterStatus .form-group .bootstrap-select .dropdown-toggle {
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                color: transparent; }
+                .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown .tab-content #filterStatus .form-group .bootstrap-select .dropdown-toggle .filter-option {
+                  overflow: inherit; }
+                  .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .cards-filter-dropdown .tab-content #filterStatus .form-group .bootstrap-select .dropdown-toggle .filter-option span {
+                    display: inline;
+                    overflow: auto;
+                    text-decoration: none; }
       .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter .btn {
         display: flex;
         align-items: center;
