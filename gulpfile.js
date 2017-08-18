@@ -153,11 +153,6 @@ gulp.task('sass', [], function() {
 		.pipe($.sourcemaps.init())
 		.pipe($.sass(css.sassOpts))
 		.pipe($.size({title: 'CSS in '}))
-<<<<<<< HEAD
-		//.pipe($.pleeease(css.pleeeaseOpts))
-=======
-		// .pipe($.pleeease(css.pleeeaseOpts))
->>>>>>> bfb41fa18182976a9e96f28ca9b39847968a8b70
 		.pipe($.sourcemaps.write('./maps'))
 		.pipe($.size({title: 'CSS out '}))
 		.pipe(gulp.dest(css.out))
