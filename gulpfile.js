@@ -46,7 +46,7 @@ var
       out: dest + 'lbd/css/'
     },
 		sassOpts: {
-			outputStyle: devBuild ? 'nested' : 'compressed',
+			outputStyle: devBuild ? 'compressed' : 'compressed',
 			imagePath: '../img',
 			precision: 3,
 			errLogToConsole: true
@@ -102,12 +102,12 @@ gulp.task('clean', function() {
 // build HTML files
 gulp.task('html', function() {
 	var page = gulp.src(html.in).pipe($.preprocess({ context: html.context }));
-	if (!devBuild) {
-		page = page
+	// if (!devBuild) {
+		  page = page
 			.pipe($.size({ title: 'HTML in' }))
 			.pipe($.htmlclean())
 			.pipe($.size({ title: 'HTML out' }));
-	}
+	// }
 	return page.pipe(gulp.dest(html.out));
 });
 
@@ -161,7 +161,7 @@ gulp.task('sass', [], function() {
 
 // js tasks
 gulp.task('js', function() {
-	if (devBuild) {
+	if (!devBuild) {
 		return gulp.src(js.in)
 			.pipe($.newer(js.out))
 			// .pipe($.jshint())
