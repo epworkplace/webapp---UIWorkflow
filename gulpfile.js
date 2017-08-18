@@ -102,12 +102,12 @@ gulp.task('clean', function() {
 // build HTML files
 gulp.task('html', function() {
 	var page = gulp.src(html.in).pipe($.preprocess({ context: html.context }));
-	if (!devBuild) {
-		page = page
+	// if (!devBuild) {
+		  page = page
 			.pipe($.size({ title: 'HTML in' }))
 			.pipe($.htmlclean())
 			.pipe($.size({ title: 'HTML out' }));
-	}
+	// }
 	return page.pipe(gulp.dest(html.out));
 });
 
@@ -153,11 +153,7 @@ gulp.task('sass', [], function() {
 		.pipe($.sourcemaps.init())
 		.pipe($.sass(css.sassOpts))
 		.pipe($.size({title: 'CSS in '}))
-<<<<<<< HEAD
 		//.pipe($.pleeease(css.pleeeaseOpts))
-=======
-		// .pipe($.pleeease(css.pleeeaseOpts))
->>>>>>> bfb41fa18182976a9e96f28ca9b39847968a8b70
 		.pipe($.sourcemaps.write('./maps'))
 		.pipe($.size({title: 'CSS out '}))
 		.pipe(gulp.dest(css.out))
@@ -166,7 +162,7 @@ gulp.task('sass', [], function() {
 
 // js tasks
 gulp.task('js', function() {
-	if (devBuild) {
+	if (!devBuild) {
 		return gulp.src(js.in)
 			.pipe($.newer(js.out))
 			// .pipe($.jshint())
