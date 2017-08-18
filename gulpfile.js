@@ -102,12 +102,12 @@ gulp.task('clean', function() {
 // build HTML files
 gulp.task('html', function() {
 	var page = gulp.src(html.in).pipe($.preprocess({ context: html.context }));
-	// if (!devBuild) {
+	if (!devBuild) {
 		  page = page
 			.pipe($.size({ title: 'HTML in' }))
 			.pipe($.htmlclean())
 			.pipe($.size({ title: 'HTML out' }));
-	// }
+	}
 	return page.pipe(gulp.dest(html.out));
 });
 
@@ -208,6 +208,13 @@ gulp.task('jslib', function() {
       .pipe($.size({ title: 'JS libraries out '}))
       .pipe(gulp.dest(jsLibs.out));
   }
+});
+
+gulp.task('connect', function() {
+    $.connect.server({
+        root: dest,
+        livereload: true
+    });
 });
 
 // browser sync

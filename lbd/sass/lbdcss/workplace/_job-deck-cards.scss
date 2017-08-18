@@ -2,6 +2,7 @@
 
 .card-container {
   padding: 15px;
+  // position: relative;
 
   ul#card-container {
     white-space: nowrap;
@@ -9,11 +10,12 @@
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0;
-    top: 0;
+    top: 15px;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 15px;
     height: calc(100vh - 96px);
+    position: absolute;
 
     li.decks {
       width: 350px;
@@ -214,6 +216,7 @@
         background: #fec500;
         color: #ffffff;
         border: none;
+        width: 100%;
 
         &:hover {
           background: #cea000;
