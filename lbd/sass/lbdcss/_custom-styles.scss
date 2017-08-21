@@ -9032,25 +9032,51 @@ html {
 
 /*Custom Scrollbar Styles Starts*/
 
+/* Default scrollbar styles */
 .mCSB_inside > .mCSB_container {
-    margin-right: 15px !important;
+    margin-right: 15px;
+    padding: 1px;
 }
 
-.mCSB_scrollTools .mCSB_draggerRail {
-    background-color: transparent !important;
+.mCustomScrollBox+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    bottom: 0px;
+}
+.mCSB_scrollTools {
+    width: 10px;
+    .mCSB_draggerContainer{
+        .mCSB_dragger{
+            height: 35%;
+            .mCSB_dragger_bar{
+                width: 8px;
+                height: 100%;
+                border-radius: 4px;
+                background-color: rgba(154, 159, 169, 1) !important;
+            }
+        }
+        .mCSB_draggerRail {
+            background-color: transparent;
+        }
+    }
+    &.mCSB_scrollTools_horizontal{
+        bottom: -5px;
+        .mCSB_draggerContainer{
+            .mCSB_dragger{
+                width: 35%;
+                .mCSB_dragger_bar{
+                    height: 8px;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+    
 }
 
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background-color: rgba(226, 229, 232, 1) !important;
-}
+/* Customized styles per contents */
 
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    width: 5px !important;
-    height: 60px !important;
-    border-radius: 5px !important;
-}
 
-/*Custom Scrollbar Styles Starts*/
+/*Custom Scrollbar Styles Ends*/
 
 /*data Table Starts*/
 
