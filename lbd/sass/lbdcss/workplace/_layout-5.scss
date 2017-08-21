@@ -531,6 +531,7 @@
                         .tab-panel-container {
                             width: 33.333%;
                             transition: all .3s ease;
+                            box-shadow: 2px 0px 5px 3px #edeff1;
 
                             &.toggled {
                                 margin-left: -33.33%;
@@ -540,6 +541,8 @@
                                 width: 100%;
                                 transition: all .3s ease;
                                 position: inherit;
+                                overflow: hidden;
+                                padding: 16px 2px 0 16px;
 
                                 .navbar-default {
                                     .page-title {

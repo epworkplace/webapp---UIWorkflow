@@ -137,11 +137,11 @@ gulp.task('fonts', function() {
 // copy plugin css
 gulp.task('css', function() {
   return gulp.src(css.pluginCSS.in)
-    .pipe($.sourcemaps.init())
+    // .pipe($.sourcemaps.init())
     // .pipe($.sass(css.sassOpts))
     .pipe($.size({title: 'CSS in '}))
     // .pipe($.pleeease(css.pleeeaseOpts))
-    .pipe($.sourcemaps.write('./maps'))
+    // .pipe($.sourcemaps.write('./maps'))
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
     .pipe(browsersync.reload({ stream: true }));

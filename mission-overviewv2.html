@@ -9,8 +9,7 @@
         <meta name="viewport" content="width=device-width" />
         <!-- Bootstrap core CSS     -->
         <link href="lbd/css/bootstrap.min.css" rel="stylesheet" />
-        <!--  Light Bootstrap Dashboard core CSS    -->
-        <link href="lbd/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
         <!-- Fonts and icons     -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -24,6 +23,10 @@
         <!-- Slick slider -->
         <link rel="stylesheet" type="text/css" href="lbd/lib/slick-1.6.0/slick/slick.css">
         <link rel="stylesheet" type="text/css" href="lbd/lib/slick-1.6.0/slick/slick-theme.css">
+        <!-- mCustomScrollbar -->
+        <link rel="stylesheet" type="text/css" href="lbd/css/jquery.mCustomScrollbar.min.css">
+        <!--  Light Bootstrap Dashboard core CSS    -->
+        <link href="lbd/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
         <!-- Temporary css for Layouts     -->
 
     </head>
@@ -3710,30 +3713,50 @@ $(document).on('ready', function() {
         if($item.length > 3){
             $('.cards-filter-prev, .cards-filter-next').fadeIn(400);
         }
-console.log($item.length);
 
     $('.cards-filter-next').on('click', function(e){
         // e.stopPropagation();
-        var leftPos = $('#card-container').scrollLeft();
-        console.log(leftPos);
-          $('#card-container').animate({
-                scrollLeft: leftPos + 365
-            }, 300);
-          leftPos -= 10;
-          console.log(leftPos);
+        // var leftPos = $('#card-container').scrollLeft();
+        // console.log(leftPos);
+        //   $('#card-container').animate({
+        //         scrollLeft: leftPos + 365
+        //     }, 300);
+        //   leftPos -= 10;
+        //   console.log(leftPos);
+        $('ul#card-container').mCustomScrollbar("scrollTo", "-=360");
     });
 
     $('.cards-filter-prev').on('click', function(e){
         // e.stopPropagation();
-        var leftPos = $('#card-container').scrollLeft();
-        console.log(leftPos);
-          $('#card-container').animate({
-                scrollLeft: leftPos - 365
-            }, 300);
-          leftPos += 10;
-          console.log(leftPos);
+        // var leftPos = $('#card-container').scrollLeft();
+        // console.log(leftPos);
+        //   $('#card-container').animate({
+        //         scrollLeft: leftPos - 365
+        //     }, 300);
+        //   leftPos += 10;
+        //   console.log(leftPos);
+          $('ul#card-container').mCustomScrollbar("scrollTo", "+=360");
+
     });
 
+
+
+// mCustomScrollbar
+
+$('.tab-panel, .decks-wrap').mCustomScrollbar();
+$('ul#card-container').mCustomScrollbar(
+        {
+            mouseWheel:{ 
+                    preventDefault: true,
+                    enable: false,
+                    axis: "x"
+                },
+            axis: "x",
+            scrollbarPosition: "outside",
+            contentTouchScroll: 25,
+            documentTouchScroll: true
+        }
+    );
 
 });
 
