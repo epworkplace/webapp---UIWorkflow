@@ -1,0 +1,132 @@
+/* Quote template CSS Starts */
+
+.validate:nth-of-type(1) {
+	border-right: 1px solid #c6c8cd;
+}
+
+.info-content {
+	margin-bottom: 20px;
+	min-height: 60px;
+	position: relative;
+	.display-content {
+		padding: 13px 0;
+		position: relative;
+		span.edit {
+			visibility: hidden;
+			opacity: 0;
+			transition: all .3s ease;
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			z-index: 9;
+			a {
+				font-size: 14px;
+				color: #448AFF;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.overview {
+			font-size: 14px;
+			.title{
+				margin: 0;
+				padding: 0;
+				font-weight: 600;
+				font-size: 14px;
+				color: #7d889a;
+				text-transform: uppercase;
+			}
+			p {
+				font-size: 14px;
+			}
+			a {
+				color: #448AFF;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		&:hover {
+			span.edit {
+				visibility: visible;
+				opacity: 1;
+				transition: all .3s ease;
+			}
+		}
+	}
+	a.add-customers{
+		color: #448AFF;
+		font-size: 14px;
+		text-decoration: underline;
+		padding: 0;
+		position: absolute;
+		bottom: 20px;
+		left: 15px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	span.client-profile-btn{
+		width: 124px;
+		position: absolute;
+		right: 15px;
+		bottom: 12px;
+		a{
+			width: 100%;
+			margin: 0;
+		}
+	}
+}
+
+.turnover {
+	@include clearfix;
+	margin-bottom: 10px;
+	.bill-box {
+		@include clearfix;
+		padding: 15px 0;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		width: 48.666%;
+		height: 132px;
+		.bill {
+			.amount {
+				color: #a2a7b0;
+				font-size: 12px;
+				font-weight: 600;
+				text-transform: uppercase;
+				span {
+					margin-top: 5px;
+					display: block;
+					font-size: 20px;
+					color: #353f53;
+				}
+			}
+			.bill-desc {
+				margin-bottom: 10px;
+				p {
+					margin: 0;
+				}
+			}
+			a {
+				font-size: 12px;
+				color: #353f53;
+				text-decoration: none;
+				&:hover, &:focus {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.bill-box.even {
+		margin-right: 0;
+	}
+	.bill-box.one {
+		width: 100%;
+	}
+}
+
+
+/* Quote template CSS Ends */
