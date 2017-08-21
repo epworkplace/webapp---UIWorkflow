@@ -234,6 +234,7 @@ html {
                                 position: relative;
                                 min-height: 100%;
                                 background: #FCFDFD;
+                                box-shadow: 2px 0px 5px 3px #edeff1;
 
                                 .tab-panel {
                                     position: fixed;
@@ -244,6 +245,7 @@ html {
                                     background: #FCFDFD;
                                     z-index: 1;
                                     overflow-x: hidden;
+                                    padding: 16px 2px 0 16px;
 
                                     /* position: fixed;
                                     width: 31.333%;
@@ -254,8 +256,8 @@ html {
                                     left: 80px;
                                     display: block;
                                     z-index: 1;
-                                    background: #FCFDFD; */
-                                    padding: 20px 16px 0 16px;
+                                    background: #FCFDFD; 
+                                    padding: 20px 16px 0 16px; */
 
                                     .navbar-default {
                                         background: none;
@@ -1775,7 +1777,7 @@ html {
 
 /*Settings-wrap Content Starts*/
 .reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container {
-    width: calc(100% - (31.6% + 80px));
+    width: calc(100% - (31.4% + 80px));
     right: 0;
     top: 78px;
     left: auto;
