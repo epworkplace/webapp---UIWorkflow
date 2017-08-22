@@ -1102,7 +1102,7 @@ html {
                                     font-weight: 600;
                                     position: relative;
 
-                                    &:before, &:after {
+                                    &:before{
                                         content: "";
                                         position: absolute;
                                         left: 0;
@@ -1110,11 +1110,6 @@ html {
                                         background: #f5f5f6;
                                         width: 1px;
                                         height: 78px;
-                                    }
-
-                                    &:after {
-                                        left: auto;
-                                        right: 0;
                                     }
 
                                     span.title {
@@ -1201,6 +1196,15 @@ html {
                                         position: relative;
                                         top: -1.5px;
                                     }
+                                }
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    background: #f5f5f6;
+                                    width: 1px;
+                                    height: 78px;
                                 }
                             }
 
@@ -5495,10 +5499,10 @@ html {
                         a {
                             font-size: 12px;
                             color: #353f53;
-                            text-decoration: none;
+                            text-decoration: underline;
 
                             &:hover, &:focus {
-                                text-decoration: underline;
+                                text-decoration: none;
                             }
                         }
                     }
@@ -6361,6 +6365,15 @@ html {
 
 /* Disabled button*/
 .disabled {
+    cursor: not-allowed !important;
+    opacity: 1 !important;
+    background-color: #F5F5F5 !important;
+    border-color: #EAEBED !important;
+    color: #888888 !important;
+    border-radius: 6px !important;
+}
+
+.btn.disabled {
     cursor: not-allowed !important;
     opacity: 1 !important;
     background-color: #F5F5F5 !important;

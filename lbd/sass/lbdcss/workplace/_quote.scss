@@ -1,0 +1,320 @@
+/* Quote template CSS Starts */
+
+.validate:nth-of-type(1) {
+	border-right: 1px solid #c6c8cd;
+}
+
+
+.quote-overview{
+	padding-bottom: 400px;
+}
+.info-content {
+	margin-bottom: 20px;
+	min-height: 60px;
+	position: relative;
+	.display-content {
+		padding: 13px 0;
+		position: relative;
+		span.edit {
+			visibility: hidden;
+			opacity: 0;
+			transition: all .3s ease;
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			z-index: 9;
+			a {
+				font-size: 14px;
+				color: #448AFF;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.overview {
+			font-size: 14px;
+			.title{
+				margin: 0;
+				padding: 0;
+				font-weight: 600;
+				font-size: 14px;
+				color: #7d889a;
+				text-transform: uppercase;
+			}
+			p {
+				font-size: 14px;
+			}
+			a {
+				color: #448AFF;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		&:hover {
+			span.edit {
+				visibility: visible;
+				opacity: 1;
+				transition: all .3s ease;
+			}
+		}
+	}
+	a.add-customers{
+		color: #448AFF;
+		font-size: 14px;
+		text-decoration: underline;
+		padding: 0;
+		position: absolute;
+		bottom: 20px;
+		left: 15px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	span.client-profile-btn{
+		width: 124px;
+		position: absolute;
+		right: 15px;
+		bottom: 12px;
+		a{
+			width: 100%;
+			margin: 0;
+		}
+	}
+}
+
+.turnover {
+	@include clearfix;
+	margin-bottom: 10px;
+	.bill-box {
+		@include clearfix;
+		padding: 15px 0;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		width: 48.666%;
+		height: 132px;
+		.bill {
+			position: relative;
+			a.edit{
+				visibility: hidden;
+				opacity: 0;
+				transition: all .3s ease;
+				position: absolute;
+				right: 15px;
+				top: 0;
+				z-index: 9;
+				color: #448AFF;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.amount {
+				color: #a2a7b0;
+				font-size: 12px;
+				font-weight: 600;
+				text-transform: uppercase;
+				span {
+					margin-top: 5px;
+					display: block;
+					font-size: 20px;
+					color: #353f53;
+				}
+			}
+			.bill-desc {
+				margin-bottom: 10px;
+				p {
+					margin: 0;
+					font-size: 12px;
+				}
+				i{
+					position: relative;
+					top: 3px;
+					margin: 0 5px;
+					font-size: 16px;
+					color: #dfe2e5;
+				}
+			}
+			a.download-quote{
+				width: 100%!important;
+				text-decoration: none;
+			}
+			.quote-signature{
+				display: block;
+				width: 100%;
+				height: 15px;
+				margin: 13px 0;
+				svg{
+					border-radius: 10px;
+				}
+			}
+			a{
+				font-size: 12px;
+				color: #353f53;
+				text-decoration: underline;
+				&:hover, &:focus {
+					text-decoration: none;
+				}
+			}
+			a.add-probability{
+				display: block;
+				margin-top: 30px;
+			}
+			.quote-signature-rate-date{
+				font-size: 12px;
+				text-align: center;
+				span{
+					display: block;
+					font-size: 14px;
+					font-weight: 600;
+					color: #448AFF;
+				}
+			}
+			&:hover {
+				a.edit {
+					visibility: visible;
+					opacity: 1;
+					transition: all .3s ease;
+				}
+			}
+		}
+	}
+	.bill-box.even {
+		margin-right: 0;
+	}
+	.bill-box.one {
+		width: 100%;
+	}
+}
+
+.contract-owner-box{
+	margin-bottom: 20px;
+}
+
+.main-panel-header.quote-overview-missions {
+	position: fixed;
+	z-index: 9;
+	width: 61.222%;
+	height: 93px;
+	padding: 0;
+	background: #FAFAFA;
+	.select-all-container {
+		width: 21%;
+		max-width: 173px;
+		margin-top: 22px;
+		.select-all {
+			@include clearfix;
+			display: block;
+			padding: 7px 15px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			label.checkbox {
+				margin: 0;
+				float: left;
+				min-height: 20px;
+			}
+			.select {
+				float: right;
+				color: #A6ABB4;
+				font-weight: 600;
+			}
+		}
+	}
+	.validate {
+		display: none;
+		margin-top: 22px;
+		width: 160px;
+		button {
+			border: none;
+			color: #fff;
+			width: 48%;
+		}
+		button.validate-btn {
+			margin-right: 10px;
+			background: #69A1FF;
+			border: 1px solid #69A1FF;
+			&:hover, &:focus {
+				background: #447DF7;
+				border: 1px solid #447DF7;
+			}
+		}
+		button.delete-btn {
+			background: #353F53;
+			border: 1px solid #353F53;
+			&:hover, &:focus {
+				background: #9c9696;
+				border: 1px solid #353F53;
+			}
+		}
+		button.unpause-btn {
+			margin-right: 10px;
+			color: #447DF7;
+			border: 1px solid #447DF7;
+			background: none;
+			&:hover, &:focus {
+				background: #447DF7;
+				color: #fff;
+			}
+		}
+	}
+	.search-action{
+		margin-top: 22px;
+		.quote-mission-filter{
+			padding: 0;
+		}
+		.quote-mission-search{
+			input{
+				height: 37px;
+				padding-left: 39px;
+				background: #fff url(../img/search.svg) no-repeat 9px 6px;
+				background-size: 20px;
+			}
+		}
+	}
+}
+
+.quote-mission-list-container{
+	margin-top: 93px;
+}
+
+.no-quote-mission-container{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #d2d4de;
+    border-radius: 6px;
+    .no-quote-mission-info{
+    	text-align: center;
+        h4 {
+            color: #9a9fa9;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+            color: #9a9fa9;
+            text-align: center;
+        }
+        p {
+            font-size: 14px;
+            color: #9a9fa9;
+            text-align: center;
+            color: #9a9fa9;
+            text-align: center;
+        }
+        a{
+        	width: 198px!important;
+        }
+    }
+}
+
+/* Quote template CSS Ends */
