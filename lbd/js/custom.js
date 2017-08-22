@@ -62,6 +62,26 @@ $(document).ready(function(){
 	    },
 	    mouseWheelPixels: 500
 	 });
+	$('.tab-panel, .decks-wrap').mCustomScrollbar({
+		// mouseWheel:{ deltaFactor: 50 }
+		// scrollInertia: 1000
+	});
+	$('ul#card-container').mCustomScrollbar(
+	        {
+	            mouseWheel:{ 
+	                    preventDefault: true,
+	                    enable: false,
+	                    axis: "x"
+	                },
+	            axis: "x",
+	            scrollbarPosition: "outside",
+	            contentTouchScroll: 25,
+	            documentTouchScroll: true
+	        }
+	    );
+
+
+
 
 	//Chosen Select Dropdown
 	var config = {
