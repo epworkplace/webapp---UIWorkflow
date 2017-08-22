@@ -62,6 +62,7 @@ $(document).ready(function(){
 	    },
 	    mouseWheelPixels: 500
 	 });
+	// Common custom scrollbar
 	$('.tab-panel, .decks-wrap').mCustomScrollbar({
 		// mouseWheel:{ deltaFactor: 50 }
 		// scrollInertia: 1000

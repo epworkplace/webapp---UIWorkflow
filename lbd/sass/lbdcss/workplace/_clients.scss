@@ -1,0 +1,118 @@
+/* Clients page styles */
+
+#clients{
+	.main-container{
+
+// tab panel container -->
+		.tab-panel-container{
+			.status-list-container{
+				margin: 0 0 20px 0;
+				.status-list{
+					ul{
+						display: flex;
+						flex-wrap: wrap;
+						margin: 0;
+						li, li:nth-child(3){
+							flex-grow: 1;
+							margin: 0 10px 10px 0;
+						}
+					}
+				}
+			}
+			.filter-list-container{
+				margin-bottom: 30px;
+				.filter-list{
+					.owners{
+						#filterPeriod{
+							.form-inline{
+								display: flex;
+								justify-content: space-between;
+							}
+						}
+					}
+				}
+			}
+		}
+// tab panel container <--
+// main panel container -->
+		.main-panel-container{
+
+		}
+// main panel container <--		
+
+	}
+}
+
+// modal window styles
+.modal {
+	.modal-content{
+		.modal-header{}
+		.modal-body{
+			.modal-title{
+				font-size: 20px;
+		    color: #353f53;
+		    font-weight: 600;
+		    margin: 15px 0 20px 0;
+			}
+			.form{
+				label{
+			    color: #9ca1ab;
+			    font-size: 12px;
+			    font-weight: 400;
+			    text-transform: uppercase;
+			    &:hover{
+			    	cursor: pointer;
+			    }
+				}
+		    .form-group{
+		    	.row{
+		    		[class*="col-"]{
+              padding: 0 10px 0 0;
+            }
+            [class*="col-"]:first-child{
+                padding-left: 15px;
+            }
+            [class*="col-"]:last-child{
+                padding-right: 15px;
+            }
+            [class*='-12']{
+		    			padding: 0 15px;
+		    		}
+		    	}
+		    	input[type="file"]{
+		    		display: none;
+		    	}
+		    	a[class*="add-"]{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 120px;
+            color: #D7D9DC;
+            text-align: center;
+            border: 2px dashed #D7D9DC;
+            border-radius: 4px;
+            transition: all .3s ease;
+
+            &:hover {
+                border: 2px solid #448AFF;
+
+                i {
+                    color: #448AFF;
+                }
+            }
+		    	}
+		    	.btn{
+		    		width: 100% !important;
+		    	}
+		    	&:last-child{
+		    		margin-bottom: 0;
+		    	}
+		    }
+			}
+		}
+		.modal-footer{}
+	}
+	
+
+}
