@@ -5495,10 +5495,10 @@ html {
                         a {
                             font-size: 12px;
                             color: #353f53;
-                            text-decoration: none;
+                            text-decoration: underline;
 
                             &:hover, &:focus {
-                                text-decoration: underline;
+                                text-decoration: none;
                             }
                         }
                     }
@@ -6361,6 +6361,15 @@ html {
 
 /* Disabled button*/
 .disabled {
+    cursor: not-allowed !important;
+    opacity: 1 !important;
+    background-color: #F5F5F5 !important;
+    border-color: #EAEBED !important;
+    color: #888888 !important;
+    border-radius: 6px !important;
+}
+
+.btn.disabled {
     cursor: not-allowed !important;
     opacity: 1 !important;
     background-color: #F5F5F5 !important;
