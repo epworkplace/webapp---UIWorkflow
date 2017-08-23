@@ -135,26 +135,27 @@ gulp.task('fonts', function() {
 });
 
 // copy plugin css
-gulp.task('css', function() {
+gulp.task('css', ['fonts'], function() {
   return gulp.src(css.pluginCSS.in)
     // .pipe($.sourcemaps.init())
     // .pipe($.sass(css.sassOpts))
     .pipe($.size({title: 'CSS in '}))
     // .pipe($.pleeease(css.pleeeaseOpts))
     // .pipe($.sourcemaps.write('./maps'))
+    .pipe($.newer(css.pluginCSS.out))
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
     .pipe(browsersync.reload({ stream: true }));
 });
 
 // compile Sass
-gulp.task('sass', [], function() {
+gulp.task('sass', ['fonts'], function() {
 	return gulp.src(css.in)
 		.pipe($.sourcemaps.init())
 		.pipe($.sass(css.sassOpts))
-		.pipe($.size({title: 'CSS in '}))
+		.pipe($.size({title: 'SCSS in '}))
 		.pipe($.sourcemaps.write('./maps'))
-		.pipe($.size({title: 'CSS out '}))
+		.pipe($.size({title: 'SCSS out '}))
 		.pipe(gulp.dest(css.out))
 		.pipe(browsersync.reload({ stream: true }));
 });
