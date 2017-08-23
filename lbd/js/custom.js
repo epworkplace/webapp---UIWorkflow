@@ -504,7 +504,7 @@ $(document).ready(function(){
 
 
 	//Chosen Dropdown with Image 
-	$(".mission-assignee").chosen({width:"100%"});
+	$(".mission-assignee, .chosen-default").chosen({width:"100%"});
 
 	//Settings popup
 	$('.show-reassign, .btn-mission-overview-reassign').click(function() {

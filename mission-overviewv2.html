@@ -3623,7 +3623,7 @@
     infinite: false,
     draggable: true,
     slidesToShow: 2,
-    // arrows: false,
+    /*arrows: false,*/
     slidesToScroll: 1
     });
     });
@@ -3635,8 +3635,8 @@
     var el = this;
     setTimeout(function(){
     el.style.cssText = 'height:auto; padding:0';
-    // for box-sizing other than "content-box" use:
-    // el.style.cssText = '-moz-box-sizing:content-box';
+    /*for box-sizing other than "content-box" use:
+    el.style.cssText = '-moz-box-sizing:content-box';*/
     el.style.cssText = 'height:' + el.scrollHeight + 'px';
     },0);
     }
@@ -3644,7 +3644,7 @@
     
     <script>
     $(document).on('ready', function() {
-    // Multiple jobs slider --->
+    /*Multiple jobs slider*/
     slidesCounter();
     function slidesCounter(){
         $('.slider').each(function() {
@@ -3660,17 +3660,17 @@
     $('.slick-prev, .slick-next, .slider').on('click swipe', function(){
         slidesCounter();
     });
-    // Multiple jobs slider <---
-    // Toggle sidebar --->
+/*    Multiple jobs slider
+    Toggle sidebar*/
     $('.toggle-panel-container').on('click', function(){
         var toggler = $(this).find('i').text();
         toggler == 'close' ? $('.toggle-panel-container').find('.material-icons').text('menu') : $('.toggle-panel-container').find('.material-icons').text('close');
         $('.tab-panel-container').toggleClass('toggled');
         $(this).toggleClass('toggled');
     });
-    // Toggle sidebar <---
+/*Toggle sidebar
 
-// toggling filters popup --->
+toggling filters popup*/
 
     $(document).on('click', "#cards-filter-dropup", function(e){
         e.stopPropagation();
@@ -3687,7 +3687,7 @@
     $(document).click(function(e) {
         if(e.target.class == '.cards-filter-dropdown')
           return;
-       //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+       /*For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.*/
        if($(e.target).closest('.cards-filter-dropdown').length)
           return;
         $('.cards-filter-dropdown').fadeOut('400', function() {
@@ -3695,7 +3695,7 @@
         });
     });
 
-// toggling filters popup <---    
+/*toggling filters popup  */
 
     });
 </script>
@@ -3704,46 +3704,46 @@
 <script>
 
 $(document).on('ready', function() {
-// scrolling decks --->
+/*scrolling decks*/
 
-    var $item = $('#card-container .decks'), //Cache your DOM selector
-        visible = 2, //Set the number of items that will be visible
-        index = 0, //Starting index
-        endIndex = ( $item.length / visible ) - 1; //End index
+    var $item = $('#card-container .decks'), /*Cache your DOM selector*/
+        visible = 2, /*Set the number of items that will be visible*/
+        index = 0, /*Starting index*/
+        endIndex = ( $item.length / visible ) - 1; /*End index*/
         if($item.length > 3){
             $('.cards-filter-prev, .cards-filter-next').fadeIn(400);
         }
 
     $('.cards-filter-next').on('click', function(e){
-        // e.stopPropagation();
-        // var leftPos = $('#card-container').scrollLeft();
-        // console.log(leftPos);
-        //   $('#card-container').animate({
-        //         scrollLeft: leftPos + 365
-        //     }, 300);
-        //   leftPos -= 10;
-        //   console.log(leftPos);
+        /*e.stopPropagation();
+        var leftPos = $('#card-container').scrollLeft();
+        console.log(leftPos);
+          $('#card-container').animate({
+                scrollLeft: leftPos + 365
+            }, 300);
+          leftPos -= 10;
+          console.log(leftPos);*/
         $('ul#card-container').mCustomScrollbar("scrollTo", "-=360");
     });
 
     $('.cards-filter-prev').on('click', function(e){
-        // e.stopPropagation();
-        // var leftPos = $('#card-container').scrollLeft();
-        // console.log(leftPos);
-        //   $('#card-container').animate({
-        //         scrollLeft: leftPos - 365
-        //     }, 300);
-        //   leftPos += 10;
-        //   console.log(leftPos);
+        /*e.stopPropagation();
+        var leftPos = $('#card-container').scrollLeft();
+        console.log(leftPos);
+          $('#card-container').animate({
+                scrollLeft: leftPos - 365
+            }, 300);
+          leftPos += 10;
+          console.log(leftPos);*/
           $('ul#card-container').mCustomScrollbar("scrollTo", "+=360");
 
     });
+/*
+scrolling decks   
 
-// scrolling decks <---    
 
 
-
-// mCustomScrollbar
+mCustomScrollbar*/
 
 
 });
@@ -3751,7 +3751,7 @@ $(document).on('ready', function() {
 </script>
 
 <script>
-//Mission Overview Track progressbar
+/*Mission Overview Track progressbar*/
 var bar = new ProgressBar.Line(trackProgressBar, {
 strokeWidth: 10,
 easing: 'easeInOut',
@@ -3761,6 +3761,6 @@ trailColor: '#dfe2e5',
 trailWidth: 10,
 svgStyle: {width: '100%', height: '100%'}
 });
-bar.animate(0.35); // Number from 0.0 to 1.0
+bar.animate(0.35); /*Number from 0.0 to 1.0*/
 </script>
 </html>
