@@ -27,6 +27,7 @@
         <link rel="stylesheet" type="text/css" href="lbd/css/jquery.mCustomScrollbar.min.css">
         <!--  Light Bootstrap Dashboard core CSS    -->
         <link href="lbd/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+        
         <!-- Temporary css for Layouts     -->
 
     </head>
@@ -632,9 +633,6 @@
                                                                             <option data-content="<span class='label validated ongoing'>Validated</span>">Validated</option>
                                                                             <option data-content="<span class='label writing default'>Writing</span>">Writing</option>
                                                                         </select>
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <button type="reset" class="btn btn-fill delete pull-right">Clear Filter</button>
                                                                     </div>
                                                                 </form>
                                                             </div>
@@ -3643,9 +3641,10 @@
     },0);
     }
     </script>
-    <!-- Multiple jobs slider -->
+    
     <script>
     $(document).on('ready', function() {
+    // Multiple jobs slider --->
     slidesCounter();
     function slidesCounter(){
         $('.slider').each(function() {
@@ -3661,18 +3660,17 @@
     $('.slick-prev, .slick-next, .slider').on('click swipe', function(){
         slidesCounter();
     });
+    // Multiple jobs slider <---
+    // Toggle sidebar --->
     $('.toggle-panel-container').on('click', function(){
         var toggler = $(this).find('i').text();
         toggler == 'close' ? $('.toggle-panel-container').find('.material-icons').text('menu') : $('.toggle-panel-container').find('.material-icons').text('close');
         $('.tab-panel-container').toggleClass('toggled');
         $(this).toggleClass('toggled');
     });
-    $(document).on('click', '.yamm .dropdown-menu', function(e) {
-        e.stopImmediatePropagation()
-    });
+    // Toggle sidebar <---
 
-
-// toggling filters popup
+// toggling filters popup --->
 
     $(document).on('click', "#cards-filter-dropup", function(e){
         e.stopPropagation();
@@ -3697,6 +3695,8 @@
         });
     });
 
+// toggling filters popup <---    
+
     });
 </script>
 
@@ -3704,7 +3704,7 @@
 <script>
 
 $(document).on('ready', function() {
-// scrolling decks
+// scrolling decks --->
 
     var $item = $('#card-container .decks'), //Cache your DOM selector
         visible = 2, //Set the number of items that will be visible
@@ -3739,24 +3739,12 @@ $(document).on('ready', function() {
 
     });
 
+// scrolling decks <---    
+
 
 
 // mCustomScrollbar
 
-$('.tab-panel, .decks-wrap').mCustomScrollbar();
-$('ul#card-container').mCustomScrollbar(
-        {
-            mouseWheel:{ 
-                    preventDefault: true,
-                    enable: false,
-                    axis: "x"
-                },
-            axis: "x",
-            scrollbarPosition: "outside",
-            contentTouchScroll: 25,
-            documentTouchScroll: true
-        }
-    );
 
 });
 
