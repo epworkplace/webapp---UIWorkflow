@@ -101,14 +101,19 @@ gulp.task('clean', function() {
 
 // build HTML files
 gulp.task('html', function() {
-	var page = gulp.src(html.in).pipe($.preprocess({ context: html.context }));
+	var page = gulp.src(html.in);
 	if (!devBuild) {
 		  page = page
 			.pipe($.size({ title: 'HTML in' }))
 			.pipe($.htmlclean())
 			.pipe($.size({ title: 'HTML out' }));
 	}
-	return page.pipe(gulp.dest(html.out));
+	return page
+	.pipe($.indent({
+        tabs:true,
+	    amount:1
+	   }))
+	.pipe(gulp.dest(html.out));
 });
 
 // manage images

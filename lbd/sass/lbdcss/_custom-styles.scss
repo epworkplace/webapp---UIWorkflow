@@ -1641,6 +1641,13 @@ html {
                                 margin-right: 10px;
                             }
                         }
+                        &.disapproved {
+                            color: #ee0a5f;
+
+                            i {
+                                margin-right: 10px;
+                            }
+                        }
                         &.disable{
                           color: #d9dbde;
                         }
@@ -8274,6 +8281,10 @@ html {
             margin-right: 6px;
         }
     }
+}
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select.open>.btn.dropdown-toggle, .bootstrap-select>.dropdown-toggle{
+    color: #9a9fa9!important;
 }
 
 .bootstrap-select.btn-group .dropdown-menu li a:hover, .bootstrap-select.btn-group .dropdown-menu li a:focus {

@@ -317,4 +317,30 @@
     }
 }
 
+.quote-mission-creation{
+	height: 193px!important;
+	.list-head-quote-mission-creation{
+		width: 75%!important;
+		.header{
+			padding-top: 12px!important;
+			label{
+				font-size: 12px;
+				font-weight: 400;
+				color: #9a9fa9;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			input[type="text"]{
+				font-size: 16px;
+				border: 0;
+				padding: 0;
+				margin: -7px 0 0 0;
+			}
+		}
+	}
+	a.delete-create-mission{
+		margin-top: 27px;
+	}
+}
+
 /* Quote template CSS Ends */
