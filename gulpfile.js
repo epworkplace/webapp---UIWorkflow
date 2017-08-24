@@ -2,9 +2,10 @@
  var
 	gulp = require('gulp'),
 	del = require('del'),
-	browsersync = require('browser-sync'),
 	pkg = require('./package.json'),
-	$ = require('gulp-load-plugins')({ lazy: true });
+	$ = require('gulp-load-plugins')({ lazy: true }),
+	browserSync = require('browser-sync').create(),
+	reload = browserSync.reload;
 
 // file locations
 var
@@ -101,7 +102,9 @@ gulp.task('clean', function() {
 
 // build HTML files
 gulp.task('html', function() {
-	var page = gulp.src(html.in);
+	var page = gulp.src(html.in)
+						 // .pipe($.newer(html.out))
+						 .pipe($.preprocess({ context: html.context }));
 	if (!devBuild) {
 		  page = page
 			.pipe($.size({ title: 'HTML in' }))
@@ -114,6 +117,8 @@ gulp.task('html', function() {
 	    amount:1
 	   }))
 	.pipe(gulp.dest(html.out));
+				 .pipe($.jsbeautifier())
+				 .pipe(gulp.dest(html.out));
 });
 
 // manage images
@@ -150,7 +155,7 @@ gulp.task('css', ['fonts'], function() {
     .pipe($.newer(css.pluginCSS.out))
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
-    .pipe(browsersync.reload({ stream: true }));
+    .pipe(reload({stream: true}));
 });
 
 // compile Sass
@@ -162,7 +167,7 @@ gulp.task('sass', ['fonts'], function() {
 		.pipe($.sourcemaps.write('./maps'))
 		.pipe($.size({title: 'SCSS out '}))
 		.pipe(gulp.dest(css.out))
-		.pipe(browsersync.reload({ stream: true }));
+		.pipe(reload({stream: true}));
 });
 
 // js tasks
@@ -223,13 +228,13 @@ gulp.task('connect', function() {
 });
 
 // browser sync
-gulp.task('browsersync', function() {
-	browsersync(syncOpts);
+gulp.task('browserSync', function() {
+	browserSync.init(syncOpts);
 });
 
 gulp.task('watch', function() {
   // html changes
-  gulp.watch(html.watch, ['html', browsersync.reload]);
+  gulp.watch(html.watch, ['html', reload]);
 
   // image changes
   gulp.watch(images.in, ['images']);
@@ -244,11 +249,11 @@ gulp.task('watch', function() {
   gulp.watch([css.pluginCSS.watch], ['css']);
 
   // javascript changes
-  gulp.watch(js.in, ['js', browsersync.reload]);
+  gulp.watch(js.in, ['js', reload]);
 
   // javascript libraries changes
-  gulp.watch(jsLibs.in, ['jslib', browsersync.reload]);
+  gulp.watch(jsLibs.in, ['jslib', reload]);
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'sass', 'css', 'js', 'jslib', 'browsersync', 'watch']);
+gulp.task('default', ['html', 'images', 'fonts', 'sass', 'css', 'js', 'jslib', 'browserSync', 'watch']);
