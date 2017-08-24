@@ -256,7 +256,7 @@
                                                                 <li>
                                                                     <div class="row">
                                                                         <div class="col-md-12 add-new-card">
-                                                                            <a class="add-card" href="javascript:;" data-toggle="modal" data-target="#create-new-client-modal">
+                                                                            <a class="add-card" href="javascript:;" data-toggle="modal" data-target="#create-new-contact-modal">
                                                                                 <i class="material-icons">add</i>
                                                                             </a>
                                                                         </div>
@@ -1525,6 +1525,7 @@
     </div>
 </div>
 
+<!-- Create new client modal -->
 <div class="modal fade create-new-client-modal" id="create-new-client-modal" tabindex="-1" role="dialog" aria-labelledby="create-new-client-modal">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -1654,6 +1655,157 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Create new contact -->
+<div class="modal fade create-new-contact-modal" id="create-new-contact-modal" tabindex="-1" role="dialog" aria-labelledby="create-new-contact-modal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
+                <div class="modal-title">Create a new contact</div>
+                <form action="" class="form clearfix">
+                                                                        <div class="form-group">
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+                                                                                    <label for="contactName">Contact name</label>
+                                                                                    <input type="text" class="form-control" placeholder="C017" id="contactName">
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <label for="position">Position</label>
+                                                                                    <input type="text" class="form-control" placeholder="ex: Webedia, LVMH.." id="position">
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <div class="row">
+                                                                                <div class="col-md-6"><label class="checkbox"><input type="checkbox" data-toggle="checkbox">This is the main contact</label>
+                                                                                    
+                                                                                    
+                                                                                </div>
+                                                                                
+                                                                                
+                                                                            </div>
+                                                                        </div><div class="form-group contact-picture">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <label for="upload-contact-pic">Contact Picture</label>
+                                                                                </div>
+                                                                                <div class="client-logo empty">
+                                                                                    <div class="col-md-12">
+                                                                                        <input id="upload-contact-pic" type="file">
+                                                                                        <a href="javascript:;" class="add-client-logo">
+                                                                                            <div class="col-md-12">
+                                                                                                Add an image <span class="d-block">from your computer</span>
+                                                                                            </div>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group contact-picture">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <label for="upload-client-logo">Client Logo</label>
+                                                                                </div>
+                                                                                <div class="client-logo full col-md-10">
+                                                                                    <div class="col-md-3 image-container">
+                                                                                        <img src="lbd/img/blog-1.jpg" class="image-loaded">
+                                                                                    </div>
+                                                                                    <div class="col-md-9 client-desc-container">
+                                                                                        <div class="description">
+                                                                                            <strong>Twitter user: </strong>
+                                                                                            <a class="client-name" href="javascript:;">@Allocine</a>
+
+                                                                                        </div>
+                                                                                        <div class="image-action">
+                                                                                            <a class="replace" href="javascript:;">Replace Image</a>
+                                                                                            <a class="remove" href="javascript:;">Remove image</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+                                                                                    <label for="contactNumber">Phone Number</label>
+                                                                                    <input type="text" class="form-control" placeholder="C017" id="contactNumber">
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <label for="position">Position</label>
+                                                                                    <input type="text" class="form-control" placeholder="ex: Webedia, LVMH.." id="position">
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                        </div><div class="form-group">
+                                                                            <div class="row">
+                                                                                <div>
+                                                                                    <label for="clientSector" class="col-md-12">Sector</label>
+                                                                                    <div class="">
+                                                                                        <div class="col-md-6">
+                                                                                            <select class="chosen-default chosen-select" id="clientSector" style="display: none;">
+                                                                                                <option data-img-src="lbd/img/default-avatar.png">Creation &amp; Entertainment</option>
+                                                                                                <option data-img-src="lbd/img/default-avatar.png">Creation</option>
+                                                                                                <option data-img-src="lbd/img/default-avatar.png">Entertainment</option>
+                                                                                                <option data-img-src="lbd/img/default-avatar.png">Social Media</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <div class="row">
+                                                                                <div>
+                                                                                    <label for="clientAddress" class="col-md-12">Address</label>
+                                                                                    <div class="">
+                                                                                        <div class="col-md-12">
+                                                                                            <textarea class="form-control" id="clientAddress" rows="3" placeholder="-"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <div class="row">
+                                                                                <div>
+                                                                                    <label for="clientCountry" class="col-md-12 control-label">Country</label>
+                                                                                    <div class="">
+                                                                                        <div class="col-md-4">
+                                                                                            <select class="chosen-default chosen-select" id="clientCountry" style="display: none;">
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 01</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 02</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 03</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 04</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 05</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 06</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 07</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 08</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 09</option>
+                                                                                                <option value="" data-img-src="lbd/img/default-avatar.png">Contry 10</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <div class="row">
+                                                                                <div class="col-md-6">
+                                                                                    <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left form-control" data-dismiss="modal">Cancel</button>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right form-control">Create client</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
             </div>
         </div>
     </div>

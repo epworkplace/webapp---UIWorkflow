@@ -112,11 +112,6 @@ gulp.task('html', function() {
 			.pipe($.size({ title: 'HTML out' }));
 	}
 	return page
-	.pipe($.indent({
-        tabs:true,
-	    amount:1
-	   }))
-	.pipe(gulp.dest(html.out));
 				 .pipe($.jsbeautifier())
 				 .pipe(gulp.dest(html.out));
 });
