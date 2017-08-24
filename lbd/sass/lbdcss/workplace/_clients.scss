@@ -54,48 +54,38 @@
   }
 }
 
-/* Chosen select styles starts */
-
-.chose-image-list, .chose-image-small{
-	border-radius: 0px;
-	margin: 0px 13px 0 0;
-}
-
-/* Chosen select styles starts */
-
-
 /* modal window styles*/
 .modal {
     *.d-block {
       display: block;
     }
 		.modal-content {
-    padding: 15px;
-    font-size: 12px;
-    color: #9ca1ab;
+	    padding: 15px;
+	    font-size: 12px;
+	    color: #9ca1ab;
 
-    span.close {
-      position: absolute;
-      top: -4px;
-      right: -4px;
-    }
+	    span.close {
+	      position: absolute;
+	      top: -4px;
+	      right: -4px;
+	    }
 
-    input, .form-control {
-      color: #353f53;
-      font-weight: 600;
+	    input, .form-control {
+	      color: #353f53;
+	      font-weight: 600;
 
-      &::-webkit-input-placeholder {
-        font-weight: 400;
-      }
+	      &::-webkit-input-placeholder {
+	        font-weight: 400;
+	      }
 
-      &:-ms-input-placeholder {
-        font-weight: 400;
-      }
+	      &:-ms-input-placeholder {
+	        font-weight: 400;
+	      }
 
-      &::placeholder {
-        font-weight: 400;
-      }
-    }
+	      &::placeholder {
+	        font-weight: 400;
+	      }
+	    }
 
     .modal-header {}
 
@@ -196,5 +186,67 @@
     }
 
     .modal-footer {}
+  }
+  &.create-new-client-modal {
+  	.client-logo{
+  		&.full{
+  			display: flex;
+  			align-items: center;
+  			.image-container{
+  				.image-loaded{
+  					max-height: 90px;
+  				}
+  			}
+  			.client-desc-container{
+  				a{
+  					text-decoration: underline;
+  					&:hover{
+  						text-decoration: none;
+  					}
+  				}
+  				.description{
+						a{
+							&.client-name{
+								color: #448aff;
+    						font-weight: 600;
+							}
+						}
+  				}
+  				.image-action{
+  					a{
+  						display: flex;
+  						align-items: center;
+  						margin-right: 20px;
+    					position: relative;
+  						&.remove{
+								color: #EE0A5F;
+    						padding-left: 15px;
+  							&:before{
+  								content: '\E5CD';
+							    font-family: 'Material Icons';
+							    position: absolute;
+							    top: 0px;
+							    left: 0;
+  							}
+  							
+  						}
+  					}
+  				}
+  			}
+  		}
+  	}
+
+/* Chosen select styles starts */
+		.chosen-container{
+			&.chosen-container-single{
+				color: #353f53;
+	      font-weight: 600;
+			}
+		}
+		.chose-image-list, .chose-image-small{
+			border-radius: 3px;
+			margin: 0px 13px 0 0;
+		}
+/* Chosen select styles starts */
   }
 }
