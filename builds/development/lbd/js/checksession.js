@@ -1,0 +1,1 @@
+$(function(){$.ajaxSetup({data:{},type:"POST",async:!0,url:"/index/index?ajax=session",success:function(n){"failed"==n&&(window.location=window.location.href)}})});
