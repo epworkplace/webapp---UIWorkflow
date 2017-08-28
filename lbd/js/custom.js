@@ -150,7 +150,7 @@ $(document).ready(function(){
 	    });
 	});
 
-	$('[id^="missionImage"], [id^="contractImage"]').each(function(i)
+/*	$('[id^="missionImage"], [id^="contractImage"]').each(function(i)
 	{
 		var image = $(this).attr('id');
 		var bar = new ProgressBar.Circle('#' + image, {
@@ -165,7 +165,7 @@ $(document).ready(function(){
 		var value = ($(this).attr('data-value') / 100);
 		bar.animate(value);
 
-	});
+	});*/
 
 	/*$('.contract-section-list ul li:nth-child(6n)').append('<a href="#" class="jscroll-next">NEXT</a>');
 
