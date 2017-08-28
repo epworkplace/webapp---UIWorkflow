@@ -1128,10 +1128,8 @@ html {
                         .right {
                             padding: 0;
                             float: right;
-
                             .end-date-container {
                                 padding: 0;
-
                                 a.end-date {
                                     /* width: 211px; */
                                     display: block;
@@ -1142,7 +1140,6 @@ html {
                                     color: #485262;
                                     font-weight: 600;
                                     position: relative;
-
                                     &:before{
                                         content: "";
                                         position: absolute;
@@ -1152,26 +1149,22 @@ html {
                                         width: 1px;
                                         height: 78px;
                                     }
-
                                     span.title {
                                         font-size: 12px;
                                         display: block;
                                         color: #B0B4BB;
                                         font-weight: 400;
                                     }
-
                                     span.warning-indicator {
                                         position: absolute;
                                         top: 33px;
                                         left: 30px;
-
                                         span {
                                             i {
                                                 color: #ee0a5f;
                                             }
                                         }
                                     }
-
                                     span.caret-drop {
                                         position: absolute;
                                         top: 33px;

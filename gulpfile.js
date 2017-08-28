@@ -116,9 +116,8 @@ gulp.task('html', function() {
         tabs:true,
 	    amount:1
 	   }))
+	.pipe($.jsbeautifier())
 	.pipe(gulp.dest(html.out));
-				 .pipe($.jsbeautifier())
-				 .pipe(gulp.dest(html.out));
 });
 
 // manage images
