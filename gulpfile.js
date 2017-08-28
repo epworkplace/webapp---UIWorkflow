@@ -112,11 +112,11 @@ gulp.task('html', function() {
 			.pipe($.size({ title: 'HTML out' }));
 	}
 	return page
-		 .pipe($.indent({
-	        tabs:true,
-		    amount:1
-		   }))
-		 .pipe($.jsbeautifier())
+		 // .pipe($.indent({
+	  //       tabs:true,
+		 //    amount:1
+		 //   }))
+		 // .pipe($.jsbeautifier())
 		 .pipe(gulp.dest(html.out));
 });
 
@@ -188,7 +188,7 @@ gulp.task('js', function() {
 			// .pipe($.concat(js.filename))
 			.pipe($.size({ title: 'JS in '}))
 			.pipe($.stripDebug())
-			.pipe($.uglify())
+			// .pipe($.uglify())
 			.pipe($.size({ title: 'JS out '}))
 			.pipe(gulp.dest(js.out));
 	}

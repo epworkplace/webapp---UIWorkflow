@@ -1,1 +1,193 @@
-var __slice=[].slice;!function(t,n){var a;return a=function(){function n(n,a){var e,i,s,r=this;this.options=t.extend({},this.defaults,a),this.$el=n,s=this.defaults;for(e in s)i=s[e],null!=this.$el.data(e)&&(this.options[e]=this.$el.data(e));this.createStars(),this.syncRating(),this.$el.on("mouseover.starrr","span",function(t){return r.syncRating(r.$el.find("span").index(t.currentTarget)+1)}),this.$el.on("mouseout.starrr",function(){return r.syncRating()}),this.$el.on("click.starrr","span",function(t){return r.setRating(r.$el.find("span").index(t.currentTarget)+1)}),this.$el.on("starrr:change",this.options.change)}return n.prototype.defaults={rating:void 0,numStars:5,change:function(t,n){}},n.prototype.createStars=function(){var t,n,a;for(a=[],t=1,n=this.options.numStars;1<=n?t<=n:t>=n;1<=n?t++:t--)a.push(this.$el.append("<span class='glyphicon .glyphicon-star-empty'></span>"));return a},n.prototype.setRating=function(t){return this.options.rating===t&&(t=void 0),this.options.rating=t,this.syncRating(),this.$el.trigger("starrr:change",t)},n.prototype.syncRating=function(t){var n,a,e,i;if(t||(t=this.options.rating),t)for(n=a=0,i=t-1;0<=i?a<=i:a>=i;n=0<=i?++a:--a)this.$el.find("span").eq(n).removeClass("glyphicon-star-empty").addClass("glyphicon-star");if(t&&t<5)for(n=e=t;t<=4?e<=4:e>=4;n=t<=4?++e:--e)this.$el.find("span").eq(n).removeClass("glyphicon-star").addClass("glyphicon-star-empty");if(!t)return this.$el.find("span").removeClass("glyphicon-star").addClass("glyphicon-star-empty")},n}(),t.fn.extend({starrr:function(){var n,e;return e=arguments[0],n=2<=arguments.length?__slice.call(arguments,1):[],this.each(function(){var i;if(i=t(this).data("star-rating"),i||t(this).data("star-rating",i=new a(t(this),e)),"string"==typeof e)return i[e].apply(i,n)})}})}(window.jQuery,window),$(function(){return $(".starrr").starrr()}),$(document).ready(function(){$("#meaning").text("Not Rated");var t=["Not Rated","Really Bad","Bad","Fair","Good","Brilliant"];$(".ratable").on("starrr:change",function(n,a){$(this).closest(".evaluation").children("#count").html(a),$(this).closest(".evaluation").children("#meaning").html(t[a]);var e=$(this).closest(".evaluation").children("#count").html(),i=$(this).closest(".evaluation").children(".indicators");i.css("color","black"),i.children(".rateval").val(e),i.children("#textwr").html(" "),a<3?(i.css("color","red").show(),i.children("#textwr").text("What can be improved?")):a>3?(i.css("color","green").show(),i.children("#textwr").html("What was done correctly?")):i.hide()}),$("#hearts-existing").on("starrr:change",function(t,n){$("#count-existing").html(n)})}),$(function(){$(".button-checkbox").each(function(){function t(){var t=i.is(":checked");e.data("state",t?"on":"off"),e.find(".state-icon").removeClass().addClass("state-icon "+r[e.data("state")].icon),t?e.removeClass("btn-default").addClass("btn-"+s+" active"):e.removeClass("btn-"+s+" active").addClass("btn-default")}function n(){t(),0==e.find(".state-icon").length&&e.prepend('<i class="state-icon '+r[e.data("state")].icon+'"></i> ')}var a=$(this),e=a.find("button"),i=a.find("input:checkbox"),s=e.data("color"),r={on:{icon:"glyphicon glyphicon-check"},off:{icon:"fa fa-square-o"}};e.on("click",function(){i.prop("checked",!i.is(":checked")),i.triggerHandler("change"),t()}),i.on("change",function(){t()}),n()})});
+// Starrr plugin (https://github.com/dobtco/starrr)
+var __slice = [].slice;
+(function($, window) {
+  var Starrr;
+  Starrr = (function() {
+    Starrr.prototype.defaults = {
+      rating: void 0,
+      numStars: 5,
+      change: function(e, value) {}
+    };
+    function Starrr($el, options) {
+      var i, _, _ref,
+        _this = this;
+      this.options = $.extend({}, this.defaults, options);
+      this.$el = $el;
+      _ref = this.defaults;
+      for (i in _ref) {
+        _ = _ref[i];
+        if (this.$el.data(i) != null) {
+          this.options[i] = this.$el.data(i);
+        }
+      }
+      this.createStars();
+      this.syncRating();
+      this.$el.on('mouseover.starrr', 'span', function(e) {
+        return _this.syncRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('mouseout.starrr', function() {
+        return _this.syncRating();
+      });
+      this.$el.on('click.starrr', 'span', function(e) {
+        return _this.setRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('starrr:change', this.options.change);
+    }
+    Starrr.prototype.createStars = function() {
+      var _i, _ref, _results;
+
+      _results = [];
+      for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
+        _results.push(this.$el.append("<span class='glyphicon .glyphicon-star-empty'></span>"));
+      }
+      return _results;
+    };
+    Starrr.prototype.setRating = function(rating) {
+      if (this.options.rating === rating) {
+        rating = void 0;
+      }
+      this.options.rating = rating;
+      this.syncRating();
+      return this.$el.trigger('starrr:change', rating);
+    };
+    Starrr.prototype.syncRating = function(rating) {
+      var i, _i, _j, _ref;
+
+      rating || (rating = this.options.rating);
+      if (rating) {
+        for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+          this.$el.find('span').eq(i).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+        }
+      }
+      if (rating && rating < 5) {
+        for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
+          this.$el.find('span').eq(i).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+        }
+      }
+      if (!rating) {
+        return this.$el.find('span').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+      }
+    };
+    return Starrr;
+
+  })();
+  return $.fn.extend({
+    starrr: function() {
+      var args, option;
+      option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+      return this.each(function() {
+        var data;
+        data = $(this).data('star-rating');
+        if (!data) {
+          $(this).data('star-rating', (data = new Starrr($(this), option)));
+        }
+        if (typeof option === 'string') {
+          return data[option].apply(data, args);
+        }
+      });
+    }
+  });
+})(window.jQuery, window);
+
+$(function() {
+  return $(".starrr").starrr();
+});
+
+$( document ).ready(function() {
+  $('#meaning').text('Not Rated');
+  var correspondence=["Not Rated","Really Bad","Bad","Fair","Good","Brilliant"];  
+  $('.ratable').on('starrr:change', function(e, value){
+    $(this).closest('.evaluation').children('#count').html(value);
+    $(this).closest('.evaluation').children('#meaning').html(correspondence[value]);
+    var currentval=  $(this).closest('.evaluation').children('#count').html();
+    var target=  $(this).closest('.evaluation').children('.indicators');
+    target.css("color","black");
+    target.children('.rateval').val(currentval);
+    target.children('#textwr').html(' ');
+    if(value<3){
+      target.css("color","red").show(); 
+      target.children('#textwr').text('What can be improved?');
+    }else{
+      if(value>3){    
+          target.css("color","green").show(); 
+          target.children('#textwr').html('What was done correctly?');
+      }else{
+        target.hide();  
+      }
+    }
+  }); 
+  $('#hearts-existing').on('starrr:change', function(e, value){
+    $('#count-existing').html(value);
+  });
+});
+
+
+
+
+
+$(function () {
+    $('.button-checkbox').each(function () {
+
+        // Settings
+        var $widget = $(this),
+            $button = $widget.find('button'),
+            $checkbox = $widget.find('input:checkbox'),
+            color = $button.data('color'),
+            settings = {
+                on: {
+                    icon: 'glyphicon glyphicon-check'
+                },
+                off: {
+                    icon: 'fa fa-square-o'
+                }
+            };
+
+        // Event Handlers
+        $button.on('click', function () {
+            $checkbox.prop('checked', !$checkbox.is(':checked'));
+            $checkbox.triggerHandler('change');
+            updateDisplay();
+        });
+        $checkbox.on('change', function () {
+            updateDisplay();
+        });
+
+        // Actions
+        function updateDisplay() {
+            var isChecked = $checkbox.is(':checked');
+
+            // Set the button's state
+            $button.data('state', (isChecked) ? "on" : "off");
+
+            // Set the button's icon
+            $button.find('.state-icon')
+                .removeClass()
+                .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+            // Update the button's color
+            if (isChecked) {
+                $button
+                    .removeClass('btn-default')
+                    .addClass('btn-' + color + ' active');
+            }
+            else {
+                $button
+                    .removeClass('btn-' + color + ' active')
+                    .addClass('btn-default');
+            }
+        }
+
+        // Initialization
+        function init() {
+
+            updateDisplay();
+
+            // Inject the icon if applicable
+            if ($button.find('.state-icon').length == 0) {
+                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+            }
+        }
+        init();
+    });
+});
+
