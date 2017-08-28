@@ -118,6 +118,8 @@ gulp.task('html', function() {
 	   }))
 	.pipe($.jsbeautifier())
 	.pipe(gulp.dest(html.out));
+		 .pipe($.jsbeautifier())
+		 .pipe(gulp.dest(html.out));
 });
 
 // manage images
