@@ -319,10 +319,18 @@
 
 .quote-mission-creation{
 	height: 193px!important;
+	padding: 15px 3px!important;
+	.check{
+		padding: 0 15px!important;
+	}
+	.list-image-container{
+		margin: 0px 20px 0 5px!important;
+	}
 	.list-head-quote-mission-creation{
 		width: 75%!important;
+		margin-top: -6px!important;
+		margin-bottom: 7px;
 		.header{
-			padding-top: 12px!important;
 			label{
 				font-size: 12px;
 				font-weight: 400;
@@ -339,8 +347,47 @@
 		}
 	}
 	a.delete-create-mission{
-		margin-top: 27px;
+		margin-top: 10px;
 	}
 }
+
+.mission-type-creation{
+	margin-bottom: 10px;
+}
+
+.flags-to{
+	position: relative;
+	&:before{
+		content: "\E5CC";
+        font-family: "Material Icons";
+		position: absolute;
+		top: 10px;
+		left: -7px;
+		font-size: 16px;
+		color: #353F53;
+	}
+}
+
+.flag-dropdown{
+	a.chosen-single{
+		span{
+			img{
+				border-radius: 0!important;
+				width: 20px!important;
+			}
+		}
+	}
+	.chosen-drop{
+		ul.chosen-results{
+			li.active-result{
+				img{
+					border-radius: 0!important;
+					width: 20px!important;
+				}
+			}
+		}
+	}
+}
+
 
 /* Quote template CSS Ends */
