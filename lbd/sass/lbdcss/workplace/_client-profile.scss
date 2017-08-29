@@ -54,22 +54,25 @@
             font-weight: 600;
             color: #353F53;
           }
-          .tags-list{
+
+          .tags-list {
             display: flex;
-            flex-wrap:wrap;
-            .label{
+            flex-wrap: wrap;
+
+            .label {
               color: #fff;
               margin: 0 5px 5px 0;
               line-height: normal;
               border-radius: 7px;
-              &.paused{
+
+              &.paused {
                 background: #9a9fa9;
               }
             }
           }
         }
 
-        .more-menu{
+        .more-menu {
           i {
             font-size: 20px;
           }
@@ -152,18 +155,34 @@
     /* tab panel container <--*/
     /* main panel container -->*/
     .main-panel-container {
-      .data-container{
+      .data-container {
         padding: 25px;
-        span.edit{
-          font-size: 12px;
-          a{
-            text-decoration: underline;
-          }
-        }
-        .brand-history{
-          padding: 20px;
-          .brand-history-container{
-            .title{
+
+        .card {
+          margin-bottom: 15px;
+
+          &[class*='container'] {
+            padding: 20px;
+
+            a {
+              font-size: 12px;
+              color: #a2a6b0;
+              text-decoration: underline;
+              &[class*='add'] {
+                
+              }
+              &.source, &.external-website-link, &.morelink{
+                color: #448aff;
+              }
+              &.chosen-single{
+                text-decoration: none;
+              }
+              &:hover{
+                text-decoration: none;
+              }
+            }
+
+            .title {
               color: #353f53;
               font-size: 14px;
               font-weight: 600;
@@ -171,8 +190,87 @@
               padding: 0;
               text-transform: uppercase;
             }
-            .overview{
 
+            .overview {
+              &, & p {
+                font-size: 14px;
+              }
+
+              p:first-of-type {
+                margin-top: 10px;
+              }
+            }
+
+            .chosen-container {
+              .chosen-single {
+                .chose-image-small {
+                  margin: 0 13px 0 0;
+                }
+              }
+
+              .chosen-drop {
+                .chosen-search {}
+
+                .chosen-results {
+                  .active-result {
+                    &.result-selected {}
+                  }
+                }
+              }
+            }
+          }
+
+          &.sector-container {}
+
+          &.annual-turnover-container {
+            .annual-turnover {
+              font-size: 20px;
+              font-weight: 600;
+
+              span {
+                font-size: 12px;
+                font-weight: 400;
+              }
+            }
+          }
+
+          &.address-container {
+            .address {
+              .client-country {
+                margin-bottom: 15px;
+              }
+
+              .client-address {}
+            }
+          }
+
+          &.external-links-container {
+            .external-links {
+              .website-links {
+                ul {
+                  padding-left: 15px;
+                  list-style-type: none;
+
+                  li {
+                    a {
+
+                    }
+                  }
+                }
+              }
+
+              .socialmedia-links {
+                ul {
+                  padding-left: 15px;
+                  list-style-type: none;
+
+                  li {
+                    display: flex;
+                    width: 40px;
+                    margin-right: 15px;
+                  }
+                }
+              }
             }
           }
         }

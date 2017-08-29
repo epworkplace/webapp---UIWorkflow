@@ -606,7 +606,7 @@ $(document).ready(function(){
         }      
     }); 
 
-$(".morelink").click(function(){
+/*$(".morelink").click(function(){
     if($(this).hasClass("less")) {
         $(this).removeClass("less");
         $(this).html(moretext);
@@ -617,8 +617,8 @@ $(".morelink").click(function(){
     $(this).parent().prev().toggle();
     $(this).prev().toggle();
     return false;
-});
-    /*$(".morelink").click(function(e){
+});*/
+    $(".morelink").click(function(e){
         e.stopPropagation();
         if($(this).hasClass("less")) {
             $(this).removeClass("less");
@@ -627,10 +627,10 @@ $(".morelink").click(function(){
             $(this).addClass("less");
             $(this).html(lesstext);
         }
-        $(this).parent().prev().slideToggle();
-        $(this).prev().slideToggle();
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
         return false;
-    });*/
+    });
 
 
 
