@@ -4419,6 +4419,20 @@ html {
     text-transform: uppercase;
 }
 
+.input-group-addon {
+    position: relative;
+    color: #9a9fa9;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 1px;
+        height: 20px;
+        background: #eee;
+    }
+}
+
 /*Step Settings for Layout Starts*/
 
 .overlay-main-container {
@@ -4441,7 +4455,6 @@ html {
     position: fixed;
     z-index: 999;
     overflow-y: scroll;
-
     span.close {
         position: absolute;
         right: 20px;
@@ -4455,60 +4468,55 @@ html {
             }
         }
     }
+}
 
-    .progress-steps {
-        padding: 0;
+.progress-steps {
+    padding: 0;
+    .tab-links {
+        ul.nav {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: #eaebed;
+            }
+            li {
+                a {
+                    border: none;
+                    color: #9a9fa9;
+                    font-weight: 600;
+                    font-size: 14px;
+                    background: none;
+                    padding: 0 10px 10px 10px;
+                    position: relative;
 
-        .tab-links {
-            ul.nav {
-                padding: 0;
-                margin: 0;
-                position: relative;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 1px;
-                    background: #eaebed;
-                }
-
-                li {
-                    a {
+                    &:hover, &:focus {
                         border: none;
-                        color: #9a9fa9;
-                        font-weight: 600;
-                        background: none;
-                        padding: 0 10px 10px 10px;
-                        position: relative;
-
-                        &:hover, &:focus {
-                            border: none;
-                        }
                     }
                 }
-
-                li:nth-of-type(1) {
-                    a {
-                        padding: 0 10px 10px 0;
-                    }
+            }
+            li:nth-of-type(1) {
+                a {
+                    padding: 0 10px 10px 0;
                 }
-
-                li.active {
-                    a {
-                        color: #448aff;
-
-                        &:before {
-                            content: "";
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 2px;
-                            background: #448aff;
-                        }
+            }
+            li.active {
+                a {
+                    color: #448aff;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #448aff;
                     }
                 }
             }
@@ -8244,6 +8252,12 @@ html {
 }
 
 /*Centerize Modal Ends*/
+
+.modal-body{
+    .tab-navigation{
+        padding-bottom: 0;
+    }
+}
 
 /* Multiple Select Search Box Starts*/
 

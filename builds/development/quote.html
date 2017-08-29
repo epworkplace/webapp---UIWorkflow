@@ -649,6 +649,13 @@
                                         </div>
                                     </div>
                                     <div class="row">
+                                        <div class="col-md-12 add-new-card">
+                                            <a href="javascript:;" class="add-card">
+                                                <i class="material-icons">add</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-md-12">
                                             <div class="card-section-list">
                                                 <ul>
@@ -728,7 +735,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-4 pull-right">
-                                                                        <button type="" class="btn btn-fill btn-yes pull-right">Edit Details</button>
+                                                                        <button type="" data-toggle="modal" data-target="#createQuoteMissionModal" class="btn btn-fill btn-yes pull-right">Edit Details</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -884,6 +891,193 @@
     </div>
 </div>
 <!-- Modal -->
+<div class="modal fade create-quote-mission-modal in" style="display: block;" id="createQuoteMissionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="col-md-12 create-quote-mission-title">
+                            Translation articles FR to US <span><a href="javascript:;" id="editCreateMissionTitle">Edit title</a></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 create-quote-mission-title-edit">
+                            <div class="input-group">
+                                <input type="text" placeholder="Edit Title" class="form-control" value="Translation articles FR to US">
+                                <button type="" id="saveCreateMissionTitle" class="btn btn-fill btn-wd btn-yes">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mission-type-creation">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <select name="" class="selectpicker" title="Service">
+                                        <option>Service 1</option>
+                                        <option>Service 2</option>
+                                        <option>Service 3</option>
+                                        <option>Service 4</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="" class="selectpicker" title="Mission type">
+                                        <option>Mission type 1</option>
+                                        <option>Mission type 2</option>
+                                        <option>Mission type 3</option>
+                                        <option>Mission type 4</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="" class="selectpicker" title="Product">
+                                        <option>Product 1</option>
+                                        <option>Product 2</option>
+                                        <option>Product 3</option>
+                                        <option>Product 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <select class="chosen-default flags">
+                                        <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
+                                        <option data-img-src="lbd/img/flag/fr.gif">FR</option>
+                                        <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
+                                        <option data-img-src="lbd/img/flag/sp.gif">ES</option>
+                                        <option data-img-src="lbd/img/flag/pol.gif">PO</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 flags-to">
+                                    <select class="chosen-default flags">
+                                        <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
+                                        <option data-img-src="lbd/img/flag/fr.gif">FR</option>
+                                        <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
+                                        <option data-img-src="lbd/img/flag/sp.gif">ES</option>
+                                        <option data-img-src="lbd/img/flag/pol.gif">PO</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 quote-mission-edit-wizard">
+                            <div class="col-md-12 progress-steps">
+                                <div id="wizardCard">
+                                    <form id="wizardForm" method="" action="">
+                                        <div class="tab-links">
+                                            <ul class="nav">
+                                                <li><a href="#tab-mission-create-1" data-toggle="tab">Mission settings</a></li>
+                                                <li><a href="#tab-mission-create-2" data-toggle="tab">Resources and costs</a></li>
+                                                <li><a href="#tab-mission-create-3" data-toggle="tab">Selling Prices</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane" id="tab-mission-create-1">
+                                                    <div class="row">
+                                                        <div class="col-md-12 tab-mission-create-settings">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-md-4">
+                                                                            <label>MISSION VOLUME</label>
+                                                                            <input type="text" name="" value="200" class="form-control" placeholder="">
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                             <label>ITEMS</label>
+                                                                            <select name="" class="selectpicker" title="Items">
+                                                                                <option>Items 1</option>
+                                                                                <option>Items 2</option>
+                                                                                <option>Items 3</option>
+                                                                                <option>Items 4</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-4">
+                                                                            <label>DURATION (DAYS)</label>
+                                                                            <input type="text" name="" value="40" class="form-control" placeholder="">
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                             <label>DELIVERY TIMIMG</label>
+                                                                            <select name="" class="selectpicker" title="Delivery timing">
+                                                                                <option>Delivery timing 1</option>
+                                                                                <option>Delivery timing 2</option>
+                                                                                <option>Delivery timing 3</option>
+                                                                                <option>Delivery timing 4</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-md-3">
+                                                                            <label>NB WORDS</label>
+                                                                            <input type="text" name="" value="400" class="form-control" placeholder="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <label>VOLUME PER DELIVERY</label>
+                                                                            <div class="input-group">
+                                                                                <input type="text" class="form-control" value="20">
+                                                                                <span class="input-group-addon">articles</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <label>DELIVERY EVERY...</label>
+                                                                            <div class="input-group">
+                                                                                <input type="text" class="form-control" value="7">
+                                                                                <span class="input-group-addon">days</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 tab-navigation">
+                                                            <button type="button" class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left">Cancel</button>
+                                                            <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="tab-mission-create-2">
+                                                    <div class="row">
+                                                        <div class="col-md-12">yyy</div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 tab-navigation">
+                                                            <button type="button" class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back">Back</button>
+                                                            <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="tab-mission-create-3">
+                                                    <div class="row">
+                                                        <div class="col-md-12">zzz</div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 tab-navigation">
+                                                            <button type="button" class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back">Back</button>
+                                                            <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-finish" onclick="onFinishWizard()">Done</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
     <!--   Core JS Files   -->
     <script src="lbd/js/jquery.min.js" type="text/javascript"></script>
@@ -1205,6 +1399,16 @@
 
         /*Flags Dropdown */
         $('.flags').next('.chosen-container').addClass('flag-dropdown');
+
+        /* Edit Create Mission Title*/
+        $('#editCreateMissionTitle').click(function() {
+            $('.create-quote-mission-title-edit').show();
+            $('.create-quote-mission-title').hide();
+        });
+        $('#saveCreateMissionTitle').click(function() {
+            $('.create-quote-mission-title-edit').hide();
+            $('.create-quote-mission-title').show();
+        });
 
     });
 

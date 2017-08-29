@@ -389,5 +389,52 @@
 	}
 }
 
+/*Add Exclude Modal Audience Starts*/
+
+.create-quote-mission-modal {
+    .create-quote-mission-title {
+        font-size: 20px;
+        color: #353f53;
+        font-weight: 600;
+        margin-bottom: 20px;
+        span{
+        	margin-left: 10px;
+        	a{
+        		font-size: 12px;
+        		text-decoration: underline;
+        		&:hover{
+        			text-decoration: none;
+        		}
+        	}
+        }
+    }
+    .create-quote-mission-title-edit{
+    	display: none;
+    	margin-bottom: 10px;
+    	.input-group{
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			button{
+				width: auto!important;
+			}
+    	}
+    }
+}
+
+.quote-mission-edit-wizard{
+	margin-top: 40px;
+}
+
+.tab-mission-create-settings{
+	input{
+		margin-bottom: 20px;
+	}
+}
+
+/*Add Exclude Modal Audience Ends*/
+
 
 /* Quote template CSS Ends */
