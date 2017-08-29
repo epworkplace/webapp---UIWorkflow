@@ -48,7 +48,20 @@
 
     /* tab panel container <--*/
     /* main panel container -->*/
-    .main-panel-container {}
+    .main-panel-container {
+      .client-content-container{
+        .client-list-table{
+          .creation-date,.owned-by{
+            font-size: 14px;
+            font-weight: 600;
+            span{
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
 
     /* main panel container <--		*/
   }
