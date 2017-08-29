@@ -21,6 +21,9 @@
     border: 2px $border-style #D7D9DC;
 }
 
+
+// Divider line
+
 @mixin divider($divider-width:2px, $style:solid, $color:#f5f5f6) {
     padding-top: 20px;
     border-top: $divider-width $style $color;
