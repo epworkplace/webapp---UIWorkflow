@@ -823,6 +823,10 @@ $(document).ready(function(){
 		$(this).parents('.expanding-card').find('.results-container').slideToggle(400);
 		$(this).find('.hide-show').find(".content-show, .content-hide").toggle();
 	});
+
+	/*Flags Dropdown */
+    $('.flags').next('.chosen-container').addClass('flag-dropdown');
+
 });
 
 
