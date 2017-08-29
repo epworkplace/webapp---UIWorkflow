@@ -166,7 +166,7 @@ gulp.task('sass', ['fonts'], function() {
 		.pipe($.sourcemaps.write('./maps'))
 		.pipe($.size({title: 'SCSS out '}))
 		.pipe(gulp.dest(css.out))
-		.pipe(reload({stream: true}));
+		.pipe(browserSync.stream());
 });
 
 // js tasks
