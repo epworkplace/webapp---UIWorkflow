@@ -542,6 +542,70 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <table id="bootstrap-table" class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th data-field="id" class="text-center" data-sortable="true">ID</th>
+                                                                    <th data-field="name" data-sortable="true">Client Name</th>
+                                                                    <th data-field="salary" data-sortable="true">Creation Date</th>
+                                                                    <th data-field="country" data-sortable="true">Client Owner</th>
+                                                                    <th data-field="actions" class="td-actions text-right" data-events="operateEvents" data-formatter="operateFormatter">Actions</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th colspan="5">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 add-new-card">
+                                                                                <a class="add-card" href="javascript:;" data-toggle="modal" data-target="#create-new-contact-modal">
+                                                                                    <i class="material-icons">add</i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                
+                                                                <tr>
+                                                                    <td>C001</td>
+                                                                    <td>Dakota Rice</td>
+                                                                    <td>$36,738</td>
+                                                                    <td>Niger</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>C002</td>
+                                                                    <td>Minerva Hooper</td>
+                                                                    <td>$23,789</td>
+                                                                    <td>Curaçao</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>C003</td>
+                                                                    <td>Sage Rodriguez</td>
+                                                                    <td>$56,142</td>
+                                                                    <td>Netherlands</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>C004</td>
+                                                                    <td>Philip Chaney</td>
+                                                                    <td>$38,735</td>
+                                                                    <td>Korea, South</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>C005</td>
+                                                                    <td>Doris Greene</td>
+                                                                    <td>$63,542</td>
+                                                                    <td>Malawi</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                            </div>
                                        </div>
                                     </div>
@@ -1827,7 +1891,91 @@
     <!-- Bootstrap Selelect Picker --> 
     <script type="text/javascript" src="lbd/js/bootstrap-select.js"></script>
 
-        <!-- Custom JS -->
+    <!--Tags-->
+    <script src="lbd/lib/jquery-tageditor-master/jquery.tag-editor.js"></script>
+    <!-- TinyMCE-->
+    <script type="text/javascript" src="lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js"></script>
+
+    <!-- Custom JS -->
     <script src="lbd/js/custom.js"></script> 
     
+    <script>
+        var $table = $('#bootstrap-table');
+
+        function operateFormatter(value, row, index) {
+            return [
+                '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">',
+                    '<i class="fa fa-image"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
+                    '<i class="fa fa-edit"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
+                    '<i class="fa fa-remove"></i>',
+                '</a>'
+            ].join('');
+        }
+
+        $().ready(function(){
+            window.operateEvents = {
+                'click .view': function (e, value, row, index) {
+                    info = JSON.stringify(row);
+
+                    swal('You click view icon, row: ', info);
+                    console.log(info);
+                },
+                'click .edit': function (e, value, row, index) {
+                    info = JSON.stringify(row);
+
+                    swal('You click edit icon, row: ', info);
+                    console.log(info);
+                },
+                'click .remove': function (e, value, row, index) {
+                    console.log(row);
+                    $table.bootstrapTable('remove', {
+                        field: 'id',
+                        values: [row.id]
+                    });
+                }
+            };
+
+            $table.bootstrapTable({
+                toolbar: ".toolbar",
+                clickToSelect: true,
+                showRefresh: true,
+                search: true,
+                showToggle: true,
+                showColumns: true,
+                pagination: true,
+                searchAlign: 'left',
+                pageSize: 8,
+                clickToSelect: false,
+                pageList: [8,10,25,50,100],
+
+                formatShowingRows: function(pageFrom, pageTo, totalRows){
+                    //do nothing here, we don't want to show the text "showing x of y from..."
+                },
+                formatRecordsPerPage: function(pageNumber){
+                    return pageNumber + " rows visible";
+                },
+                icons: {
+                    refresh: 'fa fa-refresh',
+                    toggle: 'fa fa-th-list',
+                    columns: 'fa fa-columns',
+                    detailOpen: 'fa fa-plus-circle',
+                    detailClose: 'fa fa-minus-circle'
+                }
+            });
+
+            //activate the tooltips after the data table is initialized
+            $('[rel="tooltip"]').tooltip();
+
+            $(window).resize(function () {
+                $table.bootstrapTable('resetView');
+            });
+
+
+        });
+    </script>
+
 </html>
