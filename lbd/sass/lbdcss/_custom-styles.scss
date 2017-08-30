@@ -7170,7 +7170,7 @@ html {
 
                         &.fire-label {
                             font-weight: 600;
-                            width: 130px;
+                            width: 125px;
                             height: 37px;
                             text-align: center;
                             line-height: 35px;
@@ -7178,22 +7178,19 @@ html {
                             color: #ee0a5f;
                             border: 2px solid #ee0a5f;
                         }
-
                         a {
                             display: block;
                             color: #fff;
                             background: #353f53;
                             font-weight: 600;
-                            width: 60px;
+                            width: 58px;
                             height: 37px;
                             text-align: center;
                             line-height: 37px;
                             border-radius: 4px;
-
                             &:hover {
                                 background: #B9BBBF;
                             }
-
                             &.pin {
                                 i {
                                     -webkit-transform: rotate(45deg);
@@ -7207,7 +7204,6 @@ html {
                     }
                 }
             }
-
             .bottom-position {
                 position: absolute;
                 bottom: 0;
