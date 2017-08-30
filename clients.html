@@ -109,7 +109,7 @@
                     <div class="container-fluid main-panel-page">
                         <div class="row main-container">
                             <div class="col-md-4 tab-panel-container">
-                                <div class="tab-panel">
+                                <div class="tab-panel outside">
                                     <nav class="navbar navbar-default">
                                         <div class="container-fluid">
                                             <div class="navbar-header">
@@ -234,40 +234,81 @@
                                            <div class="col-md-12 client-content-container">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <table id="client-list-table" class="client-list-table">
+                                                        <span class="search-result-text">
+                                                            <strong>17 Clients</strong> matching with your criteria
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <table id="client-list-table" class="client-list-table" cellspacing="10">
                                                             <thead>
                                                                 <tr class="">
-                                                                    <th data-field="id" class="text-center" data-sortable="true">ID</th>
+                                                                    <th data-field="id" class="" data-sortable="true">ID</th>
                                                                     <th data-field="name" data-sortable="true">Client Name</th>
-                                                                    <th data-field="salary" data-sortable="true">Creation Date</th>
-                                                                    <th data-field="country" data-sortable="true">Client Owner</th>
+                                                                    <th data-field="creation-date" data-sortable="true">Creation Date</th>
+                                                                    <th data-field="client-owner" data-sortable="true">Client Owner</th>
                                                                     
                                                                 </tr>
                                                                 <tr class="">
-                                                                    <th colspan="4">
-                                                                        <div class="row">
-                                                                            <div class="col-md-12 add-new-card">
-                                                                                <a class="add-card" href="javascript:;" data-toggle="modal" data-target="#create-new-contact-modal">
-                                                                                    <i class="material-icons">add</i>
-                                                                                </a>
-                                                                            </div>
+                                                                    <th colspan="4" class="add-new-card">
+                                                                        <div class="">
+                                                                            <a class="add-card" href="javascript:;" data-toggle="modal" data-target="#create-new-contact-modal">
+                                                                                <i class="material-icons">add</i>
+                                                                            </a>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                
-                                                                <tr class="">
-                                                                    <td>C001</td>
-                                                                    <td class="client-name-container">
-                                                                        <div class="col-md-1 client-image-container">
+                                                                <tr class="client-list-item">
+                                                                    <div>
+                                                                        <td class="col-md-1 client-id text-center"><span>C001</span></td>
+                                                                        <td class="client-name-container col-md-6">
+                                                                            <div class="col-md-2 client-image-container">
+                                                                                <div class="list-image" id="contractImage19" data-value="60">
+                                                                                    <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-10 client-desc">
+                                                                                <div class="row">
+                                                                                    <div class="client-name">But</div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="tags-list">
+                                                                                        <span class="label paused">Tier_3</span>
+                                                                                        <span class="label paused">Teritary</span>
+                                                                                        <span class="label paused">Advertising / Entertainment</span>
+                                                                                        <span class="label paused">Untagged</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-md-2">
+                                                                            <div class="creation-date">
+                                                                                <span class="d-block">Created on</span>
+                                                                                Jan 21, 2019
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="col-md-2">
+                                                                            <div class="owned-by">
+                                                                                <span class="d-block">Owned by</span>
+                                                                                Lucie Zvanovec
+                                                                            </div>
+                                                                        </td>
+                                                                    </div>
+                                                                </tr>
+                                                                <tr class="client-list-item">
+                                                                    <td class="col-md-1 client-id text-center"><span>C002</span></td>
+                                                                    <td class="client-name-container col-md-6">
+                                                                        <div class="col-md-2 client-image-container">
                                                                             <div class="list-image" id="contractImage19" data-value="60">
                                                                                 <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive">
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-6 client-desc">
+                                                                        <div class="col-md-10 client-desc">
                                                                             <div class="row">
-                                                                                <div class="client-name">Allocine</div>
+                                                                                <div class="client-name">CDiscount</div>
                                                                             </div>
                                                                             <div class="row">
                                                                                 <div class="tags-list">
@@ -279,30 +320,62 @@
                                                                             </div>
                                                                         </div>
                                                                     </td>
-                                                                    <td>
+                                                                    <td class="col-md-2">
                                                                         <div class="creation-date">
                                                                             <span class="d-block">Created on</span>
-                                                                            Sep 21, 2017
+                                                                            Jun 21, 2017
                                                                         </div>
                                                                     </td>
-                                                                    <td>
+                                                                    <td class="col-md-3">
                                                                         <div class="owned-by">
                                                                             <span class="d-block">Owned by</span>
                                                                             Lucie Zvanovec
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="">
-                                                                    <td>C002</td>
-                                                                    <td class="client-name-container">
-                                                                        <div class="col-md-1 client-image-container">
+                                                                <tr class="client-list-item">
+                                                                    <td class="col-md-1 client-id text-center"><span>C003</span></td>
+                                                                    <td class="client-name-container col-md-6">
+                                                                        <div class="col-md-2 client-image-container">
                                                                             <div class="list-image" id="contractImage19" data-value="60">
                                                                                 <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive">
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-6 client-desc">
+                                                                        <div class="col-md-10 client-desc">
                                                                             <div class="row">
-                                                                                <div class="client-name">Nllocine</div>
+                                                                                <div class="client-name">France.TV</div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="tags-list">
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="col-md-2">
+                                                                        <div class="creation-date">
+                                                                            <span class="d-block">Created on</span>
+                                                                            Feb 21, 2017
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="col-md-3">
+                                                                        <div class="owned-by">
+                                                                            <span class="d-block">Owned by</span>
+                                                                            Lucie Zvanovec
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="client-list-item">
+                                                                    <td class="col-md-1 client-id text-center"><span>C004</span></td>
+                                                                    <td class="client-name-container col-md-6">
+                                                                        <div class="col-md-2 client-image-container">
+                                                                            <div class="list-image" id="contractImage19" data-value="60">
+                                                                                <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-10 client-desc">
+                                                                            <div class="row">
+                                                                                <div class="client-name">La Redoute</div>
                                                                             </div>
                                                                             <div class="row">
                                                                                 <div class="tags-list">
@@ -314,54 +387,156 @@
                                                                             </div>
                                                                         </div>
                                                                     </td>
-                                                                    <td>
+                                                                    <td class="col-md-2">
                                                                         <div class="creation-date">
                                                                             <span class="d-block">Created on</span>
-                                                                            Sep 28, 2017
+                                                                            Sep 21, 2017
                                                                         </div>
                                                                     </td>
-                                                                    <td>
+                                                                    <td class="col-md-3">
                                                                         <div class="owned-by">
                                                                             <span class="d-block">Owned by</span>
-                                                                            Aucie Zvanovec
+                                                                            Lucie Zvanovec
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="">
-                                                                    <td>C003</td>
-                                                                    <td class="client-name-container">
-                                                                        <div class="col-md-1 client-image-container">
+                                                                <tr class="client-list-item">
+                                                                    <td class="col-md-1 client-id text-center"><span>C005</span></td>
+                                                                    <td class="client-name-container col-md-6">
+                                                                        <div class="col-md-2 client-image-container">
                                                                             <div class="list-image" id="contractImage19" data-value="60">
                                                                                 <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive">
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-6 client-desc">
+                                                                        <div class="col-md-10 client-desc">
                                                                             <div class="row">
-                                                                                <div class="client-name">Blocine</div>
+                                                                                <div class="client-name">Amazon</div>
                                                                             </div>
                                                                             <div class="row">
                                                                                 <div class="tags-list">
                                                                                     <span class="label paused">Tier_3</span>
-                                                                                    <span class="label paused">Teritary</span>
-                                                                                    <span class="label paused">Advertising / Entertainment</span>
-                                                                                    <span class="label paused">Untagged</span>
+                                                                                    
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </td>
-                                                                    <td>
+                                                                    <td class="col-md-2">
                                                                         <div class="creation-date">
                                                                             <span class="d-block">Created on</span>
-                                                                            Sep 30, 2017
+                                                                            Sep 21, 2017
                                                                         </div>
                                                                     </td>
-                                                                    <td>
+                                                                    <td class="col-md-3">
                                                                         <div class="owned-by">
                                                                             <span class="d-block">Owned by</span>
-                                                                            Nucie Zvanovec
+                                                                            Lucie Zvanovec
                                                                         </div>
                                                                     </td>
                                                                 </tr>
+                                                                <tr class="client-list-item">
+                                                                    <td class="col-md-1 client-id text-center"><span>C006</span></td>
+                                                                    <td class="client-name-container col-md-6">
+                                                                        <div class="col-md-2 client-image-container">
+                                                                            <div class="list-image" id="contractImage19" data-value="60">
+                                                                                <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-10 client-desc">
+                                                                            <div class="row">
+                                                                                <div class="client-name">Accor Hotels</div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="tags-list">
+                                                                                    <span class="label paused">Tier_3</span>
+                                                                                    <span class="label paused">Travel</span>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="col-md-2">
+                                                                        <div class="creation-date">
+                                                                            <span class="d-block">Created on</span>
+                                                                            Oct 21, 2017
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="col-md-3">
+                                                                        <div class="owned-by">
+                                                                            <span class="d-block">Owned by</span>
+                                                                            Ducie Zvanovec
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="client-list-item">
+                                                                    <td class="col-md-1 client-id text-center"><span>C007</span></td>
+                                                                    <td class="client-name-container col-md-6">
+                                                                        <div class="col-md-2 client-image-container">
+                                                                            <div class="list-image" id="contractImage19" data-value="60">
+                                                                                <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-10 client-desc">
+                                                                            <div class="row">
+                                                                                <div class="client-name">CapCom</div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="tags-list">
+                                                                                    <span class="label paused">Tier_3</span>
+                                                                                    <span class="label paused">Tertiary</span>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="col-md-2">
+                                                                        <div class="creation-date">
+                                                                            <span class="d-block">Created on</span>
+                                                                            Dec 21, 2017
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="col-md-3">
+                                                                        <div class="owned-by">
+                                                                            <span class="d-block">Owned by</span>
+                                                                            Hucie Zvanovec
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="client-list-item">
+                                                                    <td class="col-md-1 client-id text-center"><span>C008</span></td>
+                                                                    <td class="client-name-container col-md-6">
+                                                                        <div class="col-md-2 client-image-container">
+                                                                            <div class="list-image" id="contractImage19" data-value="60">
+                                                                                <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-10 client-desc">
+                                                                            <div class="row">
+                                                                                <div class="client-name">Carrefour</div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="tags-list">
+                                                                                    <span class="label paused">Tier_3</span>
+                                                                                    
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="col-md-2">
+                                                                        <div class="creation-date">
+                                                                            <span class="d-block">Created on</span>
+                                                                            Jan 21, 2017
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="col-md-3">
+                                                                        <div class="owned-by">
+                                                                            <span class="d-block">Owned by</span>
+                                                                            Rucie Zvanovec
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+
                                                                 
                                                             </tbody>
                                                         </table>
