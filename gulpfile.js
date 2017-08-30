@@ -39,11 +39,11 @@ var
 
 	css = {
 		in: [source + 'lbd/sass/light-bootstrap-dashboard.scss'],
-		watch: [source + 'lbd/sass/**/*'],
+		watch: [source + 'lbd/sass/**/*.scss'],
 		out: dest + 'lbd/css/',
     pluginCSS: {
       in: [source + 'lbd/css/**/*'],
-      watch: [source + 'lbd/css/**/*'],
+      watch: [source + 'lbd/css/**/*.css'],
       out: dest + 'lbd/css/'
     },
 		sassOpts: {

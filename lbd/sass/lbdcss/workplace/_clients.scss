@@ -92,6 +92,7 @@
             color: #353F53;
             border-spacing: 0;
             box-shadow: 1px 1px 2px 1px #eceeef;
+            // box-shadow: 1px 1px 2px 1px red;
             border-radius: 4px;
             transition: all .3s ease;
 
@@ -189,6 +190,11 @@
                   width: 100%;
                   display: flex;
                   align-items: center;
+                  .label{
+                    background: #9a9fa9;
+                    border-radius: 4px;
+                    line-height: normal;
+                  }
                 }
               }
               .client-image-container{
@@ -216,7 +222,7 @@
 }
 
 /* modal window styles*/
-.modal {
+.modal.create-new-client-modal, .modal.create-new-contact-modal {
   *.d-block {
     display: block;
   }
