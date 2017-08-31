@@ -584,6 +584,7 @@ $(document).ready(function(){
 
 
 
+
 	//Readmore/less Code
 	// Configure/customize these variables.
     var showChar = 200;  // How many characters are shown by default

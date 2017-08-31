@@ -227,8 +227,33 @@ gulp.task('connect', function() {
 });
 
 // browser sync
-gulp.task('browserSync', function() {
+gulp.task('serve', [], function() {
 	browserSync.init(syncOpts);
+
+/*  // html changes
+  gulp.watch(html.watch, ['html', reload]);
+  // gulp.watch(html.watch).on('change', reload);
+
+  // image changes
+  gulp.watch(images.in, ['images']);
+
+  // font changes
+  gulp.watch(fonts.in, ['fonts']);
+
+  // sass changes
+  gulp.watch([css.watch], ['sass']);
+
+  // pluginCSS changes
+  gulp.watch([css.pluginCSS.watch], ['css']);
+
+  // javascript changes
+  // gulp.watch(js.in, ['js', reload]);
+  gulp.watch(js.in).on('change', reload);
+
+  // javascript libraries changes
+  // gulp.watch(jsLibs.in, ['jslib', reload]);	
+  gulp.watch(jsLibs.in).on('change', reload);*/
+
 });
 
 gulp.task('watch', function() {
@@ -255,4 +280,6 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'sass', 'css', 'js', 'jslib', 'browserSync', 'watch']);
+gulp.task('default', ['html', 'images', 'fonts', 'sass', 'css', 'js', 'jslib', 'serve', 'watch']);
+
+// gulp.task('default', ['serve']);
