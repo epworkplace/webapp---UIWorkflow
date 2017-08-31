@@ -457,27 +457,29 @@
                                 .bs-select-all, .bs-deselect-all {
                                   color: #ffffff;
                                   height: auto;
-                                  padding: 8px;
+                                  padding: 5px;
                                   border-radius: 4px;
-                                  font-weight: 600;
+                                  font-weight: 400;
                                   font-size: 14px;
+                                  border: 1px solid #bdbfc3;
+                                  color: #71798a;
                                 }
 
-                                .bs-select-all {
+                                /* .bs-select-all {
                                   background: #448aff;
-
+                                
                                   &:hover {
                                     background: #2962FF;
                                   }
                                 }
-
+                                
                                 .bs-deselect-all {
                                   background: #ee0a5f;
-
+                                
                                   &:hover {
                                     background: #b70a4a;
                                   }
-                                }
+                                } */
                               }
                             }
                           }
@@ -980,7 +982,6 @@
                                 li {}
 
                                 li.add-file {
-
                                   .file-card {
                                     text-align: center;
 
