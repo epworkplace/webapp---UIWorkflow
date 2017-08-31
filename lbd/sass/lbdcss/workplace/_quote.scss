@@ -640,5 +640,28 @@
 
 /*Edit create quote mission Ends*/
 
+/*Browse mission Modal Starts*/
+
+.browse-mission-modal {
+    .browse-mission-modal-title {
+        font-size: 20px;
+        color: #353f53;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .back{
+        width: 5.333%;
+        padding-top: 4px;
+    }
+    label {
+        color: #9ca1ab;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+}
+
+/*Browse mission Modal Ends*/
+
 
 /* Quote template CSS Ends */
