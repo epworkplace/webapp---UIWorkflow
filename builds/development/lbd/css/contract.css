@@ -1,0 +1,639 @@
+ img.company_name {border-radius: 5px}
+#contractPage{
+    margin-top: -31px;
+}
+#contractPage .wrapperTitle { 
+	margin-top: -15px;
+    border-top: 1px solid #dedede;
+    padding: 30px 0 10px; }
+
+ #contractPage li.date { font-size: 16px }; 
+
+@media (max-width: 993px) {
+    #contractPage{
+	    margin-top: 0px;
+	}
+}
+#contractPage table.header td{
+	padding: 0px !important;
+}
+
+#contractPage table.header img.owner{
+	max-width: 40px;
+	border-radius: 50%;
+	margin: 0px 4px 10px 4px;
+}
+
+#contractPage table.header td.ownerWrapper {
+	vertical-align: top;
+}
+
+#contractPage table.header .ownerWrapper p{
+	margin: 10px 0px;
+}
+
+#contractPage .mlTitleHeader{
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.label-contractPage{
+	background: #7e899a;
+	opacity: 0.5
+}
+.label-contractPage:hover{opacity: 1}
+
+#contractPage .date a{
+	color: #448AFF !important;
+	font-weight: 400;
+}
+
+#contractPage h1{
+	margin-top: 0px;
+}
+
+@media (max-width: 993px) {
+    #contractPage img.imgBrand{
+		max-width: 100px;
+	}
+}
+#contractPage .wrapperNameBrand{
+	padding-left: 10px !important;
+
+}
+
+#contractPage .wrapperNameBrand p{
+	margin: 1px 0;
+}
+#contractPage .wrapperNameBrand p.nameBrand{
+	font-weight: 400;
+	}
+
+#contractPage input.datetimepicker{
+	width: 110px;
+	background-color: transparent;
+	border: none;
+	display: inline-block;
+	color: #448AFF;
+    font-size: 16px;
+     margin-right: 20px;
+     padding-left: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#contractPage input.datetimepicker:read-only{color: #7d889a; cursor: not-drop;}
+
+#contractPage input.datetimepicker::-webkit-input-placeholder{
+	color: #448AFF;
+    font-size: 16px;
+}
+
+#contractPage #turnover-sum{margin-top: 20px}
+#contractPage #turnover-sum .titleChiffre{
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 100%;
+	margin-top: 26px;
+	margin-bottom: 0px;
+}
+
+#contractPage #turnover-sum li.billable{margin: 5px 0; border: 1px solid #dedede; border-left: 0; border-right: 0; padding: 5px 0;}
+
+#contractPage .wrapperOverview{
+	padding-top: 0px;
+}
+
+
+#contractPage .card{
+	margin-top: 10px;
+}
+
+#contractPage .lineOverview{
+	position: relative;
+}
+
+#contractPage #collapsePO2 .jFiler-input-text h3{padding-top: 20px}
+
+#contractPage .purchaseValidated{
+	position: absolute;
+	right: 30px;
+	top: 7px;
+}
+
+#contractPage .wrapperSubmit{
+	margin-top: 10px;
+}
+
+#contractPage .label-primary{
+	background-color: #448AFF;
+}
+
+#contractPage .contractFile{
+	background-color: #f8f8f8;
+	box-shadow: 0px 2px 6px 0px #b0afaf;
+	width: 170px;
+	overflow: hidden;
+	margin: auto;
+	color: #000;
+	height: 26px;
+	line-height: 26px;
+}
+
+
+.btn-contractPage{
+	border: 1px solid rgba(0, 0, 0, 0) !important;
+	transition: all 0.2s ease-in-out;
+}
+
+.btn-contractPage a{
+	transition: all 0.2s ease-in-out;
+}
+
+.btn-contractPage:hover{
+	background-color: #9eaabb !important;
+	border: #9eaabb solid 1px !important;
+}
+
+.btn-contractPage:hover a{
+	color: #fff !important;
+}
+
+li.active .btn-contractPage{
+	background-color: #7e899a !important;
+	border: #7e899a solid 1px !important;
+	transition: all 0.2s ease-in-out;
+}
+
+li.active.alert-warning .btn-contractPage{
+	background-color: #f7941d !important;
+	border: #f7941d solid 1px !important;
+	transition: all 0.2s ease-in-out;
+}
+
+li.active.alert-warning a.btn-contractPage{
+	color: #fff;
+	transition: all 0.2s ease-in-out;
+}
+
+li.alert-warning .btn-contractPage{
+	opacity: 1;
+	background-color: #fff !important;
+	border: 1px solid #fff !important;
+	transition: all 0.2s ease-in-out;
+}
+
+li.alert-warning a.btn-contractPage{
+	color: #f7941d;
+}
+
+.nav-pills > li:first-child > a.btn-contractPage{border-radius: 0}
+
+
+li.active .btn-contractPage:hover{
+	background-color: #9eaabb !important;
+	border: #9eaabb solid 1px !important;
+}
+
+li.active .btn-contractPage a{
+	color: #fff !important;
+	transition: all 0.2s ease-in-out;
+}
+
+
+#contractPage .btnAddMission {
+	    margin-top: 12px;
+}
+
+
+/*PANEL*/
+
+#contractPage .lineOverview{
+	font-size: 14px;
+	line-height: 140%;
+}
+
+#contractPage .lineOverview .panel-title {font-size: 14px;}
+
+#contractPage .lineOverview b {
+	font-weight: 400;
+	font-size: 14px;
+}
+
+#contractPage .panel-body table{
+	width: 100%;
+}
+
+#contractPage .jFiler-items-grid .jFiler-item .jFiler-item-container .jFiler-item-thumb{
+	width: 90px;
+}
+
+#contractPage #collapsePO .panel-body{
+	height: 400px;
+}
+
+@media (max-width: 750px) {
+    #contractPage .wrapperTitle .text-right { text-align:left }
+}
+
+
+/*COL RIGHT*/
+
+
+#contractPage .colRight .tab-pane{
+	padding-top: 0px;
+}
+
+#contractPage .colRight .nav-container{
+	background-color: #383d49;
+	padding: 12px 0;
+}
+
+#contractPage .colRight .nav-container li i{
+	font-size: 28px;
+}
+
+#contractPage .colRight .nav-container .nav-icons > li > a i{
+	width: auto;
+}
+
+#contractPage .colRight .nav-container li a{
+	opacity: 0.5;
+}
+
+#contractPage .colRight .nav-container li a:hover{
+	opacity: 0.9;
+}
+
+#contractPage .colRight .nav-container li.active a{
+	opacity: 1;
+	font-weight: 400;
+}
+
+#contractPage .colRight .nav-container a{
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#contractPage .colRight .tab-content .card{
+	margin-top: 0px;
+}
+
+#contractPage .tab-pane .card{
+	margin-top: 0px !important;
+}
+
+#contractPage .colRight .tab-content .stakeholders .wrapperStakeholders{
+	margin-bottom: 20px;
+}
+
+#contractPage .colRight .tab-content .stakeholders .content .imgStakeholders{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#contractPage .colRight .tab-content .stakeholders .content .descriptionSakeholders{
+	display: inline-block;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+
+#contractPage .colRight .tab-content .stakeholders img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+#contractPage .colRight .wrapperDoc ul{
+	padding-left: 0;
+}
+
+#contractPage .colRight .wrapperDoc li{
+	padding: 15px 0;
+	list-style: none;
+	border-bottom: 1px solid #eee;
+}
+
+#contractPage .colRight .wrapperDoc li:nth-last-child(1) {
+ 	border-bottom: none;
+}
+
+#contractPage .wrapperGantt h3{
+	margin: 5px 0px 0;
+}
+
+#contractPage .colRight .dateDoc{
+	color: #7d889a;
+}
+
+#contractPage .colRight .btnUploadDoc{
+	margin-top: 10px;
+	position: relative;
+}
+
+/*TABLE*/
+
+
+
+#contractPage h4{
+	margin: 0px;
+	position: relative;
+	z-index: 4;
+}
+
+table.tableCp th{
+	border-top: 0px solid transparent !important;
+}
+
+table.tableCp td{
+	position: relative;
+	background-color: #fff;
+}
+
+.cpTableThHeader{
+	background: #e9e9e9;
+	font-weight: 400;
+	color: #282829;
+	text-align: center;
+	padding: 6px 0 !important;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.cpTableThHeaderSelect:after{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 8px 0 8px;
+	border-color: #e9e9e9 transparent transparent transparent;
+	z-index: 1;
+}
+
+.cpTableMission{
+	font-size: 14px;
+	border-right: 1px solid #E3E3E3;
+}
+
+.cpTableTitleMission{
+	color: #282829;
+	font-weight: 400;
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+
+.cpTableOldDescription{
+	font-size: 14px;
+	margin-bottom: 0px;
+}
+
+.cpTableOldPrice{
+	
+	padding-top: 6px;
+	margin-bottom: 0px;
+}
+
+.cpTablehead{
+	font-size: 16px;
+	margin-bottom: 0px;
+	padding-top: 6px;
+}
+
+.cpTablehead a{
+	color: #282829;
+}
+
+.cpTableDescription td{
+	border-top-style: dashed !important;
+	padding-bottom: 0px !important;
+}
+
+.cpTableDescription td p{
+	font-size: 12px;
+}
+
+.cpTableheadArrowMore{
+	position: absolute;
+	color: #4888ff;
+	top: 18px;
+	right: 0px;
+	transform: rotate(310deg);
+}
+
+.cpTableheadArrowLower{
+	position: absolute;
+	color: #4888ff;
+	top: 18px;
+	right: 0px;
+	transform: rotate(130deg);
+}
+
+.tableCp i.fa{
+  font-size: 14px;
+}
+
+.tableCp a:hover{
+  color: #448AFF;
+}
+
+.cpTableheadTheorical .badge{
+	vertical-align: middle;
+	font-size: 10px;
+	width: 14px;
+	height: 14px;
+	padding: 0px;
+	line-height: 14px;
+	padding-left: 1px;
+	top: -2px;
+    position: relative;
+}
+
+.weightBlack{
+	font-weight: 500;
+}
+
+.cpTableheadTheorical .badge-primary{
+	background-color: #448AFF;
+}
+
+.cpTableMissionSEO{
+	font-size: 16px;
+}
+
+.tableCp button{
+	margin: 10px 0;
+}
+
+
+
+
+.tableMl{
+	z-index: 5;
+    position: relative;
+}
+
+#contractPage .containerTableMl{
+	position: relative;
+}
+
+#contractPage .wrapperTableMl::before{
+	position: absolute;
+	content: "";
+	top: -15px;
+	bottom: -15px;
+	left: -15px;
+	right: -15px;
+	background-color: #F5F5F5;
+	z-index: 1;
+}
+
+.tableMl tr th{
+	border: none !important;
+	font-weight: 300;
+	font-size: 12px;
+}
+
+.tableMl tr td{
+	background-color: #fff;
+	font-size: 14px;
+	vertical-align: top !important;
+}
+
+.tableMl tr td p{
+	font-size: 14px;
+	margin: 0px;
+}
+
+.tableMl tr td a {
+	color: #7d889a;
+}
+
+.tableMl tr td a:hover {
+	color: #448aff;
+}
+
+.tableMl tr td input[type=checkbox]{
+	position: relative;
+	margin: 0 10px;
+}
+
+.tableMl tr td.tableMlWrapperEdit{
+	width: 160px;
+	position: relative;
+}
+
+.tableMl tr td.tableMlWrapperEdit a{
+	padding: 0 4px;
+	position: relative;
+}
+
+.tableMl tr:hover .notAssigned{
+	visibility: hidden;
+}
+
+.tableMl tr td .tableMlEdit{
+	display: none;
+	position: absolute;
+    z-index: 500;
+    width: 300px;
+    left: -80px;
+    top: 12px;
+}
+
+.tableMl tr:hover .tableMlEdit{
+	display: block;
+}
+
+.tableMl .tableMlTitleCta{
+	display: block;
+}
+
+.tableMl .tableMlWrapperDescription{
+	display: none;
+	padding-top: 10px;
+	font-size: 12px !important;
+}
+
+.tableMl .tableMlWrapperDescription p{
+	font-size: 12px;
+}
+
+.tableMl .tableMlTitle{
+	cursor: pointer;
+}
+
+.tableMl .tableMlDescription{
+	position: relative;
+}
+
+.tableMl .tableMlWrapperDescription div{
+	padding-top: 10px;
+}
+
+.tableMl .tableMlWrapperDescription div label{
+	font-weight: 300;
+}
+
+.tableMl .dropdown{
+	padding-top: 0px !important;
+}
+
+
+
+
+
+
+.tableMlActive{
+	display: block !important;
+}
+
+
+
+
+.btn.btn-primary a{
+	color: #448AFF;
+}
+
+.btn.btn-primary.btn-fill a{
+	color: #fff;
+}
+
+
+
+
+#contractPage .wrapperBtnCheck{
+	position: relative;
+	z-index: 10;
+	display: none;
+	margin-top: 10px;
+}
+
+.jFiler-input-dragDrop
+{
+	width:243px;
+}
+/* 
+tr.strikeout td:before {
+  content: " ";
+  position: absolute;
+  top: 40%;
+  left: 0;
+  border-bottom: 1px solid #111;
+  width: 100%;
+}
+
+tr.strikeout td:after {
+  content: "\00B7";
+  font-size: 1px;
+}
+ */
+
+
+
+
