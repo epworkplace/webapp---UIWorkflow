@@ -7170,7 +7170,7 @@ html {
 
                         &.fire-label {
                             font-weight: 600;
-                            width: 125px;
+                            width: 130px;
                             height: 37px;
                             text-align: center;
                             line-height: 35px;
@@ -7183,7 +7183,7 @@ html {
                             color: #fff;
                             background: #353f53;
                             font-weight: 600;
-                            width: 58px;
+                            width: 60px;
                             height: 37px;
                             text-align: center;
                             line-height: 37px;
@@ -8257,6 +8257,10 @@ html {
     .tab-navigation{
         padding-bottom: 0;
     }
+}
+
+.tab-pane{
+    padding: 15px 0 0;
 }
 
 /* Multiple Select Search Box Starts*/
