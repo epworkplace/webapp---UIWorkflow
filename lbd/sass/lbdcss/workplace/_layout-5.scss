@@ -333,11 +333,11 @@
                           &.dropup {
                             .bootstrap-select {
                               &.open {
-                                max-height: none !important;
+                                // max-height: 400px !important;
                                 height: auto;
 
                                 .dropdown-menu {
-                                  max-height: none !important;
+                                  max-height: 400px !important;
                                   height: auto;
                                 }
                               }
