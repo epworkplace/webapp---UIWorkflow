@@ -367,6 +367,19 @@ $(document).ready(function(){
         }
 	});
 
+	// Datepicker only year
+    $('.datepicker-year').datetimepicker({
+    	format: 'YYYY'
+    });
+	// Datepicker only month
+    $('.datepicker-month').datetimepicker({
+    	format: 'MM'
+    });
+	// Datepicker only date
+    $('.datepicker-date').datetimepicker({
+    	format: 'DD'
+    });        
+
 
 
 

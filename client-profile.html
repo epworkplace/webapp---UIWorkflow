@@ -43,7 +43,7 @@
 
 
 </head>
-<body class="wp-app layout-3">
+<body class="wp-app layout-3" id="clientProfile">
 <div class="wrapper">
     <div class="sidebar">
         <div class="logo">
@@ -102,7 +102,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid page-wrap" id="clientProfile">
+    <div class="container-fluid page-wrap">
         <div class="row">
             <div class="col-md-12 main-panel-wrap">
                 <div class="main-panel">
@@ -246,7 +246,7 @@
                                         <div class="d-flex">
                                             <div class="col-md-6 d-flex">
                                                 <div class="col-md-12 card sector-container">
-                                                    <span class="edit pull-right" data-toggle="modal" data-target="#edit-brand-history-modal"><a href="javascript:;">Edit</a></span>
+                                                    <span class="edit pull-right" data-toggle="modal" data-target="#edit-client-sector-modal"><a href="javascript:;">Edit</a></span>
                                                     <div class="brand-history">
                                                         <h4 class="title">Sector</h4>
                                                         <div class="overview clearfix">
@@ -259,7 +259,7 @@
                                             </div>
                                             <div class="col-md-6 d-flex">
                                                 <div class="col-md-12 card annual-turnover-container">
-                                                    <span class="edit pull-right" data-toggle="modal" data-target="#edit-brand-history-modal"><a href="javascript:;">Edit</a></span>
+                                                    <span class="edit pull-right" data-toggle="modal" data-target="#edit-annual-turnover-modal"><a href="javascript:;">Edit</a></span>
                                                     <div class="annual-turnover">
                                                         <h4 class="title">Annual Turnover</h4>
                                                         <div class="overview clearfix">
@@ -276,7 +276,7 @@
                                         <div class="d-flex">
                                             <div class="col-md-6 d-flex">
                                                 <div class="col-md-12 card sector-container">
-                                                    <span class="edit pull-right" data-toggle="modal" data-target="#edit-brand-history-modal"><a href="javascript:;">Edit</a></span>
+                                                    <span class="edit pull-right" data-toggle="modal" data-target="#edit-client-sector-modal"><a href="javascript:;">Edit</a></span>
                                                     <div class="brand-history">
                                                         <h4 class="title">Sector</h4>
                                                         <div class="overview clearfix">
@@ -296,7 +296,7 @@
                                             </div>
                                             <div class="col-md-6 d-flex">
                                                 <div class="col-md-12 card annual-turnover-container">
-                                                    <span class="edit pull-right" data-toggle="modal" data-target="#edit-brand-history-modal"><a href="javascript:;">Edit</a></span>
+                                                    <span class="edit pull-right" data-toggle="modal" data-target="#edit-annual-turnover-modal"><a href="javascript:;">Edit</a></span>
                                                     <div class="annual-turnover">
                                                         <h4 class="title">Annual Turnover</h4>
                                                         <div class="overview clearfix">
@@ -313,7 +313,7 @@
                                     <div class="row">
                                         <div class="d-flex col-md-12">
                                             <div class="col-md-12 card address-container">
-                                                <span class="edit pull-right" data-toggle="modal" data-target="#edit-brand-history-modal"><a href="javascript:;">Edit</a></span>
+                                                <span class="edit pull-right" data-toggle="modal" data-target="#edit-address-modal"><a href="javascript:;">Edit</a></span>
                                                 <div class="address">
                                                     <h4 class="title">Address</h4>
                                                     <div class="overview clearfix">
@@ -329,7 +329,7 @@
                                     <div class="row">
                                         <div class="d-flex col-md-12">
                                             <div class="col-md-12 card address-container">
-                                                <span class="edit pull-right" data-toggle="modal" data-target="#edit-brand-history-modal"><a href="javascript:;">Edit</a></span>
+                                                <span class="edit pull-right" data-toggle="modal" data-target="#edit-address-modal"><a href="javascript:;">Edit</a></span>
                                                 <div class="address">
                                                     <h4 class="title">Address</h4>
                                                     <div class="overview clearfix">
@@ -364,7 +364,7 @@
                                     <div class="row">
                                         <div class="d-flex col-md-12">
                                             <div class="col-md-12 card external-links-container">
-                                                <span class="edit pull-right" data-toggle="modal" data-target="#edit-brand-history-modal"><a href="javascript:;">Edit</a></span>
+                                                <span class="edit pull-right" data-toggle="modal" data-target="#edit-external-links-modal"><a href="javascript:;">Edit</a></span>
                                                 <div class="external-links">
                                                     <h4 class="title">External Links</h4>
                                                     <div class="overview clearfix">
@@ -379,7 +379,7 @@
                                     <div class="row">
                                         <div class="d-flex col-md-12">
                                             <div class="col-md-12 card external-links-container">
-                                                <span class="edit pull-right" data-toggle="modal" data-target="#edit-brand-history-modal"><a href="javascript:;">Edit</a></span>
+                                                <span class="edit pull-right" data-toggle="modal" data-target="#edit-external-links-modal"><a href="javascript:;">Edit</a></span>
                                                 <div class="external-links">
                                                     <h4 class="title">External Links</h4>
                                                     <div class="overview clearfix">
@@ -1908,8 +1908,8 @@
 
 <!-- Brand History Modal -->
 <div class="modal fade edit-brand-history-modal" id="edit-brand-history-modal" tabindex="-1" role="dialog" aria-labelledby="edit-brand-history-modal">
-    <div class="modal-dialog tiny-mce-modal-dialog" role="modal">
-        <div class="modal-content tiny-mce-modal-content">
+    <div class="modal-dialog modal-lg" role="modal">
+        <div class="modal-content">
             <div class="modal-body">
                 <div class="edit-content clearfix">
                     <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
@@ -1939,13 +1939,15 @@
                         </div>
                         
                     </div>
-                    <div class="col-md-12 edit-title">
-                        <div class="modal-title">Brand History</div>
+                    <div class="col-md-12 edit-title modal-title">
+                        Brand History
                     </div>
-                    <div class="col-md-12  edit-overview">
-                        <textarea id="edit-textarea-normal" class="form-control" rows="10">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </textarea>
+                    <div class="col-md-12 edit-overview">
+                        <div class="form-group">
+                            <textarea id="edit-textarea-normal" class="form-control" rows="10">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </textarea>
+                        </div>
                     </div>
                     <div class="edit-content-action col-md-12">
                         <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Cancel</button>
@@ -1956,6 +1958,273 @@
         </div>
     </div>
 </div>
+<!-- Client Profile Sector Modal -->
+<div class="modal fade edit-client-sector-modal" id="edit-client-sector-modal" tabindex="-1" role="dialog" aria-labelledby="edit-client-sector-modal">
+    <div class="modal-dialog modal-lg" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="edit-content clearfix">
+                    <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
+                    <div class="client-details col-md-12">
+                        <div class="col-md-2 client-image">
+                            <div class="client-image-container">
+                                <img src="lbd/img/webedia.jpg" class="img-circle img-responsive mCS_img_loaded">
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="client-spec col-md-10 pull-left">
+                                    <div class="row">
+                                        <h5 class="client-id">C017</h5>
+                                        <div class="client-name">Allocine</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="tags-list">
+                                            <span class="label paused">Tier_3</span>
+                                            <span class="label paused">Teritary</span>
+                                            <span class="label paused">Advertising / Entertainment</span>
+                                            <span class="label paused">Untagged</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-12 edit-title modal-title">
+                        Sector
+                    </div>
+                    <div class="col-md-12 edit-overview">
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <select class="chosen-default chosen-select" id="clientSector">
+                                    <option data-img-src="lbd/img/default-avatar.png">Creation &amp; Entertainment</option>
+                                    <option data-img-src="lbd/img/default-avatar.png">Creation</option>
+                                    <option data-img-src="lbd/img/default-avatar.png">Entertainment</option>
+                                    <option data-img-src="lbd/img/default-avatar.png">Social Media</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-content-action col-md-12">
+                        <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Client Profile Annual turnover Modal -->
+<div class="modal fade edit-annual-turnover-modal" id="edit-annual-turnover-modal" tabindex="-1" role="dialog" aria-labelledby="edit-annual-turnover-modal">
+    <div class="modal-dialog modal-lg" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="edit-content clearfix">
+                    <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
+                    <div class="client-details col-md-12">
+                        <div class="col-md-2 client-image">
+                            <div class="client-image-container">
+                                <img src="lbd/img/webedia.jpg" class="img-circle img-responsive mCS_img_loaded">
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="client-spec col-md-10 pull-left">
+                                    <div class="row">
+                                        <h5 class="client-id">C017</h5>
+                                        <div class="client-name">Allocine</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="tags-list">
+                                            <span class="label paused">Tier_3</span>
+                                            <span class="label paused">Teritary</span>
+                                            <span class="label paused">Advertising / Entertainment</span>
+                                            <span class="label paused">Untagged</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-12 edit-title modal-title">
+                        Annual Turnover
+                    </div>
+                    <div class="col-md-12  edit-overview">
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-9"><input type="text" class="form-control" placeholder="ex: 1 00 000 000" id=""></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <label for="turnoverYear">Which Year</label>
+                                <div class="row">
+                                    <div class="col-md-12"><input type="text" class="form-control datepicker-year" placeholder="eg: 2016" id="turnoverYear"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <label for="turnoverSource">Source</label>
+                                <div class="row">
+                                    <div class="col-md-12"><input type="text" class="form-control" placeholder="ex: www.webedia.com" id="turnoverSource"></div> 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="edit-content-action col-md-12">
+                        <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Client Profile Address Modal -->
+<div class="modal fade edit-address-modal" id="edit-address-modal" tabindex="-1" role="dialog" aria-labelledby="edit-address-modal">
+    <div class="modal-dialog modal-lg" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="edit-content clearfix">
+                    <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
+                    <div class="client-details col-md-12">
+                        <div class="col-md-2 client-image">
+                            <div class="client-image-container">
+                                <img src="lbd/img/webedia.jpg" class="img-circle img-responsive mCS_img_loaded">
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="client-spec col-md-10 pull-left">
+                                    <div class="row">
+                                        <h5 class="client-id">C017</h5>
+                                        <div class="client-name">Allocine</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="tags-list">
+                                            <span class="label paused">Tier_3</span>
+                                            <span class="label paused">Teritary</span>
+                                            <span class="label paused">Advertising / Entertainment</span>
+                                            <span class="label paused">Untagged</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 edit-overview">
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="clientAddressEdit">Address</label>
+                                <textarea id="clientAddressEdit" class="form-control" rows="3" placeholder="ex: 1 rue da la Paix, 75001 Paris."></textarea>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <label for="">Country</label>
+                                <div class="row client-country">
+                                    <div class="col-md-12">
+                                        <select class="chosen-default flags">
+                                            <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
+                                            <option data-img-src="lbd/img/flag/fr.gif">FR</option>
+                                            <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
+                                            <option data-img-src="lbd/img/flag/sp.gif">ES</option>
+                                            <option data-img-src="lbd/img/flag/pol.gif">PO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-content-action col-md-12">
+                        <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Client Profile External Links Modal -->
+<div class="modal fade edit-external-links-modal" id="edit-external-links-modal" tabindex="-1" role="dialog" aria-labelledby="edit-external-links-modal">
+    <div class="modal-dialog modal-lg" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="edit-content clearfix">
+                    <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
+                    <div class="client-details col-md-12">
+                        <div class="col-md-2 client-image">
+                            <div class="client-image-container">
+                                <img src="lbd/img/webedia.jpg" class="img-circle img-responsive mCS_img_loaded">
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="client-spec col-md-10 pull-left">
+                                    <div class="row">
+                                        <h5 class="client-id">C017</h5>
+                                        <div class="client-name">Allocine</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="tags-list">
+                                            <span class="label paused">Tier_3</span>
+                                            <span class="label paused">Teritary</span>
+                                            <span class="label paused">Advertising / Entertainment</span>
+                                            <span class="label paused">Untagged</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 edit-overview">
+                        <div class="row form-group">
+                            <div class="col-md-12 form-group">
+                                <label for="externalLinksEdit">External Links</label>
+                                <input type="text" class="form-control" placeholder="ex: https://www.webedia.com" id="externalLinksEdit">
+                            </div>
+                            <div class="external-links-list col-md-12">
+                                <a href="javascript:;" class="add-external-link">+ Add a website</a>
+                            </div>
+
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 form-group">
+                                <label for="">Social medias</label>
+                                <div class="row client-country">
+                                    <div class="col-md-4">
+                                        <select class="chosen-default">
+                                            <option data-img-src="lbd/img/social-media/fb-circle.png">Facebook</option>
+                                            <option data-img-src="lbd/img/social-media/linkedin-circle.png">LinkedIn</option>
+                                            <option data-img-src="lbd/img/social-media/pinterest-circle.png">Pinterest</option>
+                                            <option data-img-src="lbd/img/social-media/twitter-circle.png">Twitter</option>
+                                            <option data-img-src="lbd/img/social-media/youtube-circle.png">Youtube</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control socialmedia-link" placeholder="ex: https://www.webedia.com" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="external-links-list col-md-12">
+                                <a href="javascript:;" class="add-social-media">+ Add a social media</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-content-action col-md-12">
+                        <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
     <!--   Core JS Files   -->

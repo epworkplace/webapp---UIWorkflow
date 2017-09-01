@@ -2,7 +2,7 @@
 
 #clientProfile {
   .main-container {
-    /* tab panel container -->*/
+    /* tab panel container starts */
     .tab-panel-container {
       .tab-panel {
         &.outside {
@@ -27,72 +27,14 @@
         }
 
         .client-details {
-          margin-bottom: 20px;
-          font-size: 12px;
-
-          * {
-            color: #a2a6b0;
-
-            a {
-              text-decoration: underline;
-            }
-          }
-
-          .client-image {
-            .client-image-container {
-              width: 52px;
-            }
-          }
-
-          .client-spec {
-            margin-left: 10px;
-
-            .row {
-              display: flex;
-              align-items: center;
-            }
-
-            .client-id {
-              margin: 0;
-              margin-right: 5px;
-            }
-
-            .client-name {
-              font-size: 22px;
-              font-weight: 600;
-              color: #353F53;
-            }
-
-            .tags-list {
-              display: flex;
-              flex-wrap: wrap;
-
-              .label {
-                color: #fff;
-                margin: 0 5px 5px 0;
-                line-height: normal;
-                border-radius: 7px;
-
-                &.paused {
-                  background: #9a9fa9;
-                }
-              }
-            }
-          }
-
-          .more-menu {
-            padding-right: 0px;
-
-            i {
-              font-size: 20px;
-            }
-          }
+          @extend %client-details;
         }
 
         .client-actions {
           &.divider {
             @include divider;
           }
+
           .action-list-container {
             *[class*='-title'] {
               font-weight: 600;
@@ -160,12 +102,10 @@
           }
         }
       }
-
-
     }
 
-    /* tab panel container <--*/
-    /* main panel container -->*/
+    /* tab panel container ends */
+    /* main panel container starts */
     .main-panel-container {
       .data-container {
         padding: 25px;
@@ -290,8 +230,42 @@
       }
     }
 
-    /* main panel container <--   */
+    /* main panel container ends */
   }
+
+  /* main container ends */
+  /* modal dialog styles starts */
+
+  .modal {
+    .client-details {
+      padding: 0;
+
+      @extend %client-details;
+    }
+
+    .edit-title, label {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .edit-overview {
+      // margin-bottom: 20px;
+
+      .mce-container {}
+    }
+    a[class*='add-']{
+      font-size: 12px;
+      color: #a2a6b0;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  /* modal dialog styles ends */
 }
 
-/* modal window styles*/
+/* #clientProfile styles ends */
