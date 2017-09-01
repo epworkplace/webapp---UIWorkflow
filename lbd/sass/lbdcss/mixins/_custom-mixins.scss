@@ -28,6 +28,10 @@
   border-top: $divider-width $style $color;
 }
 
+/**
+* Placeholder selector styles
+*/
+
 // Add button for Related files, Stakeholder, Cards, etc
 %add-button {
   display: flex;
