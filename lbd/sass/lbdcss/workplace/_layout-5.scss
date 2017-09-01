@@ -328,6 +328,24 @@
                     .tab-pane {
                       padding: 0;
 
+                      &#upcomingCards, &#filterPeriod, &#filterStatus {
+                        .form-group {
+                          &.dropup {
+                            .bootstrap-select {
+                              &.open {
+                                max-height: none !important;
+                                height: auto;
+
+                                .dropdown-menu {
+                                  max-height: none !important;
+                                  height: auto;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+
                       &#upcomingCards {
                         .form-group {
                           display: flex;
@@ -446,6 +464,16 @@
 
                           .dropdown-menu {
                             padding: 10px;
+
+                            &.open {
+                              max-height: none !important;
+                              height: auto;
+
+                              .dropdown-menu {
+                                max-height: none !important;
+                                height: auto;
+                              }
+                            }
 
                             .bs-actionsbox {
                               padding: 0;
