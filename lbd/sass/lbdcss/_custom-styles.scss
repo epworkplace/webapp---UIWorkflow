@@ -1631,14 +1631,14 @@ html {
                             color: #448AFF;
 
                             i {
-                                margin-right: 10px;
+                                margin-right: 5px;
                             }
                         }
                         &.disapproved {
                             color: #ee0a5f;
 
                             i {
-                                margin-right: 10px;
+                                margin-right: 5px;
                             }
                         }
                         &.disable{
@@ -6552,16 +6552,12 @@ html {
       }
       .job-list-actions{
         padding: 0;
-        width: 16.666%;
-        margin-left: 18.666%;
+        width: 35.666%;
         .btn-yes, .btn-cancel{
           margin-right: 10px;
         }
-        .btn-yes, .btn-disapprove, .btn-cancel, .btn-confirm{
+        .btn-yes, .btn-disapprove, .btn-cancel, .btn-confirm, .btn-download{
           width: 48%!important;
-        }
-        .btn-download{
-            width: 100%!important;
         }
       }
       .cta-container {
@@ -7529,6 +7525,9 @@ html {
                                 padding: 0;
                                 width: 22.333%;
                                 margin-left: 10.488%;
+                                .btn-download{
+                                    width: 100%!important;
+                                }
                             }
                         }
                         .rate-review{
