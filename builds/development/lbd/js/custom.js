@@ -66,6 +66,7 @@ $(document).ready(function(){
 	$('.tab-panel, .decks-wrap').mCustomScrollbar({
 		// mouseWheel:{ deltaFactor: 50 }
 		// scrollInertia: 1000
+<<<<<<< HEAD
 		autoHideScrollbar: true
 	});
 // custom scrollbar outside positioned	
@@ -87,6 +88,26 @@ $(document).ready(function(){
             autoHideScrollbar: true
         }
     );
+=======
+	});
+// custom scrollbar outside positioned	
+	$('.tab-panel.outside').mCustomScrollbar({
+		scrollbarPosition: "outside"
+	});	
+	$('ul#card-container').mCustomScrollbar(
+	        {
+	            mouseWheel:{ 
+	                    preventDefault: true,
+	                    enable: false,
+	                    axis: "x"
+	                },
+	            axis: "x",
+	            scrollbarPosition: "outside",
+	            contentTouchScroll: 25,
+	            documentTouchScroll: true
+	        }
+	    );
+>>>>>>> 293cce44559fddff7e05edb0e5a1c17de7caf8b0
 
 
 
