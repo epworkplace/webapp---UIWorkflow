@@ -66,24 +66,27 @@ $(document).ready(function(){
 	$('.tab-panel, .decks-wrap').mCustomScrollbar({
 		// mouseWheel:{ deltaFactor: 50 }
 		// scrollInertia: 1000
+		autoHideScrollbar: true
 	});
 // custom scrollbar outside positioned	
 	$('.tab-panel.outside').mCustomScrollbar({
-		scrollbarPosition: "outside"
+		scrollbarPosition: "outside",
+		autoHideScrollbar: true
 	});	
 	$('ul#card-container').mCustomScrollbar(
-	        {
-	            mouseWheel:{ 
-	                    preventDefault: true,
-	                    enable: false,
-	                    axis: "x"
-	                },
-	            axis: "x",
-	            scrollbarPosition: "outside",
-	            contentTouchScroll: 25,
-	            documentTouchScroll: true
-	        }
-	    );
+        {
+            mouseWheel:{ 
+                preventDefault: true,
+                enable: false,
+                axis: "x"
+            },
+            axis: "x",
+            scrollbarPosition: "outside",
+            contentTouchScroll: 25,
+            documentTouchScroll: true,
+            autoHideScrollbar: true
+        }
+    );
 
 
 
