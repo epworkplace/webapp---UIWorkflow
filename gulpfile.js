@@ -5,6 +5,7 @@
 	pkg = require('./package.json'),
 	$ = require('gulp-load-plugins')({ lazy: true }),
 	browserSync = require('browser-sync').create(),
+  htmlInjector = require('bs-html-injector'),
 	reload = browserSync.reload;
 
 // file locations
@@ -29,13 +30,6 @@ var
 		in: source + 'lbd/img/**/*',
 		out: dest + 'lbd/img/'
 	},
-
-	// imguri = {
-	// 	in: source + 'img/inline/*',
-	// 	out: source + 'scss/img/',
-	// 	filename: '_datauri.scss',
-	// 	namespace: 'img'
-	// },
 
 	css = {
 		in: [source + 'lbd/sass/light-bootstrap-dashboard.scss'],
@@ -87,6 +81,17 @@ var
 			index: 'index.html'
 		},
 		open: false,
+    // files: [
+    //         source + '**/*.html',
+    //         '!' + source + 'builds/**/*',
+    //         '!' + source + 'node_modules/**/*',
+    //         '!' + css.in,
+    //         '!' + css.out + 'maps/**/*',
+    //         '!' + css.out + 'images/**/*',
+    //         css.out + '**/*.css'
+    //     ],
+    injectChanges: true,
+    reloadDelay: 0,
 		notify: true
 	};
 
@@ -128,14 +133,6 @@ gulp.task('images', function() {
 		.pipe(gulp.dest(images.out));
 });
 
-// convert inline images to dataURIs in SCSS source
-// gulp.task('imguri', function() {
-// 	return gulp.src(imguri.in)
-// 		.pipe($.imagemin())
-// 		.pipe($.imacss(imguri.filename, imguri.namespace))
-// 		.pipe(gulp.dest(imguri.out));
-// });
-
 // copy fonts
 gulp.task('fonts', function() {
 	return gulp.src(fonts.in)
@@ -154,7 +151,8 @@ gulp.task('css', ['fonts'], function() {
     .pipe($.newer(css.pluginCSS.out))
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
-    .pipe(reload({stream: true}));
+    .pipe(browserSync.stream({match: '**/*.css'}));
+    // .pipe(reload({stream: true}));
 });
 
 // compile Sass
@@ -166,7 +164,7 @@ gulp.task('sass', ['fonts'], function() {
 		.pipe($.sourcemaps.write('./maps'))
 		.pipe($.size({title: 'SCSS out '}))
 		.pipe(gulp.dest(css.out))
-		.pipe(browserSync.stream());
+		.pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 // js tasks
@@ -228,7 +226,25 @@ gulp.task('connect', function() {
 
 // browser sync
 gulp.task('serve', [], function() {
-	browserSync.init(syncOpts);
+	// browserSync.init(syncOpts);
+
+  browserSync.use(htmlInjector,{
+    files: [dest + '**/*.html']
+  });
+
+  browserSync.init({
+    server: {
+      baseDir: dest,
+      index: 'index.html'
+    },
+    files: [dest + 'lbd/css/light-bootstrap-dashboard.css', dest + 'lbd/js/custom.js'],
+    open: false,
+    injectChanges: true,
+    notify: true
+
+  });
+
+// browserSync.watch(dest + '**/*.html').on('change', reload);
 
 /*  // html changes
   gulp.watch(html.watch, ['html', reload]);
@@ -251,14 +267,14 @@ gulp.task('serve', [], function() {
   gulp.watch(js.in).on('change', reload);
 
   // javascript libraries changes
-  // gulp.watch(jsLibs.in, ['jslib', reload]);	
+  // gulp.watch(jsLibs.in, ['jslib', reload]);
   gulp.watch(jsLibs.in).on('change', reload);*/
 
 });
 
 gulp.task('watch', function() {
   // html changes
-  gulp.watch(html.watch, ['html', reload]);
+  gulp.watch(html.watch, ['html']);
 
   // image changes
   gulp.watch(images.in, ['images']);
@@ -280,6 +296,6 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'sass', 'css', 'js', 'jslib', 'serve', 'watch']);
+gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'js', 'jslib', 'watch', 'serve']);
 
 // gulp.task('default', ['serve']);
