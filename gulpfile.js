@@ -154,7 +154,7 @@ gulp.task('css', ['fonts'], function() {
     .pipe($.newer(css.pluginCSS.out))
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
-    .pipe(reload({stream: true}));
+    .pipe(browserSync.stream());
 });
 
 // compile Sass
