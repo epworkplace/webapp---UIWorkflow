@@ -55,10 +55,10 @@ $(document).ready(function(){
 
 
 	//Custom Scrollbar
-	$(".floating-box-body .panel #panel-body, .month-values-panel").mCustomScrollbar({ 
+	$(".floating-box-body .panel #panel-body, .month-values-panel").mCustomScrollbar({
 		autoDraggerLength: false,
-	    mouseWheel:{ 
-	    	preventDefault: true 
+	    mouseWheel:{
+	    	preventDefault: true
 	    },
 	    mouseWheelPixels: 500
 	 });
@@ -68,14 +68,14 @@ $(document).ready(function(){
 		// scrollInertia: 1000
 		autoHideScrollbar: true
 	});
-// custom scrollbar outside positioned	
+// custom scrollbar outside positioned
 	$('.tab-panel.outside').mCustomScrollbar({
 		scrollbarPosition: "outside",
 		autoHideScrollbar: true
-	});	
+	});
 	$('ul#card-container').mCustomScrollbar(
         {
-            mouseWheel:{ 
+            mouseWheel:{
                 preventDefault: true,
                 enable: false,
                 axis: "x"
@@ -120,7 +120,7 @@ $(document).ready(function(){
         }
         else {
              $ (this).text("Select None");
-             $(".check input").prop('checked', false);    
+             $(".check input").prop('checked', false);
         }
 	});*/
 	//Data Table Fixed Header
@@ -147,8 +147,8 @@ $(document).ready(function(){
 				width: '-=500px'
 			});
 			$('.table-modal').delay().queue(function(next){
-				$(this).css('display', 'none'); 
-				next(); 
+				$(this).css('display', 'none');
+				next();
 			});
 			$('.overlay').css({
 				visibility: 'hidden',
@@ -188,7 +188,7 @@ $(document).ready(function(){
 	//Billing Modal Disabled Month List
 	$('.billing-month-values .month-values-panel ul li.disabled a').click(function() {
 		return false;
-	}); 
+	});
 
 	//Placeholders for Bootstrap Select
 	$(".clients .bs-searchbox input").attr("placeholder", "Search name of Client");
@@ -274,7 +274,7 @@ $(document).ready(function(){
 		$(this).closest('.card').css('border', '1px solid #FFFFFF');
 	});
 
-	
+
 	//Tab Edit content toggle
 	/*$('.tab-content .edit-content').hide();
 	$('.tab-content .edit').click(function() {
@@ -302,7 +302,7 @@ $(document).ready(function(){
             horizontal: 'left',
             vertical: 'bottom'
         }
-	});		
+	});
 	$('.datepicker-end').datetimepicker({
 		format: 'DD/MM/YYYY',
 		widgetPositioning: {
@@ -316,7 +316,7 @@ $(document).ready(function(){
             horizontal: 'auto',
             vertical: 'top'
         }
-	});		
+	});
 	$('.datepicker-end-date-up').datetimepicker({
 		format: 'DD/MM/YYYY',
 		widgetPositioning: {
@@ -330,7 +330,7 @@ $(document).ready(function(){
             horizontal: 'auto',
             vertical: 'top'
         }
-	});		
+	});
 	$('.datepicker-jobend-date-up').datetimepicker({
 		format: 'MM/YYYY',
 		widgetPositioning: {
@@ -378,7 +378,7 @@ $(document).ready(function(){
 	// Datepicker only date
     $('.datepicker-date').datetimepicker({
     	format: 'DD'
-    });        
+    });
 
 
 
@@ -455,7 +455,7 @@ $(document).ready(function(){
           return;
        //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
        if($(e.target).closest('.open-menu-top-bar').length)
-          return;             
+          return;
 
 		$('.open-menu-top-bar').fadeOut('400', function() {
 			$('.open-menu-top-bar').hide();
@@ -464,7 +464,7 @@ $(document).ready(function(){
 
 
 
-	
+
 
 
 	//tinyMCE integartion
@@ -475,7 +475,7 @@ $(document).ready(function(){
 		height: "450",
 		plugins: "autoresize",
 		autoresize_min_height: "450",
-  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
 
 	//tinyMCE intregation
@@ -484,7 +484,7 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
 		height: "230",
-  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
 
 	//tinyMCE Send Message intregation
@@ -492,15 +492,15 @@ $(document).ready(function(){
 	    selector: '#editSendTestMessage',
 	    statusbar: false,
   		menubar : false,
-  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
-	
+
 	//tinyMCE Fire Message intregation
 	tinymce.init({
 	    selector: '#editFireMessage',
 	    statusbar: false,
   		menubar : false,
-  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
 
 	//tinyMCE Send Job Confirm Message intregation
@@ -508,7 +508,7 @@ $(document).ready(function(){
 	    selector: '#editSendJobConfirmMessage',
 	    statusbar: false,
   		menubar : false,
-  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
 
 	//tinyMCE Send Job Cancel Message intregation
@@ -516,7 +516,7 @@ $(document).ready(function(){
 	    selector: '#editSendJobCancelMessage',
 	    statusbar: false,
   		menubar : false,
-  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
 
 	//tinyMCE Send Report File Message intregation
@@ -524,7 +524,7 @@ $(document).ready(function(){
 	    selector: '#editReportFileMessage',
 	    statusbar: false,
   		menubar : false,
-  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
 
 	//tinyMCE Send Announce Message intregation
@@ -532,12 +532,12 @@ $(document).ready(function(){
 	    selector: '#editSendAnnounceMessage',
 	    statusbar: false,
   		menubar : false,
-  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css", 
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
-	
 
 
-	//Chosen Dropdown with Image 
+
+	//Chosen Dropdown with Image
 	$(".mission-assignee, .chosen-default").chosen({width:"100%"});
 
 	//Settings popup
@@ -626,16 +626,16 @@ $(document).ready(function(){
      $('.more').each(function() {
         var content = $(this).html();
         // console.log(content);
-        if(content.length > showChar) {        
+        if(content.length > showChar) {
             var c = content.substr(0, showChar);
             // console.log(c);
-            var h = content.substr(showChar, content.length - showChar); 
+            var h = content.substr(showChar, content.length - showChar);
             // console.log(h);
             var html = c + '<span class="moreellipses">' + ellipsestext + '</span><span class="morecontent"><span>' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
             // console.log(html);
             $(this).html(html);
-        }      
-    }); 
+        }
+    });
 
 /*$(".morelink").click(function(){
     if($(this).hasClass("less")) {
@@ -769,7 +769,7 @@ $(document).ready(function(){
 	// 	var cur = $(this).scrollLeft();
 	// 	if (cur == 0) {
 	// 		$('.tab-panel-container').removeClass('left');
-	// 	} 
+	// 	}
 	// 	else if (cur > 0){
 	// 		$('.tab-panel-container').addClass('left');
 	// 	}
@@ -787,7 +787,7 @@ $(document).ready(function(){
 	// 		this.scrollLeft -= (delta * 40);
 	// 		e.preventDefault();
 	// 	});
-	// });  
+	// });
 
 
 

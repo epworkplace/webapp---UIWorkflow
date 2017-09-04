@@ -228,23 +228,24 @@ gulp.task('connect', function() {
 gulp.task('serve', [], function() {
 	// browserSync.init(syncOpts);
 
-  browserSync.use(htmlInjector,{
-    files: [dest + '**/*.html']
-  });
+  // browserSync.use(htmlInjector,{
+  //   files: [dest + '**/*.html']
+  // });
 
   browserSync.init({
     server: {
       baseDir: dest,
       index: 'index.html'
     },
-    files: [dest + 'lbd/css/light-bootstrap-dashboard.css', dest + 'lbd/js/custom.js'],
+    // files: [dest + 'lbd/css/light-bootstrap-dashboard.css', dest + 'lbd/js/custom.js'],
     open: false,
     injectChanges: true,
     notify: true
 
   });
 
-// browserSync.watch(dest + '**/*.html').on('change', reload);
+gulp.watch(html.out + '*.html').on('change', reload);
+gulp.watch(dest + 'lbd/js/custom.js').on('change', reload);
 
 /*  // html changes
   gulp.watch(html.watch, ['html', reload]);
@@ -289,7 +290,7 @@ gulp.task('watch', function() {
   gulp.watch([css.pluginCSS.watch], ['css']);
 
   // javascript changes
-  gulp.watch(js.in, ['js', reload]);
+  gulp.watch(js.in, ['js']);
 
   // javascript libraries changes
   gulp.watch(jsLibs.in, ['jslib', reload]);
