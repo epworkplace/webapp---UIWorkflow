@@ -159,6 +159,7 @@ gulp.task('css', ['fonts'], function() {
 gulp.task('sass', ['fonts'], function() {
 	return gulp.src(css.in)
 		.pipe($.sourcemaps.init())
+    .pipe($.plumber())
 		.pipe($.sass(css.sassOpts))
 		.pipe($.size({title: 'SCSS in '}))
 		.pipe($.sourcemaps.write('./maps'))
@@ -224,6 +225,10 @@ gulp.task('connect', function() {
     });
 });
 
+gulp.task('stream', function(){
+
+});
+
 // browser sync
 gulp.task('serve', [], function() {
 	// browserSync.init(syncOpts);
@@ -245,6 +250,12 @@ gulp.task('serve', [], function() {
   });
 
 gulp.watch(html.out + '*.html').on('change', reload);
+// $.watch([dest+'**/*.html'], $.batch(function (events, done) {
+//   gulp.start(reload);
+// }));
+// $.watch([dest+'**/*.css'], $.batch(function (events, done) {
+//   gulp.start(browserSync.stream({match: '**/*.css'}), done);
+// }));
 gulp.watch(dest + 'lbd/js/custom.js').on('change', reload);
 
 /*  // html changes
