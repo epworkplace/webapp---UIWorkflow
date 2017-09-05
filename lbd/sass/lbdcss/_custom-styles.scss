@@ -8187,6 +8187,21 @@ html {
         background: #d2d4de;
     }   
     &.disapprove-drop{
+        .bootstrap-select.btn-group{
+            button.bs-placeholder{
+                span.filter-option{
+                    color: #7d889a!important;
+                    font-weight: 400!important;
+                }
+            }
+            span.filter-option{
+                color: #353f53!important;
+                font-weight: 600!important;
+                i{
+                    color: #ee0a5f!important;
+                }
+            }
+        }
         .bootstrap-select.btn-group .dropdown-menu li a{
             color: #353f53!important;
             font-weight: 600;
@@ -8196,6 +8211,13 @@ html {
             small{
                 color: #7d889a!important;
                 font-weight: 400;
+            }
+            &:hover, &:focus{
+                color: #fff!important;
+                small{
+                    color: #fff!important;
+                    font-weight: 400;
+                }
             }
         }
     }
