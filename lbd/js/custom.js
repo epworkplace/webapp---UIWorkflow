@@ -858,6 +858,7 @@ $(document).ready(function(){
 
 	/*Flags Dropdown */
     $('.flags').next('.chosen-container').addClass('flag-dropdown');
+    
 
 });
 
