@@ -244,6 +244,7 @@ gulp.task('serve', [], function() {
     },
     // files: [dest + 'lbd/css/light-bootstrap-dashboard.css', dest + 'lbd/js/custom.js'],
     open: false,
+    port: 8080,
     injectChanges: true,
     notify: true
 

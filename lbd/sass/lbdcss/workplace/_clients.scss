@@ -51,7 +51,7 @@
     .main-panel-container {
       .client-content-container {
         margin-top: 10px;
-        .client-list-table {
+        [class*='-list-table'] {
           border-collapse: separate !important;
           border-spacing: 0 10px;
 
