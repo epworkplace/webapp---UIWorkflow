@@ -565,29 +565,7 @@
     margin-bottom: 20px;
 
     a.add-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 36px;
-        color: #D7D9DC;
-        background: #ffffff;
-        text-align: center;
-        box-shadow: 1px 1px 2px 1px #eceeef;
-        border-radius: 4px;
-        transition: all .3s ease;
-
-        i {
-            transition: all .3s ease;
-        }
-
-        &:hover, &:focus {
-            box-shadow: 1px 1px 5px 3px #eceeef;
-
-            i {
-                color: #448AFF;
-            }
-        }
+        @extend %add-button;
     }
 }
 
