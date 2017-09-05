@@ -3538,115 +3538,6 @@ html {
     font-weight: 600;
     margin-bottom: 20px;
   }
-  .upload-job-container{
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed #d2d4de;
-    border-radius: 6px;
-    .placeholder{
-        font-size: 16px;
-        text-align: center;
-        font-weight: 700;
-        padding: 0;
-        margin: 0;
-        color: #9a9fa9;
-        text-align: center;
-        line-height: 1.6;
-        span{
-            display: block;
-            font-size: 14px;
-            font-weight: 400;
-            color: #9a9fa9;
-            text-align: center;
-        }
-    }
-  }
-  .uploaded-job-container{
-    min-height: 80px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    align-items: center;
-    .user-image{
-        width: 40px;
-        padding: 0;
-        margin-right: 5px;
-        img{
-            max-width: 100%;
-        }
-    }
-    .job-content{
-        .file-name{
-            color: #353f53;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        .update-info{
-            color: #a0a5af;
-            font-size: 12px;
-            font-weight: 400;
-        }
-    }
-    .cta-container {
-        visibility: hidden;
-        opacity: 0;
-        transition: all .3s ease;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 30%;
-        height: 100%;
-        background: #fff;
-        .cta {
-          display: flex;
-          -webkit-flex-flow: row wrap;
-          align-items: center;
-          height: 100%;
-          position: absolute;
-          right: 20px;
-          ul {
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-            li {
-              display: inline-block;
-              margin-right: 20px;
-              a {
-                cursor: pointer;
-                color: #DFE1E3;
-                span {
-                  cursor: pointer;
-                }
-                &:hover, &:focus {
-                  color: #485262;
-                }
-              }
-            }
-            li:last-child {
-              margin-right: 0;
-            }
-          }
-        }
-      }
-      &:hover{
-        .cta-container{
-            visibility: visible;
-            opacity: 1;
-            transition: all .3s ease;
-        }
-      }
-  }
   .previous-job-review{
     position: relative;
     margin-top: 50px;
@@ -8170,12 +8061,9 @@ html {
     font-weight: 600;
   }
 
-  .reason, .comment {
-    margin-bottom: 20px;
-  }
-
-  .reason{
+  .comment{
     margin-top: 50px;
+    margin-bottom: 10px;
     position: relative;
     &:before{
         content: "";
@@ -8221,10 +8109,12 @@ html {
             }
         }
     }
-  }
+}
+
+}
 
 .rate-task-container {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -8250,50 +8140,136 @@ html {
     }
 }
 
-  .confirm-action {
+.confirm-action {
     margin-top: 20px;
-
     .btn-disapprove {
-      width: 100% !important;
+        width: 100% !important;
     }
-  }
+}
 
-  .notified-members-container {
-    margin-top: 30px;
+
+/* Disapprove Modal Ends*/
+
+/* Drag and drop for files in Modal Starts*/
+
+.drag-drop-files-modal-container{
+    margin-bottom: 25px;
+}
+
+.drag-drop-files-modal{
+    margin-bottom: 10px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    align-items: center;
-    -webkit-flex-flow: row wrap;
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
     justify-content: center;
-
-    .notified-member {
-      width: 42px;
-      height: 42px;
-      margin-right: 0;
-      padding: 0 5px;
-
-      img {
-        max-width: 100%;
-        display: block;
+    align-items: center;
+    border: 2px dashed #d2d4de;
+    border-radius: 6px;
+    .placeholder{
+        font-size: 16px;
+        text-align: center;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+        color: #9a9fa9;
+        text-align: center;
+        line-height: 1.6;
+        span{
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            color: #9a9fa9;
+            text-align: center;
+        }
+    }
+  }
+  .uploaded-drop-files-container{
+    margin-bottom: 10px;
+    min-height: 80px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: center;
+    .user-image{
+        width: 40px;
+        padding: 0;
+        margin-right: 5px;
+        img{
+            max-width: 100%;
+        }
+    }
+    .job-content{
+        .file-name{
+            color: #353f53;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .update-info{
+            color: #a0a5af;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+    .cta-container {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30%;
+        height: 100%;
+        background: #fff;
+        .cta {
+          display: flex;
+          -webkit-flex-flow: row wrap;
+          align-items: center;
+          height: 100%;
+          position: absolute;
+          right: 20px;
+          ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            li {
+              display: inline-block;
+              margin-right: 20px;
+              a {
+                cursor: pointer;
+                color: #DFE1E3;
+                span {
+                  cursor: pointer;
+                }
+                &:hover, &:focus {
+                  color: #485262;
+                }
+              }
+            }
+            li:last-child {
+              margin-right: 0;
+            }
+          }
+        }
       }
-    }
+      &:hover{
+        .cta-container{
+            visibility: visible;
+            opacity: 1;
+            transition: all .3s ease;
+        }
+      }
   }
 
-  .notified-members-count {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #9ba0aa;
+/* Drag and drop for files in Modal Ends*/
 
-    span {
-      font-weight: 600;
-    }
-  }
-}
-
-/* Disapprove Modal Ends*/
 
 /* Approve Modal Starts*/
 
@@ -9582,12 +9558,12 @@ html {
 
 /* Default scrollbar styles */
 .mCSB_inside > .mCSB_container {
-  margin-right: 15px;
+  margin-right: 15px!important;
   padding: 1px;
 }
 
 .mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
-  bottom: 0px;
+  bottom: 0px!important;
 }
 
 .mCSB_scrollTools {

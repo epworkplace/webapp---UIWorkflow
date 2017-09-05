@@ -163,7 +163,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-xs-12 page-title">
-                                                    <a class="navbar-brand" href="#">Card Overview</a>  
+                                                    <a class="navbar-brand" href="#">Card timeline</a>  
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -2276,7 +2276,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="javascript:;" class="upload-job-container">
+                            <a href="javascript:;" class="drag-drop-files-modal">
                                 <div class="placeholder">
                                     Upload your job here <span>Please add your work archived in a unique .zip file</span>
                                 </div>
@@ -2285,7 +2285,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="col-md-12 card uploaded-job-container">
+                            <div class="col-md-12 card uploaded-drop-files-container">
                                 <div class="col-md-2 user-image">
                                     <img src="lbd/img/default-avatar.png" class="img-circle">
                                 </div>
@@ -2523,7 +2523,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade disapprove-modal in" style="display: block;" id="jobDisapproveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade disapprove-modal" id="jobDisapproveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -2541,18 +2541,18 @@
                     <div class="row">
                         <div class="col-md-12 comment-section">
                             <div class="row">
-                                <div class="col-md-12 comment">
-                                    <label>What is the problem?</label>
-                                    <textarea class="form-control" rows="6" placeholder="Describe the problem with this job..."></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-md-12 reason disapprove-drop">
                                     <label>What do you want to do ?</label>
                                     <select class="selectpicker" id="disapproveReason" title="Chose an action...">
                                         <option data-icon="glyphicon-remove" data-subtext=" - Let previous contributor start over its job">Disapprove</option>
                                         <option data-icon="glyphicon-ban-circle" data-subtext=" - Assign previous job to another contributor to start over again">Disapprove &amp; Fire</option>
                                     </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 comment">
+                                    <label>What is the problem?</label>
+                                    <textarea class="form-control" rows="6" placeholder="Describe the problem with this job..."></textarea>
                                 </div>
                             </div>
                         </div>
@@ -2562,30 +2562,128 @@
                             <div class="col-md-12 card rate-task-container">
                                 <div class="star-rate-task">
                                     <div class="star-rating" id="jobTaskDisapproveRating"></div>
-                                    <div class="star-rating-label">1 - Awful</div>
+                                    <div class="star-rating-label"><span>Please review previous job (1 to 5)</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <hr />
                     <div class="row">
-                        <div class="col-md-12 send-message-container">
+                        <div class="col-md-12 drag-drop-files-modal-container">
                             <div class="row">
-                                <div class="col-md-12 send-message-display">
-                                    <label>Message sent to corrector</label>
-                                    <div class="message-container">
-                                        <a href="javascript:;" class="btn edit-message">Edit Message</a>
-                                        <p>Dear Participant,</p>
-                                        <p>Your participation to <a href="javascript:;">Webedia 200 articles blog</a> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                                        <p><a href="javascript:;">Lorem ipsum dolor sit amet</a></p>
-                                        <p><strong>Sed ut perspiciatis unde omnis iste natus error sit</strong> voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                        <p>Regards<br /><strong>Edit-place Editorial team</strong></p>
+                                <div class="col-md-12">
+                                    <a href="javascript:;" class="drag-drop-files-modal">
+                                        <div class="placeholder">
+                                            Drag and drop your file <span>or click here to join a file</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 card uploaded-drop-files-container">
+                                        <div class="col-md-7 job-content">
+                                            <div class="file-name">Webedia_blog_e-sport_trends_article-1.zip</div>
+                                            <div class="update-info">Just now - 10.10Mb</div>
+                                        </div>
+                                        <div class="cta-container">
+                                            <div class="cta">
+                                                <ul>
+                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="material-icons">delete</i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 card uploaded-drop-files-container">
+                                        <div class="col-md-7 job-content">
+                                            <div class="file-name">Webedia_blog_e-sport_trends_article-1.zip</div>
+                                            <div class="update-info">Just now - 10.10Mb</div>
+                                        </div>
+                                        <div class="cta-container">
+                                            <div class="cta">
+                                                <ul>
+                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="material-icons">delete</i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12 send-message-edit">
-                                    <label>Edit Message</label>
-                                    <textarea id="editFireMessage"></textarea>
-                                    <a href="javascript:;" class="btn save-edit pull-right">Save Changes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12 tab-step">
+                                <div class="tab-step-content">
+                                    <ul class="nav">
+                                        <li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="false">Message</a></li>
+                                        <li class=""><a href="#tab2" data-toggle="tab" aria-expanded="false">Add Files</a></li>
+                                    </ul>
+                                    <div class="tab-content tab-content-progress">
+                                        <div class="tab-pane active" id="tab1">
+                                            <div class="row">
+                                                <div class="col-md-12 send-message-container">
+                                                    <div class="row">
+                                                        <div class="col-md-12 send-message-display">
+                                                            <div class="message-container">
+                                                                <a href="javascript:;" class="btn edit-message">Edit Message</a>
+                                                                <p>Dear Participant,</p>
+                                                                <p>Your participation to <a href="javascript:;">Webedia 200 articles blog</a> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                                                <p><a href="javascript:;">Lorem ipsum dolor sit amet</a></p>
+                                                                <p><strong>Sed ut perspiciatis unde omnis iste natus error sit</strong> voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                                                <p>Regards<br /><strong>Edit-place Editorial team</strong></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 send-message-edit">
+                                                            <label>Edit Message</label>
+                                                            <textarea id="editFireMessage"></textarea>
+                                                            <a href="javascript:;" class="btn save-edit pull-right">Save Changes</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab2">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <a href="javascript:;" class="drag-drop-files-modal">
+                                                        <div class="placeholder">
+                                                            Drag and drop your file <span>or click here to join a file</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="col-md-12 card uploaded-drop-files-container">
+                                                        <div class="col-md-7 job-content">
+                                                            <div class="file-name">Webedia_blog_e-sport_trends_article-1.zip</div>
+                                                            <div class="update-info">Just now - 10.10Mb</div>
+                                                        </div>
+                                                        <div class="cta-container">
+                                                            <div class="cta">
+                                                                <ul>
+                                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="material-icons">delete</i></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 card uploaded-drop-files-container">
+                                                        <div class="col-md-7 job-content">
+                                                            <div class="file-name">Webedia_blog_e-sport_trends_article-1.zip</div>
+                                                            <div class="update-info">Just now - 10.10Mb</div>
+                                                        </div>
+                                                        <div class="cta-container">
+                                                            <div class="cta">
+                                                                <ul>
+                                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="material-icons">delete</i></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2593,22 +2691,6 @@
                     <div class="row">
                         <div class="col-md-12 confirm-action">
                             <button type="button" class="btn btn-default btn-fill btn-disapprove">Confirm</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 notified-members-container">
-                            <div class="notified-member">
-                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
-                            </div>
-                            <div class="notified-member">
-                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
-                            </div>
-                            <div class="notified-member">
-                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
-                            </div>
-                        </div>
-                        <div class="col-md-12 notified-members-count">
-                            <span>3 people</span> will be notified
                         </div>
                     </div>
                 </div>
