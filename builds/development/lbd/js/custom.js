@@ -61,7 +61,8 @@ $(document).ready(function(){
 	    mouseWheel:{
 	    	preventDefault: true
 	    },
-	    mouseWheelPixels: 500
+	    mouseWheelPixels: 500,
+	    autoHideScrollbar: true
 	 });
 	// Common custom scrollbar
 	$('.tab-panel, .decks-wrap').mCustomScrollbar({
@@ -858,6 +859,7 @@ $(document).ready(function(){
 
 	/*Flags Dropdown */
     $('.flags').next('.chosen-container').addClass('flag-dropdown');
+    
 
 });
 
