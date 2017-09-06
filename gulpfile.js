@@ -4,8 +4,11 @@
 	del = require('del'),
 	pkg = require('./package.json'),
 	$ = require('gulp-load-plugins')({ lazy: true }),
-	browserSync = require('browser-sync').create(),
   htmlInjector = require('bs-html-injector'),
+  vf = require('vinyl-file'),
+  vss = require('vinyl-source-stream'),
+  vb = require('vinyl-buffer'),
+	browserSync = require('browser-sync').create(),
 	reload = browserSync.reload;
 
 // file locations
@@ -237,6 +240,9 @@ gulp.task('serve', [], function() {
   //   files: [dest + '**/*.html']
   // });
 
+
+
+
   browserSync.init({
     server: {
       baseDir: dest,
@@ -250,14 +256,17 @@ gulp.task('serve', [], function() {
 
   });
 
-browserSync.watch(html.out + '*.html').on('change', reload);
-// $.watch([dest+'**/*.html'], $.batch(function (events, done) {
-//   gulp.start(reload);
-// }));
-// $.watch([dest+'**/*.css'], $.batch(function (events, done) {
-//   gulp.start(browserSync.stream({match: '**/*.css'}), done);
-// }));
-browserSync.watch(dest + 'lbd/js/custom.js').on('change', reload);
+  // return browserSync.watch(dest + '**/*', function (evt, file) {
+  //   if (evt === 'change' && file.indexOf('.css') === -1) browserSync.reload();
+  //   if (evt === 'change' && file.indexOf('.css') !== -1) vf.read(file).pipe(vss(file)).pipe(vb()).pipe(browserSync.stream());
+  // });
+// browserSync.watch(html.out + '*.html').on('change', reload);
+
+
+$.watch([dest + '**/*.css'], $.batch(function (events, done) {
+  gulp.start(browserSync.stream(), done);
+}));
+// browserSync.watch(dest + 'lbd/js/custom.js').on('change', reload);
 
 /*  // html changes
   gulp.watch(html.watch, ['html', reload]);
