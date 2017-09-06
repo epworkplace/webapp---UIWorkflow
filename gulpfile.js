@@ -17,7 +17,7 @@ var
 
 	html = {
 		in: source + '*.html',
-		watch: [source + '*.html', source + 'template/**/*'],
+		watch: [source + '*.html', source + '_partials/**/*'],
 		out: dest,
 		context: {
 			devBuild: devBuild,
@@ -250,14 +250,14 @@ gulp.task('serve', [], function() {
 
   });
 
-gulp.watch(html.out + '*.html').on('change', reload);
+browserSync.watch(html.out + '*.html').on('change', reload);
 // $.watch([dest+'**/*.html'], $.batch(function (events, done) {
 //   gulp.start(reload);
 // }));
 // $.watch([dest+'**/*.css'], $.batch(function (events, done) {
 //   gulp.start(browserSync.stream({match: '**/*.css'}), done);
 // }));
-gulp.watch(dest + 'lbd/js/custom.js').on('change', reload);
+browserSync.watch(dest + 'lbd/js/custom.js').on('change', reload);
 
 /*  // html changes
   gulp.watch(html.watch, ['html', reload]);

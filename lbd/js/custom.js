@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	
 	//Floating Module
 	$('.floating-module').click(function(e) {
 	e.preventDefault();

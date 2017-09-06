@@ -437,15 +437,16 @@
                                 color: #fff;
                                 font-weight: 500;
                                 line-height: normal;
-                                margin-bottom: 2px;
+                                margin-bottom: 0px;
                                 display: flex;
                                 align-items: center;
 
                                 .label{
                                   line-height: normal;
+                                  margin-right: 10px;
                                 }
                                 .dates {
-                                  margin-left: 10px;
+                                  margin-left: 0px;
                                   display: flex;
                                   align-items: center;
 
@@ -498,6 +499,8 @@
                               .primary-font {
                                 color: #485262;
                                 font-size: 14px;
+                                display: inline-flex;
+                                margin-top: 2px;
                               }
 
                               .brief {
@@ -530,6 +533,9 @@
 
                             [class*='-email'] {
                               text-decoration: underline;
+                            }
+                            .helper-text{
+                              
                             }
                           }
 
@@ -723,6 +729,27 @@
                   &.quotes-contracts-list-container, &.crm-list-container {
                     .main-panel-header{
                       padding-bottom: 0;
+                    }
+                  }
+                  &.crm-list-container {
+                    .list-head-container{
+                      .status-label{
+                        .label{
+                          margin-right: 10px;
+                        }
+                      }
+                      .survey-source{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 5px;
+                        label{
+                          color: $helper;
+                          font-weight: 400;
+                          font-size: 14px;
+                          margin: 0;
+                          padding: 0 15px;
+                        }
+                      }
                     }
                   }
                 }
