@@ -1,31 +1,31 @@
 /* Layout 5 , Job deck cards Mixins */
 
 @mixin add-card($bg-color) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 36px;
-  color: #D7D9DC;
-  background: $bg-color;
-  text-align: center;
-  box-shadow: 1px 1px 2px 1px #eceeef;
-  border-radius: 4px;
-  transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+    color: #D7D9DC;
+    background: $bg-color;
+    text-align: center;
+    box-shadow: 1px 1px 2px 1px #eceeef;
+    border-radius: 4px;
+    transition: all .3s ease;
 }
 
 @mixin add-bordered-card($border-style, $bg-color) {
-  @include add-card($bg-color);
+    @include add-card($bg-color);
 
-  box-shadow: none;
-  border: 2px $border-style #D7D9DC;
+    box-shadow: none;
+    border: 2px $border-style #D7D9DC;
 }
 
 // Divider line
 
 @mixin divider($divider-width: 2px, $style: solid, $color: #f5f5f6) {
-  padding-top: 20px;
-  border-top: $divider-width $style $color;
+    padding-top: 20px;
+    border-top: $divider-width $style $color;
 }
 
 /**
@@ -34,89 +34,90 @@
 
 // Add button for Related files, Stakeholder, Cards, etc
 %add-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 36px;
-  color: #D7D9DC;
-  background: #ffffff;
-  text-align: center;
-  box-shadow: 1px 1px 2px 1px #eceeef;
-  border-radius: 4px;
-  transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+    color: #D7D9DC;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 1px 1px 2px 1px #eceeef;
+    border-radius: 4px;
+    transition: all .3s ease;
 
-  &:hover, &:focus {
-    box-shadow: 1px 1px 5px 3px #eceeef;
+    &:hover, &:focus {
+        box-shadow: 1px 1px 5px 3px #eceeef;
 
-    i {
-      color: #448AFF;
+        i {
+            color: #448AFF;
+        }
     }
-  }
 }
 
 // Cleint details block
 %client-details {
-  margin-bottom: 20px;
-  font-size: 12px;
+    margin-bottom: 20px;
+    font-size: 12px;
 
-  * {
-    color: #a2a6b0;
+    * {
+        color: #a2a6b0;
 
-    a {
-      text-decoration: underline;
-    }
-  }
-
-  .client-image {
-    padding-right: 0;
-    width: 72px;
-    .client-image-container {
-      width: 52px;
-    }
-  }
-
-  .client-spec {
-    margin-left: 10px;
-
-    .row {
-      display: flex;
-      align-items: center;
-    }
-
-    .client-id {
-      margin: 0;
-      margin-right: 5px;
-    }
-
-    .client-name {
-      font-size: 22px;
-      font-weight: 600;
-      color: #353F53;
-    }
-
-    .tags-list {
-      display: flex;
-      flex-wrap: wrap;
-
-      .label {
-        color: #fff;
-        margin: 0 5px 5px 0;
-        line-height: normal;
-        border-radius: 7px;
-
-        &.paused {
-          background: #9a9fa9;
+        a {
+            text-decoration: underline;
         }
-      }
     }
-  }
 
-  .more-menu {
-    padding-right: 0px;
+    .client-image {
+        padding-right: 0;
+        width: 72px;
 
-    i {
-      font-size: 20px;
+        .client-image-container {
+            width: 52px;
+        }
     }
-  }
+
+    .client-spec {
+        margin-left: 10px;
+
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .client-id {
+            margin: 0;
+            margin-right: 5px;
+        }
+
+        .client-name {
+            font-size: 22px;
+            font-weight: 600;
+            color: #353F53;
+        }
+
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+
+            .label {
+                color: #fff;
+                margin: 0 5px 5px 0;
+                line-height: normal;
+                border-radius: 7px;
+
+                &.paused {
+                    background: #9a9fa9;
+                }
+            }
+        }
+    }
+
+    .more-menu {
+        padding-right: 0px;
+
+        i {
+            font-size: 20px;
+        }
+    }
 }
