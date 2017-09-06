@@ -244,7 +244,7 @@ gulp.task('serve', [], function() {
     },
     // files: [dest + 'lbd/css/light-bootstrap-dashboard.css', dest + 'lbd/js/custom.js'],
     open: false,
-    port: 8080,
+    port: 3000,
     injectChanges: true,
     notify: true
 
@@ -287,7 +287,7 @@ gulp.watch(dest + 'lbd/js/custom.js').on('change', reload);
 
 gulp.task('watch', function() {
   // html changes
-  gulp.watch(html.watch, ['html']);
+  gulp.watch(html.watch, ['html', reload]);
 
   // image changes
   gulp.watch(images.in, ['images']);
@@ -302,7 +302,7 @@ gulp.task('watch', function() {
   gulp.watch([css.pluginCSS.watch], ['css']);
 
   // javascript changes
-  gulp.watch(js.in, ['js']);
+  gulp.watch(js.in, ['js', reload]);
 
   // javascript libraries changes
   gulp.watch(jsLibs.in, ['jslib', reload]);

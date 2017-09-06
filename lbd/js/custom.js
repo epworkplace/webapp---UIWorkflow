@@ -841,11 +841,11 @@ $(document).ready(function(){
 		$('.candidate-action-container .review-link').find(".review-show, .review-hide").toggle();
 	});
 
-		//Slide Review Job Task Review
+	//Slide Review Job Task Review
 	$('.job-list-card .reviews').hide();
 	$('.job-list-cardr .review-show').hide();
 	$('.job-list-card .review-link a').click(function(){
-		$(this).parents('.rate-review').find('.reviews').slideToggle(400);
+		$(this).parents('.plagiarism-rating-container').find('.reviews').slideToggle(400);
 		$(this).parents('.review-link').find(".review-show, .review-hide").toggle();
 	});
 
