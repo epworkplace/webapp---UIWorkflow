@@ -1428,7 +1428,7 @@ html {
 
 .card-notification {
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     background: #448AFF;
     color: #fff;
     font-size: 14px;
@@ -6856,6 +6856,20 @@ html {
                     margin-left: 10px;
                     font-weight: 600;
                     text-decoration: none;
+
+                    &.approved {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 7px;
+                            background: #353f53;
+                            height: 2px;
+                            width: 100%;
+                        }
+                    }
 
                     &:hover {
                         text-decoration: underline;
