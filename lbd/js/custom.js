@@ -1,6 +1,5 @@
 $(document).ready(function(){
-	
-	//Floating Module
+  //Floating Module
 	$('.floating-module').click(function(e) {
 	e.preventDefault();
 	    if ($('.floating-icon').hasClass('floating-close')) {
@@ -859,7 +858,7 @@ $(document).ready(function(){
 
 	/*Flags Dropdown */
     $('.flags').next('.chosen-container').addClass('flag-dropdown');
-    
+
 
 });
 

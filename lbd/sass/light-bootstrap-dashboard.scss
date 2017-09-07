@@ -59,8 +59,9 @@
 // Old WP Styles (Kept the same)
 @import "lbdcss/wp-old-styles";
 
-/* Workplace Variables*/
+/* Workplace Variables & helpers*/
 @import "lbdcss/workplace/variables";
+@import "lbdcss/workplace/utilities/helper";
 
 // New Custom Styles
 @import "lbdcss/custom-styles";

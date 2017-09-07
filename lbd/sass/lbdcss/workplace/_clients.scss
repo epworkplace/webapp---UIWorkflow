@@ -140,6 +140,11 @@
                           .client-desc {
                             .client-name {
                               text-transform: uppercase;
+                              a{
+                                text-decoration: none;
+                                color: $sub-heading;
+                                font-weight: 600;
+                              }
                             }
 
                             .tags-list {
