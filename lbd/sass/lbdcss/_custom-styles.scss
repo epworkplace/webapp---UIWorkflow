@@ -2644,7 +2644,8 @@ html {
 
         .recomended-action {
             color: #353f53;
-            font-weight: 14px;
+            font-size: 14px;
+            font-weight: 500;
 
             span {
                 margin-left: 5px;
@@ -2682,6 +2683,7 @@ html {
 
 .expanding-cards-container {
     margin-top: 20px;
+    margin-bottom: 300px;
 
     .expanding-card {
         min-height: 80px;
@@ -2742,6 +2744,12 @@ html {
                 padding-right: 30px;
                 text-align: right;
                 font-weight: 600;
+
+                i {
+                    position: relative;
+                    top: 3px;
+                    font-size: 16px;
+                }
 
                 .low {
                     color: #448aff;
@@ -8647,6 +8655,10 @@ html {
 
 .send-message-container {
     .send-message-display {
+        .message-subject {
+            margin-bottom: 20px;
+        }
+
         .message-container {
             background: #f3f5f7;
             padding: 30px;
