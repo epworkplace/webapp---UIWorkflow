@@ -1,6 +1,7 @@
  // Include gulp and plugins
  var
 	gulp = require('gulp'),
+	csso = require('csso'),
 	del = require('del'),
 	pkg = require('./package.json'),
 	$ = require('gulp-load-plugins')({ lazy: true }),
@@ -19,7 +20,7 @@ var
 	dest = devBuild ? 'builds/development/' : 'builds/production/',
 
 	html = {
-		partials: [source + '_partials**/*'],
+		partials: [source + '_partials/**/*'],
 		in: [source + '*.html'],
 		watch: [source + '*.html', source + '_partials/**/*'],
 		out: dest,
@@ -112,7 +113,7 @@ gulp.task('clean', function() {
 // copy HTML partial files
 gulp.task('html-partials', function() {
 	var page = gulp.src(html.partials)
-						 // .pipe($.newer(html.out))
+						 .pipe($.newer(html.out))
 						 .pipe($.preprocess({ context: html.context }));
 	if (!devBuild) {
 		  page = page
@@ -126,7 +127,7 @@ gulp.task('html-partials', function() {
 		 //    amount:1
 		 //   }))
 		 // .pipe($.jsbeautifier())
-		 .pipe(gulp.dest(html.out));
+		 .pipe(gulp.dest(html.out + '_partials/'));
 });
 
 // build HTML files
@@ -166,6 +167,7 @@ gulp.task('fonts', function() {
 
 // copy plugin css
 gulp.task('css', ['fonts'], function() {
+  var cssFilter = $.filter(['**/*.css'], {restore: true});
   return gulp.src(css.pluginCSS.in)
     // .pipe($.sourcemaps.init())
     // .pipe($.sass(css.sassOpts))
@@ -173,6 +175,13 @@ gulp.task('css', ['fonts'], function() {
     // .pipe($.pleeease(css.pleeeaseOpts))
     // .pipe($.sourcemaps.write('./maps'))
     .pipe($.newer(css.pluginCSS.out))
+    .pipe(cssFilter)
+    /*.pipe($.csso({
+            restructure: false,
+            sourceMap: true,
+            debug: true
+        }))*/
+    .pipe(cssFilter.restore)
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
     .pipe(browserSync.stream({match: '**/*.css'}));
@@ -342,6 +351,6 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'js', 'jslib', 'watch', 'serve']);
+gulp.task('default', ['html-partials', 'html', 'images', 'fonts', 'css', 'sass', 'js', 'jslib', 'watch', 'serve']);
 
 // gulp.task('default', ['serve']);

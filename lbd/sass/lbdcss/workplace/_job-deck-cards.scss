@@ -665,15 +665,23 @@
         right: -40px !important;
     }
 
-    .slick-slide {
-        margin: 0px;
-        padding: 0 15px;
-        outline: none;
+    .slick-track{
+        padding: 10px 0;
+        .slick-slide {
+            margin: 0px;
+            padding: 0 15px;
+            outline: none;
 
-        img {
-            width: 52px;
-        }
+            img {
+                width: 52px;
+            }
+            .notification{
+                top: -5px;
+                right: 5px;
+            }
+        }        
     }
+
 }
 
 /* Slider for multiple user Ends*/

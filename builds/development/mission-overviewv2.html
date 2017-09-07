@@ -1307,7 +1307,7 @@
                                                                 <div class="row">
                                                                     <div class="col-md-12 select-card-actions">
                                                                         <button class="btn btn-fill start">Start</button>
-                                                                        <button class=" btn btn-fill duplicate" href="javascript:;" data-toggle="modal" data-target="#duplicate-cards-modal">Duplicate</button>
+                                                                        <button class=" btn btn-fill duplicate" href="javascript:;" data-toggle="modal" data-target="#duplicate-cards-modal2">Duplicate</button>
                                                                         <button class=" btn btn-fill delete">Delete</button>
                                                                     </div>
                                                                 </div>
@@ -3523,11 +3523,6 @@
                                                                 </div>
                                                             </div></div>
                                                         </li>
-
-
-
-
-
                                                         <li class="decks">
                                                             <div class="no-cards">
                                                                 <div class="no-cards-placeholder">
@@ -3579,42 +3574,132 @@
                     </div>
                 </div>
             </div>
-            <div class="modal fade duplicate-cards-modal" id="duplicate-cards-modal" tabindex="-1" role="dialog" aria-labelledby="duplicate-cards-modal">
+            <div aria-labelledby="duplicate-cards-modal" class="modal fade duplicate-cards-modal" id="duplicate-cards-modal" role="dialog" tabindex="-1">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
                             <div class="duplicate-cards clearfix">
-                                <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
-                                <div class="modal-title">Duplicate card(s)</div>
+                                <span class="close">
+                                    <a data-dismiss="modal" href="javascript:;">
+                                        <i class="material-icons">
+                                        close
+                                        </i>
+                                    </a>
+                                </span>
+                                <div class="modal-title">
+                                    Duplicate card(s)
+                                </div>
                                 <div class="row">
                                     <div class="col-md-3 no-of-duplicates">
-                                        <label for="no-of-duplicates">How many ?</label>
+                                        <label for="no-of-duplicates">
+                                            How many ?
+                                        </label>
                                         <div class="com-md-3">
-                                            <input type="text" class="form-control" placeholder="3" id="no-of-duplicates">
+                                            <input class="form-control" id="no-of-duplicates" placeholder="3" type="text"/>
                                         </div>
                                     </div>
                                     <div class="col-md-4 duplicate-card-details pull-right">
-                                        <div><span>Deck Volume</span> 80 Articles</div>
+                                        <div>
+                                            <span>
+                                                Deck Volume
+                                            </span>
+                                            80 Articles
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <label class="checkbox"><input type="checkbox" data-toggle="checkbox">
-                                    Create a new deck with duplicate cards</label>
+                                        <label class="checkbox">
+                                            <input data-toggle="checkbox" type="checkbox"/>
+                                            Create a new deck with duplicate cards
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label for="duplicates-due">New deck due date</label>
+                                    <label for="duplicates-due">
+                                        New deck due date
+                                    </label>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="text" class="form-control datepicker-end" id="duplicates-due" placeholder="Due Date">
+                                    <input class="form-control datepicker-end" id="duplicates-due" placeholder="Due Date" type="text"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="duplicate-cards-action col-md-12">
-                                    <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Duplicate</button>
+                                    <button class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal" type="button">
+                                    Cancel
+                                    </button>
+                                    <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                                    Duplicate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div aria-labelledby="duplicate-cards-modal2" class="modal fade duplicate-cards-modal duplicate-cards-modal2" id="duplicate-cards-modal2" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-lg" role="modal">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="duplicate-cards clearfix">
+                                <span class="close">
+                                    <a data-dismiss="modal" href="javascript:;">
+                                        <i class="material-icons">
+                                        close
+                                        </i>
+                                    </a>
+                                </span>
+                                <div class="modal-title">
+                                    Duplicate card(s)
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 no-of-duplicates">
+                                        <label for="no-of-duplicates">
+                                            How many ?
+                                        </label>
+                                        <div class="com-md-3">
+                                            <input class="form-control" id="no-of-duplicates" placeholder="3" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 duplicate-card-details pull-right">
+                                        <div>
+                                            <span>
+                                                Deck Volume
+                                            </span>
+                                            80 Articles
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label class="checkbox">
+                                            <input data-toggle="checkbox" type="checkbox"/>
+                                            Create a new deck with duplicate cards
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="duplicates-due">
+                                        New deck due date
+                                    </label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="form-control datepicker-end" id="duplicates-due" placeholder="Due Date" type="text"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="duplicate-cards-action col-md-12">
+                                    <button class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal" type="button">
+                                    Cancel
+                                    </button>
+                                    <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                                    Duplicate
+                                    </button>
                                 </div>
                             </div>
                         </div>
