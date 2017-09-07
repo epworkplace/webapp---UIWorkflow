@@ -19,7 +19,8 @@ var
 	dest = devBuild ? 'builds/development/' : 'builds/production/',
 
 	html = {
-		in: source + '*.html',
+		partials: [source + '_partials**/*'],
+		in: [source + '*.html'],
 		watch: [source + '*.html', source + '_partials/**/*'],
 		out: dest,
 		context: {
@@ -106,6 +107,26 @@ gulp.task('clean', function() {
 	del([
 		dest + '*'
 	]);
+});
+
+// copy HTML partial files
+gulp.task('html-partials', function() {
+	var page = gulp.src(html.partials)
+						 // .pipe($.newer(html.out))
+						 .pipe($.preprocess({ context: html.context }));
+	if (!devBuild) {
+		  page = page
+			.pipe($.size({ title: 'HTML in' }))
+			.pipe($.htmlclean())
+			.pipe($.size({ title: 'HTML out' }));
+	}
+	return page
+		 // .pipe($.indent({
+	  //       tabs:true,
+		 //    amount:1
+		 //   }))
+		 // .pipe($.jsbeautifier())
+		 .pipe(gulp.dest(html.out));
 });
 
 // build HTML files
@@ -295,6 +316,9 @@ $.watch([dest + '**/*.css'], $.batch(function (events, done) {
 });
 
 gulp.task('watch', function() {
+  // html partials changes
+  gulp.watch(html.partials, ['html-partials']);
+
   // html changes
   gulp.watch(html.watch, ['html', reload]);
 
