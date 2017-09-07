@@ -767,6 +767,12 @@
   /* modal dialog styles starts */
 
   .modal {
+    .modal-content{
+      padding: 15px;
+      .btn{
+        width: 100% !important;
+      }
+    }
     .client-details {
       padding: 0;
 
@@ -793,6 +799,32 @@
 
       &:hover {
         text-decoration: none;
+      }
+    }
+    .question-list{
+      ul{
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+        li{
+          @include clearfix;
+          .question-container{
+            @extend %question-container;
+          }
+          &.add-block{
+            .add-new-block{
+              .add-card{
+                @extend %add-button;
+                height: 50px;
+                border: 2px dashed $border-color;
+                box-shadow: none;
+                &:hover, &:focus{
+                  border: 2px solid $selected;
+                }
+              }
+            }
+          }          
+        }
       }
     }
   }
