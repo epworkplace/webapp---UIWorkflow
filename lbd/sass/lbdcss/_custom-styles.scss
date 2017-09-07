@@ -1862,11 +1862,6 @@ html {
     right: 0;
     top: 78px;
     left: auto;
-.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .crm-list-content-container {
-  width: calc(100% - (31.4% + 80px));
-  right: 0;
-  top: 78px;
-  left: auto;
 
     .header {
         .primary-font {
@@ -6512,15 +6507,15 @@ html {
 
 /* Disabled button*/
 
-/*Nav Progress Steps Ends*/
-
 .btn-label {
-    position: relative;
-
     i {
-        line-height: 0;
+        position: relative;
+        line-height: 0.4;
+        top: 6px;
     }
 }
+
+/*Nav Progress Steps Ends*/
 
 /* Job List Starts */
 
@@ -6704,13 +6699,7 @@ html {
 
                 .btn {
                     span.icon-flipped {
-                        position: relative;
-                        top: 7px;
                         margin-right: 5px;
-
-                        i {
-                            line-height: 0;
-                        }
                     }
                 }
 
@@ -6800,11 +6789,21 @@ html {
                 font-weight: 600;
                 text-transform: uppercase;
 
-                span {
+                a {
                     margin-left: 10px;
+                    font-weight: 600;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
 
                     &.low {
                         color: #448AFF;
+                    }
+
+                    &.ok {
+                        color: #a0a5af;
                     }
 
                     &.medium {
@@ -6947,13 +6946,17 @@ html {
                 text-align: right;
             }
         }
+
+        &.download-final-version {
+            border-left: 3px solid #fec500;
+        }
     }
 }
 
 .reviews {
     margin-top: 10px;
-    overflow-y: auto;
-    max-height: calc(82vh - 250px);
+    overflow: auto;
+    max-height: 260px;
 
     .review {
         background: #f7f9fa;
@@ -7753,41 +7756,6 @@ html {
                             font-weight: 600;
                             text-align: right;
                         }
-
-                        .reviews {
-                            margin-top: 10px;
-                            overflow-y: auto;
-                            max-height: calc(82vh - 250px);
-
-                            .review {
-                                background: #f7f9fa;
-                                border-radius: 4px;
-                                padding: 15px;
-                                margin-top: 10px;
-
-                                .review-post-head {
-                                    margin-bottom: 10px;
-
-                                    .review-author {
-                                        color: #353f53;
-                                        font-size: 14px;
-                                        font-weight: 600;
-                                    }
-
-                                    .post-time {
-                                        color: #a9aeb7;
-                                        text-align: right;
-                                        font-size: 12px;
-                                    }
-                                }
-
-                                .review-post {
-                                    color: #a9aeb7;
-                                    font-size: 14px;
-                                    line-height: 1.6;
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -8124,46 +8092,46 @@ html {
             height: 1px;
             background: #d2d4de;
         }
+    }
+}
 
-        &.disapprove-drop {
-            .bootstrap-select.btn-group {
-                button.bs-placeholder {
-                    span.filter-option {
-                        color: #7d889a !important;
-                        font-weight: 400 !important;
-                    }
-                }
+.disapprove-drop {
+    .bootstrap-select.btn-group {
+        button.bs-placeholder {
+            span.filter-option {
+                color: #7d889a !important;
+                font-weight: 400 !important;
+            }
+        }
 
-                span.filter-option {
-                    color: #353f53 !important;
-                    font-weight: 600 !important;
+        span.filter-option {
+            color: #353f53 !important;
+            font-weight: 600 !important;
 
-                    i {
-                        color: #ee0a5f !important;
-                    }
-                }
+            i {
+                color: #ee0a5f !important;
+            }
+        }
+
+        ul.dropdown-menu li a {
+            color: #353f53 !important;
+            font-weight: 600;
+
+            span.glyphicon {
+                color: #ee0a5f !important;
             }
 
-            .bootstrap-select.btn-group .dropdown-menu li a {
-                color: #353f53 !important;
-                font-weight: 600;
+            small {
+                color: #7d889a !important;
+                font-weight: 400;
+            }
 
-                span.glyphicon {
-                    color: #ee0a5f !important;
-                }
+            &:hover, &:focus {
+                color: #fff !important;
 
                 small {
-                    color: #7d889a !important;
-                    font-weight: 400;
-                }
-
-                &:hover, &:focus {
                     color: #fff !important;
-
-                    small {
-                        color: #fff !important;
-                        font-weight: 400;
-                    }
+                    font-weight: 400;
                 }
             }
         }
