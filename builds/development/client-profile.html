@@ -3727,7 +3727,7 @@
     </div>
     <!-- Client Profile Create new Survey Modal -->
     <div class="modal fade create-new-survey-modal" id="create-new-survey-modal" tabindex="-1" role="dialog" aria-labelledby="create-new-survey-modal">
-        <div class="modal-dialog" role="modal">
+        <div class="modal-dialog modal-lg" role="modal">
             <div class="modal-content">
                 <div class="modal-body">
                     <span class="close">
@@ -3957,50 +3957,89 @@
         </div>
     </div>
     <!-- Client Profile Edit a Quick question Modal -->
-    <div class="modal fade edit-a-quick-question-modal" id="edit-a-quick-question-modal" tabindex="-1" role="dialog" aria-labelledby="edit-a-quick-question-modal">
+    <div aria-labelledby="edit-a-quick-question-modal" class="modal fade edit-a-quick-question-modal" id="edit-a-quick-question-modal" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="modal">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <div class="row">
-                        <a href="javascript:;" class="col-md-1 back" id="back" data-dismiss="modal">
-                            <i class="material-icons">arrow_back</i>
+                    <span class="close">
+                        <a data-dismiss="modal" href="javascript:;">
+                            <i class="material-icons">
+                            close
+                            </i>
                         </a>
-                        <div class="col-md-6 send-share-message-title">
-                            Send a message to candidates
+                    </span>
+                    <div class="row">
+                        <a class="col-md-1 back" data-dismiss="modal" href="javascript:;" id="back">
+                            <i class="material-icons">
+                            arrow_back
+                            </i>
+                        </a>
+                        <div class="col-md-6 send-share-message-title modal-title">
+                            Edit a Question
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 send-share-message-subject">
-                            <label>Subject of your message:</label>
-                            <input type="text" name="" value="" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 send-message-container">
+                    <form action="" class="form clearfix">
+                        <div class="form-group">
                             <div class="row">
-                                <div class="col-md-12 send-message-display">
-                                    <label>Your Message</label>
-                                    <div class="message-container">
-                                        <a href="javascript:;" class="btn edit-message">Edit Message</a>
-                                        <p>Hello Paul,</p>
-                                        <p>The files from the task <a href="javascript:;">Webedia 200 articles blog</a> that you have corrected on Jun 04, 2019 has been moderated.<br />Here is the feed back:</p>
-                                        <p><span class="important">All files good. <br /> Your request is not justified.</span></p>
-                                        <p>Regards<br /><strong>Clarrise Courtois</strong></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 send-message-edit">
-                                    <label>Edit Message</label>
-                                    <textarea id="editSendAnnounceMessage"></textarea>
-                                    <a href="javascript:;" class="btn save-edit pull-right">Save Changes</a>
+                                <div class="col-md-12 send-share-message-subject">
+                                    <label>
+                                        Question
+                                    </label>
+                                    <input class="form-control" name="" type="text" value="What is the word you would use to qualify Edit-Place services"/>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12 send-share-message-subject">
+                                    <label>
+                                        Answer Type
+                                    </label>
+                                    <input class="form-control" name="" type="text" value="What is the word you would use to qualify Edit-Place services"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group divider">
+                            <div class="row">
+                                <div class="col-md-12 send-share-message-subject">
+                                    <label>
+                                        Answers
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-6 form-group">
+                                    <input class="form-control" id="clientName" placeholder="" type="text" value="Fast"/>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input class="form-control" id="" placeholder="" type="text" value="Accurate"/>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input class="form-control" id="clientName" placeholder="" type="text" value="Creative"/>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input class="form-control" id="" placeholder="" type="text" value="Efficient"/>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input class="form-control" id="clientName" placeholder="" type="text" value="Other"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                     <div class="row">
-                        <div class="col-md-12 send-share-message-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left">Discard</button>
-                            <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right">Save Changes</button>
+                        <div class="edit-quick-question-action col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="btn btn-default btn-fill btn-wd btn-confirm pull-right form-control" type="button">
+                                    Cancel
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-default btn-fill btn-wd btn-yes pull-right form-control" type="button">
+                                    Save changes
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
