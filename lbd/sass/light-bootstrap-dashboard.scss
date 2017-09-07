@@ -8,6 +8,8 @@
 @import "lbdcss/b4-functions";
 
 // Custom Variables and mixins
+@import "lbdcss/workplace/variables";
+@import "lbdcss/workplace/utilities/helper";
 @import "lbdcss/custom_variables";
 @import "lbdcss/mixins/custom-mixins";
 
@@ -59,9 +61,6 @@
 // Old WP Styles (Kept the same)
 @import "lbdcss/wp-old-styles";
 
-/* Workplace Variables & helpers*/
-@import "lbdcss/workplace/variables";
-@import "lbdcss/workplace/utilities/helper";
 
 // New Custom Styles
 @import "lbdcss/custom-styles";
