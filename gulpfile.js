@@ -149,6 +149,7 @@ gulp.task('fonts', function() {
 // copy plugin css
 gulp.task('css', ['fonts'], function() {
   var cssFilter = $.filter(['**/*.css'], {restore: true});
+  var imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true});
   return gulp.src(css.pluginCSS.in)
     // .pipe($.sourcemaps.init())
     // .pipe($.sass(css.sassOpts))
@@ -164,6 +165,9 @@ gulp.task('css', ['fonts'], function() {
         }))*/
     .pipe($.cleanCss())
     .pipe(cssFilter.restore)
+    .pipe(imageFilter)
+    .pipe($.imagemin())
+    .pipe(imageFilter.restore)
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
     .pipe(browserSync.stream({match: '**/*.css'}));
