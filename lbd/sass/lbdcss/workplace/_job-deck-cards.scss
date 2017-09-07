@@ -602,6 +602,14 @@
 .duplicate-cards-modal {
     color: #353f53;
 
+    span.close{
+        position: absolute;
+        top: -4px;
+        right: -4px;
+    }
+    .modal-content{
+        padding: 15px;
+    }
     .modal-title {
         font-size: 16px;
         font-weight: 600;
@@ -628,6 +636,42 @@
 
     #duplicates-due {
         margin-bottom: 20px;
+    }
+    .form{
+        .divider{
+            @include divider;
+        }
+        .form-group{
+            &:last-of-type{
+                // margin-bottom: 0;
+            }
+        }
+        .no-of-duplicates{
+            .input-group{
+                .input-group-btn{
+                    .btn{
+                        padding: 8px;
+                        &[data-type="minus"]{
+                            border-right: none;
+                        }
+                        &[data-type="plus"]{
+                            border-left: none;
+                        }
+                        .glyphicon{
+                            font-size: 10px;
+                        }
+                    }
+                }
+                .input-number{
+                    height: 38px;
+                    border-left: none;
+                    border-right: none;
+                    text-align: center;
+                    padding: 8px 0;
+                }                
+            }
+
+        }
     }
 }
 
@@ -665,15 +709,23 @@
         right: -40px !important;
     }
 
-    .slick-slide {
-        margin: 0px;
-        padding: 0 15px;
-        outline: none;
+    .slick-track{
+        padding: 10px 0;
+        .slick-slide {
+            margin: 0px;
+            padding: 0 15px;
+            outline: none;
 
-        img {
-            width: 52px;
-        }
+            img {
+                width: 52px;
+            }
+            .notification{
+                top: -5px;
+                right: 5px;
+            }
+        }        
     }
+
 }
 
 /* Slider for multiple user Ends*/
