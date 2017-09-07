@@ -110,25 +110,6 @@ gulp.task('clean', function() {
 	]);
 });
 
-// copy HTML partial files
-gulp.task('html-partials', function() {
-	var page = gulp.src(html.partials)
-						 .pipe($.newer(html.out))
-						 .pipe($.preprocess({ context: html.context }));
-	if (!devBuild) {
-		  page = page
-			.pipe($.size({ title: 'HTML in' }))
-			.pipe($.htmlclean())
-			.pipe($.size({ title: 'HTML out' }));
-	}
-	return page
-		 // .pipe($.indent({
-	  //       tabs:true,
-		 //    amount:1
-		 //   }))
-		 // .pipe($.jsbeautifier())
-		 .pipe(gulp.dest(html.out + '_partials/'));
-});
 
 // build HTML files
 gulp.task('html', function() {
@@ -181,6 +162,7 @@ gulp.task('css', ['fonts'], function() {
             sourceMap: true,
             debug: true
         }))*/
+    .pipe($.cleanCss())
     .pipe(cssFilter.restore)
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
@@ -325,8 +307,6 @@ $.watch([dest + '**/*.css'], $.batch(function (events, done) {
 });
 
 gulp.task('watch', function() {
-  // html partials changes
-  gulp.watch(html.partials, ['html-partials']);
 
   // html changes
   gulp.watch(html.watch, ['html', reload]);
@@ -351,6 +331,6 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['html-partials', 'html', 'images', 'fonts', 'css', 'sass', 'js', 'jslib', 'watch', 'serve']);
+gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'js', 'jslib', 'watch', 'serve']);
 
 // gulp.task('default', ['serve']);

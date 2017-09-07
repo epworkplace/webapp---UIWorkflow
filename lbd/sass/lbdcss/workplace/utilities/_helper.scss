@@ -1,12 +1,20 @@
 /* helper utility styles */
 .helper-text{
 	font-size: 12px;
+	text-transform: none !important;
 	color: $helper;
+	font-weight: 400;
 	&.helper-text-01{
-		font-size: 10px;
+		font-size: 14px;
 	}
 	&.helper-text-02{
+		font-size: 13px;
+	}
+	&.helper-text-03{
 		font-size: 11px;
+	}
+	&.helper-text-04{
+		font-size: 10px;
 	}
 	[class$="by"]{
 		font-weight: 600;
