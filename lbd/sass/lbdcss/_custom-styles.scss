@@ -2630,7 +2630,59 @@ html {
     }
 }
 
+.plagiarism-action-container {
+    margin-bottom: 10px;
+
+    .plagiarism-action {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        height: 70px;
+
+        .recomended-action {
+            color: #353f53;
+            font-weight: 14px;
+
+            span {
+                margin-left: 5px;
+                font-weight: 600;
+            }
+
+            span.action-disapprove-fire, span.action-disapprove {
+                color: #ee0a5f;
+            }
+
+            span.action-approve {
+                color: #448AFF;
+            }
+        }
+
+        .similarity {
+            color: #353f53;
+            font-weight: 600;
+
+            span {
+                margin-left: 10px;
+                font-size: 12px;
+                color: #9ea3ac;
+                font-weight: 400;
+            }
+        }
+
+        .action {
+            a {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
 .expanding-cards-container {
+    margin-top: 20px;
+
     .expanding-card {
         min-height: 80px;
         margin-bottom: 10px;
@@ -2693,6 +2745,10 @@ html {
 
                 .low {
                     color: #448aff;
+                }
+
+                .ok {
+                    color: #9ea3ac;
                 }
 
                 .medium {
@@ -8262,6 +8318,12 @@ html {
         width: 100%;
 
         .uploaded-job-file {
+            .check-files {
+                .checkbox {
+                    margin: 5px 0;
+                }
+            }
+
             .file-name {
                 color: #353f53;
                 font-weight: 600;
