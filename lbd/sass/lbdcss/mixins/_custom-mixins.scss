@@ -351,12 +351,13 @@
     .creation-date, .quote-nb-words {
       position: relative;
       padding: 0 15px;
+      @extend %df-ac-jcc;
 
       &:before, &:after {
         content: '';
         position: absolute;
         left: 0;
-        top: 8px;
+        top: 0;
         background: #EAEBED;
         height: 15px;
         width: 1px;

@@ -692,11 +692,15 @@
 					}
 					@extend %bootstraptable;
 					.quote-list-item{
-						.quote-selected{
-							@extend %df-ac;
+						&.quote-selected{
+							@include clearfix();
 							border: 1px solid $main;
 							padding: 5px 15px;
 							box-shadow: none;
+							
+							.row{
+								line-height: 1.5;
+							}
 
 						}
 					}
