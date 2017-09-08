@@ -2631,51 +2631,51 @@ html {
 
 .plagiarism-action-container {
     margin-bottom: 10px;
+}
 
-    .plagiarism-action {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        align-items: center;
-        height: 70px;
+.plagiarism-action {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    height: 70px;
 
-        .recomended-action {
-            color: #353f53;
-            font-size: 14px;
-            font-weight: 500;
+    .recomended-action {
+        color: #353f53;
+        font-size: 14px;
+        font-weight: 500;
 
-            span {
-                margin-left: 5px;
-                font-weight: 600;
-            }
-
-            span.action-disapprove-fire, span.action-disapprove {
-                color: #ee0a5f;
-            }
-
-            span.action-approve {
-                color: #448AFF;
-            }
-        }
-
-        .similarity {
-            color: #353f53;
+        span {
+            margin-left: 5px;
             font-weight: 600;
-
-            span {
-                margin-left: 10px;
-                font-size: 12px;
-                color: #9ea3ac;
-                font-weight: 400;
-            }
         }
 
-        .action {
-            a {
-                width: 100% !important;
-            }
+        span.action-disapprove-fire, span.action-disapprove {
+            color: #ee0a5f;
+        }
+
+        span.action-approve {
+            color: #448AFF;
+        }
+    }
+
+    .similarity {
+        color: #353f53;
+        font-weight: 600;
+
+        span {
+            margin-left: 10px;
+            font-size: 12px;
+            color: #9ea3ac;
+            font-weight: 400;
+        }
+    }
+
+    .action {
+        a {
+            width: 100% !important;
         }
     }
 }
@@ -3024,7 +3024,6 @@ html {
                 display: flex;
                 -webkit-flex-flow: row wrap;
                 align-items: center;
-                height: 100%;
                 min-height: 35px;
 
                 .exclude-card-cta {
@@ -6550,21 +6549,21 @@ html {
 /*Row Click Ends*/
 
 /* Disabled button*/
-.disabled {
+.disabled, .disabled:hover {
     cursor: not-allowed !important;
     opacity: 1 !important;
     background-color: #F5F5F5 !important;
     border-color: #EAEBED !important;
-    color: #888888 !important;
+    color: #fff !important;
     border-radius: 6px !important;
 }
 
-.btn.disabled {
+.btn.disabled, .btn.disabled:hover {
     cursor: not-allowed !important;
     opacity: 1 !important;
     background-color: #F5F5F5 !important;
     border-color: #EAEBED !important;
-    color: #888888 !important;
+    color: #fff !important;
     border-radius: 6px !important;
 }
 
@@ -6585,7 +6584,14 @@ html {
 .job-list-container {
     margin-top: 20px;
 
-    .job-list-tooltip {
+    .job-list-tooltip-recommended {
+        &:before {
+            top: auto !important;
+            bottom: -8px;
+        }
+    }
+
+    .job-list-tooltip, .job-list-tooltip-recommended {
         min-height: 60px;
         margin-bottom: 18px;
         -webkit-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
@@ -6607,9 +6613,7 @@ html {
             border-top: 8px solid #fff;
         }
 
-        .adb {
-            width: 40px;
-            padding: 0 0 0 2px;
+        .icon {
             min-height: 60px;
             display: -webkit-box;
             display: -moz-box;
@@ -6620,6 +6624,7 @@ html {
             align-items: center;
 
             img {
+                width: 40px;
                 max-width: 100%;
                 display: block;
             }
@@ -6642,11 +6647,7 @@ html {
         }
 
         .job-tooltip-action {
-            padding: 0;
-            width: 44.666%;
-
             .action-buttons {
-                width: 39.333%;
                 min-height: 60px;
                 display: -webkit-box;
                 display: -moz-box;
@@ -6670,8 +6671,9 @@ html {
         &.plagiarism-checked {
             border-left: 3px solid #ee0a5f;
 
-            .adb {
+            .icon {
                 i {
+                    margin: 0 0 0 2px;
                     color: #ee0a5f;
                 }
             }
@@ -6684,6 +6686,80 @@ html {
                     font-size: 16px;
                     top: 2px;
                     margin-right: 5px;
+                }
+            }
+        }
+
+        &.to-be-validated {
+            border-left: 3px solid #353f53;
+
+            .action-container {
+                min-height: 60px;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row wrap;
+                align-items: center;
+
+                .action-block {
+                    .action-status {
+                        color: #353f53;
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .action-recommended {
+                        color: #a0a5af;
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.delivery {
+            border-left: 3px solid #448AFF;
+
+            .icon {
+                i {
+                    margin: 0 0 0 2px;
+                    font-size: 20px;
+                    color: #448AFF;
+                }
+            }
+
+            .action-container {
+                min-height: 60px;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row wrap;
+                align-items: center;
+
+                .action-block {
+                    .action-status {
+                        color: #353f53;
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .action-recommended {
+                        color: #a0a5af;
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
                 }
             }
         }
@@ -6908,6 +6984,7 @@ html {
                         cursor: not-allowed;
                         background: none !important;
                         pointer-events: none;
+                        color: #a0a5af !important;
                     }
                 }
 
@@ -7030,8 +7107,17 @@ html {
     }
 }
 
-.reviews {
+.recommended-reviews {
+    border-top: 1px solid #a9aeb7;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-left: 3px solid #ee0a5f;
+    position: relative;
+}
+
+.reviews, .recommended-reviews {
     margin-top: 10px;
+    padding-right: 0;
     overflow: auto;
     max-height: 260px;
 
@@ -7053,7 +7139,7 @@ html {
             }
 
             .author-post {
-                color: #353f53;
+                color: #a9aeb7;
                 font-size: 14px;
                 font-weight: 600;
                 text-align: right;
@@ -8118,6 +8204,115 @@ html {
 
 /* Report File Modal Ends*/
 
+/*Job More Options Starts*/
+
+.job-more-options {
+    .job-more-options-modal-title {
+        margin-bottom: 20px;
+
+        .candidate-image {
+            width: 52px;
+            padding: 0;
+
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+
+        .modal-title {
+            font-size: 20px;
+            color: #353f53;
+            font-weight: 600;
+            margin-bottom: 20px;
+
+            span {
+                display: block;
+                font-size: 14px;
+                color: #9ca1ab;
+                font-weight: 400;
+
+                span.recom-action {
+                    display: inline-flex;
+                    margin-left: 10px;
+                    color: #ee0a5f;
+                    font-weight: 600;
+
+                    span.glyphicon {
+                        margin-right: 5px;
+                        color: #ee0a5f;
+                    }
+                }
+            }
+        }
+    }
+
+    label {
+        color: #9ca1ab;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .job-option-select {
+        .bootstrap-select.btn-group {
+            button.bs-placeholder {
+                span.filter-option {
+                    color: #7d889a !important;
+                    font-weight: 400 !important;
+                }
+            }
+
+            span.filter-option {
+                color: #353f53 !important;
+                font-weight: 600 !important;
+
+                i {
+                    color: #ee0a5f !important;
+                }
+            }
+
+            ul.dropdown-menu li a {
+                color: #353f53 !important;
+                font-weight: 600;
+
+                span.glyphicon {
+                    color: #ee0a5f !important;
+                }
+
+                span.glyphicon-ok {
+                    color: #448AFF !important;
+                }
+
+                small {
+                    color: #7d889a !important;
+                    font-weight: 400;
+                }
+
+                &:hover, &:focus {
+                    color: #fff !important;
+
+                    span.glyphicon {
+                        color: #fff !important;
+                    }
+
+                    small {
+                        color: #fff !important;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    .confirm-action {
+        .btn-yes {
+            width: 100% !important;
+        }
+    }
+}
+
+/*Job More Options Ends*/
+
 /* Disapprove Modal Starts*/
 
 .disapprove-modal {
@@ -8145,6 +8340,18 @@ html {
                 font-size: 14px;
                 color: #9ca1ab;
                 font-weight: 400;
+
+                span.recom-action {
+                    display: inline-flex;
+                    margin-left: 10px;
+                    color: #ee0a5f;
+                    font-weight: 600;
+
+                    span.glyphicon {
+                        margin-right: 5px;
+                        color: #ee0a5f;
+                    }
+                }
             }
         }
     }
@@ -8205,6 +8412,10 @@ html {
 
             &:hover, &:focus {
                 color: #fff !important;
+
+                span.glyphicon {
+                    color: #fff !important;
+                }
 
                 small {
                     color: #fff !important;
