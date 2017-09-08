@@ -2119,10 +2119,10 @@
                                                                 <div class="col-md-5">
                                                                     <div class="row">
                                                                         <div class="col-md-6 action">
-                                                                            <a href="javascript:;" class="btn btn-fill btn-disapprove">Proceed</a>
+                                                                            <a href="javascript:;" data-toggle="modal" data-target="#jobDisapproveModal" class="btn btn-fill btn-disapprove">Proceed</a>
                                                                         </div>
                                                                         <div class="col-md-6 action">
-                                                                            <a href="javascript:;" class="btn btn-fill btn-confirm">More options</a>
+                                                                            <a href="javascript:;" data-toggle="modal" data-target="#jobMoreOptions" class="btn btn-fill btn-confirm">More options</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2146,37 +2146,10 @@
                                                                 <div class="col-md-5">
                                                                     <div class="row">
                                                                         <div class="col-md-6 action">
-                                                                            <a href="javascript:;" class="btn btn-fill btn-disapprove">Proceed</a>
+                                                                            <a href="javascript:;" data-toggle="modal" data-target="#jobDisapproveModal" class="btn btn-fill btn-disapprove">Proceed</a>
                                                                         </div>
                                                                         <div class="col-md-6 action">
-                                                                            <a href="javascript:;" class="btn btn-fill btn-confirm">More options</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="col-md-12 card plagiarism-action-container">
-                                                            <div class="row plagiarism-action">
-                                                                <div class="col-md-7">
-                                                                    <div class="recomended-action">
-                                                                        Recommended action: 
-                                                                        <span class="action-approve">
-                                                                            <span class="glyphicon glyphicon-ok"></span> Approve
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="similarity">5.77%<span>similarity</span></div>
-                                                                </div>
-                                                                <div class="col-md-5">
-                                                                    <div class="row">
-                                                                        <div class="col-md-6 action">
-                                                                            <a href="javascript:;" class="btn btn-fill btn-yes">Proceed</a>
-                                                                        </div>
-                                                                        <div class="col-md-6 action">
-                                                                            <a href="javascript:;" class="btn btn-fill btn-confirm">More options</a>
+                                                                            <a href="javascript:;" data-toggle="modal" data-target="#jobMoreOptions" class="btn btn-fill btn-confirm">More options</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2727,50 +2700,104 @@
                                                     <div class="col-md-12 job-list-container">
                                                         <!-- Job Alert Tooltip Starts -->
                                                         <div class="col-md-12 card job-list-tooltip plagiarism-check">
-                                                            <div class="col-md-1 adb">
-                                                                <i class="material-icons">
-                                                                    adb
-                                                                </i>
-                                                            </div>
-                                                            <div class="col-md-6 bot-checking">
-                                                                <span>
-                                                                    Plagiarism bot
-                                                                </span>
-                                                                is checking...
+                                                            <div class="row">
+                                                                <div class="col-md-1 icon">
+                                                                    <i class="material-icons">
+                                                                        adb
+                                                                    </i>
+                                                                </div>
+                                                                <div class="col-md-6 bot-checking">
+                                                                    <span>
+                                                                        Plagiarism bot
+                                                                    </span>
+                                                                    is checking...
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-12 card job-list-tooltip plagiarism-check">
-                                                            <div class="col-md-1 adb">
-                                                                <img class="img-circle" src="lbd/img/default-avatar.png">
-                                                                </img>
-                                                            </div>
-                                                            <div class="col-md-6 bot-checking">
-                                                                <span>
-                                                                    Plagiarism bot
-                                                                </span>
-                                                                is checking...
+                                                            <div class="row">
+                                                                <div class="col-md-1 icon">
+                                                                    <img class="img-circle" src="lbd/img/default-avatar.png" />
+                                                                </div>
+                                                                <div class="col-md-6 bot-checking">
+                                                                    <span>
+                                                                        Plagiarism bot
+                                                                    </span>
+                                                                    is checking...
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-12 card job-list-tooltip plagiarism-checked">
-                                                            <div class="col-md-1 adb">
-                                                                <i class="material-icons">
-                                                                    adb
-                                                                </i>
-                                                            </div>
-                                                            <div class="col-md-6 bot-checking">
-                                                                <span>
+                                                            <div class="row">
+                                                                <div class="col-md-1 icon">
                                                                     <i class="material-icons">
-                                                                        content_copy
+                                                                        adb
                                                                     </i>
-                                                                    High similarity detected: 75,77%
-                                                                </span>
+                                                                </div>
+                                                                <div class="col-md-6 bot-checking">
+                                                                    <span>
+                                                                        <i class="material-icons">
+                                                                            content_copy
+                                                                        </i>
+                                                                        High similarity detected: 75,77%
+                                                                    </span>
+                                                                </div>
+                                                                <div class="col-md-5 job-tooltip-action">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 pull-right action-buttons">
+                                                                            <a class="btn btn-fill btn-disapprove" href="javascript:;" id="plagiarismShow">
+                                                                                Show details
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-md-5 job-tooltip-action">
-                                                                <div class="row">
-                                                                    <div class="col-md-6 pull-right action-buttons">
-                                                                        <a class="btn btn-fill btn-disapprove" href="javascript:;" id="plagiarismShow">
-                                                                            Show details
-                                                                        </a>
+                                                        </div>
+                                                        <div class="col-md-12 card job-list-tooltip to-be-validated ">
+                                                            <div class="row">
+                                                                <div class="col-md-9 action-container">
+                                                                    <div class=" action-block">
+                                                                        <div class="action-status">
+                                                                            This card will be automatically validated in <span>13 days - 23:51:02</span>
+                                                                        </div>
+                                                                        <div class="action-recommended">
+                                                                            Any problem with the final version? Click on <span>Disapprove</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 job-tooltip-action">
+                                                                    <div class="row">
+                                                                        <div class="col-md-10 col-md-offset-2 action-buttons">
+                                                                            <a class="btn btn-fill btn-disapprove" href="javascript:;" data-toggle="modal" data-target="#jobDisapproveModal">
+                                                                                Disapprove
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 card job-list-tooltip delivery">
+                                                            <div class="row">
+                                                                <div class="col-md-1 icon">
+                                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                                                </div>
+                                                                <div class="col-md-8 action-container">
+                                                                    <div class=" action-block">
+                                                                        <div class="action-status">
+                                                                            This card will be automatically validated in <span>13 days - 23:51:02</span>
+                                                                        </div>
+                                                                        <div class="action-recommended">
+                                                                            Any problem with the final version? Click on <span>Disapprove</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 job-tooltip-action">
+                                                                    <div class="row">
+                                                                        <div class="col-md-10 col-md-offset-2 action-buttons">
+                                                                            <a class="btn btn-fill btn-disapprove" href="javascript:;" data-toggle="modal" data-target="#jobDisapproveModal">
+                                                                                Disapprove
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2794,6 +2821,155 @@
                                                                         <div class="row">
                                                                             <div class="col-md-4 col-md-offset-8">
                                                                                 <a class="col-md-6 btn btn-fill btn-download thumb" href="javascript:;">
+                                                                                    <span class="btn-label">
+                                                                                        <i class="material-icons">
+                                                                                            file_download
+                                                                                        </i>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 card job-list-tooltip-recommended job-list-card">
+                                                            <div class="row">
+                                                                <div class="col-md-12 job-list">
+                                                                    <div class="col-md-2 user-image">
+                                                                        <img class="img-circle" src="lbd/img/default-avatar.png"/>
+                                                                    </div>
+                                                                    <div class="col-md-7 job-content">
+                                                                        <div class="file-name">
+                                                                            V1 - Webedia_blog_e-sport_trends_article-1.zip
+                                                                        </div>
+                                                                        <div class="update-info">
+                                                                            2 hours ago - 10.10Mb
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 pull-right job-list-actions">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4 col-md-offset-8">
+                                                                                <a class="col-md-6 btn btn-fill btn-download thumb" href="javascript:;">
+                                                                                    <span class="btn-label">
+                                                                                        <i class="material-icons">
+                                                                                            file_download
+                                                                                        </i>
+                                                                                    </span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="row plagiarism-action">
+                                                                        <div class="col-md-7">
+                                                                            <div class="recomended-action">
+                                                                                Recommended action: 
+                                                                                <span class="action-disapprove-fire">
+                                                                                    <span class="glyphicon glyphicon-ban-circle"></span> Disapprove and fire
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="similarity">75.77%<span>similarity</span></div>
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <div class="row">
+                                                                                <div class="col-md-6 action">
+                                                                                    <a href="javascript:;" data-toggle="modal" data-target="#jobDisapproveModal" class="btn btn-fill btn-disapprove">Proceed</a>
+                                                                                </div>
+                                                                                <div class="col-md-6 action">
+                                                                                    <a href="javascript:;" data-toggle="modal" data-target="#jobMoreOptionsModerate" class="btn btn-fill btn-confirm">More options</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 recommended-reviews">
+                                                                            <div class="col-md-12 review">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 review-post-head">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-6 review-rate">
+                                                                                                <div class="col-md-6" id="reviewRate1"></div>
+                                                                                                <div class="col-md-6">
+                                                                                                    <div class="star-rating-label"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-6 author-post">
+                                                                                                Clarrise Coutois <span>- Aug 10, 2019 - 10:00 AM</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 review-post">
+                                                                                        Good Work.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12 review">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 review-post-head">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-6 review-rate">
+                                                                                                <div class="col-md-6" id="reviewRate2"></div>
+                                                                                                <div class="col-md-6">
+                                                                                                    <div class="star-rating-label"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-6 author-post">
+                                                                                                Clarrise Coutois <span>- Aug 10, 2019 - 10:00 AM</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 review-post">
+                                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12 review">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 review-post-head">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-6 col-md-offset-6 author-post">
+                                                                                                Clarrise Coutois <span>- Aug 10, 2019 - 10:00 AM</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 review-post">
+                                                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 card job-list-card">
+                                                            <div class="row">
+                                                                <div class="col-md-12 job-list">
+                                                                    <div class="col-md-2 user-image">
+                                                                        <img class="img-circle" src="lbd/img/default-avatar.png"/>
+                                                                    </div>
+                                                                    <div class="col-md-7 job-content">
+                                                                        <div class="file-name">
+                                                                            V1 - Webedia_blog_e-sport_trends_article-1.zip
+                                                                        </div>
+                                                                        <div class="update-info">
+                                                                            2 hours ago - 10.10Mb
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 pull-right job-list-actions">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4 col-md-offset-8">
+                                                                                <a class="col-md-6 btn btn-fill btn-download thumb disabled" href="javascript:;">
                                                                                     <span class="btn-label">
                                                                                         <i class="material-icons">
                                                                                             file_download
@@ -3507,7 +3683,7 @@
                             </span>
                         </button>
                         <div class="row">
-                            <div class="col-md-12 report-file-modal-title">
+                            <div class="col-md-10 report-file-modal-title">
                                 <div class="col-md-2 candidate-image">
                                     <img class="img-circle" src="lbd/img/default-avatar.png"/>
                                 </div>
@@ -3624,6 +3800,108 @@
                 </div>
             </div>
         </div>
+        <div aria-labelledby="myModalLabel" class="modal fade" id="jobMoreOptions" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <div class="job-more-options">
+                            <div class="row">
+                                <div class="col-md-10 job-more-options-modal-title">
+                                    <div class="col-md-2 candidate-image">
+                                        <img class="img-circle" src="lbd/img/default-avatar.png"/>
+                                    </div>
+                                    <div class="col-md-10 modal-title">
+                                        Moderarate Michael Martin's job
+                                        <span>
+                                            Recommended action: <span class="recom-action"> <span class="glyphicon glyphicon-ban-circle"></span> Disapprove and fire</span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 job-option-select">
+                                    <label>What do you want to do?</label>
+                                    <select class="selectpicker" id="jobMoreOptionSelect" title="Chose an action...">
+                                        <option data-icon="glyphicon-ok">
+                                            Allow job anyway
+                                        </option>
+                                        <option data-icon="glyphicon-remove">
+                                            Disapprove job
+                                        </option>
+                                        <option data-icon="glyphicon-ban-circle">
+                                            Disapprove &amp; Fire
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 confirm-action">
+                                    <button class="btn btn-default btn-fill btn-yes" type="button">
+                                        Confirm
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div aria-labelledby="myModalLabel" class="modal fade" id="jobMoreOptionsModerate" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <div class="job-more-options">
+                            <div class="row">
+                                <div class="col-md-10 job-more-options-modal-title">
+                                    <div class="col-md-2 candidate-image">
+                                        <img class="img-circle" src="lbd/img/default-avatar.png"/>
+                                    </div>
+                                    <div class="col-md-10 modal-title">
+                                        Moderarate Michael Martin's job
+                                        <span>
+                                            Recommended action: <span class="recom-action"> <span class="glyphicon glyphicon-ban-circle"></span> Disapprove and fire</span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 disapprove-drop">
+                                    <label>What do you want to do?</label>
+                                    <select class="selectpicker" id="jobMoreOptionSelect" title="Chose an action...">
+                                        <option data-icon="glyphicon-remove">
+                                            Disapprove job
+                                        </option>
+                                        <option data-icon="glyphicon-ban-circle">
+                                            Disapprove &amp; Fire
+                                        </option>
+                                        <option data-icon="glyphicon-pencil">
+                                            Re-write
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 confirm-action">
+                                    <button class="btn btn-default btn-fill btn-disapprove" type="button">
+                                        Confirm
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div aria-labelledby="myModalLabel" class="modal fade disapprove-modal" id="jobDisapproveModal" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -3634,7 +3912,7 @@
                             </span>
                         </button>
                         <div class="row">
-                            <div class="col-md-12 disapprove-modal-title">
+                            <div class="col-md-10 disapprove-modal-title">
                                 <div class="col-md-2 candidate-image">
                                     <img class="img-circle" src="lbd/img/default-avatar.png"/>
                                 </div>
@@ -3642,6 +3920,9 @@
                                     Disapprove Alice's job
                                     <span>
                                         Uploaded yesterday
+                                    </span>
+                                    <span>
+                                        Recommended action: <span class="recom-action"> <span class="glyphicon glyphicon-ban-circle"></span> Disapprove and fire</span></span>
                                     </span>
                                 </div>
                             </div>
@@ -4104,7 +4385,7 @@
                             </span>
                         </button>
                         <div class="row">
-                            <div class="col-md-12 approve-modal-title">
+                            <div class="col-md-10 approve-modal-title">
                                 <div class="col-md-2 candidate-image">
                                     <img class="img-circle" src="lbd/img/default-avatar.png"/>
                                 </div>
@@ -4187,7 +4468,7 @@
                             </span>
                         </button>
                         <div class="row">
-                            <div class="col-md-12 confirm-modal-title">
+                            <div class="col-md-10 confirm-modal-title">
                                 <div class="col-md-2 candidate-image">
                                     <img class="img-circle" src="lbd/img/default-avatar.png"/>
                                 </div>
@@ -4284,7 +4565,7 @@
                             </span>
                         </button>
                         <div class="row">
-                            <div class="col-md-12 confirm-modal-title">
+                            <div class="col-md-10 confirm-modal-title">
                                 <div class="col-md-2 candidate-image">
                                     <img class="img-circle" src="lbd/img/default-avatar.png"/>
                                 </div>
