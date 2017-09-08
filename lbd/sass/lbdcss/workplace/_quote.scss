@@ -1,4 +1,25 @@
 /* Quote template CSS Starts */
+.layout-2.wp-app.quote {
+  .page-wrap{
+		.main-panel-wrap{
+			.main-panel{
+				.main-panel-page{
+					.main-panel-page-header{
+
+					}
+					.main-container{
+						.tab-panel-container{
+
+						}
+						.main-panel-container{
+
+						}
+					}
+				}
+			}
+		}
+  }
+}
 
 .validate:nth-of-type(1) {
 	border-right: 1px solid #c6c8cd;
@@ -580,6 +601,11 @@
 				font-size: 14px;
 				font-weight: 600;
 				color: #448AFF;
+				input{
+					border: none;
+					text-align: center;
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -643,6 +669,23 @@
 /*Browse mission Modal Starts*/
 
 .browse-mission-modal {
+	.modal-content{
+		padding: 15px;
+		.modal-title{
+
+		}
+		.bootstrap-table{
+			margin-top: 10px;
+			.fixed-table-toolbar{
+				display: none;
+			}
+			.fixed-table-body{
+				.mission-quote-table{
+					@extend %bootstraptable;
+				}
+			}
+		}
+	}
     .browse-mission-modal-title {
         font-size: 20px;
         color: #353f53;
@@ -659,6 +702,80 @@
         font-weight: 400;
         margin-bottom: 10px;
     }
+    .agree-switch, .private-switch {
+      border: 1px solid #eaebed;
+      border-radius: 4px;
+      width: 20%;
+      padding: 10px;
+      margin-right: 6px;
+
+			.switch-label{
+				padding: 0;
+			}
+      .switch-agree {
+          // margin-top: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .row{
+          	display: flex;
+          	align-items: center;
+          	justify-content: center;
+          }
+          .switch{
+          	height: 28px;
+          }
+      }
+
+      .switch-label {
+          color: #353f53;
+          font-size: 12px;
+          font-weight: 600;
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-flow: row wrap;
+          align-items: center;
+          height: 35px;
+
+          span {
+              margin-left: 5px;
+          }
+      }
+  }
+  .mission-estimation-container{
+  	.list-head-quote-mission{
+  		flex-grow: 1;
+  	}
+		.mission-estimation{
+			background: #f7f9fa;
+			padding: 25px;
+			border-radius: 4px;
+			.language-to{
+				i{
+					font-size: 16px;
+					color: $helper;
+					margin: 0 5px;
+				}
+			}
+			.total-mission-price{
+				.row{
+					font-size: 14px;
+					font-weight: 400;
+					margin-bottom: 5px;
+					&:last-of-type{
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+  }
+  .browse-mission-warning{
+  	padding-top: 10px;
+  	text-align: center;
+  }
 }
 
 /*Browse mission Modal Ends*/

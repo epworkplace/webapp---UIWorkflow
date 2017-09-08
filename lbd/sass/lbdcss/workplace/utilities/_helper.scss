@@ -4,16 +4,16 @@
 	text-transform: none !important;
 	color: $helper;
 	font-weight: 400;
-	&.helper-text-01{
+	&.text-01{
 		font-size: 14px;
 	}
-	&.helper-text-02{
+	&.text-02{
 		font-size: 13px;
 	}
-	&.helper-text-03{
+	&.text-03{
 		font-size: 11px;
 	}
-	&.helper-text-04{
+	&.text-04{
 		font-size: 10px;
 	}
 	[class$="by"]{
@@ -21,7 +21,268 @@
 	}
 }
 
+// button with 48% styles
+.btn-yes {
+    width: 48.5% !important;
+    color: #fff !important;
+    background: #69A1FF !important;
+    border: 1px solid #69A1FF !important;
+
+    &:hover {
+        color: #fff !important;
+        background: #447DF7 !important;
+        border: 1px solid #447DF7 !important;
+    }
+}
+
+.btn-no {
+    width: 48.5% !important;
+    color: #fff !important;
+    background: #a9a9a9 !important;
+    border: 1px solid #a9a9a9 !important;
+
+    &:hover {
+        color: #fff !important;
+        background: #353F53 !important;
+        border: 1px solid #353F53 !important;
+    }
+}
+
+.btn-disapprove {
+    width: 48.5% !important;
+    color: #fff !important;
+    background: #ee0a5f !important;
+    border: 1px solid #ee0a5f !important;
+
+    &:hover {
+        color: #fff !important;
+        background: #b70a4a !important;
+        border: 1px solid #b70a4a !important;
+    }
+}
+
+.btn-confirm {
+    width: 48.5% !important;
+    color: #fff !important;
+    background: #353f53 !important;
+    border: 1px solid #353f53 !important;
+
+    &:hover {
+        color: #fff !important;
+        background: #9a9fa9 !important;
+        border: 1px solid #9a9fa9 !important;
+    }
+}
+
+.btn-download {
+    width: 48.5% !important;
+    color: #fff !important;
+    background: #fec500 !important;
+    border: 1px solid #fec500 !important;
+
+    &:hover {
+        color: #fff !important;
+        background: #cea000 !important;
+        border: 1px solid #cea000 !important;
+    }
+}
+
+// button styles ends
+
+
 .primary-font{
 	font-size: 14px;
 	color: $sub-heading;
+}
+.df-ac{
+    display: flex;
+    align-items: center;
+}
+.df-ac-jc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// full width
+.full-width{
+	width: 100% !important;
+}
+
+// bootstraptable styles
+%bootstraptable {
+  border-collapse: separate !important;
+  border-spacing: 0 10px;
+
+  thead {
+    .th-inner {
+      overflow: visible;
+      padding: 0;
+    }
+
+    .sortable {
+      cursor: pointer;
+      background-repeat: no-repeat;
+      padding-left: 20px;
+    }
+
+    .both {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAQAAADYWf5HAAAAkElEQVQoz7X QMQ5AQBCF4dWQSJxC5wwax1Cq1e7BAdxD5SL+Tq/QCM1oNiJidwox0355mXnG/DrEtIQ6azioNZQxI0ykPhTQIwhCR+BmBYtlK7kLJYwWCcJA9M4qdrZrd8pPjZWPtOqdRQy320YSV17OatFC4euts6z39GYMKRPCTKY9UnPQ6P+GtMRfGtPnBCiqhAeJPmkqAAAAAElFTkSuQmCC');
+      background-position: left 2px;
+    }
+
+    .asc {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA+swAAIT6AAB5gQAA/RMAADBtAAASKQ0eJk4AAACASURBVHja7NKhDcJQFIbRV1MSEqaoYwYMYyARR6HZowzAHqguUolHYEgxD9MmTYPpA1JEb/KZK476Q4wxfKvwc6x/WKJE3v+nYkc8cfgIwxpXRNQokjBkOLdQ1wlZCrbFbYDdsRmFYYVqAHVdsBiD7dHg8aYGu2l2NmMz9s/YawDpU8qkYQTHqgAAAABJRU5ErkJggg==');
+      background-position: left 5px;
+    }
+
+    .desc {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA+swAAIT6AAB5gQAA/RMAADBtAAASKQ0eJk4AAACFSURBVHja7NKhDcJQFIbRWwMJCVPgmKGGMZCIo9DsAQOwRxWLIPEIDCnmYR4JaSp4DYKQis/8NznqRkopvlWM2Ij9BYY1Wtx7arEpwaZokHo6Yf4xFhGBGrcOdMUqIqIUq3DoYEdUxVgGFzhn6ILl61aMZXCLB3bv+1Bsgj1mg7CfeNrnAMXSyqQtsCNeAAAAAElFTkSuQmCC');
+      background-position: left 0px;
+    }
+
+    .add-new-card {
+      border: none;
+      padding: 10px 0;
+    }
+  }
+
+  .client-list-item {
+    color: #353F53;
+    border-spacing: 0;
+    box-shadow: 1px 1px 2px 1px #eceeef;
+    border-radius: 4px;
+    transition: all .3s ease;
+
+    &:hover, &:focus {
+      box-shadow: 1px 1px 5px 3px #eceeef;
+    }
+
+    td {
+      border: none;
+      background: white;
+
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+
+    .client-name-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      .client-image-container {
+        padding: 0;
+
+        .list-image {
+          width: 50px;
+        }
+      }
+
+      .client-desc {
+        .client-name {
+          text-transform: uppercase;
+
+          a {
+            text-decoration: none;
+            color: $sub-heading;
+            font-weight: 600;
+          }
+        }
+
+        .tags-list {
+          .label {
+            background: #9a9fa9;
+            border-radius: 7px;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    .client-id,
+    .client-name,
+    .creation-date,
+    .owned-by {
+      font-size: 14px;
+      font-weight: 600;
+      color: #353F53;
+
+      span {
+        font-size: 12px;
+        font-weight: 400;
+        color: #7d889a;
+      }
+    }
+
+    .creation-date {
+      position: relative;
+      padding: 0 15px;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        background: #EAEBED;
+        height: 15px;
+        width: 1px;
+      }
+
+      &:after {
+        right: 0;
+        left: auto;
+      }
+    }
+
+    .card-view {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        &.title {}
+
+        &.value {
+          width: 100%;
+          display: flex;
+          align-items: center;
+
+          .label {
+            background: #9a9fa9;
+            border-radius: 7px;
+            line-height: normal;
+          }
+        }
+      }
+
+      .client-image-container {
+        width: 65px;
+        padding: 0;
+
+        .list-image {
+          width: 50px;
+        }
+      }
+
+      .creation-date {
+        padding: 0 15px 0 0;
+
+        &:before, &:after {
+          content: none;
+        }
+      }
+    }
+  }
 }
