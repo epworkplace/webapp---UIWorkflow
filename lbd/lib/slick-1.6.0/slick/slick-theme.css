@@ -88,11 +88,13 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '\f137'; 
+    font-family: FontAwesome;
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '\f138';
+    font-family: FontAwesome;
 }
 
 .slick-next
@@ -106,11 +108,13 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '\f138';
+    font-family: FontAwesome;
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '\f137'; 
+    font-family: FontAwesome;
 }
 
 /* Dots */
