@@ -39,34 +39,36 @@
                         <table cellspacing="10" class="mission-quote-table" id="mission-quote-table">
                             <thead>
                                 <tr class="row">
-                                    <th class="" data-field="id" data-sortable="true">
+                                    <th class="" data-field="quote-client" data-sortable="true">
                                         Client
                                     </th>
-                                    <th class="" data-field="name" data-sortable="true">
+                                    <th class="" data-field="quote-nb-words" data-sortable="true">
                                         NB Words
                                     </th>
-                                    <th class="" data-field="creation-date" data-sortable="true">
+                                    <th class="" data-field="quote-price-per-word" data-sortable="true">
                                         Price / Word
                                     </th>
-                                    <th class="" data-field="client-owner" data-sortable="true">
+                                    <th class="" data-field="quote-margin" data-sortable="true">
                                         Margin
                                     </th>
-                                    <th class="" data-field="client-owner" data-sortable="true">
+                                    <th class="" data-field="quote-selling-price" data-sortable="true">
                                         Selling Price
                                     </th>
                                 </tr>
                                 <tr class="">
                                     <th class="" colspan="5">
-                                        <div class="row">
-                                            <div class="col-md-4">LVMH <span class="d-block helper-text">Current settings</span></div>
-                                            <div class="col-md-2 text-center nb-words">400</div>
-                                            <div class="col-md-2 text-center">-</div>
-                                            <div class="col-md-2 text-center">-</div>
-                                            <div class="col-md-2 text-center">-</div>
+                                        <div class="quote-list-item quote-selected df-ac">
+                                            <div class="row full-width df-ac">
+                                                <div class="col-md-4 quote-client">LVMH <span class="d-block helper-text">(Current settings)</span></div>
+                                                <div class="col-md-2 text-center quote-nb-words">400</div>
+                                                <div class="col-md-2 text-center quote-price-per-word">-</div>
+                                                <div class="col-md-2 text-center quote-margin">-</div>
+                                                <div class="col-md-2 text-center quote-selling-price">-</div>
+                                            </div>
                                         </div>
                                     </th>
                                 </tr>
-                                <tr class="">
+                                <!-- <tr class="">
                                     <th class="add-new-card" colspan="5">
                                         <div class="">
                                             <a class="add-card" data-target="#create-new-client-modal" data-toggle="modal" href="javascript:;">
@@ -76,32 +78,32 @@
                                             </a>
                                         </div>
                                     </th>
-                                </tr>
+                                </tr> -->
                             </thead>
                             <tbody>
-                                <tr class="client-list-item">
-                                    <td class="col-md-4 client-id text-center">
+                                <tr class="quote-list-item">
+                                    <td class="col-md-4 quote-client text-center">
                                         <label class="radio">
                                             <input type="radio" data-toggle="radio" name="quotePrice" value="option2"><span class="primary-font">LVMH</span>
                                         </label>
                                     </td>
                                     <td class="col-md-2 text-center">
-                                        <div class="creation-date nb-words">
+                                        <div class="creation-date quote-nb-words">
                                             400
                                         </div>
                                     </td>
                                     <td class="col-md-2">
-                                        <div class="owned-by">
+                                        <div class="quote-price-per-word">
                                             <strong>0.14 €</strong>
                                         </div>
                                     </td>
                                     <td class="col-md-2">
-                                        <div class="owned-by">
+                                        <div class="quote-margin">
                                             12.615%
                                         </div>
                                     </td>
                                     <td class="col-md-2">
-                                        <div class="owned-by">
+                                        <div class="quote-selling-price">
                                             70.00 €
                                         </div>
                                     </td>
