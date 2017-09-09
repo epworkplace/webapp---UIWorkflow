@@ -16,9 +16,9 @@
         left: 0;
         height: calc(100vh - 85px);
 
-        .mCSB_container{
-          // height: calc(100vh - 100px);
-          left: 0;
+        .mCSB_container {
+            // height: calc(100vh - 100px);
+            left: 0;
         }
 
         // position: absolute;
@@ -124,7 +124,7 @@
 
         li.decks:nth-child(even) {
             // background: #edeff1;
-
+       
         }
     }
 }
@@ -246,6 +246,10 @@
 
     &.draft {
         color: #d7d9dc;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -602,14 +606,16 @@
 .duplicate-cards-modal {
     color: #353f53;
 
-    span.close{
+    span.close {
         position: absolute;
         top: -4px;
         right: -4px;
     }
-    .modal-content{
+
+    .modal-content {
         padding: 15px;
     }
+
     .modal-title {
         font-size: 20px;
         font-weight: 600;
@@ -637,40 +643,47 @@
     #duplicates-due {
         margin-bottom: 20px;
     }
-    .form{
-        .divider{
+
+    .form {
+        .divider {
             @include divider;
         }
-        .form-group{
-            &:last-of-type{
+
+        .form-group {
+            &:last-of-type {
                 // margin-bottom: 0;
+           
             }
         }
-        .no-of-duplicates{
-            .input-group{
-                .input-group-btn{
-                    .btn{
+
+        .no-of-duplicates {
+            .input-group {
+                .input-group-btn {
+                    .btn {
                         padding: 8px;
-                        &[data-type="minus"]{
+
+                        &[data-type="minus"] {
                             border-right: none;
                         }
-                        &[data-type="plus"]{
+
+                        &[data-type="plus"] {
                             border-left: none;
                         }
-                        .glyphicon{
+
+                        .glyphicon {
                             font-size: 10px;
                         }
                     }
                 }
-                .input-number{
+
+                .input-number {
                     height: 38px;
                     border-left: none;
                     border-right: none;
                     text-align: center;
                     padding: 8px 0;
-                }                
+                }
             }
-
         }
     }
 }
@@ -709,8 +722,9 @@
         right: -40px !important;
     }
 
-    .slick-track{
+    .slick-track {
         padding: 10px 0;
+
         .slick-slide {
             margin: 0px;
             padding: 0 15px;
@@ -719,13 +733,13 @@
             img {
                 width: 52px;
             }
-            .notification{
+
+            .notification {
                 top: -5px;
                 right: 5px;
             }
-        }        
+        }
     }
-
 }
 
 /* Slider for multiple user Ends*/

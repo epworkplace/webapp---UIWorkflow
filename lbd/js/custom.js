@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 
 	//Custom Scrollbar
-	$(".floating-box-body .panel #panel-body, .month-values-panel, .reviews, .recommended-reviews").mCustomScrollbar({
+	$(".floating-box-body .panel #panel-body, .month-values-panel, .reviews, .recommended-reviews, .leftside-column").mCustomScrollbar({
 		autoDraggerLength: false,
 	    mouseWheel:{
 	    	preventDefault: true
@@ -859,7 +859,6 @@ $(document).ready(function(){
 
 	/*Flags Dropdown */
     $('.flags').next('.chosen-container').addClass('flag-dropdown');
-
 
 });
 

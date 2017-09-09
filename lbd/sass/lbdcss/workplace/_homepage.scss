@@ -9,7 +9,7 @@
         position: relative;
         padding: 0;
         min-height: 100%;
-        background: #000;
+        background: #FCFDFD;
         box-shadow: 2px 0px 5px 3px #edeff1;
 
         .leftside-column {
@@ -21,7 +21,169 @@
             background: #FCFDFD;
             z-index: 1;
             overflow-x: hidden;
-            padding: 20px 7px 0 15px;
+            padding-top: 20px;
+            padding-right: 0;
+
+            .user-container {
+                margin-bottom: 10px;
+                background: #353f53;
+                border-radius: 6px;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                height: 60px;
+
+                .user-image {
+                    padding: 0;
+                    width: 42px;
+
+                    img {
+                        border: 2px solid #fff;
+                    }
+                }
+
+                .user-details {
+                    color: #fff;
+
+                    .user-name {
+                        display: block;
+                        font-weight: 600;
+                    }
+
+                    .user-profile {
+                        display: block;
+                        font-size: 12px;
+
+                        a {
+                            color: #fff;
+                            text-decoration: underline;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .planner-container {
+                margin-bottom: 0;
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+                .nothing-plan-container {
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 142px;
+
+                    .nothing-planned {
+                        text-align: center;
+
+                        .tag-line {
+                            font-size: 16px;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                            color: #9a9fa9;
+
+                            span {
+                                display: block;
+                                font-size: 14px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        a {
+                            width: 141px !important;
+                        }
+                    }
+                }
+
+                .agenda-header {
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #f5f5f6;
+
+                    .agenda-title {
+                        font-size: 16px;
+                        color: #353f53;
+                        font-weight: 600;
+
+                        span {
+                            display: block;
+                            color: #9a9fa9;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .agenda-meeting {
+                        a {
+                            width: 100% !important;
+                        }
+                    }
+                }
+
+                .agenda-container {
+                    table {
+                        tr {
+                            border-bottom: 2px solid #f5f5f6;
+                            padding: 10px 0;
+
+                            td {
+                                padding: 20px 0;
+                                font-size: 14px;
+                                vertical-align: top;
+
+                                &.agenda-time {
+                                    width: 51.666%;
+                                }
+
+                                &.agenda-subject {
+                                    width: 58.333%;
+
+                                    ul {
+                                        padding: 0;
+                                        margin: 0;
+
+                                        li {
+                                            margin-bottom: 5px;
+                                            font-weight: 600;
+                                            color: #353f53;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:last-of-type {
+                                border-bottom: 0;
+
+                                td {
+                                    padding-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .note-container {
+                padding-top: 15px;
+
+                .add-note {
+                    padding: 0 0 15px 0;
+
+                    textarea {
+                        resize: none;
+                    }
+                }
+            }
         }
     }
 }
