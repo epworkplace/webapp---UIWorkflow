@@ -74,7 +74,7 @@
                                                                     <div class="col-md-12 quote-overview">
                                                                         <div class="info-content card">
                                                                             <div class="display-content clearfix">
-                                                                                <span class="edit" data-toggle="modal" data-target="#edit-overview-modal"><a href="javascript:;">Edit</a></span>
+                                                                                <span class="edit" data-toggle="modal" data-target="#edit-overview-modal"><a href="javascript:void(0);">Edit</a></span>
                                                                                 <div class="col-md-12  overview">
                                                                                     <h4 class="title">Customer Story</h4>
                                                                                     <div class="more"><p>
@@ -1085,9 +1085,9 @@ $().ready(function() {
         showColumns: true,
         pagination: true,
         searchAlign: 'left',
-        pageSize: 8,
+        pageSize: 5,
         clickToSelect: false,
-        pageList: [8, 10, 25, 50, 100],
+        pageList: [5, 10, 25, 50, 100],
         formatShowingRows: function(pageFrom, pageTo, totalRows) {
             //do nothing here, we don't want to show the text "showing x of y from..."
         },
@@ -1108,6 +1108,32 @@ $().ready(function() {
         $table.bootstrapTable('resetView');
     });
 });
+</script>
+<script>
+// plugtradejQuery detect vertical scrollbar function //
+
+$(document).ready(function(){
+function detectVerticalScroll(){
+    var bsTable= $('.fixed-table-body tbody'); // need real DOM Node, not jQuery wrapper
+    if(bsTable[0].scrollHeight>bsTable[0].clientHeight){
+    bsTable.css({"padding": "5px"});
+    } else{
+    bsTable.css({"padding": "1px"});    
+    }
+}
+detectVerticalScroll();
+});
+
+// (function($) {
+//     $.fn.has_scrollbar = function() {
+//         var divnode = this.get(0);
+//         if(divnode.scrollHeight > divnode.clientHeight)
+//             return true;
+//     }
+// })(jQuery);
+// if($('.fixed-table-body tbody').has_scrollbar()) { 
+//     alert('Yes it has vertical scrollbar')
+//  }
 </script>
 
 </body>

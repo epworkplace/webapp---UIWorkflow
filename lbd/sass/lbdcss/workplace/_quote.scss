@@ -681,27 +681,122 @@
 			}
 			.fixed-table-body{
 				.mission-quote-table{
+					border: none;
 					thead{
 						tr{
-							&:nth-of-type(2){
+							&:first-child{
+								display: table;
+								width: 100%;
+							}
+							&:nth-of-type(n+2){
 								th{
 									border: none;
+									font-size: 14px;
 								}
 							}
 						}
 					}
 					@extend %bootstraptable;
+					tbody{
+						width: calc(100%);
+						overflow-y: auto;
+						height: 200px;
+						max-height: 200px;
+						position: absolute;
+						z-index: 1;
+						padding: 2px 5px 2px 2px;
+						.quote-list-item{
+							display: table;
+							// align-items: center;
+							width: calc(100%);
+							margin-bottom: 15px;
+							&:first-child{
+							}
+						}
+
+					}
 					.quote-list-item{
-						&.quote-selected{
+						
+						&.quote-selected-container{
 							@include clearfix();
 							border: 1px solid $main;
 							padding: 5px 15px;
 							box-shadow: none;
-							
+							margin-bottom: 15px;							
 							.row{
 								line-height: 1.5;
+								&.quote-selected{
+									min-height: 38px;
+								}
 							}
+							.quote-client{
+								font-weight: 600;
+								text-transform: uppercase;
+							}
+							.quote-nb-words{
+							}
+						}
+					}
+					td{
+						padding: 10px !important;
+						color: $main;
+						&.quote-client{
+							padding: 10px 0 !important;
+								display: flex;
+								width: 100%;
+								font-weight: 600;
+								text-transform: uppercase;
+								label{
+									&:hover{
+										cursor: pointer;
+									}
+								}
+								.quote-select-radio{
+									margin-left: 20px;
+									padding: 0;
+									label{
+										// margin-left: 20px;
+									}
+								}
+								.quote-client-select{
+									padding: 0px;
+									label[for*="missionQuote"]{
+										padding: 0 0 0 15px;
+										margin: 0;
+										font-weight: 600;
+										width: 100%;
+										text-transform: uppercase;
+											&:hover{
+												cursor: pointer;
+											}
+									}
+								}							
+						}
 
+						&.quote-nb-words-container{
+							padding: 0 !important;
+							.quote-nb-words{
+								font-weight: 400 !important;
+								&:before, &:after{
+									top: 0;
+								}
+							}
+						}
+						.quote-price-per-word{
+							font-weight: 600;
+						}
+					}
+
+				}
+			}
+			.fixed-table-pagination{
+				display: none !important;
+				.pagination{
+					li{
+						&.active{
+							a{
+								background: $selected;
+							}
 						}
 					}
 				}
@@ -728,7 +823,7 @@
       border: 1px solid #eaebed;
       border-radius: 4px;
       width: 20%;
-      padding: 10px;
+      padding: 5px 10px;
       margin-right: 6px;
 
 			.switch-label{
@@ -767,6 +862,9 @@
           }
       }
   }
+  .no-quote-mission-container{
+  	margin-top: 210px;
+  }
   .mission-estimation-container{
   	.list-head-quote-mission{
   		flex-grow: 1;
@@ -789,6 +887,10 @@
 					margin-bottom: 5px;
 					&:last-of-type{
 						margin-top: 10px;
+					}
+					[class*="-text"]{
+						font-weight: 600;
+						color: $main;
 					}
 				}
 			}
