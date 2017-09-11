@@ -1128,6 +1128,16 @@ function detectVerticalScroll(){
     }
 }
 detectVerticalScroll();
+
+// Browse mission modal list selection
+$('.quote-select-radio .radio, label[for*="missionQuote"]').click(function() {
+    if ($(this).hasClass('checked')) {
+        $(this).parents('.quote-select-radio').find('.quote-list-item').removeClass('selected-in-list');
+    } else {
+        $(this).parents('.quote-select-radio').find('.quote-list-item').addClass('selected-in-list');
+    }
+});
+
 });
 
 // (function($) {
@@ -1140,6 +1150,17 @@ detectVerticalScroll();
 // if($('.fixed-table-body tbody').has_scrollbar()) { 
 //     alert('Yes it has vertical scrollbar')
 //  }
+</script>
+
+
+<script type="text/javascript"> // Browse mission modal list selection
+    $('.note-check .checkbox').click(function() {
+        if ($(this).hasClass('checked')) {
+            $(this).parents('.note-list').find('.note-subject').removeClass('striked');
+        } else {
+            $(this).parents('.note-list').find('.note-subject').addClass('striked');
+        }
+    });
 </script>
 
 </body>
