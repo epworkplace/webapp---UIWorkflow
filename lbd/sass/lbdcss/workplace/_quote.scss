@@ -705,6 +705,11 @@
 	    height: 38px;
 	    align-items: center;
 	    box-sizing: border-box;
+	    div{
+	    	b{
+	    		background-position-y: 10px;
+	    	}
+	    }
 		}
 	}
 	.bootstrap-select {

@@ -285,7 +285,7 @@
                                                             <ul>
                                                                 <li class="add-new-block">
                                                                     <div class="add-block">
-                                                                        <a class="add-card" data-target="#create-new-client-modal" data-toggle="modal" href="javascript:;">
+                                                                        <a class="add-card" data-target="#create-new-quote-modal" data-toggle="modal" href="javascript:;">
                                                                             <i class="material-icons">
                                                                                 add
                                                                             </i>
@@ -1514,46 +1514,464 @@
         </div>
     </div>
 </div>
-<div class="delete-undo-container alert alert-info">
-    <p>You have deleted the contract <small><<</small><span>C001-ZVA-2018-003-WEBEDIA</span> <small>>></small><a href="javascript:void(0);">Undo</a></p>
-</div>
-<div id="deleteConfirmation" class="delete-confirmation modal fade" role="dialog">
+<!-- Delete undo container -->
+
+<!-- Modal dialogs -->
+<!-- Delete confirmation modal -->
+<div class="delete-confirmation modal fade" id="deleteConfirmation" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body clearfix">
-                <h4 class="delete-modal-title">Confirmation</h4>
-                <p class="confirm-question">Are You Sure You want to delete the contract?</p>
+                <h4 class="delete-modal-title">
+                Confirmation
+                </h4>
+                <p class="confirm-question">
+                    Are You Sure You want to delete the contract?
+                </p>
                 <div class="confirm-buttons">
-                    <button class="btn btn-fill btn-wd cancel-btn" data-dismiss="modal">Cancel</button>
-                    <button class="btn btn-fill btn-wd delete-btn">Delete</button>
+                    <button class="btn btn-fill btn-wd cancel-btn" data-dismiss="modal">
+                    Cancel
+                    </button>
+                    <button class="btn btn-fill btn-wd delete-btn">
+                    Delete
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div id="profile" class="profile modal fade" role="dialog">
+<!-- Profile modal -->
+<div class="profile modal fade" id="profile" role="dialog">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Your profile</h4>
+                <button class="close" data-dismiss="modal" type="button">
+                ×
+                </button>
+                <h4 class="modal-title">
+                Your profile
+                </h4>
             </div>
-        <div class="modal-body clearfix">
-            <div class="user-image pull-left">
-                <img src="lbd/img/default-avatar.png" class="img-circle" />
+            <div class="modal-body clearfix">
+                <div class="user-image pull-left">
+                    <img class="img-circle" src="lbd/img/default-avatar.png"/>
+                </div>
+                <div class="user-profile">
+                    <h2>
+                    Clarrisse
+                    </h2>
+                    <p>
+                        Designation in Org
+                    </p>
+                </div>
             </div>
-            <div class="user-profile">
-                <h2>Clarrisse</h2>
-                <p>Designation in Org</p>
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-fill" type="button">
+                Modify Profile
+                </button>
+                <button class="btn btn-primary btn-fill" type="button">
+                Logout
+                </button>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-fill">Modify Profile</button>
-            <button type="button" class="btn btn-primary btn-fill">Logout</button>
-        </div>
         </div>
     </div>
 </div>
+<!-- Create new quote modal -->
+<div aria-labelledby="create-new-quote-modal" class="modal fade create-new-quote-modal" id="create-new-quote-modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close">
+                    <a data-dismiss="modal" href="javascript:;">
+                        <i class="material-icons">
+                        close
+                        </i>
+                    </a>
+                </span>
+                <div class="modal-title">
+                    Create a new quote
+                </div>
+                <form action="" class="form clearfix">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="">
+                                    Client name
+                                </label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <select class="chosen-default flags">
+                                            <option data-img-src="lbd/img/flag/us.gif">
+                                                <span class="clientID">C001</span> Webedia Group
+                                            </option>
+                                            <option data-img-src="lbd/img/flag/fr.gif">
+                                                <span class="clientID">C002</span> LNMH
+                                            </option>
+                                            <option data-img-src="">
+                                                + Create new client
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <a class="create-new-client d-block" href="javascript:;" data-toggle="modal" data-target="#create-new-client-modal">
+                                            + Create new client
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8">
+                                <label for="quoteName">
+                                    Quote name
+                                </label>
+                                <input class="form-control" id="quoteName" placeholder="ex: Webedia-Quote-V1" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12 activation">
+                                <div class="col-md-12 activation-container">
+                                    <div class="col-md-1 activation-switch">
+                                        <div class="switch" data-off-label="" data-on-label="">
+                                            <input type="checkbox"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 activation-statement">
+                                        Create a CREDIT QUOTE:
+                                        <span class="no">
+                                            NO
+                                        </span>
+                                        <span class="yes">
+                                            YES
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="clientCategory">Category </label>
+                                    <select id="clientCategory" class="selectpicker">
+                                        <option value="1">-</option>
+                                        <option data-img-src="lbd/img/default-avatar.png">
+                                        Creation & Entertainment
+                                        </option>
+                                        <option data-img-src="lbd/img/default-avatar.png">
+                                            Creation
+                                        </option>
+                                        <option data-img-src="lbd/img/default-avatar.png">
+                                            Entertainment
+                                        </option>
+                                        <option data-img-src="lbd/img/default-avatar.png">
+                                            Social Media
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="customerGoal">Customer Goal</label>
+                                    <select id="customerGoal" class="selectpicker">
+                                        <option value="1">-</option>
+                                        <option data-img-src="lbd/img/default-avatar.png">
+                                            Goal 01
+                                        </option>
+                                        <option data-img-src="lbd/img/default-avatar.png">
+                                            Goal 02
+                                        </option>
+                                        <option data-img-src="lbd/img/default-avatar.png">
+                                            Goal 03
+                                        </option>
+                                        <option data-img-src="lbd/img/default-avatar.png">
+                                            Goal 04
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="">
+                                    Targeted Websites
+                                </label>
+                                <ul class="targeted-websites">
+                                    <li class="list-item card col-md-6">
+                                        <label class="checkbox main-contact">
+                                            <input data-toggle="checkbox" type="checkbox"/>
+                                            wwww.webedia-group.com
+                                        </label> 
+                                    </li>
+                                    <li class="list-item card col-md-6">
+                                        <label class="checkbox main-contact">
+                                            <input data-toggle="checkbox" type="checkbox"/>
+                                            wwww.webedia-group.com
+                                        </label> 
+                                    </li>
+                                    <li class="list-item card col-md-6">
+                                        <label class="checkbox main-contact">
+                                            <input data-toggle="checkbox" type="checkbox"/>
+                                            wwww.webedia-group.com
+                                        </label> 
+                                    </li>
+                                    <li class="list-item card col-md-6">
+                                        <label class="checkbox main-contact">
+                                            <input data-toggle="checkbox" type="checkbox"/>
+                                            wwww.webedia-group.com
+                                        </label> 
+                                    </li>
+                                    <li class="list-item card col-md-6">
+                                        <label for=""><a href="javascript:;" class="add-new-website">+ Add a website</a></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-fill btn-wd full-width btn-no pull-left form-control" data-dismiss="modal" type="button">
+                                Cancel
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-fill btn-wd full-width btn-yes pull-right form-control" type="button">
+                                Create quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Create new client modal -->
+<div aria-labelledby="create-new-client-modal" class="modal fade create-new-client-modal" id="create-new-client-modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close">
+                    <a data-dismiss="modal" href="javascript:;">
+                        <i class="material-icons">
+                        close
+                        </i>
+                    </a>
+                </span>
+                <div class="modal-title">
+                    Create a new client
+                </div>
+                <form action="" class="form clearfix">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="clientId">
+                                    Client ID
+                                </label>
+                                <input class="form-control" id="clientId" placeholder="C017" type="text"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="clientName">
+                                    Client Name
+                                </label>
+                                <input class="form-control" id="clientName" placeholder="ex: Webedia, LVMH.." type="text"/>
+                            </div>
+                            <div class="col-md-3 pull-right">
+                                <label for="clientHashtag">
+                                    Client Hashtag
+                                </label>
+                                <select class="chosen-default chosen-select" multiple id="clientSector">
+                                    <option data-img-src="lbd/img/default-avatar.png">
+                                        Creation & Entertainment
+                                    </option>
+                                    <option data-img-src="lbd/img/default-avatar.png">
+                                        Creation
+                                    </option>
+                                    <option data-img-src="lbd/img/default-avatar.png">
+                                        Entertainment
+                                    </option>
+                                    <option data-img-src="lbd/img/default-avatar.png">
+                                        Social Media
+                                    </option>
+                                </select>
+                                <!-- <input class="form-control" id="clientHashtag" placeholder="" type="text"/> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group client-logo">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="upload-client-logo">
+                                    Client Logo
+                                </label>
+                            </div>
+                            <div class="client-logo empty">
+                                <div class="col-md-12">
+                                    <input id="upload-client-logo" type="file"/>
+                                    <a class="add-client-logo" href="javascript:;">
+                                        <div class="col-md-12">
+                                            Add an image
+                                            <span class="d-block">
+                                                from your computer
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a class="import-from-twitter d-block" href="javascript:;">
+                                        Or import it from twitter
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group client-logo">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="upload-client-logo">
+                                    Client Logo
+                                </label>
+                            </div>
+                            <div class="client-logo full col-md-10">
+                                <div class="col-md-3 image-container">
+                                    <img class="image-loaded" src="lbd/img/blog-1.jpg">
+                                    </img>
+                                </div>
+                                <div class="col-md-9 client-desc-container">
+                                    <div class="description">
+                                        <strong>
+                                        Twitter user:
+                                        </strong>
+                                        <a class="client-name" href="javascript:;">
+                                            @Allocine
+                                        </a>
+                                    </div>
+                                    <div class="image-action">
+                                        <a class="replace" href="javascript:;">
+                                            Replace Image
+                                        </a>
+                                        <a class="remove" href="javascript:;">
+                                            Remove image
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group divider">
+                        <div class="row">
+                            <div>
+                                <label class="col-md-12" for="clientSector">
+                                    Sector
+                                </label>
+                                <div class="">
+                                    <div class="col-md-6">
+                                        <select class="chosen-default chosen-select" id="clientSector">
+                                            <option data-img-src="lbd/img/default-avatar.png">
+                                                Creation & Entertainment
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png">
+                                                Creation
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png">
+                                                Entertainment
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png">
+                                                Social Media
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div>
+                                <label class="col-md-12" for="clientAddress">
+                                    Address
+                                </label>
+                                <div class="">
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" id="clientAddress" placeholder="-" rows="3">
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div>
+                                <label class="col-md-12 control-label" for="clientCountry">
+                                    Country
+                                </label>
+                                <div class="">
+                                    <div class="col-md-4">
+                                        <select class="chosen-default chosen-select" id="clientCountry">
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 01
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 02
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 03
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 04
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 05
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 06
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 07
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 08
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 09
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png" value="">
+                                                Contry 10
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-fill btn-wd btn-no pull-left form-control" data-dismiss="modal" type="button">
+                                Cancel
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-fill btn-wd btn-yes pull-right form-control" type="button">
+                                Create client
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!--   Core JS Files   -->
 <script src="lbd/js/jquery.min.js" type="text/javascript">
