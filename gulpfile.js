@@ -1,6 +1,7 @@
  // Include gulp and plugins
  var
 	gulp = require('gulp'),
+  chokidar = require('chokidar'),
 	csso = require('csso'),
 	del = require('del'),
 	pkg = require('./package.json'),
@@ -22,7 +23,7 @@ var
 	html = {
 		partials: [source + '_partials/**/*'],
 		in: [source + '*.html'],
-		watch: [source + '*.html', source + '_partials/**/*'],
+		watch: ['*.html', '_partials/**/*'],
 		out: dest,
 		context: {
 			devBuild: devBuild,
@@ -38,11 +39,11 @@ var
 
 	css = {
 		in: [source + 'lbd/sass/light-bootstrap-dashboard.scss'],
-		watch: [source + 'lbd/sass/**/*.scss'],
+		watch: ['lbd/sass/**/*.scss'],
 		out: dest + 'lbd/css/',
     pluginCSS: {
       in: [source + 'lbd/css/**/*'],
-      watch: [source + 'lbd/css/**/*.css'],
+      watch: ['lbd/css/**/*.css'],
       out: dest + 'lbd/css/'
     },
 		sassOpts: {
@@ -256,9 +257,6 @@ gulp.task('serve', [], function() {
   //   files: [dest + '**/*.html']
   // });
 
-
-
-
   browserSync.init({
     server: {
       baseDir: dest,
@@ -282,6 +280,7 @@ gulp.task('serve', [], function() {
 $.watch([dest + '**/*.css'], $.batch(function (events, done) {
   gulp.start(browserSync.stream(), done);
 }));
+
 // browserSync.watch(dest + 'lbd/js/custom.js').on('change', reload);
 
 /*  // html changes
@@ -310,10 +309,15 @@ $.watch([dest + '**/*.css'], $.batch(function (events, done) {
 
 });
 
+
+// chokidar.watch(html.watch).on('all', function(){
+//   return ['html', reload];
+// });
+
 gulp.task('watch', function() {
 
   // html changes
-  gulp.watch(html.watch, ['html', reload]);
+  gulp.watch([html.watch], ['html', reload]);
 
   // image changes
   gulp.watch(images.in, ['images']);

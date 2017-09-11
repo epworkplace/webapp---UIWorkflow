@@ -1,0 +1,35 @@
+/* Quote list template CSS Starts */
+.layout-3.wp-app.quotes-list {
+  .page-wrap{
+		.main-panel-wrap{
+			.main-panel{
+				.main-panel-page{
+					.main-panel-page-header{
+
+					}
+					.main-container{
+						.tab-panel-container{
+
+						}
+						.main-panel-container{
+							.card-section-list{
+								ul{
+									li{
+										.add-card{
+											/* @extend %add-button;
+											margin-bottom: 10px; */
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+  }
+}
+
+
+
+/* Quote list template CSS Ends */

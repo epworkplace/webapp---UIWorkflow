@@ -74,7 +74,7 @@
                                                                     <div class="col-md-12 quote-overview">
                                                                         <div class="info-content card">
                                                                             <div class="display-content clearfix">
-                                                                                <span class="edit" data-toggle="modal" data-target="#edit-overview-modal"><a href="javascript:;">Edit</a></span>
+                                                                                <span class="edit" data-toggle="modal" data-target="#edit-overview-modal"><a href="javascript:void(0);">Edit</a></span>
                                                                                 <div class="col-md-12  overview">
                                                                                     <h4 class="title">Customer Story</h4>
                                                                                     <div class="more"><p>
@@ -90,7 +90,7 @@
                                                                                     <div class="amount">
                                                                                         Total<span>67000.00 &#8364;</span>
                                                                                     </div>
-                                                                                    <a href="javascript:;" class="download-quote btn btn-confirm disabled btn-fill">
+                                                                                    <a href="javascript:;" data-toggle="modal" data-target="#download-quote-modal" class="download-quote btn btn-confirm btn-fill">
                                                                                         Download Quote
                                                                                     </a>
                                                                                 </div>
@@ -126,14 +126,14 @@
                                                                             </div>
                                                                             <div class="col-md-6 bill-box even card">
                                                                                 <div class="col-md-12 bill">
-                                                                                    <a class="edit" href="javascript:;">Edit</a>
+                                                                                    <a class="edit" href="javascript:;" data-toggle="modal" data-target="#estimated-duration-modal">Edit</a>
                                                                                     <div class="amount">
                                                                                         Estimated Duration<span>120 days</span>
                                                                                     </div>
                                                                                     <div class="bill-desc">
                                                                                        <p>May 01, 2019<i class="material-icons">chevron_right</i>July 03.2019</p>
                                                                                     </div>
-                                                                                    <a href="javascript:;" class="bill-link">
+                                                                                    <a href="javascript:;" class="bill-link" data-toggle="modal" data-target="#estimated-duration-modal">
                                                                                         <span>+ Add probability</span>
                                                                                     </a>
                                                                                 </div>
@@ -775,13 +775,19 @@
 </div>
 <!-- Modal -->
 
+<!-- Quote download modal -->
+<!-- @include _partials/_quote-download-quote-modal.html -->
+<!-- Quote Estimated duration modal -->
+<!-- @include _partials/_quote-estimated-duration-modal.html -->
 <!-- Quote Create Quote mission modal -->
 <!-- @include _partials/_quote-create-quote-mission-modal.html -->
 <!-- Quote Browse mission modal -->
 <!-- @include _partials/_quote-browse-mission-modal.html -->
+<!-- Edit Overview modal -->
+<!-- @include _partials/_contract-edit-overview-modal.html -->
 
 
-<!-- @include _partials/_all-js-files.html -->   
+<!-- @include _partials/_all-js-files.html -->
 <script type='text/javascript'> 
     $('[id^="timepicker"]').each(function(){
         $(this).timepicki();
@@ -1085,9 +1091,9 @@ $().ready(function() {
         showColumns: true,
         pagination: true,
         searchAlign: 'left',
-        pageSize: 8,
+        pageSize: 5,
         clickToSelect: false,
-        pageList: [8, 10, 25, 50, 100],
+        pageList: [5, 10, 25, 50, 100],
         formatShowingRows: function(pageFrom, pageTo, totalRows) {
             //do nothing here, we don't want to show the text "showing x of y from..."
         },
@@ -1108,6 +1114,32 @@ $().ready(function() {
         $table.bootstrapTable('resetView');
     });
 });
+</script>
+<script>
+// plugtradejQuery detect vertical scrollbar function //
+
+$(document).ready(function(){
+function detectVerticalScroll(){
+    var bsTable= $('.fixed-table-body tbody'); // need real DOM Node, not jQuery wrapper
+    if(bsTable[0].scrollHeight>bsTable[0].clientHeight){
+    bsTable.css({"padding": "5px"});
+    } else{
+    bsTable.css({"padding": "1px"});    
+    }
+}
+detectVerticalScroll();
+});
+
+// (function($) {
+//     $.fn.has_scrollbar = function() {
+//         var divnode = this.get(0);
+//         if(divnode.scrollHeight > divnode.clientHeight)
+//             return true;
+//     }
+// })(jQuery);
+// if($('.fixed-table-body tbody').has_scrollbar()) { 
+//     alert('Yes it has vertical scrollbar')
+//  }
 </script>
 
 </body>

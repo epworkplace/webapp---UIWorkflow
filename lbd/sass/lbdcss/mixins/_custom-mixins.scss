@@ -276,9 +276,16 @@
   .client-list-item, .quote-list-item {
     color: #353F53;
     border-spacing: 0;
-    box-shadow: 1px 1px 2px 1px #eceeef;
+    box-shadow: 1px 1px 2px 2px #eceeef;
     border-radius: 4px;
     transition: all .3s ease;
+
+    &.selected-in-list{
+        box-shadow: 0px 0px 0px 1px $selected; 
+        &:hover, &:focus{
+          box-shadow: 0px 0px 1px 1px $selected;  
+        }
+    }
 
     &:hover, &:focus {
       box-shadow: 1px 1px 5px 3px #eceeef;
@@ -352,12 +359,13 @@
       position: relative;
       padding: 0 15px;
       @extend %df-ac-jcc;
+      flex-flow: column;
 
       &:before, &:after {
         content: '';
         position: absolute;
         left: 0;
-        top: 0;
+        top: 6px;
         background: #EAEBED;
         height: 15px;
         width: 1px;
@@ -424,5 +432,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// Modal styles
+%modal{
+    .modal-dialog{
+        span.close{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        label{
+            font-weight: 400;
+            font-size: 12px;
+        }
+        .form-group{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .modal-content{
+            padding: 15px;
+            .modal-header{}
+            .modal-body{
+                padding: 15px;
+                .modal-title{
+                    font-size: 20px;
+                    color: $main;
+                    margin: 0px 0 15px 0;
+                    font-weight: 600;
+                }
+            }
+            .modal-footer{}            
+        }
+
+    }
 }
 

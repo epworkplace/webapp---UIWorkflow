@@ -1527,55 +1527,15 @@
     </div>
 </div>
 
-<!-- Modal -->
-    <div class="modal fade turnover-evolution" id="turnover-evolution" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h4 class="graph-title">Turnover Evolution</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <div class="turnover-graph">
-                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                        <div id="chart_div" style="width: 900px; height: 500px;"></div></div>
-                    <div class="turnover-footer">
-                        <button type="button" class="btn btn-default btn-quote">See related quote</button>
-                        <button type="button" class="btn btn-default btn-cancel pull-right" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade edit-overview-modal" id="edit-overview-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg tiny-mce-modal-dialog" role="document">
-            <div class="modal-content tiny-mce-modal-content">
-                <div class="modal-body">
-                    <div class="edit-content clearfix">
-                        <div class="edit-duration">
-                            <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
-                            <div class="col-md-6">
-                                <label>Start Date</label>
-                                <input type="text" class="form-control datepicker-start" placeholder="Date Picker Here">
-                            </div>
-                            <div class="col-md-6">
-                                <label>End Date</label>
-                                <input type="text" class="form-control datepicker-end" placeholder="Date Picker Here">
-                            </div>
-                        </div>
-                        <div class="col-md-12  edit-overview">
-                            <textarea id="edit-textarea" class="form-control" rows="10">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </textarea>
-                        </div>
-                        <div class="edit-content-action col-md-12">
-                            <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Save Changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Modals Starts -->
+<!-- Edit Overview modal -->
+<!-- @include _partials/_contract-turnover-evolution-modal.html -->
+<!-- Edit Overview modal -->
+<!-- @include _partials/_contract-edit-overview-modal.html -->
+<!-- Modals Ends -->
+
 </body>
+
     <!--   Core JS Files   -->
     <script src="lbd/js/jquery.min.js" type="text/javascript"></script>
     <script src="lbd/js/underscore-min.js" type="text/javascript"></script>
