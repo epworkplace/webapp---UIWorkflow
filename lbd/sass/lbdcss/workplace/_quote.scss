@@ -666,6 +666,61 @@
 
 /*Edit create quote mission Ends*/
 
+/* Estimated duration modal starts*/
+.estimated-duration-modal{
+	@extend %modal;
+	.modal-content{
+		.estimated-duration-container{
+			.estimated-duration{
+				background: #f3f5f7;
+				padding: 15px;
+				.d-block{
+					margin-bottom: 5px;
+					&:last-child{
+						margin-bottom: 0;
+						margin-top: 15px;
+					}
+				}
+				a.apply-estimated-duration{
+					color: $selected;
+					text-decoration: underline;
+				}
+			}
+			
+		}
+	}
+}
+/* Estimated duration modal Ends*/
+
+/* Download quote modal Starts*/
+.download-quote-modal{
+	@extend %modal;
+	label {
+		text-transform: uppercase;
+	}
+	.chosen-container-single{
+		.chosen-single{
+			line-height: normal;
+	    display: flex;
+	    height: 38px;
+	    align-items: center;
+	    box-sizing: border-box;
+		}
+	}
+	.bootstrap-select {
+    &.open {
+      height: auto;
+
+      .dropdown-menu {
+        max-height: 200px !important;
+        height: auto;
+      }
+    }
+  }
+}
+/* Download quote modal Ends*/
+
+
 /*Browse mission Modal Starts*/
 
 .browse-mission-modal {

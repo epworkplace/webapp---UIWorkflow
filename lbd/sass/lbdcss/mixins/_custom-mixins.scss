@@ -434,3 +434,38 @@
     justify-content: center;
 }
 
+// Modal styles
+%modal{
+    .modal-dialog{
+        span.close{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        label{
+            font-weight: 400;
+            font-size: 12px;
+        }
+        .form-group{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .modal-content{
+            padding: 15px;
+            .modal-header{}
+            .modal-body{
+                padding: 15px;
+                .modal-title{
+                    font-size: 20px;
+                    color: $main;
+                    margin: 0px 0 15px 0;
+                    font-weight: 600;
+                }
+            }
+            .modal-footer{}            
+        }
+
+    }
+}
+

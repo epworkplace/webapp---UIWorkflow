@@ -90,7 +90,7 @@
                                                                                     <div class="amount">
                                                                                         Total<span>67000.00 &#8364;</span>
                                                                                     </div>
-                                                                                    <a href="javascript:;" class="download-quote btn btn-confirm disabled btn-fill">
+                                                                                    <a href="javascript:;" data-toggle="modal" data-target="#download-quote-modal" class="download-quote btn btn-confirm btn-fill">
                                                                                         Download Quote
                                                                                     </a>
                                                                                 </div>
@@ -126,14 +126,14 @@
                                                                             </div>
                                                                             <div class="col-md-6 bill-box even card">
                                                                                 <div class="col-md-12 bill">
-                                                                                    <a class="edit" href="javascript:;">Edit</a>
+                                                                                    <a class="edit" href="javascript:;" data-toggle="modal" data-target="#estimated-duration-modal">Edit</a>
                                                                                     <div class="amount">
                                                                                         Estimated Duration<span>120 days</span>
                                                                                     </div>
                                                                                     <div class="bill-desc">
                                                                                        <p>May 01, 2019<i class="material-icons">chevron_right</i>July 03.2019</p>
                                                                                     </div>
-                                                                                    <a href="javascript:;" class="bill-link">
+                                                                                    <a href="javascript:;" class="bill-link" data-toggle="modal" data-target="#estimated-duration-modal">
                                                                                         <span>+ Add probability</span>
                                                                                     </a>
                                                                                 </div>
@@ -775,13 +775,19 @@
 </div>
 <!-- Modal -->
 
+<!-- Quote download modal -->
+<!-- @include _partials/_quote-download-quote-modal.html -->
+<!-- Quote Estimated duration modal -->
+<!-- @include _partials/_quote-estimated-duration-modal.html -->
 <!-- Quote Create Quote mission modal -->
 <!-- @include _partials/_quote-create-quote-mission-modal.html -->
 <!-- Quote Browse mission modal -->
 <!-- @include _partials/_quote-browse-mission-modal.html -->
+<!-- Edit Overview modal -->
+<!-- @include _partials/_contract-edit-overview-modal.html -->
 
 
-<!-- @include _partials/_all-js-files.html -->   
+<!-- @include _partials/_all-js-files.html -->
 <script type='text/javascript'> 
     $('[id^="timepicker"]').each(function(){
         $(this).timepicki();

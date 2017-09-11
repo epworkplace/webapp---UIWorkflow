@@ -89,7 +89,11 @@
 
 // button styles ends
 
-
+.main-font{
+	font-size: 14px;
+	color: $main;
+	font-weight: 600;
+}
 .primary-font{
 	font-size: 14px;
 	color: $sub-heading;
@@ -107,5 +111,18 @@
 // full width
 .full-width{
 	width: 100% !important;
+}
+
+// background-highlight styles
+.highlight-bg{
+	padding: 15px;
+	background: $highlight-bg;
+	.d-block{
+		margin-bottom: 5px;
+		&:last-child{
+			margin-bottom: 0;
+			margin-top: 15px;
+		}
+	}
 }
 
