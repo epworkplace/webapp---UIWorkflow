@@ -14,14 +14,14 @@
 
         .leftside-column {
             position: fixed;
-            width: 23.7%;
+            width: 23.5%;
             overflow: hidden;
             min-height: 100%;
             height: 300px;
             background: #FCFDFD;
             z-index: 1;
             overflow-x: hidden;
-            padding-top: 20px;
+            padding-top: 15px;
             padding-right: 0;
 
             .user-container {
@@ -176,11 +176,229 @@
             .note-container {
                 padding-top: 15px;
 
+                &.not-container-list {
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 66px;
+                        left: 0;
+                        background: #f5f5f6;
+                        width: 100%;
+                        height: 2px;
+                    }
+                }
+
                 .add-note {
                     padding: 0 0 15px 0;
 
                     textarea {
                         resize: none;
+                    }
+                }
+
+                .note-list-container {
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style-type: none;
+
+                        li {
+                            .note-list {
+                                @include clearfix;
+
+                                border-bottom: 2px solid #f5f5f6;
+                                display: -webkit-box;
+                                display: -moz-box;
+                                display: -ms-flexbox;
+                                display: -webkit-flex;
+                                display: flex;
+                                align-items: center;
+                                min-height: 75px;
+
+                                .note-check {
+                                    .checkbox {
+                                        margin: -8px 0 0 0;
+                                        padding: 0;
+                                    }
+                                }
+
+                                .note-subject {
+                                    color: #353f53;
+                                    font-weight: 500;
+
+                                    &.striked {
+                                        text-decoration: line-through;
+                                        color: #7d889a;
+                                        font-weight: 400;
+                                    }
+                                }
+
+                                .note-delete {
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    transition: all .3s ease;
+
+                                    a {
+                                        cursor: pointer;
+                                        color: #DFE1E3;
+
+                                        &:hover {
+                                            color: #485262;
+                                        }
+                                    }
+                                }
+
+                                &:last-of-type {
+                                    border-bottom: 0;
+                                }
+                            }
+
+                            &:hover {
+                                .note-list {
+                                    .note-delete {
+                                        visibility: visible;
+                                        opacity: 1;
+                                        transition: all .3s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .rightside-column-container {
+        padding-left: 0;
+        padding-top: 15px;
+        position: relative;
+        min-height: 100%;
+        width: 25%;
+
+        .rightside-column {
+            position: fixed;
+            width: 23.5%;
+            overflow: hidden;
+            min-height: 100%;
+            height: 300px;
+            z-index: 1;
+            overflow-x: hidden;
+            padding: 0;
+
+            .task-pricing-container {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                align-items: center;
+                min-height: 75px;
+                margin-bottom: 10px;
+
+                .row {
+                    flex: 1;
+
+                    .task-pricing {
+                        color: #353f53;
+
+                        span {
+                            display: block;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            .most-recent-container {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin-bottom: 10px;
+
+                .most-recent-list {
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+
+                        li {
+                            .client-task-container {
+                                border-bottom: 2px solid #f5f5f6;
+                                display: -webkit-box;
+                                display: -moz-box;
+                                display: -ms-flexbox;
+                                display: -webkit-flex;
+                                display: flex;
+                                align-items: center;
+                                min-height: 75px;
+
+                                .client-image {
+                                    width: 40px;
+                                    padding: 0;
+
+                                    img {
+                                        max-width: 100%;
+                                    }
+                                }
+
+                                .task-link {
+                                    a {
+                                        color: #353f53;
+                                        font-weight: 500;
+                                        text-decoration: none;
+
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+
+                                .go-task {
+                                    i {
+                                        font-size: 16px;
+                                        color: #b1b2be;
+                                    }
+                                }
+                            }
+
+                            &:last-of-type {
+                                .client-task-container {
+                                    border-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hot-clients-container {
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+                .clients-logo-container {
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-flex-flow: row wrap;
+                    justify-content: flex-start;
+
+                    .hot-client {
+                        width: 52px;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+
+                        img {
+                            max-width: 100%;
+                        }
+
+                        &:nth-of-type(4n) {
+                            margin-right: 0;
+                        }
                     }
                 }
             }
