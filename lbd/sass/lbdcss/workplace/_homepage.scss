@@ -456,6 +456,47 @@
                         }
                     }
                 }
+
+                .filter-container {
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    align-items: center;
+
+                    .chosen-container-multi .chosen-choices {
+                        min-height: 40px;
+                        height: auto;
+                        padding: 7px 15px !important;
+                    }
+
+                    .chosen-container-multi .chosen-choices li.search-choice {
+                        margin: 0 5px 5px 0;
+                        border: 1px solid #353f53;
+                        background-color: #353f53;
+                    }
+
+                    .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+                        position: absolute;
+                        top: 7px;
+                        right: 5px;
+                        display: block;
+                        width: 12px;
+                        height: 12px !important;
+                        background: url(../lib/chosen/chosen-sprite-white.png) -42px -9px no-repeat !important;
+                        font-size: 1px;
+                    }
+
+                    .chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover {
+                        background-position: -42px -9px;
+                    }
+
+                    button {
+                        width: 170px !important;
+                        margin-left: 10px;
+                    }
+                }
             }
         }
     }

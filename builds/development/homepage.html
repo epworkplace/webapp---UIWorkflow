@@ -293,6 +293,18 @@
                                                         <a href="javascript:;" class="col-md-2">+ Add filters</a>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-12 filter-container">
+                                                    <select data-placeholder="Enter a tag, user" class="chosen-select" multiple id="tag">
+                                                        <option value=""></option>
+                                                        <option value="Clarrisse">Clarrisse</option>
+                                                        <option value="Allocine">Allocine</option>
+                                                        <option value="BUT">BUT</option>
+                                                        <option value="Michael">Michael</option>
+                                                        <option value="Webedia">Webedia</option>
+                                                        <option value="Paul">Paul</option>
+                                                    </select>
+                                                    <button type="" class="btn btn-fill btn-confirm">Apply Filters</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -542,6 +554,14 @@
             } else {
                 $(this).parents('.note-list').find('.note-subject').addClass('striked');
             }
+        });
+        /*Show filter*/
+        $('.filter-title-flip-container .filter-container').hide();
+            $('.filter-title-flip-container .feed-title-container a').click(function(e) {
+            e.preventDefault();
+            $('.filter-title-flip-container .filter-container').show(400);
+            $('.filter-title-flip-container .feed-title-container').hide(400);
+
         });
     </script>
 </html>
