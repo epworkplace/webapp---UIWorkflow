@@ -1,128 +1,153 @@
 /* helper utility styles */
-.helper-text{
-	font-size: 12px;
-	text-transform: none !important;
-	color: $helper;
-	font-weight: 400;
-	&.text-01{
-		font-size: 14px;
-	}
-	&.text-02{
-		font-size: 13px;
-	}
-	&.text-03{
-		font-size: 11px;
-	}
-	&.text-04{
-		font-size: 10px;
-	}
-	[class$="by"]{
-		font-weight: 600;
-	}
+.helper-text {
+  font-size: 12px;
+  text-transform: none !important;
+  color: $helper;
+  font-weight: 400;
+
+  &.text-01 {
+    font-size: 14px;
+  }
+
+  &.text-02 {
+    font-size: 13px;
+  }
+
+  &.text-03 {
+    font-size: 11px;
+  }
+
+  &.text-04 {
+    font-size: 10px;
+  }
+
+  [class$='by'] {
+    font-weight: 600;
+  }
 }
 
 // button with 48% styles
 .btn-yes {
-    width: 48.5% !important;
-    color: #fff !important;
-    background: #69A1FF !important;
-    border: 1px solid #69A1FF !important;
+  width: 48.5% !important;
+  color: #fff !important;
+  background: #69A1FF !important;
+  border: 1px solid #69A1FF !important;
 
-    &:hover {
-        color: #fff !important;
-        background: #447DF7 !important;
-        border: 1px solid #447DF7 !important;
-    }
+  &:hover {
+    color: #fff !important;
+    background: #447DF7 !important;
+    border: 1px solid #447DF7 !important;
+  }
 }
 
 .btn-no {
-    width: 48.5% !important;
-    color: #fff !important;
-    background: #a9a9a9 !important;
-    border: 1px solid #a9a9a9 !important;
+  width: 48.5% !important;
+  color: #fff !important;
+  background: #a9a9a9 !important;
+  border: 1px solid #a9a9a9 !important;
 
-    &:hover {
-        color: #fff !important;
-        background: #353F53 !important;
-        border: 1px solid #353F53 !important;
-    }
+  &:hover {
+    color: #fff !important;
+    background: #353F53 !important;
+    border: 1px solid #353F53 !important;
+  }
 }
 
 .btn-disapprove {
-    width: 48.5% !important;
-    color: #fff !important;
-    background: #ee0a5f !important;
-    border: 1px solid #ee0a5f !important;
+  width: 48.5% !important;
+  color: #fff !important;
+  background: #ee0a5f !important;
+  border: 1px solid #ee0a5f !important;
 
-    &:hover {
-        color: #fff !important;
-        background: #b70a4a !important;
-        border: 1px solid #b70a4a !important;
-    }
+  &:hover {
+    color: #fff !important;
+    background: #b70a4a !important;
+    border: 1px solid #b70a4a !important;
+  }
 }
 
 .btn-confirm {
-    width: 48.5% !important;
-    color: #fff !important;
-    background: #353f53 !important;
-    border: 1px solid #353f53 !important;
+  width: 48.5% !important;
+  color: #fff !important;
+  background: #353f53 !important;
+  border: 1px solid #353f53 !important;
 
-    &:hover {
-        color: #fff !important;
-        background: #9a9fa9 !important;
-        border: 1px solid #9a9fa9 !important;
-    }
+  &:hover {
+    color: #fff !important;
+    background: #9a9fa9 !important;
+    border: 1px solid #9a9fa9 !important;
+  }
 }
 
 .btn-download {
-    width: 48.5% !important;
-    color: #fff !important;
-    background: #fec500 !important;
-    border: 1px solid #fec500 !important;
+  width: 48.5% !important;
+  color: #fff !important;
+  background: #fec500 !important;
+  border: 1px solid #fec500 !important;
 
-    &:hover {
-        color: #fff !important;
-        background: #cea000 !important;
-        border: 1px solid #cea000 !important;
-    }
+  &:hover {
+    color: #fff !important;
+    background: #cea000 !important;
+    border: 1px solid #cea000 !important;
+  }
 }
 
 // button styles ends
 
-.main-font{
-	font-size: 14px;
-	color: $main;
-	font-weight: 600;
+.main-font {
+  font-size: 14px;
+  color: $main;
+  font-weight: 600;
 }
-.primary-font{
-	font-size: 14px;
-	color: $sub-heading;
+
+.primary-font {
+  font-size: 14px;
+  color: $sub-heading;
 }
-.df-ac{
-    display: flex;
-    align-items: center;
+
+.df-ac {
+  display: flex;
+  align-items: center;
 }
-.df-ac-jc{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.df-ac-jc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // full width
-.full-width{
-	width: 100% !important;
+.full-width {
+  width: 100% !important;
 }
 
 // background-highlight styles
-.highlight-bg{
-	padding: 15px;
-	background: $highlight-bg;
-	.d-block{
-		margin-bottom: 5px;
-		&:last-child{
-			margin-bottom: 0;
-			margin-top: 15px;
-		}
-	}
+.highlight-bg {
+  padding: 15px;
+  background: $highlight-bg;
+
+  .d-block {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: 15px;
+    }
+  }
 }
 
+.chosen-container-single {
+  .chosen-single {
+    line-height: normal;
+    display: flex;
+    height: 38px;
+    align-items: center;
+    box-sizing: border-box;
+
+    div {
+      b {
+        background-position-y: 10px;
+      }
+    }
+  }
+}

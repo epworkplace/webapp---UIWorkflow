@@ -166,7 +166,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-xs-12 page-title">
-                                                    <a class="navbar-brand" href="#">Quote Overview</a>  
+                                                    <a class="navbar-brand" href="#">Quote Overview</a>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -299,7 +299,7 @@
                                                                         <ul>
                                                                             <li>
                                                                                 <div class="card file-card">
-                                                                                    <strong class="primary-font output"><i class="material-icons">insert_drive_file</i>PO_3104217.pdf</strong> 
+                                                                                    <strong class="primary-font output"><i class="material-icons">insert_drive_file</i>PO_3104217.pdf</strong>
                                                                                     <div class="time-stamp pull-right">12 Months ago</div>
                                                                                 </div>
                                                                                 <div class="cta-container">
@@ -1221,7 +1221,7 @@
                                                             <div class="import-cost-add">
                                                                 <strong>Import costs from old missions</strong>
                                                                 <p>Get an old mission cost as reference for your actual mission</p>
-                                                                <button type="" class="btn btn-fill btn-download">Browse old missions</button>
+                                                                <a href="javascript:;" type="" class="btn btn-fill btn-download" data-toggle="modal" data-target="#browseMissionModal">Browse old missions</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1503,7 +1503,7 @@
                                     </th>
                                 </tr> -->
                             </thead>
-                            <tbody>
+                            <tbody class="quote-list-container">
                                 <tr class="quote-list-item">
                                     <td class="col-md-4 quote-client">
                                         <div class="row df-ac full-width">
@@ -2010,7 +2010,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -2053,7 +2053,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -2066,6 +2066,7 @@
         </div>
     </div>
 </div>
+
 <!-- Edit Overview modal -->
 <div aria-labelledby="myModalLabel" class="modal fade edit-overview-modal" id="edit-overview-modal" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-lg tiny-mce-modal-dialog" role="document">
@@ -2199,10 +2200,10 @@
 <!-- Custom JS -->
 <script src="lbd/js/custom.js">
 </script>
-<script type='text/javascript'> 
+<script type='text/javascript'>
     $('[id^="timepicker"]').each(function(){
         $(this).timepicki();
-    }); 
+    });
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -2389,7 +2390,7 @@ $(function () {
         else{
             $('.star-rating-label').text(rating + " - Exellent");
         }
-        
+
     });
 });
  $(function () {
@@ -2417,7 +2418,7 @@ $(function () {
         }
         else{
             $('.star-rating-label').text(rating + " - Exellent");
-        }    
+        }
     });
 
 
@@ -2500,7 +2501,7 @@ $().ready(function() {
         search: true,
         showToggle: true,
         showColumns: true,
-        pagination: true,
+        pagination: false,
         searchAlign: 'left',
         pageSize: 5,
         clickToSelect: false,
@@ -2535,10 +2536,25 @@ function detectVerticalScroll(){
     if(bsTable[0].scrollHeight>bsTable[0].clientHeight){
     bsTable.css({"padding": "5px"});
     } else{
-    bsTable.css({"padding": "1px"});    
+    bsTable.css({"padding": "1px"});
     }
 }
 detectVerticalScroll();
+
+// Browse mission modal list selection
+$('.quote-select-radio .radio').click(function(e) {
+  var listContainer = '.quote-list-container';
+  var thisSiblings = $(this).parents('.quote-list-item').siblings();
+  var thisListItem = $(this).parents('.quote-list-item');
+  var checkedRadio = thisListItem.find('.radio');
+    if ($(this).hasClass('checked')) {
+        thisListItem.addClass('selected-in-list');
+    } else {
+        thisSiblings.removeClass('selected-in-list');
+        thisListItem.addClass('selected-in-list');
+    }
+});
+
 });
 
 // (function($) {
@@ -2548,9 +2564,14 @@ detectVerticalScroll();
 //             return true;
 //     }
 // })(jQuery);
-// if($('.fixed-table-body tbody').has_scrollbar()) { 
+// if($('.fixed-table-body tbody').has_scrollbar()) {
 //     alert('Yes it has vertical scrollbar')
 //  }
+</script>
+
+
+<script type="text/javascript"> // Browse mission modal list selection
+
 </script>
 
 </body>

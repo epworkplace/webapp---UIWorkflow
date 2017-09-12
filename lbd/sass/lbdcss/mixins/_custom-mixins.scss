@@ -451,6 +451,14 @@
                 margin-bottom: 0;
             }
         }
+        a{
+            &[class*="-new-"], &[class*="-from-"]{
+                font-size: 12px;
+                color: $helper;
+                text-decoration: underline;
+                margin-top: 10px;
+            }
+        }
         .modal-content{
             padding: 15px;
             .modal-header{}

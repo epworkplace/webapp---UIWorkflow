@@ -28,6 +28,32 @@
 			}
 		}
   }
+/* Modal styles */
+	.create-new-quote-modal{
+		@extend %modal;
+		.activation{
+			margin-bottom: 0;
+		}
+		.targeted-websites{
+			@include clearfix;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			.list-item{
+				padding: 10px;
+				width: calc(50% - 10px);
+				margin: 0 10px 10px 0;
+				label{
+					margin: 0;
+					text-transform: lowercase;
+				}
+				&:nth-of-type(2n){
+					margin-right: 0;
+				}
+			}
+		}
+	}
+/* Modal styles ends*/
 }
 
 
