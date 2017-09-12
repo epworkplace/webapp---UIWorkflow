@@ -41,8 +41,10 @@
 			margin: 0;
 			.list-item{
 				padding: 10px;
-				width: calc(50% - 10px);
+				width: calc(50% - 8px);
 				margin: 0 10px 10px 0;
+        transition: all .3s ease;
+        box-sizing: border-box;
 				label{
 					margin: 0;
 					text-transform: lowercase;
@@ -51,9 +53,15 @@
 					}
 				}
 				&.add-website{
-					width: calc(100% - 10px);
+					width: calc(100% - 8px);
 					display: none;
 				}
+        &.selected-in-list{
+          border: 1px solid $selected;
+          .checked{
+            color: $selected;
+          }
+        }
 				&:nth-of-type(2n){
 					margin-right: 0;
 				}
