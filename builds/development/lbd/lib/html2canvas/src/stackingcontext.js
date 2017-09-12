@@ -1,14 +1,1 @@
-function StackingContext(hasOwnStacking, opacity, element, parent) {
-    NodeContainer.call(this, element, parent);
-    this.ownStacking = hasOwnStacking;
-    this.contexts = [];
-    this.children = [];
-    this.opacity = (this.parent ? this.parent.stack.opacity : 1) * opacity;
-}
-
-StackingContext.prototype = Object.create(NodeContainer.prototype);
-
-StackingContext.prototype.getParentStack = function(context) {
-    var parentStack = (this.parent) ? this.parent.stack : null;
-    return parentStack ? (parentStack.ownStacking ? parentStack : parentStack.getParentStack(context)) : context.stack;
-};
+function StackingContext(t,n,e,a){NodeContainer.call(this,e,a),this.ownStacking=t,this.contexts=[],this.children=[],this.opacity=(this.parent?this.parent.stack.opacity:1)*n}StackingContext.prototype=Object.create(NodeContainer.prototype),StackingContext.prototype.getParentStack=function(t){var n=this.parent?this.parent.stack:null;return n?n.ownStacking?n:n.getParentStack(t):t.stack};

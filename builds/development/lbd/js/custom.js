@@ -159,7 +159,7 @@ $(document).ready(function(){
 	    });
 	});
 
-	$('[id^="missionImage"], [id^="contractImage"], [id^="quoteImage"]').each(function(i)
+	$('[id*="imgCirclePB"], [id^="missionImage"], [id^="contractImage"], [id^="quoteImage"]').each(function(i)
 	{
 		var image = $(this).attr('id');
 		var bar = new ProgressBar.Circle('#' + image, {

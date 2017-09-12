@@ -46,6 +46,9 @@
 				label{
 					margin: 0;
 					text-transform: lowercase;
+					&.primary-font{
+						color: $sub-heading;
+					}
 				}
 				&:nth-of-type(2n){
 					margin-right: 0;

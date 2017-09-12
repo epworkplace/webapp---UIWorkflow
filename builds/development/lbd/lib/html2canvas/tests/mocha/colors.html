@@ -1,16 +1,4 @@
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Mocha Tests</title>
-    <link rel="stylesheet" href="lib/mocha.css" />
-    <script type="text/javascript" src="../../src/color.js"></script>
-    <script src="lib/expect.js"></script>
-    <script src="lib/mocha.js"></script>
-</head>
-<body>
-<div id="mocha"></div>
-<script>mocha.setup('bdd')</script>
-<script>
+<html><head><meta charset="utf-8"><title>Mocha Tests</title><link rel="stylesheet" href="lib/mocha.css"/><script type="text/javascript" src="../../src/color.js"></script><script src="lib/expect.js"></script><script src="lib/mocha.js"></script></head><body><div id="mocha"></div><script>mocha.setup('bdd')</script><script>
     describe("Colors", function() {
         describe("named colors", function() {
             it("bisque", function () {
@@ -139,6 +127,4 @@
     mocha.suite.afterAll(function() {
         document.body.setAttribute('data-complete', 'true');
     });
-</script>
-</body>
-</html>
+</script></body></html>

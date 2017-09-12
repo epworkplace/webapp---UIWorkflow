@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Scrolling tests</title>
-    <link rel="stylesheet" href="lib/mocha.css" />
-    <script src="../../dist/html2canvas.js"></script>
-    <script src="../assets/jquery-1.6.2.js"></script>
-    <script src="lib/expect.js"></script>
-    <script src="lib/mocha.js"></script>
-</head>
-<body>
-<div id="mocha"></div>
-<script>mocha.setup('bdd')</script>
-<div style="height: 2200px;"></div>
-<div style="height: 500px;background: green;"><a name="content">content</a></div>
-<script>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><title>Scrolling tests</title><link rel="stylesheet" href="lib/mocha.css"/><script src="../../dist/html2canvas.js"></script><script src="../assets/jquery-1.6.2.js"></script><script src="lib/expect.js"></script><script src="lib/mocha.js"></script></head><body><div id="mocha"></div><script>mocha.setup('bdd')</script><div style="height: 2200px;"></div><div style="height: 500px;background: green;"><a name="content">content</a></div><script>
     describe("Scrolling", function() {
         it("with random scroll", function (done) {
             $(window).scrollTop(123);
@@ -64,6 +48,4 @@
     mocha.suite.afterAll(function() {
         document.body.setAttribute('data-complete', 'true');
     });
-</script>
-</body>
-</html>
+</script></body></html>

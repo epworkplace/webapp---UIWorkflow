@@ -1540,12 +1540,12 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="quote-list-item selected-in-list">
+                                <tr class="quote-list-item">
                                     <td class="col-md-4 quote-client">
                                         <div class="row df-ac full-width">
                                             <div class="col-md-1 quote-select-radio">
                                                 <label for="" class="radio">
-                                                    <input type="radio" id="missionQuote02" checked data-toggle="radio" name="quotePrice" value="option2">
+                                                    <input type="radio" id="missionQuote02" data-toggle="radio" name="quotePrice" value="option2">
                                                 </label>
                                             </div>
                                             <div class="col-md-11 quote-client-select text-left">
@@ -2542,7 +2542,13 @@ function detectVerticalScroll(){
 detectVerticalScroll();
 
 // Browse mission modal list selection
+<<<<<<< HEAD
 $(document).on('click', ".quote-select-radio .radio", function(e){
+=======
+
+$(document).on('click', ".quote-select-radio .radio", function(e){
+      // e.stopPropagation();
+>>>>>>> eebdfd486c593f10b9ea16f5a0c24c4248cba683
       var listContainer = '.quote-list-container';
       var thisSiblings = $(this).parents('.quote-list-item').siblings();
       var thisListItem = $(this).parents('.quote-list-item');
@@ -2555,7 +2561,10 @@ $(document).on('click', ".quote-select-radio .radio", function(e){
             thisListItem.addClass('selected-in-list');
         }
     });
+<<<<<<< HEAD
 
+=======
+>>>>>>> eebdfd486c593f10b9ea16f5a0c24c4248cba683
 
 });
 
