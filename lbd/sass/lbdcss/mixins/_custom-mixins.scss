@@ -28,6 +28,18 @@
     border-top: $divider-width $style $color;
 }
 
+// Buttons
+@mixin custom-btn($bg-color, $bg-hover, $color:#fff){
+    width: 48.5% !important;
+    color: $color !important;
+    background: $bg-color !important;
+    border: 1px solid $bg-color !important;
+    &:hover{
+        background: $bg-hover !important;
+        border: 1px solid $bg-hover !important;
+    }
+}
+
 /**
 * Placeholder selector styles
 */
