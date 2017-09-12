@@ -28,68 +28,23 @@
 
 // button with 48% styles
 .btn-yes {
-  width: 48.5% !important;
-  color: #fff !important;
-  background: #69A1FF !important;
-  border: 1px solid #69A1FF !important;
-
-  &:hover {
-    color: #fff !important;
-    background: #447DF7 !important;
-    border: 1px solid #447DF7 !important;
-  }
+	@include custom-btn($yes, $yes-hover);
 }
 
 .btn-no {
-  width: 48.5% !important;
-  color: #fff !important;
-  background: #a9a9a9 !important;
-  border: 1px solid #a9a9a9 !important;
-
-  &:hover {
-    color: #fff !important;
-    background: #353F53 !important;
-    border: 1px solid #353F53 !important;
-  }
+	@include custom-btn($no, $main);
 }
 
 .btn-disapprove {
-  width: 48.5% !important;
-  color: #fff !important;
-  background: #ee0a5f !important;
-  border: 1px solid #ee0a5f !important;
-
-  &:hover {
-    color: #fff !important;
-    background: #b70a4a !important;
-    border: 1px solid #b70a4a !important;
-  }
+	@include custom-btn($delete, $delete-hover); 
 }
 
 .btn-confirm {
-  width: 48.5% !important;
-  color: #fff !important;
-  background: #353f53 !important;
-  border: 1px solid #353f53 !important;
-
-  &:hover {
-    color: #fff !important;
-    background: #9a9fa9 !important;
-    border: 1px solid #9a9fa9 !important;
-  }
+	@include custom-btn($main, $not-started);
 }
 
 .btn-download {
-  width: 48.5% !important;
-  color: #fff !important;
-  background: #fec500 !important;
-  border: 1px solid #fec500 !important;
-
-  &:hover {
-    color: #fff !important;
-    background: #cea000 !important;
-    border: 1px solid #cea000 !important;
-  }
+	@include custom-btn($default-bg, $default-bg-hover);	
 }
 
 // button styles ends
@@ -119,6 +74,14 @@
 // full width
 .full-width {
   width: 100% !important;
+}
+.auto-width{
+	width: auto !important;
+}
+
+// background color classes
+.bg-yes{
+	background: $yes !important;
 }
 
 // background-highlight styles

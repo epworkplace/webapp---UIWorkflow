@@ -11,16 +11,24 @@ $border-color: #D7D9DC;
 /* Background-colors */
 
 $default-bg: #fec500;
+$default-bg-hover: #cea000;
 $ongoning-bg: #11BFE3;
 $to-validate: #FFA534;
 $validate: #FF6F00;
 $closed: #78b414;
 $delete: #ee0a5f;
+$delete-hover: #b70a4a;
 $not-started: #9A9FA9;
 $paused: $main;
 $senior: #FB8C00;
 $junior: #3F51B5;
 $beginner: #388E3C;
+$yes: #69A1FF;
+$yes-hover: #447DF7;
+$no: #a9a9a9;
+$no-hover: $main;
+$disapprove: $delete;
+$disapprove-hover: #b70a4a;
 
 /* modal colors */
 $highlight-bg: #f3f5f7;

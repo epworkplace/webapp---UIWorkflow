@@ -188,6 +188,29 @@
 
 <!-- @include _partials/_all-js-files.html -->
 
+<script>
+$(document).ready(function(){
+    
+    /* Add new website to the list */
+    
+    $(document).on('click', ".list-item .add-new-website", function(e){
+        e.stopPropagation();
+        $('.list-item.add-website').show();
+        $(this).parents('.list-item').hide();
+    });
+    $(document).on('click', "#updateNewWebsite", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var addedWebsite = $(this).parents('.input-group').find('input').val();
+        var addedToList = '<li class="list-item card col-md-6"><label class="checkbox primary-font"><span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox">' + addedWebsite + '</label></li>';
+        $( addedToList ).insertBefore( $('.add-new-website').parents('.list-item') );
+        $('.add-new-website').parents('.list-item').show();
+        $(this).parents('.list-item.add-website').hide();
+    });
+
+});
+</script>
+
 </body>
 
 </html>
