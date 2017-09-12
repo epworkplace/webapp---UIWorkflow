@@ -2,7 +2,6 @@
  var
 	gulp = require('gulp'),
   chokidar = require('chokidar'),
-	csso = require('csso'),
 	del = require('del'),
 	pkg = require('./package.json'),
 	$ = require('gulp-load-plugins')({ lazy: true }),
@@ -81,6 +80,14 @@ var
     // filename: 'main.js'
   },
 
+  filesFilters = {
+    htmlFilter : $.filter(['**/*.html', '**/*.md'], {restore: true}),
+    cssFilter : $.filter(['**/*.css'], {restore: true}),
+    jsFilter : $.filter(['**/*.js'], {restore: true}),
+    jsonFilter : $.filter(['**/*.json'], {restore: true}),
+    imageFilter : $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true})
+  },
+
 	syncOpts = {
 		server: {
 			baseDir: dest,
@@ -104,6 +111,7 @@ var
 // show build type
 console.log(pkg.name + ' ' + pkg.version + ', ' + (devBuild ? 'development' : 'production') + ' build');
 
+// Clean tasks
 // clean the build folder
 gulp.task('clean', function() {
 	del([
@@ -111,6 +119,29 @@ gulp.task('clean', function() {
 	]);
 });
 
+gulp.task('clean-html', function() {
+  del([
+    dest + '**/*.html'
+  ]);
+});
+
+gulp.task('clean-css', function() {
+  del([
+    dest + 'lbd/css/**/*'
+  ]);
+});
+
+gulp.task('clean-js', function() {
+  del([
+    dest + 'lbd/js/**/*'
+  ]);
+});
+
+gulp.task('clean-jslib', function() {
+  del([
+    dest + 'lbd/lib/**/*'
+  ]);
+});
 
 // build HTML files
 gulp.task('html', function() {
@@ -190,37 +221,67 @@ gulp.task('sass', ['fonts'], function() {
 
 // js tasks
 gulp.task('js', function() {
-	if (!devBuild) {
+  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
+	if (devBuild) {
 		return gulp.src(js.in)
-			.pipe($.newer(js.out))
-			// .pipe($.jshint())
-			// .pipe($.jshint.reporter('default'))
-			// .pipe($.jshint.reporter('fail'))
-			.pipe(gulp.dest(js.out));
+			
+      // .pipe($.concat(js.filename))
+      .pipe($.size({ title: 'JS in '}))
+      .pipe($.newer(js.out))
+      .pipe($.deporder())
+      .pipe($.stripDebug())
+      .pipe(jsFilter)
+      .pipe($.uglify())
+      .pipe(jsFilter.restore)
+      .pipe($.size({ title: 'JS out '}))
+      .pipe(gulp.dest(js.out));
 	}
 	else {
 		del([
 			dest + 'lbd/js/*'
 		]);
 		return gulp.src(js.in)
-			.pipe($.deporder())
-			// .pipe($.concat(js.filename))
-			.pipe($.size({ title: 'JS in '}))
-			.pipe($.stripDebug())
-			// .pipe($.uglify())
-			.pipe($.size({ title: 'JS out '}))
-			.pipe(gulp.dest(js.out));
+      .pipe($.newer(js.out))
+      // .pipe($.jshint())
+      // .pipe($.jshint.reporter('default'))
+      // .pipe($.jshint.reporter('fail'))
+      .pipe(gulp.dest(js.out));
 	}
 });
 
 // copy js libraries
 gulp.task('jslib', function() {
+  var htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
+      cssFilter = $.filter(['**/*.css'], {restore: true}),
+      imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
+      jsonFilter = $.filter(['**/*.json'], {restore: true}),
+      jsFilter = $.filter(['**/*.js'], {restore: true});
   if (devBuild) {
     return gulp.src(jsLibs.in)
+      .pipe($.size({title: 'jsLibs in '}))
       .pipe($.newer(jsLibs.out))
+      .pipe(jsFilter)
+      // .pipe($.babel())
+      // .pipe($.regenerator())
+      .pipe($.uglify())
+      .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
+      .pipe(jsFilter.restore)
+      .pipe(jsonFilter)
+      .pipe($.jsonMinify())
+      .pipe(jsonFilter.restore)
+      .pipe(cssFilter)
+      .pipe($.cleanCss())
+      .pipe(cssFilter.restore)
+      .pipe(htmlFilter)
+      .pipe($.htmlclean())
+      .pipe(htmlFilter.restore)
+      .pipe(imageFilter)
+      .pipe($.imagemin())
+      .pipe(imageFilter.restore)
       // .pipe($.jshint())
       // .pipe($.jshint.reporter('default'))
       // .pipe($.jshint.reporter('fail'))
+      .pipe($.size({title: 'jsLibs out '}))
       .pipe(gulp.dest(jsLibs.out));
   }
   else {
@@ -339,6 +400,6 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'js', 'jslib', 'watch', 'serve']);
+gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'jslib', 'js', 'watch', 'serve']);
 
 // gulp.task('default', ['serve']);

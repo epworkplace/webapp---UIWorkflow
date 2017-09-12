@@ -1,17 +1,1 @@
-function ImageContainer(src, cors) {
-    this.src = src;
-    this.image = new Image();
-    var self = this;
-    this.tainted = null;
-    this.promise = new Promise(function(resolve, reject) {
-        self.image.onload = resolve;
-        self.image.onerror = reject;
-        if (cors) {
-            self.image.crossOrigin = "anonymous";
-        }
-        self.image.src = src;
-        if (self.image.complete === true) {
-            resolve(self.image);
-        }
-    });
-}
+function ImageContainer(i,e){this.src=i,this.image=new Image;var n=this;this.tainted=null,this.promise=new Promise(function(a,m){n.image.onload=a,n.image.onerror=m,e&&(n.image.crossOrigin="anonymous"),n.image.src=i,!0===n.image.complete&&a(n.image)})}

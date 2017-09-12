@@ -2,5 +2,5 @@ if (typeof(document) === "undefined" || typeof(Object.create) !== "function" || 
     (window || module.exports).html2canvas = function() {
         return Promise.reject("No canvas support");
     };
-    return;
+    // return;
 }

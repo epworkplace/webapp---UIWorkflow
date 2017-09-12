@@ -1,13 +1,4 @@
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Mocha Tests</title>
-    <link rel="stylesheet" href="lib/mocha.css" />
-    <script src="../../dist/html2canvas.js"></script>
-    <script src="../assets/jquery-1.6.2.js"></script>
-    <script src="lib/expect.js"></script>
-    <script src="lib/mocha.js"></script>
-    <style>
+<html><head><meta charset="utf-8"><title>Mocha Tests</title><link rel="stylesheet" href="lib/mocha.css"/><script src="../../dist/html2canvas.js"></script><script src="../assets/jquery-1.6.2.js"></script><script src="lib/expect.js"></script><script src="lib/mocha.js"></script><style>
         #block2 {
             background: red;
         }
@@ -15,14 +6,7 @@
         .my-css-class #block2 {
             background: green;
         }
-    </style>
-</head>
-<body>
-<div id="mocha"></div>
-<script>mocha.setup('bdd')</script>
-<div style="background: red; width: 200px; height:200px;" id="block"></div>
-<div style="width: 200px; height:200px;" id="block2"></div>
-<script>
+    </style></head><body><div id="mocha"></div><script>mocha.setup('bdd')</script><div style="background: red; width: 200px; height:200px;" id="block"></div><div style="width: 200px; height:200px;" id="block2"></div><script>
     describe("options.onclone", function() {
         it("with a function", function(done) {
             html2canvas(document.querySelector("#block"), {onclone: function(document) {
@@ -92,6 +76,4 @@
     mocha.suite.afterAll(function() {
         document.body.setAttribute('data-complete', 'true');
     });
-</script>
-</body>
-</html>
+</script></body></html>
