@@ -273,7 +273,30 @@
                                 </div>
                             </div>
                             <div class="col-md-6 middle-column-container">
-                                <div class="col-md-12" style="background-color: #fff; height: 100vh;">xxx</div>
+                                <div class="col-md-12 middle-column">
+                                    <div class="row">
+                                        <div class="col-md-12 card status-update-container">
+                                            <div class="col-md-2 user-image">
+                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                            </div>
+                                            <div class="col-md-11 status-update-text">
+                                                <textarea id="statusUpdate" class="form-control" placeholder="Say something..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="filter-title-flip-container">
+                                            <div class="row">
+                                                <div class="col-md-12 feed-title-container">
+                                                    <div class="row">
+                                                        <div class="col-md-10 feed-title">Comments &amp; activities</div>
+                                                        <a href="javascript:;" class="col-md-2">+ Add filters</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-3 rightside-column-container">
                                 <div class="col-md-12 rightside-column">
@@ -503,7 +526,16 @@
     <script src="lbd/js/custom.js"></script>
     <script src="lbd/lib/TimePicki-master/js/timepicki.js"></script>
     <link href="lbd/lib/TimePicki-master/css/timepicki.css" rel="stylesheet" type="text/css" />
+    <!--Auto Resize Textarea -->
+    <script src="lbd/js/jquery-ns-autogrow.min.js"></script>
     <script type="text/javascript">
+        /*Auto resize textarea*/
+        $(document).ready(function() {
+            $('#statusUpdate').autogrow({vertical: true, horizontal: false});
+        });
+    </script>
+    <script type="text/javascript">
+        /*Note check strike*/
         $('.note-check .checkbox').click(function() {
             if ($(this).hasClass('checked')) {
                 $(this).parents('.note-list').find('.note-subject').removeClass('striked');
