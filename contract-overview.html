@@ -1045,6 +1045,103 @@
                                         <div class="tab-content-container">
                                            <div class="col-md-12 client-content-container">
                                                 <div class="row">
+                                                    <div class="col-md-12 add-new-card">
+                                                        <a href="javascript:;" class="add-card">
+                                                            <i class="material-icons">add</i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="card-section-list">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="col-md-12 card card-mission quote-mission-creation">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="col-md-1 check">
+                                                                                    <label class="checkbox">
+                                                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="col-md-1 list-image-container">
+                                                                                    <div class="list-image empty-image" id="" data-value="60"></div>
+                                                                                </div>
+                                                                                <div class="col-md-6 list-head-container list-head-quote-mission-creation">
+                                                                                    <div class="header">
+                                                                                        <label>Mission name</label>
+                                                                                        <input type="text" class="form-control" value="" placeholder="Type title here">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a class="col-md-1 pull-right delete-create-mission" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Delete">
+                                                                                    <i class="material-icons">delete</i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 mission-type-creation">
+                                                                                <div class="col-md-4">
+                                                                                    <select name="" class="selectpicker" title="Service">
+                                                                                        <option>Service 1</option>
+                                                                                        <option>Service 2</option>
+                                                                                        <option>Service 3</option>
+                                                                                        <option>Service 4</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <select name="" class="selectpicker" title="Mission type">
+                                                                                        <option>Mission type 1</option>
+                                                                                        <option>Mission type 2</option>
+                                                                                        <option>Mission type 3</option>
+                                                                                        <option>Mission type 4</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <select name="" class="selectpicker" title="Product">
+                                                                                        <option>Product 1</option>
+                                                                                        <option>Product 2</option>
+                                                                                        <option>Product 3</option>
+                                                                                        <option>Product 4</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="col-md-5">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-6">
+                                                                                            <select class="chosen-default flags">
+                                                                                                <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
+                                                                                                <option data-img-src="lbd/img/flag/fr.gif">FR</option>
+                                                                                                <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
+                                                                                                <option data-img-src="lbd/img/flag/sp.gif">ES</option>
+                                                                                                <option data-img-src="lbd/img/flag/pol.gif">PO</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="col-md-6 flags-to">
+                                                                                            <select class="chosen-default flags">
+                                                                                                <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
+                                                                                                <option data-img-src="lbd/img/flag/fr.gif">FR</option>
+                                                                                                <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
+                                                                                                <option data-img-src="lbd/img/flag/sp.gif">ES</option>
+                                                                                                <option data-img-src="lbd/img/flag/pol.gif">PO</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4 pull-right">
+                                                                                    <button type="" data-toggle="modal" data-target="#createQuoteMissionModal" class="btn btn-fill btn-yes pull-right">Edit Details</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="card-section-list">
                                                             <ul>
@@ -1472,11 +1569,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="col-md-12 add-mission">
-                                                                    <a href="javascript:;" class="card add-card">
-                                                                        <i class="material-icons">add</i>
-                                                                    </a>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -1532,6 +1624,10 @@
 <!-- @include _partials/_contract-turnover-evolution-modal.html -->
 <!-- Edit Overview modal -->
 <!-- @include _partials/_contract-edit-overview-modal.html -->
+<!-- Quote Create Quote mission modal -->
+<!-- @include _partials/_quote-create-quote-mission-modal.html -->
+<!-- Quote Browse mission modal -->
+<!-- @include _partials/_quote-browse-mission-modal.html -->
 <!-- Modals Ends -->
 
 </body>
@@ -1609,7 +1705,95 @@
     <!-- Custom JS -->
     <script src="lbd/js/custom.js"></script> 
 
+    <!-- Bootstraptable for mission modal -->
+    <script>
+    var $table = $('#mission-quote-table');
+
+    function operateFormatter(value, row, index) {
+    return [
+    '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">',
+        '<i class="fa fa-image"></i>',
+    '</a>',
+    '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
+        '<i class="fa fa-edit"></i>',
+    '</a>',
+    '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
+        '<i class="fa fa-remove"></i>',
+    '</a>'
+    ].join('');
+    }
+    $().ready(function() {
+        window.operateEvents = {
+            'click .view': function(e, value, row, index) {
+                info = JSON.stringify(row);
+                swal('You click view icon, row: ', info);
+                console.log(info);
+            },
+            'click .edit': function(e, value, row, index) {
+                info = JSON.stringify(row);
+                swal('You click edit icon, row: ', info);
+                console.log(info);
+            },
+            'click .remove': function(e, value, row, index) {
+                console.log(row);
+                $table.bootstrapTable('remove', {
+                    field: 'id',
+                    values: [row.id]
+                });
+            }
+        };
+        $table.bootstrapTable({
+            toolbar: ".toolbar",
+            clickToSelect: true,
+            showRefresh: true,
+            search: true,
+            showToggle: true,
+            showColumns: true,
+            pagination: false,
+            searchAlign: 'left',
+            pageSize: 5,
+            clickToSelect: false,
+            pageList: [5, 10, 25, 50, 100],
+            formatShowingRows: function(pageFrom, pageTo, totalRows) {
+                //do nothing here, we don't want to show the text "showing x of y from..."
+            },
+            formatRecordsPerPage: function(pageNumber) {
+                return pageNumber + " rows visible";
+            },
+            icons: {
+                refresh: 'fa fa-refresh',
+                toggle: 'fa fa-th-list',
+                columns: 'fa fa-columns',
+                detailOpen: 'fa fa-plus-circle',
+                detailClose: 'fa fa-minus-circle'
+            }
+        });
+        //activate the tooltips after the data table is initialized
+        $('[rel="tooltip"]').tooltip();
+        $(window).resize(function() {
+            $table.bootstrapTable('resetView');
+        });
+    });
+    </script>
+
     <script type="text/javascript">
+
+    // Browse mission modal list selection
+    $(document).on('click', ".quote-select-radio .radio", function(e){
+      var listContainer = '.quote-list-container';
+      var thisSiblings = $(this).parents('.quote-list-item').siblings();
+      var thisListItem = $(this).parents('.quote-list-item');
+      var checkedRadio = thisListItem.find('.radio');
+        if ($(this).hasClass('checked')) {
+            thisListItem.addClass('selected-in-list');
+            thisSiblings.removeClass('selected-in-list');
+        } else {
+            thisSiblings.removeClass('selected-in-list');
+            thisListItem.addClass('selected-in-list');
+        }
+    });
+
+
   (function(window) {
     function triggerCallback(e, callback) {
       if(!callback || typeof callback !== 'function') {
