@@ -525,6 +525,7 @@
             .feeds-main-container {
                 .feeds-container {
                     padding: 15px;
+                    margin-bottom: 10px;
 
                     .feeds-header {
                         display: -webkit-box;
@@ -533,6 +534,7 @@
                         display: -webkit-flex;
                         display: flex;
                         align-items: center;
+                        margin-bottom: 10px;
 
                         .profile-image {
                             width: 40px;
@@ -547,9 +549,11 @@
                         .profile-name {
                             color: #353f53;
                             font-weight: 600;
+                            font-size: 16px;
 
                             span {
                                 display: block;
+                                font-size: 14px;
                                 font-weight: 400;
                                 color: #7d889a;
                             }
@@ -559,9 +563,147 @@
                             padding: 0;
                             text-align: right;
 
-                            a {}
+                            a {
+                                color: #d7d9dc;
+                            }
                         }
                     }
+
+                    .feeds-comments-container {
+                        .comments-section {
+                            .user-image {
+                                width: 40px;
+                                padding: 0;
+
+                                img {
+                                    display: block;
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    .feeds-comments-container {
+                        background: #f7f9fa;
+                        border-radius: 4px;
+                        padding: 15px 0 15px 15px;
+                        height: 180px;
+
+                        ul {
+                            padding: 0;
+                            margin: 0;
+                            list-style-type: none;
+
+                            li {
+                                @include clearfix;
+
+                                margin-bottom: 15px;
+                                border-bottom: 2px solid #edeff1;
+                                padding-bottom: 15px;
+
+                                .comments-section {
+                                    .comment-container {
+                                        .user-name {
+                                            color: #353f53;
+                                            font-weight: 600;
+                                        }
+
+                                        .comment {
+                                            span.hashTag, span.atMention {
+                                                color: #447DF7;
+                                                text-decoration: underline;
+                                            }
+                                        }
+                                    }
+
+                                    .comment-date {
+                                        font-size: 12px;
+                                        padding-right: 0;
+                                        text-align: right;
+                                    }
+                                }
+
+                                &:last-of-type {
+                                    border-bottom: 0;
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .reply-link {
+                        margin-top: 10px;
+
+                        a {
+                            color: #353f53;
+                            text-decoration: underline;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.comment-reply-message-modal {
+    .message-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .message-container {
+        .message-profile {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+
+            .user-image {
+                width: 40px;
+                padding: 0;
+            }
+
+            .message {
+                width: 92.888%;
+                padding-right: 0;
+
+                .form-control {
+                    border: 0;
+                }
+
+                .emoji-picker-icon {
+                    right: auto;
+                    top: auto;
+                    left: -28px;
+                    bottom: -60px;
+                    color: #d7d9dc;
+                }
+
+                .emoji-menu {
+                    right: auto;
+                    left: -40px;
+                    bottom: -290px;
+                }
+            }
+        }
+    }
+
+    .send-reply-comment {
+        button {
+            width: 170px !important;
+
+            .btn-label {
+                i {
+                    font-size: 20px;
+                    position: relative;
+                    top: 2px;
+                    margin-right: 10px;
                 }
             }
         }

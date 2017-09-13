@@ -352,61 +352,63 @@
         }
     }
 
-    .type-date {
-        margin-bottom: 15px;
+    form {
+        .type-date {
+            margin-bottom: 15px;
 
-        .card-type {
-            padding-left: 0;
+            .card-type {
+                padding-left: 0;
+
+                button {
+                    border: 1px solid #eaebed;
+                    height: 35px;
+                    padding: 8px;
+                    width: 120px;
+                }
+            }
+
+            .card-due {
+                padding-right: 0;
+
+                input[type='text'] {
+                    border: 1px solid #eaebed;
+                    height: 35px;
+                }
+
+                .bootstrap-datetimepicker-widget {
+                    z-index: 99999 !important;
+                    position: relative !important;
+                    top: 0px !important;
+                }
+            }
+        }
+
+        .new-card-title {
+            label {
+                text-align: center;
+                color: #a3a3a3;
+                width: 100%;
+                display: block;
+                font-weight: 400;
+                font-size: 12px;
+            }
+
+            textarea {
+                overflow: hidden;
+                width: 100%;
+                color: #353f53;
+                font-size: 18px;
+                display: block;
+                border: transparent;
+                resize: none;
+                text-align: center;
+            }
 
             button {
-                border: 1px solid #eaebed;
-                height: 35px;
-                padding: 8px;
-                width: 120px;
+                margin-top: 5px;
+                width: 100%;
+                font-weight: 600;
             }
-        }
-
-        .card-due {
-            padding-right: 0;
-
-            input[type='text'] {
-                border: 1px solid #eaebed;
-                height: 35px;
-            }
-
-            .bootstrap-datetimepicker-widget {
-                z-index: 99999 !important;
-                position: relative !important;
-                top: 0px !important;
-            }
-        }
-    }
-
-    .new-card-title {
-        label {
-            text-align: center;
-            color: #a3a3a3;
-            width: 100%;
-            display: block;
-            font-weight: 400;
-            font-size: 12px;
-        }
-
-        textarea {
-            overflow: hidden;
-            width: 100%;
-            color: #353f53;
-            font-size: 18px;
-            display: block;
-            border: transparent;
-            resize: none;
-            text-align: center;
-        }
-
-        button {
-            margin-top: 5px;
-            width: 100%;
-            font-weight: 600;
         }
     }
 }
