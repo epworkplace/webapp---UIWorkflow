@@ -231,7 +231,34 @@
             }, 500)
         });
     });
-</script>                   
+</script>
+
+<script>
+$(document).ready(function(){
+
+    /* Add new answer to the list */
+
+    $(document).on('click', ".add-a-new-answer", function(e){
+        e.stopPropagation();
+        $('.add-new-answer-input').show();
+        $(this).parents('.add-new-answer').hide();
+    });
+    $(document).on('click', "#addNewAnswer", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var addedAnswer = $(this).parents('.input-group').find('input').val();
+        var addedToList = '<div class="col-md-6 form-group"><input class="form-control" id="clientName" placeholder="" type="text" value="'+ addedAnswer + '"></div>';
+        if(addedAnswer){
+          $( addedToList ).insertBefore( $('.add-new-answer') );
+        }
+        $('.add-new-answer').show();
+        $(this).parents('.add-new-answer-input').hide();
+    });
+
+
+});
+</script>
+
 </body>
 
 </html>
