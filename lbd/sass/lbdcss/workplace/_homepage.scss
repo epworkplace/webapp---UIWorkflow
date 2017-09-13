@@ -1,14 +1,14 @@
 .homepage-wrap-page {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
 
     .leftside-column-container {
         position: relative;
         padding: 0;
-        min-height: 100%;
+        min-height: 100vh;
         background: #FCFDFD;
         box-shadow: 2px 0px 5px 3px #edeff1;
 
@@ -103,6 +103,28 @@
                         a {
                             width: 141px !important;
                         }
+                    }
+                }
+
+                .create-event-container {
+                    .event-dates {
+                        margin-bottom: 15px;
+
+                        .event-date:nth-of-type(1) {
+                            padding-right: 5px;
+                        }
+
+                        .event-date:last-of-type {
+                            padding-left: 5px;
+                        }
+                    }
+
+                    .event-subject {
+                        margin-bottom: 15px;
+                    }
+
+                    .create-event {
+                        text-align: center;
                     }
                 }
 
@@ -438,6 +460,7 @@
             .filter-title-flip-container {
                 border-top: 2px solid #e9ebee;
                 padding-top: 15px;
+                margin-bottom: 20px;
 
                 .feed-title-container {
                     .feed-title {
@@ -495,6 +518,49 @@
                     button {
                         width: 170px !important;
                         margin-left: 10px;
+                    }
+                }
+            }
+
+            .feeds-main-container {
+                .feeds-container {
+                    padding: 15px;
+
+                    .feeds-header {
+                        display: -webkit-box;
+                        display: -moz-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        align-items: center;
+
+                        .profile-image {
+                            width: 40px;
+                            padding: 0;
+
+                            img {
+                                display: block;
+                                max-width: 100%;
+                            }
+                        }
+
+                        .profile-name {
+                            color: #353f53;
+                            font-weight: 600;
+
+                            span {
+                                display: block;
+                                font-weight: 400;
+                                color: #7d889a;
+                            }
+                        }
+
+                        .feed-nav {
+                            padding: 0;
+                            text-align: right;
+
+                            a {}
+                        }
                     }
                 }
             }
