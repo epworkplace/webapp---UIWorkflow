@@ -137,7 +137,7 @@
                                                         <span class="icon-bar"></span>
                                                         <span class="icon-bar"></span>
                                                     </button>
-                                                    <a class="navbar-brand" href="#">Quote</a>  
+                                                    <a class="navbar-brand" href="#">Quote</a>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -214,7 +214,7 @@
                                                     <li>
                                                         <div class="select-group">
                                                             <div class="form-group owners">
-                                                            <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Owners" id="owners">     
+                                                            <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Owners" id="owners">
                                                                 <option data-hidden="true"></option>
                                                                     <option value="0">0</option>
                                                                     <option value="1">1</option>
@@ -3089,7 +3089,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-8">
                                 <label for="quoteName">
                                     Quote name
@@ -3175,32 +3175,32 @@
                                         <label class="checkbox primary-font">
                                             <input data-toggle="checkbox" type="checkbox"/>
                                             wwww.webedia-group.com
-                                        </label> 
+                                        </label>
                                     </li>
                                     <li class="list-item card col-md-6">
                                         <label class="checkbox primary-font">
                                             <input data-toggle="checkbox" type="checkbox"/>
                                             wwww.webedia-group.com
-                                        </label> 
+                                        </label>
                                     </li>
                                     <li class="list-item card col-md-6">
                                         <label class="checkbox primary-font">
                                             <input data-toggle="checkbox" type="checkbox"/>
                                             wwww.webedia-group.com
-                                        </label> 
+                                        </label>
                                     </li>
                                     <li class="list-item card col-md-6">
                                         <label class="checkbox primary-font">
                                             <input data-toggle="checkbox" type="checkbox"/>
                                             wwww.webedia-group.com
-                                        </label> 
+                                        </label>
                                     </li>
-                                    <li class="list-item card col-md-6">
-                                        <label for=""><a href="javascript:;" class="add-new-website">+ Add a website</a></label>
+                                    <li class="list-item card col-md-6 add-new-website">
+                                        <label for="" class="full-width"><a href="javascript:;" class="add-new-website">+ Add a website</a></label>
                                     </li>
                                     <li class="list-item card col-md-12 add-website">
                                         <div class="input-group d-flex">
-                                            <input type="text" placeholder="Add new website here" class="form-control" value=""/>
+                                            <input type="text" placeholder="Add new website here" required class="form-control" value=""/>
                                             <button type="" id="updateNewWebsite" class="btn btn-fill btn-wd auto-width btn-yes">Add</button>
                                         </div>
                                         <!-- <div class="col-md-8">
@@ -3233,6 +3233,7 @@
         </div>
     </div>
 </div>
+
 <!-- Create new client modal -->
 <div aria-labelledby="create-new-client-modal" class="modal fade create-new-client-modal" id="create-new-client-modal" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-lg" role="document">
@@ -3542,9 +3543,9 @@
 
 <script>
 $(document).ready(function(){
-    
+
     /* Add new website to the list */
-    
+
     $(document).on('click', ".list-item .add-new-website", function(e){
         e.stopPropagation();
         $('.list-item.add-website').show();
@@ -3555,9 +3556,23 @@ $(document).ready(function(){
         e.stopPropagation();
         var addedWebsite = $(this).parents('.input-group').find('input').val();
         var addedToList = '<li class="list-item card col-md-6"><label class="checkbox primary-font"><span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox">' + addedWebsite + '</label></li>';
-        $( addedToList ).insertBefore( $('.add-new-website').parents('.list-item') );
+        if(addedWebsite){
+          $( addedToList ).insertBefore( $('.add-new-website').parents('.list-item') );
+        }
         $('.add-new-website').parents('.list-item').show();
         $(this).parents('.list-item.add-website').hide();
+    });
+
+    $(document).on('click', ".targeted-websites .checkbox", function(e){
+      e.stopPropagation();
+      // var thisSiblings = $(this).parents('.quote-list-item').siblings();
+      // var thisListItem = $(this).parents('.quote-list-item');
+      // var checkedRadio = thisListItem.find('.radio');
+        if ($(this).hasClass('checked')) {
+            $(this).parents('.list-item').addClass('selected-in-list')
+        } else {
+            $(this).parents('.list-item').removeClass('selected-in-list')
+        }
     });
 
 });
