@@ -1,1 +1,108 @@
-!function(){"use strict;";function e(e){return new a(function(r){var t=s.decode(e);new c(t).decodePixels(r)})}function r(e,r){for(var t=e.length,n=0,o=0;n<t;n++)r[n]-e[n]!=0&&o++;return 100-Math.round(o/e.length*1e4)/100}function t(e){return function(){return a.props({dataUrl:e.waitForElementByCss(".html2canvas",15e3).then(function(r){return e.execute("return arguments[0].toDataURL('image/png').substring(22)",[r])}),screenshot:e.takeScreenshot()})}}function n(t){return function(n){return a.all([e(n.dataUrl),e(n.screenshot)]).spread(r).then(function(e){return{testCase:t,accuracy:e,dataUrl:n.dataUrl,screenshot:n.screenshot}})}}function o(e,r,t){return t=t||0,u(e,r).timeout(6e4).catch(a.TimeoutError,function(){if(t<3)return console.log(h.violet,"Retry",t+1,r),o(e,r,t+1);throw new Error("Couldn't run test after 3 retries")})}function u(e,r){return a.resolve(e.then(f.loadTestPage(e,r,g)).then(t(e)).then(n(r))).cancellable()}require("wd"),require("http"),require("https"),require("url"),require("path");var s=require("base64-arraybuffer"),c=require("png-js"),a=require("bluebird"),i=(require("lodash"),require("humanize-duration")),l=require("fs"),f=require("./utils"),h=f.colors;a.promisifyAll(l);var g=8080;exports.tests=function(e,r){return(r?a.resolve([r]):f.getTests("tests/cases")).then(function(r){return a.map(e,function(e){var t=f.initBrowser(e),n=[e.browserName,e.version,e.platform].join("-"),u=0;return a.using(t,function(){return a.map(r,function(e,r,s){console.log(h.green,"STARTING","("+ ++u+"/"+s+")",n,e,h.clear);var c=Date.now();return o(t,e).then(function(e){console.log(h.green,"COMPLETE",i(Date.now()-c),"("+u+"/"+s+")",n,e.testCase.substring("tests/cases".length),e.accuracy.toFixed(2)+"%",h.clear)})},{concurrency:1}).settle().catch(function(e){throw console.log(h.red,"ERROR",n,e.message),e})})},{concurrency:3})})}}();
+(function(){
+    "use strict;";
+    var wd = require('wd'),
+        http = require("http"),
+        https = require("https"),
+        url = require("url"),
+        path = require("path"),
+        base64_arraybuffer = require('base64-arraybuffer'),
+        PNG = require('png-js'),
+        Promise = require('bluebird'),
+        _ = require('lodash'),
+        humanizeDuration = require("humanize-duration"),
+        fs = require("fs");
+
+    var utils = require('./utils');
+    var colors = utils.colors;
+
+    Promise.promisifyAll(fs);
+
+    var port = 8080;
+
+    function getPixelArray(base64) {
+        return new Promise(function(resolve) {
+            var arraybuffer = base64_arraybuffer.decode(base64);
+            (new PNG(arraybuffer)).decodePixels(resolve);
+        });
+    }
+
+    function calculateDifference(h2cPixels, screenPixels) {
+        var len = h2cPixels.length, index = 0, diff = 0;
+        for (; index < len; index++) {
+            if (screenPixels[index] - h2cPixels[index] !== 0) {
+                diff++;
+            }
+        }
+        return (100 - (Math.round((diff/h2cPixels.length) * 10000) / 100));
+    }
+
+    function captureScreenshots(browser) {
+        return function() {
+            return Promise.props({
+                dataUrl: browser.waitForElementByCss(".html2canvas", 15000).then(function(node) {
+                    return browser.execute("return arguments[0].toDataURL('image/png').substring(22)", [node]);
+                }),
+                screenshot: browser.takeScreenshot()
+            });
+        };
+    }
+
+    function analyzeResults(test) {
+        return function(result) {
+            return Promise.all([getPixelArray(result.dataUrl), getPixelArray(result.screenshot)]).spread(calculateDifference).then(function(accuracy) {
+                return {
+                    testCase: test,
+                    accuracy: accuracy,
+                    dataUrl: result.dataUrl,
+                    screenshot: result.screenshot
+                };
+            });
+        };
+    }
+
+    function runTestWithRetries(browser, test, retries) {
+        retries = retries || 0;
+        return runTest(browser, test)
+            .timeout(60000)
+            .catch(Promise.TimeoutError, function() {
+                if (retries < 3) {
+                    console.log(colors.violet, "Retry", (retries + 1), test);
+                    return runTestWithRetries(browser, test, retries + 1);
+                } else {
+                    throw new Error("Couldn't run test after 3 retries");
+                }
+            });
+    }
+
+    function runTest(browser, test) {
+        return Promise.resolve(browser
+            .then(utils.loadTestPage(browser, test, port))
+            .then(captureScreenshots(browser))
+            .then(analyzeResults(test))).cancellable();
+    }
+
+    exports.tests = function(browsers, singleTest) {
+        var path = "tests/cases";
+        return (singleTest ? Promise.resolve([singleTest]) : utils.getTests(path)).then(function(tests) {
+            return Promise.map(browsers, function(settings) {
+                var browser = utils.initBrowser(settings);
+                var name = [settings.browserName, settings.version, settings.platform].join("-");
+                var count = 0;
+                return Promise.using(browser, function() {
+                    return Promise.map(tests, function(test, index, total) {
+                        console.log(colors.green, "STARTING", "(" + (++count) + "/" + total + ")", name, test, colors.clear);
+                        var start = Date.now();
+                        return runTestWithRetries(browser, test).then(function(result) {
+                            console.log(colors.green, "COMPLETE", humanizeDuration(Date.now() - start), "(" + count + "/" + total + ")", name, result.testCase.substring(path.length), result.accuracy.toFixed(2) + "%", colors.clear);
+                        });
+                    }, {concurrency: 1})
+                        .settle()
+                        .catch(function(error) {
+                            console.log(colors.red, "ERROR", name, error.message);
+                            throw error;
+                        });
+                });
+            }, {concurrency: 3});
+        });
+    };
+})();

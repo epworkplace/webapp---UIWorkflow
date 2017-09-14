@@ -1,1 +1,612 @@
-!function(e,t,n){var a={BACKSPACE:8,TAB:9,RETURN:13,ESC:27,LEFT:37,UP:38,RIGHT:39,DOWN:40,COMMA:188,SPACE:32,HOME:36,END:35},o={defaultValue1:"",triggerChar:"#",onDataRequest:e.noop,minChars:2,allowRepeat:!1,showAvatars:!0,elastic:!0,defaultValue:"",onCaret:!1,classes:{autoCompleteItemActive:"active"},templates:{wrapper:t.template('<div class="mentions-input-box"></div>'),autocompleteList:t.template('<div class="mentions-autocomplete-list"></div>'),autocompleteListItem:t.template('<li datas-ref-id="<%= id %>" datas-ref-type="<%= type %>" datas-display="<%= display %>"><%= content %></li>'),autocompleteListItemAvatar:t.template('<img src="<%= avatar %>" />'),autocompleteListItemIcon:t.template('<div class="icon <%= icon %>"></div>'),mentionsOverlay:t.template('<div class="mentions"><div></div></div>'),mentionItemSyntax:t.template("[<%=value %>](<%= type %>:<%= id %>)"),mentionItemHighlight:t.template("<strong><span><%=value %></span></strong>")}},r={htmlEncode:function(e){return t.escape(e)},regexpEncode:function(e){return e.replace(/([.*+?^=!:${}()|\[\]\/\\])/g,"\\$1")},highlightTerm:function(e,t){return t||t.length?e.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)("+t+")(?![^<>]*>)(?![^&;]+;)","gi"),"<b>$1</b>"):e},setCaratPosition:function(e,t){if(e.createTextRange){var n=e.createTextRange();n.move("character",t),n.select()}else e.selectionStart?(e.focus(),e.setSelectionRange(t,t)):e.focus()},rtrim:function(e){return e.replace(/\s+$/,"")}},s=function(n){function s(){"true"!==(M=e(L)).attr("datas-mentions-input")&&(O=M.parent(),H=e(n.templates.wrapper()),M.wrapAll(H),H=O.find("> div.mentions-input-box"),M.attr("datas-mentions-input","true"),M.bind("keydown",T),M.bind("keypress",y),M.bind("click",b),M.bind("blur",w),navigator.userAgent.indexOf("MSIE 8")>-1?M.bind("propertychange",C):M.bind("input",C),n.elastic&&M.elastic())}function l(){(N=e(n.templates.autocompleteList())).appendTo(H),N.delegate("li","mousedown",x)}function c(){(D=e(n.templates.mentionsOverlay())).prependTo(H)}function d(){var e=h();t.each(F,function(t){var i=n.templates.mentionItemSyntax(t);e=e.replace(new RegExp(r.regexpEncode(t.value),"g"),i)});var i=e;t.each(F,function(e){var a=t.extend({},e,{value:e.value}),o=n.templates.mentionItemSyntax(a),s=n.templates.mentionItemHighlight(a);i=i.replace(new RegExp(r.regexpEncode(o),"g"),s)}),i=i.replace(/\n/g,"<br />"),i=i.replace(/ {2}/g,"&nbsp; "),M.data("messageText",e),M.trigger("updated"),D.find("div").html(i)}function p(){W=[]}function u(){var e=h();F=t.reject(F,function(t,n){return!t.value||-1==e.indexOf(t.value)}),F=t.compact(F)}function f(e){for(var i=h(),a=M[0].selectionStart,o=!1,s=!1,l=new RegExp("\\"+n.triggerChar+j,"gi");l.exec(i);)(!1===o||Math.abs(l.lastIndex-a)<o)&&(o=Math.abs(l.lastIndex-a),s=l.lastIndex);var c=s-j.length-1,u=s,f=i.substr(0,c),g=i.substr(u,i.length),m=(f+e.value).length+1;t.find(F,function(t){return t.id==e.id})||F.push(e),p(),j="",E();var v=f+n.triggerChar+e.value+" "+g;M.val(v),M.trigger("mention"),d(),M.focus(),r.setCaratPosition(M[0],m)}function h(){return e.trim(M.val())}function g(t){var n,i,a,o,r,s,l,c,d,p,u;if((d=t[0])&&e(d).is("textarea")&&null!=d.selectionEnd){for(l={position:"absolute",overflow:"auto",whiteSpace:"pre-wrap",wordWrap:"break-word",boxSizing:"content-box",top:0,left:-9999},p=0,u=(c=["boxSizing","fontFamily","fontSize","fontStyle","fontVariant","fontWeight","height","letterSpacing","lineHeight","paddingBottom","paddingLeft","paddingRight","paddingTop","textDecoration","textIndent","textTransform","width","word-spacing"]).length;p<u;p++)r=c[p],l[r]=e(d).css(r);return a=document.createElement("div"),e(a).css(l),e(d).after(a),i=document.createTextNode(d.value.substring(0,d.selectionEnd)),n=document.createTextNode(d.value.substring(d.selectionEnd)),o=document.createElement("span"),o.innerHTML="&nbsp;",a.appendChild(i),a.appendChild(o),a.appendChild(n),a.scrollTop=d.scrollTop,s=e(o).position(),e(a).remove(),s}}function m(t){var n,i,a,o,r,s,l,c,d,p,u;if((d=t[0])&&e(d).is("textarea")&&null!=d.selectionEnd){for(l={position:"absolute",overflow:"auto",whiteSpace:"pre-wrap",wordWrap:"break-word",boxSizing:"content-box",top:0,left:-9999},p=0,u=(c=["boxSizing","fontFamily","fontSize","fontStyle","fontVariant","fontWeight","height","letterSpacing","lineHeight","paddingBottom","paddingLeft","paddingRight","paddingTop","textDecoration","textIndent","textTransform","width","word-spacing"]).length;p<u;p++)r=c[p],l[r]=e(d).css(r);return a=document.createElement("div"),e(a).css(l),e(d).after(a),i=document.createTextNode(d.value.substring(0,d.selectionEnd)),n=document.createTextNode(d.value.substring(d.selectionEnd)),o=document.createElement("span"),o.innerHTML="&nbsp;",a.appendChild(i),a.appendChild(o),a.appendChild(n),a.scrollTop=d.scrollTop,s=e(o).offset(),e(a).remove(),s}}function v(){var t=e(M).offset().top,n=e("body").offset().top;e(window).scrollTop()>t&&e(window).scrollTop(t-n)}function x(t){var n=e(this);return f(P[n.attr("datas-uid")]),v(),!1}function b(e){p();var a=this.selectionStart,o=h().substring(" ",a),r=o.substring(o.lastIndexOf(" ")+1).toLowerCase();if(r.charAt(0)===n.triggerChar){var s=r;for(i=0;i<s.length;i++)W.push(s[i]);t.defer(t.bind(A,this,s))}}function w(e){E()}function C(e){d(),u();var i=t.lastIndexOf(W,n.triggerChar);i>-1&&(j=W.slice(i+1).join(""),j=r.rtrim(j),t.defer(t.bind(A,this,j)))}function y(e){if(e.keyCode!==a.BACKSPACE){var t=String.fromCharCode(e.which||e.keyCode);W.push(t)}}function T(n){if(n.keyCode===a.LEFT||n.keyCode===a.RIGHT||n.keyCode===a.HOME||n.keyCode===a.END)return t.defer(p),void(navigator.userAgent.indexOf("MSIE 9")>-1&&t.defer(d));{if(n.keyCode!==a.BACKSPACE){if(!N.is(":visible"))return!0;switch(n.keyCode){case a.DOWN:var i=null;return(i=n.keyCode===a.DOWN?B&&B.length?B.next():N.find("li").first():e(B).prev()).length&&I(i),!1;case a.RETURN:case a.TAB:if(B&&B.length)return B.trigger("mousedown"),!1}return!0}W=W.slice(0,-1+W.length)}}function E(){B=null,N.empty().hide()}function I(e){e.addClass(n.classes.autoCompleteItemActive),e.siblings().removeClass(n.classes.autoCompleteItemActive),B=e}function S(i,a){if(N.show(),!n.allowRepeat){var o=t.pluck(F,"value");a=t.reject(a,function(e){return t.include(o,e.name)})}if(a.length){N.empty();var s=e("<ul>").appendTo(N).hide();t.each(a,function(a,o){var l=t.uniqueId("mention_");P[l]=t.extend({},a,{value:a.name});var c=e(n.templates.autocompleteListItem({id:a.id,display:a.name,type:a.type,content:r.highlightTerm(a.display?a.display:a.name,i)})).attr("datas-uid",l);if(0===o&&I(c),n.showAvatars){e(a.avatar?n.templates.autocompleteListItemAvatar({avatar:a.avatar}):n.templates.autocompleteListItemIcon({icon:a.icon})).prependTo(c)}c=c.appendTo(s)}),N.show(),n.onCaret&&R(N,M),s.show()}else E()}function A(e){e&&e.length&&e.length>=n.minChars?n.onDataRequest.call(this,"search",e,function(t){S(e,t)}):E()}function R(e,t){var n=e.css("position");if("absolute"==n){var i=g(t),a=parseInt(t.css("line-height"),10)||18;e.css("width","15em"),e.css("left",i.left),e.css("top",a+i.top);var o=t.offset().left+t.width(),r=e.offset().left+e.width();o<=r&&e.css("left",Math.abs(e.position().left-(r-o)))}else if("fixed"==n){var s=m(t),a=parseInt(t.css("line-height"),10)||18;e.css("width","15em"),e.css("left",s.left+1e4),e.css("top",a+s.top)}}function k(e){F=[];for(var t,i=e,a=new RegExp("("+n.triggerChar+")\\[(.*?)\\]\\((.*?):(.*?)\\)","gi"),o=i;null!=(t=a.exec(i));)o=o.replace(t[0],t[1]+t[2]),F.push({id:t[4],type:t[3],value:t[2],trigger:t[1]});M.val(o),d()}var L,M,O,N,H,D,B,F=[],P={},W=[],j="";return n=e.extend(!0,{},o,n),{init:function(e){L=e,s(),l(),c(),k(n.defaultValue),n.prefillMention&&f(n.prefillMention)},val:function(e){t.isFunction(e)&&e.call(this,F.length?M.data("messageText"):h())},reset:function(){k()},reinit:function(){k(!1)},getMentions:function(e){t.isFunction(e)&&e.call(this,F)}}};e.fn.hashInput=function(n,i){var a=arguments;return"object"!=typeof n&&n||(i=n),this.each(function(){var o=e.data(this,"hashInput")||e.data(this,"hashInput",new s(i));return t.isFunction(o[n])?o[n].apply(this,Array.prototype.slice.call(a,1)):"object"!=typeof n&&n?void e.error("Method "+n+" does not exist"):o.init.call(this,this)})}}(jQuery,_);
+/*
+ * Mentions Input
+ * Version 1.0.2
+ * Written by: Kenneth Auchenberg (Podio)
+ *
+ * Using underscore.js
+ *
+ * License: MIT License - http://www.opensource.org/licenses/mit-license.php
+ */
+
+(function ($, _, undefined) {
+
+    // Settings
+    var KEY = { BACKSPACE : 8, TAB : 9, RETURN : 13, ESC : 27, LEFT : 37, UP : 38, RIGHT : 39, DOWN : 40, COMMA : 188, SPACE : 32, HOME : 36, END : 35 }; // Keys "enum"
+
+    //Default settings
+    var defaultSettings = {
+		defaultValue1  : '',
+        triggerChar   : '#', //Char that respond to event
+        onDataRequest : $.noop, //Function where we can search the data
+        minChars      : 2, //Minimum chars to fire the event
+        allowRepeat   : false, //Allow repeat mentions
+        showAvatars   : true, //Show the avatars
+        elastic       : true, //Grow the textarea automatically
+        defaultValue  : '',
+        onCaret       : false,
+        classes       : {
+            autoCompleteItemActive : "active" //Classes to apply in each item
+        },
+        templates     : {
+            wrapper                    : _.template('<div class="mentions-input-box"></div>'),
+            autocompleteList           : _.template('<div class="mentions-autocomplete-list"></div>'),
+            autocompleteListItem       : _.template('<li datas-ref-id="<%= id %>" datas-ref-type="<%= type %>" datas-display="<%= display %>"><%= content %></li>'),
+            autocompleteListItemAvatar : _.template('<img src="<%= avatar %>" />'),
+            autocompleteListItemIcon   : _.template('<div class="icon <%= icon %>"></div>'),
+            mentionsOverlay            : _.template('<div class="mentions"><div></div></div>'),
+            mentionItemSyntax          : _.template('[<%=value %>](<%= type %>:<%= id %>)'),
+            mentionItemHighlight       : _.template('<strong><span><%=value %></span></strong>')
+        }
+    };
+
+    //Class util
+    var utils = {
+	    //Encodes the character with _.escape function (undersocre)
+        htmlEncode       : function (str) {
+            return _.escape(str);
+        },
+        //Encodes the character to be used with RegExp
+        regexpEncode     : function (str) {
+            return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+        },
+	    highlightTerm    : function (value, term) {
+            if (!term && !term.length) {
+                return value;
+            }
+            return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<b>$1</b>");
+        },
+        //Sets the caret in a valid position
+        setCaratPosition : function (domNode, caretPos) {
+            if (domNode.createTextRange) {
+                var range = domNode.createTextRange();
+                range.move('character', caretPos);
+                range.select();
+            } else {
+                if (domNode.selectionStart) {
+                    domNode.focus();
+                    domNode.setSelectionRange(caretPos, caretPos);
+                } else {
+                    domNode.focus();
+                }
+            }
+        },
+	    //Deletes the white spaces
+        rtrim: function(string) {
+            return string.replace(/\s+$/,"");
+        }
+    };
+
+    //Main class of hashInput plugin
+    var HashInput = function (settings) {
+		//alert(settings.defaultValue1);
+        var domInput,
+            elmInputBox,
+            elmInputWrapper,
+            elmAutocompleteList,
+            elmWrapperBox,
+            elmMentionsOverlay,
+            elmActiveAutoCompleteItem,
+            mentionsCollection = [],
+            autocompleteItemCollection = {},
+            inputBuffer = [],
+            currentDataQuery = '';
+			
+
+	    //Mix the default setting with the users settings
+        settings = $.extend(true, {}, defaultSettings, settings );
+
+	    //Initializes the text area target
+        function initTextarea() {
+            elmInputBox = $(domInput); //Get the text area target
+			//alert(elmInputBox.value);
+            //If the text area is already configured, return
+            if (elmInputBox.attr('datas-mentions-input') === 'true') {
+                return;
+            }
+
+            elmInputWrapper = elmInputBox.parent(); //Get the DOM element parent
+            elmWrapperBox = $(settings.templates.wrapper());
+            elmInputBox.wrapAll(elmWrapperBox); //Wrap all the text area into the div elmWrapperBox
+            elmWrapperBox = elmInputWrapper.find('> div.mentions-input-box'); //Obtains the div elmWrapperBox that now contains the text area
+            elmInputBox.attr('datas-mentions-input', 'true'); //Sets the attribute data-mentions-input to true -> Defines if the text area is already configured
+            elmInputBox.bind('keydown', onInputBoxKeyDown); //Bind the keydown event to the text area
+            elmInputBox.bind('keypress', onInputBoxKeyPress); //Bind the keypress event to the text area
+            elmInputBox.bind('click', onInputBoxClick); //Bind the click event to the text area
+            elmInputBox.bind('blur', onInputBoxBlur); //Bind the blur event to the text area
+
+            if (navigator.userAgent.indexOf("MSIE 8") > -1) {
+                elmInputBox.bind('propertychange', onInputBoxInput); //IE8 won't fire the input event, so let's bind to the propertychange
+            } else {
+                elmInputBox.bind('input', onInputBoxInput); //Bind the input event to the text area
+            }
+
+            // Elastic textareas, grow automatically
+            if( settings.elastic ) {
+                elmInputBox.elastic();
+            }
+        }
+
+        //Initializes the autocomplete list, append to elmWrapperBox and delegate the mousedown event to li elements
+        function initAutocomplete() {
+            elmAutocompleteList = $(settings.templates.autocompleteList()); //Get the HTML code for the list
+            elmAutocompleteList.appendTo(elmWrapperBox); //Append to elmWrapperBox element
+            elmAutocompleteList.delegate('li', 'mousedown', onAutoCompleteItemClick); //Delegate the event
+        }
+
+        //Initializes the mentions' overlay
+        function initMentionsOverlay() {
+            elmMentionsOverlay = $(settings.templates.mentionsOverlay()); //Get the HTML code of the mentions' overlay
+            elmMentionsOverlay.prependTo(elmWrapperBox); //Insert into elmWrapperBox the mentions overlay
+        }
+		
+	    //Updates the values of the main variables
+        function updateValues() {
+            var syntaxMessage = getInputBoxValue(); //Get the actual value of the text area
+			
+            _.each(mentionsCollection, function (mention) {
+                var textSyntax = settings.templates.mentionItemSyntax(mention);
+                syntaxMessage = syntaxMessage.replace(new RegExp(utils.regexpEncode(mention.value), 'g'), textSyntax);	
+				
+            });
+
+            var mentionText = syntaxMessage; //Encode the syntaxMessage
+            _.each(mentionsCollection, function (mention) {
+                var formattedMention = _.extend({}, mention, {value: mention.value});
+                var textSyntax = settings.templates.mentionItemSyntax(formattedMention);
+                var textHighlight = settings.templates.mentionItemHighlight(formattedMention);
+
+                mentionText = mentionText.replace(new RegExp(utils.regexpEncode(textSyntax), 'g'), textHighlight);
+				
+            });
+
+            mentionText = mentionText.replace(/\n/g, '<br />'); //Replace the escape character for <br />
+            mentionText = mentionText.replace(/ {2}/g, '&nbsp; '); //Replace the 2 preceding token to &nbsp;
+           
+            elmInputBox.data('messageText', syntaxMessage); //Save the messageText to elmInputBox
+	        elmInputBox.trigger('updated');
+            elmMentionsOverlay.find('div').html(mentionText); //Insert into a div of the elmMentionsOverlay the mention text
+        }
+
+        //Cleans the buffer
+        function resetBuffer() {
+            inputBuffer = [];
+        }
+
+	    //Updates the mentions collection
+        function updateMentionsCollection() {
+            var inputText = getInputBoxValue(); //Get the actual value of text area
+			
+	        //Returns the values that doesn't match the condition
+            mentionsCollection = _.reject(mentionsCollection, function (mention, index) {
+                return !mention.value || inputText.indexOf(mention.value) == -1;
+            });
+            mentionsCollection = _.compact(mentionsCollection); //Delete all the falsy values of the array and return the new array
+        }
+		
+		//Adds mention to mentions collections
+        function addMention(mention) {
+			
+            var currentMessage = getInputBoxValue(),
+                caretStart = elmInputBox[0].selectionStart,
+                shortestDistance = false,
+                bestLastIndex = false;
+			
+            // Using a regex to figure out positions
+            var regex = new RegExp("\\" + settings.triggerChar + currentDataQuery, "gi"),
+			
+                regexMatch;
+		
+            while(regexMatch = regex.exec(currentMessage)) {
+                if (shortestDistance === false || Math.abs(regex.lastIndex - caretStart) < shortestDistance) {
+                    shortestDistance = Math.abs(regex.lastIndex - caretStart);
+                    bestLastIndex = regex.lastIndex;
+                }
+            }
+
+            var startCaretPosition = bestLastIndex - currentDataQuery.length - 1; //Set the start caret position (right before the @)
+            var currentCaretPosition = bestLastIndex; //Set the current caret position (right after the end of the "mention")
+		    
+            var start = currentMessage.substr(0, startCaretPosition);
+            var end = currentMessage.substr(currentCaretPosition, currentMessage.length);
+            var startEndIndex = (start + mention.value).length + 1;
+
+            // See if there's the same mention in the list
+            if( !_.find(mentionsCollection, function (object) { return object.id == mention.id; }) ) {
+                mentionsCollection.push(mention);//Add the mention to mentionsColletions
+            }
+
+            // Cleaning before inserting the value, otherwise auto-complete would be triggered with "old" inputbuffer
+			
+			resetBuffer();
+            currentDataQuery = '';
+            hideAutoComplete();
+			
+			
+            // Mentions and syntax message
+			//Added on 14-09-2016 Autor:rose
+			var updatedMessageText = start +settings.triggerChar+ mention.value +' '+ end;
+			//End added on 14-09-2016
+	
+            elmInputBox.val(updatedMessageText); //Set the value to the txt area
+	        elmInputBox.trigger('mention');
+            updateValues();
+
+            //Set correct focus and selection
+            elmInputBox.focus();
+            utils.setCaratPosition(elmInputBox[0], startEndIndex);
+        }
+
+        //Gets the actual value of the text area without white spaces from the beginning and end of the value
+        function getInputBoxValue() {
+			//var testMessage=(elmInputBox.val());
+			/*var testMessage=(elmInputBox.val());			
+			testMessage=utils.htmlEncode(testMessage);			
+			return $.trim(testMessage);*/
+		   return $.trim(elmInputBox.val());
+        }
+
+        // This is taken straight from live (as of Sep 2012) GitHub code. The
+        // technique is known around the web. Just google it. Github's is quite
+        // succint though. NOTE: relies on selectionEnd, which as far as IE is concerned,
+        // it'll only work on 9+. Good news is nothing will happen if the browser
+        // doesn't support it.
+        function textareaSelectionPosition($el) {
+            var a, b, c, d, e, f, g, h, i, j, k;
+            if (!(i = $el[0])) return;
+            if (!$(i).is("textarea")) return;
+            if (i.selectionEnd == null) return;
+            g = {
+                position: "absolute",
+                overflow: "auto",
+                whiteSpace: "pre-wrap",
+                wordWrap: "break-word",
+                boxSizing: "content-box",
+                top: 0,
+                left: -9999
+              }, h = ["boxSizing", "fontFamily", "fontSize", "fontStyle", "fontVariant", "fontWeight", "height", "letterSpacing", "lineHeight", "paddingBottom", "paddingLeft", "paddingRight", "paddingTop", "textDecoration", "textIndent", "textTransform", "width", "word-spacing"];
+            for (j = 0, k = h.length; j < k; j++) e = h[j], g[e] = $(i).css(e);
+            return c = document.createElement("div"), $(c).css(g), $(i).after(c), b = document.createTextNode(i.value.substring(0, i.selectionEnd)), a = document.createTextNode(i.value.substring(i.selectionEnd)), d = document.createElement("span"), d.innerHTML = "&nbsp;", c.appendChild(b), c.appendChild(d), c.appendChild(a), c.scrollTop = i.scrollTop, f = $(d).position(), $(c).remove(), f
+        }
+
+        //same as above function but return offset instead of position
+        function textareaSelectionOffset($el) {
+            var a, b, c, d, e, f, g, h, i, j, k;
+            if (!(i = $el[0])) return;
+            if (!$(i).is("textarea")) return;
+            if (i.selectionEnd == null) return;
+            g = {
+                position: "absolute",
+                overflow: "auto",
+                whiteSpace: "pre-wrap",
+                wordWrap: "break-word",
+                boxSizing: "content-box",
+                top: 0,
+                left: -9999
+            }, h = ["boxSizing", "fontFamily", "fontSize", "fontStyle", "fontVariant", "fontWeight", "height", "letterSpacing", "lineHeight", "paddingBottom", "paddingLeft", "paddingRight", "paddingTop", "textDecoration", "textIndent", "textTransform", "width", "word-spacing"];
+            for (j = 0, k = h.length; j < k; j++) e = h[j], g[e] = $(i).css(e);
+            return c = document.createElement("div"), $(c).css(g), $(i).after(c), b = document.createTextNode(i.value.substring(0, i.selectionEnd)), a = document.createTextNode(i.value.substring(i.selectionEnd)), d = document.createElement("span"), d.innerHTML = "&nbsp;", c.appendChild(b), c.appendChild(d), c.appendChild(a), c.scrollTop = i.scrollTop, f = $(d).offset(), $(c).remove(), f
+        }
+
+        //Scrolls back to the input after autocomplete if the window has scrolled past the input
+        function scrollToInput() {
+            var elmDistanceFromTop = $(elmInputBox).offset().top; //input offset
+            var bodyDistanceFromTop = $('body').offset().top; //body offset
+            var distanceScrolled = $(window).scrollTop(); //distance scrolled
+
+            if (distanceScrolled > elmDistanceFromTop) {
+                //subtracts body distance to handle fixed headers
+                $(window).scrollTop(elmDistanceFromTop - bodyDistanceFromTop);
+              }
+        }
+
+        //Takes the click event when the user select a item of the dropdown
+        function onAutoCompleteItemClick(e) {
+            var elmTarget = $(this); //Get the item selected
+            var mention = autocompleteItemCollection[elmTarget.attr('datas-uid')]; //Obtains the mention
+
+            addMention(mention);
+            scrollToInput();
+            return false;
+        }
+
+        //Takes the click event on text area
+        function onInputBoxClick(e) {
+			resetBuffer();		
+			//Added on 16-09-2016 Author:Rose
+			
+			var click_position=(this).selectionStart;
+			var syntaxMessage = getInputBoxValue();
+			var word_at= syntaxMessage.substring(" ",click_position);
+			var lastwordcase=word_at.substring(word_at.lastIndexOf(" ")+1);
+			var lastword=lastwordcase.toLowerCase()
+			if (lastword.charAt(0) === settings.triggerChar){			
+				var mquery = lastword;
+				for(i=0;i<mquery.length;i++)
+				{
+					inputBuffer.push(mquery[i]);
+				}
+				_.defer(_.bind(doSearch, this, mquery));
+			}			
+			//End added on 16-09-2016 
+        }
+
+        //Takes the blur event on text area
+        function onInputBoxBlur(e) {
+            hideAutoComplete();
+        }
+
+        //Takes the input event when users write or delete something
+        function onInputBoxInput(e) {
+            updateValues();
+            updateMentionsCollection();
+
+            var triggerCharIndex = _.lastIndexOf(inputBuffer, settings.triggerChar); //Returns the last match of the triggerChar in the inputBuffer
+            if (triggerCharIndex > -1) { //If the triggerChar is present in the inputBuffer array
+                currentDataQuery = inputBuffer.slice(triggerCharIndex + 1).join(''); //Gets the currentDataQuery
+                currentDataQuery = utils.rtrim(currentDataQuery); //Deletes the whitespaces
+                _.defer(_.bind(doSearch, this, currentDataQuery)); //Invoking the function doSearch ( Bind the function to this)
+            }
+        }
+
+        //Takes the keypress event
+        function onInputBoxKeyPress(e) {
+            if(e.keyCode !== KEY.BACKSPACE) { //If the key pressed is not the backspace
+                var typedValue = String.fromCharCode(e.which || e.keyCode); //Takes the string that represent this CharCode
+				inputBuffer.push(typedValue); //Push the value pressed into inputBuffer
+            }
+        }
+
+	    //Takes the keydown event
+        function onInputBoxKeyDown(e) {
+
+            // This also matches HOME/END on OSX which is CMD+LEFT, CMD+RIGHT
+            if (e.keyCode === KEY.LEFT || e.keyCode === KEY.RIGHT || e.keyCode === KEY.HOME || e.keyCode === KEY.END) {
+                // Defer execution to ensure carat pos has changed after HOME/END keys then call the resetBuffer function
+                _.defer(resetBuffer);
+
+                // IE9 doesn't fire the oninput event when backspace or delete is pressed. This causes the highlighting
+                // to stay on the screen whenever backspace is pressed after a highlighed word. This is simply a hack
+                // to force updateValues() to fire when backspace/delete is pressed in IE9.
+                if (navigator.userAgent.indexOf("MSIE 9") > -1) {
+                  _.defer(updateValues); //Call the updateValues function
+                }
+
+                return;
+            }
+
+            //If the key pressed was the backspace
+            if (e.keyCode === KEY.BACKSPACE) {
+                inputBuffer = inputBuffer.slice(0, -1 + inputBuffer.length); // Can't use splice, not available in IE
+                return;
+            }
+
+            //If the elmAutocompleteList is hidden
+            if (!elmAutocompleteList.is(':visible')) {
+                return true;
+            }
+
+            switch (e.keyCode) {
+                //case KEY.UP: //If the key pressed was UP or DOWN
+                case KEY.DOWN:
+                    var elmCurrentAutoCompleteItem = null;
+                    if (e.keyCode === KEY.DOWN) { //If the key pressed was DOWN
+                        if (elmActiveAutoCompleteItem && elmActiveAutoCompleteItem.length) { //If elmActiveAutoCompleteItem exits
+                            elmCurrentAutoCompleteItem = elmActiveAutoCompleteItem.next(); //Gets the next li element in the list
+                        } else {
+                            elmCurrentAutoCompleteItem = elmAutocompleteList.find('li').first(); //Gets the first li element found
+                        }
+                    } else {
+                        elmCurrentAutoCompleteItem = $(elmActiveAutoCompleteItem).prev(); //The key pressed was UP and gets the previous li element
+                    }
+                    if (elmCurrentAutoCompleteItem.length) {
+                        selectAutoCompleteItem(elmCurrentAutoCompleteItem);
+                    }
+                    return false;
+                case KEY.RETURN: //If the key pressed was RETURN or TAB
+                case KEY.TAB:
+                    if (elmActiveAutoCompleteItem && elmActiveAutoCompleteItem.length) { //If the elmActiveAutoCompleteItem exists
+                        elmActiveAutoCompleteItem.trigger('mousedown'); //Calls the mousedown event
+                        return false;
+                    }
+                break;
+            }
+
+            return true;
+        }
+
+        //Hides the autoomplete
+        function hideAutoComplete() {
+            elmActiveAutoCompleteItem = null;
+            elmAutocompleteList.empty().hide();
+        }
+
+        //Selects the item in the autocomplete list
+        function selectAutoCompleteItem(elmItem) {
+            elmItem.addClass(settings.classes.autoCompleteItemActive); //Add the class active to item
+            elmItem.siblings().removeClass(settings.classes.autoCompleteItemActive); //Gets all li elements in autocomplete list and remove the class active
+
+            elmActiveAutoCompleteItem = elmItem; //Sets the item to elmActiveAutoCompleteItem
+        }
+
+	    //Populates dropdown
+        function populateDropdown(query, results) {
+            elmAutocompleteList.show(); //Shows the autocomplete list
+
+            if(!settings.allowRepeat) {
+                // Filter items that has already been mentioned
+                var mentionValues = _.pluck(mentionsCollection, 'value');
+                results = _.reject(results, function (item) {
+                    return _.include(mentionValues, item.name);
+                });
+            }
+
+            if (!results.length) { //If there are not elements hide the autocomplete list
+                hideAutoComplete();
+                return;
+            }
+
+            elmAutocompleteList.empty(); //Remove all li elements in autocomplete list
+            var elmDropDownList = $("<ul>").appendTo(elmAutocompleteList).hide(); //Inserts a ul element to autocomplete div and hide it
+
+            _.each(results, function (item, index) {
+                var itemUid = _.uniqueId('mention_'); //Gets the item with unique id
+
+                autocompleteItemCollection[itemUid] = _.extend({}, item, {value: item.name}); //Inserts the new item to autocompleteItemCollection
+
+                var elmListItem = $(settings.templates.autocompleteListItem({
+                    'id'      : item.id,
+                    'display' : item.name,
+                    'type'    : item.type,
+                    'content' : utils.highlightTerm((item.display ? item.display : item.name), query)
+                })).attr('datas-uid', itemUid); //Inserts the new item to list
+
+                //If the index is 0
+                if (index === 0) {
+                    selectAutoCompleteItem(elmListItem);
+                }
+
+                //If show avatars is true
+                if (settings.showAvatars) {
+                    var elmIcon;
+
+                    //If the item has an avatar
+                    if (item.avatar) {
+                        elmIcon = $(settings.templates.autocompleteListItemAvatar({ avatar : item.avatar }));
+                    } else { //If not then we set an default icon
+                        elmIcon = $(settings.templates.autocompleteListItemIcon({ icon : item.icon }));
+                    }
+                    elmIcon.prependTo(elmListItem); //Inserts the elmIcon to elmListItem
+                }
+                elmListItem = elmListItem.appendTo(elmDropDownList); //Insets the elmListItem to elmDropDownList
+            });
+
+            elmAutocompleteList.show(); //Shows the elmAutocompleteList div
+	        if (settings.onCaret) {
+		        positionAutocomplete(elmAutocompleteList, elmInputBox);
+            }
+	        elmDropDownList.show(); //Shows the elmDropDownList
+        }
+
+        //Search into data list passed as parameter
+		
+        function doSearch(query) {
+            //If the query is not null, undefined, empty and has the minimum chars
+            if (query && query.length && query.length >= settings.minChars) {
+                //Call the onDataRequest function and then call the populateDropDrown
+                settings.onDataRequest.call(this, 'search', query, function (responseData) {
+                    populateDropdown(query, responseData);
+                });
+            } else { //If the query is null, undefined, empty or has not the minimun chars
+                hideAutoComplete(); //Hide the autocompletelist
+            }
+        }
+
+	    function positionAutocomplete(elmAutocompleteList, elmInputBox) {
+            var elmAutocompleteListPosition = elmAutocompleteList.css('position');
+            if (elmAutocompleteListPosition == 'absolute') {
+                var position = textareaSelectionPosition(elmInputBox),
+                    lineHeight = parseInt(elmInputBox.css('line-height'), 10) || 18;
+                elmAutocompleteList.css('width', '15em'); // Sort of a guess
+                elmAutocompleteList.css('left', position.left);
+                elmAutocompleteList.css('top', lineHeight + position.top);
+
+                //check if the right position of auto complete is larger than the right position of the input
+                //if yes, reset the left of auto complete list to make it fit the input
+                var elmInputBoxRight = elmInputBox.offset().left + elmInputBox.width(),
+                    elmAutocompleteListRight = elmAutocompleteList.offset().left + elmAutocompleteList.width();
+                if (elmInputBoxRight <= elmAutocompleteListRight) {
+                    elmAutocompleteList.css('left', Math.abs(elmAutocompleteList.position().left - (elmAutocompleteListRight - elmInputBoxRight)));
+                }
+            }
+            else if (elmAutocompleteListPosition == 'fixed') {
+                var offset = textareaSelectionOffset(elmInputBox),
+                    lineHeight = parseInt(elmInputBox.css('line-height'), 10) || 18;
+                elmAutocompleteList.css('width', '15em'); // Sort of a guess
+                elmAutocompleteList.css('left', offset.left + 10000);
+                elmAutocompleteList.css('top', lineHeight + offset.top);
+            }
+        }
+
+        //Resets the text area
+        function resetInput(currentVal) {
+            mentionsCollection = [];
+            var mentionText =currentVal;
+            var regex = new RegExp("(" + settings.triggerChar + ")\\[(.*?)\\]\\((.*?):(.*?)\\)", "gi");
+            var match, newMentionText = mentionText;
+            while ((match = regex.exec(mentionText)) != null) {
+                newMentionText = newMentionText.replace(match[0], match[1] + match[2]);
+                mentionsCollection.push({ 'id': match[4], 'type': match[3], 'value': match[2], 'trigger': match[1] });
+            }
+			
+			elmInputBox.val(newMentionText);
+            updateValues();
+        }
+        // Public methods
+        return {
+            //Initializes the mentionsInput component on a specific element.
+	        init : function (domTarget) {
+
+                domInput = domTarget;
+
+                initTextarea();
+                initAutocomplete();
+                initMentionsOverlay();
+                resetInput(settings.defaultValue);
+
+                //If the autocomplete list has prefill mentions
+                if( settings.prefillMention ) {
+                    addMention( settings.prefillMention );
+                }
+            },
+
+	        //An async method which accepts a callback function and returns a value of the input field (including markup) as a first parameter of this function. This is the value you want to send to your server.
+            val : function (callback) {
+                if (!_.isFunction(callback)) {
+                    return;
+                }
+                callback.call(this, mentionsCollection.length ? elmInputBox.data('messageText') : getInputBoxValue());
+            },
+
+        	//Resets the text area value and clears all mentions
+            reset : function () {
+                resetInput();
+            },
+
+            //Reinit with the text area value if it was changed programmatically
+            reinit : function () {
+                resetInput(false);
+            },
+
+	        //An async method which accepts a callback function and returns a collection of mentions as hash objects as a first parameter.
+            getMentions : function (callback) {
+                if (!_.isFunction(callback)) {
+                    return;
+                }
+                callback.call(this, mentionsCollection);
+            }
+        };
+    };
+
+    //Main function to include into jQuery and initialize the plugin
+    $.fn.hashInput = function (method, settings) {
+
+        var outerArguments = arguments; //Gets the arguments
+        //If method is not a function
+        if (typeof method === 'object' || !method) {
+            settings = method;
+        }
+
+        return this.each(function () {
+            var instance = $.data(this, 'hashInput') || $.data(this, 'hashInput', new HashInput(settings));
+
+            if (_.isFunction(instance[method])) {
+                return instance[method].apply(this, Array.prototype.slice.call(outerArguments, 1));
+            } else if (typeof method === 'object' || !method) {
+                return instance.init.call(this, this);
+            } else {
+                $.error('Method ' + method + ' does not exist');
+            }
+        });
+    };
+
+})(jQuery, _);

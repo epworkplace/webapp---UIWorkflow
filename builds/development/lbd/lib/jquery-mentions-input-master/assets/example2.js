@@ -1,1 +1,13 @@
-$(function(){$("textarea.mention-example2").mentionsInput({onDataRequest:function(t,e,n){$.getJSON("assets/data.json",function(t){t=_.filter(t,function(t){return t.name.toLowerCase().indexOf(e.toLowerCase())>-1}),n.call(this,t)})}})});
+$(function () {
+
+  $('textarea.mention-example2').mentionsInput({
+    onDataRequest:function (mode, query, callback) {
+      $.getJSON('assets/data.json', function(responseData) {
+        responseData = _.filter(responseData, function(item) { return item.name.toLowerCase().indexOf(query.toLowerCase()) > -1 });
+        callback.call(this, responseData);
+      });
+    }
+
+  });
+
+});

@@ -1,1 +1,387 @@
-!function(e,t,n){var a={BACKSPACE:8,TAB:9,RETURN:13,ESC:27,LEFT:37,UP:38,RIGHT:39,DOWN:40,COMMA:188,SPACE:32,HOME:36,END:35},i={triggerChar:"@",onDataRequest:e.noop,minChars:2,showAvatars:!0,classes:{autoCompleteItemActive:"active"},templates:{wrapper:t.template('<div class="mentions-input-box"></div>'),autocompleteList:t.template('<div class="mentions-autocomplete-list"></div>'),autocompleteListItem:t.template('<li data-ref-id="<%= id %>" data-ref-type="<%= type %>" data-display="<%= display %>"><%= content %></li>'),autocompleteListItemAvatar:t.template('<img  src="<%= avatar %>" />'),autocompleteListItemIcon:t.template('<div class="icon <%= icon %>"></div>'),mentionsOverlay:t.template('<div class="mentions"><div></div></div>'),mentionItemSyntax:t.template("@[<%= value %>](<%= type %>:<%= id %>)"),mentionItemHighlight:t.template("<strong><span><%= value %></span></strong>")}},o={htmlEncode:function(e){return t.escape(e)},highlightTerm:function(e,t){return t||t.length?e.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)("+t+")(?![^<>]*>)(?![^&;]+;)","gi"),"<b>$1</b>"):e},setCaratPosition:function(e,t){if(e.createTextRange){var n=e.createTextRange();n.move("character",t),n.select()}else e.selectionStart?(e.focus(),e.setSelectionRange(t,t)):e.focus()},rtrim:function(e){return e.replace(/\s+$/,"")}},l=function(n){function i(){"true"!=(x=e(n)).attr("data-mentions-input")&&(A=x.parent(),k=e(T.templates.wrapper()),x.wrapAll(k),k=A.find("> div"),x.attr("data-mentions-input","true"),x.bind("keydown",g),x.bind("keypress",f),x.bind("input",h),x.bind("click",v),x.elastic())}function l(){(b=e(T.templates.autocompleteList())).appendTo(k),b.delegate("li","click",d)}function r(){(w=e(T.templates.mentionsOverlay())).prependTo(k)}function s(){var e=m();t.each(O,function(t){var n=T.templates.mentionItemSyntax({value:t.value,type:t.type,id:t.id});e=e.replace(t.value,n)});var n=o.htmlEncode(e);t.each(O,function(e){var t=T.templates.mentionItemSyntax({value:o.htmlEncode(e.value),type:e.type,id:e.id}),a=T.templates.mentionItemHighlight({value:o.htmlEncode(e.value)});n=n.replace(t,a)}),n=n.replace(/\n/g,"<br />"),n=n.replace(/ {2}/g,"&nbsp; "),x.data("messageText",e),w.find("div").html(n)}function c(){S=[]}function u(){var e=m();O=t.reject(O,function(t,n){return!t.value||-1==e.indexOf(t.value)}),O=t.compact(O)}function p(e,t,n){var a=m(),i=new RegExp("\\"+T.triggerChar+L,"gi");i.exec(a);var l=i.lastIndex-L.length-1,r=i.lastIndex,u=a.substr(0,l),p=a.substr(r,a.length),d=(u+e).length,v=u+e+p;O.push({id:t,type:n,value:e}),c(),L="",y(),x.val(v),s(),x.focus(),o.setCaratPosition(x[0],d)}function m(){return e.trim(x.val())}function d(t){var n=e(this);return p(n.attr("data-display"),n.attr("data-ref-id"),n.attr("data-ref-type")),!1}function v(e){c()}function h(e){s(),u(),y();var n=t.lastIndexOf(S,T.triggerChar);n>-1&&(L=S.slice(n+1).join(""),L=o.rtrim(L),t.defer(t.bind(E,this,L)))}function f(e){var t=String.fromCharCode(e.which||e.keyCode);S.push(t)}function g(n){if(n.keyCode!=a.LEFT&&n.keyCode!=a.RIGHT&&n.keyCode!=a.HOME&&n.keyCode!=a.END){if(n.keyCode!=a.BACKSPACE){if(!b.is(":visible"))return!0;switch(n.keyCode){case a.UP:case a.DOWN:var i=null;return(i=n.keyCode==a.DOWN?R&&R.length?R.next():b.find("li").first():e(R).prev()).length&&C(i),!1;case a.RETURN:case a.TAB:if(R&&R.length)return R.click(),!1}return!0}S=S.slice(0,-1+S.length)}else t.defer(c)}function y(){R=null,b.empty().hide()}function C(e){e.addClass(T.classes.autoCompleteItemActive),e.siblings().removeClass(T.classes.autoCompleteItemActive),R=e}function I(n,a){b.show();var i=t.pluck(O,"value");if((a=t.reject(a,function(e){return t.include(i,e.name)})).length){b.empty();var l=e("<ul>").appendTo(b).hide();t.each(a,function(t,a){var i=e(T.templates.autocompleteListItem({id:o.htmlEncode(t.id),display:o.htmlEncode(t.name),type:o.htmlEncode(t.type),content:o.highlightTerm(o.htmlEncode(t.name),n)}));if(0===a&&C(i),T.showAvatars){e(t.avatar?T.templates.autocompleteListItemAvatar({avatar:t.avatar}):T.templates.autocompleteListItemIcon({icon:t.icon})).prependTo(i)}i=i.appendTo(l)}),b.show(),l.show()}else y()}function E(e){e&&e.length&&e.length>=T.minChars&&T.onDataRequest.call(this,"search",e,function(t){I(e,t)})}var T,x,A,b,k,w,R,L,O=[],S=[];return{init:function(e){T=e,i(),l(),r()},val:function(e){if(t.isFunction(e)){var n=O.length?x.data("messageText"):m();e.call(this,n)}},reset:function(){x.val(""),O=[],s()},getMentions:function(e){t.isFunction(e)&&e.call(this,O)}}};e.fn.mentionsInput=function(n,a){"object"!=typeof n&&n||(a=e.extend(!0,{},i,n));var o=arguments;return this.each(function(){var i=e.data(this,"mentionsInput")||e.data(this,"mentionsInput",new l(this));return t.isFunction(i[n])?i[n].apply(this,Array.prototype.slice.call(o,1)):"object"!=typeof n&&n?void e.error("Method "+n+" does not exist"):i.init.call(this,a)})}}(jQuery,_);
+/*
+ * Mentions Input
+ * Version 1.0.1
+ * Written by: Kenneth Auchenberg (Podio)
+ *
+ * Using underscore.js
+ *
+ * License: MIT License - http://www.opensource.org/licenses/mit-license.php
+ */
+
+(function ($, _, undefined) {
+
+  // Settings
+  var KEY = { BACKSPACE : 8, TAB : 9, RETURN : 13, ESC : 27, LEFT : 37, UP : 38, RIGHT : 39, DOWN : 40, COMMA : 188, SPACE : 32, HOME : 36, END : 35 }; // Keys "enum"
+  var defaultSettings = {
+    triggerChar   : '@',
+    onDataRequest : $.noop,
+    minChars      : 2,
+    showAvatars   : true,
+    classes       : {
+      autoCompleteItemActive : "active"
+    },
+    templates     : {
+      wrapper                    : _.template('<div class="mentions-input-box"></div>'),
+      autocompleteList           : _.template('<div class="mentions-autocomplete-list"></div>'),
+      autocompleteListItem       : _.template('<li data-ref-id="<%= id %>" data-ref-type="<%= type %>" data-display="<%= display %>"><%= content %></li>'),
+      autocompleteListItemAvatar : _.template('<img  src="<%= avatar %>" />'),
+      autocompleteListItemIcon   : _.template('<div class="icon <%= icon %>"></div>'),
+      mentionsOverlay            : _.template('<div class="mentions"><div></div></div>'),
+      mentionItemSyntax          : _.template('@[<%= value %>](<%= type %>:<%= id %>)'),
+      mentionItemHighlight       : _.template('<strong><span><%= value %></span></strong>')
+    }
+  };
+
+  var utils = {
+    htmlEncode       : function (str) {
+      return _.escape(str);
+    },
+    highlightTerm    : function (value, term) {
+      if (!term && !term.length) {
+        return value;
+      }
+      return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<b>$1</b>");
+    },
+    setCaratPosition : function (domNode, caretPos) {
+      if (domNode.createTextRange) {
+        var range = domNode.createTextRange();
+        range.move('character', caretPos);
+        range.select();
+      } else {
+        if (domNode.selectionStart) {
+          domNode.focus();
+          domNode.setSelectionRange(caretPos, caretPos);
+        } else {
+          domNode.focus();
+        }
+      }
+    },
+    rtrim: function(string) {
+      return string.replace(/\s+$/,"");
+    }
+  };
+
+  var MentionsInput = function (input) {
+    var settings;
+    var elmInputBox, elmInputWrapper, elmAutocompleteList, elmWrapperBox, elmMentionsOverlay, elmActiveAutoCompleteItem;
+    var mentionsCollection = [];
+    var inputBuffer = [];
+    var currentDataQuery;
+
+    function initTextarea() {
+      elmInputBox = $(input);
+
+      if (elmInputBox.attr('data-mentions-input') == 'true') {
+        return;
+      }
+
+      elmInputWrapper = elmInputBox.parent();
+      elmWrapperBox = $(settings.templates.wrapper());
+      elmInputBox.wrapAll(elmWrapperBox);
+      elmWrapperBox = elmInputWrapper.find('> div');
+
+      elmInputBox.attr('data-mentions-input', 'true');
+      elmInputBox.bind('keydown', onInputBoxKeyDown);
+      elmInputBox.bind('keypress', onInputBoxKeyPress);
+      elmInputBox.bind('input', onInputBoxInput);
+      elmInputBox.bind('click', onInputBoxClick);
+
+      elmInputBox.elastic();
+    }
+
+    function initAutocomplete() {
+      elmAutocompleteList = $(settings.templates.autocompleteList());
+      elmAutocompleteList.appendTo(elmWrapperBox);
+      elmAutocompleteList.delegate('li', 'click', onAutoCompleteItemClick);
+    }
+
+    function initMentionsOverlay() {
+      elmMentionsOverlay = $(settings.templates.mentionsOverlay());
+      elmMentionsOverlay.prependTo(elmWrapperBox);
+    }
+
+    function updateValues() {
+      var syntaxMessage = getInputBoxValue();
+
+      _.each(mentionsCollection, function (mention) {
+        var textSyntax = settings.templates.mentionItemSyntax({ value : mention.value, type : mention.type, id : mention.id });
+        syntaxMessage = syntaxMessage.replace(mention.value, textSyntax);
+      });
+
+      var mentionText = utils.htmlEncode(syntaxMessage);
+
+      _.each(mentionsCollection, function (mention) {
+        var textSyntax = settings.templates.mentionItemSyntax({ value : utils.htmlEncode(mention.value), type : mention.type, id : mention.id });
+        var textHighlight = settings.templates.mentionItemHighlight({ value : utils.htmlEncode(mention.value) });
+
+        mentionText = mentionText.replace(textSyntax, textHighlight);
+      });
+
+      mentionText = mentionText.replace(/\n/g, '<br />');
+      mentionText = mentionText.replace(/ {2}/g, '&nbsp; ');
+
+      elmInputBox.data('messageText', syntaxMessage);
+      elmMentionsOverlay.find('div').html(mentionText);
+    }
+
+    function resetBuffer() {
+      inputBuffer = [];
+    }
+
+    function updateMentionsCollection() {
+      var inputText = getInputBoxValue();
+
+      mentionsCollection = _.reject(mentionsCollection, function (mention, index) {
+        return !mention.value || inputText.indexOf(mention.value) == -1;
+      });
+      mentionsCollection = _.compact(mentionsCollection);
+    }
+
+    function addMention(value, id, type) {
+      var currentMessage = getInputBoxValue();
+
+      // Using a regex to figure out positions
+      var regex = new RegExp("\\" + settings.triggerChar + currentDataQuery, "gi");
+      regex.exec(currentMessage);
+
+      var startCaretPosition = regex.lastIndex - currentDataQuery.length - 1;
+      var currentCaretPosition = regex.lastIndex;
+
+      var start = currentMessage.substr(0, startCaretPosition);
+      var end = currentMessage.substr(currentCaretPosition, currentMessage.length);
+      var startEndIndex = (start + value).length;
+
+      var updatedMessageText = start + value + end;
+
+      mentionsCollection.push({
+        id    : id,
+        type  : type,
+        value : value
+      });
+
+      // Cleaning before inserting the value, otherwise auto-complete would be triggered with "old" inputbuffer
+      resetBuffer();
+      currentDataQuery = '';
+      hideAutoComplete();
+
+      // Mentions & syntax message
+      elmInputBox.val(updatedMessageText);
+      updateValues();
+
+      // Set correct focus and selection
+      elmInputBox.focus();
+      utils.setCaratPosition(elmInputBox[0], startEndIndex);
+    }
+
+    function getInputBoxValue() {
+      return $.trim(elmInputBox.val());
+    }
+
+    function onAutoCompleteItemClick(e) {
+      var elmTarget = $(this);
+
+      addMention(elmTarget.attr('data-display'), elmTarget.attr('data-ref-id'), elmTarget.attr('data-ref-type'));
+
+      return false;
+    }
+
+    function onInputBoxClick(e) {
+      resetBuffer();
+    }
+
+    function onInputBoxInput(e) {
+      updateValues();
+      updateMentionsCollection();
+      hideAutoComplete();
+
+      var triggerCharIndex = _.lastIndexOf(inputBuffer, settings.triggerChar);
+      if (triggerCharIndex > -1) {
+        currentDataQuery = inputBuffer.slice(triggerCharIndex + 1).join('');
+        currentDataQuery = utils.rtrim(currentDataQuery);
+
+        _.defer(_.bind(doSearch, this, currentDataQuery));
+      }
+    }
+
+    function onInputBoxKeyPress(e) {
+      var typedValue = String.fromCharCode(e.which || e.keyCode);
+      inputBuffer.push(typedValue);
+    }
+
+    function onInputBoxKeyDown(e) {
+
+      // This also matches HOME/END on OSX which is CMD+LEFT, CMD+RIGHT
+      if (e.keyCode == KEY.LEFT || e.keyCode == KEY.RIGHT || e.keyCode == KEY.HOME || e.keyCode == KEY.END) {
+        // Defer execution to ensure carat pos has changed after HOME/END keys
+        _.defer(resetBuffer);
+        return;
+      }
+
+      if (e.keyCode == KEY.BACKSPACE) {
+        inputBuffer = inputBuffer.slice(0, -1 + inputBuffer.length); // Can't use splice, not available in IE
+        return;
+      }
+
+      if (!elmAutocompleteList.is(':visible')) {
+        return true;
+      }
+
+      switch (e.keyCode) {
+        case KEY.UP:
+        case KEY.DOWN:
+          var elmCurrentAutoCompleteItem = null;
+          if (e.keyCode == KEY.DOWN) {
+            if (elmActiveAutoCompleteItem && elmActiveAutoCompleteItem.length) {
+              elmCurrentAutoCompleteItem = elmActiveAutoCompleteItem.next();
+            } else {
+              elmCurrentAutoCompleteItem = elmAutocompleteList.find('li').first();
+            }
+          } else {
+            elmCurrentAutoCompleteItem = $(elmActiveAutoCompleteItem).prev();
+          }
+
+          if (elmCurrentAutoCompleteItem.length) {
+            selectAutoCompleteItem(elmCurrentAutoCompleteItem);
+          }
+
+          return false;
+
+        case KEY.RETURN:
+        case KEY.TAB:
+          if (elmActiveAutoCompleteItem && elmActiveAutoCompleteItem.length) {
+            elmActiveAutoCompleteItem.click();
+            return false;
+          }
+
+          break;
+      }
+
+      return true;
+    }
+
+    function hideAutoComplete() {
+      elmActiveAutoCompleteItem = null;
+      elmAutocompleteList.empty().hide();
+    }
+
+    function selectAutoCompleteItem(elmItem) {
+      elmItem.addClass(settings.classes.autoCompleteItemActive);
+      elmItem.siblings().removeClass(settings.classes.autoCompleteItemActive);
+
+      elmActiveAutoCompleteItem = elmItem;
+    }
+
+    function populateDropdown(query, results) {
+      elmAutocompleteList.show();
+
+      // Filter items that has already been mentioned
+      var mentionValues = _.pluck(mentionsCollection, 'value');
+      results = _.reject(results, function (item) {
+        return _.include(mentionValues, item.name);
+      });
+
+      if (!results.length) {
+        hideAutoComplete();
+        return;
+      }
+
+      elmAutocompleteList.empty();
+      var elmDropDownList = $("<ul>").appendTo(elmAutocompleteList).hide();
+
+      _.each(results, function (item, index) {
+        var elmListItem = $(settings.templates.autocompleteListItem({
+          'id'      : utils.htmlEncode(item.id),
+          'display' : utils.htmlEncode(item.name),
+          'type'    : utils.htmlEncode(item.type),
+          'content' : utils.highlightTerm(utils.htmlEncode((item.name)), query)
+        }));
+
+        if (index === 0) { 
+          selectAutoCompleteItem(elmListItem); 
+        }
+
+        if (settings.showAvatars) {
+          var elmIcon;
+
+          if (item.avatar) {
+            elmIcon = $(settings.templates.autocompleteListItemAvatar({ avatar : item.avatar }));
+          } else {
+            elmIcon = $(settings.templates.autocompleteListItemIcon({ icon : item.icon }));
+          }
+          elmIcon.prependTo(elmListItem);
+        }
+        elmListItem = elmListItem.appendTo(elmDropDownList);
+      });
+
+      elmAutocompleteList.show();
+      elmDropDownList.show();
+    }
+
+    function doSearch(query) {
+      if (query && query.length && query.length >= settings.minChars) {
+        settings.onDataRequest.call(this, 'search', query, function (responseData) {
+          populateDropdown(query, responseData);
+        });
+      }
+    }
+
+    // Public methods
+    return {
+      init : function (options) {
+        settings = options;
+
+        initTextarea();
+        initAutocomplete();
+        initMentionsOverlay();
+      },
+
+      val : function (callback) {
+        if (!_.isFunction(callback)) {
+          return;
+        }
+
+        var value = mentionsCollection.length ? elmInputBox.data('messageText') : getInputBoxValue();
+        callback.call(this, value);
+      },
+
+      reset : function () {
+        elmInputBox.val('');
+        mentionsCollection = [];
+        updateValues();
+      },
+
+      getMentions : function (callback) {
+        if (!_.isFunction(callback)) {
+          return;
+        }
+
+        callback.call(this, mentionsCollection);
+      }
+    };
+  };
+
+  $.fn.mentionsInput = function (method, settings) {
+
+    if (typeof method === 'object' || !method) {
+      settings = $.extend(true, {}, defaultSettings, method);
+    }
+
+    var outerArguments = arguments;
+
+    return this.each(function () {
+      var instance = $.data(this, 'mentionsInput') || $.data(this, 'mentionsInput', new MentionsInput(this));
+
+      if (_.isFunction(instance[method])) {
+        return instance[method].apply(this, Array.prototype.slice.call(outerArguments, 1));
+
+      } else if (typeof method === 'object' || !method) {
+        return instance.init.call(this, settings);
+
+      } else {
+        $.error('Method ' + method + ' does not exist');
+      }
+
+    });
+  };
+
+})(jQuery, _);

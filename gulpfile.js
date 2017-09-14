@@ -264,7 +264,7 @@ gulp.task('jslib', function() {
       // .pipe($.babel())
       // .pipe($.regenerator())
       .pipe($.uglify())
-      .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
+      // .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
       .pipe(jsFilter.restore)
       .pipe(jsonFilter)
       .pipe($.jsonMinify())
