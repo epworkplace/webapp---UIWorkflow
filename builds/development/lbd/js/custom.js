@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 
 	//Custom Scrollbar
-	$(".floating-box-body .panel #panel-body, .month-values-panel, .reviews, .recommended-reviews, .leftside-column, .rightside-column, .feeds-comments-container").mCustomScrollbar({
+	$(".floating-box-body .panel #panel-body, .month-values-panel, .reviews, .recommended-reviews, .leftside-column").mCustomScrollbar({
 		autoDraggerLength: false,
 	    mouseWheel:{
 	    	preventDefault: true

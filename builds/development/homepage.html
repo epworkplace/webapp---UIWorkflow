@@ -123,15 +123,20 @@
                                                 <div class="row">
                                                     <div class="col-md-12 create-event-container">
                                                         <div class="row event-dates">
-                                                            <div class="col-md-6 event-date">
-                                                                <input class="form-control datepicker-start-down" placeholder="Date Here" type="text"/>
+                                                            <div class="col-md-12 event-date">
+                                                                <label>Start Date</label>
+                                                                <input class="form-control datepicker-start-down" placeholder="Start Date &amp; Time Here" type="text"/>
                                                             </div>
-                                                            <div class="col-md-6 event-date">
-                                                                <input class="form-control datepicker-end-down" placeholder="Date Here" type="text"/>
+                                                        </div>
+                                                        <div class="row event-dates">
+                                                            <div class="col-md-12 event-date">
+                                                                <label>End Date</label>
+                                                                <input class="form-control datepicker-end-down" placeholder="End Date &amp; Time Here" type="text"/>
                                                             </div>
                                                         </div>
                                                         <div class="row event-subject">
                                                             <div class="col-md-12">
+                                                                <label>Event Title</label>
                                                                 <input type="text" class="form-control" name="" value="" placeholder="Enter Event Title" />
                                                             </div>
                                                         </div>
@@ -153,6 +158,31 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
+                                                    <div class="col-md-12 create-event-container">
+                                                        <div class="row event-dates">
+                                                            <div class="col-md-12 event-date">
+                                                                <label>Start Date</label>
+                                                                <input class="form-control datepicker-start-down" placeholder="Start Date &amp; Time Here" type="text"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row event-dates">
+                                                            <div class="col-md-12 event-date">
+                                                                <label>End Date</label>
+                                                                <input class="form-control datepicker-end-down" placeholder="End Date &amp; Time Here" type="text"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row event-subject">
+                                                            <div class="col-md-12">
+                                                                <label>Event Title</label>
+                                                                <input type="text" class="form-control" name="" value="" placeholder="Enter Event Title" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row create-event">
+                                                            <button type="" class="btn btn-fill btn-yes">Create Event</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
                                                     <div class="col-md-12 agenda-container">
                                                         <table>
                                                             <tbody>
@@ -160,7 +190,7 @@
                                                                     <td class="col-md-5 agenda-time">08:00 - 09:00</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li>Team-standup meeting</li>
+                                                                            <li><a href="javascript:;">Team-standup meeting</a></li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -168,7 +198,7 @@
                                                                     <td class="col-md-5 agenda-time">11:00 - 12: 30</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li>Brunch</li>
+                                                                            <li><a href="javascript:;">Brunch</a></li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -176,8 +206,8 @@
                                                                     <td class="col-md-5 agenda-time">13:00 - 14: 30</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li>Webidia clien phone call</li>
-                                                                            <li>Debrief with paul</li>
+                                                                            <li><a href="javascript:;">Webidia clien phone call</a></li>
+                                                                            <li><a href="javascript:;">Debrief with paul</a></li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -185,7 +215,7 @@
                                                                     <td class="col-md-5 agenda-time">17:00 - 14:30</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li>Prohect status quick checking</li>
+                                                                            <li><a href="javascript:;">Prohect status quick checking</a></li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -193,7 +223,7 @@
                                                                     <td class="col-md-5 agenda-time">19:30 - 21:00</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li>Busy</li>
+                                                                            <li><a href="javascript:;">Busy</a></li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -209,12 +239,12 @@
                                         <div class="col-md-12">
                                             <div class="col-md-12 card note-container">
                                                 <div class="col-md-12 add-note">
-                                                    <textarea class="form-control" rows="1" placeholder="+ Add a note"></textarea>
+                                                    <input type="text" class="form-control" value="" placeholder="+ Add a note" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12 card note-container not-container-list">
                                                 <div class="col-md-12 add-note">
-                                                    <textarea class="form-control" rows="1" placeholder="+ Add a note"></textarea>
+                                                    <input type="text" class="form-control" value="" placeholder="+ Add a note" />
                                                 </div>
                                                 <div class="col-md-12 note-list-container">
                                                     <div class="row">
@@ -341,7 +371,7 @@
                                                                     <img src="lbd/img/apple.jpg" class="img-circle" />
                                                                 </div>
                                                                 <div class="col-md-11 profile-name">
-                                                                    Allocine <span>Blog 2019</span>
+                                                                   <a href="javascript:;">Allocine</a>  <span> <a href="javascript:;">Blog 2019</a></span>
                                                                 </div>
                                                                 <div class="col-md-1 feed-nav pull-right">
                                                                     <a href="javascript:;">
@@ -362,8 +392,15 @@
                                                                                 </div>
                                                                                 <div class="col-md-11 comment-container">
                                                                                     <div class="row">
-                                                                                        <div class="col-md-10 user-name">Clarisse Courtois</div>
-                                                                                        <div class="col-md-2 pull-right comment-date">10m ago</div>
+                                                                                        <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                        <div class="col-md-2 comment-date">10m ago</div>
+                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">more_horiz</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                            <li><a href="javascript:;">Edit</a></li>
+                                                                                            <li><a href="javascript:;">Delete</a></li>
+                                                                                        </ul>
                                                                                     </div>
                                                                                     <div class="row">
                                                                                         <div class="col-md-12 comment">
@@ -382,8 +419,42 @@
                                                                                 </div>
                                                                                 <div class="col-md-11 comment-container">
                                                                                     <div class="row">
-                                                                                        <div class="col-md-10 user-name">Paul Martin</div>
-                                                                                        <div class="col-md-2 pull-right comment-date">10m ago</div>
+                                                                                        <div class="col-md-9 user-name">Paul Martin</div>
+                                                                                        <div class="col-md-2 comment-date">10m ago</div>
+                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">more_horiz</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                            <li><a href="javascript:;">Edit</a></li>
+                                                                                            <li><a href="javascript:;">Delete</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 comment">
+                                                                                            <span class="hashTag">#blog2019</span> <span class="atMention">@ClarisseCoutois</span> Due date increased. Problem with a batch.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="col-md-12 comments-section">
+                                                                            <div class="row">
+                                                                                <div class="col-md-1 user-image">
+                                                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                                </div>
+                                                                                <div class="col-md-11 comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-9 user-name">Paul Martin</div>
+                                                                                        <div class="col-md-2 comment-date">10m ago</div>
+                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">more_horiz</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                            <li><a href="javascript:;">Edit</a></li>
+                                                                                            <li><a href="javascript:;">Delete</a></li>
+                                                                                        </ul>
                                                                                     </div>
                                                                                     <div class="row">
                                                                                         <div class="col-md-12 comment">
@@ -399,8 +470,30 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 reply-link">
-                                                            <a href="Javascript:;" data-toggle="modal" data-target="#replyMessageModal">Reply...</a>
+                                                        <div class="col-md-12">
+                                                            <div class="col-md-12 post-comments-container">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="col-md-12 comments-section">
+                                                                            <div class="row">
+                                                                                <div class="col-md-1 user-image">
+                                                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                                </div>
+                                                                                <div class="col-md-11 comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-10 user-name">Clarisse Courtois</div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 comment">
+                                                                                            <textarea id="commentPost" class="form-control" placeholder="Enter your comment"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -413,7 +506,7 @@
                                                                     <img src="lbd/img/apple.jpg" class="img-circle" />
                                                                 </div>
                                                                 <div class="col-md-11 profile-name">
-                                                                    Allocine <span>Blog 2019</span>
+                                                                   <a href="javascript:;">Allocine</a>  <span> <a href="javascript:;">Blog 2019</a></span>
                                                                 </div>
                                                                 <div class="col-md-1 feed-nav pull-right">
                                                                     <a href="javascript:;">
@@ -434,32 +527,19 @@
                                                                                 </div>
                                                                                 <div class="col-md-11 comment-container">
                                                                                     <div class="row">
-                                                                                        <div class="col-md-10 user-name">Clarisse Courtois</div>
-                                                                                        <div class="col-md-2 pull-right comment-date">10m ago</div>
+                                                                                        <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                        <div class="col-md-2 comment-date">10m ago</div>
+                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">more_horiz</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                            <li><a href="javascript:;">Edit</a></li>
+                                                                                            <li><a href="javascript:;">Delete</a></li>
+                                                                                        </ul>
                                                                                     </div>
                                                                                     <div class="row">
                                                                                         <div class="col-md-12 comment">
                                                                                             <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="col-md-12 comments-section">
-                                                                            <div class="row">
-                                                                                <div class="col-md-1 user-image">
-                                                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                                                                </div>
-                                                                                <div class="col-md-11 comment-container">
-                                                                                    <div class="row">
-                                                                                        <div class="col-md-10 user-name">Paul Martin</div>
-                                                                                        <div class="col-md-2 pull-right comment-date">10m ago</div>
-                                                                                    </div>
-                                                                                    <div class="row">
-                                                                                        <div class="col-md-12 comment">
-                                                                                            <span class="hashTag">#blog2019</span> <span class="atMention">@ClarisseCoutois</span> Due date increased. Problem with a batch.
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -471,8 +551,30 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 reply-link">
-                                                            <a href="Javascript:;" data-toggle="modal" data-target="#replyMessageModal">Reply...</a>
+                                                        <div class="col-md-12">
+                                                            <div class="col-md-12 post-comments-container">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="col-md-12 comments-section">
+                                                                            <div class="row">
+                                                                                <div class="col-md-1 user-image">
+                                                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                                </div>
+                                                                                <div class="col-md-11 comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-10 user-name">Clarisse Courtois</div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 comment">
+                                                                                            <textarea id="commentPost" class="form-control" placeholder="Enter your comment"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -505,105 +607,105 @@
                                                             <li>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <div class="client-task-container">
+                                                                        <a  href="javascript:;" class="client-task-container">
                                                                             <div class="col-md-3 client-image">
                                                                                 <span class="notification">14</span>
                                                                                 <img src="lbd/img/webedia.jpg" class="img-circle" />
                                                                             </div>
                                                                             <div class="col-md-10 task-link">
-                                                                                <a href="javascript:;">Blog 2019</a>
+                                                                                Blog 2019
                                                                             </div>
                                                                             <div class="col-md-1 go-task">
                                                                                 <i class="material-icons">chevron_right</i>
                                                                             </div>
-                                                                        </div>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <div class="client-task-container">
+                                                                        <a  href="javascript:;" class="client-task-container">
                                                                             <div class="col-md-3 client-image">
                                                                                 <span class="notification">8</span>
                                                                                 <img src="lbd/img/webedia.jpg" class="img-circle" />
                                                                             </div>
                                                                             <div class="col-md-10 task-link">
-                                                                                <a href="javascript:;">New Deal Webedia</a>
+                                                                                New Deal Webedia
                                                                             </div>
                                                                             <div class="col-md-1 go-task">
                                                                                 <i class="material-icons">chevron_right</i>
                                                                             </div>
-                                                                        </div>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <div class="client-task-container">
+                                                                        <a  href="javascript:;" class="client-task-container">
                                                                             <div class="col-md-3 client-image">
                                                                                 <span class="notification">3</span>
                                                                                 <img src="lbd/img/webedia.jpg" class="img-circle" />
                                                                             </div>
                                                                             <div class="col-md-10 task-link">
-                                                                                <a href="javascript:;">E-Sports Article</a>
+                                                                                    E-Sports Article
                                                                             </div>
                                                                             <div class="col-md-1 go-task">
                                                                                 <i class="material-icons">chevron_right</i>
                                                                             </div>
-                                                                        </div>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <div class="client-task-container">
+                                                                        <a  href="javascript:;" class="client-task-container">
                                                                             <div class="col-md-3 client-image">
                                                                                 <img src="lbd/img/webedia.jpg" class="img-circle" />
                                                                             </div>
                                                                             <div class="col-md-10 task-link">
-                                                                                <a href="javascript:;">Preliminary Audit</a>
+                                                                                    Preliminary Audit
                                                                             </div>
                                                                             <div class="col-md-1 go-task">
                                                                                 <i class="material-icons">chevron_right</i>
                                                                             </div>
-                                                                        </div>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <div class="client-task-container">
+                                                                        <a  href="javascript:;" class="client-task-container">
                                                                             <div class="col-md-3 client-image">
                                                                                 <img src="lbd/img/webedia.jpg" class="img-circle" />
                                                                             </div>
                                                                             <div class="col-md-10 task-link">
-                                                                                <a href="javascript:;">france TV New program Fall 2019</a>
+                                                                                France TV New program Fall 2019
                                                                             </div>
                                                                             <div class="col-md-1 go-task">
                                                                                 <i class="material-icons">chevron_right</i>
                                                                             </div>
-                                                                        </div>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <div class="client-task-container">
+                                                                        <a  href="javascript:;" class="client-task-container">
                                                                             <div class="col-md-3 client-image">
                                                                                 <img src="lbd/img/webedia.jpg" class="img-circle" />
                                                                             </div>
                                                                             <div class="col-md-10 task-link">
-                                                                                <a href="javascript:;">DP Spanish</a>
+                                                                                    DP Spanish
                                                                             </div>
                                                                             <div class="col-md-1 go-task">
                                                                                 <i class="material-icons">chevron_right</i>
                                                                             </div>
-                                                                        </div>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </li>
@@ -677,7 +779,7 @@
                                         <img src="lbd/img/default-avatar.png" class="img-circle" />
                                     </div>
                                     <div class="col-md-11 message">
-                                        <textarea id="messagereply" class="form-control" placeholder="Your message here" data-emojiable="true"></textarea>
+                                        <textarea id="messagereply" class="form-control" placeholder="Your message here"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -750,7 +852,10 @@
     <script type="text/javascript">
         /*Auto resize textarea*/
         $(document).ready(function() {
-            $('#statusUpdate').autogrow({vertical: true, horizontal: false});
+            $('#statusUpdate,#commentPost').each(function() {
+                $(this).autogrow({vertical: true, horizontal: false});
+            });
+            
         });
     </script>
     <!-- Begin emoji-picker JavaScript -->

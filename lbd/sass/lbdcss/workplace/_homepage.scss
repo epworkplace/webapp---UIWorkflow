@@ -107,16 +107,10 @@
                 }
 
                 .create-event-container {
+                    margin-top: 10px;
+
                     .event-dates {
                         margin-bottom: 15px;
-
-                        .event-date:nth-of-type(1) {
-                            padding-right: 5px;
-                        }
-
-                        .event-date:last-of-type {
-                            padding-left: 5px;
-                        }
                     }
 
                     .event-subject {
@@ -154,6 +148,8 @@
 
                 .agenda-container {
                     table {
+                        width: 100%;
+
                         tr {
                             border-bottom: 2px solid #f5f5f6;
                             padding: 10px 0;
@@ -175,6 +171,17 @@
                                         margin: 0;
 
                                         li {
+                                            a {
+                                                margin-bottom: 5px;
+                                                font-weight: 600;
+                                                color: #353f53;
+                                                text-decoration: none;
+
+                                                &:hover {
+                                                    text-decoration: underline;
+                                                }
+                                            }
+
                                             margin-bottom: 5px;
                                             font-weight: 600;
                                             color: #353f53;
@@ -215,8 +222,8 @@
                 .add-note {
                     padding: 0 0 15px 0;
 
-                    textarea {
-                        resize: none;
+                    input {
+                        height: 35px;
                     }
                 }
 
@@ -294,21 +301,10 @@
     }
 
     .rightside-column-container {
-        padding-left: 0;
-        padding-top: 15px;
-        position: relative;
-        min-height: 100%;
-        width: 25%;
+        padding: 15px 0 0 0;
 
         .rightside-column {
-            position: fixed;
-            width: 23.5%;
-            overflow: hidden;
-            min-height: 100%;
-            height: 300px;
-            z-index: 1;
-            overflow-x: hidden;
-            padding: 0;
+            padding-left: 0;
 
             .task-pricing-container {
                 display: -webkit-box;
@@ -347,7 +343,7 @@
                         list-style-type: none;
 
                         li {
-                            .client-task-container {
+                            a.client-task-container {
                                 border-bottom: 2px solid #f5f5f6;
                                 display: -webkit-box;
                                 display: -moz-box;
@@ -367,15 +363,9 @@
                                 }
 
                                 .task-link {
-                                    a {
-                                        color: #353f53;
-                                        font-weight: 500;
-                                        text-decoration: none;
-
-                                        &:hover {
-                                            text-decoration: underline;
-                                        }
-                                    }
+                                    color: #353f53;
+                                    font-weight: 500;
+                                    text-decoration: none;
                                 }
 
                                 .go-task {
@@ -384,10 +374,16 @@
                                         color: #b1b2be;
                                     }
                                 }
+
+                                &:hover {
+                                    .task-link {
+                                        text-decoration: underline;
+                                    }
+                                }
                             }
 
                             &:last-of-type {
-                                .client-task-container {
+                                a.client-task-container {
                                     border-bottom: 0;
                                 }
                             }
@@ -547,15 +543,19 @@
                         }
 
                         .profile-name {
-                            color: #353f53;
-                            font-weight: 600;
-                            font-size: 16px;
+                            a {
+                                color: #353f53;
+                                font-weight: 600;
+                                font-size: 16px;
+                            }
 
                             span {
-                                display: block;
-                                font-size: 14px;
-                                font-weight: 400;
-                                color: #7d889a;
+                                a {
+                                    display: block;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: #7d889a;
+                                }
                             }
                         }
 
@@ -570,24 +570,17 @@
                     }
 
                     .feeds-comments-container {
-                        .comments-section {
-                            .user-image {
-                                width: 40px;
-                                padding: 0;
-
-                                img {
-                                    display: block;
-                                    max-width: 100%;
-                                }
-                            }
-                        }
-                    }
-
-                    .feeds-comments-container {
                         background: #f7f9fa;
-                        border-radius: 4px;
                         padding: 15px 0 15px 15px;
-                        height: 180px;
+                        min-height: 115px;
+                        max-height: 176px;
+                        overflow-y: auto;
+                        -webkit-border-top-left-radius: 4px;
+                        -webkit-border-top-right-radius: 4px;
+                        -moz-border-radius-topleft: 4px;
+                        -moz-border-radius-topright: 4px;
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
 
                         ul {
                             padding: 0;
@@ -602,6 +595,16 @@
                                 padding-bottom: 15px;
 
                                 .comments-section {
+                                    .user-image {
+                                        width: 40px;
+                                        padding: 0;
+
+                                        img {
+                                            display: block;
+                                            max-width: 100%;
+                                        }
+                                    }
+
                                     .comment-container {
                                         .user-name {
                                             color: #353f53;
@@ -609,6 +612,8 @@
                                         }
 
                                         .comment {
+                                            position: relative;
+
                                             span.hashTag, span.atMention {
                                                 color: #447DF7;
                                                 text-decoration: underline;
@@ -621,6 +626,34 @@
                                         padding-right: 0;
                                         text-align: right;
                                     }
+
+                                    a.comment-actions {
+                                        margin-top: -4px;
+                                        position: relative;
+                                        top: 0;
+                                        right: 0;
+                                        color: #b5b5b5;
+                                    }
+
+                                    .dropdown-menu {
+                                        position: fixed;
+
+                                        &:before, &:after {
+                                            border: none;
+                                            content: none;
+                                        }
+
+                                        min-width: 80px;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 16px;
+
+                                        li {
+                                            margin-bottom: 0;
+                                            border-bottom: 0;
+                                            padding-bottom: 0;
+                                        }
+                                    }
                                 }
 
                                 &:last-of-type {
@@ -631,15 +664,50 @@
                         }
                     }
 
-                    .reply-link {
-                        margin-top: 10px;
+                    .post-comments-container {
+                        border-top: 2px solid #edeff1;
+                        background: #f7f9fa;
+                        padding: 15px;
+                        -webkit-border-bottom-right-radius: 4px;
+                        -webkit-border-bottom-left-radius: 4px;
+                        -moz-border-radius-bottomright: 4px;
+                        -moz-border-radius-bottomleft: 4px;
+                        border-bottom-right-radius: 4px;
+                        border-bottom-left-radius: 4px;
 
-                        a {
-                            color: #353f53;
-                            text-decoration: underline;
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            list-style-type: none;
 
-                            &:hover {
-                                text-decoration: none;
+                            li {
+                                @include clearfix;
+
+                                .comments-section {
+                                    .user-image {
+                                        width: 40px;
+                                        padding: 0;
+
+                                        img {
+                                            display: block;
+                                            max-width: 100%;
+                                        }
+                                    }
+
+                                    .comment-container {
+                                        .user-name {
+                                            color: #353f53;
+                                            font-weight: 600;
+                                        }
+
+                                        .comment {
+                                            textarea {
+                                                height: 40px;
+                                                resize: none;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -675,20 +743,6 @@
 
                 .form-control {
                     border: 0;
-                }
-
-                .emoji-picker-icon {
-                    right: auto;
-                    top: auto;
-                    left: -28px;
-                    bottom: -65px;
-                    color: #d7d9dc;
-                }
-
-                .emoji-menu {
-                    right: auto;
-                    left: -40px;
-                    bottom: -295px;
                 }
             }
         }
