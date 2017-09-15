@@ -147,6 +147,11 @@
                 }
 
                 .agenda-container {
+                    &.agenda-create {
+                        border-top: 2px solid #f5f5f6;
+                        margin-top: 10px;
+                    }
+
                     table {
                         width: 100%;
 
@@ -451,6 +456,10 @@
                         padding-top: 11px;
                     }
                 }
+
+                .status-update-button {
+                    width: auto !important;
+                }
             }
 
             .filter-title-flip-container {
@@ -695,16 +704,26 @@
                                     }
 
                                     .comment-container {
+                                        width: 92.555%;
+
                                         .user-name {
                                             color: #353f53;
                                             font-weight: 600;
                                         }
 
                                         .comment {
+                                            width: 88.333%;
+
                                             textarea {
-                                                height: 40px;
+                                                height: 42px;
+                                                padding: 11px 12px 7px;
                                                 resize: none;
                                             }
+                                        }
+
+                                        a.comment-post {
+                                            width: auto !important;
+                                            font-size: 20px;
                                         }
                                     }
                                 }
