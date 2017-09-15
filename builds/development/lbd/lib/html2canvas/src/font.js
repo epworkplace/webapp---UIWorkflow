@@ -1,1 +1,48 @@
-function Font(e,t){var i,d,l=document.createElement("div"),n=document.createElement("img"),o=document.createElement("span");l.style.visibility="hidden",l.style.fontFamily=e,l.style.fontSize=t,l.style.margin=0,l.style.padding=0,document.body.appendChild(l),n.src=smallImage(),n.width=1,n.height=1,n.style.margin=0,n.style.padding=0,n.style.verticalAlign="baseline",o.style.fontFamily=e,o.style.fontSize=t,o.style.margin=0,o.style.padding=0,o.appendChild(document.createTextNode("Hidden Text")),l.appendChild(o),l.appendChild(n),i=n.offsetTop-o.offsetTop+1,l.removeChild(o),l.appendChild(document.createTextNode("Hidden Text")),l.style.lineHeight="normal",n.style.verticalAlign="super",d=n.offsetTop-l.offsetTop+1,document.body.removeChild(l),this.baseline=i,this.lineWidth=1,this.middle=d}
+function Font(family, size) {
+    var container = document.createElement('div'),
+        img = document.createElement('img'),
+        span = document.createElement('span'),
+        sampleText = 'Hidden Text',
+        baseline,
+        middle;
+
+    container.style.visibility = "hidden";
+    container.style.fontFamily = family;
+    container.style.fontSize = size;
+    container.style.margin = 0;
+    container.style.padding = 0;
+
+    document.body.appendChild(container);
+
+    img.src = smallImage();
+    img.width = 1;
+    img.height = 1;
+
+    img.style.margin = 0;
+    img.style.padding = 0;
+    img.style.verticalAlign = "baseline";
+
+    span.style.fontFamily = family;
+    span.style.fontSize = size;
+    span.style.margin = 0;
+    span.style.padding = 0;
+
+    span.appendChild(document.createTextNode(sampleText));
+    container.appendChild(span);
+    container.appendChild(img);
+    baseline = (img.offsetTop - span.offsetTop) + 1;
+
+    container.removeChild(span);
+    container.appendChild(document.createTextNode(sampleText));
+
+    container.style.lineHeight = "normal";
+    img.style.verticalAlign = "super";
+
+    middle = (img.offsetTop-container.offsetTop) + 1;
+
+    document.body.removeChild(container);
+
+    this.baseline = baseline;
+    this.lineWidth = 1;
+    this.middle = middle;
+}

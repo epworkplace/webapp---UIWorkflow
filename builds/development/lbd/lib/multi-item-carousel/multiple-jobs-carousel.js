@@ -1,1 +1,89 @@
-$(document).ready(function(){function t(){var t=0,s=0,a="",n="",o=$(i).width(),d=$("body").width();$(r).each(function(){s+=1;var i=$(this).find(".item").length;a=$(this).parent().attr("data-items"),n=a.split(","),$(this).parent().attr("id","MultiCarousel"+s),d>=1200?(t=n[3],e=o/t):d>=992?(t=n[2],e=o/t):d>=768?(t=n[1],e=o/t):(t=n[0],e=o/t),$(this).css({transform:"translateX(0px)",width:e*i}),$(this).find(".item").each(function(){$(this).outerWidth(e)}),$(".leftLst").addClass("over"),$(".rightLst").removeClass("over")})}function s(t,s,a){var i="",n=$(s+" "+r).css("transform").match(/-?[\d\.]+/g),o=Math.abs(n[4]);if(0==t)i=parseInt(o)-parseInt(e*a),$(s+" .rightLst").removeClass("over"),i<=e/2&&(i=0,$(s+" .leftLst").addClass("over"));else if(1==t){var d=$(s).find(r).width()-$(s).width();i=parseInt(o)+parseInt(e*a),$(s+" .leftLst").removeClass("over"),i>=d-e/2&&(i=d,$(s+" .rightLst").addClass("over"))}$(s+" "+r).css("transform","translateX("+-i+"px)")}function a(t,a){var i="#"+$(a).parent().attr("id");s(t,i,$(i).attr("data-slide"))}var i=".MultiCarousel",r=".MultiCarousel-inner",e="";$(".leftLst, .rightLst").click(function(){$(this).hasClass("leftLst")?a(0,this):a(1,this)}),t(),$(window).resize(function(){t()})});
+$(document).ready(function () {
+        var itemsMainDiv = ('.MultiCarousel');
+        var itemsDiv = ('.MultiCarousel-inner');
+        var itemWidth = "";
+        $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+        click(0, this);
+        else
+        click(1, this)
+        });
+        ResCarouselSize();
+        $(window).resize(function () {
+        ResCarouselSize();
+        });
+        //this function define the size of the items
+        function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+        id = id + 1;
+        var itemNumbers = $(this).find(itemClass).length;
+        btnParentSb = $(this).parent().attr(dataItems);
+        itemsSplit = btnParentSb.split(',');
+        $(this).parent().attr("id", "MultiCarousel" + id);
+        if (bodyWidth >= 1200) {
+        incno = itemsSplit[3];
+        itemWidth = sampwidth / incno;
+        }
+        else if (bodyWidth >= 992) {
+        incno = itemsSplit[2];
+        itemWidth = sampwidth / incno;
+        }
+        else if (bodyWidth >= 768) {
+        incno = itemsSplit[1];
+        itemWidth = sampwidth / incno;
+        }
+        else {
+        incno = itemsSplit[0];
+        itemWidth = sampwidth / incno;
+        }
+        $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+        $(this).find(itemClass).each(function () {
+        $(this).outerWidth(itemWidth);
+        });
+        $(".leftLst").addClass("over");
+        $(".rightLst").removeClass("over");
+        });
+        }
+        //this function used to move the items
+        function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+        translateXval = parseInt(xds) - parseInt(itemWidth * s);
+        $(el + ' ' + rightBtn).removeClass("over");
+        if (translateXval <= itemWidth / 2) {
+        translateXval = 0;
+        $(el + ' ' + leftBtn).addClass("over");
+        }
+        }
+        else if (e == 1) {
+        var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+        translateXval = parseInt(xds) + parseInt(itemWidth * s);
+        $(el + ' ' + leftBtn).removeClass("over");
+        if (translateXval >= itemsCondition - itemWidth / 2) {
+        translateXval = itemsCondition;
+        $(el + ' ' + rightBtn).addClass("over");
+        }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+        }
+        //It is used to get some elements from btn
+        function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+        }
+        });

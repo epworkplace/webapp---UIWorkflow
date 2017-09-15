@@ -1,1 +1,20 @@
-function XHR(n){return new Promise(function(r,e){var o=new XMLHttpRequest;o.open("GET",n),o.onload=function(){200===o.status?r(o.responseText):e(new Error(o.statusText))},o.onerror=function(){e(new Error("Network Error"))},o.send()})}
+function XHR(url) {
+    return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                resolve(xhr.responseText);
+            } else {
+                reject(new Error(xhr.statusText));
+            }
+        };
+
+        xhr.onerror = function() {
+            reject(new Error("Network Error"));
+        };
+
+        xhr.send();
+    });
+}

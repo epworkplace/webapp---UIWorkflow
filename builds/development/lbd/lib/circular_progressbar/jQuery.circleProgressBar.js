@@ -1,1 +1,137 @@
-!function(t){t.fn.percentageLoader=function(e){this.each(function(){function r(t,e,r,a,o){i?a.animate({arc:[t,e,r]},900,">"):t&&t!=e?a.animate({arc:[t,e,r]},750,"elastic"):(t=e,a.animate({arc:[t,e,r]},750,"bounce",function(){a.attr({arc:[0,e,r]})}))}var a=t(this),o=t.extend({},t.fn.percentageLoader.defaultConfig,e),n=parseInt(a.children(o.valElement).text()),i=!0,l=parseInt(a.css("width")),c=parseInt(a.css("height")),s=l/2,f=c/2,h=s-o.strokeWidth/2,d=null,u=Raphael(this,l,c);u.customAttributes.arc=function(t,e,r){var a,o=360/e*t,n=(90-o)*Math.PI/180,i=s+r*Math.cos(n),l=f-r*Math.sin(n);return a=e==t?[["M",s,f-r],["A",r,r,0,1,1,s-.01,f-r]]:[["M",s,f-r],["A",r,r,0,+(o>180),1,i,l]],{path:a}},u.path().attr({arc:[100,100,h],"stroke-width":o.strokeWidth,stroke:o.bgColor}),n&&(d=u.path().attr({arc:[.01,100,h],"stroke-width":o.strokeWidth,stroke:o.ringColor,cursor:"pointer"}),r(n,100,h,d)),0==o.valstyl&&u.text(s,f,n+"%").attr({font:o.fontWeight+" "+o.fontSize+" Arial",fill:o.textColor}),1==o.valstyl&&u.text(s,f,o.cpercent+"/"+o.totlvolume).attr({font:o.fontWeight+" "+o.fontSize+" Arial",fill:o.textColor})})},t.fn.percentageLoader.defaultConfig={valElement:"p",valstyl:0,totlvolume:0,cpercent:0,strokeWidth:8,bgColor:"#d9d9d9",ringColor:"#d53f3f",textColor:"#9a9a9a",fontSize:"12px",fontWeight:"normal"}}(jQuery);
+(function($) {
+
+    $.fn.percentageLoader = function(options) {
+		
+        this.each(function() {
+            var $this = $(this);
+            //Configuration Item
+            var config = $.extend({}, $.fn.percentageLoader.defaultConfig, options);
+
+            var val = parseInt($this.children(config.valElement).text()),
+                init = true,
+                speed = 200,
+                w = parseInt($this.css('width')),
+                h = parseInt($this.css('height')),
+                rx = w / 2,
+                ry = h / 2,
+                r = rx - config.strokeWidth / 2,
+                z = null,
+                txt = null,
+                dstop = null;
+
+            var paper = Raphael(this, w, h);
+
+            function minit() {
+                //Ring structure
+                //Custom arc attribute value passed in progress 80 % to 100% of the total number of copies , radius 80
+                paper.customAttributes.arc = function(value, total, R) {
+                    var alpha = 360 / total * value, //angle
+                        a = (90 - alpha) * Math.PI / 180, //radian
+                        x = rx + R * Math.cos(a),
+                        y = ry - R * Math.sin(a),
+                        path;
+                    if (total == value) {
+                        path = [
+                            ["M", rx, ry - R],
+                            ["A", R, R, 0, 1, 1, rx - 0.01, ry - R]
+                            //Semi-major axis，
+                            //Semi-minor axis'
+                            //x -axis and the angle between the horizontal line
+                            //1 represents a large angle arc, 0 represents a small angle arc
+                            //1 represents a clockwise arc Videos 0 for counter-clockwise
+                            //The end point x, y coordinates
+                        ];
+                    } else {
+                        path = [
+                            ["M", rx, ry - R],
+                            ["A", R, R, 0, +(alpha > 180), 1, x, y]
+                        ];
+                    };
+
+                    return {
+                        path: path
+                    };
+                };
+                //Draw circle background
+                paper.path().attr({
+                    arc: [100, 100, r],
+                    'stroke-width': config.strokeWidth,
+                    'stroke': config.bgColor
+                });
+                if (!!val) {
+                    z = paper.path().attr({
+                        arc: [0.01, 100, r],
+                        'stroke-width': config.strokeWidth,
+                        'stroke': config.ringColor,
+                        'cursor': "pointer"
+                    });
+                    updateVal(val, 100, r, z, 2);
+                }
+             //circle style
+			 if(config.valstyl ==0){
+                txt = paper.text(rx, ry, val + "%").attr({
+                    font: config.fontWeight + " " + config.fontSize + " Arial",
+                    fill: config.textColor
+                });
+			 }
+			 
+			 if(config.valstyl ==1){
+                txt = paper.text(rx, ry, config.cpercent + "/" +config.totlvolume).attr({
+                    font: config.fontWeight + " " + config.fontSize + " Arial",
+                    fill: config.textColor
+                });
+			 }
+			 
+            };
+            minit();
+            // //Chromatogram
+            // function getColor(size) {
+            //  var arr = [];
+            //  for (var i = 0; i <= 255; i++) {
+            //      arr.push("rgb(" + i + "," + (255 - i) + "," + 0 + ")");
+            //  }
+            //  console.log(arr);
+            //  return arr[parseInt(size * 2.55)];
+            // }; 
+            //Ring and move up event bindings
+            function updateVal(value, total, R, hand, id) {
+                if (init) {
+                    hand.animate({
+                        arc: [value, total, R]
+                    }, 900, ">");
+                } else {
+                    if (!value || value == total) {
+                        value = total;
+                        hand.animate({
+                            arc: [value, total, R]
+                        }, 750, "bounce", function() {
+                            hand.attr({
+                                arc: [0, total, R]
+                            });
+                        });
+                    } else {
+                        hand.animate({
+                            arc: [value, total, R]
+                        }, 750, "elastic");
+                    }
+                }
+            };
+
+        });
+
+    };
+    //Defaults
+    $.fn.percentageLoader.defaultConfig = {
+        valElement: 'p',
+		valstyl    : 0,
+		totlvolume : 0,
+		cpercent   : 0,
+        strokeWidth: 8,
+        bgColor: '#d9d9d9',
+        ringColor: '#d53f3f',
+        textColor: '#9a9a9a',
+        fontSize: '12px',
+        fontWeight: 'normal'
+    };
+
+})(jQuery);

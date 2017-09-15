@@ -16,7 +16,7 @@
                     // overflow: visible;
 
                     .mCSB_container {
-                      padding-right: 9px;
+                      // padding-right: 9px;
                     }
 
                     .mCSB_scrollTools {
@@ -284,51 +284,55 @@
                     }
                   }
 
-                                    
-
                   [class*='list-content-container'] {
                     margin-top: 130px;
-                    &.tab-step{
+
+                    &.tab-step {
                       padding: 0 15px;
                       margin-top: 67px;
-                      .tab-step-content{
-                        .nav{
+
+                      .tab-step-content {
+                        .nav {
                           position: fixed;
                           z-index: 2;
                           width: calc(58% + 8px);
                           padding-bottom: 25px;
                           margin: 0 -3px;
                           background: #fff;
-                          &:before{
+
+                          &:before {
                             bottom: 16px;
                           }
                         }
-                        .tab-content{
-                          .tab-pane{
-                            .tab-content-header{
+
+                        .tab-content {
+                          .tab-pane {
+                            .tab-content-header {
                               padding: 20px 0;
                               position: fixed;
                               width: 60%;
                               z-index: 1;
                               background: white;
                               top: 95px;
+
                               [class*='create-new'] {
                                 // padding-right: 10px;
+                             
                               }
 
                               .btn-download {
                                 flex-grow: 1;
                               }
                             }
-                            .tab-content-container{
+
+                            .tab-content-container {
                               margin-top: 110px;
                             }
-
                           }
-
                         }
                       }
                     }
+
                     .card-section-list {
                       ul {
                         padding: 0;
@@ -382,14 +386,14 @@
                                 position: inherit;
                                 top: 0;
                                 left: 0;
-                                &[data-original-title*="Progress"]{
+
+                                &[data-original-title*='Progress'] {
                                   width: 40px;
                                   position: absolute;
                                   top: 5px;
                                   left: 4.6px;
                                 }
                               }
-
 
                               &.empty-image {
                                 width: 50px;
@@ -441,15 +445,15 @@
                                 display: flex;
                                 align-items: center;
 
-                                .label{
+                                .label {
                                   line-height: normal;
                                   margin-right: 10px;
                                 }
+
                                 .dates {
                                   margin-left: 0px;
                                   display: flex;
                                   align-items: center;
-
 
                                   span {
                                     color: #B0B4BB;
@@ -534,9 +538,8 @@
                             [class*='-email'] {
                               text-decoration: underline;
                             }
-                            .helper-text{
-                              
-                            }
+
+                            .helper-text {}
                           }
 
                           .task-price {
@@ -726,23 +729,27 @@
                   }
 
                   &.contacts-list-container {}
+
                   &.quotes-contracts-list-container, &.crm-list-container {
-                    .main-panel-header{
+                    .main-panel-header {
                       padding-bottom: 0;
                     }
                   }
+
                   &.crm-list-container {
-                    .list-head-container{
-                      .status-label{
-                        .label{
+                    .list-head-container {
+                      .status-label {
+                        .label {
                           margin-right: 10px;
                         }
                       }
-                      .survey-source{
+
+                      .survey-source {
                         display: flex;
                         align-items: center;
                         margin-top: 5px;
-                        label{
+
+                        label {
                           color: $helper;
                           font-weight: 400;
                           font-size: 14px;
@@ -768,27 +775,34 @@
 
   .modal {
     color: $main;
-    span.close{
+
+    span.close {
       position: absolute;
       top: 0;
       right: 0;
     }
-    label{
+
+    label {
       color: $helper;
       font-weight: 400;
       text-transform: uppercase;
     }
-    .modal-content{
+
+    .modal-content {
       padding: 15px;
-      .btn{
+
+      .btn {
         // width: 100% !important;
+     
       }
-      .modal-title{
+
+      .modal-title {
         font-size: 20px;
         font-weight: 600;
         margin: 0 0 10px 0;
       }
     }
+
     .client-details {
       padding: 0;
 
@@ -799,7 +813,6 @@
       text-transform: uppercase;
       font-size: 12px;
       font-weight: 600;
-      // margin-bottom: 10px;
       color: $helper;
     }
 
@@ -818,50 +831,97 @@
         text-decoration: none;
       }
     }
-    .question-list{
-      ul{
-          padding: 0;
-          margin: 0;
-          list-style-type: none;
-        li{
+
+    .question-list {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
           @include clearfix;
-          .question-container{
+
+          .question-container {
             @extend %question-container;
           }
-          &.add-block{
-            .add-new-block{
-              .add-card{
+
+          &.add-block {
+            .add-new-block {
+              .add-card {
                 @extend %add-button;
+
                 height: 50px;
                 border: 2px dashed $border-color;
                 box-shadow: none;
-                &:hover, &:focus{
+
+                &:hover, &:focus {
                   border: 2px solid $selected;
                 }
               }
             }
-          }          
+          }
         }
       }
     }
-    .chosen-container-multi .chosen-choices{
+
+    .chosen-container-multi .chosen-choices {
       height: auto;
       padding: 5px 15px !important;
     }
-    &.edit-a-quick-question-modal{
-      .add-new-answer{
-        label{
+
+    &.edit-a-quick-question-modal {
+      .add-new-answer {
+        label {
           margin: 0;
           text-transform: none;
         }
       }
-      .add-new-answer-input{
+
+      .add-new-answer-input {
         display: none;
+      }
+    }
+    &.create-new-client-modal{
+      .tokenfield{
+        &.form-control{
+          min-height: 38px;
+          height: auto;
+          padding: 6px 12px !important;
+          .token{
+            .close{
+              opacity: 0.5;
+              &:hover{
+                opacity: 1;
+              }
+            }
+          }
+          .token-input{
+            margin-bottom: 0;
+            width: 100% !important;
+          }
+        }
       }
     }
   }
 
   /* modal dialog styles ends */
+
+/* UI-autocomoplete dropdown styles */
+  .ui-autocomplete{
+    &.ui-menu{
+      min-width: 200px !important;
+      background: white;
+      .ui-menu-item{
+        a{
+           &:hover{
+            background: $selected !important;
+            color: white !important;
+          } 
+        }
+      }
+    }
+  }
+
 }
 
 /* #clientProfile styles ends */

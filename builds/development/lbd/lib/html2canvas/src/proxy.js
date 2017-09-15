@@ -1,1 +1,51 @@
-function Proxy(n,r,e){if(!r)return Promise.reject("No proxy configured");var t=createCallback(supportsCORS),o=createProxyUrl(r,n,t);return supportsCORS?XHR(o):jsonp(e,o,t).then(function(n){return decode64(n.content)})}function ProxyURL(n,r,e){var t=createCallback(supportsCORSImage),o=createProxyUrl(r,n,t);return supportsCORSImage?Promise.resolve(o):jsonp(e,o,t).then(function(n){return"data:"+n.type+";base64,"+n.content})}function jsonp(n,r,e){return new Promise(function(t,o){var a=n.createElement("script"),c=function(){delete window.html2canvas.proxy[e],n.body.removeChild(a)};window.html2canvas.proxy[e]=function(n){c(),t(n)},a.src=r,a.onerror=function(n){c(),o(n)},n.body.appendChild(a)})}function createCallback(n){return n?"":"html2canvas_"+Date.now()+"_"+ ++proxyCount+"_"+Math.round(1e5*Math.random())}function createProxyUrl(n,r,e){return n+"?url="+encodeURIComponent(r)+(e.length?"&callback=html2canvas.proxy."+e:"")}var proxyCount=0,supportsCORS="withCredentials"in new XMLHttpRequest,supportsCORSImage="crossOrigin"in new Image;
+function Proxy(src, proxyUrl, document) {
+    if (!proxyUrl) {
+        return Promise.reject("No proxy configured");
+    }
+    var callback = createCallback(supportsCORS);
+    var url = createProxyUrl(proxyUrl, src, callback);
+
+    return supportsCORS ? XHR(url) : (jsonp(document, url, callback).then(function(response) {
+        return decode64(response.content);
+    }));
+}
+var proxyCount = 0;
+
+var supportsCORS = ('withCredentials' in new XMLHttpRequest());
+var supportsCORSImage = ('crossOrigin' in new Image());
+
+function ProxyURL(src, proxyUrl, document) {
+    var callback = createCallback(supportsCORSImage);
+    var url = createProxyUrl(proxyUrl, src, callback);
+    return (supportsCORSImage ? Promise.resolve(url) : jsonp(document, url, callback).then(function(response) {
+        return "data:" + response.type + ";base64," + response.content;
+    }));
+}
+
+function jsonp(document, url, callback) {
+    return new Promise(function(resolve, reject) {
+        var s = document.createElement("script");
+        var cleanup = function() {
+            delete window.html2canvas.proxy[callback];
+            document.body.removeChild(s);
+        };
+        window.html2canvas.proxy[callback] = function(response) {
+            cleanup();
+            resolve(response);
+        };
+        s.src = url;
+        s.onerror = function(e) {
+            cleanup();
+            reject(e);
+        };
+        document.body.appendChild(s);
+    });
+}
+
+function createCallback(useCORS) {
+    return !useCORS ? "html2canvas_" + Date.now() + "_" + (++proxyCount) + "_" + Math.round(Math.random() * 100000) : "";
+}
+
+function createProxyUrl(proxyUrl, src, callback) {
+    return proxyUrl + "?url=" + encodeURIComponent(src) + (callback.length ? "&callback=html2canvas.proxy." + callback : "");
+}
