@@ -846,6 +846,9 @@
             .fixed-table-body {
                 .mission-quote-table {
                     border: none;
+                    &.has-container{
+                        margin-bottom: 270px !important;
+                    }
 
                     thead {
                         tr {
@@ -1057,7 +1060,7 @@
     }
 
     .no-quote-mission-container {
-        margin-top: 280px;
+        // margin-top: 280px;
     }
 
     .mission-estimation-container {
