@@ -2566,6 +2566,27 @@ $(document).on('click', ".quote-select-radio .radio", function(e){
         }
     });
 
+// Browse mission modal bootstrap-table margin calculstion
+
+$(document).on('click', 'a[data-target="#browseMissionModal"]', function(e){
+      // e.stopPropagation();
+      var listTable = $('.mission-quote-table'),
+          // listContainerHeight = $('.quote-list-container')[0].clientHeight,
+          listContainer = $('.mission-quote-table .quote-list-container');
+
+          if(listContainer) {listTable.addClass('has-container');}
+      
+    });
+
+
+// $('#browseMissionModal').on('loaded.bs.modal', function (e) {
+//    var listTable = $('.mission-quote-table');
+//   listContainerHeight = $('.quote-list-container')[0].clientHeight;
+//   console.log(listContainerHeight);
+//   listTable.css({'margin-bottom': listContainerHeight }); 
+// })
+
+
 });
 
 // (function($) {

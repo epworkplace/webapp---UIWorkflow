@@ -31,6 +31,11 @@
         <!--  Light Bootstrap Dashboard core CSS    -->
         <link href="lbd/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
         <!-- Temporary css for Layouts     -->
+        <style>
+            .dropdown-menu{
+                position:fixed;
+            }
+        </style>
     </head>
 <body class="wp-app layout-1">
     <div class="wrapper">
@@ -427,7 +432,7 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <div class="col-md-12 feeds-comments-container">
+                                                            <div class="col-md-12 feeds-comments-container" data-container="body">
                                                                 <ul>
                                                                     <li>
                                                                         <div class="col-md-12 comments-section">
@@ -439,7 +444,7 @@
                                                                                     <div class="row">
                                                                                         <div class="col-md-9 user-name">Clarisse Courtois</div>
                                                                                         <div class="col-md-2 comment-date">10m ago</div>
-                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                        <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
                                                                                             <i class="material-icons">more_horiz</i>
                                                                                         </a>
                                                                                         <ul class="dropdown-menu dropdown-menu-right" data-container="body">
@@ -547,7 +552,7 @@
                                                                                     <div class="row">
                                                                                         <div class="col-md-9 user-name">Paul Martin</div>
                                                                                         <div class="col-md-2 comment-date">10m ago</div>
-                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                        <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
                                                                                             <i class="material-icons">more_horiz</i>
                                                                                         </a>
                                                                                         <ul class="dropdown-menu dropdown-menu-right" data-container="body">
@@ -574,7 +579,7 @@
                                                                                     <div class="row">
                                                                                         <div class="col-md-9 user-name">Paul Martin</div>
                                                                                         <div class="col-md-2 comment-date">10m ago</div>
-                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                        <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
                                                                                             <i class="material-icons">more_horiz</i>
                                                                                         </a>
                                                                                         <ul class="dropdown-menu dropdown-menu-right" data-container="body">
@@ -658,7 +663,7 @@
                                                                                     <div class="row">
                                                                                         <div class="col-md-9 user-name">Clarisse Courtois</div>
                                                                                         <div class="col-md-2 comment-date">10m ago</div>
-                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                        <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
                                                                                             <i class="material-icons">more_horiz</i>
                                                                                         </a>
                                                                                         <ul class="dropdown-menu dropdown-menu-right" data-container="body">
@@ -1047,5 +1052,17 @@
          });
 
         
+    </script>
+
+    <script>
+        /* Dropdown fix for comments */
+        // $('.dropdown-toggle').click(function (){
+        //     dropDownFixPosition($('a.dropdown-toggle'),$('.dropdown-menu'));
+        // });
+        // function dropDownFixPosition(button,dropdown){
+        //       var dropDownTop = button.offset().top + button.outerHeight();
+        //         dropdown.css('top', dropDownTop + "px");
+        //         dropdown.css('left', button.offset().left + "px");
+        // }
     </script>
 </html>
