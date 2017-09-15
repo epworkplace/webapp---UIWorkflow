@@ -122,6 +122,9 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-12 create-event-container">
+                                                        <a href="javascript:;" class="close">
+                                                            <i class="material-icons">close</i>
+                                                        </a>
                                                         <div class="row event-dates">
                                                             <div class="col-md-12 event-date">
                                                                 <label>Start Date</label>
@@ -158,7 +161,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-md-12 create-event-container">
+                                                    <div class="col-md-12 create-event-container inside">
+                                                        <a href="javascript:;" class="close">
+                                                            <i class="material-icons">close</i>
+                                                        </a>
                                                         <div class="row event-dates">
                                                             <div class="col-md-12 event-date">
                                                                 <label>Start Date</label>
@@ -188,9 +194,15 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td class="col-md-5 agenda-time">08:00 - 09:00</td>
-                                                                    <td class="col-md-7 agenda-subject">
+                                                                    <td class="col-md-6 agenda-subject">
                                                                         <ul>
-                                                                            <li><a href="javascript:;">Team-standup meeting</a></li>
+                                                                            <li><a href="javascript:;">Team-standup meeting</a>
+                                                                                <span class="agenda-cancel">
+                                                                                    <a href="javascript:;">
+                                                                                        <i class="material-icons">close</i>
+                                                                                    </a>
+                                                                                </span>
+                                                                            </li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -198,7 +210,13 @@
                                                                     <td class="col-md-5 agenda-time">11:00 - 12: 30</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li><a href="javascript:;">Brunch</a></li>
+                                                                            <li><a href="javascript:;">Brunch</a>
+                                                                                <span class="agenda-cancel">
+                                                                                    <a href="javascript:;">
+                                                                                        <i class="material-icons">close</i>
+                                                                                    </a>
+                                                                                </span>
+                                                                            </li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -206,8 +224,20 @@
                                                                     <td class="col-md-5 agenda-time">13:00 - 14: 30</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li><a href="javascript:;">Webidia clien phone call</a></li>
-                                                                            <li><a href="javascript:;">Debrief with paul</a></li>
+                                                                            <li><a href="javascript:;">Webidia clien phone call</a>
+                                                                                <span class="agenda-cancel">
+                                                                                    <a href="javascript:;">
+                                                                                        <i class="material-icons">close</i>
+                                                                                    </a>
+                                                                                </span>
+                                                                            </li>
+                                                                            <li><a href="javascript:;">Debrief with paul</a>
+                                                                                <span class="agenda-cancel">
+                                                                                    <a href="javascript:;">
+                                                                                        <i class="material-icons">close</i>
+                                                                                    </a>
+                                                                                </span>
+                                                                            </li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -215,7 +245,13 @@
                                                                     <td class="col-md-5 agenda-time">17:00 - 14:30</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li><a href="javascript:;">Prohect status quick checking</a></li>
+                                                                            <li><a href="javascript:;">Prohect status quick checking</a>
+                                                                                <span class="agenda-cancel">
+                                                                                    <a href="javascript:;">
+                                                                                        <i class="material-icons">close</i>
+                                                                                    </a>
+                                                                                </span>
+                                                                            </li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -223,7 +259,13 @@
                                                                     <td class="col-md-5 agenda-time">19:30 - 21:00</td>
                                                                     <td class="col-md-7 agenda-subject">
                                                                         <ul>
-                                                                            <li><a href="javascript:;">Busy</a></li>
+                                                                            <li><a href="javascript:;">Busy</a>
+                                                                                <span class="agenda-cancel">
+                                                                                    <a href="javascript:;">
+                                                                                        <i class="material-icons">close</i>
+                                                                                    </a>
+                                                                                </span>
+                                                                            </li>
                                                                         </ul>
                                                                     </td>
                                                                 </tr>
@@ -387,6 +429,87 @@
                                                         <div class="col-md-12">
                                                             <div class="col-md-12 feeds-comments-container">
                                                                 <ul>
+                                                                    <li>
+                                                                        <div class="col-md-12 comments-section">
+                                                                            <div class="row">
+                                                                                <div class="col-md-1 user-image">
+                                                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                                </div>
+                                                                                <div class="col-md-11 comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                        <div class="col-md-2 comment-date">10m ago</div>
+                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">more_horiz</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                            <li><a href="javascript:;">Edit</a></li>
+                                                                                            <li><a href="javascript:;">Delete</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 comment">
+                                                                                            <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="col-md-12 comments-section">
+                                                                            <div class="row">
+                                                                                <div class="col-md-1 user-image">
+                                                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                                </div>
+                                                                                <div class="col-md-11 comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                        <div class="col-md-2 comment-date">10m ago</div>
+                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">more_horiz</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                            <li><a href="javascript:;">Edit</a></li>
+                                                                                            <li><a href="javascript:;">Delete</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 comment">
+                                                                                            <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="col-md-12 comments-section">
+                                                                            <div class="row">
+                                                                                <div class="col-md-1 user-image">
+                                                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                                </div>
+                                                                                <div class="col-md-11 comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                        <div class="col-md-2 comment-date">10m ago</div>
+                                                                                        <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">more_horiz</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                            <li><a href="javascript:;">Edit</a></li>
+                                                                                            <li><a href="javascript:;">Delete</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 comment">
+                                                                                            <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
                                                                     <li>
                                                                         <div class="col-md-12 comments-section">
                                                                             <div class="row">
@@ -906,5 +1029,23 @@
             $('.filter-title-flip-container .feed-title-container').hide(400);
 
         });
+
+        /*$("a.comment-actions").click(function(){
+            if ($(this).parents('.feeds-comments-container ul litr:first')) {
+                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=0px'}, 800);
+            }
+            else if ($(this).parents('.feeds-comments-container ul li:nth-last-child(1)')) {
+                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=50px'}, 800);
+            }
+            else{
+                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=30px'}, 800);
+            }
+        });*/
+
+         $('a.comment-actions').click(function(e){
+                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=30px'}, 800);
+         });
+
+        
     </script>
 </html>

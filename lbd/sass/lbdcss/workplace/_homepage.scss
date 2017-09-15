@@ -107,7 +107,18 @@
                 }
 
                 .create-event-container {
-                    margin-top: 10px;
+                    margin: 15px 0;
+                    position: relative;
+
+                    &.inside {
+                        margin-top: 20px;
+                    }
+
+                    a.close {
+                        position: absolute;
+                        right: 15px;
+                        top: -15px;
+                    }
 
                     .event-dates {
                         margin-bottom: 15px;
@@ -149,7 +160,6 @@
                 .agenda-container {
                     &.agenda-create {
                         border-top: 2px solid #f5f5f6;
-                        margin-top: 10px;
                     }
 
                     table {
@@ -176,6 +186,11 @@
                                         margin: 0;
 
                                         li {
+                                            margin-bottom: 5px;
+                                            font-weight: 600;
+                                            color: #353f53;
+                                            position: relative;
+
                                             a {
                                                 margin-bottom: 5px;
                                                 font-weight: 600;
@@ -187,9 +202,26 @@
                                                 }
                                             }
 
-                                            margin-bottom: 5px;
-                                            font-weight: 600;
-                                            color: #353f53;
+                                            span.agenda-cancel {
+                                                position: absolute;
+                                                right: -7px;
+                                                top: -2px;
+                                                visibility: hidden;
+                                                opacity: 0;
+                                                transition: all .3s ease;
+
+                                                a {
+                                                    color: #DFE1E3;
+
+                                                    i {
+                                                        font-size: 20px;
+                                                    }
+
+                                                    &:hover {
+                                                        color: #485262;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -200,6 +232,20 @@
 
                                 td {
                                     padding-bottom: 10px;
+                                }
+                            }
+
+                            &:hover {
+                                td.agenda-subject {
+                                    ul {
+                                        li {
+                                            span.agenda-cancel {
+                                                visibility: visible;
+                                                opacity: 1;
+                                                transition: all .3s ease;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -499,6 +545,10 @@
                         padding: 7px 15px !important;
                     }
 
+                    .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+                        width: 100% !important;
+                    }
+
                     .chosen-container-multi .chosen-choices li.search-choice {
                         margin: 0 5px 5px 0;
                         border: 1px solid #353f53;
@@ -581,8 +631,8 @@
                     .feeds-comments-container {
                         background: #f7f9fa;
                         padding: 15px 0 15px 15px;
-                        min-height: 115px;
-                        max-height: 176px;
+                        min-height: 120px;
+                        max-height: 180px;
                         overflow-y: auto;
                         -webkit-border-top-left-radius: 4px;
                         -webkit-border-top-right-radius: 4px;
@@ -601,7 +651,7 @@
 
                                 margin-bottom: 15px;
                                 border-bottom: 2px solid #edeff1;
-                                padding-bottom: 15px;
+                                padding: 15px 0;
 
                                 .comments-section {
                                     .user-image {
@@ -658,9 +708,9 @@
                                         top: 16px;
 
                                         li {
-                                            margin-bottom: 0;
+                                            margin: 0;
                                             border-bottom: 0;
-                                            padding-bottom: 0;
+                                            padding: 0;
                                         }
                                     }
                                 }
