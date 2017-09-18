@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Light Bootstrap Dashboard PRO by Creative Tim </title>
+    <!-- @include _partials/_all-meta-head.html -->
+</head>
+
+<body class="wp-app layout-3 contributors">
+<div class="wrapper">
+  <!-- @include _partials/_sidebar.html -->
+  <div class="container-fluid page-wrap">
+    <div class="row">
+      <div class="col-md-12 main-panel-wrap">
+        <div class="main-panel">
+          <div class="container-fluid main-panel-page">
+            <div class="row main-container clients-list-page" id="">
+              <div class="col-md-4 tab-panel-container">
+                <div class="tab-panel outside">
+                  <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header"> </div>
+                      <div class="row">
+                        <div class="col-xs-12 page-title">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                          <a class="navbar-brand" href="#">Users</a> </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 tab-panel-search">
+                          <div class="search-input">
+                            <input type="text" class="form-control" name="company" required placeholder="Search a Keyword..." />
+                            <div class="search-icon"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                  <div class="page-filter">
+                    <div class="status-list-container">
+                      <div class="status-title">Platform</div>
+                      <div class="status-list">
+                        <ul class="btn-group btn-group-justified" data-toggle="buttons">
+                          <li>
+                              <a class="btn btn-default" data-toggle="tab" href="#users-list-fr">
+                                <input id="ongoing" name="contract-tabs" type="radio" value="ongoing" />
+                                <p>Edit-place</p>
+                                <h4>
+                                    France
+                                </h4>
+                              </a>
+                          </li>
+                          <li>
+                              <a class="btn btn-default" data-toggle="tab" href="#users-list-uk">
+                                <input id="validate" name="contract-tabs" type="radio" value="validate" />
+                                <p>Edit-place</p>
+                                <h4>
+                                    United Kingdom
+                                </h4>
+                              </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="filter-list-container">
+                      <div class="filter-title">Jobs</div>
+                      <div class="filter-list">
+                        <ul>
+                          <li>
+                            <div class="select-group">
+                              <div class="form-group owners">
+                                <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="All Jobs" id="owner">
+                                  <option data-hidden="true"></option>
+                                  <option value="0">Writer</option>
+                                  <option value="0">Proof reader</option>
+                                  <option value="1">Job 01</option>
+                                  <option value="2">Job 02</option>
+                                  <option value="3">Job 03</option>
+                                  <option value="4">Job 04</option>
+                                  <option value="5">Job 05</option>
+                                </select>
+                              </div>
+                            </div>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      <div class="form-group">
+                          <label for="" class="filter-title">Level: </label>
+                          <select name="filter" id="" title="-" multiple class="selectpicker" data-actions-box="true">
+                            <option data-content="<span class='label senior'>Senior</span>">Senior</option>
+                            <option data-content="<span class='label junior'>Junior</span>">Junior</option>
+                            <option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="" class="filter-title">Languages: </label>
+                          <select class="chosen-default flags" multiple data-placeholder="-">
+                            <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
+                            <option data-img-src="lbd/img/flag/fr.gif">FR</option>
+                            <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
+                            <option data-img-src="lbd/img/flag/sp.gif">ES</option>
+                            <option data-img-src="lbd/img/flag/pol.gif">PO</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="filter-list-container filter-list-bottom">
+                      <div class="filter-title">Tags</div>
+                      <div class="filter-list">
+                        <ul>
+                          <li>
+                            <div class="select-group">
+                              <div class="form-group tag">
+                                <select data-placeholder="Enter a tag.." class="chosen-select" multiple id="tag">
+                                  <option value=""></option>
+                                  <option value="0">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                </select>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 main-panel-container">
+                <div class="no-data-container">
+                  <div class="no-data-placeholder">
+                    <h2>Play with filters or type a keyword</h2>
+                    <p>Check out on the left side!</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="tab-content" id="users-list-fr">
+                    <div class="col-md-12 main-panel-header">
+                        <div class="col-md-3 pull-left select-all-container">
+                            <div class="select-all">
+                                <label class="checkbox">
+                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                </label>
+                                <span class="select">Select all</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pull-right page-status">
+                            <span>49 Contracts</span> Found
+                        </div>
+                        <div class="col-md-6 pull-right validate">
+                            <button class="btn btn-fill btn-wd validate-btn">Validate</button>
+                            <button class="btn btn-fill btn-wd delete-btn">Delete</button>
+                        </div>
+                    </div>
+                    <div class="tab-content-container">
+                       <div class="col-md-12 contract-content-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card-section-list" data-role="contract-section-list">
+                                        <ul>
+                                            <li>
+                                                <div class="col-md-12 card card-contract">
+                                                    <div class="col-md-1 check">
+                                                        <label class="checkbox">
+                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-1 list-image-container">
+                                                        <div class="list-image" id="contractImage24" data-value="60">
+                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 list-head-container">
+                                                        <div class="header">    
+                                                            <div class="status-label">
+                                                                <span class="label ongoing">Ongoing</span>
+                                                                <span class="dates">
+                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
+                                                                </span>
+                                                        </div>
+                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="task-price">
+                                                        <div class="col-md-2 numbers">
+                                                            3<span>missions</span>
+                                                        </div>
+                                                        <div class="col-md-2 turnover">
+                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cta-container">
+                                                        <div class="cta">
+                                                            <ul>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
+                                                                <li>
+                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
+                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+                                                                    <span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 card card-contract">
+                                                    <div class="col-md-1 check">
+                                                        <label class="checkbox">
+                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-1 list-image-container">
+                                                        <div class="list-image" id="contractImage23" data-value="60">
+                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 list-head-container">
+                                                        <div class="header">    
+                                                            <div class="status-label">
+                                                                <span class="label ongoing">Ongoing</span>
+                                                                <span class="dates">
+                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
+                                                                </span>
+                                                        </div>
+                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="task-price">
+                                                        <div class="col-md-2 numbers">
+                                                            3<span>missions</span>
+                                                        </div>
+                                                        <div class="col-md-2 turnover">
+                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cta-container">
+                                                        <div class="cta">
+                                                            <ul>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
+                                                                <li>
+                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
+                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+                                                                    <span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 card card-contract">
+                                                    <div class="col-md-1 check">
+                                                        <label class="checkbox">
+                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-1 list-image-container">
+                                                        <div class="list-image" id="contractImage22" data-value="60">
+                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 list-head-container">
+                                                        <div class="header">    
+                                                            <div class="status-label">
+                                                                <span class="label ongoing">Ongoing</span>
+                                                                <span class="dates">
+                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
+                                                                </span>
+                                                        </div>
+                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="task-price">
+                                                        <div class="col-md-2 numbers">
+                                                            3<span>missions</span>
+                                                        </div>
+                                                        <div class="col-md-2 turnover">
+                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cta-container">
+                                                        <div class="cta">
+                                                            <ul>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
+                                                                <li>
+                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
+                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+                                                                    <span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 card card-contract">
+                                                    <div class="col-md-1 check">
+                                                        <label class="checkbox">
+                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-1 list-image-container">
+                                                        <div class="list-image" id="contractImage21" data-value="60">
+                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 list-head-container">
+                                                        <div class="header">    
+                                                            <div class="status-label">
+                                                                <span class="label ongoing">Ongoing</span>
+                                                                <span class="dates">
+                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
+                                                                </span>
+                                                        </div>
+                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="task-price">
+                                                        <div class="col-md-2 numbers">
+                                                            3<span>missions</span>
+                                                        </div>
+                                                        <div class="col-md-2 turnover">
+                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cta-container">
+                                                        <div class="cta">
+                                                            <ul>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
+                                                                <li>
+                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
+                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+                                                                    <span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 card card-contract">
+                                                    <div class="col-md-1 check">
+                                                        <label class="checkbox">
+                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-1 list-image-container">
+                                                        <div class="list-image" id="contractImage20" data-value="60">
+                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 list-head-container">
+                                                        <div class="header">    
+                                                            <div class="status-label">
+                                                                <span class="label ongoing">Ongoing</span>
+                                                                <span class="dates">
+                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
+                                                                </span>
+                                                        </div>
+                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="task-price">
+                                                        <div class="col-md-2 numbers">
+                                                            3<span>missions</span>
+                                                        </div>
+                                                        <div class="col-md-2 turnover">
+                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cta-container">
+                                                        <div class="cta">
+                                                            <ul>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
+                                                                <li>
+                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
+                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+                                                                    <span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 card card-contract">
+                                                    <div class="col-md-1 check">
+                                                        <label class="checkbox">
+                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-1 list-image-container">
+                                                        <div class="list-image" id="contractImage19" data-value="60">
+                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 list-head-container">
+                                                        <div class="header">    
+                                                            <div class="status-label">
+                                                                <span class="label ongoing">Ongoing</span>
+                                                                <span class="dates">
+                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
+                                                                </span>
+                                                        </div>
+                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="task-price">
+                                                        <div class="col-md-2 numbers">
+                                                            3<span>missions</span>
+                                                        </div>
+                                                        <div class="col-md-2 turnover">
+                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cta-container">
+                                                        <div class="cta">
+                                                            <ul>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
+                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
+                                                                <li>
+                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
+                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+                                                                    <span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+                  <div class="tab-content" id="users-list-uk">
+                    <div class="tab-content-container">
+                      <div class="col-md-12 client-content-container">
+                        <div class="row">
+                          <div class="col-md-12"> <span class="search-result-text"> <strong>17 Clients</strong> matching with your criteria </span> </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <table id="client-prospect-list-table" class="client-prospect-list-table" cellspacing="10">
+                              <thead>
+                                <tr class="">
+                                  <th data-field="id" class="" data-sortable="true">ID</th>
+                                  <th data-field="name" data-sortable="true">Client Name</th>
+                                  <th data-field="creation-date" data-sortable="true">Creation Date</th>
+                                  <th data-field="client-owner" data-sortable="true">Client Owner</th>
+                                </tr>
+                                <tr class="">
+                                  <th colspan="4" class="add-new-card"> <div class=""> <a class="add-card" href="javascript:;" data-toggle="modal" data-target="#create-new-client-modal"> <i class="material-icons">add</i> </a> </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="client-list-item">
+                                  <div>
+                                    <td class="col-md-1 client-id text-center"><span>C001</span></td>
+                                    <td class="client-name-container col-md-6"><div class="col-md-2 client-image-container">
+                                        <div class="list-image" id="contactImage19" data-value="60"> <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive"> </div>
+                                      </div>
+                                      <div class="col-md-10 client-desc">
+                                        <div class="row">
+                                          <div class="client-name"><a href="javascript:;">But</a></div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="tags-list"> <span class="label paused">Tier_3</span> <span class="label paused">Teritary</span> <span class="label paused">Advertising / Entertainment</span> <span class="label paused">Untagged</span> </div>
+                                        </div>
+                                      </div></td>
+                                    <td class="col-md-2"><div class="creation-date"> <span class="d-block">Created on</span> Jan 21, 2019 </div></td>
+                                    <td class="col-md-2"><div class="owned-by"> <span class="d-block">Owned by</span> Lucie Zvanovec </div></td>
+                                  </div>
+                                </tr>
+                                <tr class="client-list-item">
+                                  <td class="col-md-1 client-id text-center"><span>C002</span></td>
+                                  <td class="client-name-container col-md-6"><div class="col-md-2 client-image-container">
+                                      <div class="list-image" id="contactImage19" data-value="60"> <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive"> </div>
+                                    </div>
+                                    <div class="col-md-10 client-desc">
+                                      <div class="row">
+                                        <div class="client-name"><a href="javascript:;">CDiscount</a></div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="tags-list"> <span class="label paused">Tier_3</span> <span class="label paused">Teritary</span> <span class="label paused">Advertising / Entertainment</span> <span class="label paused">Untagged</span> </div>
+                                      </div>
+                                    </div></td>
+                                  <td class="col-md-2"><div class="creation-date"> <span class="d-block">Created on</span> Jun 21, 2017 </div></td>
+                                  <td class="col-md-3"><div class="owned-by"> <span class="d-block">Owned by</span> Lucie Zvanovec </div></td>
+                                </tr>
+                                <tr class="client-list-item">
+                                  <td class="col-md-1 client-id text-center"><span>C003</span></td>
+                                  <td class="client-name-container col-md-6"><div class="col-md-2 client-image-container">
+                                      <div class="list-image" id="contactImage19" data-value="60"> <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive"> </div>
+                                    </div>
+                                    <div class="col-md-10 client-desc">
+                                      <div class="row">
+                                        <div class="client-name"><a href="javascript:;">France.TV</a></div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="tags-list"> </div>
+                                      </div>
+                                    </div></td>
+                                  <td class="col-md-2"><div class="creation-date"> <span class="d-block">Created on</span> Feb 21, 2017 </div></td>
+                                  <td class="col-md-3"><div class="owned-by"> <span class="d-block">Owned by</span> Lucie Zvanovec </div></td>
+                                </tr>
+                                <tr class="client-list-item">
+                                  <td class="col-md-1 client-id text-center"><span>C004</span></td>
+                                  <td class="client-name-container col-md-6"><div class="col-md-2 client-image-container">
+                                      <div class="list-image" id="contactImage19" data-value="60"> <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive"> </div>
+                                    </div>
+                                    <div class="col-md-10 client-desc">
+                                      <div class="row">
+                                        <div class="client-name"><a href="javascript:;">La Redoute</a></div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="tags-list"> <span class="label paused">Tier_3</span> <span class="label paused">Teritary</span> <span class="label paused">Advertising / Entertainment</span> <span class="label paused">Untagged</span> </div>
+                                      </div>
+                                    </div></td>
+                                  <td class="col-md-2"><div class="creation-date"> <span class="d-block">Created on</span> Sep 21, 2017 </div></td>
+                                  <td class="col-md-3"><div class="owned-by"> <span class="d-block">Owned by</span> Lucie Zvanovec </div></td>
+                                </tr>
+                                <tr class="client-list-item">
+                                  <td class="col-md-1 client-id text-center"><span>C005</span></td>
+                                  <td class="client-name-container col-md-6"><div class="col-md-2 client-image-container">
+                                      <div class="list-image" id="contactImage19" data-value="60"> <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive"> </div>
+                                    </div>
+                                    <div class="col-md-10 client-desc">
+                                      <div class="row">
+                                        <div class="client-name"><a href="javascript:;">Amazon</a></div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="tags-list"> <span class="label paused">Tier_3</span> </div>
+                                      </div>
+                                    </div></td>
+                                  <td class="col-md-2"><div class="creation-date"> <span class="d-block">Created on</span> Sep 21, 2017 </div></td>
+                                  <td class="col-md-3"><div class="owned-by"> <span class="d-block">Owned by</span> Lucie Zvanovec </div></td>
+                                </tr>
+                                <tr class="client-list-item">
+                                  <td class="col-md-1 client-id text-center"><span>C006</span></td>
+                                  <td class="client-name-container col-md-6"><div class="col-md-2 client-image-container">
+                                      <div class="list-image" id="contactImage19" data-value="60"> <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive"> </div>
+                                    </div>
+                                    <div class="col-md-10 client-desc">
+                                      <div class="row">
+                                        <div class="client-name"><a href="javascript:;">Accor Hotels</a></div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="tags-list"> <span class="label paused">Tier_3</span> <span class="label paused">Travel</span> </div>
+                                      </div>
+                                    </div></td>
+                                  <td class="col-md-2"><div class="creation-date"> <span class="d-block">Created on</span> Oct 21, 2017 </div></td>
+                                  <td class="col-md-3"><div class="owned-by"> <span class="d-block">Owned by</span> Ducie Zvanovec </div></td>
+                                </tr>
+                                <tr class="client-list-item">
+                                  <td class="col-md-1 client-id text-center"><span>C007</span></td>
+                                  <td class="client-name-container col-md-6"><div class="col-md-2 client-image-container">
+                                      <div class="list-image" id="contactImage19" data-value="60"> <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive"> </div>
+                                    </div>
+                                    <div class="col-md-10 client-desc">
+                                      <div class="row">
+                                        <div class="client-name"><a href="javascript:;">CapCom</a></div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="tags-list"> <span class="label paused">Tier_3</span> <span class="label paused">tag 01</span> </div>
+                                      </div>
+                                    </div></td>
+                                  <td class="col-md-2"><div class="creation-date"> <span class="d-block">Created on</span> Dec 21, 2017 </div></td>
+                                  <td class="col-md-3"><div class="owned-by"> <span class="d-block">Owned by</span> Hucie Zvanovec </div></td>
+                                </tr>
+                                <tr class="client-list-item">
+                                  <td class="col-md-1 client-id text-center"><span>C008</span></td>
+                                  <td class="client-name-container col-md-6"><div class="col-md-2 client-image-container">
+                                      <div class="list-image" id="contactImage19" data-value="60"> <img src="lbd/img/webedia.jpg" alt="" class="img-circle img-responsive"> </div>
+                                    </div>
+                                    <div class="col-md-10 client-desc">
+                                      <div class="row">
+                                        <div class="client-name"><a href="javascript:;">Carrefour</a></div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="tags-list"> <span class="label paused">Tier_3</span> </div>
+                                      </div>
+                                    </div></td>
+                                  <td class="col-md-2"><div class="creation-date"> <span class="d-block">Created on</span> Jan 21, 2017 </div></td>
+                                  <td class="col-md-3"><div class="owned-by"> <span class="d-block">Owned by</span> Rucie Zvanovec </div></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="deleteConfirmation" class="delete-confirmation modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body clearfix">
+        <h4 class="delete-modal-title">Confirmation</h4>
+        <p class="confirm-question">Are You Sure You want to delete the contract?</p>
+        <div class="confirm-buttons">
+          <button class="btn btn-fill btn-wd cancel-btn" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-fill btn-wd delete-btn">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="profile" class="profile modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Your profile</h4>
+      </div>
+      <div class="modal-body clearfix">
+        <div class="user-image pull-left"> <img src="lbd/img/default-avatar.png" class="img-circle" /> </div>
+        <div class="user-profile">
+          <h2>Clarrisse</h2>
+          <p>Designation in Org</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-fill">Modify Profile</button>
+        <button type="button" class="btn btn-primary btn-fill">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Create new client modal -->
+<!-- @include _partials/_clients-create-new-client-modal.html -->
+<!-- Create new contact -->
+<!-- @include _partials/_clients-create-new-contact-modal.html -->
+</body>
+<!--   Core JS Files   -->
+<!-- @include _partials/_all-js-files.html -->
+<script>
+    var $table = $('#client-list-table, #client-prospect-list-table');
+    function operateFormatter(value, row, index) {
+        return [
+            '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">',
+                '<i class="fa fa-image"></i>',
+            '</a>',
+            '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
+                '<i class="fa fa-edit"></i>',
+            '</a>',
+            '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
+                '<i class="fa fa-remove"></i>',
+            '</a>'
+        ].join('');
+    }
+    $().ready(function(){
+        window.operateEvents = {
+            'click .view': function (e, value, row, index) {
+                info = JSON.stringify(row);
+                swal('You click view icon, row: ', info);
+                console.log(info);
+            },
+            'click .edit': function (e, value, row, index) {
+                info = JSON.stringify(row);
+                swal('You click edit icon, row: ', info);
+                console.log(info);
+            },
+            'click .remove': function (e, value, row, index) {
+                console.log(row);
+                $table.bootstrapTable('remove', {
+                    field: 'id',
+                    values: [row.id]
+                });
+            }
+        };
+        $table.bootstrapTable({
+            toolbar: ".toolbar",
+            clickToSelect: true,
+            showRefresh: true,
+            search: true,
+            showToggle: true,
+            showColumns: true,
+            pagination: true,
+            searchAlign: 'left',
+            pageSize: 8,
+            clickToSelect: false,
+            pageList: [8,10,25,50,100],
+            formatShowingRows: function(pageFrom, pageTo, totalRows){
+                //do nothing here, we don't want to show the text "showing x of y from..."
+            },
+            formatRecordsPerPage: function(pageNumber){
+                return pageNumber + " rows visible";
+            },
+            icons: {
+                refresh: 'fa fa-refresh',
+                toggle: 'fa fa-th-list',
+                columns: 'fa fa-columns',
+                detailOpen: 'fa fa-plus-circle',
+                detailClose: 'fa fa-minus-circle'
+            }
+        });
+        //activate the tooltips after the data table is initialized
+        $('[rel="tooltip"]').tooltip();
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+        });
+    });
+</script>
+<script>
+
+  $(document).ready(function(){
+
+    /*Tags with dropdown*/
+
+    $('#clientHashtag').tokenfield({
+      autocomplete: {
+        source: ['#LVMH','#ALCI','#ACIL','#CMNS'],
+        delay: 100
+      },
+      minWidth: 10,
+      showAutocompleteOnFocus: true
+    })
+    $('#clientHashtag').on('tokenfield:createtoken', function (event) {
+      var existingTokens = $(this).tokenfield('getTokens');
+      $.each(existingTokens, function(index, token) {
+        if (token.value === event.attrs.value)
+          event.preventDefault();
+      });
+    });
+
+  });
+</script>
+</html>

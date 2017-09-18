@@ -1,0 +1,61 @@
+/* Contributors template CSS Starts */
+.layout-3.wp-app.contributors {
+    .page-wrap {
+        .main-panel-wrap {
+            .main-panel {
+                .main-panel-page {
+                    .main-panel-page-header {}
+
+                    .main-container {
+                        .tab-panel-container {
+                            .tab-panel{
+                                .page-filter{
+                                    .status-list-container{
+                                        .status-list{
+                                            ul[data-toggle='buttons']{
+                                                li{
+                                                    a{
+                                                        p, h4{
+                                                        margin: 0;
+                                                        }
+                                                        @for $index from 1 through 6 {
+                                                          h#{$index}{
+                                                            color: $helper;
+                                                            text-transform: uppercase;
+                                                            font-weight: 600;
+                                                          }
+                                                        }
+                                                        h4{
+                                                            font-size: 16px;
+                                                        }
+                                                        &:hover, &.active, &:focus{
+                                                            @for $index from 1 through 6 {
+                                                              h#{$index}{
+                                                                color: #fff;
+                                                              }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .main-panel-container {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*Edit create quote mission Starts*/
+
+
+
+/* Contributors template CSS Ends */
