@@ -224,7 +224,7 @@ gulp.task('js', function() {
   var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
 	if (devBuild) {
 		return gulp.src(js.in)
-			
+
       // .pipe($.concat(js.filename))
       .pipe($.size({ title: 'JS in '}))
       .pipe($.newer(js.out))
@@ -264,7 +264,7 @@ gulp.task('jslib', function() {
       // .pipe($.babel())
       // .pipe($.regenerator())
       .pipe($.uglify())
-      // .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
+      .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
       .pipe(jsFilter.restore)
       .pipe(jsonFilter)
       .pipe($.jsonMinify())

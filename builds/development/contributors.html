@@ -176,13 +176,14 @@
                       </div>
                     </div>
                     <div class="filter-list-container">
-                      <div class="filter-title">Jobs</div>
+                      <!-- <div class="filter-title">Jobs</div> -->
                       <div class="filter-list">
                         <ul>
                           <li>
                             <div class="select-group">
-                              <div class="form-group owners">
-                                <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="All Jobs" id="owner">
+                              <div class="form-group jobs">
+                                <label for="contributorJobs" class="filter-title">Jobs</label>
+                                <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="All Jobs" id="contributorJobs">
                                   <option data-hidden="true"></option>
                                   <option value="0">Writer</option>
                                   <option value="0">Proof reader</option>
@@ -193,50 +194,57 @@
                                   <option value="5">Job 05</option>
                                 </select>
                               </div>
-                            </div>
-                          </li>
-                          
-                        </ul>
-                      </div>
-                      <div class="form-group">
-                          <label for="" class="filter-title">Level: </label>
-                          <select name="filter" id="" title="-" multiple class="selectpicker" data-actions-box="true">
-                            <option data-content="<span class='label senior'>Senior</span>">Senior</option>
-                            <option data-content="<span class='label junior'>Junior</span>">Junior</option>
-                            <option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
-                          </select>
-                      </div>
-                      <div class="form-group">
-                          <label for="" class="filter-title">Languages: </label>
-                          <select class="chosen-default flags" multiple data-placeholder="-">
-                            <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
-                            <option data-img-src="lbd/img/flag/fr.gif">FR</option>
-                            <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
-                            <option data-img-src="lbd/img/flag/sp.gif">ES</option>
-                            <option data-img-src="lbd/img/flag/pol.gif">PO</option>
-                          </select>
-                      </div>
-                    </div>
-                    <div class="filter-list-container filter-list-bottom">
-                      <div class="filter-title">Tags</div>
-                      <div class="filter-list">
-                        <ul>
-                          <li>
-                            <div class="select-group">
-                              <div class="form-group tag">
-                                <select data-placeholder="Enter a tag.." class="chosen-select" multiple id="tag">
-                                  <option value=""></option>
-                                  <option value="0">0</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                </select>
+                              <div class="form-group">
+                                  <label for="contributorLevel" class="filter-title">Level</label>
+                                  <select name="" id="contributorLevel" title="-" multiple class="selectpicker" data-actions-box="true">
+                                    <option data-content="<span class='label senior'>Senior</span>">Senior</option>
+                                    <option data-content="<span class='label junior'>Junior</span>">Junior</option>
+                                    <option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
+                                  </select>
+                              </div>
+                              <div class="form-group">
+                                  <label for="contributorLanguage" class="filter-title">Languages </label>
+                                  <select class="chosen-default flags" multiple data-placeholder="-" id="contributorLanguage">
+                                    <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
+                                    <option data-img-src="lbd/img/flag/fr.gif">FR</option>
+                                    <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
+                                    <option data-img-src="lbd/img/flag/sp.gif">ES</option>
+                                    <option data-img-src="lbd/img/flag/pol.gif">PO</option>
+                                  </select>
+                              </div>
+                              <div class="form-group filter-list-container filter-list-bottom">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="" class="filter-title">
+                                            Special Users
+                                        </label>
+                                        <ul class="special-users d-flex">
+                                            <li class="list-item card">
+                                                <label class="checkbox primary-font">
+                                                    <input data-toggle="checkbox" type="checkbox"/>
+                                                    Show inactive users
+                                                </label>
+                                            </li>
+                                            <li class="list-item card">
+                                                <label class="checkbox primary-font">
+                                                    <input data-toggle="checkbox" type="checkbox"/>
+                                                    Show blacklisted users
+                                                </label>
+                                            </li>
+                                            <!-- <li class="list-item card col-md-12 add-website">
+                                                <div class="input-group d-flex">
+                                                    <input type="text" placeholder="Add new website here" required class="form-control" value=""/>
+                                                    <button type="" id="updateNewWebsite" class="btn btn-fill btn-wd auto-width btn-yes">Add</button>
+                                                </div>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
                               </div>
                             </div>
                           </li>
                         </ul>
-                    </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -286,7 +294,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">    
+                                                        <div class="header">
                                                             <div class="status-label">
                                                                 <span class="label ongoing">Ongoing</span>
                                                                 <span class="dates">
@@ -332,7 +340,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">    
+                                                        <div class="header">
                                                             <div class="status-label">
                                                                 <span class="label ongoing">Ongoing</span>
                                                                 <span class="dates">
@@ -378,7 +386,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">    
+                                                        <div class="header">
                                                             <div class="status-label">
                                                                 <span class="label ongoing">Ongoing</span>
                                                                 <span class="dates">
@@ -424,7 +432,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">    
+                                                        <div class="header">
                                                             <div class="status-label">
                                                                 <span class="label ongoing">Ongoing</span>
                                                                 <span class="dates">
@@ -470,7 +478,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">    
+                                                        <div class="header">
                                                             <div class="status-label">
                                                                 <span class="label ongoing">Ongoing</span>
                                                                 <span class="dates">
@@ -516,7 +524,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">    
+                                                        <div class="header">
                                                             <div class="status-label">
                                                                 <span class="label ongoing">Ongoing</span>
                                                                 <span class="dates">
@@ -1281,6 +1289,15 @@
         if (token.value === event.attrs.value)
           event.preventDefault();
       });
+    });
+
+    $(document).on('click', ".special-users .checkbox", function(e){
+      e.stopPropagation();
+        if ($(this).hasClass('checked')) {
+            $(this).parents('.list-item').addClass('selected-in-list')
+        } else {
+            $(this).parents('.list-item').removeClass('selected-in-list')
+        }
     });
 
   });
