@@ -114,6 +114,16 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="col-md-12 authorize-access">
+                                                <div class="tag-line">
+                                                    Sync your Google<br />Agenda and Task
+                                                </div>
+                                                <a href="javascript:;" id="authorize-button" class="btn btn-fill btn-yes" target-id="create_event_no_list">
+                                                    Sign in with Google
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-md-12">
                                                 <div class="col-md-12 card planner-container">
                                                     <div class="nothing-plan-container">
@@ -431,30 +441,6 @@
                                                                     </div>
                                                             </div>
                                                         </div>
-<<<<<<< HEAD
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="col-md-12 feeds-comments-container" data-container="body">
-                                                                <ul data-container="body">
-                                                                    <li>
-                                                                        <div class="col-md-12 comments-section">
-                                                                            <div class="row">
-                                                                                <div class="col-md-1 user-image">
-                                                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                                                                </div>
-                                                                                <div class="col-md-11 comment-container">
-                                                                                    <div class="row">
-                                                                                        <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                                                        <div class="col-md-2 comment-date">10m ago</div>
-                                                                                        <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                                            <i class="material-icons">more_horiz</i>
-                                                                                        </a>
-                                                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                                            <li><a href="javascript:;">Edit</a></li>
-                                                                                            <li><a href="javascript:;">Delete</a></li>
-                                                                                        </ul>
-=======
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="col-md-12 feeds-comments-container" data-container="body">
@@ -464,7 +450,6 @@
                                                                                 <div class="row">
                                                                                     <div class="col-md-1 user-image">
                                                                                         <img src="lbd/img/default-avatar.png" class="img-circle" />
->>>>>>> 49602aa03373b2fd62a68d9c4695cd925deafc5f
                                                                                     </div>
                                                                                     <div class="col-md-11 comment-container">
                                                                                         <div class="row">
@@ -1009,14 +994,7 @@
     </script>
      <!-- End emoji-picker JavaScript -->
     <script type="text/javascript">
-        /*Note check strike*/
-        $('.note-check .checkbox').click(function() {
-            if ($(this).hasClass('checked')) {
-                $(this).parents('.note-list').find('.note-subject').removeClass('striked');
-            } else {
-                $(this).parents('.note-list').find('.note-subject').addClass('striked');
-            }
-        });
+        
         /*Show filter*/
         $('.filter-title-flip-container .filter-container').hide();
             $('.filter-title-flip-container .feed-title-container a').click(function(e) {
