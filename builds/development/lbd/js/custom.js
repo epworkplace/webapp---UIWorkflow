@@ -92,6 +92,7 @@ $(document).ready(function(){
 
 
 
+
 	//Chosen Select Dropdown
 	var config = {
 		'.chosen-select'           : {},
