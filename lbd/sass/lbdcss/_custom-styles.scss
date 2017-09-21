@@ -12,6 +12,11 @@ $font-os: "Open Sans", sans-serif;
   background-color: #F5F5F5;
 }
 
+*::-webkit-scrollbar:horizontal {
+    height: 8px;
+    background-color: #F5F5F5;
+}
+
 *::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
     background-color: #F5F5F5;
@@ -20,6 +25,15 @@ $font-os: "Open Sans", sans-serif;
 
 *::-webkit-scrollbar-thumb {
     border-radius: 4px;
+<<<<<<< HEAD
+    background: #9A9FA9;
+
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #9A9FA9, #9A9FA9);
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #9A9FA9, #9A9FA9);
+=======
     background: $not-started;
 
     /* fallback for old browsers */
@@ -27,6 +41,7 @@ $font-os: "Open Sans", sans-serif;
 
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, $not-started, $not-started);
+>>>>>>> 1633d5bb4692f8e116de9a921ddc5bee90e25243
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

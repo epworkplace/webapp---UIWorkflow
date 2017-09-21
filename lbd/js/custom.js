@@ -93,6 +93,7 @@ $(document).ready(function(){
 // $('ul#card-container').lionbars();
 
 
+
 	//Chosen Select Dropdown
 	var config = {
 		'.chosen-select'           : {},
