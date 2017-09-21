@@ -75,7 +75,7 @@ $(document).ready(function(){
 		scrollbarPosition: "outside",
 		autoHideScrollbar: true
 	});
-	$('ul#card-container').mCustomScrollbar(
+/*	$('ul#card-container').mCustomScrollbar(
         {
             mouseWheel:{
                 preventDefault: true,
@@ -88,8 +88,9 @@ $(document).ready(function(){
             documentTouchScroll: true,
             autoHideScrollbar: true
         }
-    );
+    );*/
 
+// $('ul#card-container').lionbars();
 
 
 

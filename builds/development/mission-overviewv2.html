@@ -18,6 +18,9 @@
     <link href="lbd/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <!--  mCustomScrollbar Plugin -->
     <link href="lbd/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+    <!--  lionbars Plugin -->
+    <link href="lbd/lib/lionbars/lionbars.css" rel="stylesheet" />
+    
     <!-- Chosen Plugin -->
     <link href="lbd/lib/chosen/chosen.css" rel="stylesheet" type="text/css" />
     <link href="lbd/lib/chosen/ImageSelect.css" rel="stylesheet" type="text/css" />
@@ -3682,7 +3685,7 @@
                 </div>
             </div>
         </div>
-E:\WebProjects\EditPlace\webapp-UIWorkflow\_partials\_mission-ov-v2-duplicate-cards-modal2.html not found
+        
     </div>
 </body>
     <!--   Core JS Files   -->
@@ -3740,6 +3743,10 @@ E:\WebProjects\EditPlace\webapp-UIWorkflow\_partials\_mission-ov-v2-duplicate-ca
     <!-- Custom Scrollbar -->
     <script src="lbd/js/jquery.mCustomScrollbar.concat.min.js">
     </script>
+    <!-- Custom Scrollbar lionbars -->
+    <script src="lbd/lib/lionbars/jquery.lionbars.0.3.min.js">
+    </script>
+    
     <!-- Progress Bar JS -->
     <script src="lbd/lib/progressbarjs/progressbar.js">
     </script>
@@ -3873,27 +3880,27 @@ $(document).on('ready', function() {
         }
 
     $('.cards-filter-next').on('click', function(e){
-        /*e.stopPropagation();
-        var leftPos = $('#card-container').scrollLeft();
+        e.stopPropagation();
+        var leftPos = $('ul#card-container').scrollLeft();
         console.log(leftPos);
-          $('#card-container').animate({
+          $('ul#card-container').animate({
                 scrollLeft: leftPos + 365
             }, 300);
           leftPos -= 10;
-          console.log(leftPos);*/
-        $('ul#card-container').mCustomScrollbar("scrollTo", "-=360");
+          console.log(leftPos);
+        // $('ul#card-container').mCustomScrollbar("scrollTo", "-=360");
     });
 
     $('.cards-filter-prev').on('click', function(e){
-        /*e.stopPropagation();
-        var leftPos = $('#card-container').scrollLeft();
+        e.stopPropagation();
+        var leftPos = $('ul#card-container').scrollLeft();
         console.log(leftPos);
-          $('#card-container').animate({
+          $('ul#card-container').animate({
                 scrollLeft: leftPos - 365
             }, 300);
           leftPos += 10;
-          console.log(leftPos);*/
-          $('ul#card-container').mCustomScrollbar("scrollTo", "+=360");
+          console.log(leftPos);
+          // $('ul#card-container').mCustomScrollbar("scrollTo", "+=360");
 
     });
 /*
