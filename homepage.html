@@ -114,6 +114,16 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="col-md-12 authorize-access">
+                                                <div class="tag-line">
+                                                    Sync your Google<br />Agenda and Task
+                                                </div>
+                                                <a href="javascript:;" id="authorize-button" class="btn btn-fill btn-yes" target-id="create_event_no_list">
+                                                    Sign in with Google
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-md-12">
                                                 <div class="col-md-12 card planner-container">
                                                     <div class="nothing-plan-container">
@@ -984,14 +994,7 @@
     </script>
      <!-- End emoji-picker JavaScript -->
     <script type="text/javascript">
-        /*Note check strike*/
-        $('.note-check .checkbox').click(function() {
-            if ($(this).hasClass('checked')) {
-                $(this).parents('.note-list').find('.note-subject').removeClass('striked');
-            } else {
-                $(this).parents('.note-list').find('.note-subject').addClass('striked');
-            }
-        });
+        
         /*Show filter*/
         $('.filter-title-flip-container .filter-container').hide();
             $('.filter-title-flip-container .feed-title-container a').click(function(e) {
