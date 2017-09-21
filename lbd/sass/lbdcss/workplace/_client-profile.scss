@@ -804,7 +804,7 @@
             }
         }
 
-        .client-details {
+        .client-details, .user-details {
             padding: 0;
 
             @extend %client-details;
