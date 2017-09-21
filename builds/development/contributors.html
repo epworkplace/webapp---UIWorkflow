@@ -259,20 +259,18 @@
                 <div class="content">
                   <div class="tab-content" id="users-list-fr">
                     <div class="col-md-12 main-panel-header">
-                        <div class="col-md-3 pull-left select-all-container">
+
+                        <div class="col-md-5 pull-left search-status">
+                            <span class="search-result-text"> <strong>6 Users</strong> matching with your criteria </span>
+                        </div>
+                        <div class="col-md-3 pull-right">
                             <div class="select-all">
-                                <label class="checkbox">
-                                    <input type="checkbox" data-toggle="checkbox" value="">
-                                </label>
-                                <span class="select">Select all</span>
+                                <select name="filterByLevel" id="filterByLevel" title="Senior first" class="selectpicker" data-actions-box="true">
+                                  <option data-content="">Senior first</option>
+                                  <option data-content="">Junior first</option>
+                                  <option data-content="">Beginner first</option>
+                                </select>
                             </div>
-                        </div>
-                        <div class="col-md-3 pull-right page-status">
-                            <span>49 Contracts</span> Found
-                        </div>
-                        <div class="col-md-6 pull-right validate">
-                            <button class="btn btn-fill btn-wd validate-btn">Validate</button>
-                            <button class="btn btn-fill btn-wd delete-btn">Delete</button>
                         </div>
                     </div>
                     <div class="tab-content-container">
@@ -283,40 +281,39 @@
                                         <ul>
                                             <li>
                                                 <div class="col-md-12 card card-contract">
-                                                    <div class="col-md-1 check">
-                                                        <label class="checkbox">
-                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-1 list-image-container">
-                                                        <div class="list-image" id="contractImage24" data-value="60">
-                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                    <div class="col-md-2 list-image-container">
+                                                        <div class="list-image" id="userImage" data-value="">
+                                                            <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">
-                                                            <div class="status-label">
-                                                                <span class="label ongoing">Ongoing</span>
-                                                                <span class="dates">
-                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-                                                                </span>
+                                                      <div class="header">
+                                                        <div class="row">
+                                                          <div class="col-md-12 user-name d-flex">
+                                                            <label for="" class="primary-font" data-toggle="modal" data-target="#contributor-user-profile-modal"><img src="lbd/img/flag/us.gif" alt=""> Michael Martin</label>
+                                                          </div>
+                                                          <div class="col-md-12 user-jobs d-flex">
+                                                            <span class="helper-text">Senior writer, Junior translator</span>
+                                                          </div>
+                                                          <div class="col-md-12 user-level d-flex">
+                                                            <span class="user-rating df-ac d-inline-flex"><span class="">4.14 </span> <i class="fa fa-star" aria-hidden="true"></i></span>
+                                                            <span class="label senior d-inline-flex">Senior</span>
+                                                          </div>
+                                                          <div class="col-md-12 user-contacts d-flex">
+                                                            <span class="contact-phone df-ac d-inline-flex helper-text"><i class="fa fa-phone" aria-hidden="true"></i><span class="">06 61 35 58 89 </span></span>
+                                                            <span class="contact-email helper-text d-inline-flex"><a href="mailto:m.martin@gmail.com" class="helper-text">m.martin@gmail.com</a></span>
+                                                          </div>
                                                         </div>
-                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
-                                                        </div>
+                                                      </div>
                                                     </div>
-                                                    <div class="task-price">
-                                                        <div class="col-md-2 numbers">
-                                                            3<span>missions</span>
-                                                        </div>
-                                                        <div class="col-md-2 turnover">
-                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                    <div class="list-footer-container task-price">
+                                                        <div class="col-md-6 pull-right numbers">
+                                                            320<span class="helper-text">jobs done</span>
                                                         </div>
                                                     </div>
                                                     <div class="cta-container">
                                                         <div class="cta">
                                                             <ul>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
                                                                 <li>
                                                                     <span data-toggle="modal" data-target="#deleteConfirmation">
                                                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
@@ -329,40 +326,39 @@
                                             </li>
                                             <li>
                                                 <div class="col-md-12 card card-contract">
-                                                    <div class="col-md-1 check">
-                                                        <label class="checkbox">
-                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-1 list-image-container">
-                                                        <div class="list-image" id="contractImage23" data-value="60">
-                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                    <div class="col-md-2 list-image-container">
+                                                        <div class="list-image" id="userImage" data-value="">
+                                                            <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">
-                                                            <div class="status-label">
-                                                                <span class="label ongoing">Ongoing</span>
-                                                                <span class="dates">
-                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-                                                                </span>
+                                                      <div class="header">
+                                                        <div class="row">
+                                                          <div class="col-md-12 user-name d-flex">
+                                                            <label for="" class="primary-font" data-toggle="modal" data-target="#contributor-user-profile-modal"><img src="lbd/img/flag/us.gif" alt=""> Michael Martin</label>
+                                                          </div>
+                                                          <div class="col-md-12 user-jobs d-flex">
+                                                            <span class="helper-text">Senior writer, Junior translator</span>
+                                                          </div>
+                                                          <div class="col-md-12 user-level d-flex">
+                                                            <span class="user-rating df-ac d-inline-flex"><span class="">4.14 </span> <i class="fa fa-star" aria-hidden="true"></i></span>
+                                                            <span class="label senior d-inline-flex">Senior</span>
+                                                          </div>
+                                                          <div class="col-md-12 user-contacts d-flex">
+                                                            <span class="contact-phone df-ac d-inline-flex helper-text"><i class="fa fa-phone" aria-hidden="true"></i><span class="">06 61 35 58 89 </span></span>
+                                                            <span class="contact-email helper-text d-inline-flex"><a href="mailto:m.martin@gmail.com" class="helper-text">m.martin@gmail.com</a></span>
+                                                          </div>
                                                         </div>
-                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
-                                                        </div>
+                                                      </div>
                                                     </div>
-                                                    <div class="task-price">
-                                                        <div class="col-md-2 numbers">
-                                                            3<span>missions</span>
-                                                        </div>
-                                                        <div class="col-md-2 turnover">
-                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                    <div class="list-footer-container task-price">
+                                                        <div class="col-md-6 pull-right numbers">
+                                                            320<span class="helper-text">jobs done</span>
                                                         </div>
                                                     </div>
                                                     <div class="cta-container">
                                                         <div class="cta">
                                                             <ul>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
                                                                 <li>
                                                                     <span data-toggle="modal" data-target="#deleteConfirmation">
                                                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
@@ -375,178 +371,39 @@
                                             </li>
                                             <li>
                                                 <div class="col-md-12 card card-contract">
-                                                    <div class="col-md-1 check">
-                                                        <label class="checkbox">
-                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-1 list-image-container">
-                                                        <div class="list-image" id="contractImage22" data-value="60">
-                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
+                                                    <div class="col-md-2 list-image-container">
+                                                        <div class="list-image" id="userImage" data-value="">
+                                                            <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 list-head-container">
-                                                        <div class="header">
-                                                            <div class="status-label">
-                                                                <span class="label ongoing">Ongoing</span>
-                                                                <span class="dates">
-                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-                                                                </span>
+                                                      <div class="header">
+                                                        <div class="row">
+                                                          <div class="col-md-12 user-name d-flex">
+                                                            <label for="" class="primary-font" data-toggle="modal" data-target="#contributor-user-profile-modal"><img src="lbd/img/flag/us.gif" alt=""> Michael Martin</label>
+                                                          </div>
+                                                          <div class="col-md-12 user-jobs d-flex">
+                                                            <span class="helper-text">Senior writer, Junior translator</span>
+                                                          </div>
+                                                          <div class="col-md-12 user-level d-flex">
+                                                            <span class="user-rating df-ac d-inline-flex"><span class="">4.14 </span> <i class="fa fa-star" aria-hidden="true"></i></span>
+                                                            <span class="label senior d-inline-flex">Senior</span>
+                                                          </div>
+                                                          <div class="col-md-12 user-contacts d-flex">
+                                                            <span class="contact-phone df-ac d-inline-flex helper-text"><i class="fa fa-phone" aria-hidden="true"></i><span class="">06 61 35 58 89 </span></span>
+                                                            <span class="contact-email helper-text d-inline-flex"><a href="mailto:m.martin@gmail.com" class="helper-text">m.martin@gmail.com</a></span>
+                                                          </div>
                                                         </div>
-                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
-                                                        </div>
+                                                      </div>
                                                     </div>
-                                                    <div class="task-price">
-                                                        <div class="col-md-2 numbers">
-                                                            3<span>missions</span>
-                                                        </div>
-                                                        <div class="col-md-2 turnover">
-                                                            32,000.00 &#8364;<span>60.00 % margin</span>
+                                                    <div class="list-footer-container task-price">
+                                                        <div class="col-md-6 pull-right numbers">
+                                                            320<span class="helper-text">jobs done</span>
                                                         </div>
                                                     </div>
                                                     <div class="cta-container">
                                                         <div class="cta">
                                                             <ul>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
-                                                                <li>
-                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
-                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
-                                                                    <span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col-md-12 card card-contract">
-                                                    <div class="col-md-1 check">
-                                                        <label class="checkbox">
-                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-1 list-image-container">
-                                                        <div class="list-image" id="contractImage21" data-value="60">
-                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 list-head-container">
-                                                        <div class="header">
-                                                            <div class="status-label">
-                                                                <span class="label ongoing">Ongoing</span>
-                                                                <span class="dates">
-                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-                                                                </span>
-                                                        </div>
-                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
-                                                        </div>
-                                                    </div>
-                                                    <div class="task-price">
-                                                        <div class="col-md-2 numbers">
-                                                            3<span>missions</span>
-                                                        </div>
-                                                        <div class="col-md-2 turnover">
-                                                            32,000.00 &#8364;<span>60.00 % margin</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cta-container">
-                                                        <div class="cta">
-                                                            <ul>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
-                                                                <li>
-                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
-                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
-                                                                    <span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col-md-12 card card-contract">
-                                                    <div class="col-md-1 check">
-                                                        <label class="checkbox">
-                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-1 list-image-container">
-                                                        <div class="list-image" id="contractImage20" data-value="60">
-                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 list-head-container">
-                                                        <div class="header">
-                                                            <div class="status-label">
-                                                                <span class="label ongoing">Ongoing</span>
-                                                                <span class="dates">
-                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-                                                                </span>
-                                                        </div>
-                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
-                                                        </div>
-                                                    </div>
-                                                    <div class="task-price">
-                                                        <div class="col-md-2 numbers">
-                                                            3<span>missions</span>
-                                                        </div>
-                                                        <div class="col-md-2 turnover">
-                                                            32,000.00 &#8364;<span>60.00 % margin</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cta-container">
-                                                        <div class="cta">
-                                                            <ul>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
-                                                                <li>
-                                                                    <span data-toggle="modal" data-target="#deleteConfirmation">
-                                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
-                                                                    <span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col-md-12 card card-contract">
-                                                    <div class="col-md-1 check">
-                                                        <label class="checkbox">
-                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-md-1 list-image-container">
-                                                        <div class="list-image" id="contractImage19" data-value="60">
-                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="Progress: 60%">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 list-head-container">
-                                                        <div class="header">
-                                                            <div class="status-label">
-                                                                <span class="label ongoing">Ongoing</span>
-                                                                <span class="dates">
-                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-                                                                </span>
-                                                        </div>
-                                                            <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
-                                                        </div>
-                                                    </div>
-                                                    <div class="task-price">
-                                                        <div class="col-md-2 numbers">
-                                                            3<span>missions</span>
-                                                        </div>
-                                                        <div class="col-md-2 turnover">
-                                                            32,000.00 &#8364;<span>60.00 % margin</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cta-container">
-                                                        <div class="cta">
-                                                            <ul>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
                                                                 <li>
                                                                     <span data-toggle="modal" data-target="#deleteConfirmation">
                                                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
@@ -1111,6 +968,132 @@
         </div>
     </div>
 </div>
+<!-- User profile modal -->
+<div aria-labelledby="contributor-user-profile-modal" class="modal fade contributor-user-profile-modal in" id="contributor-user-profile-modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="edit-content clearfix">
+                    <span class="close">
+                        <a data-dismiss="modal" href="javascript:;">
+                            <i class="material-icons">
+                                close
+                            </i>
+                        </a>
+                    </span>
+                    <div class="client-details col-md-12">
+                        <div class="row">
+                          <div class="col-md-2 client-image">
+                              <div class="client-image-container">
+                                  <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
+                                  </img>
+                              </div>
+                          </div>
+                          <div class="col-md-10 d-flex">
+                              <div class="row">
+                                  <div class="client-spec col-md-10 pull-left list-head-container">
+                                      <div class="row">
+                                        <div class="col-md-12 user-name d-flex">
+                                          <label for="" class="primary-font" data-toggle="modal" data-target="#contributor-user-profile-modal"><img src="lbd/img/flag/us.gif" alt=""> Michael Martin</label>
+                                        </div>
+                                        <div class="col-md-12 user-jobs d-flex">
+                                          <span class="helper-text">Senior writer, Junior translator</span>
+                                        </div>
+                                        <div class="col-md-12 user-level d-flex">
+                                          <span class="user-rating df-ac d-inline-flex"><span class="">4.14 </span> <i class="fa fa-star" aria-hidden="true"></i></span>
+                                          <span class="label senior d-inline-flex">Senior</span>
+                                        </div>
+                                        <div class="col-md-12 user-contacts d-flex">
+                                          <span class="contact-phone df-ac d-inline-flex helper-text"><i class="fa fa-phone" aria-hidden="true"></i><span class="">06 61 35 58 89 </span></span>
+                                          <span class="contact-email helper-text d-inline-flex"><a href="mailto:m.martin@gmail.com" class="helper-text">m.martin@gmail.com</a></span>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                          <h5 class="client-id">
+                                              C017
+                                          </h5>
+                                          <div class="client-name">
+                                              Allocine
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="tags-list">
+                                              <span class="label paused">
+                                                  Tier_3
+                                              </span>
+                                              <span class="label paused">
+                                                  Teritary
+                                              </span>
+                                              <span class="label paused">
+                                                  Advertising / Entertainment
+                                              </span>
+                                              <span class="label paused">
+                                                  Untagged
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="" class="edit-title">
+                            Annual Turnover
+                        </label>
+                    </div>
+                    <div class="col-md-12 edit-overview">
+                        <div class="row form-group">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <input class="form-control" id="" placeholder="ex: 1 00 000 000" type="text">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <label for="turnoverYear">
+                                    Which Year
+                                </label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="form-control datepicker-year" id="turnoverYear" placeholder="eg: 2016" type="text">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <label for="turnoverSource">
+                                    Source
+                                </label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="form-control" id="turnoverSource" placeholder="ex: www.webedia.com" type="text">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-content-action col-md-12">
+                        <button class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal" type="button">
+                            Cancel
+                        </button>
+                        <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 </body>
 <!--   Core JS Files   -->
 <!--   Core JS Files   -->
