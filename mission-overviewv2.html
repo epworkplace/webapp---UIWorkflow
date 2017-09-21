@@ -3548,7 +3548,7 @@
             </div>
         </div>
         <!-- @include _partials/_mission-ov-v2-duplicate-cards-modal.html -->
-        <!-- @include _partials/_mission-ov-v2-duplicate-cards-modal2.html -->
+        
     </div>
 </body>
     <!--   Core JS Files   -->
@@ -3652,27 +3652,27 @@ $(document).on('ready', function() {
         }
 
     $('.cards-filter-next').on('click', function(e){
-        /*e.stopPropagation();
-        var leftPos = $('#card-container').scrollLeft();
+        e.stopPropagation();
+        var leftPos = $('ul#card-container').scrollLeft();
         console.log(leftPos);
-          $('#card-container').animate({
+          $('ul#card-container').animate({
                 scrollLeft: leftPos + 365
             }, 300);
           leftPos -= 10;
-          console.log(leftPos);*/
-        $('ul#card-container').mCustomScrollbar("scrollTo", "-=360");
+          console.log(leftPos);
+        // $('ul#card-container').mCustomScrollbar("scrollTo", "-=360");
     });
 
     $('.cards-filter-prev').on('click', function(e){
-        /*e.stopPropagation();
-        var leftPos = $('#card-container').scrollLeft();
+        e.stopPropagation();
+        var leftPos = $('ul#card-container').scrollLeft();
         console.log(leftPos);
-          $('#card-container').animate({
+          $('ul#card-container').animate({
                 scrollLeft: leftPos - 365
             }, 300);
           leftPos += 10;
-          console.log(leftPos);*/
-          $('ul#card-container').mCustomScrollbar("scrollTo", "+=360");
+          console.log(leftPos);
+          // $('ul#card-container').mCustomScrollbar("scrollTo", "+=360");
 
     });
 /*
