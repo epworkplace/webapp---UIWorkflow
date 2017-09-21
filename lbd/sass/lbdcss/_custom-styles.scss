@@ -4,10 +4,12 @@ $font-os: "Open Sans", sans-serif;
 //Custom CSS Scroll
 *::-webkit-scrollbar {
   width: 8px;
+  background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar:horizontal {
   height: 8px;
   background-color: #F5F5F5;
-    width: 8px;
-    background-color: #F5F5F5;
 }
 
 *::-webkit-scrollbar-track {
@@ -18,13 +20,13 @@ $font-os: "Open Sans", sans-serif;
 
 *::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: #b3b7be;
+    background: $not-started;
 
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #b3b7be, #b3b7be);
+    background: -webkit-linear-gradient(to top, $not-started, $not-started);
 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #b3b7be, #b3b7be);
+    background: linear-gradient(to top, $not-started, $not-started);
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
