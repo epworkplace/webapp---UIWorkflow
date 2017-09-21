@@ -218,6 +218,11 @@
   .download-profile{
     align-self: flex-end;
   }
+  .user-profile{
+    .tab-step{
+        padding: 0 15px;
+    }
+  }
 
 }
 /* Modal styles Ends */
