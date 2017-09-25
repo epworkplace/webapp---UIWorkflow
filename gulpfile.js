@@ -195,7 +195,7 @@ gulp.task('css', ['fonts'], function() {
             sourceMap: true,
             debug: true
         }))*/
-    .pipe($.cleanCss())
+    .pipe($.cleanCss({rebase:false}))
     .pipe(cssFilter.restore)
     .pipe(imageFilter)
     .pipe($.imagemin())
@@ -270,7 +270,7 @@ gulp.task('jslib', function() {
       .pipe($.jsonMinify())
       .pipe(jsonFilter.restore)
       .pipe(cssFilter)
-      .pipe($.cleanCss())
+      .pipe($.cleanCss({rebase:false}))
       .pipe(cssFilter.restore)
       .pipe(htmlFilter)
       .pipe($.htmlclean())

@@ -241,11 +241,11 @@
     color: white !important;
   }
 
-[class*='-title'] {
-                text-transform: uppercase;
-                font-weight: 600;
-              }
-              
+  [class*='-title'] {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
   .user-level {}
 
   .download-profile {
@@ -277,13 +277,12 @@
             font-size: 12px;
 
             .info-header {
-              
-
               .info-edit {
                 a {
                   color: $helper;
                   text-decoration: underline;
-                  &:hover{
+
+                  &:hover {
                     text-decoration: none;
                   }
                 }
@@ -291,14 +290,22 @@
             }
 
             .info-body {
+              [class*="-list"]{
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+              }
               .contact-phone {
                 font-size: 16px;
                 font-weight: 600;
               }
 
-              .contact-email {
-                a, a:hover {
+              [class*="contact-email"] {
+                a {
                   color: $helper;
+                  &:hover{
+                    text-decoration: underline;
+                  }
                 }
               }
             }
@@ -346,98 +353,152 @@
                   font-size: 14px;
                   font-weight: 600;
                   display: inline-table;
-                  .pull-right{
+
+                  .pull-right {
                     text-align: right;
                   }
-                  &:nth-of-type(2n){
+
+                  &:nth-of-type(2n) {
                     margin-right: 0;
                   }
-                  &[class*="add-"]{
+
+                  &[class*='add-'] {
                     width: 100%;
                     padding: 0;
-                    a{
-                        [class*="add-"]{
-                            font-size: 12px;
-                        }
+
+                    a {
+                      [class*='add-'] {
+                        font-size: 12px;
+                      }
                     }
-                    .form-control{
-                        font-weight: 400;
+
+                    .form-control {
+                      font-weight: 400;
                     }
                   }
                 }
               }
             }
           }
+
+          [class*="-info-form"]{
+            padding: 10px;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.05), 0 0 0 1px rgba(63,63,68,0.1);
+            border-radius: 3px;
+            .mce-container{
+              // border
+            }
+            .user-language-edit{
+              i{
+                color: $highlight-02;
+                &:hover{
+                  color: $sub-heading;
+                }
+              }
+            }
+          }
+
         }
-	  .user-references{
-		  .references-container{
-				  .nav-icons{
-					  li{
-						  
-						  margin-right: 10px;
-						  a{
-							  img{
-								  width: 60px;
-								  transition: all .3s ease;
-							  }
-						  }
-						  &.active{
-							  
-							  a{
-								  img{
-									  border: 3px solid $selected;
-								  }
-							  }
-						  }
-					  }
-				  }
-			  }		  
-		  .reference-info{
-			  &.divider{
-				  @include divider($color: $helper)
-			  }
-			  .reference-header{
-				  .client-id{
-					  margin-right: 5px;
-				  }
-				  .client-name{
-					  font-weight: 600;
-					  font-size: 16px;
-				  }
-				  a{
-					  &.reference-link{
-						  color: $selected;
-						  text-decoration: underline;
-						  font-weight: 600;
-					  }
-				  }
-			  }
 
-		  }
-		  .user-works{
-			  padding: 0;
-			  margin: 0;
-			  list-style-type: none;
-			  width: 100%;
-			  flex-flow: row wrap;
-			  li{
-				  &.list-item {
-					margin: 15px 15px 0 0;
-					  border-radius: 30px;
-					  min-width: 150px;
-					  a{
-						  display: inline-flex;
-						  text-align: center;
-							  align-items: center;
-						  justify-content: center;
-						  width: 100%;
-					  }
-				  }
-			  }
-		  }
+        .user-references {
+          .references-container {
+            .nav-icons {
+              li {
+                margin-right: 10px;
 
-	  }
-		  
+                a {
+                  img {
+                    width: 60px;
+                    transition: all .3s ease;
+                  }
+                }
+
+                &.active {
+                  a {
+                    img {
+                      border: 3px solid $selected;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .reference-info {
+            &.divider {
+              @include divider($color: $helper);
+            }
+
+            .reference-header {
+              .client-id {
+                margin-right: 5px;
+              }
+
+              .client-name {
+                font-weight: 600;
+                font-size: 16px;
+              }
+
+              a {
+                &.reference-link {
+                  color: $selected;
+                  text-decoration: underline;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+
+          .user-works {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            width: 100%;
+            flex-flow: row wrap;
+
+            li {
+              &.list-item {
+                margin: 15px 15px 0 0;
+                border-radius: 30px;
+                min-width: 150px;
+
+                a {
+                  display: inline-flex;
+                  text-align: center;
+                  align-items: center;
+                  justify-content: center;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+        .external-links{
+            .website-links, .socialmedia-links{
+                ul{
+                    list-style-type: none;
+                    padding-left: 15px;
+                    margin: 0;
+                    li{
+                        a{
+                            font-size: 12px;
+                            color: $selected;
+                            text-decoration: underline;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .socialmedia-links{
+                ul{
+                    li{
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
       }
     }
   }
