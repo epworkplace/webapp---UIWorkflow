@@ -123,6 +123,14 @@
                   }
 
                   .filter-list-container {
+                    .bootstrap-select {
+                      .bs-actionsbox{
+                        padding: 0;
+                      }
+                      .dropdown-menu{
+                        padding: 10px;
+                      }
+                    }
                     .chosen-choices {
                       height: auto;
 
