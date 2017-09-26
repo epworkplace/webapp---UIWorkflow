@@ -87,14 +87,14 @@
 // background-highlight styles
 .highlight-bg {
   padding: 15px;
-  background: $highlight-01;
+  background: $highlight-01 !important;
 
   .d-block {
     margin-bottom: 5px;
 
     &:last-child {
       margin-bottom: 0;
-      margin-top: 15px;
+      // margin-top: 15px;
     }
   }
 }

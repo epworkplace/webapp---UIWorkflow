@@ -24,7 +24,8 @@
 // Divider line
 
 @mixin divider($divider-width: 2px, $style: solid, $color: #f5f5f6) {
-    padding-top: 20px;
+    padding: 20px 0 0 0;
+    margin-top: 20px;
     border-top: $divider-width $style $color;
 }
 
@@ -469,11 +470,14 @@
             }
         }
         a{
-            &[class*="-new-"], &[class*="-from-"]{
+            &[class*="-new-"], &[class*="-from-"], &[class*="edit"]{
                 font-size: 12px;
                 color: $helper;
                 text-decoration: underline;
                 margin-top: 10px;
+            }
+            &:hover{
+              text-decoration: none;
             }
         }
         .modal-content{
