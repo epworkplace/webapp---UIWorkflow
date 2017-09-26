@@ -1187,7 +1187,7 @@
                                                                 Description
                                                             </span>
                                                             <span class="pull-right d-inline-block">
-                                                                <a class="info-edit" href="javascript:;">
+                                                                <a class="description-edit" href="javascript:;">
                                                                     Edit
                                                                 </a>
                                                             </span>
@@ -1242,7 +1242,7 @@
                                                         Languages
                                                     </span>
                                                     <span class="pull-right d-inline-block helper-text">
-                                                        <a class="info-edit" href="javascript:;">
+                                                        <a class="languages-edit" href="javascript:;">
                                                             Edit
                                                         </a>
                                                     </span>
@@ -2105,29 +2105,50 @@
     });
 </script>
 <script>
+$(document).ready(function(){
 
-  $(document).ready(function(){
+    /* Edit User contact info */
+    $(document).on('click', ".general-info a.info-edit", function(e){
+        e.stopPropagation();
+        $('.contact-info-edit')..slideToggle();
+        alert('hi');
+        // $(this).parents('.list-item').hide();
+    });
+    $(document).on('click', "#updateNewWebsite", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var addedWebsite = $(this).parents('.input-group').find('input').val();
+        var addedToList = '<li class="list-item card col-md-6"><label class="checkbox primary-font"><span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox">' + addedWebsite + '</label></li>';
+        if(addedWebsite){
+          $( addedToList ).insertBefore( $('.add-new-website').parents('.list-item') );
+        }
+        $('.add-new-website').parents('.list-item').show();
+        $(this).parents('.list-item.add-website').hide();
+    });
+    
 
-    /*Tags with dropdown*/
-
-    $('#clientHashtag').tokenfield({
-      autocomplete: {
-        source: ['#LVMH','#ALCI','#ACIL','#CMNS'],
-        delay: 100
-      },
-      minWidth: 10,
-      showAutocompleteOnFocus: true
-    })
-    $('#clientHashtag').on('tokenfield:createtoken', function (event) {
-      var existingTokens = $(this).tokenfield('getTokens');
-      $.each(existingTokens, function(index, token) {
-        if (token.value === event.attrs.value)
-          event.preventDefault();
-      });
+    $(document).on('click', ".list-item .add-new-website", function(e){
+        e.stopPropagation();
+        $('.list-item.add-website').show();
+        $(this).parents('.list-item').hide();
+    });
+    $(document).on('click', "#updateNewWebsite", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var addedWebsite = $(this).parents('.input-group').find('input').val();
+        var addedToList = '<li class="list-item card col-md-6"><label class="checkbox primary-font"><span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox">' + addedWebsite + '</label></li>';
+        if(addedWebsite){
+          $( addedToList ).insertBefore( $('.add-new-website').parents('.list-item') );
+        }
+        $('.add-new-website').parents('.list-item').show();
+        $(this).parents('.list-item.add-website').hide();
     });
 
-    $(document).on('click', ".special-users .checkbox", function(e){
+    $(document).on('click', ".targeted-websites .checkbox", function(e){
       e.stopPropagation();
+      // var thisSiblings = $(this).parents('.quote-list-item').siblings();
+      // var thisListItem = $(this).parents('.quote-list-item');
+      // var checkedRadio = thisListItem.find('.radio');
         if ($(this).hasClass('checked')) {
             $(this).parents('.list-item').addClass('selected-in-list')
         } else {
@@ -2135,6 +2156,6 @@
         }
     });
 
-  });
+});
 </script>
 </html>
