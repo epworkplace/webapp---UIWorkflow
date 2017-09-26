@@ -111,7 +111,7 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		$(this).parent().siblings().children().removeClass('active');
 		var tab = $(this).attr("href");
-		$(".tab-content").not(tab).css('display', 'none');
+		$(".content > .tab-content").not(tab).css('display', 'none');
 		$(tab).fadeIn();
 		$('.no-data-container').css('position', 'absolute');
 	});
