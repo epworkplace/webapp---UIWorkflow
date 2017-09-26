@@ -422,7 +422,19 @@
                       border: 3px solid $selected;
                     }
                   }
+                  &:before{
+                    background: none;
+                  }
                 }
+              }
+            }
+            & + .tab-content{
+              padding-top: 15px;
+              .tab-pane{
+                height: 250px;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                padding: 0 10px;
               }
             }
           }
