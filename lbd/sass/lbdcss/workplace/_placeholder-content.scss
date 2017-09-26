@@ -1,45 +1,26 @@
 @-webkit-keyframes placeHolderShimmer {
     0% {
-        background-position: (-100%) 0;
+        background-position: -100% 100%;
     }
 
     100% {
-        background-position: 100% 0;
+        background-position: 100% 100%;
     }
 }
 
 @keyframes placeHolderShimmer {
     0% {
-        background-position: (-100%) 0;
+        background-position: -100% 100%;
     }
 
     100% {
-        background-position: 100% 0;
+        background-position: 100% 100%;
     }
 }
 
-.timeline-wrapper {
-    background-color: #e9eaed;
-    color: #141823;
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin: 0 auto 1em;
-}
-
-.timeline-item {
-    background: #fff;
-    border: 1px solid;
-    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
-    border-radius: 3px;
-    padding: 12px;
-    margin: 0 auto;
-    max-width: 100%;
-    min-height: 200px;
-}
-
 .animated-background {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-iteration-count: infinite;
@@ -50,122 +31,135 @@
     animation-timing-function: linear;
     background: #f6f7f8;
     background: #eeeeee;
-    background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee));
-    background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
-    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(33%, #eeeeee), color-stop(66%, #dddddd), color-stop(100%, #eeeeee));
+    background: -webkit-linear-gradient(left, #eeeeee 33%, #dddddd 66%, #eeeeee 100%);
+    background: linear-gradient(to right, #eeeeee 33%, #dddddd 66%, #eeeeee 100%);
     -webkit-background-size: 100% 104px;
     background-size: 800px 104px;
-    height: 96px;
+    height: 60px;
     position: relative;
 }
 
-.background-masker {
-    background: #fff;
-    position: absolute;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+.loader-container {
+    height: 100vh;
 
-.outlined .background-masker {
-    border: 1px solid #ddd;
-}
+    .loader-card-container {
+        .loading-card {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            height: 121px;
+            margin-bottom: 10px;
 
-.outlined:hover .background-masker {
-    border: none;
-}
+            .loading-card-content {
+                width: 100%;
 
-.outlined:hover .background-masker:hover {
-    border: 1px solid #ccc;
-    z-index: 1;
-}
+                .user-image-placeholder {
+                    @extend .animated-background;
 
-.background-masker.header-top,
-.background-masker.header-bottom,
-.background-masker.subheader-bottom {
-    top: 0;
-    left: 40px;
-    right: 0;
-    height: 10px;
-}
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
 
-.background-masker.header-left,
-.background-masker.subheader-left,
-.background-masker.header-right,
-.background-masker.subheader-right {
-    top: 10px;
-    left: 40px;
-    height: 8px;
-    width: 10px;
-}
+                .card-data-placeholder {
+                    margin-top: 7px;
 
-.background-masker.header-bottom {
-    top: 18px;
-    height: 6px;
-}
+                    .title {
+                        @extend .animated-background;
 
-.background-masker.subheader-left,
-.background-masker.subheader-right {
-    top: 24px;
-    height: 6px;
-}
+                        width: 100%;
+                        height: 10px;
+                        margin-bottom: 7px;
+                    }
 
-.background-masker.header-right,
-.background-masker.subheader-right {
-    width: auto;
-    left: 300px;
-    right: 0;
-}
+                    .description {
+                        @extend .animated-background;
 
-.background-masker.subheader-right {
-    left: 230px;
-}
+                        width: 80%;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+    }
 
-.background-masker.subheader-bottom {
-    top: 30px;
-    height: 10px;
-}
+    .loading-decks {
+        width: 350px;
+        margin: 0 10px 0 0;
+        padding: 10px 10px 25px 10px;
+        height: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: top;
+        white-space: nowrap;
+        justify-content: center;
+        background-color: #f7f9fa;
+        border: 2px solid #edeff1;
+        border-radius: 5px;
 
-.background-masker.content-top,
-.background-masker.content-second-line,
-.background-masker.content-third-line,
-.background-masker.content-second-end,
-.background-masker.content-third-end,
-.background-masker.content-first-end {
-    top: 40px;
-    left: 0;
-    right: 0;
-    height: 6px;
-}
+        .loading-card {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            height: 218px;
+            margin-bottom: 10px;
 
-.background-masker.content-top {
-    height: 20px;
-}
+            .loading-card-content {
+                width: 100%;
 
-.background-masker.content-first-end,
-.background-masker.content-second-end,
-.background-masker.content-third-end {
-    width: auto;
-    left: 380px;
-    right: 0;
-    top: 60px;
-    height: 8px;
-}
+                .tag {
+                    @extend .animated-background;
 
-.background-masker.content-second-line {
-    top: 68px;
-}
+                    float: none;
+                    width: 60%;
+                    height: 10px;
+                    margin: 0 auto 10px;
+                }
 
-.background-masker.content-second-end {
-    left: 420px;
-    top: 74px;
-}
+                .title {
+                    @extend .animated-background;
 
-.background-masker.content-third-line {
-    top: 82px;
-}
+                    float: none;
+                    width: 100%;
+                    height: 10px;
+                    margin: 0 auto 40px;
+                }
 
-.background-masker.content-third-end {
-    left: 300px;
-    top: 88px;
+                .user {
+                    @include clearfix;
+
+                    margin: 0 auto;
+                    float: none;
+
+                    .user-image-placeholder {
+                        @extend .animated-background;
+
+                        width: 52px;
+                        height: 52px;
+                        border-radius: 50%;
+
+                        &:last-of-type {
+                            margin-left: 38px;
+                        }
+                    }
+                }
+
+                .description {
+                    @extend .animated-background;
+
+                    float: none;
+                    width: 80%;
+                    height: 8px;
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
 }
