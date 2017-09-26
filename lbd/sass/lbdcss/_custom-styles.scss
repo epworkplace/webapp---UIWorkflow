@@ -9639,6 +9639,33 @@ html {
                                     .primary-font {
                                         color: #7d889a;
                                     }
+
+                                    small {
+                                        position: relative;
+
+                                        a.comment-actions {
+                                            padding-right: 0;
+                                            color: #b5b5b5;
+                                        }
+
+                                        .dropdown-menu {
+                                            &:before, &:after {
+                                                border: none;
+                                                content: none;
+                                            }
+
+                                            min-width: 80px;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 16px;
+
+                                            li {
+                                                margin: 0;
+                                                border-bottom: 0;
+                                                padding: 0;
+                                            }
+                                        }
+                                    }
                                 }
 
                                 p {
