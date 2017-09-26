@@ -39,11 +39,11 @@
       }
     }
 
-    .label {
-      line-height: normal;
-    }
-  }
 
+  }
+    .label {
+      line-height: 1.5;
+    }
   .user-contacts {
     margin: 0;
 
@@ -237,7 +237,7 @@
   }
 
   .label {
-    line-height: normal !important;
+    // line-height: normal !important;
     color: white !important;
   }
 
