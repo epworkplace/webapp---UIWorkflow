@@ -178,6 +178,11 @@
                 .tab-content-container {
                   .contract-content-container {
                     .card-section-list {
+                      ul{
+                        li{
+                          @include clearfix;
+                        }
+                      }
                       .card-contract {
                         height: auto;
                         display: -webkit-flex;
