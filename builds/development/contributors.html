@@ -1557,6 +1557,58 @@
                                                                 </a>
                                                             </div>
                                                         </div>
+                                                        <div class="row form-group d-flex user-language-edit">
+                                                            <div class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <select class="chosen-default flags" data-placeholder="Select Language">
+                                                                            <option value=""></option>
+                                                                            <option data-img-src="lbd/img/flag/us.gif">
+                                                                                English (US)
+                                                                            </option>
+                                                                            <option data-img-src="lbd/img/flag/uk.gif">
+                                                                                English (UK)
+                                                                            </option>
+                                                                            <option data-img-src="lbd/img/flag/fr.gif">
+                                                                                Français
+                                                                            </option>
+                                                                            <option data-img-src="lbd/img/flag/it.gif">
+                                                                                Italiano
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <select class="selectpicker" title="Select Proficiency">
+                                                                            <option value="advanced">Advanced (C1)</option>
+                                                                            <option value="intermediate">Intermediate</option>
+                                                                            <option value="confirmed">Confirmed</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <select class="selectpicker" title="Slect Level">
+                                                                            <option value="senior">Senior</option>
+                                                                            <option value="junior">Junior</option>
+                                                                            <option value="beginner">Beginner</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-1 df-ac-jc">
+                                                                <a data-placement="bottom" class="df-ac-jc" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="Delete">
+                                                                    <i class="material-icons">
+                                                                        delete
+                                                                    </i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -2144,9 +2196,9 @@ $(document).ready(function(){
         $('.user-languages-info').fadeIn();
     });
     $(document).on('click', ".language-info-edit .add-a-language", function(e){
-        var newLanguageRow = ``;
+        var newLanguageRow = `<div class="row form-group d-flex user-language-edit"> <div class="col-md-4"> <div class="row"> <div class="col-md-12"> <select class="chosen-default flags" data-placeholder="Select Language" style="display: none;"> <option value=""></option> <option data-img-src="lbd/img/flag/us.gif"> English (US) </option> <option data-img-src="lbd/img/flag/uk.gif"> English (UK) </option> <option data-img-src="lbd/img/flag/fr.gif"> Français </option> <option data-img-src="lbd/img/flag/it.gif"> Italiano </option> </select><div class="chosen-container chosen-container-single flag-dropdown" title="" style="width: 100%;"><a class="chosen-single chosen-default"> <span>Select Language</span> <div><b></b></div></a><div class="chosen-drop"> <div class="chosen-search"> <input class="chosen-search-input" type="text" autocomplete="off"> </div><ul class="chosen-results"></ul></div></div></div></div></div><div class="col-md-4"> <div class="row"> <div class="col-md-12"> <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" title="Select Proficiency"><span class="filter-option pull-left">Select Proficiency</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Advanced (C1)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Intermediate</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Confirmed</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="selectpicker" title="Select Proficiency" tabindex="-98"><option class="bs-title-option" value="">Select Proficiency</option> <option value="advanced">Advanced (C1)</option> <option value="intermediate">Intermediate</option> <option value="confirmed">Confirmed</option> </select></div></div></div></div><div class="col-md-3"> <div class="row"> <div class="col-md-12"> <div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" title="Slect Level"><span class="filter-option pull-left">Slect Level</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Senior</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Junior</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">Beginner</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="selectpicker" title="Slect Level" tabindex="-98"><option class="bs-title-option" value="">Slect Level</option> <option value="senior">Senior</option> <option value="junior">Junior</option> <option value="beginner">Beginner</option> </select></div></div></div></div><div class="col-md-1 df-ac-jc"> <a data-placement="bottom" class="df-ac-jc" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="" data-original-title="Delete"> <i class="material-icons"> delete </i> </a> </div></div>`;
         e.stopPropagation();
-        $( ".user-language-edit-container .user-language-edit:last-child" ).clone().appendTo( ".user-language-edit-container" );
+        // $( ".user-language-edit-container .user-language-edit:last-child" ).clone().appendTo( ".user-language-edit-container" );
         // $('.user-language-edit:last-child .selectpicker').selectpicker('refresh');
         // $('.user-language-edit-container').append(newLanguageRow);
     });
