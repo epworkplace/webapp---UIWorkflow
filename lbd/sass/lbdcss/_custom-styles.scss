@@ -9734,11 +9734,21 @@ html {
                 border-bottom: none;
 
                 .panel-body {
-                    height: 400px;
+                    height: 340px;
                     padding: 0 0 0 15px;
                 }
 
-                .panel-footer {}
+                .panel-footer {
+                    .agenda-title {
+                        span {
+                            display: block;
+                            color: #9a9fa9;
+                            font-size: 16px;
+                            font-weight: 400;
+                            padding-top: 10px;
+                        }
+                    }
+                }
             }
         }
 
