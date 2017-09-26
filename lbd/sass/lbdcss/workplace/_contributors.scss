@@ -441,7 +441,7 @@
 
           .reference-info {
             &.divider {
-              @include divider($color: $helper);
+              @include divider($color: #edeff1);
             }
 
             .reference-header {
