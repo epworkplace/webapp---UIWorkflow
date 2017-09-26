@@ -9736,16 +9736,48 @@ html {
                 .panel-body {
                     height: 340px;
                     padding: 0 0 0 15px;
-                }
 
-                .panel-footer {
-                    .agenda-title {
-                        span {
+                    .agenda-header {
+                        margin-top: 15px;
+
+                        .agenda-title {
                             display: block;
+                            text-align: center;
                             color: #9a9fa9;
                             font-size: 16px;
                             font-weight: 400;
-                            padding-top: 10px;
+                        }
+                    }
+
+                    .agenda-container {
+                        table {
+                            tr {
+                                td.agenda-time {
+                                    width: 36.666%;
+                                }
+
+                                td.agenda-subject {
+                                    width: 62.333%;
+                                    padding-right: 10px;
+
+                                    ul {
+                                        li {
+                                            span.agenda-cancel {
+                                                right: -14px;
+                                                top: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .panel-footer {
+                    .agenda-meeting {
+                        a.btn {
+                            width: 100% !important;
                         }
                     }
                 }
