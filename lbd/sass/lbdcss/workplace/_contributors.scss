@@ -273,7 +273,10 @@
         }
 
         .general-info {
-          .contact-info {
+          [class*="-info-edit"]{
+            display: none;
+          }
+          .user-contact-info {
             font-size: 12px;
 
             .info-header {

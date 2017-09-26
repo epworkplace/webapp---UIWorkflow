@@ -602,7 +602,8 @@ html {
 
                                                     .btn-label {
                                                         position: relative;
-                                                        top: 7px;
+                                                        top: 1px;
+                                                        margin-right: 5px;
 
                                                         i {
                                                             line-height: 0;
@@ -742,7 +743,7 @@ html {
 
                 .list-head-container {
                     margin-top: 2px;
-                    width: 55%;
+                    width: 51%;
 
                     .header {
                         padding: 0;
@@ -954,7 +955,7 @@ html {
 
                 .list-head-container {
                     margin-top: 3px;
-                    width: 55%;
+                    width: 51%;
 
                     .header {
                         padding: 0;
@@ -1529,6 +1530,10 @@ html {
                     &.plagiarized {
                         i {
                             color: #ee0a5f;
+                        }
+
+                        &:before {
+                            border: 2px solid #ee0a5f;
                         }
                     }
                 }

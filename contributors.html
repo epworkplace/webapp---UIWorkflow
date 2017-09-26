@@ -521,6 +521,7 @@
 <!--   Core JS Files   -->
 <!-- @include _partials/_all-js-files.html -->
 <script>
+
     var $table = $('#client-list-table, #client-prospect-list-table');
     function operateFormatter(value, row, index) {
         return [
@@ -592,12 +593,53 @@
 $(document).ready(function(){
 
     /* Edit User contact info */
-    $(document).on('click', ".general-info a.info-edit", function(e){
+    $(document).on('click', ".general-info .info-edit", function(e){
         e.stopPropagation();
-        $('.contact-info-edit')..slideToggle();
-        alert('hi');
-        // $(this).parents('.list-item').hide();
+        $('.contact-info-edit').slideDown();
     });
+    $(document).on('click', ".info-edit-actions .cancel-btn, .info-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.contact-info-edit').slideUp();
+    });
+
+    /* Edit User description info */
+    $(document).on('click', ".general-info .description-edit", function(e){
+        e.stopPropagation();
+        $('.user-description-info').fadeOut();
+        $('.description-info-edit').fadeIn();
+    });
+    $(document).on('click', ".description-edit-actions .cancel-btn, .description-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.description-info-edit').fadeOut();
+        $('.user-description-info').fadeIn();
+    });
+
+    /* Edit User languages info */
+    $(document).on('click', ".general-info .languages-edit, .add-new-language .add-a-language", function(e){
+        e.stopPropagation();
+        $('.user-languages-info').fadeOut();
+        $('.language-info-edit').fadeIn();
+    });
+    $(document).on('click', ".language-edit-actions .cancel-btn, .language-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.language-info-edit').fadeOut();
+        $('.user-languages-info').fadeIn();
+    });
+    $(document).on('click', ".language-info-edit .add-a-language", function(e){
+        var newLanguageRow = ``;
+        e.stopPropagation();
+        $( ".user-language-edit-container .user-language-edit:last-child" ).clone().appendTo( ".user-language-edit-container" );
+        // $('.user-language-edit:last-child .selectpicker').selectpicker('refresh');
+        // $('.user-language-edit-container').append(newLanguageRow);
+    });
+    $(document).on('click', '.selectpicker', function(e){
+      $(this).selectpicker('refresh');
+      console.log($(this));
+    });
+
     $(document).on('click', "#updateNewWebsite", function(e){
         e.preventDefault();
         e.stopPropagation();

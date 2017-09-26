@@ -1,215 +1,421 @@
 /*-----Media Queries-----*/
 
-@media screen and (max-width: 1400px){
-  .layout-2.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-panel-page-header .contract{
-    width: 41.333%;
-  }
-  .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-panel-page-header .contract{
-    width: 41.333%;
-  }
-  /* 
-  .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .tab-panel-container .tab-panel{
-    width: 62.555%;
-  }
-  .layout-5.wp-app .tab-panel-container.left{
-    width: 33.333%!important;
-    .tab-panel{
-      width: 62.555%!important;
+@media screen and (max-width: 1400px) {
+    .layout-2.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-panel-page-header .contract {
+        width: 41.333%;
     }
-  } */
-  .open-menu-top-bar{
-    width: 47%;
-  }
-  .open-menu-top-bar .client-info a.close-nav{
-    margin: 3px 0 0 1px;
-  }
-  .open-menu-top-bar .navigation-tabs ul li{
-    width: 21.666%;
-  }
+
+    .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-panel-page-header .contract {
+        width: 41.333%;
+    }
+
+    /* 
+    .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .tab-panel-container .tab-panel{
+      width: 62.555%;
+    }
+    .layout-5.wp-app .tab-panel-container.left{
+      width: 33.333%!important;
+      .tab-panel{
+        width: 62.555%!important;
+      }
+    } */
+    .open-menu-top-bar {
+        width: 47%;
+    }
+
+    .open-menu-top-bar .client-info a.close-nav {
+        margin: 3px 0 0 1px;
+    }
+
+    .open-menu-top-bar .navigation-tabs ul li {
+        width: 21.666%;
+    }
 }
 
-@media screen and (max-width: 992px){
-  .wp-app{
-    .wrapper{
-      .sidebar{
-        .logo{
-        }
-        .sidebar-wrapper{
-          .navbar-search-form{
-          }
-          > ul.nav{
-            li{
-              a{
-              }
-              &:hover{
-                a{
-                  p{
-                  }
-                }
-                i{
-                }
-              }
-              i{
-              }
-              p{
-              }
-            }
-            li.active{
-              a{
-                p{
-                }
-              }
-              &:hover{
-              }
-              i{
-              }
-            }
-          }
-          .sidebar-footer{
-            .profile{
-              .profile_pic{
-                .profile_img{
-                }
-              }
-              .profile_info{
-                p{
-                }
-              }
-            }
-          }
-        }
-      }
-      .page-wrap{
-        margin-left: 0;
-        .main-panel-wrap{
-          .main-panel{
-            .main-panel-page{
-              .main-panel-header{
-                padding: 10px 0;
-                height: 74px;
-                .navbar-toggle{
-                  margin: 13px 20px 19px 0;
-                  float: left;
-                }
-                .page-status{
-                }
-                a.select-all{
-                  margin-top: 7px;
-                  &:hover, &:focus{
-                  }
-                }
-              }
-              .main-container{
-                .tab-panel-container{
-                  .tab-panel{
-                    .navbar-default{
-                      .navbar-header{
-                      }
-                      .page-title{
-                        a.navbar-brand{
-                        }
-                      }
-                      .tab-panel-search{
-                        form.navbar-form{
-                          .search-input{
-                            .form-control{
-                            }
-                          }
-                          .search-button{
-                            flex: 0;
-                            button{
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  .main-panel-container{
-                    .content{
-                    }
-                  }
-                }
-              }
-            }
-          }
-        } 
-      }
-    }
-  }
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+    /* Home page CSS Starts*/
 
- .wp-app .sidebar, .wp-app .bootstrap-navbar {
-    position: fixed;
-    display: block;
-    top: 0;
-    height: 100%;
-    width: 80px;
-    right: auto;
-    left: 0;
-    z-index: 1032;
-    visibility: visible;
-    overflow-y: visible;
-    padding: 0;
-    -webkit-transform: translate3d(-80px, 0, 0);
-    -moz-transform: translate3d(-80px, 0, 0);
-    -o-transform: translate3d(-80px, 0, 0);
-    -ms-transform: translate3d(-80px, 0, 0);
-    transform: translate3d(-80px, 0, 0);
-  }
-  .nav-open .sidebar, .nav-open .bootstrap-navbar{
-    -webkit-transform: translate3d(0px, 0, 0);
-    -moz-transform: translate3d(0px, 0, 0);
-    -o-transform: translate3d(0px, 0, 0);
-    -ms-transform: translate3d(0px, 0, 0);
-    transform: translate3d(0px, 0, 0);
-  }
-  .nav-open .main-panel{
-    left: 0;
-    -webkit-transform: translate3d(80px, 0, 0);
-    -moz-transform: translate3d(80px, 0, 0);
-    -o-transform: translate3d(80px, 0, 0);
-    -ms-transform: translate3d(80px, 0, 0);
-    transform: translate3d(80px, 0, 0);
-  }
-  /* Layout-3 Changes Starts */
-  .layout-3.wp-app{
-    .page-wrap{
-      .tab-panel{
-        .navbar-toggle{
-          margin: 13px 20px 19px 0;
-          float: left; 
-        }
-      }
-      .main-panel-wrap{
-        .main-panel{
-          .main-panel-page{
-            .main-container{
-              .main-panel-container{
-                .content{
-                  .tab-content{
-                    .main-panel-header{
-                      width: calc(100% - 33.333%);
-                      margin-left: 33.333%
-                    }
-                  }
+    .leftside-column-container {
+        .leftside-column {
+            .user-container {
+                .user-image {}
+
+                .user-details {
+                    .user-name {}
+
+                    .user-profile {}
                 }
-              }
             }
-          }
         }
-      }
-      .main-panel-header{
-        .main-panel-header-container{
-          width: 100%;
-        }
-      }
     }
-  }
-  /* Layout-3 Changes Ends */
+
+    .agenda-header {
+        .agenda-title {
+            width: 100%;
+            float: none;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .agenda-meeting {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    .rightside-column-container {
+        .rightside-column {
+            .hot-clients-container {
+                .clients-logo-container {
+                    justify-content: center;
+
+                    .hot-client {
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .comment-reply-message-modal {
+        .message-container {
+            .message-profile {
+                .message {
+                    width: 92.888%;
+                    padding-right: 0;
+
+                    .form-control {
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .feeds-main-container {
+        .feeds-container {
+            .feeds-comments-container {
+                ul {
+                    li {
+                        .comments-section {
+                            .comment-container {
+                                width: 89.666%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .post-comments-container {
+                ul {
+                    li {
+                        .comments-section {
+                            .comment-container {
+                                width: 91.410%;
+
+                                .comment-input-text {
+                                    .comment {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Home page CSS Ends*/
+    /* Production CSS Stars*/
+
+    .assessment-list-container ul li .assessment-box .assessment-card a {
+        width: 65%;
+    }
+
+    .assessment-list-container ul li .assessment-box .assessment-card .assessment-label {
+        width: 35.333%;
+    }
+
+    .assessment-list-container ul li .assessment-box .assessment-card .assessment-label i, .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.done i, .assessment-list-container ul li .assessment-box .assessment-card .assessment-label.timer i {
+        margin-right: 0;
+    }
+
+    .job-list-container .job-list-card .job-list .job-list-actions {
+        width: 33.333%;
+    }
+
+    /* Production CSS Ends*/
+
+    /* Contract List CSS Starts */
+
+    .wp-app .wrapper .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .tab-panel-container .tab-panel .page-filter .status-list-container .status-list ul li {
+        width: 30.5%;
+    }
+
+    .card-section-list ul li .card .list-head-container {
+        width: 49%;
+    }
+
+    /* Contract List CSS Ends */
+
+    /* Contact Overview CSS Starts */
+
+    .open-menu-top-bar .client-info a.close-nav {
+        width: 12px;
+    }
+
+    .open-menu-top-bar .navigation-tabs ul li {
+        width: 28.666%;
+    }
+
+    .layout-2.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-panel-page-header .right .end-date-container a.end-date span.warning-indicator {
+        left: 27px;
+    }
+
+    .tab-step .tab-pane .informations .turnover .bill-box {
+        width: 47.555%;
+    }
+
+    .tab-step .tab-step-content .nav li {
+        margin: 0 18px 0 0;
+    }
+
+    /* Contact Overview CSS Ends */
+
+    /* Quotes CSS Starts */
+
+    .turnover .bill-box {
+        width: 47.666%;
+    }
+
+    .card-section-list ul li .card .list-head-container.list-head-quote-mission {
+        width: 37%;
+    }
+
+    .card-section-list ul li .card .task-price.task-price-quote-mission {
+        width: 320px;
+    }
+
+    .card-section-list ul li .card .task-price.task-price-quote-mission .numbers {
+        width: 95px;
+    }
+
+    .card-section-list ul li .card .task-price.task-price-quote-mission .turnover {
+        width: 130px;
+    }
+
+    /* Quotes CSS Ends */
+
+    /* Mission Creation CSS Starts*/
+
+    .quote-mission-creation {
+        .pull-right {
+            .btn {
+                width: 60% !important;
+            }
+        }
+    }
+
+    /* Mission Creation CSS Ends*/
+
+    .card-section-list ul li .card .cta-container {
+        width: 44%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .wp-app {
+        .wrapper {
+            .sidebar {
+                .logo {}
+
+                .sidebar-wrapper {
+                    .navbar-search-form {}
+
+                    > ul.nav {
+                        li {
+                            a {}
+
+                            &:hover {
+                                a {
+                                    p {}
+                                }
+
+                                i {}
+                            }
+
+                            i {}
+
+                            p {}
+                        }
+
+                        li.active {
+                            a {
+                                p {}
+                            }
+
+                            &:hover {}
+
+                            i {}
+                        }
+                    }
+
+                    .sidebar-footer {
+                        .profile {
+                            .profile_pic {
+                                .profile_img {}
+                            }
+
+                            .profile_info {
+                                p {}
+                            }
+                        }
+                    }
+                }
+            }
+
+            .page-wrap {
+                margin-left: 0;
+
+                .main-panel-wrap {
+                    .main-panel {
+                        .main-panel-page {
+                            .main-panel-header {
+                                padding: 10px 0;
+                                height: 74px;
+
+                                .navbar-toggle {
+                                    margin: 13px 20px 19px 0;
+                                    float: left;
+                                }
+
+                                .page-status {}
+
+                                a.select-all {
+                                    margin-top: 7px;
+
+                                    &:hover, &:focus {}
+                                }
+                            }
+
+                            .main-container {
+                                .tab-panel-container {
+                                    .tab-panel {
+                                        .navbar-default {
+                                            .navbar-header {}
+
+                                            .page-title {
+                                                a.navbar-brand {}
+                                            }
+
+                                            .tab-panel-search {
+                                                form.navbar-form {
+                                                    .search-input {
+                                                        .form-control {}
+                                                    }
+
+                                                    .search-button {
+                                                        flex: 0;
+
+                                                        button {}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .main-panel-container {
+                                        .content {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wp-app .sidebar, .wp-app .bootstrap-navbar {
+        position: fixed;
+        display: block;
+        top: 0;
+        height: 100%;
+        width: 80px;
+        right: auto;
+        left: 0;
+        z-index: 1032;
+        visibility: visible;
+        overflow-y: visible;
+        padding: 0;
+        -webkit-transform: translate3d(-80px, 0, 0);
+        -moz-transform: translate3d(-80px, 0, 0);
+        -o-transform: translate3d(-80px, 0, 0);
+        -ms-transform: translate3d(-80px, 0, 0);
+        transform: translate3d(-80px, 0, 0);
+    }
+
+    .nav-open .sidebar, .nav-open .bootstrap-navbar {
+        -webkit-transform: translate3d(0px, 0, 0);
+        -moz-transform: translate3d(0px, 0, 0);
+        -o-transform: translate3d(0px, 0, 0);
+        -ms-transform: translate3d(0px, 0, 0);
+        transform: translate3d(0px, 0, 0);
+    }
+
+    .nav-open .main-panel {
+        left: 0;
+        -webkit-transform: translate3d(80px, 0, 0);
+        -moz-transform: translate3d(80px, 0, 0);
+        -o-transform: translate3d(80px, 0, 0);
+        -ms-transform: translate3d(80px, 0, 0);
+        transform: translate3d(80px, 0, 0);
+    }
+
+    /* Layout-3 Changes Starts */
+    .layout-3.wp-app {
+        .page-wrap {
+            .tab-panel {
+                .navbar-toggle {
+                    margin: 13px 20px 19px 0;
+                    float: left;
+                }
+            }
+
+            .main-panel-wrap {
+                .main-panel {
+                    .main-panel-page {
+                        .main-container {
+                            .main-panel-container {
+                                .content {
+                                    .tab-content {
+                                        .main-panel-header {
+                                            width: calc(100% - 33.333%);
+                                            margin-left: 33.333%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-panel-header {
+                .main-panel-header-container {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /* Layout-3 Changes Ends */
 }
 
 @media (min-width: 768px) {
-  .modal-xl {
-    width: 90%;
-    max-width:1200px;
-  }
+    .modal-xl {
+        width: 90%;
+        max-width: 1200px;
+    }
 }
