@@ -800,41 +800,67 @@
     </div>
   </div>
 </div>
-<div id="deleteConfirmation" class="delete-confirmation modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body clearfix">
-        <h4 class="delete-modal-title">Confirmation</h4>
-        <p class="confirm-question">Are You Sure You want to delete the contract?</p>
-        <div class="confirm-buttons">
-          <button class="btn btn-fill btn-wd cancel-btn" data-dismiss="modal">Cancel</button>
-          <button class="btn btn-fill btn-wd delete-btn">Delete</button>
+
+<!-- Modal windows starts -->
+
+<div class="delete-confirmation modal fade" id="deleteConfirmation" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body clearfix">
+                <h4 class="delete-modal-title">
+                Confirmation
+                </h4>
+                <p class="confirm-question">
+                    Are You Sure You want to delete the contract?
+                </p>
+                <div class="confirm-buttons">
+                    <button class="btn btn-fill btn-wd cancel-btn" data-dismiss="modal">
+                    Cancel
+                    </button>
+                    <button class="btn btn-fill btn-wd delete-btn">
+                    Delete
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-<div id="profile" class="profile modal fade" role="dialog">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Your profile</h4>
-      </div>
-      <div class="modal-body clearfix">
-        <div class="user-image pull-left"> <img src="lbd/img/default-avatar.png" class="img-circle" /> </div>
-        <div class="user-profile">
-          <h2>Clarrisse</h2>
-          <p>Designation in Org</p>
+<div class="profile modal fade" id="profile" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button">
+                ×
+                </button>
+                <h4 class="modal-title">
+                Your profile
+                </h4>
+            </div>
+            <div class="modal-body clearfix">
+                <div class="user-image pull-left">
+                    <img class="img-circle" src="lbd/img/default-avatar.png"/>
+                </div>
+                <div class="user-profile">
+                    <h2>
+                    Clarrisse
+                    </h2>
+                    <p>
+                        Designation in Org
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-fill" type="button">
+                Modify Profile
+                </button>
+                <button class="btn btn-primary btn-fill" type="button">
+                Logout
+                </button>
+            </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary btn-fill">Modify Profile</button>
-        <button type="button" class="btn btn-primary btn-fill">Logout</button>
-      </div>
     </div>
-  </div>
 </div>
+
 <!-- Create new client modal -->
 <div aria-labelledby="create-new-client-modal" class="modal fade create-new-client-modal" id="create-new-client-modal" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-lg" role="document">
@@ -2266,8 +2292,9 @@
 </div>
 
 
+<!-- Modal windows ends -->
 
-</body>
+
 <!--   Core JS Files   -->
 <!--   Core JS Files   -->
 <script src="lbd/js/jquery.min.js" type="text/javascript">
@@ -2361,75 +2388,9 @@
 <!-- Custom JS -->
 <script src="lbd/js/custom.js">
 </script>
-<script>
 
-    var $table = $('#client-list-table, #client-prospect-list-table');
-    function operateFormatter(value, row, index) {
-        return [
-            '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">',
-                '<i class="fa fa-image"></i>',
-            '</a>',
-            '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
-                '<i class="fa fa-edit"></i>',
-            '</a>',
-            '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
-                '<i class="fa fa-remove"></i>',
-            '</a>'
-        ].join('');
-    }
-    $().ready(function(){
-        window.operateEvents = {
-            'click .view': function (e, value, row, index) {
-                info = JSON.stringify(row);
-                swal('You click view icon, row: ', info);
-                console.log(info);
-            },
-            'click .edit': function (e, value, row, index) {
-                info = JSON.stringify(row);
-                swal('You click edit icon, row: ', info);
-                console.log(info);
-            },
-            'click .remove': function (e, value, row, index) {
-                console.log(row);
-                $table.bootstrapTable('remove', {
-                    field: 'id',
-                    values: [row.id]
-                });
-            }
-        };
-        $table.bootstrapTable({
-            toolbar: ".toolbar",
-            clickToSelect: true,
-            showRefresh: true,
-            search: true,
-            showToggle: true,
-            showColumns: true,
-            pagination: true,
-            searchAlign: 'left',
-            pageSize: 8,
-            clickToSelect: false,
-            pageList: [8,10,25,50,100],
-            formatShowingRows: function(pageFrom, pageTo, totalRows){
-                //do nothing here, we don't want to show the text "showing x of y from..."
-            },
-            formatRecordsPerPage: function(pageNumber){
-                return pageNumber + " rows visible";
-            },
-            icons: {
-                refresh: 'fa fa-refresh',
-                toggle: 'fa fa-th-list',
-                columns: 'fa fa-columns',
-                detailOpen: 'fa fa-plus-circle',
-                detailClose: 'fa fa-minus-circle'
-            }
-        });
-        //activate the tooltips after the data table is initialized
-        $('[rel="tooltip"]').tooltip();
-        $(window).resize(function () {
-            $table.bootstrapTable('resetView');
-        });
-    });
-</script>
+<!-- Custom Scripts -->
+
 <script>
 $(document).ready(function(){
 
@@ -2525,4 +2486,6 @@ $(document).ready(function(){
 
 });
 </script>
+
+</body>
 </html>
