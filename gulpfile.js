@@ -9,6 +9,7 @@
   vf = require('vinyl-file'),
   vss = require('vinyl-source-stream'),
   vb = require('vinyl-buffer'),
+  webpack = require('webpack-stream'),
 	browserSync = require('browser-sync').create(),
 	reload = browserSync.reload;
 
@@ -265,6 +266,7 @@ gulp.task('jslib', function() {
       // .pipe($.regenerator())
       .pipe($.uglify())
       .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
+      // .pipe(webpack())
       .pipe(jsFilter.restore)
       .pipe(jsonFilter)
       .pipe($.jsonMinify())
