@@ -9650,6 +9650,12 @@ html {
                                         a.comment-actions {
                                             padding-right: 0;
                                             color: #b5b5b5;
+
+                                            i {
+                                                position: relative;
+                                                right: 25px;
+                                                top: -3px;
+                                            }
                                         }
 
                                         .dropdown-menu {
@@ -9736,16 +9742,54 @@ html {
                 .panel-body {
                     height: 340px;
                     padding: 0 0 0 15px;
-                }
 
-                .panel-footer {
-                    .agenda-title {
-                        span {
+                    .bootstrap-datetimepicker-widget {
+                        z-index: 99999 !important;
+                        position: relative !important;
+                        top: 0px !important;
+                    }
+
+                    .agenda-header {
+                        margin-top: 15px;
+
+                        .agenda-title {
                             display: block;
+                            text-align: center;
                             color: #9a9fa9;
                             font-size: 16px;
                             font-weight: 400;
-                            padding-top: 10px;
+                        }
+                    }
+
+                    .agenda-container {
+                        table {
+                            tr {
+                                td.agenda-time {
+                                    width: 36.666%;
+                                }
+
+                                td.agenda-subject {
+                                    width: 62.333%;
+                                    padding-right: 10px;
+
+                                    ul {
+                                        li {
+                                            span.agenda-cancel {
+                                                right: -14px;
+                                                top: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .panel-footer {
+                    .agenda-meeting {
+                        a.btn {
+                            width: 100% !important;
                         }
                     }
                 }
