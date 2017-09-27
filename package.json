@@ -32,6 +32,7 @@
     "gulp-csso": "^3.0.0",
     "gulp-deporder": "^1.1.0",
     "gulp-filter": "^5.0.1",
+    "gulp-gzip": "^1.4.0",
     "gulp-htmlclean": "^2.7.15",
     "gulp-imacss": "^0.3.0",
     "gulp-imagemin": "^3.3.0",
@@ -61,6 +62,7 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-file": "^3.0.0",
     "vinyl-source-stream": "^1.1.0",
+    "webpack": "^3.6.0",
     "webpack-stream": "^4.0.0"
   }
 }

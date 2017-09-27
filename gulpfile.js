@@ -9,7 +9,8 @@
   vf = require('vinyl-file'),
   vss = require('vinyl-source-stream'),
   vb = require('vinyl-buffer'),
-  webpack = require('webpack-stream'),
+  webpack = require('webpack'),
+  webpackstream = require('webpack-stream'),
 	browserSync = require('browser-sync').create(),
 	reload = browserSync.reload;
 
@@ -222,7 +223,7 @@ gulp.task('sass', ['fonts'], function() {
 
 // js tasks
 gulp.task('js', function() {
-  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
+  var jsFilter = $.filter(['**/*.js'], {restore: true});
 	if (devBuild) {
 		return gulp.src(js.in)
 
@@ -232,7 +233,9 @@ gulp.task('js', function() {
       .pipe($.deporder())
       .pipe($.stripDebug())
       .pipe(jsFilter)
+      // .pipe(webpack())
       .pipe($.uglify())
+      // .pipe($.gzip({append: false}))
       .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
       .pipe(gulp.dest(js.out));
