@@ -9650,6 +9650,12 @@ html {
                                         a.comment-actions {
                                             padding-right: 0;
                                             color: #b5b5b5;
+
+                                            i {
+                                                position: relative;
+                                                right: 25px;
+                                                top: -3px;
+                                            }
                                         }
 
                                         .dropdown-menu {
@@ -9736,6 +9742,12 @@ html {
                 .panel-body {
                     height: 340px;
                     padding: 0 0 0 15px;
+
+                    .bootstrap-datetimepicker-widget {
+                        z-index: 99999 !important;
+                        position: relative !important;
+                        top: 0px !important;
+                    }
 
                     .agenda-header {
                         margin-top: 15px;
