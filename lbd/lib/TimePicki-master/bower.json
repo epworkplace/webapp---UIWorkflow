@@ -3,8 +3,8 @@
   "version": "1.0.2",
   "main": [
     "css/timepicki.css",
-    "images/arrow.png",
-    "images/top_arr.png",
+    "images/arrow.webp",
+    "images/top_arr.webp",
     "js/timepicki.js"
   ],
   "authors": [

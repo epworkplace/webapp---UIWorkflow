@@ -255,7 +255,7 @@
     var row = emoji[1];
     var column = emoji[2];
     var name = emoji[3];
-    var filename = $.emojiarea.spriteSheetPath ? $.emojiarea.spriteSheetPath : $.emojiarea.assetsPath + '/emoji_spritesheet_!.png';
+    var filename = $.emojiarea.spriteSheetPath ? $.emojiarea.spriteSheetPath : $.emojiarea.assetsPath + '/emoji_spritesheet_!.webp';
     var blankGifPath = $.emojiarea.blankGifPath ? $.emojiarea.blankGifPath : $.emojiarea.assetsPath + '/blank.gif';
     var iconSize = menu && Config.Mobile ? 26 : $.emojiarea.iconSize
     var xoffset = -(iconSize * column);

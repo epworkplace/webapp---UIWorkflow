@@ -6543,9 +6543,9 @@ ul.zg-ul-select {
     user-select: none;
 
     /*   this code is for fixing safari bug with hidden overflow for border-radius   */
-    -webkit-mask: url("../img/mask.png") 0 0 no-repeat;
+    -webkit-mask: url("../img/mask.webp") 0 0 no-repeat;
     -webkit-mask-size: 60px 28px;
-    mask: url("../img/mask.png") 0 0 no-repeat;
+    mask: url("../img/mask.webp") 0 0 no-repeat;
 
     &.deactivate {
         opacity: 0.5;

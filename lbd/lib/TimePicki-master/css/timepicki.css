@@ -31,7 +31,7 @@ Author: senthil
 	width: 28%;
 	border: 0;
 	margin: auto;
-	background: url(../images/arrow.png) no-repeat;
+	background: url(../images/arrow.webp) no-repeat;
 	border-radius: 5px;
 }
 
@@ -72,7 +72,7 @@ Author: senthil
 	position: absolute;
 	top: -10px;
 	left: 20px;
-	background: url(../images/top_arr.png) no-repeat;
+	background: url(../images/top_arr.webp) no-repeat;
 	width: 18px;
 	height: 10px;
 	z-index: 999;

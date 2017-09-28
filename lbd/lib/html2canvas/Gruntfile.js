@@ -103,12 +103,12 @@ module.exports = function(grunt) {
                     middleware:  function(connect, options) {
                         return [
                             function(req, res, next) {
-                                if (req.url !== '/tests/assets/image2.jpg') {
+                                if (req.url !== '/tests/assets/image2.webp') {
                                     next();
                                     return;
                                 }
                                 res.setHeader("Access-Control-Allow-Origin", "*");
-                                res.end(require("fs").readFileSync('tests/assets/image2.jpg'));
+                                res.end(require("fs").readFileSync('tests/assets/image2.webp'));
                             }
                         ];
                     }

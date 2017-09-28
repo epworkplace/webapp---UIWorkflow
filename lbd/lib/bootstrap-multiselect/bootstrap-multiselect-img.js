@@ -152,7 +152,7 @@
                     options.each(function() {
                         var label = ($(this).attr('label') !== undefined) ? $(this).attr('label') : $(this).html();
 						//selected += label + ', ';
-						selected += '<img class="multi-img" src="http://ep-test.edit-place.com/FO/profiles/bo/'+$(this).val()+'/logo.jpg?123">';
+						selected += '<img class="multi-img" src="http://ep-test.edit-place.com/FO/profiles/bo/'+$(this).val()+'/logo.webp?123">';
                         
                     });
                     
@@ -195,7 +195,7 @@
              * @returns {String}
              */
             labelImg: function(element){				
-                return '<img class="multi-img" src="http://ep-test.edit-place.com/FO/profiles/bo/'+$(element).val()+'/logo.jpg?123"> ';
+                return '<img class="multi-img" src="http://ep-test.edit-place.com/FO/profiles/bo/'+$(element).val()+'/logo.webp?123"> ';
             },
             /**
              * Triggered on change of the multiselect.
