@@ -465,19 +465,14 @@ $(document).ready(function(){
 		});
 	});
 
-
-
-
-
-
 	//tinyMCE integartion
 	tinymce.init({
 	    selector: '#edit-textarea',
 	    statusbar: false,
   		menubar : false,
-		height: "450",
+		height: "400",
 		plugins: "autoresize",
-		autoresize_min_height: "450",
+		autoresize_min_height: "400",
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
 
@@ -537,8 +532,6 @@ $(document).ready(function(){
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
 	  });
-
-
 
 	//Chosen Dropdown with Image
 	$(".mission-assignee, .chosen-default").chosen({width:"100%"});
