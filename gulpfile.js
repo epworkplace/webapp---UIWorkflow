@@ -9,8 +9,7 @@
   vf = require('vinyl-file'),
   vss = require('vinyl-source-stream'),
   vb = require('vinyl-buffer'),
-  webpack = require('webpack'),
-  webpackstream = require('webpack-stream'),
+  webpack = require('webpack-stream'),
 	browserSync = require('browser-sync').create(),
 	reload = browserSync.reload;
 
@@ -121,12 +120,6 @@ gulp.task('clean', function() {
 	]);
 });
 
-gulp.task('clean-images', function() {
-  del([
-    dest + 'lbd/img/**/*'
-  ]);
-});
-
 gulp.task('clean-html', function() {
   del([
     dest + '**/*.html'
@@ -173,15 +166,9 @@ gulp.task('html', function() {
 
 // manage images
 gulp.task('images', function() {
-  var imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true});
 	return gulp.src(images.in)
-    .pipe($.size({title: 'images in '}))
 		.pipe($.newer(images.out))
 		.pipe($.imagemin())
-    .pipe(imageFilter2)
-    .pipe($.webp())
-    .pipe(imageFilter2.restore)
-    .pipe($.size({title: 'images out '}))
 		.pipe(gulp.dest(images.out));
 });
 
@@ -194,9 +181,8 @@ gulp.task('fonts', function() {
 
 // copy plugin css
 gulp.task('css', ['fonts'], function() {
-  var cssFilter = $.filter(['**/*.css'], {restore: true}),
-      imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
-      imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true});
+  var cssFilter = $.filter(['**/*.css'], {restore: true});
+  var imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true});
   return gulp.src(css.pluginCSS.in)
     // .pipe($.sourcemaps.init())
     // .pipe($.sass(css.sassOpts))
@@ -215,9 +201,6 @@ gulp.task('css', ['fonts'], function() {
     .pipe(imageFilter)
     .pipe($.imagemin())
     .pipe(imageFilter.restore)
-    .pipe(imageFilter2)
-    .pipe($.webp())
-    .pipe(imageFilter2.restore)
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
     .pipe(browserSync.stream({match: '**/*.css'}));
@@ -239,7 +222,7 @@ gulp.task('sass', ['fonts'], function() {
 
 // js tasks
 gulp.task('js', function() {
-  var jsFilter = $.filter(['**/*.js'], {restore: true});
+  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
 	if (devBuild) {
 		return gulp.src(js.in)
 
@@ -249,9 +232,7 @@ gulp.task('js', function() {
       .pipe($.deporder())
       .pipe($.stripDebug())
       .pipe(jsFilter)
-      // .pipe(webpack())
       .pipe($.uglify())
-      // .pipe($.gzip({append: false}))
       .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
       .pipe(gulp.dest(js.out));
@@ -274,7 +255,6 @@ gulp.task('jslib', function() {
   var htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
       cssFilter = $.filter(['**/*.css'], {restore: true}),
       imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
-      imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true}),
       jsonFilter = $.filter(['**/*.json'], {restore: true}),
       jsFilter = $.filter(['**/*.js'], {restore: true});
   if (devBuild) {
@@ -300,10 +280,6 @@ gulp.task('jslib', function() {
       .pipe(imageFilter)
       .pipe($.imagemin())
       .pipe(imageFilter.restore)
-      .pipe(imageFilter2)
-      .pipe($.webp())
-      .pipe(imageFilter2.restore)
-
       // .pipe($.jshint())
       // .pipe($.jshint.reporter('default'))
       // .pipe($.jshint.reporter('fail'))

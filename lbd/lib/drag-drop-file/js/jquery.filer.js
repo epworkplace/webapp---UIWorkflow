@@ -625,7 +625,7 @@
 										.toString(36)
 										.substring(5);
 									blob.name += blob.type.indexOf("/") != -1 ? "." + blob.type.split("/")[1].toString()
-										.toLowerCase() : ".webp";
+										.toLowerCase() : ".png";
 									f._onChange(e, [blob]);
 									f._clPsePre = setTimeout(function() {
 										delete f._clPsePre

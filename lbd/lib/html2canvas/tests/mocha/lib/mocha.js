@@ -1475,7 +1475,7 @@ exports.Test = require('./test');
  */
 
 function image(name) {
-  return __dirname + '/../images/' + name + '.webp';
+  return __dirname + '/../images/' + name + '.png';
 }
 
 /**
