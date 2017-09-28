@@ -130,6 +130,8 @@
 }
 
 .card-box {
+    border: 1px solid transparent;
+
     .card-header {
         .card-icon {
             padding: 0;
@@ -251,6 +253,11 @@
     &:hover {
         cursor: pointer;
     }
+
+    &:hover {
+        box-shadow: rgba(18, 138, 50, 0.1) 0px 0px 5px 0px;
+        border: 1px solid #448AFF;
+    }
 }
 
 .open-card {
@@ -295,6 +302,7 @@
         color: #353f53;
         width: 52px;
         height: 52px;
+        font-size: 18px;
         border-radius: 50%;
         align-items: center;
         justify-content: center;
@@ -311,6 +319,13 @@
         border: 2px solid #d7d9dc;
         background: #d7d9dc;
         color: #ffffff;
+    }
+
+    .card-user-empty.user {
+        border: 2px solid #353f53;
+        background: #353f53;
+        color: #fff;
+        text-transform: uppercase;
     }
 
     &.chevron {
