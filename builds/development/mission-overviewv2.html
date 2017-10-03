@@ -4875,7 +4875,36 @@
                                         <div class="toggle-panel-container" style="display: none;">
                                             <a href="javascript:;"><i class="material-icons">menu</i></a>
                                         </div>
+                                        <a href="javascript:;" data-toggle="modal" data-target="#page-refresh" style="display: none;">Alert to reload page</a>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div aria-labelledby="refresh-page" class="modal fade refresh-page" id="refresh-page" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-md" role="modal">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="edit-content clearfix">
+                            <span class="close">
+                                <a data-dismiss="modal" href="javascript:;">
+                                    <i class="material-icons">
+                                        close
+                                    </i>
+                                </a>
+                            </span>
+                            <div class="row modal-title">
+                                You have been inactive for a while
+                                <span class="helper-text d-block">Please reload this page to get fresh content.</span>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <button class="btn btn-default btn-fill full-width btn-wd btn-yes" type="button">
+                                        Reload
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -5089,6 +5118,7 @@
                 </div>
             </div>
         </div>
+
         
     </div>
 
@@ -5414,6 +5444,12 @@ e.stopPropagation();
    }
 // console.log('Clicked on card-box 02');
 })
+
+
+setTimeout(function(){
+    $('#refresh-page').modal('show');
+}, 10000);
+
 });
 </script>
 
