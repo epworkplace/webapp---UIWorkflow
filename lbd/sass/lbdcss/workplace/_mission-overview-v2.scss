@@ -101,7 +101,9 @@
 
     /* main container ends */
     /* modal dialog styles starts */
-
+.refresh-page{
+    @extend %modal;
+}
 
     /* modal dialog styles ends */
 
