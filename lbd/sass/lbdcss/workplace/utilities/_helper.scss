@@ -1,116 +1,139 @@
 /* helper utility styles */
 .helper-text {
-  font-size: 12px;
-  text-transform: none !important;
-  color: $helper;
-  font-weight: 400;
+    font-size: 12px;
+    text-transform: none !important;
+    color: $helper;
+    font-weight: 400;
 
-  &.text-01 {
-    font-size: 14px;
-  }
+    &.text-01 {
+        font-size: 14px;
+    }
 
-  &.text-02 {
-    font-size: 13px;
-  }
+    &.text-02 {
+        font-size: 13px;
+    }
 
-  &.text-03 {
-    font-size: 11px;
-  }
+    &.text-03 {
+        font-size: 11px;
+    }
 
-  &.text-04 {
-    font-size: 10px;
-  }
+    &.text-04 {
+        font-size: 10px;
+    }
 
-  [class$='by'] {
-    font-weight: 600;
-  }
+    [class$='by'] {
+        font-weight: 600;
+    }
 }
 
 // button with 48% styles
 .btn-yes {
-	@include custom-btn($yes, $yes-hover);
+    @include custom-btn($yes, $yes-hover);
 }
 
 .btn-no {
-	@include custom-btn($no, $main);
+    @include custom-btn($no, $main);
 }
 
 .btn-disapprove {
-	@include custom-btn($delete, $delete-hover); 
+    @include custom-btn($delete, $delete-hover);
 }
 
 .btn-confirm {
-	@include custom-btn($main, $not-started);
+    @include custom-btn($main, $not-started);
 }
 
 .btn-download {
-	@include custom-btn($default-bg, $default-bg-hover);	
+    @include custom-btn($default-bg, $default-bg-hover);
+}
+
+.btn-yes.btn-no-final {
+    @include custom-btn-no-final($yes, $yes-hover);
+}
+
+.btn-no.btn-no-final {
+    @include custom-btn-no-final($no, $main);
+}
+
+.btn-disapprove.btn-no-final {
+    @include custom-btn-no-final($delete, $delete-hover);
+}
+
+.btn-confirm.btn-no-final {
+    @include custom-btn-no-final($main, $not-started);
+}
+
+.btn-download.btn-no-final {
+    @include custom-btn-no-final($default-bg, $default-bg-hover);
 }
 
 // button styles ends
 
 .main-font {
-  font-size: 14px;
-  color: $main;
-  font-weight: 600;
+    font-size: 14px;
+    color: $main;
+    font-weight: 600;
 }
 
 .primary-font {
-  font-size: 14px;
-  color: $sub-heading;
+    font-size: 14px;
+    color: $sub-heading;
 }
 
 .df-ac {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .df-ac-jc {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // full width
 .full-width {
-  width: 100% !important;
+    width: 100% !important;
 }
-.auto-width{
-	width: auto !important;
+
+.auto-width {
+    width: auto !important;
 }
 
 // background color classes
-.bg-yes{
-	background: $yes !important;
+.bg-yes {
+    background: $yes !important;
 }
 
 // background-highlight styles
 .highlight-bg {
-  padding: 15px;
-  background: $highlight-01 !important;
+    padding: 15px;
+    background: $highlight-01 !important;
 
-  .d-block {
-    margin-bottom: 5px;
+    .d-block {
+        margin-bottom: 5px;
 
-    &:last-child {
-      margin-bottom: 0;
-      // margin-top: 15px;
+        &:last-child {
+            margin-bottom: 0;
+
+            // margin-top: 15px;
+       
+        }
     }
-  }
 }
 
 .chosen-container-single {
-  .chosen-single {
-    line-height: normal;
-    display: flex;
-    height: 38px;
-    align-items: center;
-    box-sizing: border-box;
+    .chosen-single {
+        line-height: normal;
+        display: flex;
+        height: 38px;
+        align-items: center;
+        box-sizing: border-box;
 
-    div {
-      b {
-        background-position-y: 10px;
-      }
+        div {
+            b {
+                background-position-y: 10px;
+            }
+        }
     }
-  }
 }
