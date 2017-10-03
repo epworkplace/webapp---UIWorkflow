@@ -103,6 +103,21 @@
     /* modal dialog styles starts */
 .refresh-page{
     @extend %modal;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    .modal-dialog{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        width: 70%;
+    }
 }
 
     /* modal dialog styles ends */
