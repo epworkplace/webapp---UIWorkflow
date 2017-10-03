@@ -3,24 +3,25 @@
 .layout-5.wp-app {
     &.mission-overview {
         .page-wrap {
-            .main-panel-wrap{
+            .main-panel-wrap {
                 .main-panel {
                     .main-panel-page {
-                        .main-panel-page-header{
-                            .mission-validate{
-                                .dropdown-menu{
-                                    li{
-                                        a{
+                        .main-panel-page-header {
+                            .mission-validate {
+                                .dropdown-menu {
+                                    li {
+                                        a {
                                             text-align: center;
                                             font-weight: 600;
                                             padding: 20px 0 21px;
-                                            .title, .helper-text{
 
-                                            }
-                                            &:hover{
+                                            .title, .helper-text {}
+
+                                            &:hover {
                                                 color: #fff;
-                                                .title, .helper-text{
-                                                    color:#fff;
+
+                                                .title, .helper-text {
+                                                    color: #fff;
                                                 }
                                             }
                                         }
@@ -28,12 +29,10 @@
                                 }
                             }
                         }
+
                         .main-container {
                             /* tab panel container starts */
                             .tab-panel-container {
-                                .sidebar-page-nav-container{
-                                    @extend %sidebar-page-nav-container;
-                                }
                                 .track-elements {
                                     @include clearfix;
 
@@ -51,13 +50,15 @@
                                     .track-element {
                                         text-align: center;
                                         padding: 0;
-                                        
-                                        &:nth-child(1){
+
+                                        &:nth-child(1) {
                                             width: 125px;
                                         }
-                                        &:nth-child(n+2){
+
+                                        &:nth-child(n+2) {
                                             width: 110px;
                                         }
+
                                         .header {
                                             padding: 0;
                                             margin: 0 0 10px 0;
@@ -77,36 +78,28 @@
                                             color: #a2a6b0;
                                             font-weight: 600;
                                         }
-
-                                        
-
                                     }
                                 }
                             }
 
                             /* tab panel container ends */
                             /* main panel container starts */
-                            .main-panel-container {
-                                
-                            }
+                            .main-panel-container {}
 
                             /* main panel container ends */
                         }
                     }
-                }                
+                }
             }
-
         }
     }
 
     /* main container ends */
     /* modal dialog styles starts */
 
-
     /* modal dialog styles ends */
 
     /* UI-autocomoplete dropdown styles */
-
 }
 
 /* #clientProfile styles ends */
