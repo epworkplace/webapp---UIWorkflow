@@ -3,123 +3,99 @@
 .layout-5.wp-app {
     &.mission-overview {
         .page-wrap {
-            .main-panel {
-                .main-panel-page {
-                    .main-panel-page-header{
-                        .mission-validate{
-                            .dropdown-menu{
-                                li{
-                                    a{
-                                        text-align: center;
-                                        font-weight: 600;
-                                        .title, .helper-text{
-
-                                        }
-                                        &:hover{
-                                            color: #fff;
+            .main-panel-wrap{
+                .main-panel {
+                    .main-panel-page {
+                        .main-panel-page-header{
+                            .mission-validate{
+                                .dropdown-menu{
+                                    li{
+                                        a{
+                                            text-align: center;
+                                            font-weight: 600;
+                                            padding: 20px 0 21px;
                                             .title, .helper-text{
-                                                color:#fff;
+
+                                            }
+                                            &:hover{
+                                                color: #fff;
+                                                .title, .helper-text{
+                                                    color:#fff;
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                    .main-container {
-                        /* tab panel container starts */
-                        .tab-panel-container {
-                            .sidebar-page-nav-container{
-                                display: -webkit-flex;
-                                display: -moz-flex;
-                                display: -ms-flex;
-                                display: -o-flex;
-                                display: flex;
-                                margin-bottom: 5px;
-                                .page-navigation, .sidebar-title{
-                                    display: inline-flex;
-                                    align-items: center;
+                        .main-container {
+                            /* tab panel container starts */
+                            .tab-panel-container {
+                                .sidebar-page-nav-container{
+                                    @extend %sidebar-page-nav-container;
                                 }
-                                .page-navigation{
-                                        padding: 0px 15px 0 0;
-                                        align-self: flex-start;
-                                        color: $not-started;
-                                    i{
-                                        font-size: 20px;
-                                        font-weight: 600;
-                                        &:hover{
-                                            color: $main;
-                                        }
-                                    }
-                                }
-                                .sidebar-title{
-                                    margin: 0;
-                                    font-size: 16px;
-                                    color:$main;
-                                    font-weight: 600;
-                                    line-height: normal;
-                                }
-                            }
-                            .track-elements {
-                                @include clearfix;
+                                .track-elements {
+                                    @include clearfix;
 
-                                padding: 0;
-                                margin: 0;
-                                list-style: none;
-                                display: -webkit-box;
-                                display: -moz-box;
-                                display: -ms-flexbox;
-                                display: -webkit-flex;
-                                display: flex;
-                                -webkit-flex-flow: row wrap;
-                                justify-content: space-around;
-
-                                .track-element {
-                                    text-align: center;
                                     padding: 0;
-                                    
-                                    &:nth-child(1){
-                                        width: 125px;
-                                    }
-                                    &:nth-child(n+2){
-                                        width: 110px;
-                                    }
-                                    .header {
+                                    margin: 0;
+                                    list-style: none;
+                                    display: -webkit-box;
+                                    display: -moz-box;
+                                    display: -ms-flexbox;
+                                    display: -webkit-flex;
+                                    display: flex;
+                                    -webkit-flex-flow: row wrap;
+                                    justify-content: space-around;
+
+                                    .track-element {
+                                        text-align: center;
                                         padding: 0;
-                                        margin: 0 0 10px 0;
-                                        font-size: 14px;
-                                        color: #353f53;
-                                        font-weight: 600;
+                                        
+                                        &:nth-child(1){
+                                            width: 125px;
+                                        }
+                                        &:nth-child(n+2){
+                                            width: 110px;
+                                        }
+                                        .header {
+                                            padding: 0;
+                                            margin: 0 0 10px 0;
+                                            font-size: 14px;
+                                            color: #353f53;
+                                            font-weight: 600;
+                                        }
+
+                                        .numbers {
+                                            color: #353f53;
+                                            font-size: 17px;
+                                            font-weight: 600;
+                                        }
+
+                                        .tag {
+                                            font-size: 12px;
+                                            color: #a2a6b0;
+                                            font-weight: 600;
+                                        }
+
+                                        
+
                                     }
-
-                                    .numbers {
-                                        color: #353f53;
-                                        font-size: 17px;
-                                        font-weight: 600;
-                                    }
-
-                                    .tag {
-                                        font-size: 12px;
-                                        color: #a2a6b0;
-                                        font-weight: 600;
-                                    }
-
-                                    
-
                                 }
                             }
-                        }
 
-                        /* tab panel container ends */
-                        /* main panel container starts */
-                        .main-panel-container {
-                            
-                        }
+                            /* tab panel container ends */
+                            /* main panel container starts */
+                            .main-panel-container {
+                                
+                            }
 
-                        /* main panel container ends */
+                            /* main panel container ends */
+                        }
                     }
-                }
+                }                
             }
+
         }
     }
 
