@@ -908,7 +908,20 @@
 
 
 <!--   Core JS Files   -->
+
+
 <!-- @include _partials/_all-js-files.html -->
+<script type="text/javascript" defer>
+// Page refresh after some time interval
+$(document).ready(function(){
+
+setTimeout(function(){
+    $('#refresh-page').modal('show');
+}, 10000);
+
+});
+</script>
+
 
 <!-- Custom scripts -->
 
@@ -1141,16 +1154,7 @@ e.stopPropagation();
 
 });
 </script>
-<script>
-// Page refresh after some time interval
-$(document).ready(function(){
 
-setTimeout(function(){
-    $('#refresh-page').modal('show');
-}, 10000);
-
-});
-</script>
 
 
 </body>
