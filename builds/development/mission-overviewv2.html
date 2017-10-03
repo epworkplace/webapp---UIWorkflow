@@ -4885,7 +4885,7 @@
             </div>
         </div>
         <div aria-labelledby="refresh-page" class="modal fade refresh-page" id="refresh-page" role="dialog" tabindex="-1">
-            <div class="modal-dialog modal-md" role="modal">
+            <div class="modal-dialog" role="modal">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="edit-content clearfix">
@@ -5446,12 +5446,19 @@ e.stopPropagation();
 })
 
 
+});
+</script>
+<script>
+// Page refresh after some time interval
+$(document).ready(function(){
+
 setTimeout(function(){
     $('#refresh-page').modal('show');
 }, 10000);
 
 });
 </script>
+
 
 </body>
 </html>
