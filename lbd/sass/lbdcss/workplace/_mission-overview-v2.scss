@@ -96,12 +96,10 @@
 
     /* main container ends */
     /* modal dialog styles starts */
-<<<<<<< HEAD
-=======
-.refresh-page{
-    @extend %modal;
-}
->>>>>>> 5a103651d33c7b14ce75b6e61635f50b05a76594
+
+    .refresh-page {
+        @extend %modal;
+    }
 
     /* modal dialog styles ends */
 
