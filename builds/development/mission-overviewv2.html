@@ -5124,8 +5124,6 @@
 
 
 <!--   Core JS Files   -->
-
-
 <!--   Core JS Files   -->
 <script src="lbd/js/jquery.min.js" type="text/javascript">
 </script>
@@ -5218,17 +5216,6 @@
 <!-- Custom JS -->
 <script src="lbd/js/custom.js">
 </script>
-<script type="text/javascript" defer>
-// Page refresh after some time interval
-$(document).ready(function(){
-
-setTimeout(function(){
-    $('#refresh-page').modal('show');
-}, 10000);
-
-});
-</script>
-
 
 <!-- Custom scripts -->
 
@@ -5461,7 +5448,16 @@ e.stopPropagation();
 
 });
 </script>
+<script type="text/javascript" defer>
+// Page refresh after some time interval
+$(document).ready(function(){
 
+setTimeout(function(){
+    $('#refresh-page').modal('show');
+}, 10000);
+
+});
+</script>
 
 
 </body>
