@@ -288,6 +288,16 @@ html {
                                                 height: auto;
                                                 cursor: text;
                                             }
+
+                                            .contributors-numbers {
+                                                color: #a2a7b0;
+                                                font-size: 12px;
+                                                font-weight: 600;
+
+                                                span {
+                                                    font-weight: 400;
+                                                }
+                                            }
                                         }
 
                                         .tab-panel-search {
@@ -6840,6 +6850,11 @@ html {
 
                 .btn-disapprove {
                     width: 100% !important;
+
+                    i {
+                        font-size: 18px;
+                        margin-right: 10px;
+                    }
                 }
             }
         }
