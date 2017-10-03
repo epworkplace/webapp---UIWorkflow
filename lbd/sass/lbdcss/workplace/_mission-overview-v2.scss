@@ -96,8 +96,7 @@
 
     /* main container ends */
     /* modal dialog styles starts */
-<<<<<<< HEAD
-=======
+
 .refresh-page{
     @extend %modal;
     display: -webkit-flex;
@@ -107,16 +106,10 @@
     display: flex;
     align-items: center;
     .modal-dialog{
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        justify-content: center;
-        width: 70%;
+        display: block;
+        width: 30%;
     }
 }
->>>>>>> 5a103651d33c7b14ce75b6e61635f50b05a76594
 
     /* modal dialog styles ends */
 
