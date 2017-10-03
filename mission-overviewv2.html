@@ -5,147 +5,178 @@
     <!-- @include _partials/_all-meta-head.html -->
 </head>
 
-<body class="wp-app layout-5">
+<body class="wp-app layout-5 mission-overview">
     <div class="wrapper">
-        <div class="sidebar">
-            <div class="logo">
-                <a href="/">
-                    <img src="lbd/img/wp-logo.png" alt="Logo" />
-                </a>
-            </div>
-            <div class="sidebar-wrapper">
-                <ul class="nav">
-                    <li class="active">
-                        <a href="#">
-                            <i class="material-icons">dashboard</i>
-                            <p>Home</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="material-icons">business</i>
-                            <p>Clients</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="material-icons">monetization_on</i>
-                            <p>Quotes</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="material-icons">assignment</i>
-                            <p>Contracts</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="material-icons">alarm</i>
-                            <p>Missions</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="charts.html">
-                            <i class="material-icons">face</i>
-                            <p>Users</p>
-                        </a>
-                    </li>
-                </ul>
-                <div class="sidebar-footer">
-                    <a class="profile clearfix" href="#">
-                        <div class="profile_pic">
-                            <img src="lbd/img/default-avatar.png" alt="..." class="img-circle profile_img" />
-                        </div>
-                        <div class="profile_info">
-                            <p>Clarrise</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <!-- @include _partials/_sidebar.html -->
         <div class="container-fluid page-wrap">
             <div class="row">
                 <div class="col-md-12 main-panel-wrap">
                     <div class="main-panel">
                         <div class="container-fluid main-panel-page">
-                            <div class="col-md-12 main-panel-page-header clearfix">
-                                <div class="col-md-1 contract-image">
-                                    <div class="contract-image-container">
-                                        <img src="lbd/img/webedia.jpg" class="img-circle" />
+                                <div class="col-md-12 main-panel-page-header clearfix">
+                                    <div class="col-md-1 contract-image">
+                                        <div class="contract-image-container">
+                                            <img class="img-circle" src="lbd/img/webedia.jpg"/>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-5 contract">
-                                    <div class="contract-spec pull-left">
-                                        <div class="contract-breadcrumb">
-                                            <a href="javascript:;">Webedia Group</a><i class="material-icons">chevron_right</i><a href="javascript:;">Devis - Webedia Group - May 2019</a><i class="material-icons">chevron_right</i><a href="javascript:;">C001-ZVA-2018-001-A-WEBEDIA</a></div>
+                                    <div class="col-md-5 contract">
+                                        <div class="contract-spec pull-left">
+                                            <div class="contract-breadcrumb">
+                                                <a href="javascript:;">
+                                                    Webedia Group
+                                                </a>
+                                                <i class="material-icons">
+                                                chevron_right
+                                                </i>
+                                                <a href="javascript:;">
+                                                    Devis - Webedia Group - May 2019
+                                                </a>
+                                                <i class="material-icons">
+                                                chevron_right
+                                                </i>
+                                                <a href="javascript:;">
+                                                    C001-ZVA-2018-001-A-WEBEDIA
+                                                </a>
+                                            </div>
                                             <div class="contract-name">
-                                                <span class="label not-started">Not Started</span><strong class="primary-font">Webedia 200 articles blog</strong>
+                                                <span class="label not-started">
+                                                    Not Started
+                                                </span>
+                                                <strong class="primary-font">
+                                                Webedia 200 articles blog
+                                                </strong>
                                             </div>
                                         </div>
                                         <div class="nav-button pull-right">
-                                            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Open Menu"><i class="material-icons">more_vert</i></a>
+                                            <a data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Open Menu">
+                                                <i class="material-icons">
+                                                more_vert
+                                                </i>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="right col-md-6">
                                         <div class="col-md-4 end-date-container">
-                                            <a class= "end-date" data-toggle="dropdown" aria-expanded="false" href="javascript:;">
-                                                <span class="title">Ending date</span>
+                                            <a aria-expanded="false" class="end-date" data-toggle="dropdown" href="javascript:;">
+                                                <span class="title">
+                                                    Ending date
+                                                </span>
                                                 Jul 03, 2019
                                                 <span class="caret-drop">
-                                                    <i class="material-icons">expand_more</i>
+                                                    <i class="material-icons">
+                                                    expand_more
+                                                    </i>
                                                 </span>
                                             </a>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li>
                                                     <a href="javascript:;">
-                                                        <i class="material-icons">pause</i>
-                                                        <span>Pause ...</span>
+                                                        <i class="material-icons">
+                                                        pause
+                                                        </i>
+                                                        <span>
+                                                            Pause ...
+                                                        </span>
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-md-4 mission-validate">
-                                            <span class="title">Validated items</span>
-                                            <span class="mission">1</span> <small>/</small> 3
+                                            <a aria-expanded="false" class="end-date" data-toggle="dropdown" href="javascript:;">
+                                                <span class="title">
+                                                    Delivered volume
+                                                </span>
+                                                0 / <span class="helper-text">200</span>
+                                                <span class="caret-drop">
+                                                    <i class="material-icons">
+                                                    expand_more
+                                                    </i>
+                                                </span>
+                                            </a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <span class="title">
+                                                            Delivered volume
+                                                        </span>
+                                                        0 / <span class="helper-text">200</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <span class="title">
+                                                            Validated volume
+                                                        </span>
+                                                        0 / <span class="helper-text">200</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <a href="javascript:;" class="col-md-4 validate not-started-link">
+                                        <!-- <div class="col-md-4 mission-validate">
+                                            <span class="title">
+                                                Validated items
+                                            </span>
+                                            <span class="mission">
+                                                1
+                                            </span>
+                                            <small>
+                                            /
+                                            </small>
+                                            3
+                                        </div> -->
+                                        <a class="col-md-4 validate not-started-link" href="javascript:;">
                                             Validate
                                         </a>
                                     </div>
                                     <div class="col-md-5 open-menu-top-bar">
                                         <div class="col-md-12 client-info">
                                             <div class="col-md-2 user-image">
-                                                <img src="lbd/img/webedia.jpg" class="img-circle">
+                                                <img class="img-circle" src="lbd/img/webedia.jpg"/>
                                             </div>
                                             <div class="col-md-10 contract-title-edit">
                                                 <div class="input-group">
-                                                    <input type="text" name="" id="" value="Webedia 200 articles blog" class="form-control">
-                                                    <button class="btn btn-fill name-update">Update</button>
+                                                    <input class="form-control" id="" name="" type="text" value="Webedia 200 articles blog"/>
+                                                    <button class="btn btn-fill name-update">
+                                                    Update
+                                                    </button>
                                                 </div>
                                             </div>
-                                            <a href="javascript:;" class="col-md-1 close-nav">
-                                                <i class="material-icons">close</i>
+                                            <a class="col-md-1 close-nav" href="javascript:;">
+                                                <i class="material-icons">
+                                                close
+                                                </i>
                                             </a>
                                         </div>
                                         <div class="col-md-12 navigation-tabs">
                                             <ul class="btn-group btn-group-justified">
                                                 <li>
-                                                    <a href="javascript:;" class="btn btn-default">
-                                                        <i class="material-icons">check</i>
-                                                        <p>Validate</p>
+                                                    <a class="btn btn-default" href="javascript:;">
+                                                        <i class="material-icons">
+                                                        check
+                                                        </i>
+                                                        <p>
+                                                            Validate
+                                                        </p>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:;" class="btn btn-default">
-                                                        <i class="material-icons">delete</i>
-                                                        <p>Delete</p>
+                                                    <a class="btn btn-default" href="javascript:;">
+                                                        <i class="material-icons">
+                                                        delete
+                                                        </i>
+                                                        <p>
+                                                            Delete
+                                                        </p>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:;" class="btn btn-default">
-                                                        <i class="material-icons">today</i>
-                                                        <p>Project Plan</p>
+                                                    <a class="btn btn-default" href="javascript:;">
+                                                        <i class="material-icons">
+                                                        today
+                                                        </i>
+                                                        <p>
+                                                            Project Plan
+                                                        </p>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -168,8 +199,16 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-7 page-title">
-                                                            <a class="navbar-brand" href="#">Mission Overview 02</a>
-                                                            <div class="title-span"><span>Translation</span> - Blog articles - 400 words</div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 sidebar-page-nav-container">
+                                                                    <a class="page-navigation" href="#"><i class="material-icons">arrow_back</i> </a> <h4 class="sidebar-title">Webedia 200 articles blog</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="title-span"><span>Translation</span> - Blog articles - 400 words</div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="col-md-2 page-title-language pull-right">
                                                             <div class="flag-box">
@@ -189,7 +228,7 @@
                                                         <div class="col-md-12 card track-overview">
                                                             <div class="track-elements">
                                                                 <div class="col-md-4 track-element">
-                                                                    <div class="header">Volume</div>
+                                                                    <div class="header">Processing volume</div>
                                                                     <div class="numbers">0 items</div>
                                                                     <div class="tag">out of 100</div>
                                                                 </div>

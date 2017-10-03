@@ -1,79 +1,80 @@
  // Include gulp and plugins
  var
-	gulp = require('gulp'),
+  gulp = require('gulp'),
   chokidar = require('chokidar'),
-	del = require('del'),
-	pkg = require('./package.json'),
-	$ = require('gulp-load-plugins')({ lazy: true }),
+  del = require('del'),
+  pkg = require('./package.json'),
+  $ = require('gulp-load-plugins')({ lazy: true }),
   htmlInjector = require('bs-html-injector'),
   vf = require('vinyl-file'),
   vss = require('vinyl-source-stream'),
   vb = require('vinyl-buffer'),
-  webpack = require('webpack-stream'),
-	browserSync = require('browser-sync').create(),
-	reload = browserSync.reload;
+  webpack = require('webpack'),
+  webpackstream = require('webpack-stream'),
+  browserSync = require('browser-sync').create(),
+  reload = browserSync.reload;
 
 // file locations
 var
-	devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),
+  devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),
 
-	source = './',
-	dest = devBuild ? 'builds/development/' : 'builds/production/',
+  source = './',
+  dest = devBuild ? 'builds/development/' : 'builds/production/',
 
-	html = {
-		partials: [source + '_partials/**/*'],
-		in: [source + '*.html'],
-		watch: ['*.html', '_partials/**/*'],
-		out: dest,
-		context: {
-			devBuild: devBuild,
-			author: pkg.author,
-			version: pkg.version
-		}
-	},
+  html = {
+    partials: [source + '_partials/**/*'],
+    in: [source + '*.html'],
+    watch: ['*.html', '_partials/**/*'],
+    out: dest,
+    context: {
+      devBuild: devBuild,
+      author: pkg.author,
+      version: pkg.version
+    }
+  },
 
-	images = {
-		in: source + 'lbd/img/**/*',
-		out: dest + 'lbd/img/'
-	},
+  images = {
+    in: source + 'lbd/img/**/*',
+    out: dest + 'lbd/img/'
+  },
 
-	css = {
-		in: [source + 'lbd/sass/light-bootstrap-dashboard.scss'],
-		watch: ['lbd/sass/**/*.scss'],
-		out: dest + 'lbd/css/',
+  css = {
+    in: [source + 'lbd/sass/light-bootstrap-dashboard.scss'],
+    watch: ['lbd/sass/**/*.scss'],
+    out: dest + 'lbd/css/',
     pluginCSS: {
       in: [source + 'lbd/css/**/*'],
       watch: ['lbd/css/**/*.css'],
       out: dest + 'lbd/css/'
     },
-		sassOpts: {
-			outputStyle: devBuild ? 'compressed' : 'compressed',
-			imagePath: '../img',
-			precision: 3,
-			errLogToConsole: true
-		},
-		pleeeaseOpts: {
-			"autoprefixer": { browsers: ['last 2 versions', '> 2%'] },
-			"rem": ['16px'],
-			"sass": false,
-			"import": true,
-			"sourcemaps": false,
-			"pseudoElements": true,
-			"mqpacker": true,
-			"minifier": !devBuild
-		}
-	},
+    sassOpts: {
+      outputStyle: devBuild ? 'compressed' : 'compressed',
+      imagePath: '../img',
+      precision: 3,
+      errLogToConsole: true
+    },
+    pleeeaseOpts: {
+      "autoprefixer": { browsers: ['last 2 versions', '> 2%'] },
+      "rem": ['16px'],
+      "sass": false,
+      "import": true,
+      "sourcemaps": false,
+      "pseudoElements": true,
+      "mqpacker": true,
+      "minifier": !devBuild
+    }
+  },
 
-	fonts = {
-		in: source + 'lbd/fonts/*.*',
-		out: dest + 'lbd/fonts/'
-	},
+  fonts = {
+    in: source + 'lbd/fonts/*.*',
+    out: dest + 'lbd/fonts/'
+  },
 
-	js = {
-		in: source + 'lbd/js/**/*',
-		out: dest + 'lbd/js/'
-		// filename: 'main.js'
-	},
+  js = {
+    in: source + 'lbd/js/**/*',
+    out: dest + 'lbd/js/'
+    // filename: 'main.js'
+  },
 
   jsLibs = {
     in: source + 'lbd/lib/**/*',
@@ -89,12 +90,12 @@ var
     imageFilter : $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true})
   },
 
-	syncOpts = {
-		server: {
-			baseDir: dest,
-			index: 'index.html'
-		},
-		open: false,
+  syncOpts = {
+    server: {
+      baseDir: dest,
+      index: 'index.html'
+    },
+    open: false,
     // files: [
     //         source + '**/*.html',
     //         '!' + source + 'builds/**/*',
@@ -106,8 +107,8 @@ var
     //     ],
     injectChanges: true,
     reloadDelay: 0,
-		notify: true
-	};
+    notify: true
+  };
 
 // show build type
 console.log(pkg.name + ' ' + pkg.version + ', ' + (devBuild ? 'development' : 'production') + ' build');
@@ -115,9 +116,15 @@ console.log(pkg.name + ' ' + pkg.version + ', ' + (devBuild ? 'development' : 'p
 // Clean tasks
 // clean the build folder
 gulp.task('clean', function() {
-	del([
-		dest + '*'
-	]);
+  del([
+    dest + '*'
+  ]);
+});
+
+gulp.task('clean-images', function() {
+  del([
+    dest + 'lbd/img/**/*'
+  ]);
 });
 
 gulp.task('clean-html', function() {
@@ -146,43 +153,51 @@ gulp.task('clean-jslib', function() {
 
 // build HTML files
 gulp.task('html', function() {
-	var page = gulp.src(html.in)
-						 // .pipe($.newer(html.out))
-						 .pipe($.preprocess({ context: html.context }));
-	if (!devBuild) {
-		  page = page
-			.pipe($.size({ title: 'HTML in' }))
-			.pipe($.htmlclean())
-			.pipe($.size({ title: 'HTML out' }));
-	}
-	return page
-		 // .pipe($.indent({
-	  //       tabs:true,
-		 //    amount:1
-		 //   }))
-		 // .pipe($.jsbeautifier())
-		 .pipe(gulp.dest(html.out));
+  var page = gulp.src(html.in)
+             // .pipe($.newer(html.out))
+             .pipe($.preprocess({ context: html.context }))
+             /*.pipe($.replace(/.\jpg|\.png|\.tiff/g, '.webp'))*/;
+  if (!devBuild) {
+      page = page
+      .pipe($.size({ title: 'HTML in' }))
+      .pipe($.htmlclean())
+      .pipe($.size({ title: 'HTML out' }));
+  }
+  return page
+     // .pipe($.indent({
+    //       tabs:true,
+     //    amount:1
+     //   }))
+     // .pipe($.jsbeautifier())
+     .pipe(gulp.dest(html.out));
 });
 
 // manage images
 gulp.task('images', function() {
-	return gulp.src(images.in)
-		.pipe($.newer(images.out))
-		.pipe($.imagemin())
-		.pipe(gulp.dest(images.out));
+  var imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true});
+  return gulp.src(images.in)
+    .pipe($.size({title: 'images in '}))
+    .pipe($.newer(images.out))
+    .pipe($.imagemin())
+    /*.pipe(imageFilter2)
+    .pipe($.webp())
+    .pipe(imageFilter2.restore)*/
+    .pipe($.size({title: 'images out '}))
+    .pipe(gulp.dest(images.out));
 });
 
 // copy fonts
 gulp.task('fonts', function() {
-	return gulp.src(fonts.in)
-		.pipe($.newer(fonts.out))
-		.pipe(gulp.dest(fonts.out));
+  return gulp.src(fonts.in)
+    .pipe($.newer(fonts.out))
+    .pipe(gulp.dest(fonts.out));
 });
 
 // copy plugin css
 gulp.task('css', ['fonts'], function() {
-  var cssFilter = $.filter(['**/*.css'], {restore: true});
-  var imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true});
+  var cssFilter = $.filter(['**/*.css'], {restore: true}),
+      imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
+      imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true});
   return gulp.src(css.pluginCSS.in)
     // .pipe($.sourcemaps.init())
     // .pipe($.sass(css.sassOpts))
@@ -201,6 +216,9 @@ gulp.task('css', ['fonts'], function() {
     .pipe(imageFilter)
     .pipe($.imagemin())
     .pipe(imageFilter.restore)
+    /*.pipe(imageFilter2)
+    .pipe($.webp())
+    .pipe(imageFilter2.restore)*/
     .pipe($.size({title: 'CSS out '}))
     .pipe(gulp.dest(css.pluginCSS.out))
     .pipe(browserSync.stream({match: '**/*.css'}));
@@ -209,22 +227,22 @@ gulp.task('css', ['fonts'], function() {
 
 // compile Sass
 gulp.task('sass', ['fonts'], function() {
-	return gulp.src(css.in)
-		.pipe($.sourcemaps.init())
+  return gulp.src(css.in)
+    .pipe($.sourcemaps.init())
     .pipe($.plumber())
-		.pipe($.sass(css.sassOpts))
-		.pipe($.size({title: 'SCSS in '}))
-		.pipe($.sourcemaps.write('./maps'))
-		.pipe($.size({title: 'SCSS out '}))
-		.pipe(gulp.dest(css.out))
-		.pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe($.sass(css.sassOpts))
+    .pipe($.size({title: 'SCSS in '}))
+    .pipe($.sourcemaps.write('./maps'))
+    .pipe($.size({title: 'SCSS out '}))
+    .pipe(gulp.dest(css.out))
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 // js tasks
 gulp.task('js', function() {
-  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
-	if (devBuild) {
-		return gulp.src(js.in)
+  var jsFilter = $.filter(['**/*.js'], {restore: true});
+  if (devBuild) {
+    return gulp.src(js.in)
 
       // .pipe($.concat(js.filename))
       .pipe($.size({ title: 'JS in '}))
@@ -232,22 +250,24 @@ gulp.task('js', function() {
       .pipe($.deporder())
       .pipe($.stripDebug())
       .pipe(jsFilter)
+      // .pipe(webpack())
       .pipe($.uglify())
+      // .pipe($.gzip({append: false}))
       .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
       .pipe(gulp.dest(js.out));
-	}
-	else {
-		del([
-			dest + 'lbd/js/*'
-		]);
-		return gulp.src(js.in)
+  }
+  else {
+    del([
+      dest + 'lbd/js/*'
+    ]);
+    return gulp.src(js.in)
       .pipe($.newer(js.out))
       // .pipe($.jshint())
       // .pipe($.jshint.reporter('default'))
       // .pipe($.jshint.reporter('fail'))
       .pipe(gulp.dest(js.out));
-	}
+  }
 });
 
 // copy js libraries
@@ -255,6 +275,7 @@ gulp.task('jslib', function() {
   var htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
       cssFilter = $.filter(['**/*.css'], {restore: true}),
       imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
+      imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true}),
       jsonFilter = $.filter(['**/*.json'], {restore: true}),
       jsFilter = $.filter(['**/*.js'], {restore: true});
   if (devBuild) {
@@ -280,6 +301,10 @@ gulp.task('jslib', function() {
       .pipe(imageFilter)
       .pipe($.imagemin())
       .pipe(imageFilter.restore)
+      /*.pipe(imageFilter2)
+      .pipe($.webp())
+      .pipe(imageFilter2.restore)*/
+
       // .pipe($.jshint())
       // .pipe($.jshint.reporter('default'))
       // .pipe($.jshint.reporter('fail'))
@@ -314,7 +339,7 @@ gulp.task('stream', function(){
 
 // browser sync
 gulp.task('serve', [], function() {
-	// browserSync.init(syncOpts);
+  // browserSync.init(syncOpts);
 
   // browserSync.use(htmlInjector,{
   //   files: [dest + '**/*.html']
