@@ -185,18 +185,18 @@
 
                 a.end-date{
                   &:before, &:after {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    // background: #f5f5f6;
-                    // width: 1px;
-                    // height: 78px;
+                    background: none;
+                    width: 1px;
+                    height: 78px;
                   }
 
                   &:after {
                     left: auto;
                     right: 0;
+                  }
+                  span.caret-drop{
+                    top: 34px;
+                    right: 60px;
                   }
                 }
 
@@ -593,7 +593,7 @@
 
                 .navbar-default {
                   .page-title {
-                    margin-bottom: 25px;
+                    margin-bottom: 20px;
 
                     a.navbar-brand {
                       width: 100%;
