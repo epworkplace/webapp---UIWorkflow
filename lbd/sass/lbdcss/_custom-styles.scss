@@ -91,6 +91,7 @@ html {
             color: #fff;
             position: fixed;
             background: #fff;
+            z-index: 9;
 
             &::before, &::after {
                 background: transparent;
