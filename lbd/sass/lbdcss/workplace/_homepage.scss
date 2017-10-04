@@ -684,6 +684,9 @@
     @extend %modal;
     .feeds-container {
         @extend %feeds-container;
+        box-shadow: none;
+        padding: 10px 10px 0 10px !important;
+        margin-bottom: 0 !important;
     }
     .send-comment-container {
             padding: 15px !important;
