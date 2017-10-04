@@ -61,9 +61,6 @@
 // Old WP Styles (Kept the same)
 @import "lbdcss/wp-old-styles";
 
-// New Custom Styles
-@import "lbdcss/custom-styles";
-
 // New Workplace Styles
 @import "lbdcss/workplace/job-deck-cards";
 @import "lbdcss/workplace/layout-5";
@@ -75,7 +72,9 @@
 @import "lbdcss/workplace/quotes-list";
 @import "lbdcss/workplace/contributors";
 @import "lbdcss/workplace/placeholder-content";
-@import "lbdcss/workplace/mission-overview-v2";
+
+// New Custom Styles
+@import "lbdcss/custom-styles";
 
 //New Workplace media Queries
 @import "lbdcss/workplace/media-queries";
