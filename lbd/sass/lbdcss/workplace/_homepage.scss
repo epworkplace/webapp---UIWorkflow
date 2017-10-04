@@ -514,6 +514,7 @@
         }
 
         .filter-title-flip-container {
+
             border-top: 2px solid #e9ebee;
             padding-top: 15px;
             margin-bottom: 20px;
@@ -716,6 +717,10 @@
                 width: auto !important;
             }
         }
+    .comment-container{
+        width: calc(91.66666% + 28px);
+        padding-right: 0;
+    }
 
 }
 

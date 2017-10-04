@@ -475,6 +475,11 @@
         padding: 15px;
         margin-bottom: 10px;
 
+        span.hashTag, span.atMention {
+            color: #447DF7;
+            text-decoration: underline;
+        }
+
         .feeds-header {
             display: -webkit-box;
             display: -moz-box;
@@ -523,7 +528,7 @@
 
         .feeds-comments-container {
             background: #f7f9fa;
-            padding: 15px 0 15px 15px;
+            padding: 15px;
             // min-height: 120px;
             // max-height: 180px;
             // overflow-y: auto;
@@ -553,6 +558,8 @@
                         }
 
                         .comment-container {
+                            width: calc(91.66666% + 28px);
+                            padding-right: 0;
                             .user-name {
                                 color: #353f53;
                                 font-weight: 600;
