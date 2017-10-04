@@ -484,7 +484,7 @@
     .middle-column {
         padding-top: 15px;
 
-        .status-update-container {
+        .status-update-container, .send-comment-container {
             padding: 15px;
             margin-bottom: 20px;
             display: -webkit-box;
@@ -634,215 +634,7 @@
 
 .feeds-main-container {
     .feeds-container {
-        padding: 15px;
-        margin-bottom: 10px;
-
-        .feeds-header {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-
-            .profile-image {
-                width: 40px;
-                padding: 0;
-
-                img {
-                    display: block;
-                    max-width: 100%;
-                }
-            }
-
-            .profile-name {
-                a {
-                    color: #353f53;
-                    font-weight: 600;
-                    font-size: 16px;
-                }
-
-                span {
-                    a {
-                        display: block;
-                        font-size: 14px;
-                        font-weight: 400;
-                        color: #7d889a;
-                    }
-                }
-            }
-
-            .feed-nav {
-                padding: 0;
-                text-align: right;
-
-                a {
-                    color: #d7d9dc;
-                }
-            }
-        }
-
-        .feeds-comments-container {
-            background: #f7f9fa;
-            padding: 15px 0 15px 15px;
-            min-height: 120px;
-            max-height: 180px;
-            overflow-y: auto;
-            -webkit-border-top-left-radius: 4px;
-            -webkit-border-top-right-radius: 4px;
-            -moz-border-radius-topleft: 4px;
-            -moz-border-radius-topright: 4px;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-
-            ul {
-                padding: 0;
-                margin: 0;
-                list-style-type: none;
-
-                li {
-                    @include clearfix;
-
-                    margin-bottom: 15px;
-                    border-bottom: 2px solid #edeff1;
-                    padding: 15px 0;
-
-                    .comments-section {
-                        .user-image {
-                            width: 40px;
-                            padding: 0;
-
-                            img {
-                                display: block;
-                                max-width: 100%;
-                            }
-                        }
-
-                        .comment-container {
-                            .user-name {
-                                color: #353f53;
-                                font-weight: 600;
-                            }
-
-                            .comment {
-                                position: relative;
-
-                                span.hashTag, span.atMention {
-                                    color: #447DF7;
-                                    text-decoration: underline;
-                                }
-                            }
-                        }
-
-                        .comment-date {
-                            font-size: 12px;
-                            padding-right: 0;
-                            text-align: right;
-                        }
-
-                        a.comment-actions {
-                            margin-top: -4px;
-                            position: relative;
-                            top: 0;
-                            right: 0;
-                            color: #b5b5b5;
-                        }
-
-                        .dropdown-menu {
-                            &:before, &:after {
-                                border: none;
-                                content: none;
-                            }
-
-                            min-width: 80px;
-                            position: absolute;
-                            right: 0;
-                            top: 16px;
-
-                            li {
-                                margin: 0;
-                                border-bottom: 0;
-                                padding: 0;
-                            }
-                        }
-                    }
-
-                    &:last-of-type {
-                        border-bottom: 0;
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-
-        .post-comments-container {
-            border-top: 2px solid #edeff1;
-            background: #f7f9fa;
-            padding: 15px;
-            -webkit-border-bottom-right-radius: 4px;
-            -webkit-border-bottom-left-radius: 4px;
-            -moz-border-radius-bottomright: 4px;
-            -moz-border-radius-bottomleft: 4px;
-            border-bottom-right-radius: 4px;
-            border-bottom-left-radius: 4px;
-
-            ul {
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
-
-                li {
-                    @include clearfix;
-
-                    .comments-section {
-                        .user-image {
-                            width: 40px;
-                            padding: 0;
-
-                            img {
-                                display: block;
-                                max-width: 100%;
-                            }
-                        }
-
-                        .comment-container {
-                            width: 92.716%;
-
-                            .user-name {
-                                color: #353f53;
-                                font-weight: 600;
-                            }
-
-                            .comment-input-text {
-                                display: -webkit-box;
-                                display: -moz-box;
-                                display: -ms-flexbox;
-                                display: -webkit-flex;
-                                display: flex;
-                                align-items: center;
-
-                                .comment {
-                                    width: 100%;
-
-                                    textarea {
-                                        height: 42px;
-                                        padding: 11px 12px 7px;
-                                        resize: none;
-                                    }
-                                }
-
-                                a.comment-post {
-                                    width: auto !important;
-                                    font-size: 20px;
-                                    height: 42px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        @extend %feeds-container;
     }
 }
 
@@ -885,3 +677,43 @@
         }
     }
 }
+
+
+/* modal styles starts */
+.show-all-comments-modal{
+    @extend %modal;
+    .feeds-container {
+        @extend %feeds-container;
+    }
+    .send-comment-container {
+            padding: 15px !important;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+
+            .user-image {
+                padding: 0 !important;
+            }
+
+            .status-update-text {
+                textarea {
+                    width: 100%;
+                    resize: none;
+                    height: 40px;
+                    border: 0;
+                    padding-top: 11px;
+                }
+            }
+
+            .status-update-button {
+                width: auto !important;
+            }
+        }
+
+}
+
+/* modal styles ends */
