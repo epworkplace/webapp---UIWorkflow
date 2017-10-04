@@ -620,7 +620,8 @@ $(document).ready(function(){
 
 
      $('.more').each(function() {
-        var content = $(this).html();
+        var content = $(this).html(),
+        		textContent = $(this).text();
         // console.log(content);
         if(content.length > showChar) {
             var c = content.substr(0, showChar);
