@@ -183,6 +183,26 @@
                                 color: #B0B4BB;
                                 font-weight: 600;
 
+                                .dropdown-menu {
+                                    li {
+                                        a {
+                                            text-align: center;
+                                            font-weight: 600;
+                                            padding: 20px 0 21px;
+
+                                            .title, .helper-text {}
+
+                                            &:hover {
+                                                color: #fff;
+
+                                                .title, .helper-text {
+                                                    color: #fff;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
                                 a.end-date {
                                     &:before, &:after {
                                         background: none;

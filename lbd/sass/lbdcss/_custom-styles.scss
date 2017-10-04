@@ -1080,6 +1080,53 @@ html {
                                 }
                             }
 
+                            li.more-cta {
+                                margin-right: 0;
+
+                                ul.dropdown-menu {
+                                    position: absolute;
+                                    right: -15px;
+                                    top: 60%;
+                                    left: auto;
+                                    width: 70%;
+
+                                    &:before, &:after {
+                                        content: "";
+                                        position: absolute;
+                                        top: -7px;
+                                        right: 18px;
+                                        left: auto;
+                                        display: inline-block;
+                                        border-right: 7px solid transparent;
+                                        border-bottom: 7px solid #ccc;
+                                        border-left: 7px solid transparent;
+                                        border-bottom-color: rgba(0, 0, 0, 0.2);
+                                    }
+
+                                    &:after {
+                                        top: -6px;
+                                        right: 19px;
+                                        border-right: 6px solid transparent;
+                                        border-bottom: 6px solid #ffffff;
+                                        border-left: 6px solid transparent;
+                                    }
+
+                                    li {
+                                        display: block;
+                                        width: 100%;
+
+                                        a {
+                                            color: #353F53;
+
+                                            &:hover {
+                                                color: #fff;
+                                                background: #448AFF;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
                             li:last-child {
                                 margin-right: 0;
                             }

@@ -5435,14 +5435,14 @@ bar.animate(0.60);
 <script>
 // Card-box click to open Contract-overview single page
 $(document).ready(function(){
-$('div').delegate('.card-box', 'click', function(e){
-   if($(e.target).closest('.checkbox, a, button, .card-user').length === 0) {
-      // code placed inside this condition is not executed on clicking the element #test
-e.stopPropagation();
-// console.log('Clicked on card-box');
-    window.open('contract-overview.html','_blank');
-   }
-// console.log('Clicked on card-box 02');
+    $('div').delegate('.card-box', 'click', function(e){
+    if($(e.target).closest('.checkbox, a, button, .card-user').length === 0) {
+        // code placed inside this condition is not executed on clicking the element #test
+        e.stopPropagation();
+        // console.log('Clicked on card-box');
+        window.open('contract-overview.html','_blank');
+    }
+    // console.log('Clicked on card-box 02');
 })
 
 
