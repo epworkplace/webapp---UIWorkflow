@@ -753,29 +753,6 @@ html {
                                                 width: 480px;
                                                 margin-top: 28px;
 
-                                                .sort {
-                                                    float: left;
-                                                    width: 260px;
-                                                    margin-right: 0;
-                                                    padding-left: 0;
-
-                                                    .bootstrap-select {
-                                                        background: #fff;
-
-                                                        button {
-                                                            margin: 0;
-                                                            padding: 9px 16px !important;
-                                                            border: 1px solid #eaebed;
-                                                            color: #9ca1ab;
-
-                                                            &:hover, &:focus {
-                                                                border: 1px solid #eaebed;
-                                                                color: #9ca1ab;
-                                                            }
-                                                        }
-                                                    }
-                                                }
-
                                                 a.project-plan {
                                                     float: right;
                                                     width: 180px;
@@ -807,6 +784,50 @@ html {
 
                                             border-top: 1px solid #e9ebee;
                                             padding: 20px 0;
+
+                                            .sort {
+                                                .bootstrap-select {
+                                                    background: #fff;
+
+                                                    .dropdown-toggle {
+                                                        height: auto;
+                                                        display: -webkit-box;
+                                                        display: -moz-box;
+                                                        display: -ms-flexbox;
+                                                        display: -webkit-flex;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+
+                                                        .filter-option {
+                                                            display: -webkit-box;
+                                                            display: -moz-box;
+                                                            display: -ms-flexbox;
+                                                            display: -webkit-flex;
+                                                            display: flex;
+                                                            margin: 0;
+                                                            flex-wrap: wrap;
+                                                            color: rgba(0, 0, 0, 0.5);
+                                                            text-decoration: none;
+                                                            font-size: 14px;
+                                                            align-items: center;
+                                                            justify-content: flex-start;
+
+                                                            span.label {
+                                                                line-height: normal;
+                                                            }
+                                                        }
+
+                                                        .actions-btn {
+                                                            width: 48%;
+                                                        }
+                                                    }
+                                                }
+
+                                                .bs-actionsbox .btn-block button.actions-btn {
+                                                    width: 48%;
+                                                }
+                                            }
 
                                             .related-files-search {
                                                 input {
@@ -864,6 +885,10 @@ html {
             }
         }
     }
+}
+
+.tab-content-container {
+    @include clearfix;
 }
 
 /*Section List Starts*/

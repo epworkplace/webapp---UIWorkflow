@@ -679,6 +679,7 @@
 }
 
 /* modal styles starts */
+
 .show-all-comments-modal {
     @extend %modal;
 
@@ -725,7 +726,7 @@
     }
 
     .comment-container {
-        width: calc(91.66666% + 27px);
+        width: calc(91.66666% + 25px);
         padding-right: 0;
         a[class="edit-current-comment"]{
             color:#333;

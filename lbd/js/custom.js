@@ -619,7 +619,7 @@ $(document).ready(function(){
     var lesstext = "See less";
 
 
-     $('.more').each(function() {
+     $('.more, .comment').each(function() {
         var content = $(this).html(),
         		textContent = $(this).text();
         // console.log(content);
