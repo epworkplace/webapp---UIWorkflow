@@ -1883,12 +1883,27 @@
      //        });
      //    });
 
-     $('.comment').readmore({
+     $('.comment').each(function(){
+        $(this).readmore({
                 speed : 100,
-                collapsedHeight: 50,
+                collapsedHeight: 60,
                 moreLink: '<a href="#" class="morelink">See more</a>',
-                lessLink: '<a href="#" class="morelink">Less</a>'
+                lessLink: '<a href="#" class="morelink">See Less</a>'
             });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+    //for styling purpose only
+    $(this).find('.comment').css({overflow: "hidden", maxHeight: opts.maxHeight});
+        }).one('shown.bs.modal', function () {
+            //initialize plugin once modal shown
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+    });
 
     });
 
