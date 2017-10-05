@@ -10963,7 +10963,7 @@ span.more {
 }
 
 .morelink {
-    display: block;
+    display: flex !important;
     width: 30%;
     padding: 10px 0 0 20px;
     color: #448aff;
