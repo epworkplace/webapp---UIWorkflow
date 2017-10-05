@@ -688,10 +688,15 @@
         box-shadow: none;
         padding: 10px 10px 0 10px !important;
         margin-bottom: 0 !important;
+        
+        .feeds-comments-container{
+            height: 60vh;
+            overflow-y: scroll;
+        }
     }
 
     .send-comment-container {
-        padding: 15px !important;
+        padding: 7px !important;
         margin-bottom: 20px;
         display: -webkit-box;
         display: -moz-box;
@@ -720,7 +725,7 @@
     }
 
     .comment-container {
-        width: calc(91.66666% + 28px);
+        width: calc(91.66666% + 27px);
         padding-right: 0;
     }
 }

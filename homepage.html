@@ -100,10 +100,12 @@
               $(sendCommentActions).slideDown();
               // $('.send-comment-container .user-image, .send-comment-actions').slideDown();
             });
-            $(document).on('click', ".send-comment-actions .btn-no, .send-comment-actions .btn-yes", function(e){
+            $(document).on('click', ".send-comment-actions .btn-no", function(e){
                 e.stopImmediatePropagation();
-                var userImage = $(this).parents('.send-comment-actions').siblings().find($('.user-image'));
-                var sendCommentActions = $(this).parents('.send-comment-actions');
+                var userImage = $(this).parents('.send-comment-actions').siblings().find($('.user-image')),
+                    sendCommentActions = $(this).parents('.send-comment-actions'),
+                    textArea = $(this).parents('.send-comment-actions').siblings().find($('textarea'));
+                $(textArea).css({'height':'40px'});
                 $(userImage).slideUp();
                 $(sendCommentActions).slideUp();
                 // $('.send-comment-container .user-image, .send-comment-actions').slideUp();
