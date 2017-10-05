@@ -240,7 +240,7 @@ gulp.task('sass', ['fonts'], function() {
 
 // js tasks
 gulp.task('js', function() {
-  var jsFilter = $.filter(['**/*.js'], {restore: true});
+  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
   if (devBuild) {
     return gulp.src(js.in)
 
