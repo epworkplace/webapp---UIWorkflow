@@ -200,12 +200,12 @@ $(document).ready(function(){
 
 	//Select All Fuctions
     var showValid = function() {
-		$('.main-panel-header .page-status, .main-panel-header .sort-contracts, .main-panel-header .search-action').hide();
+		$('.main-panel-header .page-status, .main-panel-header .project-planner, .main-panel-header .search-action').hide();
 		$('.main-panel-header .validate').show();
 	};
 
 	var notShowValid = function() {
-		$('.main-panel-header .page-status, .main-panel-header .sort-contracts, .main-panel-header .search-action').show();
+		$('.main-panel-header .page-status, .main-panel-header .project-planner, .main-panel-header .search-action').show();
 		$('.main-panel-header .validate').hide();
 	};
 

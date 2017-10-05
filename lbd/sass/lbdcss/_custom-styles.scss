@@ -747,12 +747,7 @@ html {
                                                 }
                                             }
 
-                                            .sort-contracts {
-                                                @include clearfix;
-
-                                                width: 480px;
-                                                margin-top: 28px;
-
+                                            .project-planner {
                                                 a.project-plan {
                                                     float: right;
                                                     width: 180px;
@@ -785,13 +780,13 @@ html {
                                             border-top: 1px solid #e9ebee;
                                             padding: 20px 0;
 
-                                            .sort {
+                                            .select-with-label {
                                                 .bootstrap-select {
                                                     background: #fff;
                                                     height: auto;
 
                                                     .dropdown-menu {
-                                                        padding: 5px 0;
+                                                        padding: 8px 0;
                                                     }
 
                                                     .dropdown-toggle {
