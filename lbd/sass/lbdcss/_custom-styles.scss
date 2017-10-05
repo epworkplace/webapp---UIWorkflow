@@ -628,6 +628,12 @@ html {
                                             background: #FAFAFA;
                                             border-bottom: 1px solid #E9EBEE;
 
+                                            .header-top-panel {
+                                                @include clearfix;
+
+                                                padding-bottom: 20px;
+                                            }
+
                                             .select-all-container {
                                                 width: 21%;
                                                 max-width: 173px;
@@ -637,7 +643,7 @@ html {
                                                     @include clearfix;
 
                                                     display: block;
-                                                    padding: 7px 15px;
+                                                    padding: 8px 15px;
                                                     border: 1px solid #ddd;
                                                     border-radius: 6px;
 
@@ -713,6 +719,34 @@ html {
                                                 }
                                             }
 
+                                            .project-planner {
+                                                margin-top: 30px;
+
+                                                a.project-plan {
+                                                    float: right;
+                                                    width: 180px;
+                                                    height: 38px;
+                                                    padding: 8px 0;
+                                                    font-weight: 600;
+                                                    font-size: 14px;
+                                                    background: #353f53 !important;
+
+                                                    .btn-label {
+                                                        position: relative;
+                                                        top: 1px;
+                                                        margin-right: 5px;
+
+                                                        i {
+                                                            line-height: 0;
+                                                        }
+                                                    }
+
+                                                    &:hover, &:focus {
+                                                        background: #9c9696 !important;
+                                                    }
+                                                }
+                                            }
+
                                             .sort-contracts {
                                                 @include clearfix;
 
@@ -764,6 +798,22 @@ html {
                                                     &:hover, &:focus {
                                                         background: #9c9696 !important;
                                                     }
+                                                }
+                                            }
+                                        }
+
+                                        .header-bottom-panel {
+                                            @include clearfix;
+
+                                            border-top: 1px solid #e9ebee;
+                                            padding: 20px 0;
+
+                                            .related-files-search {
+                                                input {
+                                                    height: 37px;
+                                                    padding-left: 39px;
+                                                    background: #fff url(../img/search.svg) no-repeat 9px 6px;
+                                                    background-size: 20px;
                                                 }
                                             }
                                         }
