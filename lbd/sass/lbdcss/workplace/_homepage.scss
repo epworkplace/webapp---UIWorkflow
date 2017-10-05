@@ -485,7 +485,7 @@
         padding-top: 15px;
 
         .status-update-container, .send-comment-container {
-            padding: 15px;
+            padding: 7px;
             margin-bottom: 20px;
             display: -webkit-box;
             display: -moz-box;
@@ -514,7 +514,6 @@
         }
 
         .filter-title-flip-container {
-
             border-top: 2px solid #e9ebee;
             padding-top: 15px;
             margin-bottom: 20px;
@@ -679,49 +678,55 @@
     }
 }
 
-
 /* modal styles starts */
-.show-all-comments-modal{
+.show-all-comments-modal {
     @extend %modal;
+
     .feeds-container {
         @extend %feeds-container;
+
         box-shadow: none;
         padding: 10px 10px 0 10px !important;
         margin-bottom: 0 !important;
     }
+
     .send-comment-container {
-            padding: 15px !important;
-            margin-bottom: 20px;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            align-items: center;
+        padding: 15px !important;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
 
-            .user-image {
-                padding: 0 !important;
-            }
+        .user-image {
+            padding: 0 !important;
+        }
 
-            .status-update-text {
-                textarea {
-                    width: 100%;
-                    resize: none;
-                    height: 40px;
-                    border: 0;
-                    padding-top: 11px;
-                }
-            }
-
-            .status-update-button {
-                width: auto !important;
+        .status-update-text {
+            textarea {
+                width: 100%;
+                resize: none;
+                height: 40px;
+                border: 0;
+                padding-top: 11px;
             }
         }
-    .comment-container{
+
+        .status-update-button {
+            width: auto !important;
+        }
+    }
+
+    .comment-container {
         width: calc(91.66666% + 28px);
         padding-right: 0;
     }
+}
 
+.send-comment-actions {
+    margin-top: 15px;
 }
 
 /* modal styles ends */
