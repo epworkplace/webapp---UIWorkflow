@@ -788,6 +788,11 @@ html {
                                             .sort {
                                                 .bootstrap-select {
                                                     background: #fff;
+                                                    height: auto;
+
+                                                    .dropdown-menu {
+                                                        padding: 5px 0;
+                                                    }
 
                                                     .dropdown-toggle {
                                                         height: auto;
