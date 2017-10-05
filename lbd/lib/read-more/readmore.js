@@ -78,7 +78,8 @@
           maxHeight: 'none',
           overflow: 'hidden'
         }).insertAfter(element),
-        expandedHeight = el.outerHeight(),
+        expandedHeight = (el.is(":visible"))? el.outerHeight(): element.data('hiddenHeight'),
+        // expandedHeight = el.outerHeight(),
         cssMaxHeight = parseInt(el.css({maxHeight: ''}).css('max-height').replace(/[^-\d\.]/g, ''), 10),
         defaultHeight = element.data('defaultHeight');
 
@@ -149,9 +150,16 @@
   function Readmore(element, options) {
     this.element = element;
 
+
+
     this.options = $.extend({}, defaults, options);
 
     embedCSS(this.options);
+    $(this.element).data({
+      defaultHeight: this.options.collapsedHeight,
+      heightMargin: this.options.heightMargin,
+      hiddenHeight: this.options.hiddenHeight
+    });
 
     this._defaults = defaults;
     this._name = readmore;
