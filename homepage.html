@@ -111,7 +111,20 @@
                 // $('.send-comment-container .user-image, .send-comment-actions').slideUp();
             });
 
+    
+    //Readmore/less Code
+    // Configure/customize these variables.
+
+     $('.comment').each(function() {
+            $(this).shorten({
+                "showChars" : 250,
+                "moreText"  : "See More",
+                "lessText"  : "Less",
+            });
         });
+
+    });
+
     </script>
 
 </body>

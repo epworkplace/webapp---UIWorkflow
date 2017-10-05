@@ -613,7 +613,7 @@ $(document).ready(function(){
 
 	//Readmore/less Code
 	// Configure/customize these variables.
-    var showChar = 200;  // How many characters are shown by default
+    var showChar = 250;  // How many characters are shown by default
     var ellipsestext = "...";
     var moretext = "See more";
     var lesstext = "See less";

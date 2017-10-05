@@ -727,6 +727,9 @@
     .comment-container {
         width: calc(91.66666% + 27px);
         padding-right: 0;
+        a[class="edit-current-comment"]{
+            color:#333;
+        }
     }
 }
 
