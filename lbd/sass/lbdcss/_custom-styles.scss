@@ -114,8 +114,16 @@ html {
                     margin-top: 2px;
 
                     li {
+                        display: -webkit-box;
+                        display: -moz-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        width: 30px;
+                        margin: 0 auto 10px;
+
                         a {
-                            color: #555;
+                            color: #9a9fa9;
                             padding: 5px 0;
                             margin: 3px 0;
                         }
@@ -136,18 +144,17 @@ html {
 
                         i {
                             display: block;
-                            width: 80px;
                             margin-right: 0;
                             font-size: 25px;
                             line-height: 25px;
-                            color: #555;
+                            color: #9a9fa9;
                             font-weight: 500;
                         }
 
                         p {
                             width: 80px;
                             font-size: 11px;
-                            color: #555;
+                            color: #9a9fa9;
                             font-weight: 500;
                             text-align: center;
                         }
@@ -175,20 +182,24 @@ html {
                 }
 
                 .sidebar-footer {
-                    /*bottom: 0;*/
                     clear: both;
                     display: block;
-
-                    /*padding: 5px 10px;
-                    position: fixed;
-                    z-index: 999;*/
                     width: 80px;
-
-                    /*margin: 0 auto;*/
                     position: absolute;
                     bottom: 60px;
                     left: 0;
                     margin-top: 40px;
+
+                    .switch-workplace {
+                        display: block;
+                        padding: 15px 0;
+                        width: 60px;
+                        margin: 0 auto 15px;
+                        border-top: 1px solid #f5f5f6;
+                        border-bottom: 1px solid #f5f5f6;
+                        text-align: center;
+                        color: #9a9fa9;
+                    }
 
                     .profile {
                         .profile_pic {
@@ -10879,7 +10890,7 @@ html {
 
 /*Tooltip Starts*/
 
-.tooltip {
+/* .tooltip {
     -webkit-box-shadow: 0px 5px 15px 0px rgba(53, 63, 83, 0.2);
     -moz-box-shadow: 0px 5px 15px 0px rgba(53, 63, 83, 0.2);
     box-shadow: 0px 5px 15px 0px rgba(53, 63, 83, 0.2);
@@ -10891,15 +10902,15 @@ html {
         font-size: 12px;
 
         &:before, &:after {
-            border-bottom: 8px solid #353F53 !important;
-            border-left: 8px solid transparent !important;
-            border-right: 8px solid transparent !important;
+            border-bottom: 8px solid #353F53;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
             top: -7px !important;
         }
     }
-}
+} */
 
-.list-image {
+/* .list-image {
     .tooltip {
         width: 140px;
         top: 50px !important;
@@ -10907,14 +10918,14 @@ html {
 
         .tooltip-inner {
             &:before, &:after {
-                border-bottom: 8px solid #353F53 !important;
-                border-left: 8px solid transparent !important;
-                border-right: 8px solid transparent !important;
+                border-bottom: 8px solid #353F53;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
                 top: -7px !important;
             }
         }
     }
-}
+} */
 
 .search-choice {
     .tooltip {

@@ -887,7 +887,10 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
       $(this).closest('.card').css({'cursor':'auto', 'box-shadow':'0px 0px 5px 0px rgba(50,50,50,0.1)'});
    }
 });
+
+
 });
+
 
 
 
