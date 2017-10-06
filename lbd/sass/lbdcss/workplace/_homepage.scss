@@ -693,6 +693,31 @@
         .feeds-comments-container{
             height: 60vh;
             overflow-y: scroll;
+
+            ul{
+                li{
+                    .comments-section{
+                        .comment-date {
+                                font-size: 12px;
+                                padding-right: 0;
+                                text-align: right;
+                                width: calc(16.66666667% + 20px);
+                            }
+
+                            a.comment-actions {
+                                margin-top: -4px;
+                                padding: 0;
+                                position: relative;
+                                top: 0;
+                                right: 10px;
+                                color: #b5b5b5;
+                                text-align: right;
+                                width: 35px;
+                            }    
+                    }
+                    
+                }
+            }
         }
     }
 

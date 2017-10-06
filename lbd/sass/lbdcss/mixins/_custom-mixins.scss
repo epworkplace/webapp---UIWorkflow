@@ -558,6 +558,7 @@
                         }
 
                         .comment-container {
+                            padding-right: 0;
                             .user-name {
                                 color: #353f53;
                                 font-weight: 600;
@@ -585,9 +586,11 @@
                         a.comment-actions {
                             margin-top: -4px;
                             position: relative;
+                            padding: 0;
                             top: 0;
-                            right: 0;
+                            right: 7px;
                             color: #b5b5b5;
+                            text-align: right;
                         }
 
                         .dropdown-menu {
@@ -598,7 +601,7 @@
 
                             min-width: 80px;
                             position: absolute;
-                            right: 0;
+                            right: -8px;
                             top: 16px;
 
                             li {
