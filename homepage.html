@@ -134,7 +134,7 @@
 
      $('.modal').one('show.bs.modal', function () {
     //for styling purpose only
-    $(this).find('.comment').css({overflow: "hidden", maxHeight: opts.maxHeight});
+    $(this).find('.comment').css({overflow: "hidden"});
         }).one('shown.bs.modal', function () {
             //initialize plugin once modal shown
             $(this).find('.comment').readmore({
