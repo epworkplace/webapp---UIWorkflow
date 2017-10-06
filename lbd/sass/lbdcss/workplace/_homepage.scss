@@ -496,6 +496,7 @@
 
             .user-image {
                 padding: 0;
+                margin-right: 15px;
             }
 
             .status-update-text {
@@ -504,7 +505,7 @@
                     resize: none;
                     height: 40px;
                     border: 0;
-                    padding-top: 11px;
+                    // padding-top: 11px;
                 }
             }
 
@@ -733,6 +734,7 @@
 
         .user-image {
             padding: 0 !important;
+            margin-right: 15px;
         }
 
         .status-update-text {
