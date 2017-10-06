@@ -1793,15 +1793,15 @@
 
     <script>
       $(function() {
-        // Initializes and creates emoji set from sprite sheet
+        /*Initializes and creates emoji set from sprite sheet*/
         window.emojiPicker = new EmojiPicker({
           emojiable_selector: '[data-emojiable=true]',
           assetsPath: 'lbd/lib/emoji-picker-master/lib/img/',
           popupButtonClasses: 'fa fa-smile-o'
         });
-        // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
-        // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
-        // It can be called as many times as necessary; previously converted input fields will not be converted again
+        /*Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+        You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+        It can be called as many times as necessary; previously converted input fields will not be converted again*/
         window.emojiPicker.discover();
       });
     </script>
@@ -1843,7 +1843,7 @@
               var sendCommentActions = $(this).parents('.send-comment-container-row').siblings('.send-comment-actions');
               $(userImage).slideDown();
               $(sendCommentActions).slideDown();
-              // $('.send-comment-container .user-image, .send-comment-actions').slideDown();
+              /*$('.send-comment-container .user-image, .send-comment-actions').slideDown();*/
             });
             $(document).on('click', ".send-comment-actions .btn-no", function(e){
                 e.stopImmediatePropagation();
@@ -1853,20 +1853,20 @@
                 $(textArea).css({'height':'40px'});
                 $(userImage).slideUp();
                 $(sendCommentActions).slideUp();
-                // $('.send-comment-container .user-image, .send-comment-actions').slideUp();
+               /* $('.send-comment-container .user-image, .send-comment-actions').slideUp();*/
             });
 
     
-    //Readmore/less Code
-    // Configure/customize these variables.
+/*    Readmore/less Code
+    Configure/customize these variables.
 
-     // $('.comment').each(function() {
-     //        $(this).shorten({
-     //            "showChars" : 250,
-     //            "moreText"  : "See More",
-     //            "lessText"  : "Less",
-     //        });
-     //    });
+     $('.comment').each(function() {
+            $(this).shorten({
+                "showChars" : 250,
+                "moreText"  : "See More",
+                "lessText"  : "Less",
+            });
+        });*/
 
      $('.comment').each(function(){
         $(this).readmore({
@@ -1878,10 +1878,10 @@
      });
 
      $('.modal').one('show.bs.modal', function () {
-    //for styling purpose only
+/*    for styling purpose only*/
     $(this).find('.comment').css({overflow: "hidden"});
         }).one('shown.bs.modal', function () {
-            //initialize plugin once modal shown
+            /*initialize plugin once modal shown*/
             $(this).find('.comment').readmore({
                 speed : 100,
                 collapsedHeight: 60,
