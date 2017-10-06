@@ -39,44 +39,47 @@
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li class="active">
-                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" title="Home">
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" data-placement="right" title="Home">
                         <i class="material-icons">dashboard</i>
                         <!-- <p>Home</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" title="business">
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="business">
                         <i class="material-icons">business</i>
                         <!-- <p>Clients</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" title="Quotes">
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Quotes">
                         <i class="material-icons">monetization_on</i>
                         <!-- <p>Quotes</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" title="Contracts">
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Contracts">
                         <i class="material-icons">assignment</i>
                         <!-- <p>Contracts</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" title="Missions">
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Missions">
                         <i class="material-icons">alarm</i>
                         <!-- <p>Missions</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" title="Users">
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Users">
                         <i class="material-icons">face</i>
                         <!-- <p>Users</p> -->
                     </a>
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a class="profile clearfix" href="#">
+                <a class="switch-workplace clearfix" href="javascript:;">
+                    <i class="material-icons">crop_rotate</i>
+                </a>
+                <a class="profile clearfix" href="javascript:;">
                     <div class="profile_pic">
                         <img src="lbd/img/default-avatar.png" alt="..." class="img-circle profile_img" />
                     </div>
@@ -1234,11 +1237,5 @@
     <script src='lbd/lib/jquery-mentions-input-master/lib/jquery.events.input.js' type='text/javascript'></script>
     <script src='lbd/lib/jquery-mentions-input-master/lib/jquery.elastic.js' type='text/javascript'></script>
     <script src="lbd/lib/jquery-mentions-input-master/jquery.mentionsInput.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        
-        $('.nav-link').tooltip({placement : 'right'}).each(function() {
-            $(this).data('bs.tooltip').tip().addClass('tooltip-sidebar-nav');
-        });
-    </script>
     
 </html>
