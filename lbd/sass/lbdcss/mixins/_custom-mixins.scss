@@ -556,7 +556,13 @@
                                 max-width: 100%;
                             }
                             i{
-                                
+                                display: -webkit-flex;
+                                display: -moz-flex;
+                                display: -ms-flex;
+                                display: -o-flex;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
                             }
                         }
 
