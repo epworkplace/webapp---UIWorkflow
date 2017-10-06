@@ -550,6 +550,14 @@
                         .user-image {
                             width: 40px;
                             padding: 0;
+                            display: -webkit-flex;
+                            display: -moz-flex;
+                            display: -ms-flex;
+                            display: -o-flex;
+                            display: flex;
+                            height: 40px;
+                            align-items: center;
+
 
                             img {
                                 display: block;
