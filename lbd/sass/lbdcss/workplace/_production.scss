@@ -47,6 +47,53 @@
         }
     }
 
+    .refine-user-targets-modal{
+        @extend %modal;
+        .tab-panel-container{
+            padding: 0;
+            // border-right: 1px solid $main;
+            &:after{
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -30px;
+                background: #EAEBED;
+                height: calc(100% + 60px);
+                width: 1px;
+            }
+            .tab-panel{
+                .navbar{
+                    &.navbar-default{
+                        margin-bottom: 0;
+                        border: none;
+                        .tab-panel-search{
+                        margin-bottom: 20px;
+                        }
+                    }
+                }
+                .page-filter{
+                    .divider{
+                        @include divider;
+                    }
+                    .filter-list-container{
+                        .filter-list{
+                            ul{
+                                padding: 0;
+                                list-style-type: none;
+                                li{
+                                    .filter-title{
+                                        text-transform: uppercase;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
 
     /* modal dialog styles ends */
 
