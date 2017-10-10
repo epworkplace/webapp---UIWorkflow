@@ -1,0 +1,55 @@
+/* Mission-overview V2 page styles */
+
+.layout-2.wp-app {
+    .page-wrap {
+        .main-panel-wrap {
+            .main-panel {
+                .main-panel-page {
+                    .main-panel-page-header {
+
+                    }
+
+                    .main-container {
+                        /* tab panel container starts */
+                        .tab-panel-container {
+                        }
+
+                        /* tab panel container ends */
+                        /* main panel container starts */
+                        .main-panel-container {
+
+                        }
+
+                        /* main panel container ends */
+                    }
+                }
+            }
+        }
+    }
+
+    /* main container ends */
+    /* modal dialog styles starts */
+    .exclusion-modal{
+        @extend %modal;
+        .targeted-participants{
+            .dropdown-menu{
+                &.open{
+                    min-height: 310px !important;
+                    // max-height: 310px !important;
+                    .dropdown-menu {
+                        &.inner{
+                            max-height: 200px !important;
+                            overflow-y: auto !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* modal dialog styles ends */
+
+}
+
+/* Mission-overview V2 page styles ends */
