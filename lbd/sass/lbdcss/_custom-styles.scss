@@ -849,7 +849,7 @@ html {
                                             }
 
                                             .related-files-search {
-                                                input {
+                                                input.search-input {
                                                     height: 37px;
                                                     padding-left: 39px;
                                                     background: #fff url(../img/search.svg) no-repeat 9px 6px;
@@ -3225,6 +3225,12 @@ html {
                 height: 38px;
                 border: 1px solid #EAEBED;
                 margin-bottom: 20px;
+                &.search-input{
+                    height: 37px;
+                    padding-left: 39px;
+                    background: #fff url(../img/search.svg) no-repeat 9px 6px;
+                    background-size: 20px;
+                }
             }
         }
 
