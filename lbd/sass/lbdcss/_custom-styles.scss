@@ -602,6 +602,7 @@ html {
                             .main-panel-container {
                                 min-height: 100vh;
                                 padding: 0;
+                                overflow: hidden;
 
                                 .no-data-container {
                                     display: -webkit-box;
@@ -1429,260 +1430,6 @@ html {
 
 /* Empty User Ends*/
 
-/* Layout-2 Changes Starts */
-
-.layout-2.wp-app {
-    .page-wrap {
-        .main-panel-wrap {
-            .main-panel {
-                .main-panel-page {
-                    .main-panel-page-header {
-                        position: fixed;
-                        width: calc(100% - 80px);
-                        padding: 0;
-                        background: #fff;
-                        height: 78px;
-                        -webkit-box-shadow: 0px 5px 5px 0px rgba(197, 197, 197, 0.2);
-                        -moz-box-shadow: 0px 5px 5px 0px rgba(197, 197, 197, 0.2);
-                        box-shadow: 0px 5px 5px 0px rgba(197, 197, 197, 0.2);
-                        z-index: 9;
-
-                        .contract-image {
-                            width: 52px;
-                            margin: 13px 0 0 20px;
-                            padding: 0;
-
-                            .contract-image-container {
-                                width: 52px;
-
-                                img {
-                                    max-width: 100%;
-                                }
-                            }
-                        }
-
-                        .contract {
-                            padding: 0;
-                            margin: 17px 0 0 20px;
-                            width: 43%;
-
-                            .contract-spec {
-                                .contract-breadcrumb {
-                                    a {
-                                        font-size: 12px;
-                                        color: #a2a6b0;
-                                        text-decoration: none;
-                                    }
-
-                                    i {
-                                        position: relative;
-                                        top: 4px;
-                                        margin: 0 5px;
-                                        font-size: 16px;
-                                        color: #a2a6b0;
-                                    }
-                                }
-
-                                .contract-name {
-                                    .primary-font {
-                                        color: #485262;
-                                        font-size: 14px;
-                                        margin-left: 10px;
-                                        position: relative;
-                                        top: 2px;
-                                    }
-                                }
-                            }
-
-                            .nav-button {
-                                margin: 10px 0 0 0;
-
-                                a {
-                                    color: #d7d9dc;
-
-                                    &:hover, &:focus, &.active {
-                                        color: #d7d9dc;
-                                    }
-                                }
-
-                                .tooltip {
-                                    width: 100px;
-                                }
-                            }
-                        }
-
-                        .right {
-                            padding: 0;
-                            float: right;
-
-                            .end-date-container {
-                                padding: 0;
-
-                                a.end-date {
-                                    /* width: 211px; */
-                                    display: block;
-                                    width: 100%;
-                                    padding: 20px 0 21px;
-                                    text-align: center;
-                                    font-size: 14px;
-                                    color: #485262;
-                                    font-weight: 600;
-                                    position: relative;
-
-                                    &:before {
-                                        content: '';
-                                        position: absolute;
-                                        left: 0;
-                                        top: 0;
-                                        background: #f5f5f6;
-                                        width: 1px;
-                                        height: 78px;
-                                    }
-
-                                    span.title {
-                                        font-size: 12px;
-                                        display: block;
-                                        color: #B0B4BB;
-                                        font-weight: 400;
-                                    }
-
-                                    span.warning-indicator {
-                                        position: absolute;
-                                        top: 33px;
-                                        left: 30px;
-
-                                        span {
-                                            i {
-                                                color: #ee0a5f;
-                                            }
-                                        }
-                                    }
-
-                                    span.caret-drop {
-                                        position: absolute;
-                                        top: 33px;
-                                        right: 30px;
-                                        color: #a6aab3;
-                                    }
-
-                                    &:hover, &:focus, &.active {
-                                        background: #FBFBFB;
-                                    }
-                                }
-
-                                .dropdown-menu {
-                                    &:before, &:after {
-                                        content: none;
-                                        border: none;
-                                    }
-
-                                    border-radius: 0;
-                                    margin-top: 0;
-                                    width: 100%;
-
-                                    li {
-                                        a {
-                                            padding-top: 4px;
-                                            margin-top: 0;
-                                            color: #7d889a;
-
-                                            i {
-                                                position: relative;
-                                                top: 7px;
-                                            }
-
-                                            &:hover {
-                                                color: #fff;
-                                                background: #448AFF;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .mission-validate {
-                                /* width: 211px; */
-                                padding: 20px 0 21px;
-                                text-align: center;
-                                font-size: 14px;
-                                color: #B0B4BB;
-                                font-weight: 600;
-
-                                span.title {
-                                    font-size: 12px;
-                                    display: block;
-                                    color: #B0B4BB;
-                                    font-weight: 400;
-                                }
-
-                                span.mission {
-                                    color: #485262;
-
-                                    small {
-                                        font-size: 11px;
-                                        position: relative;
-                                        top: -1.5px;
-                                    }
-                                }
-
-                                &:before {
-                                    content: '';
-                                    position: absolute;
-                                    left: 0;
-                                    top: 0;
-                                    background: #f5f5f6;
-                                    width: 1px;
-                                    height: 78px;
-                                }
-                            }
-
-                            a.validate {
-                                /* width: 210px; */
-                                text-align: center;
-                                padding: 30px 0 31px;
-                                font-size: 14px;
-                                font-weight: 600;
-                                color: #fff;
-                            }
-                        }
-                    }
-
-                    .main-container {
-                        .overlay-main-container {
-                            width: calc(100% - 80px);
-                        }
-
-                        .main-panel-container {
-                            .content {
-                                .tab-content {
-                                    display: block;
-
-                                    .main-panel-header {
-                                        width: 100%;
-                                        margin-top: -3px;
-                                        position: relative;
-                                        z-index: 1;
-                                        border-bottom: none;
-                                        height: 87px;
-
-                                        .select-all-container {
-                                            margin-top: 30px;
-                                        }
-
-                                        .validate {
-                                            margin-top: 28px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 .open-menu-top-bar {
     display: none;
     background: #fbfbfb;
@@ -1800,8 +1547,6 @@ html {
         }
     }
 }
-
-/* Layout-2 Changes Ends */
 
 /* Steps Timeline Starts */
 
@@ -6085,33 +5830,6 @@ html {
                 }
             }
 
-            .contract-owner-box {
-                @include clearfix;
-
-                padding: 0;
-                margin-bottom: 15px;
-
-                .contract-owner {
-                    .user-image {
-                        float: left;
-                        margin: 15px 20px 0 0;
-                    }
-
-                    .user-name {
-                        margin: 26px 0 22px;
-                        color: #485262;
-                        font-size: 14px;
-                        font-weight: 600;
-                    }
-                }
-
-                .update-contract-owner {
-                    button {
-                        width: 109px;
-                    }
-                }
-            }
-
             .contract-tags {
                 padding: 0 0 200px 0;
 
@@ -6771,24 +6489,48 @@ html {
 
     padding: 0;
     margin-bottom: 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    height: 60px;
 
     .contract-owner {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        height: 60px;
+
         .user-image {
             float: left;
-            margin: 15px 20px 0 0;
+            margin: 0 20px 0 0;
         }
 
-        .user-name, .user-name-designation {
-            margin: 26px 0 22px;
-            color: #485262;
-            font-size: 14px;
-            font-weight: 600;
+        .user-name-block {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            height: 60px;
 
-            span {
-                display: block;
-                font-weight: 400;
-                font-size: 12px;
-                color: #a2a7b0;
+            .user-name {
+                color: #485262;
+                font-size: 14px;
+                font-weight: 600;
+
+                span {
+                    display: block;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #a2a7b0;
+                }
             }
         }
 
@@ -6800,6 +6542,7 @@ html {
     .update-contract-owner {
         button {
             width: 109px;
+            margin: 0;
         }
     }
 }

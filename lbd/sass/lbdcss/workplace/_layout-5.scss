@@ -449,6 +449,16 @@
                                                             background: #b70a4a;
                                                         }
                                                     }
+
+                                                    .btn.submit {
+                                                        background: #69A1FF;
+                                                        color: #ffffff;
+                                                        height: 25px;
+
+                                                        &:hover {
+                                                            background: #448AFF;
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
