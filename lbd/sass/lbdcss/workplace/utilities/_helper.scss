@@ -26,6 +26,25 @@
     }
 }
 
+// box modal styles
+$dimensions: ('p':'padding', 'm':'margin');
+$directions: ('t':'top', 'r':'right', 'b':'bottom', 'l':'left');
+
+@each $dim in $dimensions{
+    @each $dir in $directions{
+        $size: 0;
+        // function()
+        .#{nth($dim, 1)}-#{$size} {
+            #{nth($dim, 2)}: #{$size}px;
+        }
+        .#{nth($dim, 1)}#{nth($dir, 1)}-#{$size} {
+            #{nth($dim, 2)}-#{nth($dir, 2)}: #{$size}px;
+        }
+        
+    }
+}
+
+
 // button with 48% styles
 .btn-yes {
     @include custom-btn($yes, $yes-hover);

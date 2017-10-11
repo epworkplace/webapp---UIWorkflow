@@ -1,4 +1,4 @@
-<div aria-labelledby="refine-user-targets-modal" class="modal fade refine-user-targets-modal in" id="refine-user-targets-modal" role="modal" tabindex="-1" style="display: block;">
+<div aria-labelledby="refine-user-targets-modal" class="modal fade refine-user-targets-modal" id="refine-user-targets-modal" role="modal" tabindex="-1" style="">
     <div class="modal-dialog modal-lg" role="modal">
         <div class="modal-content">
             <div class="modal-body">
@@ -22,22 +22,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="page-filter divider">
+                                <div class="page-filter">
                                     <div class="filter-list-container">
                                         <div class="filter-list">
                                             <ul>
-                                                <li>
+                                                <li class="divider">
                                                     <div class="select-group">
                                                         <div class="form-group">
-                                                              <label for="contributorLevel" class="filter-title">Contributor level</label>
+                                                              <label class="filter-title d-block">Contributor level  <!-- <a href="javascript:;" class="pull-right clear-filter">clear</a> --></label>
                                                               <select name="" id="contributorLevel" title="-" multiple class="selectpicker" data-actions-box="true">
                                                                 <option data-content="<span class='label senior'>Senior</span>">Senior</option>
                                                                 <option data-content="<span class='label junior'>Junior</span>">Junior</option>
                                                                 <option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
+                                                                <option data-content="<span class='label senior'>Senior</span>">Senior</option>
+                                                                <option data-content="<span class='label junior'>Junior</span>">Junior</option>
+                                                                <option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
                                                               </select>
-                                                          </div>
+                                                        </div>
                                                         <div class="form-group jobs">
-                                                            <label for="" class="filter-title">Client</label>
+                                                            <label class="filter-title d-block">Client  <!-- <a href="javascript:;" class="pull-right clear-filter">clear</a> --></label>
                                                             <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="All Clients" id="">
                                                               <option data-hidden="true"></option>
                                                               <option value="0">Writer</option>
@@ -49,9 +52,9 @@
                                                               <option value="5">Job 05</option>
                                                             </select>
                                                           </div>
-                                                          <div class="form-group dropup">
-                                                              <label for="" class="filter-title">Categories</label>
-                                                              <select name="" id="" title="-" multiple class="selectpicker" data-actions-box="true" data-selected-text-format="count > 3">
+                                                          <div class="form-group dropup user-categories-filter-container">
+                                                              <label class="filter-title d-block">Categories <a href="javascript:;" class="pull-right clear-filter">clear</a></label>
+                                                              <select name="" title="-" multiple class="selectpicker user-categories" data-actions-box="true" data-selected-text-format="count > 3">
                                                                 <option data-hidden="true"></option>
                                                                 <option value="01">Category 01</option>
                                                                 <option value="02">Category 02</option>
@@ -65,16 +68,46 @@
                                                                 <option value="10">Category 10</option>
                                                               </select>
                                                           </div>
-                                                          <div class="form-group">
-                                                              <label for="contributorLanguage" class="filter-title">Languages </label>
-                                                              <select class="chosen-default flags" multiple data-placeholder="-" id="contributorLanguage">
-                                                                <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
-                                                                <option data-img-src="lbd/img/flag/fr.gif">FR</option>
-                                                                <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
-                                                                <option data-img-src="lbd/img/flag/sp.gif">ES</option>
-                                                                <option data-img-src="lbd/img/flag/pol.gif">PO</option>
-                                                              </select>
+                                                    </div>
+                                                </li>
+                                                <li class="divider">
+                                                    <div class="select-group">
+                                                        <div class="form-group jobs dropup">
+                                                            <label class="filter-title d-block">Min. Participation</label>
+                                                            <select class="selectpicker col-md-6 p0" data-live-search="false" data-actions-box="true" data-selected-text-format="" title="">
+                                                              <option data-hidden="true">0</option>
+                                                              <!-- <option value="0">0</option> -->
+                                                              <option value="1">1</option>
+                                                              <option value="2">2</option>
+                                                              <option value="3">3</option>
+                                                              <option value="4">4</option>
+                                                              <option value="5">5</option>
+                                                              <option value="6">6</option>
+                                                              <option value="7">7</option>
+                                                              <option value="8">8</option>
+                                                              <option value="9">9</option>
+                                                              <option value="10">10</option>
+                                                            </select>
                                                           </div>
+                                                    </div>
+                                                </li>
+                                                <li class="divider">
+                                                    <div class="select-group">
+                                                        <div class="form-group jobs dropup">
+                                                            <label for="" class="filter-title">Exclude contracts or missions</label>
+                                                            <ul class="exclude-list">
+                                                                <li class="list-item col-md-12">
+                                                                    <i class="material-icons">close</i>
+                                                                    C003-FOU-2017-001-A-Garnier
+                                                                </li>
+                                                                <li class="list-item col-md-12 add-new-exclude-item">
+                                                                    <a class="add-exclusion" data-target="#addExclusion" data-toggle="modal" href="javascript:;">
+                                                                    + Add Exclusion
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
                                                     </div>
                                                 </li>
                                             </ul>
@@ -105,92 +138,402 @@
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <div class="tab-content" id="deleted-contract">
-                                <div class="col-md-12 main-panel-header">
-                                    <div class="col-md-5 pull-left search-status">
-                                      <span class="search-result-text">
-                                        <strong>
-                                        3 Users
-                                        </strong>
-                                        matching with your criteria
-                                      </span>
-                                    </div>
-                                    <div class="col-md-3 pull-right">
-                                      <div class="select-all">
-                                        <select class="selectpicker" data-actions-box="true" id="filterByLevel" name="filterByLevel" title="Senior first">
-                                          <option data-content="">
-                                            Senior first
-                                          </option>
-                                          <option data-content="">
-                                            Junior first
-                                          </option>
-                                          <option data-content="">
-                                            Beginner first
-                                          </option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                </div>
-                                <div class="tab-content-container">
-                                   <div class="col-md-12 contract-content-container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card-section-list" data-role="contract-section-list">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="col-md-12 card card-contract">
-                                                                <div class="col-md-1 check">
-                                                                    <label class="checkbox">
-                                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-                                                                    </label>
-                                                                </div>
-                                                                <div class="col-md-1 list-image-container">
-                                                                    <div class="list-image" id="contractImage24" data-value="60">
-                                                                        <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-6 list-head-container">
-                                                                    <div class="header">    
-                                                                        <div class="status-label">
-                                                                            <span class="label ongoing">Ongoing</span>
-                                                                            <span class="dates">
-                                                                                <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-                                                                            </span>
-                                                                    </div>
-                                                                        <strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="task-price">
-                                                                    <div class="col-md-2 numbers">
-                                                                        3<span>missions</span>
-                                                                    </div>
-                                                                    <div class="col-md-2 turnover">
-                                                                        32,000.00 &#8364;<span>60.00 % margin</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cta-container">
-                                                                    <div class="cta">
-                                                                        <ul>
-                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Validate"><i class="material-icons">done</i></a></li>
-                                                                            <li>
-                                                                                <span data-toggle="modal" data-target="#deleteConfirmation">
-                                                                                    <a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
-                                                                                <span>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
+                            <div class="row" id="">
+                                <div class="col-md-12 pr-0">
+                                    <div class="row">
+                                        <div class="col-md-12 main-panel-header">
+                                            <div class="row form-group">
+                                                <div class="col-md-12 pull-left search-status">
+                                                  <span class="search-result-text">
+                                                    <strong>
+                                                    3 Contributors
+                                                    </strong>
+                                                    selected
+                                                  </span>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-5">
+                                                  <div class="select-all">
+                                                    <select class="selectpicker" data-actions-box="true" id="filterByLevel" name="filterByLevel" title="Top rating first">
+                                                      <option data-content="">
+                                                        Top rating first
+                                                      </option>
+                                                      <option data-content="">
+                                                        Low rating first
+                                                      </option>
+                                                      <option data-content="">
+                                                        Beginner first
+                                                      </option>
+                                                    </select>
+                                                  </div>
                                                 </div>
                                             </div>
                                         </div>
-                                   </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
+                                    </div>
+                                    <div class="tab-content-container row form-group">
+                                       <div class="col-md-12 contract-content-container">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card-section-list" data-role="contract-section-list">
+                                                        <ul class="target-user-list-container">
+                                                            <li>
+                                                                <div class="col-md-12 card card-contract">
+                                                                    <div class="col-md-1 check">
+                                                                        <label class="checkbox">
+                                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-md-1 list-image-container">
+                                                                        <div class="list-image" id="" data-value="60">
+                                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 list-head-container">
+                                                                        <div class="header">
+                                                                          <div class="row">
+                                                                            <div class="col-md-12 user-name d-flex">
+                                                                              <label class="primary-font" data-target="#contributor-user-profile-modal" data-toggle="modal" for="">
+                                                                                Michael Martin
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="col-md-12 user-level d-flex">
+                                                                              <span class="user-rating df-ac d-inline-flex">
+                                                                                <span class="">
+                                                                                  4.14
+                                                                                </span>
+                                                                                <i aria-hidden="true" class="fa fa-star">
+                                                                                </i>
+                                                                              </span>
+                                                                              <span class="label senior d-inline-flex">
+                                                                                Senior
+                                                                              </span>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="cta-container">
+                                                                        <div class="cta">
+                                                                          <ul>
+                                                                            <li>
+                                                                                <a data-placement="bottom" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="Delete">
+                                                                                  <i class="material-icons">
+                                                                                  more_horiz
+                                                                                  </i>
+                                                                                </a>
+                                                                            </li>
+                                                                          </ul>
+                                                                        </div>
+                                                                      </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-md-12 card card-contract">
+                                                                    <div class="col-md-1 check">
+                                                                        <label class="checkbox">
+                                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-md-1 list-image-container">
+                                                                        <div class="list-image" id="" data-value="60">
+                                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 list-head-container">
+                                                                        <div class="header">
+                                                                          <div class="row">
+                                                                            <div class="col-md-12 user-name d-flex">
+                                                                              <label class="primary-font" data-target="#contributor-user-profile-modal" data-toggle="modal" for="">
+                                                                                Michael Martin
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="col-md-12 user-level d-flex">
+                                                                              <span class="user-rating df-ac d-inline-flex">
+                                                                                <span class="">
+                                                                                  4.14
+                                                                                </span>
+                                                                                <i aria-hidden="true" class="fa fa-star">
+                                                                                </i>
+                                                                              </span>
+                                                                              <span class="label senior d-inline-flex">
+                                                                                Senior
+                                                                              </span>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="cta-container">
+                                                                        <div class="cta">
+                                                                          <ul>
+                                                                            <li>
+                                                                                <a data-placement="bottom" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="Delete">
+                                                                                  <i class="material-icons">
+                                                                                  more_horiz
+                                                                                  </i>
+                                                                                </a>
+                                                                            </li>
+                                                                          </ul>
+                                                                        </div>
+                                                                      </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-md-12 card card-contract">
+                                                                    <div class="col-md-1 check">
+                                                                        <label class="checkbox">
+                                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-md-1 list-image-container">
+                                                                        <div class="list-image" id="" data-value="60">
+                                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 list-head-container">
+                                                                        <div class="header">
+                                                                          <div class="row">
+                                                                            <div class="col-md-12 user-name d-flex">
+                                                                              <label class="primary-font" data-target="#contributor-user-profile-modal" data-toggle="modal" for="">
+                                                                                Michael Martin
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="col-md-12 user-level d-flex">
+                                                                              <span class="user-rating df-ac d-inline-flex">
+                                                                                <span class="">
+                                                                                  4.14
+                                                                                </span>
+                                                                                <i aria-hidden="true" class="fa fa-star">
+                                                                                </i>
+                                                                              </span>
+                                                                              <span class="label senior d-inline-flex">
+                                                                                Senior
+                                                                              </span>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="cta-container">
+                                                                        <div class="cta">
+                                                                          <ul>
+                                                                            <li>
+                                                                                <a data-placement="bottom" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="Delete">
+                                                                                  <i class="material-icons">
+                                                                                  more_horiz
+                                                                                  </i>
+                                                                                </a>
+                                                                            </li>
+                                                                          </ul>
+                                                                        </div>
+                                                                      </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-md-12 card card-contract">
+                                                                    <div class="col-md-1 check">
+                                                                        <label class="checkbox">
+                                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-md-1 list-image-container">
+                                                                        <div class="list-image" id="" data-value="60">
+                                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 list-head-container">
+                                                                        <div class="header">
+                                                                          <div class="row">
+                                                                            <div class="col-md-12 user-name d-flex">
+                                                                              <label class="primary-font" data-target="#contributor-user-profile-modal" data-toggle="modal" for="">
+                                                                                Michael Martin
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="col-md-12 user-level d-flex">
+                                                                              <span class="user-rating df-ac d-inline-flex">
+                                                                                <span class="">
+                                                                                  4.14
+                                                                                </span>
+                                                                                <i aria-hidden="true" class="fa fa-star">
+                                                                                </i>
+                                                                              </span>
+                                                                              <span class="label senior d-inline-flex">
+                                                                                Senior
+                                                                              </span>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="cta-container">
+                                                                        <div class="cta">
+                                                                          <ul>
+                                                                            <li>
+                                                                                <a data-placement="bottom" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="Delete">
+                                                                                  <i class="material-icons">
+                                                                                  more_horiz
+                                                                                  </i>
+                                                                                </a>
+                                                                            </li>
+                                                                          </ul>
+                                                                        </div>
+                                                                      </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-md-12 card card-contract">
+                                                                    <div class="col-md-1 check">
+                                                                        <label class="checkbox">
+                                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-md-1 list-image-container">
+                                                                        <div class="list-image" id="" data-value="60">
+                                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 list-head-container">
+                                                                        <div class="header">
+                                                                          <div class="row">
+                                                                            <div class="col-md-12 user-name d-flex">
+                                                                              <label class="primary-font" data-target="#contributor-user-profile-modal" data-toggle="modal" for="">
+                                                                                Michael Martin
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="col-md-12 user-level d-flex">
+                                                                              <span class="user-rating df-ac d-inline-flex">
+                                                                                <span class="">
+                                                                                  4.14
+                                                                                </span>
+                                                                                <i aria-hidden="true" class="fa fa-star">
+                                                                                </i>
+                                                                              </span>
+                                                                              <span class="label senior d-inline-flex">
+                                                                                Senior
+                                                                              </span>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="cta-container">
+                                                                        <div class="cta">
+                                                                          <ul>
+                                                                            <li>
+                                                                                <a data-placement="bottom" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="Delete">
+                                                                                  <i class="material-icons">
+                                                                                  more_horiz
+                                                                                  </i>
+                                                                                </a>
+                                                                            </li>
+                                                                          </ul>
+                                                                        </div>
+                                                                      </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-md-12 card card-contract">
+                                                                    <div class="col-md-1 check">
+                                                                        <label class="checkbox">
+                                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-md-1 list-image-container">
+                                                                        <div class="list-image" id="" data-value="60">
+                                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 list-head-container">
+                                                                        <div class="header">
+                                                                          <div class="row">
+                                                                            <div class="col-md-12 user-name d-flex">
+                                                                              <label class="primary-font" data-target="#contributor-user-profile-modal" data-toggle="modal" for="">
+                                                                                Michael Martin
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="col-md-12 user-level d-flex">
+                                                                              <span class="user-rating df-ac d-inline-flex">
+                                                                                <span class="">
+                                                                                  4.14
+                                                                                </span>
+                                                                                <i aria-hidden="true" class="fa fa-star">
+                                                                                </i>
+                                                                              </span>
+                                                                              <span class="label senior d-inline-flex">
+                                                                                Senior
+                                                                              </span>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="cta-container">
+                                                                        <div class="cta">
+                                                                          <ul>
+                                                                            <li>
+                                                                                <a data-placement="bottom" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="Delete">
+                                                                                  <i class="material-icons">
+                                                                                  more_horiz
+                                                                                  </i>
+                                                                                </a>
+                                                                            </li>
+                                                                          </ul>
+                                                                        </div>
+                                                                      </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-md-12 card card-contract">
+                                                                    <div class="col-md-1 check">
+                                                                        <label class="checkbox">
+                                                                            <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-md-1 list-image-container">
+                                                                        <div class="list-image" id="" data-value="60">
+                                                                            <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 list-head-container">
+                                                                        <div class="header">
+                                                                          <div class="row">
+                                                                            <div class="col-md-12 user-name d-flex">
+                                                                              <label class="primary-font" data-target="#contributor-user-profile-modal" data-toggle="modal" for="">
+                                                                                Michael Martin
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="col-md-12 user-level d-flex">
+                                                                              <span class="user-rating df-ac d-inline-flex">
+                                                                                <span class="">
+                                                                                  4.14
+                                                                                </span>
+                                                                                <i aria-hidden="true" class="fa fa-star">
+                                                                                </i>
+                                                                              </span>
+                                                                              <span class="label senior d-inline-flex">
+                                                                                Senior
+                                                                              </span>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="cta-container">
+                                                                        <div class="cta">
+                                                                          <ul>
+                                                                            <li>
+                                                                                <a data-placement="bottom" data-toggle="tooltip" data-container="body" href="javascript:void(0);" title="Delete">
+                                                                                  <i class="material-icons">
+                                                                                  more_horiz
+                                                                                  </i>
+                                                                                </a>
+                                                                            </li>
+                                                                          </ul>
+                                                                        </div>
+                                                                      </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    </div>
+                                    <div class="row form-group">
                                         <div class="col-md-3">
                                             <button class="btn btn-default btn-fill btn-wd btn-confirm pull-left form-control" data-dismiss="" type="button">
                                                 Select all
@@ -208,6 +551,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>

@@ -3289,9 +3289,7 @@
         <!-- Delivery Job Starts -->
         <!-- @include _partials/_production-delivery-job-modal.html -->
         <!-- Delivery Job Ends -->
-        <!-- Exclusion Modal Starts -->
-        <!-- @include _partials/_production-exclusion-modal.html -->
-        <!-- Exclusion Modal Ends -->
+        
         <!-- Share Announce Modal Starts -->
         <!-- @include _partials/_production-share-announce-modal.html -->
         <!-- Share Announce Modal Ends -->
@@ -3322,9 +3320,12 @@
         <!-- Send share message Modal Starts -->
         <!-- @include _partials/_production-send-share-message-modal.html -->
         <!-- Send share message Modal Ends -->
-        <!-- Send share message Modal Starts -->
+        <!-- Refine user targets Modal Starts -->
         <!-- @include _partials/_production-refine-user-targets-modal.html -->
-        <!-- Send share message Modal Ends -->
+        <!-- Refine user targets Modal Ends -->
+        <!-- Exclusion Modal Starts -->
+        <!-- @include _partials/_production-exclusion-modal.html -->
+        <!-- Exclusion Modal Ends -->
     <!-- Modal Ends -->
 
 <!--   Core JS Files   -->
@@ -3334,6 +3335,11 @@
         <script type="text/javascript">
             $('[id^="timepicker"]').each(function(){
                 $(this).timepicki();
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
             });
         </script>
         <script type="text/javascript">
@@ -3625,6 +3631,32 @@
                 e.preventDefault();
                 $("#upload-job:hidden").trigger('click');
             });
+
+
+            /* Clear Bootstrap select picker selection Filter */
+            $(".filter-list").on('click', '.clear-filter', function(e){
+                e.preventDefault();
+                $(this).parents('.form-group').find('.selectpicker').selectpicker('deselectAll');
+            });
+
+            $('#refine-user-targets-modal').on('shown.bs.modal', function () {
+                var viewportHeight = $(window).height();
+                console.log ('viewportHeight = ' + viewportHeight);
+
+                var listContainer = $(this).find('.target-user-list-container'),
+                    listContainerHeight = $(this).find('.target-user-list-container').outerHeight();
+                console.log ('listContainer = ' + listContainer[0].clientHeight);
+                console.log ('listContainerScrollHeight = ' + listContainer[0].scrollHeight);
+                if(listContainer[0].scrollHeight > listContainer[0].clientHeight) {
+                    $('.target-user-list-container').addClass('has-v-scroll');
+                } else{
+                    $('.target-user-list-container').removeClass('has-v-scroll');
+                }
+            });
+
+
+
+
 
 });
         </script>
