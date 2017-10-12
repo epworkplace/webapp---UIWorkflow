@@ -773,8 +773,12 @@
 
     /* main container ends */
     /* modal dialog styles starts */
-
-    .modal {
+    .modal.edit-external-links-modal,
+    .modal.edit-a-quick-question-modal,
+    .modal.create-new-survey-modal,
+    .modal.edit-brand-history-modal,
+    .modal.edit-annual-turnover-modal,
+    .modal.edit-address-modal {
         color: $main;
 
         span.close {

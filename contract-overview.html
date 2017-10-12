@@ -1814,6 +1814,16 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
    }
 });
 
+/* Edit Create Mission Title*/
+    $('#editCreateMissionTitle').click(function() {
+        $('.create-quote-mission-title-edit').show();
+        $('.create-quote-mission-title').hide();
+    });
+    $('#saveCreateMissionTitle').click(function() {
+        $('.create-quote-mission-title-edit').hide();
+        $('.create-quote-mission-title').show();
+    });
+
 });
 </script>
 
