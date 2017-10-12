@@ -14,7 +14,7 @@
     <!--     Fonts and icons     -->
     <link href="lbd/css/font-awesome.min.css" rel="stylesheet" />
     <link href="lbd/css/material-icons.css" rel="stylesheet" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" />
     <link href="lbd/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <!--  mCustomScrollbar Plugin -->
     <link href="lbd/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
@@ -490,38 +490,27 @@
                                     <div class="col-md-12 middle-column">
                                         <div class="row">
                                             <div class="col-md-12 card status-update-container">
-                                                <div class="col-md-2 user-image">
-                                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                <div class="col-md-12 status-update-text"><!-- <textarea id="statusUpdate" class="form-control" placeholder="Say something..."></textarea> -->
+                                                    <input type="text" class="form-control" placeholder="Search a mission, keyword,collaborator ...">
                                                 </div>
-                                                <div class="col-md-10 status-update-text">
-                                                    <textarea id="statusUpdate" class="form-control" placeholder="Say something..."></textarea>
-                                                </div>
-                                                <a href="javascript:;" class="status-update-button btn btn-yes">
-                                                    <i class="material-icons">send</i>
-                                                </a>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="filter-title-flip-container">
+                                            <div class="col-md-12 feed-title-container">
                                                 <div class="row">
-                                                    <div class="col-md-12 feed-title-container">
-                                                        <div class="row">
-                                                            <div class="col-md-9 feed-title">Comments &amp; activities</div>
-                                                            <a href="javascript:;" class="col-md-3">+ Add filters</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12 filter-container">
-                                                        <select data-placeholder="Enter a tag, user" class="chosen-select" multiple id="tag">
-                                                            <option value=""></option>
-                                                            <option value="Clarrisse">Clarrisse</option>
-                                                            <option value="Allocine">Allocine</option>
-                                                            <option value="BUT">BUT</option>
-                                                            <option value="Michael">Michael</option>
-                                                            <option value="Webedia">Webedia</option>
-                                                            <option value="Paul">Paul</option>
-                                                        </select>
-                                                        <button type="" class="btn btn-fill btn-confirm">Apply Filters</button>
-                                                    </div>
+                                                    <div class="feed-title">Comments &amp; activities</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 no-job-container">
+                                                <div class="no-job-info">
+                                                    <h4>
+                                                        No result found for << Searched Keyword >>.
+                                                    </h4>
+                                                    <p>
+                                                        Try again with another keyword.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -552,14 +541,15 @@
                                                                                     <div class="col-md-11 comment-container">
                                                                                         <div class="row">
                                                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                                                <i class="material-icons">more_horiz</i>
-                                                                                            </a>
-                                                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                                                <li><a href="javascript:;">Delete</a></li>
-                                                                                            </ul>
+                                                                                            <div class="col-md-3 comment-date">
+                                                                                                10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                                    <i class="material-icons">more_horiz</i>
+                                                                                                </a>
+                                                                                                <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                                    <li><a href="javascript:;">Edit</a></li>
+                                                                                                    <li><a href="javascript:;">Delete</a></li>
+                                                                                                </ul>
+                                                                                            </div>
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-md-12 comment">
@@ -579,14 +569,9 @@
                                                                                     <div class="col-md-11 comment-container">
                                                                                         <div class="row">
                                                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                                                <i class="material-icons">more_horiz</i>
-                                                                                            </a>
-                                                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                                                <li><a href="javascript:;">Delete</a></li>
-                                                                                            </ul>
+                                                                                            <div class="col-md-3 comment-date">
+                                                                                                10m ago 
+                                                                                            </div>
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-md-12 comment">
@@ -652,14 +637,9 @@
                                                                                     <div class="col-md-11 comment-container">
                                                                                         <div class="row">
                                                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                                                <i class="material-icons">more_horiz</i>
-                                                                                            </a>
-                                                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                                                <li><a href="javascript:;">Delete</a></li>
-                                                                                            </ul>
+                                                                                            <div class="col-md-3 comment-date">
+                                                                                                10m ago 
+                                                                                            </div>
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-md-12 comment">
@@ -679,14 +659,15 @@
                                                                                     <div class="col-md-11 comment-container">
                                                                                         <div class="row">
                                                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                                                            <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                                                <i class="material-icons">more_horiz</i>
-                                                                                            </a>
-                                                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                                                <li><a href="javascript:;">Delete</a></li>
-                                                                                            </ul>
+                                                                                            <div class="col-md-3 comment-date">
+                                                                                                10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                                    <i class="material-icons">more_horiz</i>
+                                                                                                </a>
+                                                                                                <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                                    <li><a href="javascript:;">Edit</a></li>
+                                                                                                    <li><a href="javascript:;">Delete</a></li>
+                                                                                                </ul>
+                                                                                            </div>
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-md-12 comment">
@@ -752,14 +733,15 @@
                                                                                     <div class="col-md-11 comment-container">
                                                                                         <div class="row">
                                                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                                                <i class="material-icons">more_horiz</i>
-                                                                                            </a>
-                                                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                                                <li><a href="javascript:;">Delete</a></li>
-                                                                                            </ul>
+                                                                                            <div class="col-md-3 comment-date">
+                                                                                                10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                                    <i class="material-icons">more_horiz</i>
+                                                                                                </a>
+                                                                                                <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                                    <li><a href="javascript:;">Edit</a></li>
+                                                                                                    <li><a href="javascript:;">Delete</a></li>
+                                                                                                </ul>
+                                                                                            </div>
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-md-12 comment">
@@ -779,14 +761,15 @@
                                                                                     <div class="col-md-11 comment-container">
                                                                                         <div class="row">
                                                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                                                            <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                                                <i class="material-icons">more_horiz</i>
-                                                                                            </a>
-                                                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                                                <li><a href="javascript:;">Delete</a></li>
-                                                                                            </ul>
+                                                                                            <div class="col-md-3 comment-date">
+                                                                                                10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                                    <i class="material-icons">more_horiz</i>
+                                                                                                </a>
+                                                                                                <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                                    <li><a href="javascript:;">Edit</a></li>
+                                                                                                    <li><a href="javascript:;">Delete</a></li>
+                                                                                                </ul>
+                                                                                            </div>
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-md-12 comment">
@@ -806,14 +789,15 @@
                                                                                     <div class="col-md-11 comment-container">
                                                                                         <div class="row">
                                                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                                                <i class="material-icons">more_horiz</i>
-                                                                                            </a>
-                                                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                                                <li><a href="javascript:;">Delete</a></li>
-                                                                                            </ul>
+                                                                                            <div class="col-md-3 comment-date">
+                                                                                                10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                                                    <i class="material-icons">more_horiz</i>
+                                                                                                </a>
+                                                                                                <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                                                    <li><a href="javascript:;">Edit</a></li>
+                                                                                                    <li><a href="javascript:;">Delete</a></li>
+                                                                                                </ul>
+                                                                                            </div>
                                                                                         </div>
                                                                                         <div class="row">
                                                                                             <div class="col-md-12 comment">
@@ -1455,14 +1439,9 @@
                                                     <div class="col-md-11 comment-container">
                                                         <div class="row">
                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                <i class="material-icons">more_horiz</i>
-                                                            </a>
-                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                <li><a href="javascript:;">Delete</a></li>
-                                                            </ul>
+                                                            <div class="col-md-3 comment-date">
+                                                                10m ago 
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12 comment">
@@ -1483,14 +1462,9 @@
                                                     <div class="col-md-11 comment-container">
                                                         <div class="row">
                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                <i class="material-icons">more_horiz</i>
-                                                            </a>
-                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                <li><a href="javascript:;">Delete</a></li>
-                                                            </ul>
+                                                            <div class="col-md-3 comment-date">
+                                                                10m ago 
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12 comment">
@@ -1510,14 +1484,9 @@
                                                     <div class="col-md-11 comment-container">
                                                         <div class="row">
                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                            <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                <i class="material-icons">more_horiz</i>
-                                                            </a>
-                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                <li><a href="javascript:;">Delete</a></li>
-                                                            </ul>
+                                                            <div class="col-md-3 comment-date">
+                                                                10m ago 
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12 comment">
@@ -1537,14 +1506,9 @@
                                                     <div class="col-md-11 comment-container">
                                                         <div class="row">
                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                <i class="material-icons">more_horiz</i>
-                                                            </a>
-                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                <li><a href="javascript:;">Delete</a></li>
-                                                            </ul>
+                                                            <div class="col-md-3 comment-date">
+                                                                10m ago 
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12 comment">
@@ -1565,14 +1529,9 @@
                                                     <div class="col-md-11 comment-container">
                                                         <div class="row">
                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                <i class="material-icons">more_horiz</i>
-                                                            </a>
-                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                <li><a href="javascript:;">Delete</a></li>
-                                                            </ul>
+                                                            <div class="col-md-3 comment-date">
+                                                                10m ago 
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12 comment">
@@ -1592,14 +1551,15 @@
                                                     <div class="col-md-11 comment-container">
                                                         <div class="row">
                                                             <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                                                <i class="material-icons">more_horiz</i>
-                                                            </a>
-                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                                                <li><a href="javascript:;">Edit</a></li>
-                                                                <li><a href="javascript:;">Delete</a></li>
-                                                            </ul>
+                                                            <div class="col-md-3 comment-date">
+                                                                10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                    <i class="material-icons">more_horiz</i>
+                                                                </a>
+                                                                <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                    <li><a href="javascript:;">Edit</a></li>
+                                                                    <li><a href="javascript:;">Delete</a></li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12 comment">
@@ -1794,24 +1754,6 @@
             $('.filter-title-flip-container .feed-title-container').hide(400);
 
         });
-
-        /*$("a.comment-actions").click(function(){
-            if ($(this).parents('.feeds-comments-container ul litr:first')) {
-                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=0px'}, 800);
-            }
-            else if ($(this).parents('.feeds-comments-container ul li:nth-last-child(1)')) {
-                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=50px'}, 800);
-            }
-            else{
-                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=30px'}, 800);
-            }
-        });*/
-
-         $('a.comment-actions').click(function(e){
-                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=30px'}, 800);
-         });
-
-        
     </script>
 
     <script>

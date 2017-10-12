@@ -500,6 +500,30 @@
             }
 
             .status-update-text {
+                padding: 0;
+
+                input {
+                    width: 100%;
+                    resize: none;
+                    height: 40px;
+                    border: 0;
+                    padding: 8px 12px 8px 40px;
+                    background: #fff url("../img/search.svg") no-repeat 8px 10px;
+                    background-size: 20px;
+                }
+            }
+
+            .status-update-button {
+                width: auto !important;
+
+                i {
+                    line-height: 0.95;
+                }
+            }
+        }
+
+        .send-comment-container {
+            .status-update-text {
                 textarea {
                     width: 100%;
                     resize: none;
@@ -520,73 +544,15 @@
             }
         }
 
-        .filter-title-flip-container {
+        .feed-title-container {
             border-top: 2px solid #e9ebee;
             padding-top: 15px;
             margin-bottom: 20px;
 
-            .feed-title-container {
-                .feed-title {
-                    font-size: 16px;
-                    color: #353f53;
-                    font-weight: 600;
-                }
-
-                a {
-                    text-align: right;
-                    font-size: 14px;
-                    color: #353f53;
-                    text-decoration: underline;
-
-                    &:hover {
-                        text-decoration: none;
-                    }
-                }
-            }
-
-            .filter-container {
-                display: -webkit-box;
-                display: -moz-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                align-items: center;
-
-                .chosen-container-multi .chosen-choices {
-                    min-height: 40px;
-                    height: auto;
-                    padding: 7px 15px !important;
-                }
-
-                .chosen-container-multi .chosen-choices li.search-field input[type=text] {
-                    width: 100% !important;
-                }
-
-                .chosen-container-multi .chosen-choices li.search-choice {
-                    margin: 0 5px 5px 0;
-                    border: 1px solid #353f53;
-                    background-color: #353f53;
-                }
-
-                .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
-                    position: absolute;
-                    top: 7px;
-                    right: 5px;
-                    display: block;
-                    width: 12px;
-                    height: 12px !important;
-                    background: url(../lib/chosen/chosen-sprite-white.png) -42px -9px no-repeat !important;
-                    font-size: 1px;
-                }
-
-                .chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover {
-                    background-position: -42px -9px;
-                }
-
-                button {
-                    width: 170px !important;
-                    margin-left: 10px;
-                }
+            .feed-title {
+                font-size: 16px;
+                color: #353f53;
+                font-weight: 600;
             }
         }
     }
@@ -699,29 +665,12 @@
 
         .feeds-comments-container {
             height: 60vh;
-            overflow-y: scroll;
+            overflow-y: auto;
+            overflow-x: hidden;
 
             ul {
                 li {
-                    .comments-section {
-                        .comment-date {
-                            font-size: 12px;
-                            padding-right: 0;
-                            text-align: right;
-                            width: calc(16.66666667% + 20px);
-                        }
-
-                        a.comment-actions {
-                            margin-top: -4px;
-                            padding: 0;
-                            position: relative;
-                            top: 0;
-                            right: 10px;
-                            color: #b5b5b5;
-                            text-align: right;
-                            width: 35px;
-                        }
-                    }
+                    .comments-section {}
                 }
             }
         }
