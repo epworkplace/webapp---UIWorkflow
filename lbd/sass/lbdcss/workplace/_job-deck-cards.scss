@@ -132,6 +132,14 @@
 .card-box {
     border: 1px solid transparent;
 
+    .row{
+        &:nth-last-child(2){
+            .card-title{
+                margin-bottom: 10px;
+            }
+        }
+    }
+
     .card-header {
         .card-icon {
             padding: 0;
@@ -339,6 +347,11 @@
             right: -5px;
             font-size: 12px;
             color: #d9dbde;
+        }
+        &:last-child{
+            &:before{
+                display: none;
+            }
         }
     }
 }
