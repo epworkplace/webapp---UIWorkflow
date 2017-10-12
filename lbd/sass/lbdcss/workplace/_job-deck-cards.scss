@@ -132,9 +132,9 @@
 .card-box {
     border: 1px solid transparent;
 
-    .row{
-        &:nth-last-child(2){
-            .card-title{
+    .row {
+        &:nth-last-child(2) {
+            .card-title {
                 margin-bottom: 10px;
             }
         }
@@ -174,21 +174,14 @@
 
     .card-title {
         text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        color: #353f53;
 
         &.draft {
             font-weight: 400;
             color: #d7d9dc;
             font-style: italic;
-        }
-
-        a {
-            font-size: 14px;
-            font-weight: 600;
-            color: #353f53;
-
-            &:hover {
-                color: #448AFF;
-            }
         }
     }
 
@@ -348,8 +341,9 @@
             font-size: 12px;
             color: #d9dbde;
         }
-        &:last-child{
-            &:before{
+
+        &:last-child {
+            &:before {
                 display: none;
             }
         }
@@ -752,13 +746,14 @@
         right: -40px !important;
     }
 
-    .slick-list{
+    .slick-list {
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-        
+        justify-content: center;
+
         .slick-track {
             padding: 10px 0;
             display: -webkit-flex;
@@ -783,10 +778,8 @@
                     right: 5px;
                 }
             }
-        }        
+        }
     }
-
-
 }
 
 /* Slider for multiple user Ends*/
