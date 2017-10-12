@@ -501,15 +501,28 @@
 
             .status-update-text {
                 padding: 0;
+                position: relative;
 
                 input {
                     width: 100%;
                     resize: none;
                     height: 40px;
                     border: 0;
-                    padding: 8px 12px 8px 40px;
+                    padding: 8px 35px 8px 40px;
                     background: #fff url("../img/search.svg") no-repeat 8px 10px;
                     background-size: 20px;
+                }
+
+                a.reset-search {
+                    display: none;
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+                    color: #cacaca;
+
+                    &:hover {
+                        color: #353f53;
+                    }
                 }
             }
 

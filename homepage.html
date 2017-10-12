@@ -64,12 +64,25 @@
     <script type="text/javascript">
         
         /*Show filter*/
-        $('.filter-title-flip-container .filter-container').hide();
+        /*$('.filter-title-flip-container .filter-container').hide();
             $('.filter-title-flip-container .feed-title-container a').click(function(e) {
             e.preventDefault();
             $('.filter-title-flip-container .filter-container').show(400);
             $('.filter-title-flip-container .feed-title-container').hide(400);
 
+        });*/
+
+        //Search box Search Icon
+        $('.status-update-container .status-update-text input').keyup(function() {
+            if($(this).val() == ''){
+                $(this).parent().find('a.reset-search').css({
+                    display: 'none'
+                });
+            }else{
+                $(this).parent().find('a.reset-search').css({
+                    display: 'block'
+                });
+            }
         });
     </script>
 

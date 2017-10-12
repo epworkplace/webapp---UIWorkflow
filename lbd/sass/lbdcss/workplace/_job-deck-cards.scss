@@ -752,7 +752,6 @@
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-        
 
         .slick-track {
             padding: 10px 0;
@@ -779,7 +778,8 @@
                 }
             }
         }
-        &.slick-center{
+
+        &.slick-center {
             justify-content: center;
         }
     }
