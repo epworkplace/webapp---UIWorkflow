@@ -132,6 +132,14 @@
 .card-box {
     border: 1px solid transparent;
 
+    .row{
+        &:nth-last-child(2){
+            .card-title{
+                margin-bottom: 10px;
+            }
+        }
+    }
+
     .card-header {
         .card-icon {
             padding: 0;
@@ -339,6 +347,11 @@
             right: -5px;
             font-size: 12px;
             color: #d9dbde;
+        }
+        &:last-child{
+            &:before{
+                display: none;
+            }
         }
     }
 }
@@ -739,24 +752,41 @@
         right: -40px !important;
     }
 
-    .slick-track {
-        padding: 10px 0;
+    .slick-list{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        
+        .slick-track {
+            padding: 10px 0;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        .slick-slide {
-            margin: 0px;
-            padding: 0 15px;
-            outline: none;
+            .slick-slide {
+                margin: 0px;
+                padding: 0 15px;
+                outline: none;
 
-            img {
-                width: 52px;
+                img {
+                    width: 52px;
+                }
+
+                .notification {
+                    top: -5px;
+                    right: 5px;
+                }
             }
-
-            .notification {
-                top: -5px;
-                right: 5px;
-            }
-        }
+        }        
     }
+
+
 }
 
 /* Slider for multiple user Ends*/
