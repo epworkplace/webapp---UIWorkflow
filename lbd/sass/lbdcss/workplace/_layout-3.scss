@@ -1,0 +1,30 @@
+/* Layout-3 Changes Starts */
+.layout-3.wp-app {
+    .page-wrap {
+        .main-panel-wrap {
+            .main-panel {
+                .main-panel-page {
+                    padding: 0;
+
+                    .main-container {
+                        margin: 0 auto !important;
+
+                        .content {
+                            .tab-content-container {
+                                .contract-content-container, .client-content-container {
+                                    margin-top: 35px;
+                                }
+
+                                .contract-content-container:nth-of-type(1), .client-content-container:nth-of-type(1) {
+                                    margin-top: 123px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Layout-3 Changes Ends */

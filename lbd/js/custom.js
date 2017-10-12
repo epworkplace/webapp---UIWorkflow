@@ -474,6 +474,9 @@ $(document).ready(function(){
 		plugins: "autoresize",
 		autoresize_min_height: "400",
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE intregation
@@ -483,6 +486,9 @@ $(document).ready(function(){
   		menubar : false,
 		height: "230",
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Message intregation
@@ -491,6 +497,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Fire Message intregation
@@ -499,6 +508,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Job Confirm Message intregation
@@ -507,6 +519,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Job Cancel Message intregation
@@ -515,6 +530,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Report File Message intregation
@@ -523,6 +541,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Announce Message intregation
@@ -531,6 +552,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//Chosen Dropdown with Image

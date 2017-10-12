@@ -3393,14 +3393,6 @@ be a descendant of the grid when it is being dragged.
 
 /*           Font Smoothing      */
 
-body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, .alert, a, .td-name, td, button.close {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
-    font-weight: 300;
-    color: #7d889a;
-}
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     font-weight: 300;
     margin: 30px 0 15px;
@@ -5513,7 +5505,6 @@ star {
 
 .wrapListContact {
     padding: 15px;
-    font-family: 'Roboto', sans-serif;
 }
 
 ul {
