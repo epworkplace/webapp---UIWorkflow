@@ -241,7 +241,7 @@
                 .highlight-bg {
                     border-radius: 3px;
                     flex-grow: 1;
-                    align-items: center;
+                    // align-items: center;
                     display: flex;
                 }
 
@@ -508,6 +508,33 @@
 
 .global-user-profile-modal{
     @extend .contributor-user-profile-modal;
+    .general-info{
+        .user-contact-info{
+            [class^="contact-"]{
+                padding: 0;
+                list-style-type: none;
+                ul &{
+                    padding: 0;
+                }
+                .contact-type{
+                    width: 10%;
+                    i{
+                        font-size: 18px;
+                    }
+                }
+                .primary-font{
+                    font-weight: 600;
+                }
+                .contact-email{
+                    color: $selected !important;
+                    text-decoration: underline !important;
+                    &:hover{
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .change-user-image-modal{
@@ -515,9 +542,6 @@
 
     .divider{
         @include divider;
-    }
-    .modal-content{
-        padding: 10px;
     }
     .modal-title{
         margin: 0 !important;
@@ -529,6 +553,11 @@
         display: -o-flex;
         display: flex;
         width: 50px;
+        i{
+            &:hover{
+                color: $main !important;
+            }
+        }
     }
 }
 
