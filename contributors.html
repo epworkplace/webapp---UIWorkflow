@@ -158,15 +158,21 @@
 
 <!-- Modal windows starts -->
 
+<!-- Delete confirmation modal -->
 <!-- @include _partials/_delete-confirmation-modal.html -->
+<!-- Profile modal -->
 <!-- @include _partials/_profile-modal.html -->
-
-<!-- Create new client modal -->
+<!-- Create new Client modal -->
 <!-- @include _partials/_clients-create-new-client-modal.html -->
-<!-- Create new contact -->
+<!-- Create new Contact modal -->
 <!-- @include _partials/_clients-create-new-contact-modal.html -->
-<!-- User profile modal -->
+<!-- Contributors user profile modal -->
 <!-- @include _partials/_contributors-user-profile-modal.html -->
+<!-- Gloabal user profile modal -->
+<!-- @include _partials/_global-user-profile-modal.html -->
+<!-- Change user profile image modal -->
+<!-- @include _partials/_change-user-image-modal.html -->
+
 
 <!-- Modal windows ends -->
 
@@ -218,9 +224,9 @@ $(document).ready(function(){
     $(document).on('click', ".language-info-edit .add-a-language", function(e){
         var newLanguageRow = ``;
         e.stopPropagation();
-        // $( ".user-language-edit-container .user-language-edit:last-child" ).clone().appendTo( ".user-language-edit-container" );
-        // $('.user-language-edit:last-child .selectpicker').selectpicker('refresh');
-        // $('.user-language-edit-container').append(newLanguageRow);
+        /*$( ".user-language-edit-container .user-language-edit:last-child" ).clone().appendTo( ".user-language-edit-container" );
+        $('.user-language-edit:last-child .selectpicker').selectpicker('refresh');
+        $('.user-language-edit-container').append(newLanguageRow);*/
     });
     $(document).on('click', '.selectpicker', function(e){
       $(this).selectpicker('refresh');
@@ -259,14 +265,22 @@ $(document).ready(function(){
 
     $(document).on('click', ".special-users .checkbox", function(e){
       e.stopPropagation();
-      // var thisSiblings = $(this).parents('.quote-list-item').siblings();
-      // var thisListItem = $(this).parents('.quote-list-item');
-      // var checkedRadio = thisListItem.find('.radio');
         if ($(this).hasClass('checked')) {
             $(this).parents('.list-item').addClass('selected-in-list')
         } else {
             $(this).parents('.list-item').removeClass('selected-in-list')
         }
+    });
+
+    /*Card-mission click to open Specific mission*/
+    $('div').delegate('.card-section-list ul li .card', 'click', function(e){
+       if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
+          /*code placed inside this condition is not executed on clicking the element #test*/
+    e.stopPropagation();
+          /*window.open('contract-overview.html','_blank');*/
+          $('#contributorUserProfileModal').modal('show')
+       }
+    
     });
 
 });

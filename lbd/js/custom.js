@@ -888,7 +888,7 @@ $(document).ready(function(){
         }
     });
 
-// Card-mission click to open Specific mission
+/*// Card-mission click to open Specific mission
 $('div').delegate('.card-section-list ul li .card', 'click', function(e){
    if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
       // code placed inside this condition is not executed on clicking the element #test
@@ -897,7 +897,7 @@ e.stopPropagation();
     window.open('contract-overview.html','_blank');
    }
 // console.log('Clicked on card-box 02');
-});
+});*/
 
 $('div').delegate('.card-section-list ul li .card', 'mouseover', function(e){
    if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation').length === 0) {

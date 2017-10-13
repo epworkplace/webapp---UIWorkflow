@@ -95,7 +95,7 @@
                         <i class="material-icons">crop_rotate</i>
                         <p>Switch to Workplace</p>
                     </a>
-                    <a class="profile clearfix" href="javascript:;">
+                    <a class="profile clearfix" href="javascript:;" data-toggle="modal" data-target="#globalUserProfileModal">
                         <div class="profile_pic">
                             <img src="lbd/img/default-avatar.png" alt="..." class="img-circle profile_img" />
                         </div>
@@ -5129,23 +5129,34 @@
             /*review rate Ends*/
 
 
-            $(function () {
-                $("#candidateTaskRating").rateYo({
-                    rating: 3.5,
-                    spacing: "2px",
-                    numStars: 5,
-                    normalFill: "#d4d6dc",
-                    ratedFill: "#fec500",
-                    readOnly: true,
-                    starWidth: "16px"
-                });
+        $(function () {
+            $("#candidateTaskRating").rateYo({
+                rating: 3.5,
+                spacing: "2px",
+                numStars: 5,
+                normalFill: "#d4d6dc",
+                ratedFill: "#fec500",
+                readOnly: true,
+                starWidth: "16px"
             });
+        });
 
-            /*Upload Job on Click*/
-            $("#update-job-container").on('click', function(e){
-                e.preventDefault();
-                $("#upload-job:hidden").trigger('click');
-            });
+        /*Upload Job on Click*/
+        $("#update-job-container").on('click', function(e){
+            e.preventDefault();
+            $("#upload-job:hidden").trigger('click');
+        });
+
+        /*Card-mission click to open Specific mission*/
+        $('div').delegate('.card-section-list ul li .card', 'click', function(e){
+           if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
+              /*code placed inside this condition is not executed on clicking the element #test*/
+                e.stopPropagation();
+              window.open('contract-overview.html','_blank');
+              /*$('#contributorUserProfileModal').modal('show')*/
+           }
+        
+        });            
 
 });
         </script>
