@@ -43,6 +43,7 @@
 
                             .contract-spec {
                                 flex-grow: 1;
+
                                 .contract-breadcrumb {
                                     a {
                                         font-size: 12px;
@@ -947,6 +948,7 @@
                                                                     padding: 30px 20px;
                                                                     margin-bottom: 17px;
                                                                     position: relative;
+                                                                    min-height: 170px;
 
                                                                     .edit {
                                                                         visibility: hidden;
