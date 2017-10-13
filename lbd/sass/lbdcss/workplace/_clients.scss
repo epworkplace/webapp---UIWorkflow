@@ -267,57 +267,7 @@
             }
 
             .contact-pic {
-                &.full {
-                    display: flex;
-                    align-items: center;
-
-                    .image-container {
-                        .image-loaded {
-                            max-height: 90px;
-                        }
-                    }
-
-                    .contact-desc-container {
-                        a {
-                            text-decoration: underline;
-
-                            &:hover {
-                                text-decoration: none;
-                            }
-                        }
-
-                        .description {
-                            a {
-                                &.contact-name {
-                                    color: #448aff;
-                                    font-weight: 600;
-                                }
-                            }
-                        }
-
-                        .image-action {
-                            a {
-                                display: flex;
-                                align-items: center;
-                                margin-right: 20px;
-                                position: relative;
-
-                                &.remove {
-                                    color: #EE0A5F;
-                                    padding-left: 15px;
-
-                                    &:before {
-                                        content: '\E5CD';
-                                        font-family: 'Material Icons';
-                                        position: absolute;
-                                        top: 0px;
-                                        left: 0;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+                @extend %contact-pic;
             }
 
             .form-group {
