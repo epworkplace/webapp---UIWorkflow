@@ -203,6 +203,7 @@
     [class*='-title'] {
         text-transform: uppercase;
         font-weight: 600;
+        align-items: center;
     }
 
     .user-level {}
@@ -509,30 +510,32 @@
 .global-user-profile-modal{
     @extend .contributor-user-profile-modal;
     .general-info{
-        .user-contact-info{
-            [class^="contact-"]{
+        [class^="contact-"]{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            ul &{
                 padding: 0;
-                list-style-type: none;
-                ul &{
-                    padding: 0;
-                }
-                .contact-type{
-                    width: 10%;
-                    i{
-                        font-size: 18px;
-                    }
-                }
-                .primary-font{
-                    font-weight: 600;
-                }
-                .contact-email{
-                    color: $selected !important;
-                    text-decoration: underline !important;
-                    &:hover{
-                        text-decoration: none !important;
-                    }
+            }
+            .contact-type{
+                width: 40px;
+                i{
+                    font-size: 18px;
                 }
             }
+            .primary-font{
+                font-weight: 600;
+            }
+            .contact-email{
+                color: $selected !important;
+                text-decoration: underline !important;
+                &:hover{
+                    text-decoration: none !important;
+                }
+            }
+        }
+        .user-contact-info{
+
         }
     }
 }
