@@ -9467,9 +9467,14 @@ html {
     padding: 7px 25px 7px 10px !important;
 }
 
-.chosen-container-single .chosen-single span {
-    font-size: 14px;
-    color: #7d889a;
+.chosen-container-single .chosen-single {
+    height: 50px;
+    line-height: 30px;
+
+    span {
+        font-size: 14px;
+        color: #7d889a;
+    }
 }
 
 .filter-list .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
