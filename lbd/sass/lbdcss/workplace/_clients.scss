@@ -259,6 +259,9 @@
     }
 
     &.create-new-contact-modal {
+
+        @extend %modal;
+        
         .form {
             label {
                 &.main-contact {
