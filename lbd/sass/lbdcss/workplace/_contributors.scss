@@ -1,4 +1,3 @@
-
 /* Contributors template CSS Starts */
 .layout-3.wp-app.contributors {
     .page-wrap {
@@ -16,8 +15,11 @@
                                             ul[data-toggle='buttons'] {
                                                 li {
                                                     a {
+                                                        padding: 30px 0 0 0;
+
                                                         p, h4 {
                                                             margin: 0;
+                                                            font-size: 12px;
                                                         }
 
                                                         @for $index from 1 through 6 {
@@ -29,7 +31,9 @@
                                                         }
 
                                                         h4 {
-                                                            font-size: 16px;
+                                                            font-size: 14px;
+                                                            font-weight: 700;
+                                                            line-height: 1;
                                                         }
 
                                                         &:hover, &.active, &:focus {
@@ -174,6 +178,7 @@
 
     .user-name {
         margin-bottom: 0;
+
         label {
             display: -webkit-flex;
             display: -moz-flex;
@@ -191,7 +196,7 @@
         }
     }
 
-    .user-jobs{
+    .user-jobs {
         margin-bottom: 0;
     }
 
@@ -208,17 +213,20 @@
 
     .user-level {}
 
-    .user-image-change, .user-logout{
+    .user-image-change, .user-logout {
         text-decoration: underline;
-        &:hover{
+
+        &:hover {
             text-decoration: none;
         }
     }
-    .user-image-change{
+
+    .user-image-change {
         margin-right: 10px;
         color: $main;
     }
-    .user-logout{
+
+    .user-logout {
         color: $delete;
     }
 
@@ -242,6 +250,7 @@
                 .highlight-bg {
                     border-radius: 3px;
                     flex-grow: 1;
+
                     // align-items: center;
                     display: flex;
                 }
@@ -507,7 +516,7 @@
     }
 }
 
-.global-user-profile-modal{
+.global-user-profile-modal {
     @extend .contributor-user-profile-modal;
     .bs-actionsbox{
         margin: 5px;
@@ -524,27 +533,32 @@
             padding: 0;
             margin: 0;
             list-style-type: none;
-            ul &{
+
+            ul & {
                 padding: 0;
             }
-            .contact-type{
+
+            .contact-type {
                 width: 40px;
-                i{
+
+                i {
                     font-size: 18px;
                 }
             }
-            .primary-font{
+
+            .primary-font {
                 font-weight: 600;
             }
-            .contact-email{
+
+            .contact-email {
                 color: $selected !important;
                 text-decoration: underline !important;
-                &:hover{
+
+                &:hover {
                     text-decoration: none !important;
                 }
             }
         }
-        .user-contact-info{
 
         }
         .contact-account-info{
@@ -582,27 +596,31 @@
                 }
             }
         }
+    .user-contact-info {}
     }
 }
 
-.change-user-image-modal{
+.change-user-image-modal {
     @extend .create-new-contact-modal;
 
-    .divider{
+    .divider {
         @include divider;
     }
-    .modal-title{
+
+    .modal-title {
         margin: 0 !important;
     }
-    .back{
+
+    .back {
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
         display: -o-flex;
         display: flex;
         width: 50px;
-        i{
-            &:hover{
+
+        i {
+            &:hover {
                 color: $main !important;
             }
         }
