@@ -1,12 +1,12 @@
 /* Contributors template CSS Starts */
-.layout-3.wp-app.contributors {
+.layout-3.wp-app {
     .page-wrap {
         .main-panel-wrap {
             .main-panel {
                 .main-panel-page {
                     .main-panel-page-header {}
 
-                    .main-container {
+                    .main-container.contributors {
                         .tab-panel-container {
                             .tab-panel {
                                 .page-filter {
@@ -518,9 +518,18 @@
 
 .global-user-profile-modal {
     @extend .contributor-user-profile-modal;
-
-    .general-info {
-        [class^="contact-"] {
+    .bs-actionsbox{
+        margin: 5px;
+        .btn-group{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+    }
+    .general-info{
+        [class^="contact-"]{
             padding: 0;
             margin: 0;
             list-style-type: none;
@@ -550,8 +559,41 @@
                 }
             }
         }
-
-        .user-contact-info {}
+    }
+    .contact-account-info{
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                flex-grow: 1;
+                align-items: center;
+            }
+        }
+    }
+    .user-references{
+        .feeds-container{
+            padding-bottom: 0;
+            margin-bottom: 0;
+            @extend %feeds-container;
+            .feeds-comments-container{
+                background: none;
+                padding: 0;
+                .comments-list-container{
+                    max-height: 350px;
+                    overflow-y: auto;
+                    li{
+                        padding: 10px;
+                        border-bottom: none;
+                        margin-bottom: 10px;
+                        width: calc(100% - 10px);
+                        .comment-container{
+                            width: calc(91.6666667% + 20px);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

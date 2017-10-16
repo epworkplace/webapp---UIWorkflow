@@ -43,7 +43,7 @@
     <!--     Temporary css for Layouts     -->
 </head>
 
-<body class="wp-app layout-3 contributors">
+<body class="wp-app layout-3">
 <div class="wrapper">
   <div class="sidebar">
       <div class="logo">
@@ -111,7 +111,7 @@
       <div class="col-md-12 main-panel-wrap">
         <div class="main-panel">
           <div class="container-fluid main-panel-page">
-            <div class="row main-container clients-list-page" id="">
+            <div class="row main-container clients-list-page contributors" id="">
               <div class="col-md-4 tab-panel-container">
                 <div class="tab-panel outside">
                   <nav class="navbar navbar-default">
@@ -2313,11 +2313,7 @@
 </div>
 
 <!-- Gloabal user profile modal -->
-<<<<<<< HEAD
-<div aria-labelledby="globalUserProfileModal" class="modal fade global-user-profile-modal" id="globalUserProfileModal" role="dialog" tabindex="-1">
-=======
 <div aria-labelledby="globalUserProfileModal" class="modal fade global-user-profile-modal" id="globalUserProfileModal" role="dialog" style="" tabindex="-1">
->>>>>>> f7edfafb38f971c18a563310d1056520deed92e6
     <div class="modal-dialog modal-lg" role="modal">
         <div class="modal-content">
             <div class="modal-body">
@@ -2374,24 +2370,24 @@
                         <div class="col-md-12 tab-step">
                             <div class="tab-step-content">
                                 <ul class="nav">
-                                    <li class="active">
+                                    <li>
                                         <a data-toggle="tab" href="#userOverview">
                                             Overview
                                         </a>
                                     </li>
                                     <li>
                                         <a data-toggle="tab" href="#userComments">
-                                            Comments &amp; activites
+                                            Comments &amp; activities
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="active">
                                         <a data-toggle="tab" href="#userGroup">
                                             User group and role
                                         </a>
                                     </li>
                                 </ul>
                                 <div class="tab-content tab-content-progress">
-                                    <div class="tab-pane general-info active" id="userOverview">
+                                    <div class="tab-pane general-info" id="userOverview">
                                         <div class="row d-flex form-group">
                                             <div class="col-md-6 d-flex">
                                                 <div class="highlight-bg">
@@ -2579,28 +2575,30 @@
                                                     <span class="d-inline-flex info-title">
                                                         Account Informations <i class="material-icons pl-10">help</i>
                                                     </span>
-                                                    <span class="pull-right d-inline-block helper-text">
-                                                        <a class="languages-edit" href="javascript:;">
-                                                            Edit
-                                                        </a>
-                                                    </span>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 d-flex">
                                                 <div class="highlight-bg">
-                                                    <div class="col-md-12 contact-info">
+                                                    <div class="col-md-6 contact-account-info">
                                                         <div class="row info-body">
-                                                            <ul class="contact-phones-list">
-                                                                <li class="list-item df-ac">
-                                                                    <span class="d-inline-flex helper-text contact-type">Mob : </span>
-                                                                    <span class="d-inline-flex primary-font">06 59 86 21 45</span>
+                                                            <ul class="d-flex">
+                                                                <li class="list-item">
+                                                                    <span class="d-inline-flex helper-text contact-type mr-10">User name : </span>
+                                                                    <span class="d-inline-flex primary-font">Izvanovec</span>
                                                                 </li>
-                                                                <li class="list-item df-ac">
-                                                                    <span class="d-inline-flex helper-text contact-type">Pro : </span>
-                                                                    <span class="d-inline-flex primary-font">06 59 86 21 45</span>
+                                                                <li class="list-item">
+                                                                    <span class="d-inline-flex helper-text contact-type mr-10">Password : </span>
+                                                                    <span class="d-inline-flex primary-font">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span>
                                                                 </li>
                                                             </ul>
                                                         </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="pull-right d-inline-block helper-text">
+                                                            <a class="languages-edit" href="javascript:;">
+                                                                Edit
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2983,384 +2981,211 @@
                                     </div>
                                     <div class="tab-pane user-references" id="userComments">
                                         <div class="d-flex row form-group">
-                                            <div class="col-md-12 reference-info">
+                                            <div class="col-md-4 reference-info">
                                                 <div class="clearfix">
-                                                    <span class="d-inline-block info-title">
-                                                        References
-                                                    </span>
+                                                    <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="Filter comments & activities" id="contributorJobs">
+                                                      <option data-hidden="true"></option>
+                                                      <option value="0">September 2018 (10)</option>
+                                                      <option value="1">October 2018 (13)</option>
+                                                      <option value="2">November 2018 (14)</option>
+                                                      <option value="3">June 2018 (15)</option>
+                                                      <option value="4">December 2018 (16)</option>
+                                                      <option value="5">March 2018 (17)</option>
+                                                      <option value="6">July 2018 (18)</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row d-flex form-group">
                                             <div class="col-md-12 d-flex from-group">
-                                                <div class="highlight-bg">
-                                                    <div class="">
-                                                        <div class="references-container">
-                                                            <ul class="nav nav-icons" role="tablist">
-                                                                <li class="active">
-                                                                    <a data-toggle="tab" href="#reference01" role="tab">
-                                                                        <img class="img-circle img-responsive" src="lbd/img/webedia.jpg"/>
-                                                                    </a>
+                                                <div class="row">
+                                                    <div class="col-md-12 feeds-container">
+                                                        <div class="col-md-12 feeds-comments-container" data-container="body">
+                                                            <ul class="comments-list-container">
+                                                                <li class="highlight-bg">
+                                                                    <div class="col-md-12 comments-section">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 user-image">
+                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                    <div class="col-md-3 comment-date">
+                                                                                        10m ago 
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 comment">
+                                                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </li>
-                                                                <li>
-                                                                    <a data-toggle="tab" href="#reference02" role="tab">
-                                                                        <img class="img-circle img-responsive" src="lbd/img/apple.jpg"/>
-                                                                    </a>
+                                                                <li class="highlight-bg">
+                                                                    <div class="col-md-12 comments-section">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 user-image">
+                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                    <div class="col-md-3 comment-date">
+                                                                                        10m ago 
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 comment" data-readmore="" aria-expanded="false" id="rmjs-2">
+                                                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est ut fugiat officia expedita dolorem, aliquam, itaque illo eaque fugit ipsam deserunt unde, dolor! <br><br>Obcaecati, sed omnis unde minus harum quisquam aliquam accusantium recusandae eaque beatae! Placeat, dolorum. Cumque voluptatum quo accusantium labore, quos nam laborum voluptatem? Voluptatum delectus, asperiores.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </li>
-                                                                <li class="">
-                                                                    <a data-toggle="tab" href="#reference03" role="tab">
-                                                                        <img class="img-circle img-responsive" src="lbd/img/adobe.jpg"/>
-                                                                    </a>
+                                                                <li class="highlight-bg">
+                                                                    <div class="col-md-12 comments-section">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 user-image">
+                                                                                <i class="material-icons df-ac-jc">message</i>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                    <div class="col-md-3 comment-date">
+                                                                                        10m ago 
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 comment">
+                                                                                        <span class="atMention">@Paulmartin</span> has paused <span class="hashTag">#blog2019</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </li>
-                                                                <li class="">
-                                                                    <a data-toggle="tab" href="#reference04" role="tab">
-                                                                        <img class="img-circle img-responsive" src="lbd/img/default-avatar.png"/>
-                                                                    </a>
+                                                                <li class="highlight-bg">
+                                                                    <div class="col-md-12 comments-section">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 user-image">
+                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                    <div class="col-md-3 comment-date">
+                                                                                        10m ago 
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 comment">
+                                                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="highlight-bg">
+                                                                    <div class="col-md-12 comments-section">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 user-image">
+                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                    <div class="col-md-3 comment-date">
+                                                                                        10m ago 
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 comment" data-readmore="" aria-expanded="false" id="rmjs-2">
+                                                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est ut fugiat officia expedita dolorem, aliquam, itaque illo eaque fugit ipsam deserunt unde, dolor! <br><br>Obcaecati, sed omnis unde minus harum quisquam aliquam accusantium recusandae eaque beatae! Placeat, dolorum. Cumque voluptatum quo accusantium labore, quos nam laborum voluptatem? Voluptatum delectus, asperiores.
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="highlight-bg">
+                                                                    <div class="col-md-12 comments-section">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 user-image">
+                                                                                <i class="material-icons df-ac-jc">message</i>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                                    <div class="col-md-3 comment-date">
+                                                                                        10m ago 
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 comment">
+                                                                                        <span class="atMention">@Paulmartin</span> has paused <span class="hashTag">#blog2019</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div class="tab-content">
-                                                            <div class="tab-pane active" id="reference01">
-                                                                <div class="reference-info">
-                                                                    <div class="reference-header row form-group">
-                                                                        <div class="col-md-5">
-                                                                            <span class="client-id helper-text">
-                                                                                C001
-                                                                            </span>
-                                                                            <span class="primary-font client-name">
-                                                                                Webedia
-                                                                            </span>
-                                                                            <a class="d-block reference-link" href="javascript:;">
-                                                                                Webedia 200 articles blog
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-4 pull-right">
-                                                                            <a class="col-md-6 btn btn-fill full-width btn-download" href="javascript:;">
-                                                                                <span class="btn-label">
-                                                                                    <i class="material-icons">
-                                                                                    file_download
-                                                                                    </i>
-                                                                                </span>
-                                                                                Last work
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="reference-content">
-                                                                        <p>
-                                                                            Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
-                                                                        </p>
-                                                                        <p>
-                                                                            The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="reference-info divider">
-                                                                    <div class="reference-header row form-group">
-                                                                        <div class="col-md-5">
-                                                                            <span class="client-id helper-text">
-                                                                                C001
-                                                                            </span>
-                                                                            <span class="primary-font client-name">
-                                                                                Webedia
-                                                                            </span>
-                                                                            <a class="d-block reference-link" href="javascript:;">
-                                                                                Webedia 200 articles blog
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-4 pull-right">
-                                                                            <a class="col-md-6 btn btn-fill full-width btn-download" href="javascript:;">
-                                                                                <span class="btn-label">
-                                                                                    <i class="material-icons">
-                                                                                    file_download
-                                                                                    </i>
-                                                                                </span>
-                                                                                Last work
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="reference-content">
-                                                                        <p>
-                                                                            Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
-                                                                        </p>
-                                                                        <p>
-                                                                            The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="reference-info divider">
-                                                                    <div class="reference-header row form-group">
-                                                                        <div class="col-md-5">
-                                                                            <span class="client-id helper-text">
-                                                                                C001
-                                                                            </span>
-                                                                            <span class="primary-font client-name">
-                                                                                Webedia
-                                                                            </span>
-                                                                            <a class="d-block reference-link" href="javascript:;">
-                                                                                Webedia 200 articles blog
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-4 pull-right">
-                                                                            <a class="col-md-6 btn btn-fill full-width btn-download" href="javascript:;">
-                                                                                <span class="btn-label">
-                                                                                    <i class="material-icons">
-                                                                                    file_download
-                                                                                    </i>
-                                                                                </span>
-                                                                                Last work
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="reference-content">
-                                                                        <p>
-                                                                            Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
-                                                                        </p>
-                                                                        <p>
-                                                                            The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane" id="reference02">
-                                                                <div class="reference-info form-group">
-                                                                    <div class="reference-header row form-group">
-                                                                        <div class="col-md-5">
-                                                                            <span class="client-id helper-text">
-                                                                                C002
-                                                                            </span>
-                                                                            <span class="primary-font client-name">
-                                                                                Apple
-                                                                            </span>
-                                                                            <a class="d-block reference-link" href="javascript:;">
-                                                                                Apple 200 articles blog
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-4 pull-right">
-                                                                            <a class="col-md-6 btn btn-fill full-width btn-download" href="javascript:;">
-                                                                                <span class="btn-label">
-                                                                                    <i class="material-icons">
-                                                                                    file_download
-                                                                                    </i>
-                                                                                </span>
-                                                                                Last work
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="reference-content">
-                                                                        <p>
-                                                                            Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
-                                                                        </p>
-                                                                        <p>
-                                                                            The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="reference-info form-group divider">
-                                                                    <div class="reference-header row form-group">
-                                                                        <div class="col-md-5">
-                                                                            <span class="client-id helper-text">
-                                                                                C002
-                                                                            </span>
-                                                                            <span class="primary-font client-name">
-                                                                                Apple
-                                                                            </span>
-                                                                            <a class="d-block reference-link" href="javascript:;">
-                                                                                Apple 200 articles blog
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-4 pull-right">
-                                                                            <a class="col-md-6 btn btn-fill full-width btn-download" href="javascript:;">
-                                                                                <span class="btn-label">
-                                                                                    <i class="material-icons">
-                                                                                    file_download
-                                                                                    </i>
-                                                                                </span>
-                                                                                Last work
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="reference-content">
-                                                                        <p>
-                                                                            Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
-                                                                        </p>
-                                                                        <p>
-                                                                            The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane" id="reference03">
-                                                                <div class="reference-info">
-                                                                    <div class="reference-header row form-group">
-                                                                        <div class="col-md-5">
-                                                                            <span class="client-id helper-text">
-                                                                                C003
-                                                                            </span>
-                                                                            <span class="primary-font client-name">
-                                                                                Adobe
-                                                                            </span>
-                                                                            <a class="d-block reference-link" href="javascript:;">
-                                                                                Adobe 200 articles blog
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-4 pull-right">
-                                                                            <a class="col-md-6 btn btn-fill full-width btn-download" href="javascript:;">
-                                                                                <span class="btn-label">
-                                                                                    <i class="material-icons">
-                                                                                    file_download
-                                                                                    </i>
-                                                                                </span>
-                                                                                Last work
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="reference-content">
-                                                                        <p>
-                                                                            Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
-                                                                        </p>
-                                                                        <p>
-                                                                            The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane" id="reference04">
-                                                                <div class="reference-info">
-                                                                    <div class="reference-header row form-group">
-                                                                        <div class="col-md-5">
-                                                                            <span class="client-id helper-text">
-                                                                                C004
-                                                                            </span>
-                                                                            <span class="primary-font client-name">
-                                                                                User
-                                                                            </span>
-                                                                            <a class="d-block reference-link" href="javascript:;">
-                                                                                User 200 articles blog
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="col-md-4 pull-right">
-                                                                            <a class="col-md-6 btn btn-fill full-width btn-download" href="javascript:;">
-                                                                                <span class="btn-label">
-                                                                                    <i class="material-icons">
-                                                                                    file_download
-                                                                                    </i>
-                                                                                </span>
-                                                                                Last work
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="reference-content">
-                                                                        <p>
-                                                                            Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display.
-                                                                        </p>
-                                                                        <p>
-                                                                            The first thing you notice when you hold the phone is how great it feels in your hand. There are no distinct edges. No gaps. Just a smooth, seamless bond of metal and glass that feels like one continuous surface.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="row d-flex form-group">
-                                            <div class="col-md-12 d-flex from-group">
-                                                <ul class="user-works d-flex" role="">
-                                                    <li class="list-item highlight-bg">
-                                                        <span>
-                                                            Product description
-                                                        </span>
-                                                    </li>
-                                                    <li class="list-item highlight-bg">
-                                                        <span>
-                                                            Blog articles
-                                                        </span>
-                                                    </li>
-                                                    <li class="list-item highlight-bg">
-                                                        <span>
-                                                            SEO articles
-                                                        </span>
-                                                    </li>
-                                                    <li class="list-item highlight-bg">
-                                                        <span>
-                                                            Guides
-                                                        </span>
-                                                    </li>
-                                                    <li class="list-item highlight-bg">
-                                                        <span>
-                                                            Articles
-                                                        </span>
-                                                    </li>
-                                                    <li class="list-item highlight-bg">
-                                                        <span>
-                                                            Newletter
-                                                        </span>
-                                                    </li>
-                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane external-links" id="userGroup">
-                                        <div class="d-flex form-group row">
-                                            <div class="col-md-12">
-                                                <div class="highlight-bg">
-                                                    <div class="row full-width">
-                                                        <div class="col-md-12">
-                                                            <div class="row website-links form-group">
-                                                                <ul class="website-links-list">
-                                                                    <li>
-                                                                        <a class="external-website-link" href="javascript:;">
-                                                                            External website link 01
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="external-website-link" href="javascript:;">
-                                                                            External website link 02
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="external-website-link" href="javascript:;">
-                                                                            External website link 03
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="row socialmedia-links form-group">
-                                                                <ul class="d-flex socialmedia-links-list">
-                                                                    <li class="d-flex">
-                                                                        <a href="javascript:;">
-                                                                            <img class="img-circle img-responsive" src="lbd/img/social-media/fb-circle.png"/>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="d-flex">
-                                                                        <a href="javascript:;">
-                                                                            <img class="img-circle img-responsive" src="lbd/img/social-media/twitter-circle.png"/>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="d-flex">
-                                                                        <a href="javascript:;">
-                                                                            <img class="img-circle img-responsive" src="lbd/img/social-media/pinterest-circle.png"/>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="d-flex">
-                                                                        <a href="javascript:;">
-                                                                            <img class="img-circle img-responsive" src="lbd/img/social-media/youtube-circle.png"/>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                    <div class="tab-pane external-links active" id="userGroup">
+                                        <div class="d-flex row form-group">
+                                            <div class="col-md-6 reference-info">
+                                                <div class="clearfix">
+                                                    <label for="" class="text-uppercase">User Group</label>
+                                                    <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="Filter comments & activities" id="contributorJobs">
+                                                        <option data-hidden="true"></option>
+                                                        <option value="0">Sales</option>
+                                                        <option value="1">Management</option>
+                                                        <option value="2">Finance</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 reference-info">
+                                                <div class="clearfix">
+                                                    <label for="" class="text-uppercase">Role</label>
+                                                    <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="Business developer" id="contributorJobs">
+                                                        <option data-hidden="true"></option>
+                                                        <option value="0">Business developer</option>
+                                                        <option value="1">Project Manager</option>
+                                                        <option value="2">Executive</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex form-group row">
-                                            <div class="col-md-12">
-                                                <div class="">
-                                                    <a class="add-external-links d-block" href="javascript:;">
-                                                        + Add a external link
-                                                    </a>
+                                        <div class="d-flex row form-group">
+                                            <div class="col-md-6 reference-info">
+                                                <div class="clearfix">
+                                                    <label for="" class="text-uppercase">Active user</label>
+                                                    <div class="col-md-12 activation-container form-control df-ac auto-height p-10">
+                                                        <div class="col-md-2 p-0 activation-switch df-ac">
+                                                            <div class="switch" data-off-label="" data-on-label="">
+                                                                <input type="checkbox"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10 activation-statement">
+                                                            This user is active : 
+                                                            <span class="yes">
+                                                                YES
+                                                            </span>
+                                                            <span class="no">
+                                                                NO
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -3660,6 +3485,28 @@ $(document).ready(function(){
        }
     
     });
+
+    /*Read more / Read less*/
+         $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+        $(this).find('.comment').css({overflow: "hidden"});
+            }).one('shown.bs.modal', function () {
+                /*initialize plugin once modal shown*/
+                $(this).find('.comment').readmore({
+                    speed : 100,
+                    collapsedHeight: 60,
+                    moreLink: '<a href="#" class="morelink">See more</a>',
+                    lessLink: '<a href="#" class="morelink">See Less</a>'
+                });
+        });
 
 });
 </script>
