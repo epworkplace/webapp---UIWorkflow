@@ -37,7 +37,7 @@ $directions :('t':'top','b':'bottom','r':'right', 'l':'left');
         #{nth($dim, 2)}: #{$size}px;
     }
   @each $dir in $directions{
-    @for $i from 0 through 5{
+    @for $i from 0 through 6{
       $size: $i*5;
       .#{nth($dim,1)}#{nth($dir,1)}-#{$size}{
         #{nth($dim,2)}-#{nth($dir,2)}:#{$size}px;

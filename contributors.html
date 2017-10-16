@@ -283,6 +283,28 @@ $(document).ready(function(){
     
     });
 
+    /*Read more / Read less*/
+         $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+        $(this).find('.comment').css({overflow: "hidden"});
+            }).one('shown.bs.modal', function () {
+                /*initialize plugin once modal shown*/
+                $(this).find('.comment').readmore({
+                    speed : 100,
+                    collapsedHeight: 60,
+                    moreLink: '<a href="#" class="morelink">See more</a>',
+                    lessLink: '<a href="#" class="morelink">See Less</a>'
+                });
+        });
+
 });
 </script>
 
