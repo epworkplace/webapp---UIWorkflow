@@ -208,6 +208,7 @@
     [class*='-title'] {
         text-transform: uppercase;
         font-weight: 600;
+        align-items: center;
     }
 
     .user-level {}
@@ -519,37 +520,38 @@
     @extend .contributor-user-profile-modal;
 
     .general-info {
-        .user-contact-info {
-            [class^="contact-"] {
+        [class^="contact-"] {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            ul & {
                 padding: 0;
-                list-style-type: none;
+            }
 
-                ul & {
-                    padding: 0;
+            .contact-type {
+                width: 40px;
+
+                i {
+                    font-size: 18px;
                 }
+            }
 
-                .contact-type {
-                    width: 10%;
+            .primary-font {
+                font-weight: 600;
+            }
 
-                    i {
-                        font-size: 18px;
-                    }
-                }
+            .contact-email {
+                color: $selected !important;
+                text-decoration: underline !important;
 
-                .primary-font {
-                    font-weight: 600;
-                }
-
-                .contact-email {
-                    color: $selected !important;
-                    text-decoration: underline !important;
-
-                    &:hover {
-                        text-decoration: none !important;
-                    }
+                &:hover {
+                    text-decoration: none !important;
                 }
             }
         }
+
+        .user-contact-info {}
     }
 }
 
