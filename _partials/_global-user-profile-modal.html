@@ -1,4 +1,4 @@
-<div aria-labelledby="globalUserProfileModal" class="modal fade global-user-profile-modal in" id="globalUserProfileModal" role="dialog" style="display: block;" tabindex="-1">
+<div aria-labelledby="globalUserProfileModal" class="modal fade global-user-profile-modal" id="globalUserProfileModal" role="dialog" style="" tabindex="-1">
     <div class="modal-dialog modal-lg" role="modal">
         <div class="modal-content">
             <div class="modal-body">
@@ -60,12 +60,12 @@
                                             Overview
                                         </a>
                                     </li>
-                                    <li class="active">
+                                    <li>
                                         <a data-toggle="tab" href="#userComments">
                                             Comments &amp; activities
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="active">
                                         <a data-toggle="tab" href="#userGroup">
                                             User group and role
                                         </a>
@@ -664,7 +664,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane user-references active" id="userComments">
+                                    <div class="tab-pane user-references" id="userComments">
                                         <div class="d-flex row form-group">
                                             <div class="col-md-4 reference-info">
                                                 <div class="clearfix">
@@ -826,66 +826,51 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane external-links" id="userGroup">
-                                        <div class="d-flex form-group row">
-                                            <div class="col-md-12">
-                                                <div class="highlight-bg">
-                                                    <div class="row full-width">
-                                                        <div class="col-md-12">
-                                                            <div class="row website-links form-group">
-                                                                <ul class="website-links-list">
-                                                                    <li>
-                                                                        <a class="external-website-link" href="javascript:;">
-                                                                            External website link 01
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="external-website-link" href="javascript:;">
-                                                                            External website link 02
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a class="external-website-link" href="javascript:;">
-                                                                            External website link 03
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="row socialmedia-links form-group">
-                                                                <ul class="d-flex socialmedia-links-list">
-                                                                    <li class="d-flex">
-                                                                        <a href="javascript:;">
-                                                                            <img class="img-circle img-responsive" src="lbd/img/social-media/fb-circle.png"/>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="d-flex">
-                                                                        <a href="javascript:;">
-                                                                            <img class="img-circle img-responsive" src="lbd/img/social-media/twitter-circle.png"/>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="d-flex">
-                                                                        <a href="javascript:;">
-                                                                            <img class="img-circle img-responsive" src="lbd/img/social-media/pinterest-circle.png"/>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="d-flex">
-                                                                        <a href="javascript:;">
-                                                                            <img class="img-circle img-responsive" src="lbd/img/social-media/youtube-circle.png"/>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                    <div class="tab-pane external-links active" id="userGroup">
+                                        <div class="d-flex row form-group">
+                                            <div class="col-md-6 reference-info">
+                                                <div class="clearfix">
+                                                    <label for="" class="text-uppercase">User Group</label>
+                                                    <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="Filter comments & activities" id="contributorJobs">
+                                                        <option data-hidden="true"></option>
+                                                        <option value="0">Sales</option>
+                                                        <option value="1">Management</option>
+                                                        <option value="2">Finance</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 reference-info">
+                                                <div class="clearfix">
+                                                    <label for="" class="text-uppercase">Role</label>
+                                                    <select class="selectpicker" multiple data-live-search="false" data-actions-box="true" data-selected-text-format="count > 3" title="Business developer" id="contributorJobs">
+                                                        <option data-hidden="true"></option>
+                                                        <option value="0">Business developer</option>
+                                                        <option value="1">Project Manager</option>
+                                                        <option value="2">Executive</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="d-flex form-group row">
-                                            <div class="col-md-12">
-                                                <div class="">
-                                                    <a class="add-external-links d-block" href="javascript:;">
-                                                        + Add a external link
-                                                    </a>
+                                        <div class="d-flex row form-group">
+                                            <div class="col-md-6 reference-info">
+                                                <div class="clearfix">
+                                                    <label for="" class="text-uppercase">Active user</label>
+                                                    <div class="col-md-12 activation-container form-control df-ac auto-height p-10">
+                                                        <div class="col-md-2 p-0 activation-switch df-ac">
+                                                            <div class="switch" data-off-label="" data-on-label="">
+                                                                <input type="checkbox"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10 activation-statement">
+                                                            This user is active : 
+                                                            <span class="yes">
+                                                                YES
+                                                            </span>
+                                                            <span class="no">
+                                                                NO
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

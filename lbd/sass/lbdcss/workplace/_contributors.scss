@@ -1,12 +1,12 @@
 /* Contributors template CSS Starts */
-.layout-3.wp-app.contributors {
+.layout-3.wp-app {
     .page-wrap {
         .main-panel-wrap {
             .main-panel {
                 .main-panel-page {
                     .main-panel-page-header {}
 
-                    .main-container {
+                    .main-container.contributors {
                         .tab-panel-container {
                             .tab-panel {
                                 .page-filter {
@@ -559,17 +559,15 @@
                 }
             }
         }
-
-        }
-        .contact-account-info{
-            ul{
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                li{
-                    flex-grow: 1;
-                    align-items: center;
-                }
+    }
+    .contact-account-info{
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                flex-grow: 1;
+                align-items: center;
             }
         }
     }
@@ -596,7 +594,6 @@
                 }
             }
         }
-    .user-contact-info {}
     }
 }
 
