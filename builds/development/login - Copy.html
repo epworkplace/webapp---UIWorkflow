@@ -56,6 +56,9 @@
 							<p></p>
 							<p id="quoteGenius"></p>			
 						</div>
+						<div id="buttonContainer">
+							<a href="#" id="quoteButton">Quote Me</a>
+						</div>
 					</div>
     			</div>
     		</div>
@@ -64,6 +67,18 @@
     				<div class="card">
                         <div class="header">
 							<img src="lbd/img/cp-logo.png" alt="ContentPlace" />
+                        </div>
+                        <div class="remembered-user-container">
+                        	<div class="remembered-user">
+                        		<img src="lbd/img/default-avatar.png" class="img-circle" />
+                        		<div class="remembered-username">
+                        			Jean Grey
+                        			<span class="username">jgrey</span>
+                        		</div>
+                        		<div class="not-user">
+                        			<a href="javascript:;">This is not you ?</a>
+                        		</div>
+                        	</div>
                         </div>
                         <div class="form-inputs">
                             <form method="#" action="#">
@@ -87,43 +102,12 @@
                             </form>
                         </div>
                         <div class="forgot-password">
-                        	<a href="javascript:;" data-toggle="modal" data-target="#forgotPassword">Password Forgotten ?</a>
+                        	<a href="javascript:;">Password Forgotten ?</a>
                         </div>
                     </div>
     			</div>
     		</div>
     	</div>
-    </div>
-   <div id="forgotPassword" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-forgot-password">
-                    <form>
-                        <div class="modal-header">
-                            Forgot Password ?
-                        </div>
-
-                        <div class="modal-body">
-                            <div class="alert alert-danger" id="alert"><button type="button" class="close" data-dismiss="alert">&times;</button>Your email doesnt exist in the database.</div>
-                            <div class="alert alert-success" id="alert"><button type="button" class="close" data-dismiss="alert">&times;</button>We have sent you a mail which has your password.</div>
-                            <title>Enter your email and we will send you your password.</title>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label>Enter your Email</label>
-                                    <input type="text" name="forgotpwdemail" id="forgotpwdemail"  class="form-control" placeholder="Your Email" />
-                                    <div class="error" id="forgotpwdemailerr"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-fill btn-yes" onClick="return forgotpasswordmailindex();">Validate</button>
-                            <button class="btn btn-fill btn-cancel" data-dismiss="modal" aria-hidden="true" type="button">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
 </body>
     <!--   Core JS Files   -->
@@ -235,7 +219,8 @@
     <script src="lbd/js/custom.js">
     </script>
     <script type="text/javascript">
-    	var quoteSource=[
+    	$(document).ready(function(){
+			var quoteSource=[
 			{
 				quote: "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
 				name:"Francis of Assisi"
@@ -334,12 +319,14 @@
 		    }
 
 		];
-		function displayQuote()
-		{
+			
+
+		$('#quoteButton').click(function(evt){
 			//define the containers of the info we target
 			var quote = $('#quoteContainer p').text();
 			var quoteGenius = $('#quoteGenius').text();
-			
+			//prevent browser's default action
+			evt.preventDefault();
 			//getting a new random number to attach to a quote and setting a limit
 			var sourceLength = quoteSource.length;
 			var randomNumber= Math.floor(Math.random()*sourceLength);
@@ -362,10 +349,8 @@
 			break;
 			};//end for loop
 
-		};//end quoteButton function
-    	$(document).ready(function(){
-			
-			displayQuote();
+			});//end quoteButton function
+
 
 		});//end document ready
 
