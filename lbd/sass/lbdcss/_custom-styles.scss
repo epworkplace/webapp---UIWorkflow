@@ -5553,7 +5553,7 @@ html {
                             text-transform: uppercase;
                         }
 
-                        a.sign-po {
+                        .sign-po {
                             width: 33.333% !important;
                             margin: 0 0 0 13%;
 
@@ -9206,6 +9206,8 @@ html {
     -webkit-box-shadow: 0px 0px 20px -1px rgba(67, 139, 254, 1);
     -moz-box-shadow: 0px 0px 20px -1px rgba(67, 139, 254, 1);
     box-shadow: 0px 0px 20px -1px rgba(67, 139, 254, 1);
+    color: #fff;
+    font-size: 16px;
 
     p {
         color: #fff;

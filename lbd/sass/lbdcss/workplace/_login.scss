@@ -27,18 +27,118 @@
             background: rgba(68, 138, 255, 0.8);
             color: #fff;
             height: 100%;
-            box-shadow: 18px 0 30px -15px rgba(40, 40, 40, 0.4);
+            box-shadow: 18px -10px 30px -15px rgba(40, 40, 40, 0.4);
         }
 
         .right-column {
             width: 50%;
             float: right;
             display: -webkit-box;
+            display: -moz-box;
             display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
             overflow: hidden;
             height: 100%;
             align-items: center;
+            justify-content: center;
+
+            .login-form-container {
+                .card {
+                    margin-bottom: 0;
+                    padding: 30px;
+
+                    .header {
+                        padding: 0;
+                        margin: 0;
+                        margin-bottom: 30px;
+                        text-align: center;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .remembered-user-container {
+                        background: #f7f9fa;
+                        border-radius: 4px;
+                        height: 180px;
+                        width: 100%;
+                        display: -webkit-box;
+                        display: -moz-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .remembered-user {
+                            width: 100%;
+                            text-align: center;
+
+                            img {
+                                display: block;
+                                width: 60px;
+                                margin: 0 auto 10px;
+                            }
+
+                            .remembered-username {
+                                font-size: 16px;
+                                color: #353f53;
+                                font-weight: 700;
+                                margin-bottom: 13px;
+
+                                span.username {
+                                    display: block;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 1;
+                                }
+                            }
+
+                            .not-user {
+                                a {
+                                    text-decoration: underline;
+
+                                    &:hover {
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    form {
+                        .form-group {
+                            label {
+                                font-weight: 400;
+                                text-transform: none;
+                            }
+
+                            input[type="text"], input[type="password"] {
+                                height: 50px;
+                            }
+                        }
+
+                        button[type="submit"] {
+                            width: 100% !important;
+                        }
+                    }
+
+                    .forgot-password {
+                        margin-top: 30px;
+                        text-align: center;
+
+                        a {
+                            text-decoration: underline;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
