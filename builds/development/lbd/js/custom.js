@@ -481,7 +481,7 @@ $(document).ready(function(){
 
 	//tinyMCE intregation
 	tinymce.init({
-	    selector: '#edit-textarea-normal',
+	    selector: '#edit-textarea-normal, #edit-textarea-normal-02',
 	    statusbar: false,
   		menubar : false,
 		height: "230",

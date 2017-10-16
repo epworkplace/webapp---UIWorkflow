@@ -55,7 +55,7 @@
                         <div class="col-md-12 tab-step">
                             <div class="tab-step-content">
                                 <ul class="nav">
-                                    <li>
+                                    <li class="active">
                                         <a data-toggle="tab" href="#userOverview">
                                             Overview
                                         </a>
@@ -65,14 +65,14 @@
                                             Comments &amp; activities
                                         </a>
                                     </li>
-                                    <li class="active">
+                                    <li>
                                         <a data-toggle="tab" href="#userGroup">
                                             User group and role
                                         </a>
                                     </li>
                                 </ul>
                                 <div class="tab-content tab-content-progress">
-                                    <div class="tab-pane general-info" id="userOverview">
+                                    <div class="tab-pane general-info active" id="userOverview">
                                         <div class="row d-flex form-group">
                                             <div class="col-md-6 d-flex">
                                                 <div class="highlight-bg">
@@ -82,7 +82,7 @@
                                                                 Contact
                                                             </span>
                                                             <span class="pull-right d-inline-block helper-text">
-                                                                <a class="info-edit" href="javascript:;">
+                                                                <a class="info-edit" href="javascript:;" data-toggle="modal" data-target="#myProfileEditCotnactModal">
                                                                     Edit
                                                                 </a>
                                                             </span>
@@ -118,7 +118,7 @@
                                                                 Address
                                                             </span>
                                                             <span class="pull-right d-inline-block helper-text">
-                                                                <a class="info-edit" href="javascript:;">
+                                                                <a class="info-edit" href="javascript:;" data-toggle="modal" data-target="#myProfileEditAddressModal">
                                                                     Edit
                                                                 </a>
                                                             </span>
@@ -136,69 +136,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row form-group contact-info-edit">
-                                            <div class="col-md-12">
-                                                <form action="" class="form contact-info-form">
-                                                    <div class="row form-group">
-                                                        <div class="col-md-5">
-                                                            <label for="contactPhone">
-                                                                Contact Phone
-                                                            </label>
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <input class="form-control" id="contactPhone" placeholder="eg: 06 61 35 58 89" type="tel"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <label for="contactPhoneType">
-                                                                Type of contact
-                                                            </label>
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <select class="selectpicker" id="contactPhoneType">
-                                                                        <option value="mob">
-                                                                            Mobile
-                                                                        </option>
-                                                                        <option value="home">
-                                                                            Home
-                                                                        </option>
-                                                                        <option value="work">
-                                                                            Work
-                                                                        </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col-md-9">
-                                                            <label for="contactEmail">
-                                                                Email
-                                                            </label>
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <input class="form-control" id="contactEmail" placeholder="ex: m.martin@webedia.com" type="email"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group info-edit-actions">
-                                                        <div class="col-md-6">
-                                                            <button class="btn btn-fill full-width btn-wd cancel-btn" data-dismiss="">
-                                                            Cancel
-                                                            </button>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <button class="btn btn-fill full-width btn-yes">
-                                                            Save
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="row form-group user-description-info">
+                                        <div class="row form-group user-about-info">
                                             <div class="col-md-12 d-flex">
                                                 <div class="highlight-bg">
                                                     <div class="col-md-12 contact-info">
@@ -207,7 +145,7 @@
                                                                 About
                                                             </span>
                                                             <span class="pull-right d-inline-block">
-                                                                <a class="description-edit" href="javascript:;">
+                                                                <a class="about-edit" href="javascript:;">
                                                                     Edit
                                                                 </a>
                                                             </span>
@@ -224,37 +162,37 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row form-group description-info-edit">
+                                        <div class="row form-group about-info-edit">
                                             <div class="col-md-12">
-                                                <form action="" class="form description-info-form">
+                                                <form action="" class="form about-info-form">
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
-                                                            <textarea class="form-control" id="edit-textarea-normal" rows="10">
-                                                            <p>
-                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis sapiente, laborum. Sint esse, dolores saepe, necessitatibus voluptatibus nesciunt assumenda sed, illum blanditiis qui magni fugiat. Veritatis ullam, eveniet tenetur nihil voluptate fugit adipisci laudantium maiores consequuntur harum, quia id vel deserunt dolore illum recusandae quos, est. Aliquid eveniet temporibus, quisquam rem quaerat! Esse dicta id quidem blanditiis voluptas! Sequi maxime dignissimos, nihil a blanditiis praesentium qui, consequatur unde asperiores voluptates tempora, laborum beatae quos delectus repellendus sint, earum rem!
-                                                            </p>
-                                                            <p>
-                                                                Ipsa quae ab dolor harum saepe quibusdam esse fugit, optio suscipit quam! Quaerat eius architecto dolorem beatae molestiae ipsam perspiciatis tenetur quae, aperiam cum tempora officiis, impedit, aspernatur debitis. Suscipit, saepe blanditiis libero, iste dicta reiciendis adipisci odio unde deserunt consectetur ratione. Ex voluptate consequuntur eligendi praesentium quae officiis, repellendus non nostrum. Repudiandae quae voluptatem, minima voluptatibus nemo! Qui consequuntur reprehenderit facere quia non dolore, voluptatem illo magni aut iste, quas eligendi quae animi voluptates voluptate itaque maiores sint distinctio.
-                                                            </p>
+                                                            <textarea class="form-control" id="edit-textarea-normal-02" rows="10">
+                                                                <p>
+                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis sapiente, laborum. Sint esse, dolores saepe, necessitatibus voluptatibus nesciunt assumenda sed, illum blanditiis qui magni fugiat. Veritatis ullam, eveniet tenetur nihil voluptate fugit adipisci laudantium maiores consequuntur harum, quia id vel deserunt dolore illum recusandae quos, est. Aliquid eveniet temporibus, quisquam rem quaerat! Esse dicta id quidem blanditiis voluptas! Sequi maxime dignissimos, nihil a blanditiis praesentium qui, consequatur unde asperiores voluptates tempora, laborum beatae quos delectus repellendus sint, earum rem!
+                                                                </p>
+                                                                <p>
+                                                                    Ipsa quae ab dolor harum saepe quibusdam esse fugit, optio suscipit quam! Quaerat eius architecto dolorem beatae molestiae ipsam perspiciatis tenetur quae, aperiam cum tempora officiis, impedit, aspernatur debitis. Suscipit, saepe blanditiis libero, iste dicta reiciendis adipisci odio unde deserunt consectetur ratione. Ex voluptate consequuntur eligendi praesentium quae officiis, repellendus non nostrum. Repudiandae quae voluptatem, minima voluptatibus nemo! Qui consequuntur reprehenderit facere quia non dolore, voluptatem illo magni aut iste, quas eligendi quae animi voluptates voluptate itaque maiores sint distinctio.
+                                                                </p>
                                                             </textarea>
                                                         </div>
                                                     </div>
-                                                    <div class="row form-group description-edit-actions">
+                                                    <div class="row form-group about-edit-actions">
                                                         <div class="col-md-6">
                                                             <button class="btn btn-fill full-width btn-wd cancel-btn" data-dismiss="">
-                                                            Cancel
+                                                                Cancel
                                                             </button>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <button class="btn btn-fill full-width btn-yes">
-                                                            Save
+                                                                Save
                                                             </button>
                                                         </div>
                                                     </div>
                                                 </form>
                                             </div>
                                         </div>
-                                        <div class="row form-group user-languages-info">
+                                        <div class="row form-group">
                                             <div class="col-md-12 form-group">
                                                 <div class="col-md-12 divider">
                                                     <span class="d-inline-flex info-title">
@@ -280,387 +218,12 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <span class="pull-right d-inline-block helper-text">
-                                                            <a class="languages-edit" href="javascript:;">
+                                                            <a class="languages-edit" href="javascript:;" data-toggle="modal" data-target="#myProfileEditAccountInfoModal">
                                                                 Edit
                                                             </a>
                                                         </span>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="row form-group language-info-edit">
-                                            <div class="col-md-12">
-                                                <form action="" class="form language-info-form">
-                                                    <div class="row info-header">
-                                                        <div class="col-md-4">
-                                                            <label class="">
-                                                                Language
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <label class="">
-                                                                Proficiency
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-md-3">
-                                                            <label class="">
-                                                                Level
-                                                            </label>
-                                                        </div>
-                                                        <div class="col-md-1 pull-right">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group user-languages-container">
-                                                        <div class="col-md-12 user-language-edit-container">
-                                                            <div class="row form-group d-flex user-language-edit">
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="chosen-default flags" data-placeholder="Select Language">
-                                                                                <option value="">
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/us.gif">
-                                                                                    English (US)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/uk.gif">
-                                                                                    English (UK)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/fr.gif" selected="">
-                                                                                    Français
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/it.gif">
-                                                                                    Italiano
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Select Proficiency">
-                                                                                <option selected="" value="advanced">
-                                                                                    Advanced (C1)
-                                                                                </option>
-                                                                                <option value="intermediate">
-                                                                                    Intermediate
-                                                                                </option>
-                                                                                <option value="confirmed">
-                                                                                    Confirmed
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Slect Level">
-                                                                                <option selected="" value="senior">
-                                                                                    Senior
-                                                                                </option>
-                                                                                <option value="junior">
-                                                                                    Junior
-                                                                                </option>
-                                                                                <option value="beginner">
-                                                                                    Beginner
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-1 df-ac-jc">
-                                                                    <a class="df-ac-jc" data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Delete">
-                                                                        <i class="material-icons">
-                                                                        delete
-                                                                        </i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row form-group d-flex user-language-edit">
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="chosen-default flags" data-placeholder="Select Language">
-                                                                                <option value="">
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/us.gif" selected="">
-                                                                                    English (US)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/uk.gif">
-                                                                                    English (UK)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/fr.gif">
-                                                                                    Français
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/it.gif">
-                                                                                    Italiano
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Select Proficiency">
-                                                                                <option value="advanced">
-                                                                                    Advanced (C1)
-                                                                                </option>
-                                                                                <option value="intermediate">
-                                                                                    Intermediate
-                                                                                </option>
-                                                                                <option selected="" value="confirmed">
-                                                                                    Confirmed
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Slect Level">
-                                                                                <option value="senior">
-                                                                                    Senior
-                                                                                </option>
-                                                                                <option selected="" value="junior">
-                                                                                    Junior
-                                                                                </option>
-                                                                                <option value="beginner">
-                                                                                    Beginner
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-1 df-ac-jc">
-                                                                    <a class="df-ac-jc" data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Delete">
-                                                                        <i class="material-icons">
-                                                                        delete
-                                                                        </i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row form-group d-flex user-language-edit">
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="chosen-default flags" data-placeholder="Select Language">
-                                                                                <option value="">
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/us.gif">
-                                                                                    English (US)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/uk.gif">
-                                                                                    English (UK)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/fr.gif">
-                                                                                    Français
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/it.gif" selected="">
-                                                                                    Italiano
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Select Proficiency">
-                                                                                <option value="advanced">
-                                                                                    Advanced (C1)
-                                                                                </option>
-                                                                                <option value="intermediate">
-                                                                                    Intermediate
-                                                                                </option>
-                                                                                <option value="confirmed">
-                                                                                    Confirmed
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Slect Level">
-                                                                                <option value="senior">
-                                                                                    Senior
-                                                                                </option>
-                                                                                <option value="junior">
-                                                                                    Junior
-                                                                                </option>
-                                                                                <option selected="" value="beginner">
-                                                                                    Beginner
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-1 df-ac-jc">
-                                                                    <a class="df-ac-jc" data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Delete">
-                                                                        <i class="material-icons">
-                                                                        delete
-                                                                        </i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row form-group d-flex user-language-edit">
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="chosen-default flags" data-placeholder="Select Language">
-                                                                                <option value="">
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/us.gif">
-                                                                                    English (US)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/uk.gif">
-                                                                                    English (UK)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/fr.gif">
-                                                                                    Français
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/it.gif">
-                                                                                    Italiano
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Select Proficiency">
-                                                                                <option value="advanced">
-                                                                                    Advanced (C1)
-                                                                                </option>
-                                                                                <option value="intermediate">
-                                                                                    Intermediate
-                                                                                </option>
-                                                                                <option value="confirmed">
-                                                                                    Confirmed
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Slect Level">
-                                                                                <option value="senior">
-                                                                                    Senior
-                                                                                </option>
-                                                                                <option value="junior">
-                                                                                    Junior
-                                                                                </option>
-                                                                                <option value="beginner">
-                                                                                    Beginner
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-1 df-ac-jc">
-                                                                    <a class="df-ac-jc" data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Delete">
-                                                                        <i class="material-icons">
-                                                                        delete
-                                                                        </i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row form-group d-flex user-language-edit">
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="chosen-default flags" data-placeholder="Select Language">
-                                                                                <option value="">
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/us.gif">
-                                                                                    English (US)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/uk.gif">
-                                                                                    English (UK)
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/fr.gif">
-                                                                                    Français
-                                                                                </option>
-                                                                                <option data-img-src="lbd/img/flag/it.gif">
-                                                                                    Italiano
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Select Proficiency">
-                                                                                <option value="advanced">
-                                                                                    Advanced (C1)
-                                                                                </option>
-                                                                                <option value="intermediate">
-                                                                                    Intermediate
-                                                                                </option>
-                                                                                <option value="confirmed">
-                                                                                    Confirmed
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-3">
-                                                                    <div class="row">
-                                                                        <div class="col-md-12">
-                                                                            <select class="selectpicker" title="Slect Level">
-                                                                                <option value="senior">
-                                                                                    Senior
-                                                                                </option>
-                                                                                <option value="junior">
-                                                                                    Junior
-                                                                                </option>
-                                                                                <option value="beginner">
-                                                                                    Beginner
-                                                                                </option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-1 df-ac-jc">
-                                                                    <a class="df-ac-jc" data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Delete">
-                                                                        <i class="material-icons">
-                                                                        delete
-                                                                        </i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col-md-12">
-                                                            <span class="full-width d-block">
-                                                                <a class="add-a-language" href="javascript:;">
-                                                                    + Add a language
-                                                                </a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group language-edit-actions">
-                                                        <div class="col-md-6">
-                                                            <button class="btn btn-fill full-width btn-wd cancel-btn" data-dismiss="">
-                                                            Cancel
-                                                            </button>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <button class="btn btn-fill full-width btn-yes">
-                                                            Save
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -826,7 +389,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane external-links active" id="userGroup">
+                                    <div class="tab-pane external-links" id="userGroup">
                                         <div class="d-flex row form-group">
                                             <div class="col-md-6 reference-info">
                                                 <div class="clearfix">
