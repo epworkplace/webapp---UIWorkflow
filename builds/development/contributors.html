@@ -2601,7 +2601,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row">
-                                                                                    <div class="col-md-12 comment" data-readmore="" aria-expanded="false" id="rmjs-2">
+                                                                                    <div class="col-md-12 comment">
                                                                                         <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est ut fugiat officia expedita dolorem, aliquam, itaque illo eaque fugit ipsam deserunt unde, dolor! <br><br>Obcaecati, sed omnis unde minus harum quisquam aliquam accusantium recusandae eaque beatae! Placeat, dolorum. Cumque voluptatum quo accusantium labore, quos nam laborum voluptatem? Voluptatum delectus, asperiores.
                                                                                     </div>
                                                                                 </div>
@@ -2667,7 +2667,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row">
-                                                                                    <div class="col-md-12 comment" data-readmore="" aria-expanded="false" id="rmjs-2">
+                                                                                    <div class="col-md-12 comment">
                                                                                         <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est ut fugiat officia expedita dolorem, aliquam, itaque illo eaque fugit ipsam deserunt unde, dolor! <br><br>Obcaecati, sed omnis unde minus harum quisquam aliquam accusantium recusandae eaque beatae! Placeat, dolorum. Cumque voluptatum quo accusantium labore, quos nam laborum voluptatem? Voluptatum delectus, asperiores.
                                                                                     </div>
                                                                                 </div>
@@ -3439,7 +3439,7 @@ $(document).ready(function(){
     });
 
     /*Read more / Read less*/
-         $('.comment').each(function(){
+     $('.comment').each(function(){
         $(this).readmore({
                 speed : 100,
                 collapsedHeight: 60,
@@ -3449,16 +3449,25 @@ $(document).ready(function(){
      });
 
      $('.modal').one('show.bs.modal', function () {
-        $(this).find('.comment').css({overflow: "hidden"});
-            }).one('shown.bs.modal', function () {
-                /*initialize plugin once modal shown*/
-                $(this).find('.comment').readmore({
-                    speed : 100,
-                    collapsedHeight: 60,
-                    moreLink: '<a href="#" class="morelink">See more</a>',
-                    lessLink: '<a href="#" class="morelink">See Less</a>'
-                });
+      $(this).find('.comment').css({overflow: "hidden"});
+        }).one('shown.bs.modal shown.bs.tab', function () {
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+    });
+
+    /*$(document).on( 'shown.bs.tab', 'a[data-toggle=\'tab\']', function (e) {
+       $('.comment').readmore({
+            speed : 100,
+            collapsedHeight: 60,
+            moreLink: '<a href="#" class="morelink">See more</a>',
+            lessLink: '<a href="#" class="morelink">See Less</a>'
         });
+    })*/
+
 
 });
 </script>

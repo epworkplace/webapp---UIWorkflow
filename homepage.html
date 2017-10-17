@@ -130,7 +130,7 @@
      $('.modal').one('show.bs.modal', function () {
 /*    for styling purpose only*/
     $(this).find('.comment').css({overflow: "hidden"});
-        }).one('shown.bs.modal', function () {
+        }).one('shown.bs.modal shown.bs.tab', function () {
             /*initialize plugin once modal shown*/
             $(this).find('.comment').readmore({
                 speed : 100,
