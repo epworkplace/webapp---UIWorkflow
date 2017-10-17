@@ -385,11 +385,14 @@
                                                                 width: auto;
                                                                 height: auto;
                                                                 position: inherit;
+                                                                object-fit: cover;
                                                                 top: 0;
                                                                 left: 0;
 
-                                                                &[data-original-title*='Progress'] {
+                                                                &[data-original-title*='Progress'], &[data-title*='Progress'] {
                                                                     width: 40px;
+                                                                    height: 40px;
+                                                                    object-fit: cover;
                                                                     position: absolute;
                                                                     top: 5px;
                                                                     left: 4.6px;
