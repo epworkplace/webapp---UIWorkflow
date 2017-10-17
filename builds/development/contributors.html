@@ -2859,14 +2859,20 @@
                                 <div class="col-md-3 image-container pl-0">
                                     <img class="image-loaded" src="lbd/img/blog-1.jpg">
                                 </div>
-                                <div class="col-md-9 contact-desc-container p-0">
+                                <div class="col-md-3 contact-desc-container p-0">
                                     <div class="image-action">
                                         <a class="replace" href="javascript:;">
                                             Replace Image
+                                            <input type="file" id="upload" value="Choose a file" accept="image/*">
                                         </a>
                                         <a class="remove" href="javascript:;">
                                             Remove image
                                         </a>
+                                    </div>
+                                </div>
+                                <div class="upload-demo-wrap col-md-4 pull-right">
+                                    <div id="upload-demo">
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -3355,9 +3361,17 @@
 <!-- jquery readmore -->
 <script type="text/javascript" src="lbd/lib/read-more/readmore.js"></script>
 
+<!-- Croppie -->
+<link rel="stylesheet" type="text/css" href="lbd/lib/croppie/croppie.css"/>
+<script type="text/javascript" src="lbd/lib/croppie/croppie.min.js"></script>
+<script type="text/javascript" src="lbd/lib/croppie/exif.js"></script>
+
+
+
 <!-- Custom JS -->
 <script src="lbd/js/custom.js">
 </script>
+
 
 <!-- Custom Scripts -->
 
@@ -3530,6 +3544,21 @@ $(document).ready(function(){
             lessLink: '<a href="#" class="morelink">See Less</a>'
         });
     })*/
+
+/*    $uploadCrop = $('#upload-demo').croppie({
+        enableExif: true,
+        viewport: {
+            width: 100,
+            height: 100,
+            type: 'circle'
+        },
+        boundary: {
+            width: 200,
+            height: 200
+        }
+    });*/
+
+    
 
 
 });
