@@ -396,6 +396,13 @@
                                                                 }
                                                             }
 
+                                                            .card-user-empty {
+                                                                width: 50px;
+                                                                height: 50px;
+                                                                left: 0;
+                                                                top: 0;
+                                                            }
+
                                                             &.empty-image {
                                                                 width: 50px;
                                                                 height: 50px;
@@ -665,6 +672,10 @@
 
                                                         .list-image {
                                                             margin-top: 0;
+
+                                                            .card-user-empty {
+                                                                height: 50px;
+                                                            }
                                                         }
                                                     }
 

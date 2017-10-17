@@ -1470,6 +1470,10 @@ html {
         .user-image {
             width: 52px;
             padding: 0;
+
+            .card-user-empty {
+                height: 52px;
+            }
         }
 
         .contract-title-edit {
@@ -6172,6 +6176,10 @@ html {
                                 float: left;
                                 display: block;
                                 margin-right: 10px;
+
+                                .card-user-empty {
+                                    height: 40px;
+                                }
                             }
 
                             .stakeholder-name {
@@ -9233,7 +9241,7 @@ html {
     &.user {
         border: 2px solid #353f53;
         background: #353f53;
-        color: #fff;
+        color: #fff !important;
         text-transform: uppercase;
     }
 
