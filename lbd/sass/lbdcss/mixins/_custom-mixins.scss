@@ -504,6 +504,10 @@
                 display: block;
                 max-width: 100%;
             }
+
+            .card-user-empty {
+                height: 40px;
+            }
         }
 
         .profile-name {
@@ -579,6 +583,10 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                        }
+
+                        .card-user-empty {
+                            height: 40px;
                         }
                     }
 
