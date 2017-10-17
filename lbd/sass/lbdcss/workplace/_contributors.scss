@@ -742,6 +742,14 @@
     @extend .my-profile-edit-address-modal;
 }
 
+.my-profile-edit-logout-modal{
+    @extend .global-user-profile-modal;
+    .modal-dialog{
+        width: 400px;
+    }
+
+}
+
 /* Modal styles Ends */
 
 /* Contributors template CSS Ends */
