@@ -483,91 +483,91 @@
 .middle-column-container {
     .middle-column {
         padding-top: 15px;
+    }
+}
 
-        .status-update-container, .send-comment-container {
-            padding: 7px;
-            margin-bottom: 20px;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            align-items: center;
+.status-update-container, .send-comment-container {
+    padding: 7px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
 
-            .user-image {
-                padding: 0;
-                margin-right: 15px;
-            }
+    .user-image {
+        padding: 6px 0 !important;
+        margin-right: 15px;
+    }
 
-            .status-update-text {
-                padding: 0;
-                position: relative;
+    .status-update-text {
+        padding: 0;
+        position: relative;
 
-                input {
-                    width: 100%;
-                    resize: none;
-                    height: 40px;
-                    border: 0;
-                    padding: 8px 35px 8px 40px;
-                    background: #fff url("../img/search.svg") no-repeat 8px 10px;
-                    background-size: 20px;
-                }
-
-                a.reset-search {
-                    display: none;
-                    position: absolute;
-                    top: 10px;
-                    right: 0;
-                    color: #cacaca;
-
-                    &:hover {
-                        color: #353f53;
-                    }
-                }
-            }
-
-            .status-update-button {
-                width: auto !important;
-
-                i {
-                    line-height: 0.95;
-                }
-            }
+        input {
+            width: 100%;
+            resize: none;
+            height: 40px;
+            border: 0;
+            padding: 8px 35px 8px 40px;
+            background: #fff url("../img/search.svg") no-repeat 8px 10px;
+            background-size: 20px;
         }
 
-        .send-comment-container {
-            .status-update-text {
-                textarea {
-                    width: 100%;
-                    resize: none;
-                    height: 40px;
-                    border: 0;
+        a.reset-search {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            color: #cacaca;
 
-                    // padding-top: 11px;
-               
-                }
-            }
-
-            .status-update-button {
-                width: auto !important;
-
-                i {
-                    line-height: 0.95;
-                }
-            }
-        }
-
-        .feed-title-container {
-            border-top: 2px solid #e9ebee;
-            padding-top: 15px;
-            margin-bottom: 20px;
-
-            .feed-title {
-                font-size: 16px;
+            &:hover {
                 color: #353f53;
-                font-weight: 600;
             }
         }
+    }
+
+    .status-update-button {
+        width: auto !important;
+
+        i {
+            line-height: 0.95;
+        }
+    }
+}
+
+.send-comment-container {
+    .status-update-text {
+        textarea {
+            width: 100%;
+            resize: none;
+            height: 40px;
+            border: 0;
+
+            // padding-top: 11px;
+       
+        }
+    }
+
+    .status-update-button {
+        width: auto !important;
+
+        i {
+            line-height: 0.95;
+        }
+    }
+}
+
+.feed-title-container {
+    border-top: 2px solid #e9ebee;
+    padding-top: 15px;
+    margin-bottom: 20px;
+
+    .feed-title {
+        font-size: 16px;
+        color: #353f53;
+        font-weight: 600;
     }
 }
 

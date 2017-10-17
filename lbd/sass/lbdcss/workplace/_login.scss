@@ -24,7 +24,23 @@
         .left-column {
             width: 50%;
             float: left;
-            background: rgba(68, 138, 255, 0.8);
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#23d0ea+0,1a64e3+100 */
+            background: rgb(35, 208, 234);
+
+            /* Old browsers */
+            background: -moz-linear-gradient(-15deg, rgba(35, 208, 234, 0.9) 0%, rgba(26, 100, 227, 0.9) 100%);
+
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(-15deg, rgba(35, 208, 234, 0.9) 0%, rgba(26, 100, 227, 0.9) 100%);
+
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(165deg, rgba(35, 208, 234, 0.9) 0%, rgba(26, 100, 227, 0.9) 100%);
+
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23d0ea', endColorstr='#1a64e3',GradientType=0.9 );
+
+            /* IE6-9 fallback on horizontal gradient */
             color: #fff;
             height: 100%;
             box-shadow: 18px -10px 30px -15px rgba(40, 40, 40, 0.4);

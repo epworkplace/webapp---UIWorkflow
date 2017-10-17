@@ -60,7 +60,7 @@
     			</div>
     		</div>
     		<div class="right-column">
-    			<div class="col-md-7 login-form-container">
+    			<div class="col-md-8 login-form-container">
     				<div class="card">
                         <div class="header">
 							<img src="lbd/img/cp-logo.png" alt="ContentPlace" />
@@ -336,38 +336,38 @@
 		];
 		function displayQuote()
 		{
-			//define the containers of the info we target
+			/*define the containers of the info we target*/
 			var quote = $('#quoteContainer p').text();
 			var quoteGenius = $('#quoteGenius').text();
 			
-			//getting a new random number to attach to a quote and setting a limit
+			/*getting a new random number to attach to a quote and setting a limit*/
 			var sourceLength = quoteSource.length;
 			var randomNumber= Math.floor(Math.random()*sourceLength);
-			//set a new quote
+			/*set a new quote*/
 			for(i=0;i<=sourceLength;i+=1){
 			var newQuoteText = quoteSource[randomNumber].quote;
 			var newQuoteGenius = quoteSource[randomNumber].name;
-			//console.log(newQuoteText,newQuoteGenius);
+			/*console.log(newQuoteText,newQuoteGenius);*/
 			var timeAnimation = 500;
 			var quoteContainer = $('#quoteContainer');
-			//fade out animation with callback
+			/*fade out animation with callback*/
 			quoteContainer.fadeOut(timeAnimation, function(){
 			quoteContainer.html('');
 			quoteContainer.append('<p>'+newQuoteText+'</p>'+'<p id="quoteGenius">'+'-								'+newQuoteGenius+'</p>');
 
-			//fadein animation.
+			/*fadein animation.*/
 			quoteContainer.fadeIn(timeAnimation);
 			});  
 
 			break;
-			};//end for loop
+			};/*end for loop*/
 
-		};//end quoteButton function
+		};/*end quoteButton function*/
     	$(document).ready(function(){
 			
 			displayQuote();
 
-		});//end document ready
+		});/*end document ready*/
 
 
     </script>
