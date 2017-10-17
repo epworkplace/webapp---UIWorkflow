@@ -50,19 +50,6 @@ $directions :('t':'top','b':'bottom','r':'right', 'l':'left');
   }
 }
 
-// @each $dim in $dimensions{
-//     @each $dir in $directions{
-//         $size: 0;
-//         // function()
-//         .#{nth($dim, 1)}-#{$size} {
-//             #{nth($dim, 2)}: #{$size}px;
-//         }
-//         .#{nth($dim, 1)}#{nth($dir, 1)}-#{$size} {
-//             #{nth($dim, 2)}-#{nth($dir, 2)}: #{$size}px;
-//         }
-        
-//     }
-// }
 
 // button with 48% styles
 .btn-yes {
@@ -103,6 +90,10 @@ $directions :('t':'top','b':'bottom','r':'right', 'l':'left');
 
 .btn-download.btn-no-final {
     @include custom-btn-no-final($default-bg, $default-bg-hover);
+}
+
+.btn-logout{
+    @include custom-btn-nofill-hover(#fff, $default-bg-hover, $delete);
 }
 
 // button styles ends
