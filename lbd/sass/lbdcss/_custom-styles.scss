@@ -9240,12 +9240,14 @@ html {
     &.writer {
         border: 2px dashed #d7d9dc;
         color: #d7d9dc;
+        height: 52px;
     }
 
     &.proofreader {
         border: 2px solid #d7d9dc;
         background: #d7d9dc;
         color: #ffffff;
+        height: 52px;
     }
 }
 
