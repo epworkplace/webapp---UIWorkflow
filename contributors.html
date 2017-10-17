@@ -181,6 +181,12 @@
 <!-- @include _partials/_global-user-profile-modal.html -->
 <!-- Change user profile image modal -->
 <!-- @include _partials/_change-user-image-modal.html -->
+<!-- My profile edit contact modal -->
+<!-- @include _partials/_my-profile-edit-contact-modal.html -->
+<!-- My profile edit address modal -->
+<!-- @include _partials/_my-profile-edit-address-modal.html -->
+<!-- My profile edit account information modal -->
+<!-- @include _partials/_my-profile-edit-acc-info-modal.html -->
 
 
 <!-- Modal windows ends -->
@@ -205,6 +211,32 @@ $(document).ready(function(){
         $('.contact-info-edit').slideUp();
     });
 
+    /* Edit User contact informations Email */
+    $(document).on('click', ".add-new-email a.add-new-email", function(e){
+        e.stopPropagation();
+        $(this).parents('.add-new-email').fadeOut();
+        $(this).parents('.add-new-email').siblings('.add-email').fadeIn();
+    });
+    $(document).on('click', ".description-edit-actions .cancel-btn, .description-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.description-info-edit').fadeOut();
+        $('.user-description-info').fadeIn();
+    });
+
+    /* Edit User contact informations Phone */
+    $(document).on('click', ".add-new-phone a.add-new-phone", function(e){
+        e.stopPropagation();
+        $(this).parents('.add-new-phone').fadeOut();
+        $(this).parents('.add-new-phone').siblings('.add-phone').fadeIn();
+    });
+    $(document).on('click', ".add-phone .edit-actions .btn-no, .add-phone .edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).parents('.add-phone').fadeOut();
+        $(this).parents('.add-phone').siblings('.add-new-phone').fadeIn();
+    });    
+
     /* Edit User description info */
     $(document).on('click', ".general-info .description-edit", function(e){
         e.stopPropagation();
@@ -217,6 +249,19 @@ $(document).ready(function(){
         $('.description-info-edit').fadeOut();
         $('.user-description-info').fadeIn();
     });
+
+    /* Edit User about info */
+    $(document).on('click', ".general-info .about-edit", function(e){
+        e.stopPropagation();
+        $('.user-about-info').fadeOut();
+        $('.about-info-edit').fadeIn();
+    });
+    $(document).on('click', ".about-edit-actions .cancel-btn, .about-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.about-info-edit').fadeOut();
+        $('.user-about-info').fadeIn();
+    });    
 
     /* Edit User languages info */
     $(document).on('click', ".general-info .languages-edit, .add-new-language .add-a-language", function(e){

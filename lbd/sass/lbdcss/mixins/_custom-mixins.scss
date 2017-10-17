@@ -860,6 +860,10 @@
 
 // Modal styles
 %modal {
+    
+    .divider {
+            @include divider;
+        }    
     .modal-dialog {
         span.close {
             position: absolute;
