@@ -263,7 +263,7 @@
                                                                                 <span class="edit" data-toggle="modal" data-target="#edit-overview-modal"><a href="javascript:;">Edit</a></span>
                                                                                 <div class="col-md-12 duration">May 01, 2019<i class="material-icons">chevron_right</i>Jul 03, 2019</div>
                                                                                 <div class="col-md-12  overview">
-                                                                                    <div class="more"><p>
+                                                                                    <div class="comment"><p>
                                                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
                                                                                 </div>
                                                                             </div>
@@ -1907,8 +1907,8 @@
 </div>
 <!-- Edit Overview modal -->
 <div aria-labelledby="myModalLabel" class="modal fade edit-overview-modal" id="edit-overview-modal" role="dialog" tabindex="-1">
-    <div class="modal-dialog modal-lg tiny-mce-modal-dialog" role="document">
-        <div class="modal-content tiny-mce-modal-content">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
             <div class="modal-body">
                 <div class="edit-content clearfix">
                     <div class="edit-duration">
@@ -1933,7 +1933,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 edit-overview">
-                        <textarea class="form-control" id="edit-textarea" rows="10">
+                        <textarea class="form-control" id="edit-textarea-normal" rows="10">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </textarea>
                     </div>
@@ -3256,6 +3256,27 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
         $('.create-quote-mission-title-edit').hide();
         $('.create-quote-mission-title').show();
     });
+
+    /*Read more / Read less*/
+     $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+      $(this).find('.comment').css({overflow: "hidden"});
+        }).one('shown.bs.modal shown.bs.tab', function () {
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+    });    
 
 });
 </script>
