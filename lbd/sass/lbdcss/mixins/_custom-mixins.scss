@@ -110,6 +110,10 @@
 
         .client-image-container {
             width: 52px;
+
+            .card-user-empty {
+                height: 52px;
+            }
         }
     }
 
@@ -357,6 +361,10 @@
 
                 .list-image {
                     width: 50px;
+
+                    .card-user-empty {
+                        height: 50px;
+                    }
                 }
             }
 
@@ -451,6 +459,10 @@
 
                 .list-image {
                     width: 50px;
+
+                    .card-user-empty {
+                        height: 50px;
+                    }
                 }
             }
 
