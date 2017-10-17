@@ -298,37 +298,6 @@
         max-width: 52px;
     }
 
-    .card-user-empty {
-        display: flex;
-        color: #353f53;
-        width: 52px;
-        height: 52px;
-        font-size: 18px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        position: relative;
-    }
-
-    .card-user-empty.writer {
-        border: 2px dashed #d7d9dc;
-        color: #d7d9dc;
-    }
-
-    .card-user-empty.proofreader {
-        border: 2px solid #d7d9dc;
-        background: #d7d9dc;
-        color: #ffffff;
-    }
-
-    .card-user-empty.user {
-        border: 2px solid #353f53;
-        background: #353f53;
-        color: #fff;
-        text-transform: uppercase;
-    }
-
     &.chevron {
         position: relative;
 
