@@ -622,6 +622,17 @@
                             margin: 0;
                             border-bottom: 0;
                             padding: 0;
+
+                            a {
+                                font-size: 12px !important;
+                                color: #333 !important;
+                                background: transparent !important;
+                                text-decoration: none !important;
+
+                                &:hover {
+                                    background: #F5F5F5 !important;
+                                }
+                            }
                         }
                     }
                 }
@@ -860,10 +871,10 @@
 
 // Modal styles
 %modal {
-    
     .divider {
-            @include divider;
-        }    
+        @include divider;
+    }
+
     .modal-dialog {
         span.close {
             position: absolute;
