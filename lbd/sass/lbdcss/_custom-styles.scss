@@ -223,11 +223,16 @@ html {
 
                     .profile {
                         .profile_pic {
-                            width: 32px;
+                            width: 44px;
                             margin: 0 auto;
 
                             .profile_img {
                                 max-width: 100%;
+                            }
+
+                            .card-user-empty {
+                                width: 44px;
+                                height: 44px;
                             }
                         }
 
@@ -1406,23 +1411,8 @@ html {
 
 /* Empty User Starts*/
 
-.user-empty-image {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    position: relative;
-    border-radius: 50%;
-    border: 2px solid #353f53;
-    background: #353f53;
-    color: #ffffff;
-}
-
 .card-section-list {
-    .user-empty-image {
+    .card-user-empty {
         position: absolute;
         left: 5px;
         top: 4.5px;
@@ -1437,6 +1427,24 @@ html {
         border: 2px solid #353f53;
         background: #353f53;
         color: #ffffff;
+
+        &.user {
+            border: 2px solid #353f53;
+            background: #353f53;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        &.writer {
+            border: 2px dashed #d7d9dc;
+            color: #d7d9dc;
+        }
+
+        &.proofreader {
+            border: 2px solid #d7d9dc;
+            background: #d7d9dc;
+            color: #ffffff;
+        }
     }
 }
 
@@ -1462,6 +1470,10 @@ html {
         .user-image {
             width: 52px;
             padding: 0;
+
+            .card-user-empty {
+                height: 52px;
+            }
         }
 
         .contract-title-edit {
@@ -1723,6 +1735,10 @@ html {
 
                             img {
                                 max-width: 100%;
+                            }
+
+                            .card-user-empty {
+                                height: 46px;
                             }
                         }
 
@@ -6160,6 +6176,10 @@ html {
                                 float: left;
                                 display: block;
                                 margin-right: 10px;
+
+                                .card-user-empty {
+                                    height: 40px;
+                                }
                             }
 
                             .stakeholder-name {
@@ -6554,6 +6574,11 @@ html {
         .user-image {
             float: left;
             margin: 0 20px 0 0;
+
+            .card-user-empty {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         .user-name-block {
@@ -6941,6 +6966,10 @@ html {
                 max-width: 100%;
                 display: block;
             }
+
+            .card-user-empty {
+                height: 36px;
+            }
         }
 
         .bot-checking {
@@ -7110,6 +7139,10 @@ html {
                     color: #dfe2e5;
                     text-align: center;
                     display: block;
+                }
+
+                .card-user-empty {
+                    height: 40px;
                 }
             }
 
@@ -9190,6 +9223,55 @@ html {
 }
 
 /* Send Message Display and Edit Ends */
+
+/* Card User Empty USer*/
+
+.card-user-empty {
+    display: flex;
+    color: #353f53;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+
+    &.user {
+        border: 2px solid #353f53;
+        background: #353f53;
+        color: #fff !important;
+        text-transform: uppercase;
+    }
+
+    &.writer {
+        border: 2px dashed #d7d9dc;
+        color: #d7d9dc;
+        height: 52px;
+    }
+
+    &.proofreader {
+        border: 2px solid #d7d9dc;
+        background: #d7d9dc;
+        color: #ffffff;
+        height: 52px;
+    }
+}
+
+.client-image-container.logout {
+    .card-user-empty {
+        height: 56px;
+    }
+}
+
+.client-image-container.global-user {
+    .card-user-empty {
+        height: 70px;
+    }
+}
+
+/* Card User Empty USer*/
 
 /*Undo Delete Starts*/
 

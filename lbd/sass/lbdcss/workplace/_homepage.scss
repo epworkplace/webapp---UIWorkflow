@@ -44,6 +44,10 @@
                 img {
                     border: 2px solid #fff;
                 }
+
+                .card-user-empty {
+                    height: 39px;
+                }
             }
 
             .user-details {
@@ -418,6 +422,10 @@
                                 img {
                                     max-width: 100%;
                                 }
+
+                                .card-user-empty {
+                                    height: 35px;
+                                }
                             }
 
                             .task-link {
@@ -474,6 +482,10 @@
                     img {
                         max-width: 100%;
                     }
+
+                    .card-user-empty {
+                        height: 50px;
+                    }
                 }
             }
         }
@@ -499,6 +511,10 @@
     .user-image {
         padding: 6px 0 !important;
         margin-right: 15px;
+
+        .card-user-empty {
+            height: 39px;
+        }
     }
 
     .status-update-text {
