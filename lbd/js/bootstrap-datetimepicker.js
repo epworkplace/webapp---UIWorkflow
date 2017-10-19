@@ -1,3 +1,7 @@
+/* require
+  moment.min.js
+*/
+
 /*! version : 4.17.37
  =========================================================
  bootstrap-datetimejs

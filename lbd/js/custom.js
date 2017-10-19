@@ -1,4 +1,6 @@
-
+/* require
+  jquery.min.js
+*/
 
 $(document).ready(function(){
 

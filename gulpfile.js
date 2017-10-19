@@ -71,10 +71,54 @@ var
   },
 
   js = {
-    in: source + 'lbd/js/**/*',
+    in: [
+          source + "lbd/js/jquery.min.js",
+          source + "lbd/js/jquery-ui-1.10.0.custom.min.js",
+          source + "lbd/js/jquery.validate.min.js",
+          source + "lbd/js/underscore-min.js",
+          source + "lbd/js/moment.min.js",
+          source + "lbd/js/bootstrap.min.js",
+          source + "lbd/js/bootstrap-datetimepicker.js",
+          source + "lbd/js/bootstrap-selectpicker.js",
+          source + "lbd/js/bootstrap-checkbox-radio-switch-tags.js",
+          source + "lbd/js/chartist.min.js",
+          source + "lbd/js/bootstrap-notify.js",
+          source + "lbd/js/sweetalert2.js",
+          source + "lbd/js/jquery-jvectormap.js",
+          source + "lbd/js/jquery.bootstrap.wizard.min.js",
+          source + "lbd/js/bootstrap-table.js",
+          source + "lbd/js/fullcalendar.min.js",
+          source + "lbd/js/light-bootstrap-dashboard.js",
+          source + "lbd/js/jquery.mCustomScrollbar.concat.min.js",
+          source + "lbd/js/jquery-ns-autogrow.min.js",
+          source + "lbd/js/bootstrap-select.js",
+          source + "lbd/lib/lionbars/jquery.lionbars.0.3.min.js",
+          source + "lbd/lib/progressbarjs/progressbar.js",
+          source + "lbd/lib/chosen/chosen.jquery.js",
+          source + "lbd/lib/chosen/ImageSelect.jquery.js",
+          source + "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
+          source + "lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js",
+          source + "lbd/lib/slick-1.6.0/slick/slick.js",
+          source + "lbd/lib/rateyo/jquery.rateyo.js",
+          source + "lbd/lib/TimePicki-master/js/timepicki.js",
+          source + "lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js",
+          source + "lbd/lib/emoji-picker-master/lib/js/config.js",
+          source + "lbd/lib/emoji-picker-master/lib/js/util.js",
+          source + "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
+          source + "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
+          source + "lbd/lib/shorten/jquery.shorten.1.0.js",
+          source + "lbd/js/custom.js"
+
+        ],
     out: dest + 'lbd/js/'
     // filename: 'main.js'
   },
+
+  //   js = {
+  //   in: source + 'lbd/**/*.js',
+  //   out: dest + 'lbd/js/'
+  //   // filename: 'main.js'
+  // },
 
   jsLibs = {
     in: source + 'lbd/lib/**/*',
@@ -240,17 +284,61 @@ gulp.task('sass', ['fonts'], function() {
 
 // js tasks
 gulp.task('js', function() {
-  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
+  var jsFilter = $.filter(['**/*.js', '!**/*custom.js', '!**/jquery.min.js'], {restore: true});
   if (devBuild) {
     return gulp.src(js.in)
 
       // .pipe($.concat(js.filename))
       .pipe($.size({ title: 'JS in '}))
       .pipe($.newer(js.out))
-      .pipe($.deporder())
-      .pipe($.stripDebug())
-      .pipe(jsFilter)
-      // .pipe(webpack())
+      // .pipe($.deporder())
+      // .pipe($.stripDebug())
+      // .pipe(jsFilter)
+      // .pipe($.deporder())
+      // .pipe($.webpack({
+      //   output: {
+      //     filename: 'bundle.js',
+      //   }
+      // }))
+      // .pipe($.order([
+      //     "lbd/js/jquery.min.js",
+      //     "lbd/js/jquery-ui-1.10.0.custom.min.js",
+      //     "lbd/js/jquery.validate.min.js",
+      //     "lbd/js/underscore-min.js",
+      //     "lbd/js/moment.min.js",
+      //     "lbd/js/bootstrap.min.js",
+      //     "lbd/js/bootstrap-datetimepicker.js",
+      //     "lbd/js/bootstrap-selectpicker.js",
+      //     "lbd/js/bootstrap-checkbox-radio-switch-tags.js",
+      //     "lbd/js/chartist.min.js",
+      //     "lbd/js/bootstrap-notify.js",
+      //     "lbd/js/sweetalert2.js",
+      //     "lbd/js/jquery-jvectormap.js",
+      //     "lbd/js/jquery.bootstrap.wizard.min.js",
+      //     "lbd/js/bootstrap-table.js",
+      //     "lbd/js/fullcalendar.min.js",
+      //     "lbd/js/light-bootstrap-dashboard.js",
+      //     "lbd/js/jquery.mCustomScrollbar.concat.min.js",
+      //     "lbd/js/jquery-ns-autogrow.min.js",
+      //     "lbd/js/bootstrap-select.js",
+      //     "lbd/lib/lionbars/jquery.lionbars.0.3.min.js",
+      //     "lbd/lib/progressbarjs/progressbar.js",
+      //     "lbd/lib/chosen/chosen.jquery.js",
+      //     "lbd/lib/chosen/ImageSelect.jquery.js",
+      //     "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
+      //     "lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js",
+      //     "lbd/lib/slick-1.6.0/slick/slick.js",
+      //     "lbd/lib/rateyo/jquery.rateyo.js",
+      //     "lbd/lib/TimePicki-master/js/timepicki.js",
+      //     "lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js",
+      //     "lbd/lib/emoji-picker-master/lib/js/config.js",
+      //     "lbd/lib/emoji-picker-master/lib/js/util.js",
+      //     "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
+      //     "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
+      //     "lbd/lib/shorten/jquery.shorten.1.0.js",
+      //     "lbd/js/custom.js"
+      //     ]))
+      .pipe($.concat('main.js'))
       .pipe($.uglify())
       // .pipe($.gzip({append: false}))
       .pipe(jsFilter.restore)
@@ -269,6 +357,12 @@ gulp.task('js', function() {
       .pipe(gulp.dest(js.out));
   }
 });
+
+// gulp.task('bundle', function() {
+//   return gulp.src('./bundle.config.js')
+//     .pipe($.bundleAssets())
+//     .pipe(gulp.dest(js.out));
+// });
 
 // copy js libraries
 gulp.task('jslib', function() {
