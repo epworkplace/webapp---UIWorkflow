@@ -97,7 +97,8 @@ var
           source + "lbd/lib/chosen/chosen.jquery.js",
           source + "lbd/lib/chosen/ImageSelect.jquery.js",
           source + "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
-          source + "lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js",
+          source + "lbd/lib/tinymce_4.2.5/tinymce.min.js",
+          source + "lbd/lib/tinymce_4.2.5/themes/modern/theme.min.js",
           source + "lbd/lib/slick-1.6.0/slick/slick.js",
           source + "lbd/lib/rateyo/jquery.rateyo.js",
           source + "lbd/lib/TimePicki-master/js/timepicki.js",
@@ -107,6 +108,8 @@ var
           source + "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
           source + "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
           source + "lbd/lib/shorten/jquery.shorten.1.0.js",
+          source + "lbd/lib/read-more/readmore.js",
+
           source + "lbd/js/custom.js"
 
         ],
@@ -256,6 +259,26 @@ gulp.task('css', ['fonts'], function() {
             debug: true
         }))*/
     .pipe($.cleanCss({rebase:false}))
+    // .pipe($.order([
+    //     'lbd/css/bootstrap.min.css',
+    //     'lbd/css/jquery-ui.theme.min.css',
+    //     'lbd/css/font-awesome.min.css',
+    //     'lbd/css/material-icons.css',
+    //     'lbd/css/pe-icon-7-stroke.css',
+    //     'lbd/css/jquery.mCustomScrollbar.min.css',
+    //     'lbd/lib/lionbars/lionbars.css',
+    //     'lbd/lib/chosen/chosen.css',
+    //     'lbd/lib/chosen/ImageSelect.css',
+    //     'lbd/lib/jquery-tageditor-master/jquery.tag-editor.css',
+    //     'lbd/lib/slick-1.6.0/slick/slick.css',
+    //     'lbd/lib/slick-1.6.0/slick/slick-theme.css',
+    //     'lbd/lib/rateyo/jquery.rateyo.min.css',
+    //     'lbd/lib/bootstrap-tokenfield/css/bootstrap-tokenfield.min.css',
+    //     'lbd/lib/bootstrap-tokenfield/css/tokenfield-typeahead.min.css',
+    //     'lbd/lib/emoji-picker-master/lib/css/emoji.css',
+    //     'lbd/lib/TimePicki-master/css/timepicki.css'
+    //   ]))
+    // .pipe($.concatCss('vendors.css', {rebaseUrls: false}))
     .pipe(cssFilter.restore)
     .pipe(imageFilter)
     .pipe($.imagemin())
@@ -338,10 +361,10 @@ gulp.task('js', function() {
       //     "lbd/lib/shorten/jquery.shorten.1.0.js",
       //     "lbd/js/custom.js"
       //     ]))
-      .pipe($.concat('main.js'))
+      .pipe($.concat('main.js', {rebaseUrls: false}))
       .pipe($.uglify())
       // .pipe($.gzip({append: false}))
-      .pipe(jsFilter.restore)
+      // .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
       .pipe(gulp.dest(js.out));
   }

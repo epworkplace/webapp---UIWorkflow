@@ -29,6 +29,7 @@
     "gulp-changed": "^3.1.0",
     "gulp-clean-css": "^3.8.0",
     "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
     "gulp-connect": "^5.0.0",
     "gulp-csso": "^3.0.0",
     "gulp-deporder": "^1.1.0",

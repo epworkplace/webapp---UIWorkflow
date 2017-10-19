@@ -193,4 +193,4 @@ $.fn.extend({
 })
 
 
-})(jQuery)
+})(jQuery);
