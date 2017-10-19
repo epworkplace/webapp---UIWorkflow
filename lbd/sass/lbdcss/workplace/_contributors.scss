@@ -765,6 +765,11 @@
     @extend .global-user-profile-modal;
     .modal-dialog{
         width: 400px;
+        .user-name{
+          label{
+            font-size: 24px;
+          }
+        }
     }
 
 }
