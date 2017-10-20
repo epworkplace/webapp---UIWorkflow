@@ -278,7 +278,7 @@ gulp.task('css', ['fonts'], function() {
     //     'lbd/lib/emoji-picker-master/lib/css/emoji.css',
     //     'lbd/lib/TimePicki-master/css/timepicki.css'
     //   ]))
-    // .pipe($.concatCss('vendors.css', {rebaseUrls: false}))
+    // .pipe($.concatCss('lbd-bundle.css', {rebaseUrls: false}))
     .pipe(cssFilter.restore)
     .pipe(imageFilter)
     .pipe($.imagemin())
@@ -361,7 +361,7 @@ gulp.task('js', function() {
       //     "lbd/lib/shorten/jquery.shorten.1.0.js",
       //     "lbd/js/custom.js"
       //     ]))
-      .pipe($.concat('main.js', {rebaseUrls: false}))
+      // .pipe($.concat('main.js', {rebaseUrls: false}))
       .pipe($.uglify())
       // .pipe($.gzip({append: false}))
       // .pipe(jsFilter.restore)
@@ -411,6 +411,7 @@ gulp.task('jslib', function() {
       .pipe(jsonFilter.restore)
       .pipe(cssFilter)
       .pipe($.cleanCss({rebase:false}))
+      // .pipe($.concatCss('plugins-bundle.css', {rebaseUrls: false}))
       .pipe(cssFilter.restore)
       .pipe(htmlFilter)
       .pipe($.htmlclean())
