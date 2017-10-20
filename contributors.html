@@ -5,7 +5,7 @@
     <!-- @include _partials/_all-meta-head.html -->
 </head>
 
-<body class="wp-app layout-3 contributors">
+<body class="wp-app layout-3">
 <div class="wrapper">
   <!-- @include _partials/_sidebar.html -->
   <div class="container-fluid page-wrap">
@@ -13,7 +13,7 @@
       <div class="col-md-12 main-panel-wrap">
         <div class="main-panel">
           <div class="container-fluid main-panel-page">
-            <div class="row main-container clients-list-page" id="">
+            <div class="row main-container clients-list-page contributors" id="">
               <div class="col-md-4 tab-panel-container">
                 <div class="tab-panel outside">
                   <nav class="navbar navbar-default">
@@ -54,6 +54,15 @@
                                 <p>Edit-place</p>
                                 <h4>
                                     United Kingdom
+                                </h4>
+                              </a>
+                          </li>
+                          <li>
+                              <a class="btn btn-default" data-toggle="tab" href="#users-list-uk">
+                                <input id="validate" name="contract-tabs" type="radio" value="validate" />
+                                <p>Edit-place</p>
+                                <h4>
+                                    Collaborators
                                 </h4>
                               </a>
                           </li>
@@ -158,15 +167,30 @@
 
 <!-- Modal windows starts -->
 
+<!-- Delete confirmation modal -->
 <!-- @include _partials/_delete-confirmation-modal.html -->
+<!-- Profile modal -->
 <!-- @include _partials/_profile-modal.html -->
-
-<!-- Create new client modal -->
+<!-- My profile edit and logout modal -->
+<!-- @include _partials/_my-profile-edit-logout-modal.html -->
+<!-- Create new Client modal -->
 <!-- @include _partials/_clients-create-new-client-modal.html -->
-<!-- Create new contact -->
+<!-- Create new Contact modal -->
 <!-- @include _partials/_clients-create-new-contact-modal.html -->
-<!-- User profile modal -->
+<!-- Contributors user profile modal -->
 <!-- @include _partials/_contributors-user-profile-modal.html -->
+<!-- Gloabal user profile modal -->
+<!-- @include _partials/_global-user-profile-modal.html -->
+<!-- Change user profile image modal -->
+<!-- @include _partials/_change-user-image-modal.html -->
+<!-- My profile edit contact modal -->
+<!-- @include _partials/_my-profile-edit-contact-modal.html -->
+<!-- My profile edit address modal -->
+<!-- @include _partials/_my-profile-edit-address-modal.html -->
+<!-- My profile edit account information modal -->
+<!-- @include _partials/_my-profile-edit-acc-info-modal.html -->
+
+
 
 <!-- Modal windows ends -->
 
@@ -190,6 +214,32 @@ $(document).ready(function(){
         $('.contact-info-edit').slideUp();
     });
 
+    /* Edit User contact informations Email */
+    $(document).on('click', ".add-new-email a.add-new-email", function(e){
+        e.stopPropagation();
+        $(this).parents('.add-new-email').fadeOut();
+        $(this).parents('.add-new-email').siblings('.add-email').fadeIn();
+    });
+    $(document).on('click', ".description-edit-actions .cancel-btn, .description-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.description-info-edit').fadeOut();
+        $('.user-description-info').fadeIn();
+    });
+
+    /* Edit User contact informations Phone */
+    $(document).on('click', ".add-new-phone a.add-new-phone", function(e){
+        e.stopPropagation();
+        $(this).parents('.add-new-phone').fadeOut();
+        $(this).parents('.add-new-phone').siblings('.add-phone').fadeIn();
+    });
+    $(document).on('click', ".add-phone .edit-actions .btn-no, .add-phone .edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).parents('.add-phone').fadeOut();
+        $(this).parents('.add-phone').siblings('.add-new-phone').fadeIn();
+    });    
+
     /* Edit User description info */
     $(document).on('click', ".general-info .description-edit", function(e){
         e.stopPropagation();
@@ -202,6 +252,19 @@ $(document).ready(function(){
         $('.description-info-edit').fadeOut();
         $('.user-description-info').fadeIn();
     });
+
+    /* Edit User about info */
+    $(document).on('click', ".general-info .about-edit", function(e){
+        e.stopPropagation();
+        $('.user-about-info').fadeOut();
+        $('.about-info-edit').fadeIn();
+    });
+    $(document).on('click', ".about-edit-actions .cancel-btn, .about-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.about-info-edit').fadeOut();
+        $('.user-about-info').fadeIn();
+    });    
 
     /* Edit User languages info */
     $(document).on('click', ".general-info .languages-edit, .add-new-language .add-a-language", function(e){
@@ -218,9 +281,9 @@ $(document).ready(function(){
     $(document).on('click', ".language-info-edit .add-a-language", function(e){
         var newLanguageRow = ``;
         e.stopPropagation();
-        // $( ".user-language-edit-container .user-language-edit:last-child" ).clone().appendTo( ".user-language-edit-container" );
-        // $('.user-language-edit:last-child .selectpicker').selectpicker('refresh');
-        // $('.user-language-edit-container').append(newLanguageRow);
+        /*$( ".user-language-edit-container .user-language-edit:last-child" ).clone().appendTo( ".user-language-edit-container" );
+        $('.user-language-edit:last-child .selectpicker').selectpicker('refresh');
+        $('.user-language-edit-container').append(newLanguageRow);*/
     });
     $(document).on('click', '.selectpicker', function(e){
       $(this).selectpicker('refresh');
@@ -259,15 +322,69 @@ $(document).ready(function(){
 
     $(document).on('click', ".special-users .checkbox", function(e){
       e.stopPropagation();
-      // var thisSiblings = $(this).parents('.quote-list-item').siblings();
-      // var thisListItem = $(this).parents('.quote-list-item');
-      // var checkedRadio = thisListItem.find('.radio');
         if ($(this).hasClass('checked')) {
             $(this).parents('.list-item').addClass('selected-in-list')
         } else {
             $(this).parents('.list-item').removeClass('selected-in-list')
         }
     });
+
+    /*Card-mission click to open Specific mission*/
+    $('div').delegate('.card-section-list ul li .card', 'click', function(e){
+       if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
+          /*code placed inside this condition is not executed on clicking the element #test*/
+    e.stopPropagation();
+          /*window.open('contract-overview.html','_blank');*/
+          $('#contributorUserProfileModal').modal('show')
+       }
+    
+    });
+
+    /*Read more / Read less*/
+     $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+      $(this).find('.comment').css({overflow: "hidden"});
+        }).one('shown.bs.modal shown.bs.tab', function () {
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+    });
+
+    /*$(document).on( 'shown.bs.tab', 'a[data-toggle=\'tab\']', function (e) {
+       $('.comment').readmore({
+            speed : 100,
+            collapsedHeight: 60,
+            moreLink: '<a href="#" class="morelink">See more</a>',
+            lessLink: '<a href="#" class="morelink">See Less</a>'
+        });
+    })*/
+
+/*    $uploadCrop = $('#upload-demo').croppie({
+        enableExif: true,
+        viewport: {
+            width: 100,
+            height: 100,
+            type: 'circle'
+        },
+        boundary: {
+            width: 200,
+            height: 200
+        }
+    });*/
+
+    
+
 
 });
 </script>

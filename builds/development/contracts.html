@@ -14,7 +14,7 @@
     <!--     Fonts and icons     -->
     <link href="lbd/css/font-awesome.min.css" rel="stylesheet" />
     <link href="lbd/css/material-icons.css" rel="stylesheet" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" />
     <link href="lbd/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <!--  mCustomScrollbar Plugin -->
     <link href="lbd/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
@@ -48,81 +48,59 @@
     <div class="sidebar">
         <div class="logo">
             <a href="/">
-                <img alt="Logo" src="lbd/img/wp-logo.png"/>
+                <img src="lbd/img/wp-logo.png" alt="Logo" />
             </a>
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li class="active">
-                    <a href="#">
-                        <i class="material-icons">
-                            dashboard
-                        </i>
-                        <p>
-                            Home
-                        </p>
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" data-placement="right" title="Home">
+                        <i class="material-icons">dashboard</i>
+                        <!-- <p>Home</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            business
-                        </i>
-                        <p>
-                            Clients
-                        </p>
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="business">
+                        <i class="material-icons">business</i>
+                        <!-- <p>Clients</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            monetization_on
-                        </i>
-                        <p>
-                            Quotes
-                        </p>
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Quotes">
+                        <i class="material-icons">monetization_on</i>
+                        <!-- <p>Quotes</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            assignment
-                        </i>
-                        <p>
-                            Contracts
-                        </p>
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Contracts">
+                        <i class="material-icons">assignment</i>
+                        <!-- <p>Contracts</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            alarm
-                        </i>
-                        <p>
-                            Missions
-                        </p>
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Missions">
+                        <i class="material-icons">alarm</i>
+                        <!-- <p>Missions</p> -->
                     </a>
                 </li>
                 <li>
-                    <a href="charts.html">
-                        <i class="material-icons">
-                            face
-                        </i>
-                        <p>
-                            Users
-                        </p>
+                    <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Users">
+                        <i class="material-icons">face</i>
+                        <!-- <p>Users</p> -->
                     </a>
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a class="profile clearfix" data-target="#profile" data-toggle="modal" href="#">
+                <a class="switch-workplace clearfix" href="javascript:;">
+                    <i class="material-icons">crop_rotate</i>
+                    <p>Switch to Workplace</p>
+                </a>
+                <a class="profile clearfix" href="javascript:;" data-toggle="modal" data-target="#myprofileEditLogoutModal">
                     <div class="profile_pic">
-                        <img alt="..." class="img-circle profile_img" src="lbd/img/default-avatar.png"/>
+                        <img src="lbd/img/default-avatar.png" alt="..." class="img-circle profile_img" />
                     </div>
                     <div class="profile_info">
-                        <p>
-                            Clarrise
-                        </p>
+                        <p>Clarrise</p>
                     </div>
                 </a>
             </div>
@@ -1664,7 +1642,7 @@
 <script src="lbd/lib/TimePicki-master/js/timepicki.js"></script>
 <link rel="stylesheet" type="text/css" href="lbd/lib/TimePicki-master/css/timepicki.css"/>
 <!-- Bootstrap-tokenfield -->
-<script src="lbd/lib/Bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
+<script src="lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
 
 <!-- Begin emoji-picker JavaScript -->
 <script src="lbd/lib/emoji-picker-master/lib/js/config.js"></script>
@@ -1681,11 +1659,35 @@
 <!-- jquery readmore -->
 <script type="text/javascript" src="lbd/lib/read-more/readmore.js"></script>
 
+<!-- Croppie -->
+<link rel="stylesheet" type="text/css" href="lbd/lib/croppie/croppie.css"/>
+<script type="text/javascript" src="lbd/lib/croppie/croppie.min.js"></script>
+<script type="text/javascript" src="lbd/lib/croppie/exif.js"></script>
+
+
+
 <!-- Custom JS -->
 <script src="lbd/js/custom.js">
 </script>
 
+
 <!-- Custom scripts -->
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        /*Card-mission click to open Specific mission*/
+        $('div').delegate('.card-section-list ul li .card', 'click', function(e){
+           if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
+              /*code placed inside this condition is not executed on clicking the element #test*/
+        e.stopPropagation();
+              window.open('contract-overview.html','_blank');
+              /*$('#contributorUserProfileModal').modal('show')*/
+           }
+        
+        });
+        
+    });
+</script>
 
 </body>
 </html>

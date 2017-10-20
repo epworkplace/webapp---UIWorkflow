@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
 
   //Floating Module
@@ -474,15 +476,21 @@ $(document).ready(function(){
 		plugins: "autoresize",
 		autoresize_min_height: "400",
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE intregation
 	tinymce.init({
-	    selector: '#edit-textarea-normal',
+	    selector: '#edit-textarea-normal, #edit-textarea-normal-02',
 	    statusbar: false,
   		menubar : false,
 		height: "230",
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Message intregation
@@ -491,6 +499,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Fire Message intregation
@@ -499,6 +510,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Job Confirm Message intregation
@@ -507,6 +521,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Job Cancel Message intregation
@@ -515,6 +532,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Report File Message intregation
@@ -523,6 +543,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//tinyMCE Send Announce Message intregation
@@ -531,6 +554,9 @@ $(document).ready(function(){
 	    statusbar: false,
   		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
 	  });
 
 	//Chosen Dropdown with Image
@@ -864,7 +890,7 @@ $(document).ready(function(){
         }
     });
 
-// Card-mission click to open Specific mission
+/*// Card-mission click to open Specific mission
 $('div').delegate('.card-section-list ul li .card', 'click', function(e){
    if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
       // code placed inside this condition is not executed on clicking the element #test
@@ -873,7 +899,7 @@ e.stopPropagation();
     window.open('contract-overview.html','_blank');
    }
 // console.log('Clicked on card-box 02');
-});
+});*/
 
 $('div').delegate('.card-section-list ul li .card', 'mouseover', function(e){
    if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation').length === 0) {

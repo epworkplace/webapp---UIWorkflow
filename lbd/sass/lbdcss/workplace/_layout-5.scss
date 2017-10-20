@@ -28,6 +28,10 @@
                                 img {
                                     max-width: 100%;
                                 }
+
+                                .card-user-empty {
+                                    height: 52px;
+                                }
                             }
                         }
 
@@ -35,8 +39,15 @@
                             padding: 0;
                             margin: 17px 0 0 20px;
                             width: 43%;
+                            display: -webkit-flex;
+                            display: -moz-flex;
+                            display: -ms-flex;
+                            display: -o-flex;
+                            display: flex;
 
                             .contract-spec {
+                                flex-grow: 1;
+
                                 .contract-breadcrumb {
                                     a {
                                         font-size: 12px;
@@ -386,6 +397,10 @@
 
                                             &#upcomingCards {
                                                 .form-group {
+                                                    display: -webkit-box;
+                                                    display: -moz-box;
+                                                    display: -ms-flexbox;
+                                                    display: -webkit-flex;
                                                     display: flex;
                                                     align-items: center;
                                                     width: 100%;
@@ -393,6 +408,11 @@
                                                     .bootstrap-select {
                                                         width: 30%;
                                                         margin: 0 10px;
+                                                        display: -webkit-inline-box;
+                                                        display: -moz-box;
+                                                        display: -moz-inline-box;
+                                                        display: -webkit-inline-flex;
+                                                        display: -ms-inline-flexbox;
                                                         display: inline-flex;
 
                                                         .dropdown-toggle {
@@ -422,6 +442,11 @@
 
                                         #filterPeriod, #filterStatus {
                                             .form-group {
+                                                display: -webkit-inline-box;
+                                                display: -moz-box;
+                                                display: -moz-inline-box;
+                                                display: -webkit-inline-flex;
+                                                display: -ms-inline-flexbox;
                                                 display: inline-flex;
                                                 width: 45%;
                                                 align-items: center;
@@ -436,6 +461,10 @@
                                                 }
 
                                                 &:last-child {
+                                                    display: -webkit-box;
+                                                    display: -moz-box;
+                                                    display: -ms-flexbox;
+                                                    display: -webkit-flex;
                                                     display: flex;
                                                     width: 100%;
                                                     justify-content: flex-end;
@@ -443,10 +472,20 @@
                                                     .btn.delete {
                                                         background: #ee0a5f;
                                                         color: #ffffff;
-                                                        height: 25px;
+                                                        height: 30px;
 
                                                         &:hover {
                                                             background: #b70a4a;
+                                                        }
+                                                    }
+
+                                                    .btn.submit {
+                                                        background: #69A1FF;
+                                                        color: #ffffff;
+                                                        height: 30px;
+
+                                                        &:hover {
+                                                            background: #448AFF;
                                                         }
                                                     }
                                                 }
@@ -455,12 +494,20 @@
 
                                         #filterStatus {
                                             .form-group {
+                                                display: -webkit-box;
+                                                display: -moz-box;
+                                                display: -ms-flexbox;
+                                                display: -webkit-flex;
                                                 display: flex;
                                                 width: 100%;
 
                                                 .bootstrap-select {
                                                     width: 80%;
                                                     margin-left: 10px;
+                                                    display: -webkit-box;
+                                                    display: -moz-box;
+                                                    display: -ms-flexbox;
+                                                    display: -webkit-flex;
                                                     display: flex;
                                                     height: auto;
                                                     align-items: center;
@@ -476,6 +523,10 @@
                                                         padding: 8px 12px;
 
                                                         .filter-option {
+                                                            display: -webkit-box;
+                                                            display: -moz-box;
+                                                            display: -ms-flexbox;
+                                                            display: -webkit-flex;
                                                             display: flex;
                                                             margin: 0;
                                                             flex-wrap: wrap;
@@ -517,6 +568,10 @@
                                                             padding: 0;
 
                                                             .btn-group {
+                                                                display: -webkit-box;
+                                                                display: -moz-box;
+                                                                display: -ms-flexbox;
+                                                                display: -webkit-flex;
                                                                 display: flex;
                                                                 justify-content: space-between;
 
@@ -557,6 +612,10 @@
                             }
 
                             .btn {
+                                display: -webkit-box;
+                                display: -moz-box;
+                                display: -ms-flexbox;
+                                display: -webkit-flex;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -893,6 +952,7 @@
                                                                     padding: 30px 20px;
                                                                     margin-bottom: 17px;
                                                                     position: relative;
+                                                                    min-height: 170px;
 
                                                                     .edit {
                                                                         visibility: hidden;
@@ -1391,5 +1451,13 @@
 }
 
 /* modal dialog styles ends */
+/* Mozilla Hacks Starts*/
+@-moz-document url-prefix() {
+    .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter div[role="group"] .cards-filter-dropdown .tab-content #filterPeriod .form-group .form-control, .layout-5.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-container .job-cards-filter div[role="group"] .cards-filter-dropdown .tab-content #filterStatus .form-group .form-control {
+        width: 83%;
+    }
+}
+
+/* Mozilla Hacks Ends*/
 
 /* Layout-5 Changes Ends */

@@ -26,22 +26,28 @@
     }
 }
 
-// box modal styles
-$dimensions: ('p':'padding', 'm':'margin');
-$directions: ('t':'top', 'r':'right', 'b':'bottom', 'l':'left');
+// Box modal styles 
+
+$dimensions:('m':'margin','p':'padding');
+$directions :('t':'top','b':'bottom','r':'right', 'l':'left');
 
 @each $dim in $dimensions{
-    @each $dir in $directions{
-        $size: 0;
-        // function()
-        .#{nth($dim, 1)}-#{$size} {
+    @for $i from 0 through 6{
+        $size: $i * 5;
+          .#{nth($dim, 1)}-#{$size} {
             #{nth($dim, 2)}: #{$size}px;
-        }
-        .#{nth($dim, 1)}#{nth($dir, 1)}-#{$size} {
-            #{nth($dim, 2)}-#{nth($dir, 2)}: #{$size}px;
-        }
-        
+        }    
     }
+    
+  @each $dir in $directions{
+    @for $i from 0 through 6{
+      $size: $i*5;
+      .#{nth($dim,1)}#{nth($dir,1)}-#{$size}{
+        #{nth($dim,2)}-#{nth($dir,2)}:#{$size}px;
+      }
+
+    }
+  }
 }
 
 
@@ -86,6 +92,10 @@ $directions: ('t':'top', 'r':'right', 'b':'bottom', 'l':'left');
     @include custom-btn-no-final($default-bg, $default-bg-hover);
 }
 
+.btn-logout{
+    @include custom-btn-nofill-hover(#fff, $default-bg-hover, $delete);
+}
+
 // button styles ends
 
 .main-font {
@@ -117,6 +127,9 @@ $directions: ('t':'top', 'r':'right', 'b':'bottom', 'l':'left');
 
 .auto-width {
     width: auto !important;
+}
+.auto-height {
+    height: auto !important;
 }
 
 // background color classes

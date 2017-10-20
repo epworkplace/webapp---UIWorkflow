@@ -64,31 +64,26 @@
     <script type="text/javascript">
         
         /*Show filter*/
-        $('.filter-title-flip-container .filter-container').hide();
+        /*$('.filter-title-flip-container .filter-container').hide();
             $('.filter-title-flip-container .feed-title-container a').click(function(e) {
             e.preventDefault();
             $('.filter-title-flip-container .filter-container').show(400);
             $('.filter-title-flip-container .feed-title-container').hide(400);
 
-        });
-
-        /*$("a.comment-actions").click(function(){
-            if ($(this).parents('.feeds-comments-container ul litr:first')) {
-                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=0px'}, 800);
-            }
-            else if ($(this).parents('.feeds-comments-container ul li:nth-last-child(1)')) {
-                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=50px'}, 800);
-            }
-            else{
-                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=30px'}, 800);
-            }
         });*/
 
-         $('a.comment-actions').click(function(e){
-                $(this).parents('.feeds-comments-container').animate({scrollTop: '+=30px'}, 800);
-         });
-
-        
+        //Search box Search Icon
+        $('.status-update-container .status-update-text input').keyup(function() {
+            if($(this).val() == ''){
+                $(this).parent().find('a.reset-search').css({
+                    display: 'none'
+                });
+            }else{
+                $(this).parent().find('a.reset-search').css({
+                    display: 'block'
+                });
+            }
+        });
     </script>
 
     <script>
@@ -135,7 +130,7 @@
      $('.modal').one('show.bs.modal', function () {
 /*    for styling purpose only*/
     $(this).find('.comment').css({overflow: "hidden"});
-        }).one('shown.bs.modal', function () {
+        }).one('shown.bs.modal shown.bs.tab', function () {
             /*initialize plugin once modal shown*/
             $(this).find('.comment').readmore({
                 speed : 100,

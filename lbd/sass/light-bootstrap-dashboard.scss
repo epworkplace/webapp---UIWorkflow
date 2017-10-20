@@ -61,10 +61,11 @@
 // Old WP Styles (Kept the same)
 @import "lbdcss/wp-old-styles";
 
+// Custom Styles
+@import "lbdcss/custom-styles";
+
 // New Workplace Styles
 @import "lbdcss/workplace/job-deck-cards";
-@import "lbdcss/workplace/layout-5";
-@import "lbdcss/workplace/yamm";
 @import "lbdcss/workplace/clients";
 @import "lbdcss/workplace/quote";
 @import "lbdcss/workplace/client-profile";
@@ -73,10 +74,12 @@
 @import "lbdcss/workplace/contributors";
 @import "lbdcss/workplace/placeholder-content";
 @import "lbdcss/workplace/production";
-
-
-// New Custom Styles
-@import "lbdcss/custom-styles";
+@import "lbdcss/workplace/floating-box";
+@import "lbdcss/workplace/layout-2";
+@import "lbdcss/workplace/layout-3";
+@import "lbdcss/workplace/layout-4";
+@import "lbdcss/workplace/layout-5";
+@import "lbdcss/workplace/login";
 
 //New Workplace media Queries
 @import "lbdcss/workplace/media-queries";

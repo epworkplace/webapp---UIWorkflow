@@ -458,31 +458,35 @@
         }
     }
 
-        ul.chosen-results, ul.chosen-choices {
-            li.active-result, li.result-selected, li.search-choice {
-                img, img.chose-image {
-                    border-radius: 0 !important;
-                    width: 20px !important;
-                    padding: 0;
-                }
-                img.chose-image{
-                    margin-right: 10px;
-                }
+    ul.chosen-results, ul.chosen-choices {
+        li.active-result, li.result-selected, li.search-choice {
+            img, img.chose-image {
+                border-radius: 0 !important;
+                width: 20px !important;
+                padding: 0;
+            }
+
+            img.chose-image {
+                margin-right: 10px;
             }
         }
-        ul.chosen-choices{
-            height: auto;
-            li.search-choice{
-                margin-bottom: 5px;
-                background: $highlight-01;
+    }
+
+    ul.chosen-choices {
+        height: auto;
+
+        li.search-choice {
+            margin-bottom: 5px;
+            background: $highlight-01;
+            color: $main;
+            border: none;
+            padding-right: 30px;
+
+            span {
                 color: $main;
-                border: none;
-                padding-right: 30px;
-                span{
-                    color: $main;
-                }
             }
         }
+    }
 }
 
 /*Edit create quote mission Starts*/
@@ -494,7 +498,7 @@
         font-weight: 600;
         margin-bottom: 20px;
 
-        span {
+        span.edit {
             margin-left: 10px;
 
             a {
@@ -861,7 +865,8 @@
             .fixed-table-body {
                 .mission-quote-table {
                     border: none;
-                    &.has-container{
+
+                    &.has-container {
                         margin-bottom: 270px !important;
                     }
 
@@ -952,7 +957,7 @@
 
                                 label {
                                     // margin-left: 20px;
-
+                               
                                 }
                             }
 
@@ -1076,6 +1081,7 @@
 
     .no-quote-mission-container {
         // margin-top: 280px;
+   
     }
 
     .mission-estimation-container {

@@ -1,0 +1,264 @@
+.login {
+    height: 100%;
+
+    .fullscreen-background {
+        img {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+
+    .login-page {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        .left-column {
+            width: 50%;
+            float: left;
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#23d0ea+0,1a64e3+100 */
+            background: rgb(35, 208, 234);
+
+            /* Old browsers */
+            background: -moz-linear-gradient(-15deg, rgba(35, 208, 234, 0.9) 0%, rgba(26, 100, 227, 0.9) 100%);
+
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(-15deg, rgba(35, 208, 234, 0.9) 0%, rgba(26, 100, 227, 0.9) 100%);
+
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(165deg, rgba(35, 208, 234, 0.9) 0%, rgba(26, 100, 227, 0.9) 100%);
+
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23d0ea', endColorstr='#1a64e3',GradientType=0.9 );
+
+            /* IE6-9 fallback on horizontal gradient */
+            color: #fff;
+            height: 100%;
+            box-shadow: 18px -10px 30px -15px rgba(40, 40, 40, 0.4);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            overflow: hidden;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+
+            .quote-container {
+                position: relative;
+
+                &:before {
+                    content: "\201C";
+                    position: absolute;
+                    color: #fff;
+                    left: -39px;
+                    top: -21px;
+                    font-size: 85px;
+                }
+
+                #quoteContainer {
+                    p {
+                        color: #fff;
+                        font-size: 30px;
+                        font-style: italic;
+                        font-weight: 700;
+                    }
+
+                    p#quoteGenius {
+                        font-size: 16px;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+
+        .right-column {
+            width: 50%;
+            float: right;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            overflow: hidden;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+
+            .login-form-container {
+                .card {
+                    margin-bottom: 0;
+                    padding: 30px;
+
+                    .header {
+                        padding: 0;
+                        margin: 0;
+                        margin-bottom: 30px;
+                        text-align: center;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .remembered-user-container {
+                        background: #f7f9fa;
+                        border-radius: 4px;
+                        height: 180px;
+                        width: 100%;
+                        display: -webkit-box;
+                        display: -moz-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        .remembered-user {
+                            width: 100%;
+                            text-align: center;
+
+                            img {
+                                display: block;
+                                width: 60px;
+                                margin: 0 auto 10px;
+                            }
+
+                            .remembered-username {
+                                font-size: 16px;
+                                color: #353f53;
+                                font-weight: 700;
+                                margin-bottom: 13px;
+
+                                span.username {
+                                    display: block;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 1;
+                                }
+                            }
+
+                            .not-user {
+                                a {
+                                    text-decoration: underline;
+
+                                    &:hover {
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    form {
+                        .form-group {
+                            label {
+                                font-weight: 400;
+                                text-transform: none;
+                            }
+
+                            input[type="text"], input[type="password"] {
+                                height: 50px;
+                            }
+                        }
+
+                        button[type="submit"] {
+                            width: 100% !important;
+                        }
+                    }
+
+                    .forgot-password {
+                        margin-top: 30px;
+                        text-align: center;
+
+                        a {
+                            text-decoration: underline;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-forgot-password {
+    .modal-header {
+        color: #353F53;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .modal-body {
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            color: #fff;
+            position: relative;
+
+            .close {
+                color: #fff;
+                opacity: 1;
+                right: 10px;
+                top: 26%;
+                margin-top: 0;
+                opacity: 0.4 !important;
+                color: #555;
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+
+        title {
+            display: block;
+            color: #353F53;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: 400;
+            color: #353F53;
+        }
+
+        .error {
+            background: #e57373;
+            width: 100%;
+            color: #FFF;
+            padding: 0 10PX;
+            -webkit-border-bottom-right-radius: 4px;
+            -webkit-border-bottom-left-radius: 4px;
+            -moz-border-radius-bottomright: 4px;
+            -moz-border-radius-bottomleft: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            margin: -2px 0 0px;
+        }
+    }
+
+    .modal-footer button {
+        display: inline;
+        width: 49.2%;
+    }
+}

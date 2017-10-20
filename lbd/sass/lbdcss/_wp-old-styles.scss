@@ -266,7 +266,7 @@ Copyright (c) 2015 Daniel Eden
       p {
         font-size: 16px;
         text-align: center;
-        font-weight: 300;
+        font-weight: 400;
         position: relative;
         float: none;
         margin: 0;
@@ -999,7 +999,7 @@ svg {
         vertical-align: middle;
 
         td {
-            font-weight: 300;
+            font-weight: 400;
             font-size: 22px;
         }
     }
@@ -3393,16 +3393,8 @@ be a descendant of the grid when it is being dragged.
 
 /*           Font Smoothing      */
 
-body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, .alert, a, .td-name, td, button.close {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Roboto","Helvetica Neue",Arial,sans-serif;
-    font-weight: 300;
-    color: #7d889a;
-}
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-    font-weight: 300;
+    font-weight: 400;
     margin: 30px 0 15px;
     color: #383d49;
 }
@@ -3683,7 +3675,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret, .btn[data-toggle="collap
 
 legend {
     font-size: 22px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .full-screen-map {
@@ -5339,7 +5331,7 @@ star {
             margin-top: 5px;
 
             > small {
-                font-weight: 300;
+                font-weight: 400;
                 color: #bdc3c7;
                 font-size: 12px;
                 display: block;
@@ -5513,7 +5505,6 @@ star {
 
 .wrapListContact {
     padding: 15px;
-    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -5553,7 +5544,7 @@ ul {
 
     .listeContactInfo {
         display: block;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 14px;
     }
 }
@@ -5684,7 +5675,7 @@ ul.zg-ul-select {
         outline: 0 !important;
         text-align: center;
         padding: 3px;
-        font-weight: 300;
+        font-weight: 400;
 
         &:hover {
             opacity: .55;
@@ -5798,7 +5789,7 @@ ul.zg-ul-select {
     }
 
     .td-name {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 18px;
         min-width: 240px;
     }
@@ -8313,7 +8304,7 @@ ul.zg-ul-select {
     .header {
         padding: 15px 15px 0px;
         color: #333333;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 22px;
     }
 
@@ -8346,7 +8337,7 @@ ul.zg-ul-select {
     .title {
         margin: 0;
         color: #333333;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     .avatar {
@@ -8785,7 +8776,7 @@ ul.zg-ul-select {
     .timepicker-hour, .timepicker-minute, .timepicker-second {
         width: 56px;
         height: 56px;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 22px;
         margin: 3px;
         border-radius: 50%;

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Light Bootstrap Dashboard PRO by Creative Tim </title>
+    <!-- @include _partials/_all-meta-head.html -->
+</head>
+
+<body class="wp-app">
+    <div class="login">
+    	<div class="fullscreen-background">
+    		<img src="http://admin-test.edit-place.com/BO/theme/lbd/img/login/oct17.jpg" alt="Month name" />
+    	</div>
+    	<div class="login-page">
+    		<div class="left-column">
+    			<div class="col-md-8 quote-container">
+    				<div id="container">
+						<div id="quoteContainer">
+							<p></p>
+							<p id="quoteGenius"></p>			
+						</div>
+					</div>
+    			</div>
+    		</div>
+    		<div class="right-column">
+    			<div class="col-md-8 login-form-container">
+    				<div class="card">
+                        <div class="header">
+							<img src="lbd/img/cp-logo.png" alt="ContentPlace" />
+                        </div>
+                        <div class="form-inputs">
+                            <form method="#" action="#">
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input type="text" placeholder="Your Username" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" placeholder="Your Password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" data-toggle="checkbox" value="" >
+                                        Remember Me
+                                    </label>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-fill btn-yes">Login</button>
+                            </form>
+                        </div>
+                        <div class="forgot-password">
+                        	<a href="javascript:;" data-toggle="modal" data-target="#forgotPassword">Password Forgotten ?</a>
+                        </div>
+                    </div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+   <div id="forgotPassword" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-forgot-password">
+                    <form>
+                        <div class="modal-header">
+                            Forgot Password ?
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="alert alert-danger" id="alert"><button type="button" class="close" data-dismiss="alert">&times;</button>Your email doesnt exist in the database.</div>
+                            <div class="alert alert-success" id="alert"><button type="button" class="close" data-dismiss="alert">&times;</button>We have sent you a mail which has your password.</div>
+                            <title>Enter your email and we will send you your password.</title>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Enter your Email</label>
+                                    <input type="text" name="forgotpwdemail" id="forgotpwdemail"  class="form-control" placeholder="Your Email" />
+                                    <div class="error" id="forgotpwdemailerr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-fill btn-yes" onClick="return forgotpasswordmailindex();">Validate</button>
+                            <button class="btn btn-fill btn-cancel" data-dismiss="modal" aria-hidden="true" type="button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <!--   Core JS Files   -->
+    <!-- @include _partials/_all-js-files.html -->
+    <script type="text/javascript">
+    	var quoteSource=[
+			{
+				quote: "A day without laughter is a day wasted.",
+				name:"Charlie Chaplin"
+		    },
+		    {
+		    	quote:"If you can't feed a hundred people, then feed just one.",
+		    	name:"Mother Teresa"
+		    },
+		    {
+		    	quote:"When you think positive, good things happen.",
+		    	name:"Matt Kemp"
+		    },
+		    {
+		    	quote:"Always turn a negative situation into a positive situation.",
+		    	name:"Michael Jordan"
+		    },
+		    {
+		    	quote:"I think anything is possible if you have the mindset and the will and desire to do it and put the time in.",
+		    	name:"Roger Clemens"
+		    },
+		    {
+		    	quote:"Most good relationships are built on mutual trust and respect.",
+		    	name:"Mona Sutphen"
+		    },
+		    {
+		    	quote:"When you practice gratefulness, there is a sense of respect toward others.",
+		    	name:"Dalai Lama"
+		    },
+		    {
+		    	quote:"A satisfied customer is the best business strategy of all.",
+		    	name:"Michael LeBoeuf"
+		    },
+		    {
+		    	quote:"We're all working together; that's the secret.",
+		    	name:"Sam Walton"
+		    }
+
+		];
+		function displayQuote()
+		{
+			/*define the containers of the info we target*/
+			var quote = $('#quoteContainer p').text();
+			var quoteGenius = $('#quoteGenius').text();
+			
+			/*getting a new random number to attach to a quote and setting a limit*/
+			var sourceLength = quoteSource.length;
+			var randomNumber= Math.floor(Math.random()*sourceLength);
+			/*set a new quote*/
+			for(i=0;i<=sourceLength;i+=1){
+			var newQuoteText = quoteSource[randomNumber].quote;
+			var newQuoteGenius = quoteSource[randomNumber].name;
+			/*console.log(newQuoteText,newQuoteGenius);*/
+			var timeAnimation = 500;
+			var quoteContainer = $('#quoteContainer');
+			/*fade out animation with callback*/
+			quoteContainer.fadeOut(timeAnimation, function(){
+			quoteContainer.html('');
+			quoteContainer.append('<p>'+newQuoteText+'</p>'+'<p id="quoteGenius">'+'-								'+newQuoteGenius+'</p>');
+
+			/*fadein animation.*/
+			quoteContainer.fadeIn(timeAnimation);
+			});  
+
+			break;
+			};/*end for loop*/
+
+		};/*end quoteButton function*/
+    	$(document).ready(function(){
+			
+			displayQuote();
+
+		});/*end document ready*/
+
+
+    </script>
+    
+</html>

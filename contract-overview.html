@@ -146,13 +146,13 @@
                                                         </ul>
                                                         <div class="tab-content tab-content-progress">
                                                             <div class="tab-pane active" id="tab1">
-                                                                <div class="row informations dragndrop">
-                                                                    <div class="droppable-purchase">
+                                                                <div class="row informations">
+                                                                    <!-- <div class="droppable-purchase">
                                                                         <div class="droppable-tagline" id="droppable-tagline">
                                                                         <i class="material-icons">file_upload</i><br />
                                                                         Drop your Files here
                                                                         </div>
-                                                                    </div>
+                                                                    </div> -->
                                                                     <div class="col-md-12">
                                                                         <div class="alert alert-info warning">
                                                                             <button type="button" aria-hidden="true" class="close">×</button>
@@ -165,7 +165,7 @@
                                                                                 <span class="edit" data-toggle="modal" data-target="#edit-overview-modal"><a href="javascript:;">Edit</a></span>
                                                                                 <div class="col-md-12 duration">May 01, 2019<i class="material-icons">chevron_right</i>Jul 03, 2019</div>
                                                                                 <div class="col-md-12  overview">
-                                                                                    <div class="more"><p>
+                                                                                    <div class="comment"><p>
                                                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
                                                                                 </div>
                                                                             </div>
@@ -202,7 +202,7 @@
                                                                                 <a id="upload_link" type="button" class="btn btn-primary btn-fill">Upload</a>
                                                                             </div>
                                                                         </div> -->
-                                                                        <div class="upload-card-container">
+                                                                        <!-- <div class="upload-card-container">
                                                                             <div class="col-md-12 upload-card card clearfix">
                                                                                 <div class="droppable-purchase1">
                                                                                     <div class="upload sign-po">
@@ -213,7 +213,7 @@
                                                                                                 <i class="material-icons">insert_drive_file</i>
                                                                                                 PO_3105725824585156541854217.pdf
                                                                                                 <span class="delete">
-                                                                                                    <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="Delete"><i class="material-icons">close</i></a>
+                                                                                                    <a href="fgjavascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="Delete"><i class="material-icons">close</i></a>
                                                                                                 </span>
                                                                                                 <span class="download">
                                                                                                     <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="Download"><i class="material-icons">file_download</i></a>
@@ -266,6 +266,161 @@
                                                                             </div>
                                                                             <div class="signpo-button">
                                                                                 <button type="button" class="btn btn-success btn-fill not-started-link">Po signed <i class="fa fa-check" aria-hidden="true"></i></button>
+                                                                            </div>
+                                                                        </div> -->
+                                                                        <div class="upload-card-container">
+                                                                            <div class="col-md-12 upload-card card clearfix">
+                                                                                <div class="row upload-card-header">
+                                                                                    <div class="col-md-6 title">Purchase Order</div>
+                                                                                    <a href="javascript:;" class="col-md-6 btn btn-yes btn-fill sign-po disabled">Sign PO</a>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                   <div class="col-md-12 drop-area">
+                                                                                        <div class="make-droppable">
+                                                                                            <strong>Drag and Drop your file here</strong>
+                                                                                        </div>
+                                                                                   </div> 
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="card card-footer">
+                                                                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">add</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu" role="menu">
+                                                                                            <li>
+                                                                                                <input id="upload" type="file"/>
+                                                                                                <a href="#" id="upload_link">Upload from Computer</a>
+                                                                                            </li>
+                                                                                            <li><a href="#">Upload from Google Drive</a></li>
+                                                                                            <li class="divider"></li>
+                                                                                            <li>
+                                                                                                <div class="attatch-link">
+                                                                                                    <div>Upload Link</div>
+                                                                                                    <div class="input-group">
+                                                                                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Your link Here." />
+                                                                                                        <span class="input-group-btn">
+                                                                                                            <button class="btn btn-primary btn-fill" id="btn-chat">Attach</button>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="upload-card-container">
+                                                                            <div class="col-md-12 upload-card card clearfix">
+                                                                                <div class="row upload-card-header">
+                                                                                    <div class="col-md-6 title">Purchase Order</div>
+                                                                                    <a href="javascript:;" class="col-md-6 btn btn-yes btn-fill sign-po">Sign PO</a>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="files-droppped">
+                                                                                            <a href="javascript:;">
+                                                                                                <strong class="primary-font output">
+                                                                                                    <i class="material-icons">insert_drive_file</i>
+                                                                                                    PO_3105725824585156541854217.pdf
+                                                                                                </strong> 
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div class="files-droppped">
+                                                                                            <a href="javascript:;">
+                                                                                                <strong class="primary-font output">
+                                                                                                    <i class="material-icons">insert_drive_file</i>
+                                                                                                    PO_3105725824585156541854217.pdf
+                                                                                                </strong> 
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="card card-footer">
+                                                                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">add</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu" role="menu">
+                                                                                            <li>
+                                                                                                <input id="upload" type="file"/>
+                                                                                                <a href="#" id="upload_link">Upload from Computer</a>
+                                                                                            </li>
+                                                                                            <li><a href="#">Upload from Google Drive</a></li>
+                                                                                            <li class="divider"></li>
+                                                                                            <li>
+                                                                                                <div class="attatch-link">
+                                                                                                    <div>Upload Link</div>
+                                                                                                    <div class="input-group">
+                                                                                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Your link Here." />
+                                                                                                        <span class="input-group-btn">
+                                                                                                            <button class="btn btn-primary btn-fill" id="btn-chat">Attach</button>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="upload-card-container">
+                                                                            <div class="col-md-12 upload-card card clearfix">
+                                                                                <div class="row upload-card-header">
+                                                                                    <div class="col-md-6 title">Purchase Order</div>
+                                                                                    <a href="javascript:;" class="col-md-6 btn btn-yes btn-fill sign-po signed"><i class="fa fa-check" aria-hidden="true"></i> PO Signed</a>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="files-droppped">
+                                                                                            <a href="javascript:;">
+                                                                                                <strong class="primary-font output">
+                                                                                                    <i class="material-icons">insert_drive_file</i>
+                                                                                                    PO_3105725824585156541854217.pdf
+                                                                                                </strong> 
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div class="files-droppped">
+                                                                                            <a href="javascript:;">
+                                                                                                <strong class="primary-font output">
+                                                                                                    <i class="material-icons">insert_drive_file</i>
+                                                                                                    PO_3105725824585156541854217.pdf
+                                                                                                </strong> 
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="card card-footer">
+                                                                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                                                                            <i class="material-icons">add</i>
+                                                                                        </a>
+                                                                                        <ul class="dropdown-menu" role="menu">
+                                                                                            <li>
+                                                                                                <input id="upload" type="file"/>
+                                                                                                <a href="#" id="upload_link">Upload from Computer</a>
+                                                                                            </li>
+                                                                                            <li><a href="#">Upload from Google Drive</a></li>
+                                                                                            <li class="divider"></li>
+                                                                                            <li>
+                                                                                                <div class="attatch-link">
+                                                                                                    <div>Upload Link</div>
+                                                                                                    <div class="input-group">
+                                                                                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Your link Here." />
+                                                                                                        <span class="input-group-btn">
+                                                                                                            <button class="btn btn-primary btn-fill" id="btn-chat">Attach</button>
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <!-- <div class="droppable-purchase">
@@ -330,11 +485,15 @@
                                                                             <div class="col-md-8 contract-owner">
                                                                                 <div class="user-image">
                                                                                     <!-- <img class="img-circle" src="lbd/img/default-avatar.png" /> -->
-                                                                                    <div class="user-empty-image">
+                                                                                    <div class="card-user-empty user">
                                                                                         PC
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="user-name">Lucie Zvanovec</div>
+                                                                                <div class="user-name-block">
+                                                                                    <div class="user-name">
+                                                                                        Lucie Zvanovec <span>Product Designer</span>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                             <div class="col-md-4 update-contract-owner">
                                                                                 <button class="btn pull-right">Update</button>
@@ -722,7 +881,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 list-head-container">
-                                                            <a href="javascript:;">
+                                                            
                                                                 <div class="header">    
                                                                     <div class="status-label">
                                                                         <span class="label not-started">Not Started</span>
@@ -740,7 +899,7 @@
                                                                         </a>
                                                                     </div>
                                                                 </div>
-                                                            </a>
+                                                            
                                                         </div>
                                                         <div class="task-price">
                                                             <div class="col-md-2 numbers">
@@ -1157,7 +1316,7 @@
                                                                         <div class="col-md-1 list-image-container">
                                                                             <div class="list-image" id="missionImage1" data-value="60">
                                                                                 <!-- <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%"> -->
-                                                                                <div class="user-empty-image" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+                                                                                <div class="card-user-empty user" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
                                                                                         PC
                                                                                 </div>
                                                                             </div>
@@ -1770,7 +1929,7 @@
     window.makeDroppable = makeDroppable;
   })(this);
   (function(window) {
-    makeDroppable(window.document.querySelector('.dragndrop'), function(files) {
+    makeDroppable(window.document.querySelector('.make-droppable'), function(files) {
       console.log(files);
       var output = document.querySelector('.output');
       output.innerHTML = '';
@@ -1809,6 +1968,37 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
       $(this).closest('.card').css({'cursor':'auto', 'box-shadow':'0px 0px 5px 0px rgba(50,50,50,0.1)'});
    }
 });
+
+/* Edit Create Mission Title*/
+    $('#editCreateMissionTitle').click(function() {
+        $('.create-quote-mission-title-edit').show();
+        $('.create-quote-mission-title').hide();
+    });
+    $('#saveCreateMissionTitle').click(function() {
+        $('.create-quote-mission-title-edit').hide();
+        $('.create-quote-mission-title').show();
+    });
+
+    /*Read more / Read less*/
+     $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+      $(this).find('.comment').css({overflow: "hidden"});
+        }).one('shown.bs.modal shown.bs.tab', function () {
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+    });    
 
 });
 </script>

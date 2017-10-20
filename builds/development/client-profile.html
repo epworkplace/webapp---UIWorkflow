@@ -14,7 +14,7 @@
     <!--     Fonts and icons     -->
     <link href="lbd/css/font-awesome.min.css" rel="stylesheet" />
     <link href="lbd/css/material-icons.css" rel="stylesheet" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" />
     <link href="lbd/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <!--  mCustomScrollbar Plugin -->
     <link href="lbd/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
@@ -48,81 +48,59 @@
         <div class="sidebar">
             <div class="logo">
                 <a href="/">
-                    <img alt="Logo" src="lbd/img/wp-logo.png"/>
+                    <img src="lbd/img/wp-logo.png" alt="Logo" />
                 </a>
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="active">
-                        <a href="#">
-                            <i class="material-icons">
-                                dashboard
-                            </i>
-                            <p>
-                                Home
-                            </p>
+                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" data-placement="right" title="Home">
+                            <i class="material-icons">dashboard</i>
+                            <!-- <p>Home</p> -->
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="material-icons">
-                                business
-                            </i>
-                            <p>
-                                Clients
-                            </p>
+                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="business">
+                            <i class="material-icons">business</i>
+                            <!-- <p>Clients</p> -->
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="material-icons">
-                                monetization_on
-                            </i>
-                            <p>
-                                Quotes
-                            </p>
+                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Quotes">
+                            <i class="material-icons">monetization_on</i>
+                            <!-- <p>Quotes</p> -->
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="material-icons">
-                                assignment
-                            </i>
-                            <p>
-                                Contracts
-                            </p>
+                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Contracts">
+                            <i class="material-icons">assignment</i>
+                            <!-- <p>Contracts</p> -->
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="material-icons">
-                                alarm
-                            </i>
-                            <p>
-                                Missions
-                            </p>
+                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Missions">
+                            <i class="material-icons">alarm</i>
+                            <!-- <p>Missions</p> -->
                         </a>
                     </li>
                     <li>
-                        <a href="charts.html">
-                            <i class="material-icons">
-                                face
-                            </i>
-                            <p>
-                                Users
-                            </p>
+                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Users">
+                            <i class="material-icons">face</i>
+                            <!-- <p>Users</p> -->
                         </a>
                     </li>
                 </ul>
                 <div class="sidebar-footer">
-                    <a class="profile clearfix" data-target="#profile" data-toggle="modal" href="#">
+                    <a class="switch-workplace clearfix" href="javascript:;">
+                        <i class="material-icons">crop_rotate</i>
+                        <p>Switch to Workplace</p>
+                    </a>
+                    <a class="profile clearfix" href="javascript:;" data-toggle="modal" data-target="#myprofileEditLogoutModal">
                         <div class="profile_pic">
-                            <img alt="..." class="img-circle profile_img" src="lbd/img/default-avatar.png"/>
+                            <img src="lbd/img/default-avatar.png" alt="..." class="img-circle profile_img" />
                         </div>
                         <div class="profile_info">
-                            <p>
-                                Clarrise
-                            </p>
+                            <p>Clarrise</p>
                         </div>
                     </a>
                 </div>
@@ -2881,312 +2859,356 @@
                                     				</div>
                                     			</div>
                                     		</div>
-                                    		<div class="row">
-                                    			<div class="col-md-12">
-                                    	            <div class="col-md-12 feeds-main-container">
-                                    	                <div class="row">
-                                    	                    <div class="col-md-12 card feeds-container">
-                                    	                        <div class="row">
-                                    	                            <div class="col-md-12 feeds-header">
-                                    	                                    <div class="col-md-1 profile-image">
-                                    	                                        <img src="lbd/img/apple.jpg" class="img-circle" />
-                                    	                                    </div>
-                                    	                                    <div class="col-md-11 profile-name">
-                                    	                                       <a href="javascript:;">Allocine</a>  <span> <a href="javascript:;">Blog 2019</a></span>
-                                    	                                    </div>
-                                    	                                    <div class="col-md-1 feed-nav pull-right">
-                                    	                                        <a href="javascript:;">
-                                    	                                            <i class="material-icons">more_vert</i>
-                                    	                                        </a>
-                                    	                                    </div>
-                                    	                            </div>
-                                    	                        </div>
-                                    	                        <div class="row">
-                                    	                            <div class="col-md-12">
-                                    	                                <div class="col-md-12 feeds-comments-container" data-container="body">
-                                    	                                    <ul>
-                                    	                                        <li>
-                                    	                                            <div class="col-md-12 comments-section">
-                                    	                                                <div class="row">
-                                    	                                                    <div class="col-md-1 user-image">
-                                    	                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    	                                                    </div>
-                                    	                                                    <div class="col-md-11 comment-container">
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                    	                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                    	                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                    	                                                                <i class="material-icons">more_horiz</i>
-                                    	                                                            </a>
-                                    	                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                    	                                                                <li><a href="javascript:;">Edit</a></li>
-                                    	                                                                <li><a href="javascript:;">Delete</a></li>
-                                    	                                                            </ul>
-                                    	                                                        </div>
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-12 comment">
-                                    	                                                                <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
-                                    	                                                            </div>
-                                    	                                                        </div>
-                                    	                                                    </div>
-                                    	                                                </div>
-                                    	                                            </div>
-                                    	                                        </li>
-                                    	                                        <li>
-                                    	                                            <div class="col-md-12 comments-section">
-                                    	                                                <div class="row">
-                                    	                                                    <div class="col-md-1 user-image">
-                                    	                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    	                                                    </div>
-                                    	                                                    <div class="col-md-11 comment-container">
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                    	                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                    	                                                            <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                    	                                                                <i class="material-icons">more_horiz</i>
-                                    	                                                            </a>
-                                    	                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                    	                                                                <li><a href="javascript:;">Edit</a></li>
-                                    	                                                                <li><a href="javascript:;">Delete</a></li>
-                                    	                                                            </ul>
-                                    	                                                        </div>
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-12 comment">
-                                    	                                                                <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
-                                    	                                                            </div>
-                                    	                                                        </div>
-                                    	                                                    </div>
-                                    	                                                </div>
-                                    	                                            </div>
-                                    	                                        </li>
-                                    	                                        <li>
-                                    	                                            <div class="col-md-12 comments-section">
-                                    	                                                <div class="row">
-                                    	                                                    <div class="col-md-1 user-image">
-                                    	                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    	                                                    </div>
-                                    	                                                    <div class="col-md-11 comment-container">
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                    	                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                    	                                                            <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                    	                                                                <i class="material-icons">more_horiz</i>
-                                    	                                                            </a>
-                                    	                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                    	                                                                <li><a href="javascript:;">Edit</a></li>
-                                    	                                                                <li><a href="javascript:;">Delete</a></li>
-                                    	                                                            </ul>
-                                    	                                                        </div>
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-12 comment">
-                                    	                                                                <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
-                                    	                                                            </div>
-                                    	                                                        </div>
-                                    	                                                    </div>
-                                    	                                                </div>
-                                    	                                            </div>
-                                    	                                        </li>
-                                    	                                        <li>
-                                    	                                            <div class="col-md-12 comments-section">
-                                    	                                                <div class="row">
-                                    	                                                    <div class="col-md-1 user-image">
-                                    	                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    	                                                    </div>
-                                    	                                                    <div class="col-md-11 comment-container">
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                    	                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                    	                                                            <a href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                    	                                                                <i class="material-icons">more_horiz</i>
-                                    	                                                            </a>
-                                    	                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                    	                                                                <li><a href="javascript:;">Edit</a></li>
-                                    	                                                                <li><a href="javascript:;">Delete</a></li>
-                                    	                                                            </ul>
-                                    	                                                        </div>
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-12 comment">
-                                    	                                                                <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
-                                    	                                                            </div>
-                                    	                                                        </div>
-                                    	                                                    </div>
-                                    	                                                </div>
-                                    	                                            </div>
-                                    	                                        </li>
-                                    	                                        <li>
-                                    	                                            <div class="col-md-12 comments-section">
-                                    	                                                <div class="row">
-                                    	                                                    <div class="col-md-1 user-image">
-                                    	                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    	                                                    </div>
-                                    	                                                    <div class="col-md-11 comment-container">
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-9 user-name">Paul Martin</div>
-                                    	                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                    	                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                    	                                                                <i class="material-icons">more_horiz</i>
-                                    	                                                            </a>
-                                    	                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                    	                                                                <li><a href="javascript:;">Edit</a></li>
-                                    	                                                                <li><a href="javascript:;">Delete</a></li>
-                                    	                                                            </ul>
-                                    	                                                        </div>
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-12 comment">
-                                    	                                                                <span class="hashTag">#blog2019</span> <span class="atMention">@ClarisseCoutois</span> Due date increased. Problem with a batch.
-                                    	                                                            </div>
-                                    	                                                        </div>
-                                    	                                                    </div>
-                                    	                                                </div>
-                                    	                                            </div>
-                                    	                                        </li>
-                                    	                                        <li>
-                                    	                                            <div class="col-md-12 comments-section">
-                                    	                                                <div class="row">
-                                    	                                                    <div class="col-md-1 user-image">
-                                    	                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    	                                                    </div>
-                                    	                                                    <div class="col-md-11 comment-container">
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-9 user-name">Paul Martin</div>
-                                    	                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                    	                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                    	                                                                <i class="material-icons">more_horiz</i>
-                                    	                                                            </a>
-                                    	                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                    	                                                                <li><a href="javascript:;">Edit</a></li>
-                                    	                                                                <li><a href="javascript:;">Delete</a></li>
-                                    	                                                            </ul>
-                                    	                                                        </div>
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-12 comment">
-                                    	                                                                <span class="hashTag">#blog2019</span> <span class="atMention">@ClarisseCoutois</span> Due date increased. Problem with a batch.
-                                    	                                                            </div>
-                                    	                                                        </div>
-                                    	                                                    </div>
-                                    	                                                </div>
-                                    	                                            </div>
-                                    	                                        </li>
-                                    	                                    </ul>
-                                    	                                </div>
-                                    	                            </div>
-                                    	                        </div>
-                                    	                        <div class="row">
-                                    	                            <div class="col-md-12">
-                                    	                                <div class="col-md-12 post-comments-container">
-                                    	                                    <ul>
-                                    	                                        <li>
-                                    	                                            <div class="col-md-12 comments-section">
-                                    	                                                <div class="row">
-                                    	                                                    <div class="col-md-1 user-image">
-                                    	                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    	                                                    </div>
-                                    	                                                    <div class="col-md-11 comment-container">
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-10 user-name">Clarisse Courtois</div>                                      
-                                    	                                                        </div>
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-10 comment">
-                                    	                                                                <textarea id="commentPost" class="form-control" placeholder="Enter your comment"></textarea>
-                                    	                                                            </div>
-                                    	                                                            <a href="javascript:;" class="col-md-2 btn btn-yes comment-post">
-                                    	                                                                <i class="material-icons">send</i>
-                                    	                                                            </a>
-                                    	                                                        </div>
-                                    	                                                    </div>
-                                    	                                                </div>
-                                    	                                            </div>
-                                    	                                        </li>
-                                    	                                    </ul>
-                                    	                                </div>
-                                    	                            </div>
-                                    	                        </div>
-                                    	                    </div>
-                                    	                </div>
-                                    	                <div class="row">
-                                    	                    <div class="col-md-12 card feeds-container">
-                                    	                        <div class="row">
-                                    	                            <div class="col-md-12 feeds-header">
-                                    	                                    <div class="col-md-1 profile-image">
-                                    	                                        <img src="lbd/img/apple.jpg" class="img-circle" />
-                                    	                                    </div>
-                                    	                                    <div class="col-md-11 profile-name">
-                                    	                                       <a href="javascript:;">Allocine</a>  <span> <a href="javascript:;">Blog 2019</a></span>
-                                    	                                    </div>
-                                    	                                    <div class="col-md-1 feed-nav pull-right">
-                                    	                                        <a href="javascript:;">
-                                    	                                            <i class="material-icons">more_vert</i>
-                                    	                                        </a>
-                                    	                                    </div>
-                                    	                            </div>
-                                    	                        </div>
-                                    	                        <div class="row">
-                                    	                            <div class="col-md-12">
-                                    	                                <div class="col-md-12 feeds-comments-container">
-                                    	                                    <ul>
-                                    	                                        <li>
-                                    	                                            <div class="col-md-12 comments-section">
-                                    	                                                <div class="row">
-                                    	                                                    <div class="col-md-1 user-image">
-                                    	                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    	                                                    </div>
-                                    	                                                    <div class="col-md-11 comment-container">
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-9 user-name">Clarisse Courtois</div>
-                                    	                                                            <div class="col-md-2 comment-date">10m ago</div>
-                                    	                                                            <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
-                                    	                                                                <i class="material-icons">more_horiz</i>
-                                    	                                                            </a>
-                                    	                                                            <ul class="dropdown-menu dropdown-menu-right" data-container="body">
-                                    	                                                                <li><a href="javascript:;">Edit</a></li>
-                                    	                                                                <li><a href="javascript:;">Delete</a></li>
-                                    	                                                            </ul>
-                                    	                                                        </div>
-                                    	                                                        <div class="row">
-                                    	                                                            <div class="col-md-12 comment">
-                                    	                                                                <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
-                                    	                                                            </div>
-                                    	                                                        </div>
-                                    	                                                    </div>
-                                    	                                                </div>
-                                    	                                            </div>
-                                    	                                         </li>
-                                    										</ul>
-                                    									</div>
-                                    								</div>
-                                    							</div>
-                                    	                        <div class="row">
-                                    								<div class="col-md-12">
-                                    									<div class="col-md-12 post-comments-container">
-                                    										<ul>
-                                    											<li>
-                                    												<div class="col-md-12 comments-section">
-                                    													<div class="row">
-                                    														<div class="col-md-1 user-image">
-                                    															<img src="lbd/img/default-avatar.png" class="img-circle" />
-                                    														</div>
-                                    													<div class="col-md-11 comment-container">
-                                    														<div class="row">
-                                    															<div class="col-md-10 user-name">Clarisse Courtois</div>                                      
-                                    														</div>
-                                    														<div class="row">
-                                    															<div class="col-md-10 comment">
-                                    																<textarea id="commentPost" class="form-control" placeholder="Enter your comment"></textarea>
-                                    															</div>
-                                    															<a href="javascript:;" class="col-md-2 btn btn-yes comment-post">
-                                    																<i class="material-icons">send</i>
-                                    															</a>
-                                    														</div>
-                                    													</div>	
-                                    												</div>
-                                    											</li>
-                                    										</ul>
-                                    									</div>
-                                    								</div>
-                                    							</div>
-                                    						</div>
-                                    					</div>
-                                    				</div>
+                                    	</div>
+                                    	<div class="col-md-12">
+                                    		<div class="col-md-12">
+                                    			<div class="row">
+                                    			    <div class="col-md-12 feed-title-container">
+                                    			        <div class="row">
+                                    			            <div class="feed-title">Comments &amp; activities</div>
+                                    			        </div>
+                                    			    </div>
+                                    			</div>
+                                    			<div class="row">
+                                    			    <div class="col-md-12 no-job-container">
+                                    			        <div class="no-job-info">
+                                    			            <h4>
+                                    			                No cooments &amp; activities found
+                                    			            </h4>
+                                    			        </div>
+                                    			    </div>
+                                    			</div>
+                                    			<div class="row">
+                                    			    <div class="col-md-12 feeds-main-container">
+                                    			        <div class="row">
+                                    			            <div class="col-md-12 card feeds-container">
+                                    			                <div class="row">
+                                    			                    <div class="col-md-12 feeds-header">
+                                    			                        <div class="col-md-1 profile-image">
+                                    			                            <img src="lbd/img/apple.jpg" class="img-circle" />
+                                    			                        </div>
+                                    			                        <div class="col-md-11 profile-name">
+                                    			                            <a href="javascript:;">Allocine</a>  <span> <a href="javascript:;">Blog 2019</a></span>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </div>
+                                    			                <div class="row">
+                                    			                    <div class="col-md-12">
+                                    			                        <div class="col-md-12 feeds-comments-container" data-container="body">
+                                    			                            <ul>
+                                    			                                <li>
+                                    			                                    <div class="col-md-12 comments-section">
+                                    			                                        <div class="row">
+                                    			                                            <div class="col-md-1 user-image">
+                                    			                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                    			                                            </div>
+                                    			                                            <div class="col-md-11 comment-container">
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                    			                                                    <div class="col-md-3 comment-date">
+                                    			                                                        10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                    			                                                            <i class="material-icons">more_horiz</i>
+                                    			                                                        </a>
+                                    			                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                    			                                                            <li><a href="javascript:;">Edit</a></li>
+                                    			                                                            <li><a href="javascript:;">Delete</a></li>
+                                    			                                                        </ul>
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-12 comment">
+                                    			                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                            </div>
+                                    			                                        </div>
+                                    			                                    </div>
+                                    			                                </li>
+                                    			                                <li>
+                                    			                                    <div class="col-md-12 comments-section">
+                                    			                                        <div class="row">
+                                    			                                            <div class="col-md-1 user-image">
+                                    			                                                <i class="material-icons df-ac-jc">message</i>
+                                    			                                            </div>
+                                    			                                            <div class="col-md-11 comment-container">
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                    			                                                    <div class="col-md-3 comment-date">
+                                    			                                                        10m ago 
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-12 comment">
+                                    			                                                        <span class="atMention">@Paulmartin</span> has paused <span class="hashTag">#blog2019</span>
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                            </div>
+                                    			                                        </div>
+                                    			                                    </div>
+                                    			                                </li>
+                                    			                            </ul>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </div>
+                                    			                <form class="form send-comments-container" action="">
+                                    			                    <div class="row send-comment-container-row">
+                                    			                        <div class="col-md-12">
+                                    			                            <div class="col-md-12 card send-comment-container">
+                                    			                                <div class="col-md-2 user-image" style="display: none;">
+                                    			                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                    			                                </div>
+                                    			                                <div class="col-md-10 status-update-text">
+                                    			                                    <textarea id="statusUpdate" class="form-control" placeholder="Say something..."></textarea>
+                                    			                                </div>
+                                    			                            </div>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                    <div class="row send-comment-actions" style="display: none;">
+                                    			                        <div class="col-md-12">
+                                    			                            <button class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal" type="reset">
+                                    			                            Cancel
+                                    			                            </button>
+                                    			                            <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                                    			                            Send comment
+                                    			                            </button>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </form>
+                                    			            </div>
+                                    			        </div>
+                                    			        <div class="row">
+                                    			            <div class="col-md-12 card feeds-container">
+                                    			                <div class="row">
+                                    			                    <div class="col-md-12 feeds-header">
+                                    			                        <div class="col-md-1 profile-image">
+                                    			                            <img src="lbd/img/apple.jpg" class="img-circle" />
+                                    			                        </div>
+                                    			                        <div class="col-md-11 profile-name">
+                                    			                            <a href="javascript:;">Allocine</a>  <span> <a href="javascript:;">Blog 2019</a></span>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </div>
+                                    			                <div class="row">
+                                    			                    <div class="col-md-12">
+                                    			                        <div class="col-md-12 feeds-comments-container" data-container="body">
+                                    			                            <ul>
+                                    			                                <li>
+                                    			                                    <div class="col-md-12 comments-section">
+                                    			                                        <div class="row">
+                                    			                                            <div class="col-md-1 user-image">
+                                    			                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                    			                                            </div>
+                                    			                                            <div class="col-md-11 comment-container">
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                    			                                                    <div class="col-md-3 comment-date">
+                                    			                                                        10m ago 
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-12 comment">
+                                    			                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                            </div>
+                                    			                                        </div>
+                                    			                                    </div>
+                                    			                                </li>
+                                    			                                <li>
+                                    			                                    <div class="col-md-12 comments-section">
+                                    			                                        <div class="row">
+                                    			                                            <div class="col-md-1 user-image">
+                                    			                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                    			                                            </div>
+                                    			                                            <div class="col-md-11 comment-container">
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                    			                                                    <div class="col-md-3 comment-date">
+                                    			                                                        10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                    			                                                            <i class="material-icons">more_horiz</i>
+                                    			                                                        </a>
+                                    			                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                    			                                                            <li><a href="javascript:;">Edit</a></li>
+                                    			                                                            <li><a href="javascript:;">Delete</a></li>
+                                    			                                                        </ul>
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-12 comment">
+                                    			                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est ut fugiat officia expedita dolorem, aliquam, itaque illo eaque fugit ipsam deserunt unde, dolor! <br/><br/>Obcaecati, sed omnis unde minus harum quisquam aliquam accusantium recusandae eaque beatae! Placeat, dolorum.
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                            </div>
+                                    			                                        </div>
+                                    			                                    </div>
+                                    			                                </li>
+                                    			                            </ul>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </div>
+                                    			                <form class="form send-comments-container" action="">
+                                    			                    <div class="row send-comment-container-row">
+                                    			                        <div class="col-md-12">
+                                    			                            <div class="col-md-12 card send-comment-container">
+                                    			                                <div class="col-md-2 user-image" style="display: none;">
+                                    			                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                    			                                </div>
+                                    			                                <div class="col-md-10 status-update-text">
+                                    			                                    <textarea id="statusUpdate" class="form-control" placeholder="Say something..."></textarea>
+                                    			                                </div>
+                                    			                            </div>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                    <div class="row send-comment-actions" style="display: none;">
+                                    			                        <div class="col-md-12">
+                                    			                            <button class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal" type="reset">
+                                    			                            Cancel
+                                    			                            </button>
+                                    			                            <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                                    			                            Send comment
+                                    			                            </button>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </form>
+                                    			            </div>
+                                    			        </div>
+                                    			        <div class="row">
+                                    			            <div class="col-md-12 card feeds-container">
+                                    			                <div class="row">
+                                    			                    <div class="col-md-12 feeds-header">
+                                    			                        <div class="col-md-1 profile-image">
+                                    			                            <img src="lbd/img/apple.jpg" class="img-circle" />
+                                    			                        </div>
+                                    			                        <div class="col-md-11 profile-name">
+                                    			                            <a href="javascript:;">Allocine</a>  <span> <a href="javascript:;">Blog 2019</a></span>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </div>
+                                    			                <div class="row">
+                                    			                    <div class="col-md-12">
+                                    			                        <div class="col-md-12 feeds-comments-container" data-container="body">
+                                    			                            <ul>
+                                    			                                <li>
+                                    			                                    <div class="col-md-12 comments-section">
+                                    			                                        <div class="row">
+                                    			                                            <div class="col-md-1 user-image">
+                                    			                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                    			                                            </div>
+                                    			                                            <div class="col-md-11 comment-container">
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                    			                                                    <div class="col-md-3 comment-date">
+                                    			                                                        10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                    			                                                            <i class="material-icons">more_horiz</i>
+                                    			                                                        </a>
+                                    			                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                    			                                                            <li><a href="javascript:;">Edit</a></li>
+                                    			                                                            <li><a href="javascript:;">Delete</a></li>
+                                    			                                                        </ul>
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-12 comment">
+                                    			                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                            </div>
+                                    			                                        </div>
+                                    			                                    </div>
+                                    			                                </li>
+                                    			                                <li>
+                                    			                                    <div class="col-md-12 comments-section">
+                                    			                                        <div class="row">
+                                    			                                            <div class="col-md-1 user-image">
+                                    			                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                    			                                            </div>
+                                    			                                            <div class="col-md-11 comment-container">
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                    			                                                    <div class="col-md-3 comment-date">
+                                    			                                                        10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                    			                                                            <i class="material-icons">more_horiz</i>
+                                    			                                                        </a>
+                                    			                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                    			                                                            <li><a href="javascript:;">Edit</a></li>
+                                    			                                                            <li><a href="javascript:;">Delete</a></li>
+                                    			                                                        </ul>
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-12 comment">
+                                    			                                                        <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est ut fugiat officia expedita dolorem, aliquam, itaque illo eaque fugit ipsam deserunt unde, dolor! <br/><br/>Obcaecati, sed omnis unde minus harum quisquam aliquam accusantium recusandae eaque beatae! Placeat, dolorum. Cumque voluptatum quo accusantium labore, quos nam laborum voluptatem? Voluptatum delectus, asperiores.
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                            </div>
+                                    			                                        </div>
+                                    			                                    </div>
+                                    			                                </li>
+                                    			                                <li>
+                                    			                                    <div class="col-md-12 comments-section">
+                                    			                                        <div class="row">
+                                    			                                            <div class="col-md-1 user-image">
+                                    			                                                <i class="material-icons df-ac-jc">message</i>
+                                    			                                            </div>
+                                    			                                            <div class="col-md-11 comment-container">
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                    			                                                    <div class="col-md-3 comment-date">
+                                    			                                                        10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                    			                                                            <i class="material-icons">more_horiz</i>
+                                    			                                                        </a>
+                                    			                                                        <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                    			                                                            <li><a href="javascript:;">Edit</a></li>
+                                    			                                                            <li><a href="javascript:;">Delete</a></li>
+                                    			                                                        </ul>
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                                <div class="row">
+                                    			                                                    <div class="col-md-12 comment">
+                                    			                                                        <span class="atMention">@Paulmartin</span> has paused <span class="hashTag">#blog2019</span>
+                                    			                                                    </div>
+                                    			                                                </div>
+                                    			                                            </div>
+                                    			                                        </div>
+                                    			                                    </div>
+                                    			                                </li>
+                                    			                            </ul>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </div>
+                                    			                <div class="row">
+                                    			                    <a href="javascript:;" data-toggle="modal" data-target="#show-all-comments-modal" class="show-all-comments col-md-12">Show full history (...)</a>
+                                    			                </div>
+                                    			                <form class="form send-comments-container" action="">
+                                    			                    <div class="row send-comment-container-row">
+                                    			                        <div class="col-md-12">
+                                    			                            <div class="col-md-12 card send-comment-container">
+                                    			                                <div class="col-md-2 user-image" style="display: none;">
+                                    			                                    <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                    			                                </div>
+                                    			                                <div class="col-md-10 status-update-text">
+                                    			                                    <textarea id="statusUpdate" class="form-control" placeholder="Say something..."></textarea>
+                                    			                                </div>
+                                    			                            </div>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                    <div class="row send-comment-actions" style="display: none;">
+                                    			                        <div class="col-md-12">
+                                    			                            <button class="btn btn-default btn-fill btn-wd btn-no pull-left" type="reset">
+                                    			                            Cancel
+                                    			                            </button>
+                                    			                            <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                                    			                            Send comment
+                                    			                            </button>
+                                    			                        </div>
+                                    			                    </div>
+                                    			                </form>
+                                    			            </div>
+                                    			        </div>
+                                    
+                                    
+                                    			        
+                                    			    </div>
                                     			</div>
                                     		</div>
                                     	</div>
@@ -4380,6 +4402,210 @@
             </div>
         </div>
     </div>
+    <!-- show all comments modal -->
+    <div aria-labelledby="show-all-comments-modal" class="modal fade show-all-comments-modal" id="show-all-comments-modal" role="modal" tabindex="-1" style="display: none;">
+        <div class="modal-dialog modal-lg" role="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="edit-content clearfix">
+                        <span class="close">
+                            <a data-dismiss="modal" href="javascript:;">
+                                <i class="material-icons">
+                                    close
+                                </i>
+                            </a>
+                        </span>
+                        <div class="row">
+                        <div class="col-md-12 card feeds-container">
+                            <div class="row">
+                                <div class="col-md-12 feeds-header">
+                                    <div class="col-md-1 profile-image">
+                                        <img src="lbd/img/apple.jpg" class="img-circle" />
+                                    </div>
+                                    <div class="col-md-11 profile-name">
+                                        <a href="javascript:;">Allocine</a>  <span> <a href="javascript:;">Blog 2019</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 feeds-comments-container" data-container="body">
+                                        <ul>
+                                            <li>
+                                                <div class="col-md-12 comments-section">
+                                                    <div class="row">
+                                                        <div class="col-md-1 user-image">
+                                                            <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                        </div>
+                                                        <div class="col-md-11 comment-container">
+                                                            <div class="row">
+                                                                <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                <div class="col-md-3 comment-date">
+                                                                    10m ago 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 comment">
+                                                                    <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                                                    <br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est ut fugiat officia expedita dolorem, aliquam, itaque illo eaque fugit ipsam deserunt unde, dolor! Obcaecati, sed omnis unde minus harum quisquam aliquam accusantium recusandae eaque beatae! Placeat, dolorum. Cumque voluptatum quo accusantium labore, quos nam laborum voluptatem? Voluptatum delectus, asperiores.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 comments-section">
+                                                    <div class="row">
+                                                        <div class="col-md-1 user-image">
+                                                            <i class="material-icons df-ac-jc">message</i>
+                                                        </div>
+                                                        <div class="col-md-11 comment-container">
+                                                            <div class="row">
+                                                                <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                <div class="col-md-3 comment-date">
+                                                                    10m ago 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 comment">
+                                                                    <span class="atMention">@Paulmartin</span> has paused <span class="hashTag">#blog2019</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 comments-section">
+                                                    <div class="row">
+                                                        <div class="col-md-1 user-image">
+                                                            <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                        </div>
+                                                        <div class="col-md-11 comment-container">
+                                                            <div class="row">
+                                                                <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                <div class="col-md-3 comment-date">
+                                                                    10m ago 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 comment">
+                                                                    <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 comments-section">
+                                                    <div class="row">
+                                                        <div class="col-md-1 user-image">
+                                                            <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                        </div>
+                                                        <div class="col-md-11 comment-container">
+                                                            <div class="row">
+                                                                <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                <div class="col-md-3 comment-date">
+                                                                    10m ago 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 comment">
+                                                                    <span class="hashTag">#blog2019</span> <span class="atMention">@Paulmartin</span> We are waiting for client validation. 14 days left. I will tell you if anything moving.
+                                                                    <br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est ut fugiat officia expedita dolorem, aliquam, itaque illo eaque fugit ipsam deserunt unde, dolor! Obcaecati, sed omnis unde minus harum quisquam aliquam accusantium recusandae eaque beatae! Placeat, dolorum. Cumque voluptatum quo accusantium labore, quos nam laborum voluptatem? Voluptatum delectus, asperiores.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 comments-section">
+                                                    <div class="row">
+                                                        <div class="col-md-1 user-image">
+                                                            <i class="material-icons df-ac-jc">message</i>
+                                                        </div>
+                                                        <div class="col-md-11 comment-container">
+                                                            <div class="row">
+                                                                <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                <div class="col-md-3 comment-date">
+                                                                    10m ago 
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 comment">
+                                                                    <span class="atMention">@Paulmartin</span> has paused <span class="hashTag">#blog2019</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="col-md-12 comments-section">
+                                                    <div class="row">
+                                                        <div class="col-md-1 user-image">
+                                                            <i class="material-icons df-ac-jc">message</i>
+                                                        </div>
+                                                        <div class="col-md-11 comment-container">
+                                                            <div class="row">
+                                                                <div class="col-md-9 user-name">Clarisse Courtois</div>
+                                                                <div class="col-md-3 comment-date">
+                                                                    10m ago <a data-container="body" href="javascript:;" class="col-md-1 pull-right comment-actions dropdown-toggle" data-toggle="dropdown">
+                                                                        <i class="material-icons">more_horiz</i>
+                                                                    </a>
+                                                                    <ul class="dropdown-menu dropdown-menu-right" data-container="body">
+                                                                        <li><a href="javascript:;">Edit</a></li>
+                                                                        <li><a href="javascript:;">Delete</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 comment">
+                                                                    <span class="atMention">@Paulmartin</span> has paused <span class="hashTag">#blog2019</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="form send-comments-container" action="">
+                                <div class="row send-comment-container-row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-12 card send-comment-container">
+                                            <div class="col-md-2 user-image" style="display: none;">
+                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                            </div>
+                                            <div class="col-md-10 status-update-text">
+                                                <textarea id="statusUpdate" class="form-control" placeholder="Say something..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row send-comment-actions" style="display: none;">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-default btn-fill btn-wd btn-no pull-left" type="reset">
+                                        Cancel
+                                        </button>
+                                        <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                                        Send comment
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!--   Core JS Files   -->
 <script src="lbd/js/jquery.min.js" type="text/javascript">
@@ -4468,7 +4694,7 @@
 <script src="lbd/lib/TimePicki-master/js/timepicki.js"></script>
 <link rel="stylesheet" type="text/css" href="lbd/lib/TimePicki-master/css/timepicki.css"/>
 <!-- Bootstrap-tokenfield -->
-<script src="lbd/lib/Bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
+<script src="lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
 
 <!-- Begin emoji-picker JavaScript -->
 <script src="lbd/lib/emoji-picker-master/lib/js/config.js"></script>
@@ -4485,9 +4711,17 @@
 <!-- jquery readmore -->
 <script type="text/javascript" src="lbd/lib/read-more/readmore.js"></script>
 
+<!-- Croppie -->
+<link rel="stylesheet" type="text/css" href="lbd/lib/croppie/croppie.css"/>
+<script type="text/javascript" src="lbd/lib/croppie/croppie.min.js"></script>
+<script type="text/javascript" src="lbd/lib/croppie/exif.js"></script>
+
+
+
 <!-- Custom JS -->
 <script src="lbd/js/custom.js">
-</script>  
+</script>
+  
 <script type="text/javascript">
     $(document).ready(function() {
         $('#contacts-list, #quotes-contracts-list, #crm-list').on('click', function(e) {
@@ -4543,6 +4777,62 @@ $(document).ready(function(){
 });
 </script>
 
+<!-- Custom scripts -->
+
+    <script type="text/javascript">
+        /*Auto resize textarea*/
+        $(document).ready(function() {
+            $('#commentPost').each(function() {
+                $(this).autogrow({vertical: true, horizontal: false});
+            });
+            
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $(document).on('focus', ".status-update-text textarea", function(e){
+              var userImage = $(this).parents('.status-update-text').siblings('.user-image');
+              var sendCommentActions = $(this).parents('.send-comment-container-row').siblings('.send-comment-actions');
+              $(userImage).slideDown();
+              $(sendCommentActions).slideDown();
+              /*$('.send-comment-container .user-image, .send-comment-actions').slideDown();*/
+            });
+            $(document).on('click', ".send-comment-actions .btn-no", function(e){
+                e.stopImmediatePropagation();
+                var userImage = $(this).parents('.send-comment-actions').siblings().find($('.user-image')),
+                    sendCommentActions = $(this).parents('.send-comment-actions'),
+                    textArea = $(this).parents('.send-comment-actions').siblings().find($('textarea'));
+                $(textArea).css({'height':'40px'});
+                $(userImage).slideUp();
+                $(sendCommentActions).slideUp();
+               /* $('.send-comment-container .user-image, .send-comment-actions').slideUp();*/
+            });
+
+     $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+        /*    for styling purpose only*/
+        $(this).find('.comment').css({overflow: "hidden"});
+            }).one('shown.bs.modal', function () {
+            /*initialize plugin once modal shown*/
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+        });
+    });
+
+    </script>
 
 
 </body>

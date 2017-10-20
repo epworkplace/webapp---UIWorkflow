@@ -7,6 +7,10 @@ body{
   position: relative;
 }
 
+p#description{
+	width: 100%;
+}
+
 .mce-tinymce.mce-container.mce-panel {
    border: 2px dashed blue !important;
 }
