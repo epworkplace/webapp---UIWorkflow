@@ -3050,6 +3050,24 @@ html {
     }
 }
 
+.previous-job-setting-date, .previous-job-settings {
+    line-height: 2.3;
+
+    a {
+        color: #9a9fa9;
+        text-decoration: underline;
+
+        &:hover {
+            color: #353f53;
+        }
+    }
+}
+
+.previous-job-settings {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
 .assigned-user {
     .assigned-user-card {
         height: 53px;
@@ -3071,6 +3089,16 @@ html {
                 height: 30px;
                 padding: 0;
                 margin-right: 20px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                }
+
+                .card-user-empty {
+                    height: 30px;
+                }
             }
 
             .user-name {
@@ -5830,11 +5858,6 @@ html {
                             color: #fff;
                         }
                     } */
-                    &.dragover {
-                        background: rgba(68, 138, 255, 0.5);
-                        z-index: 9;
-                        border: 2px solid #448AFF;
-                    }
                 }
 
                 .card-footer {
@@ -10818,5 +10841,79 @@ body.mce-content-body {
 }
 
 /*Document Preview Modal Ends*/
+
+/* Popover Style Starts */
+
+.popover {
+    max-width: 100% !important;
+    padding: 0;
+    border-radius: 4px;
+    z-index: 1031;
+    border: 0;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
+    -webkit-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+    -moz-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+    -ms-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+    -o-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+    filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+}
+
+.popover-title {
+    font-size: 16px;
+    background-color: #fff !important;
+    font-weight: normal;
+    line-height: 22px;
+    padding: 8px 15px;
+    margin: 0;
+    color: #353f53 !important;
+    text-align: left;
+    border: 0;
+    font-size: 12px;
+    border-radius: 4px 4px 0 0;
+}
+
+.popover-content {
+    padding: 15px;
+    color: #353f53 !important;
+}
+
+.popover {
+    .arrow {
+        border: 0;
+    }
+
+    &.top .arrow {
+        margin-left: 0;
+        left: 56% !important;
+    }
+
+    &.bottom .arrow:after {
+        border-bottom-color: #fff;
+    }
+}
+
+.popover-filter {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000000;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    visibility: hidden;
+    transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+
+    &.in {
+        visibility: visible;
+        opacity: 0.2;
+        filter: alpha(opacity = 20);
+        transition-delay: 0s;
+    }
+}
+
+/* Popover Style Ends */
 
 /*New WP STYLES Ends*/
