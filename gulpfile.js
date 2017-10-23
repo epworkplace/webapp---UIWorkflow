@@ -44,7 +44,9 @@ var
     out: dest + 'lbd/css/',
     pluginCSS: {
       in: [source + 'lbd/css/**/*'],
+      liveIn: [source + 'lbd/css-live/**/*'],
       watch: ['lbd/css/**/*.css'],
+      liveWatch: ['lbd/css-live/**/*.css'],
       out: dest + 'lbd/css/'
     },
     sassOpts: {
@@ -70,58 +72,59 @@ var
     out: dest + 'lbd/fonts/'
   },
 
-  js = {
-    in: [
-          source + "lbd/js/jquery.min.js",
-          source + "lbd/js/jquery-ui-1.10.0.custom.min.js",
-          source + "lbd/js/jquery.validate.min.js",
-          source + "lbd/js/underscore-min.js",
-          source + "lbd/js/moment.min.js",
-          source + "lbd/js/bootstrap.min.js",
-          source + "lbd/js/bootstrap-datetimepicker.js",
-          source + "lbd/js/bootstrap-selectpicker.js",
-          source + "lbd/js/bootstrap-checkbox-radio-switch-tags.js",
-          source + "lbd/js/chartist.min.js",
-          source + "lbd/js/bootstrap-notify.js",
-          source + "lbd/js/sweetalert2.js",
-          source + "lbd/js/jquery-jvectormap.js",
-          source + "lbd/js/jquery.bootstrap.wizard.min.js",
-          source + "lbd/js/bootstrap-table.js",
-          source + "lbd/js/fullcalendar.min.js",
-          source + "lbd/js/light-bootstrap-dashboard.js",
-          source + "lbd/js/jquery.mCustomScrollbar.concat.min.js",
-          source + "lbd/js/jquery-ns-autogrow.min.js",
-          source + "lbd/js/bootstrap-select.js",
-          source + "lbd/lib/lionbars/jquery.lionbars.0.3.min.js",
-          source + "lbd/lib/progressbarjs/progressbar.js",
-          source + "lbd/lib/chosen/chosen.jquery.js",
-          source + "lbd/lib/chosen/ImageSelect.jquery.js",
-          source + "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
-          source + "lbd/lib/tinymce_4.2.5/tinymce.min.js",
-          source + "lbd/lib/tinymce_4.2.5/themes/modern/theme.min.js",
-          source + "lbd/lib/slick-1.6.0/slick/slick.js",
-          source + "lbd/lib/rateyo/jquery.rateyo.js",
-          source + "lbd/lib/TimePicki-master/js/timepicki.js",
-          source + "lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js",
-          source + "lbd/lib/emoji-picker-master/lib/js/config.js",
-          source + "lbd/lib/emoji-picker-master/lib/js/util.js",
-          source + "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
-          source + "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
-          source + "lbd/lib/shorten/jquery.shorten.1.0.js",
-          source + "lbd/lib/read-more/readmore.js",
+  // js = {
+  //   in: [
+  //         source + "lbd/js/jquery.min.js",
+  //         source + "lbd/js/jquery-ui-1.10.0.custom.min.js",
+  //         source + "lbd/js/jquery.validate.min.js",
+  //         source + "lbd/js/underscore-min.js",
+  //         source + "lbd/js/moment.min.js",
+  //         source + "lbd/js/bootstrap.min.js",
+  //         source + "lbd/js/bootstrap-datetimepicker.js",
+  //         source + "lbd/js/bootstrap-selectpicker.js",
+  //         source + "lbd/js/bootstrap-checkbox-radio-switch-tags.js",
+  //         source + "lbd/js/chartist.min.js",
+  //         source + "lbd/js/bootstrap-notify.js",
+  //         source + "lbd/js/sweetalert2.js",
+  //         source + "lbd/js/jquery-jvectormap.js",
+  //         source + "lbd/js/jquery.bootstrap.wizard.min.js",
+  //         source + "lbd/js/bootstrap-table.js",
+  //         source + "lbd/js/fullcalendar.min.js",
+  //         source + "lbd/js/light-bootstrap-dashboard.js",
+  //         source + "lbd/js/jquery.mCustomScrollbar.concat.min.js",
+  //         source + "lbd/js/jquery-ns-autogrow.min.js",
+  //         source + "lbd/js/bootstrap-select.js",
+  //         source + "lbd/lib/lionbars/jquery.lionbars.0.3.min.js",
+  //         source + "lbd/lib/progressbarjs/progressbar.js",
+  //         source + "lbd/lib/chosen/chosen.jquery.js",
+  //         source + "lbd/lib/chosen/ImageSelect.jquery.js",
+  //         source + "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
+  //         source + "lbd/lib/tinymce_4.2.5/tinymce.min.js",
+  //         source + "lbd/lib/tinymce_4.2.5/themes/modern/theme.min.js",
+  //         source + "lbd/lib/slick-1.6.0/slick/slick.js",
+  //         source + "lbd/lib/rateyo/jquery.rateyo.js",
+  //         source + "lbd/lib/TimePicki-master/js/timepicki.js",
+  //         source + "lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js",
+  //         source + "lbd/lib/emoji-picker-master/lib/js/config.js",
+  //         source + "lbd/lib/emoji-picker-master/lib/js/util.js",
+  //         source + "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
+  //         source + "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
+  //         source + "lbd/lib/shorten/jquery.shorten.1.0.js",
+  //         source + "lbd/lib/read-more/readmore.js",
 
-          source + "lbd/js/custom.js"
+  //         source + "lbd/js/custom.js"
 
-        ],
-    out: dest + 'lbd/js/'
-    // filename: 'main.js'
-  },
-
-  //   js = {
-  //   in: source + 'lbd/**/*.js',
+  //       ],
   //   out: dest + 'lbd/js/'
   //   // filename: 'main.js'
   // },
+
+    js = {
+    in: source + 'lbd/js/**/*.js',
+    liveIn: source + 'lbd/js-live/**/*.js',
+    out: dest + 'lbd/js/'
+    // filename: 'main.js'
+  },
 
   jsLibs = {
     in: source + 'lbd/lib/**/*',
@@ -245,7 +248,7 @@ gulp.task('css', ['fonts'], function() {
   var cssFilter = $.filter(['**/*.css'], {restore: true}),
       imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
       imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true});
-  return gulp.src(css.pluginCSS.in)
+  return gulp.src(css.pluginCSS.liveIn)
     // .pipe($.sourcemaps.init())
     // .pipe($.sass(css.sassOpts))
     .pipe($.size({title: 'CSS in '}))
@@ -253,32 +256,27 @@ gulp.task('css', ['fonts'], function() {
     // .pipe($.sourcemaps.write('./maps'))
     .pipe($.newer(css.pluginCSS.out))
     .pipe(cssFilter)
-    /*.pipe($.csso({
-            restructure: false,
-            sourceMap: true,
-            debug: true
-        }))*/
+    .pipe($.order([
+        'bootstrap.min.css',
+        'jquery-ui.theme.min.css',
+        'font-awesome.min.css',
+        'material-icons.css',
+        'pe-icon-7-stroke.css',
+        'jquery.mCustomScrollbar.min.css'
+        // 'lbd/lib/lionbars/lionbars.css',
+        // 'lbd/lib/chosen/chosen.css',
+        // 'lbd/lib/chosen/ImageSelect.css',
+        // 'lbd/lib/jquery-tageditor-master/jquery.tag-editor.css',
+        // 'lbd/lib/slick-1.6.0/slick/slick.css',
+        // 'lbd/lib/slick-1.6.0/slick/slick-theme.css',
+        // 'lbd/lib/rateyo/jquery.rateyo.min.css',
+        // 'lbd/lib/bootstrap-tokenfield/css/bootstrap-tokenfield.min.css',
+        // 'lbd/lib/bootstrap-tokenfield/css/tokenfield-typeahead.min.css',
+        // 'lbd/lib/emoji-picker-master/lib/css/emoji.css',
+        // 'lbd/lib/TimePicki-master/css/timepicki.css'
+      ]))
+    .pipe($.concatCss('lbd-bundle.css', {rebaseUrls: false}))
     .pipe($.cleanCss({rebase:false}))
-    // .pipe($.order([
-    //     'lbd/css/bootstrap.min.css',
-    //     'lbd/css/jquery-ui.theme.min.css',
-    //     'lbd/css/font-awesome.min.css',
-    //     'lbd/css/material-icons.css',
-    //     'lbd/css/pe-icon-7-stroke.css',
-    //     'lbd/css/jquery.mCustomScrollbar.min.css',
-    //     'lbd/lib/lionbars/lionbars.css',
-    //     'lbd/lib/chosen/chosen.css',
-    //     'lbd/lib/chosen/ImageSelect.css',
-    //     'lbd/lib/jquery-tageditor-master/jquery.tag-editor.css',
-    //     'lbd/lib/slick-1.6.0/slick/slick.css',
-    //     'lbd/lib/slick-1.6.0/slick/slick-theme.css',
-    //     'lbd/lib/rateyo/jquery.rateyo.min.css',
-    //     'lbd/lib/bootstrap-tokenfield/css/bootstrap-tokenfield.min.css',
-    //     'lbd/lib/bootstrap-tokenfield/css/tokenfield-typeahead.min.css',
-    //     'lbd/lib/emoji-picker-master/lib/css/emoji.css',
-    //     'lbd/lib/TimePicki-master/css/timepicki.css'
-    //   ]))
-    // .pipe($.concatCss('lbd-bundle.css', {rebaseUrls: false}))
     .pipe(cssFilter.restore)
     .pipe(imageFilter)
     .pipe($.imagemin())
@@ -309,7 +307,7 @@ gulp.task('sass', ['fonts'], function() {
 gulp.task('js', function() {
   var jsFilter = $.filter(['**/*.js', '!**/*custom.js', '!**/jquery.min.js'], {restore: true});
   if (devBuild) {
-    return gulp.src(js.in)
+    return gulp.src(js.liveIn)
 
       // .pipe($.concat(js.filename))
       .pipe($.size({ title: 'JS in '}))
@@ -323,45 +321,45 @@ gulp.task('js', function() {
       //     filename: 'bundle.js',
       //   }
       // }))
-      // .pipe($.order([
-      //     "lbd/js/jquery.min.js",
-      //     "lbd/js/jquery-ui-1.10.0.custom.min.js",
-      //     "lbd/js/jquery.validate.min.js",
-      //     "lbd/js/underscore-min.js",
-      //     "lbd/js/moment.min.js",
-      //     "lbd/js/bootstrap.min.js",
-      //     "lbd/js/bootstrap-datetimepicker.js",
-      //     "lbd/js/bootstrap-selectpicker.js",
-      //     "lbd/js/bootstrap-checkbox-radio-switch-tags.js",
-      //     "lbd/js/chartist.min.js",
-      //     "lbd/js/bootstrap-notify.js",
-      //     "lbd/js/sweetalert2.js",
-      //     "lbd/js/jquery-jvectormap.js",
-      //     "lbd/js/jquery.bootstrap.wizard.min.js",
-      //     "lbd/js/bootstrap-table.js",
-      //     "lbd/js/fullcalendar.min.js",
-      //     "lbd/js/light-bootstrap-dashboard.js",
-      //     "lbd/js/jquery.mCustomScrollbar.concat.min.js",
-      //     "lbd/js/jquery-ns-autogrow.min.js",
-      //     "lbd/js/bootstrap-select.js",
-      //     "lbd/lib/lionbars/jquery.lionbars.0.3.min.js",
-      //     "lbd/lib/progressbarjs/progressbar.js",
-      //     "lbd/lib/chosen/chosen.jquery.js",
-      //     "lbd/lib/chosen/ImageSelect.jquery.js",
-      //     "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
-      //     "lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js",
-      //     "lbd/lib/slick-1.6.0/slick/slick.js",
-      //     "lbd/lib/rateyo/jquery.rateyo.js",
-      //     "lbd/lib/TimePicki-master/js/timepicki.js",
-      //     "lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js",
-      //     "lbd/lib/emoji-picker-master/lib/js/config.js",
-      //     "lbd/lib/emoji-picker-master/lib/js/util.js",
-      //     "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
-      //     "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
-      //     "lbd/lib/shorten/jquery.shorten.1.0.js",
-      //     "lbd/js/custom.js"
-      //     ]))
-      // .pipe($.concat('main.js', {rebaseUrls: false}))
+      .pipe($.order([
+          "jquery.min.js",
+          "jquery-ui-1.10.0.custom.min.js",
+          "jquery.validate.min.js",
+          "underscore-min.js",
+          "moment.min.js",
+          "bootstrap.min.js",
+          "bootstrap-datetimepicker.js",
+          "bootstrap-selectpicker.js",
+          "bootstrap-checkbox-radio-switch-tags.js",
+          "chartist.min.js",
+          "bootstrap-notify.js",
+          "sweetalert2.js",
+          "jquery-jvectormap.js",
+          "jquery.bootstrap.wizard.min.js",
+          "bootstrap-table.js",
+          "fullcalendar.min.js",
+          "light-bootstrap-dashboard.js",
+          "jquery.mCustomScrollbar.concat.min.js",
+          "jquery-ns-autogrow.min.js",
+          "bootstrap-select.js",
+          // "lbd/lib/lionbars/jquery.lionbars.0.3.min.js",
+          // "lbd/lib/progressbarjs/progressbar.js",
+          // "lbd/lib/chosen/chosen.jquery.js",
+          // "lbd/lib/chosen/ImageSelect.jquery.js",
+          // "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
+          // "lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js",
+          // "lbd/lib/slick-1.6.0/slick/slick.js",
+          // "lbd/lib/rateyo/jquery.rateyo.js",
+          // "lbd/lib/TimePicki-master/js/timepicki.js",
+          // "lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js",
+          // "lbd/lib/emoji-picker-master/lib/js/config.js",
+          // "lbd/lib/emoji-picker-master/lib/js/util.js",
+          // "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
+          // "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
+          // "lbd/lib/shorten/jquery.shorten.1.0.js",
+          "lbd/js/custom.js"
+          ]))
+      .pipe($.concat('lbd-bundle.js', {rebaseUrls: false}))
       .pipe($.uglify())
       // .pipe($.gzip({append: false}))
       // .pipe(jsFilter.restore)
