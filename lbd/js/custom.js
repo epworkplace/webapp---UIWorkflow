@@ -916,8 +916,14 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
    }
 });
 
+/*pop over*/
+$('[data-toggle="popover"]').popover({
+    container: 'body'
+});
+
 
 });
+
 
 
 

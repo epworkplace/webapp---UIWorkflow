@@ -169,3 +169,11 @@ $directions :('t':'top','b':'bottom','r':'right', 'l':'left');
         }
     }
 }
+
+input {
+    &.search-input{
+        padding-left: 39px;
+        background: #fff url(../img/search.svg) no-repeat 9px 6px;
+        background-size: 20px; 
+    }
+}
