@@ -72,63 +72,18 @@ var
     out: dest + 'lbd/fonts/'
   },
 
-  // js = {
-  //   in: [
-  //         source + "lbd/js/jquery.min.js",
-  //         source + "lbd/js/jquery-ui-1.10.0.custom.min.js",
-  //         source + "lbd/js/jquery.validate.min.js",
-  //         source + "lbd/js/underscore-min.js",
-  //         source + "lbd/js/moment.min.js",
-  //         source + "lbd/js/bootstrap.min.js",
-  //         source + "lbd/js/bootstrap-datetimepicker.js",
-  //         source + "lbd/js/bootstrap-selectpicker.js",
-  //         source + "lbd/js/bootstrap-checkbox-radio-switch-tags.js",
-  //         source + "lbd/js/chartist.min.js",
-  //         source + "lbd/js/bootstrap-notify.js",
-  //         source + "lbd/js/sweetalert2.js",
-  //         source + "lbd/js/jquery-jvectormap.js",
-  //         source + "lbd/js/jquery.bootstrap.wizard.min.js",
-  //         source + "lbd/js/bootstrap-table.js",
-  //         source + "lbd/js/fullcalendar.min.js",
-  //         source + "lbd/js/light-bootstrap-dashboard.js",
-  //         source + "lbd/js/jquery.mCustomScrollbar.concat.min.js",
-  //         source + "lbd/js/jquery-ns-autogrow.min.js",
-  //         source + "lbd/js/bootstrap-select.js",
-  //         source + "lbd/lib/lionbars/jquery.lionbars.0.3.min.js",
-  //         source + "lbd/lib/progressbarjs/progressbar.js",
-  //         source + "lbd/lib/chosen/chosen.jquery.js",
-  //         source + "lbd/lib/chosen/ImageSelect.jquery.js",
-  //         source + "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
-  //         source + "lbd/lib/tinymce_4.2.5/tinymce.min.js",
-  //         source + "lbd/lib/tinymce_4.2.5/themes/modern/theme.min.js",
-  //         source + "lbd/lib/slick-1.6.0/slick/slick.js",
-  //         source + "lbd/lib/rateyo/jquery.rateyo.js",
-  //         source + "lbd/lib/TimePicki-master/js/timepicki.js",
-  //         source + "lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js",
-  //         source + "lbd/lib/emoji-picker-master/lib/js/config.js",
-  //         source + "lbd/lib/emoji-picker-master/lib/js/util.js",
-  //         source + "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
-  //         source + "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
-  //         source + "lbd/lib/shorten/jquery.shorten.1.0.js",
-  //         source + "lbd/lib/read-more/readmore.js",
-
-  //         source + "lbd/js/custom.js"
-
-  //       ],
-  //   out: dest + 'lbd/js/'
-  //   // filename: 'main.js'
-  // },
-
-    js = {
-    in: source + 'lbd/js/**/*.js',
-    liveIn: source + 'lbd/js-live/**/*.js',
-    out: dest + 'lbd/js/'
-    // filename: 'main.js'
+  js = {
+  in: source + 'lbd/js/**/*.js',
+  liveIn: source + 'lbd/js-live/**/*.js',
+  out: dest + 'lbd/js/'
+  // filename: 'main.js'
   },
 
   jsLibs = {
     in: source + 'lbd/lib/**/*',
-    out: dest + 'lbd/lib/'
+    liveIn: source + 'lbd/lib-live/**/*',
+    out: dest + 'lbd/lib/',
+    liveOut: dest + 'lbd/lib/lib-live/'
     // filename: 'main.js'
   },
 
@@ -198,6 +153,12 @@ gulp.task('clean-js', function() {
 gulp.task('clean-jslib', function() {
   del([
     dest + 'lbd/lib/**/*'
+  ]);
+});
+
+gulp.task('clean-jsliblive', function() {
+  del([
+    dest + 'lbd/lib/lib-live/**/*'
   ]);
 });
 
@@ -342,21 +303,6 @@ gulp.task('js', function() {
           "jquery.mCustomScrollbar.concat.min.js",
           "jquery-ns-autogrow.min.js",
           "bootstrap-select.js",
-          // "lbd/lib/lionbars/jquery.lionbars.0.3.min.js",
-          // "lbd/lib/progressbarjs/progressbar.js",
-          // "lbd/lib/chosen/chosen.jquery.js",
-          // "lbd/lib/chosen/ImageSelect.jquery.js",
-          // "lbd/lib/jquery-tageditor-master/jquery.tag-editor.js",
-          // "lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js",
-          // "lbd/lib/slick-1.6.0/slick/slick.js",
-          // "lbd/lib/rateyo/jquery.rateyo.js",
-          // "lbd/lib/TimePicki-master/js/timepicki.js",
-          // "lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js",
-          // "lbd/lib/emoji-picker-master/lib/js/config.js",
-          // "lbd/lib/emoji-picker-master/lib/js/util.js",
-          // "lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js",
-          // "lbd/lib/emoji-picker-master/lib/js/emoji-picker.js",
-          // "lbd/lib/shorten/jquery.shorten.1.0.js",
           "lbd/js/custom.js"
           ]))
       .pipe($.concat('lbd-bundle.js', {rebaseUrls: false}))
@@ -386,13 +332,108 @@ gulp.task('js', function() {
 // });
 
 // copy js libraries
+gulp.task('jsliblive', function() {
+  var toExclude = ['lbd/lib-live/tinymce_4.2.5/**/*'],
+      htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
+      includeIgnoredJs = $.filter([toExclude[0] + '.js'], {restore: true}),
+      includeIgnoredCss = $.filter(toExclude[0] + '.css', {restore: true}),
+      cssFilter = $.filter(['**/*.css', '!' + toExclude], {restore: true}),
+      imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
+      imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true}),
+      jsonFilter = $.filter(['**/*.json'], {restore: true}),
+      jsFilter = $.filter(['**/*.js', '!' + toExclude, 
+                            '!**/*chosen.jquery.min.js', 
+                            '!**/*ImageSelect.jquery.js'], {restore: true});
+
+  if (devBuild) {
+    return gulp.src(jsLibs.liveIn)
+      .pipe($.size({title: 'jsLibsLive in '}))
+      .pipe($.newer(jsLibs.liveOut))
+      .pipe(jsFilter)
+      // .pipe($.babel())
+      // .pipe($.regenerator())
+      .pipe($.order([
+          "progressbar.js",
+          // "ImageSelect.jquery.js",
+          // "chosen.jquery.js",
+          "jquery.tag-editor.js",
+          "slick.min.js",
+          "jquery.rateyo.min.js",
+          "bootstrap-tokenfield.min.js",
+          "readmore.js"
+          ]))
+      .pipe($.concat('plugins-bundle.js'))
+      // .pipe($.uglify())
+      .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
+      // .pipe(webpack())
+      .pipe(jsFilter.restore)
+      .pipe(includeIgnoredJs)
+      .pipe($.uglify())
+      .pipe(includeIgnoredJs.restore)
+      .pipe(jsonFilter)
+      .pipe($.jsonMinify())
+      .pipe(jsonFilter.restore)
+      .pipe(cssFilter)
+      .pipe($.order([
+          "chosen.css",
+          "ImageSelect.css",
+          "jquery.tag-editor.css",
+          "slick.css",
+          "slick-theme.css",
+          "jquery.rateyo.min.css",
+          "bootstrap-tokenfield.min.css",
+          "tokenfield-typeahead.min.css"
+        ]))
+      .pipe($.concatCss('plugins-bundle.css', {rebaseUrls: false}))
+      // .pipe($.cleanCss({rebase:false}))
+      // .pipe($.concatCss('plugins-bundle.css', {rebaseUrls: false}))
+      .pipe(cssFilter.restore)
+      .pipe(includeIgnoredCss)
+      .pipe($.cleanCss({rebase:false}))
+      .pipe(includeIgnoredCss.restore)
+      .pipe(htmlFilter)
+      .pipe($.htmlclean())
+      .pipe(htmlFilter.restore)
+      .pipe(imageFilter)
+      .pipe($.imagemin())
+      .pipe(imageFilter.restore)
+      // /*.pipe(imageFilter2)
+      // .pipe($.webp())
+      // .pipe(imageFilter2.restore)*/
+
+      // // .pipe($.jshint())
+      // // .pipe($.jshint.reporter('default'))
+      // // .pipe($.jshint.reporter('fail'))
+      .pipe($.size({title: 'jsLibsLive out '}))
+      .pipe(gulp.dest(jsLibs.liveOut));
+
+  }
+  else {
+    del([
+      dest + 'lbd/lib/*'
+    ]);
+    return gulp.src(jsLibs.in)
+      .pipe($.deporder())
+      // .pipe($.concat(jsLibs.filename))
+      .pipe($.size({ title: 'JS libraries in '}))
+      // .pipe($.stripDebug())
+      // .pipe($.uglify())
+      .pipe($.size({ title: 'JS libraries out '}))
+      .pipe(gulp.dest(jsLibs.out));
+  }
+});
+
 gulp.task('jslib', function() {
-  var htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
+  var toExclude = ['lbd/lib-live/tinymce_4.2.5/**/*'],
+      htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
+      includeIgnoredJs = $.filter(toExclude[0] + '.js', {restore: true}),
+      includeIgnoredCss = $.filter(toExclude[0] + '.css', {restore: true}),
       cssFilter = $.filter(['**/*.css'], {restore: true}),
       imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
       imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true}),
       jsonFilter = $.filter(['**/*.json'], {restore: true}),
       jsFilter = $.filter(['**/*.js'], {restore: true});
+
   if (devBuild) {
     return gulp.src(jsLibs.in)
       .pipe($.size({title: 'jsLibs in '}))
@@ -417,15 +458,16 @@ gulp.task('jslib', function() {
       .pipe(imageFilter)
       .pipe($.imagemin())
       .pipe(imageFilter.restore)
-      /*.pipe(imageFilter2)
-      .pipe($.webp())
-      .pipe(imageFilter2.restore)*/
+      // /*.pipe(imageFilter2)
+      // .pipe($.webp())
+      // .pipe(imageFilter2.restore)*/
 
-      // .pipe($.jshint())
-      // .pipe($.jshint.reporter('default'))
-      // .pipe($.jshint.reporter('fail'))
+      // // .pipe($.jshint())
+      // // .pipe($.jshint.reporter('default'))
+      // // .pipe($.jshint.reporter('fail'))
       .pipe($.size({title: 'jsLibs out '}))
-      .pipe(gulp.dest(jsLibs.out));
+      .pipe(gulp.dest(jsLibs.out));      
+
   }
   else {
     del([
@@ -440,7 +482,7 @@ gulp.task('jslib', function() {
       .pipe($.size({ title: 'JS libraries out '}))
       .pipe(gulp.dest(jsLibs.out));
   }
-});
+}); 
 
 gulp.task('connect', function() {
     $.connect.server({
@@ -540,9 +582,10 @@ gulp.task('watch', function() {
 
   // javascript libraries changes
   gulp.watch(jsLibs.in, ['jslib', reload]);
+  gulp.watch(jsLibs.liveIn, ['jsliblive', reload]);  
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'jslib', 'js', 'watch', 'serve']);
+gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'jsliblive', 'jslib', 'js', 'watch', 'serve']);
 
 // gulp.task('default', ['serve']);
