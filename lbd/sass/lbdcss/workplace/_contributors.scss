@@ -664,12 +664,20 @@
                     cursor: pointer;
                 }
             }
+            .remove{
+              margin-right: 0 !important;
+            }
         }
         span[class*='add-'] {
           @extend %add-button;
 
+          &[class*="dragover"]{
+            background: rgba(68,138,255,0.5);
+            z-index: 9;
+            border: 2px solid #448AFF;
+          }
           cursor: pointer;
-          height: 120px;
+          height: 125px;
           border: 2px dashed $border-color;
           font-size: 14px;
           font-weight: 600;
