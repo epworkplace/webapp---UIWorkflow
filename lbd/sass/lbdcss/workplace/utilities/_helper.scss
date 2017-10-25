@@ -26,30 +26,30 @@
     }
 }
 
-// Box modal styles 
+// Box modal styles
 
-$dimensions:('m':'margin','p':'padding');
-$directions :('t':'top','b':'bottom','r':'right', 'l':'left');
+$dimensions: ("m": "margin", "p": "padding");
+$directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
 
-@each $dim in $dimensions{
-    @for $i from 0 through 6{
+@each $dim in $dimensions {
+    @for $i from 0 through 6 {
         $size: $i * 5;
-          .#{nth($dim, 1)}-#{$size} {
+
+        .#{nth($dim, 1)}-#{$size} {
             #{nth($dim, 2)}: #{$size}px;
-        }    
+        }
     }
-    
-  @each $dir in $directions{
-    @for $i from 0 through 6{
-      $size: $i*5;
-      .#{nth($dim,1)}#{nth($dir,1)}-#{$size}{
-        #{nth($dim,2)}-#{nth($dir,2)}:#{$size}px;
-      }
 
+    @each $dir in $directions {
+        @for $i from 0 through 6 {
+            $size: $i * 5;
+
+            .#{nth($dim, 1)}#{nth($dir, 1)}-#{$size} {
+                #{nth($dim, 2)}-#{nth($dir, 2)}: #{$size}px;
+            }
+        }
     }
-  }
 }
-
 
 // button with 48% styles
 .btn-yes {
@@ -92,7 +92,7 @@ $directions :('t':'top','b':'bottom','r':'right', 'l':'left');
     @include custom-btn-no-final($default-bg, $default-bg-hover);
 }
 
-.btn-logout{
+.btn-logout {
     @include custom-btn-nofill-hover(#fff, $default-bg-hover, $delete);
 }
 
@@ -128,6 +128,7 @@ $directions :('t':'top','b':'bottom','r':'right', 'l':'left');
 .auto-width {
     width: auto !important;
 }
+
 .auto-height {
     height: auto !important;
 }
@@ -164,7 +165,7 @@ $directions :('t':'top','b':'bottom','r':'right', 'l':'left');
 
         div {
             b {
-                background-position-y: 10px;
+                background-position-y: 15px;
             }
         }
     }
