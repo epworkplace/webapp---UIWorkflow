@@ -222,7 +222,6 @@ gulp.task('css', ['fonts'], function() {
         'jquery-ui.theme.min.css',
         'font-awesome.min.css',
         'material-icons.css',
-        'pe-icon-7-stroke.css',
         'jquery.mCustomScrollbar.min.css'
         // 'lbd/lib/lionbars/lionbars.css',
         // 'lbd/lib/chosen/chosen.css',
@@ -266,7 +265,7 @@ gulp.task('sass', ['fonts'], function() {
 
 // js tasks
 gulp.task('js', function() {
-  var jsFilter = $.filter(['**/*.js', '!**/*custom.js', '!**/jquery.min.js'], {restore: true});
+  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
   if (devBuild) {
     return gulp.src(js.liveIn)
 
@@ -275,7 +274,7 @@ gulp.task('js', function() {
       .pipe($.newer(js.out))
       // .pipe($.deporder())
       // .pipe($.stripDebug())
-      // .pipe(jsFilter)
+      .pipe(jsFilter)
       // .pipe($.deporder())
       // .pipe($.webpack({
       //   output: {
@@ -302,13 +301,13 @@ gulp.task('js', function() {
           "light-bootstrap-dashboard.js",
           "jquery.mCustomScrollbar.concat.min.js",
           "jquery-ns-autogrow.min.js",
-          "bootstrap-select.js",
-          "lbd/js/custom.js"
+          "bootstrap-select.js"
+          // "lbd/js/custom.js"
           ]))
       .pipe($.concat('lbd-bundle.js', {rebaseUrls: false}))
       .pipe($.uglify())
       // .pipe($.gzip({append: false}))
-      // .pipe(jsFilter.restore)
+      .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
       .pipe(gulp.dest(js.out));
   }
@@ -363,7 +362,7 @@ gulp.task('jsliblive', function() {
           "readmore.js"
           ]))
       .pipe($.concat('plugins-bundle.js'))
-      // .pipe($.uglify())
+      .pipe($.uglify())
       .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
       // .pipe(webpack())
       .pipe(jsFilter.restore)
@@ -385,8 +384,7 @@ gulp.task('jsliblive', function() {
           "tokenfield-typeahead.min.css"
         ]))
       .pipe($.concatCss('plugins-bundle.css', {rebaseUrls: false}))
-      // .pipe($.cleanCss({rebase:false}))
-      // .pipe($.concatCss('plugins-bundle.css', {rebaseUrls: false}))
+      .pipe($.cleanCss({rebase:false}))
       .pipe(cssFilter.restore)
       .pipe(includeIgnoredCss)
       .pipe($.cleanCss({rebase:false}))
@@ -576,6 +574,7 @@ gulp.task('watch', function() {
 
   // pluginCSS changes
   gulp.watch([css.pluginCSS.watch], ['css']);
+  gulp.watch([css.pluginCSS.liveWatch], ['css']);
 
   // javascript changes
   gulp.watch(js.in, ['js', reload]);
