@@ -3015,7 +3015,7 @@ html {
             margin: 0;
             font-size: 14px;
             color: #353f53;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .initial-setup {
@@ -3059,6 +3059,19 @@ html {
 
         &:hover {
             color: #353f53;
+        }
+    }
+
+    .popover {
+        .popover-content {
+            color: #9a9fa9 !important;
+            font-size: 13px;
+            font-size: 400;
+
+            b {
+                color: #353f53;
+                font-weight: 600;
+            }
         }
     }
 }
@@ -3756,7 +3769,15 @@ html {
             padding: 0;
             font-weight: 600;
             color: #353F53;
+            line-height: 0;
         }
+    }
+
+    .switch-tag {
+        color: #9a9fa9;
+        font-size: 14px;
+        line-height: 0;
+        margin-bottom: 10px;
     }
 }
 
@@ -9459,8 +9480,8 @@ html {
     }
 }
 
-.client-image-container{
-    img{
+.client-image-container {
+    img {
         width: 50px;
         height: 50px;
         object-fit: cover;
