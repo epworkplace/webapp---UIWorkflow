@@ -294,7 +294,6 @@ gulp.task('js', function() {
           "chartist.min.js",
           "bootstrap-notify.js",
           "sweetalert2.js",
-          "jquery-jvectormap.js",
           "jquery.bootstrap.wizard.min.js",
           "bootstrap-table.js",
           "fullcalendar.min.js",
