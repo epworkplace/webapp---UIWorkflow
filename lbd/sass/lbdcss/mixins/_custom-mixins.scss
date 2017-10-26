@@ -639,6 +639,12 @@
                                 text-decoration: underline;
                             }
                         }
+                        .morelink{
+                            margin-left: 15px;
+                        }
+                        &:last-child{
+                            padding-right: 15px;
+                        }
                     }
 
                     .comment-date {
