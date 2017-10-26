@@ -80,6 +80,7 @@
     *.d-block {
         display: block;
     }
+    @extend %modal;
 
     .modal-content {
         /* padding: 15px; */
