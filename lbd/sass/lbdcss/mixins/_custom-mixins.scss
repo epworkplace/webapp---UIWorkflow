@@ -623,8 +623,14 @@
                     .comment-container {
                         padding-right: 0;
 
-                        .user-name {
+                        .user-name, .activity-name {
                             color: #353f53;
+                            font-weight: 700;
+                            .edit-bot{
+                                font-weight: 700;
+                            }
+                        }
+                        .activity-name{
                             font-weight: 600;
                         }
 
@@ -638,6 +644,10 @@
                             span.hashTag, span.atMention {
                                 color: #447DF7;
                                 text-decoration: underline;
+                            }
+                            &.activity {
+                                margin: 10px 0 0 15px;
+                                border-left: 2px solid #edeff1
                             }
                         }
                         .morelink{
@@ -653,7 +663,7 @@
                         text-align: right;
 
                         a.comment-actions {
-                            margin-top: -4px;
+                            margin-top: -2px;
                             position: relative;
                         }
                     }
