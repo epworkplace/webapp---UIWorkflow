@@ -110,12 +110,11 @@
 
         .client-image-container {
             width: 52px;
-
-            img {
+            height: 52px img {
                 width: 52px;
                 height: 52px;
                 object-fit: cover;
-            }
+            };
 
             .card-user-empty {
                 height: 52px;
