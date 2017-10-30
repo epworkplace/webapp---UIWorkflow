@@ -990,5 +990,10 @@
 
             .modal-footer {}
         }
+        .chosen-container {
+            a.chosen-single {
+                height: 38px !important;
+            }
+        }
     }
 }
