@@ -483,7 +483,7 @@ $(document).ready(function(){
 
 	//tinyMCE intregation
 	tinymce.init({
-	    selector: '#edit-textarea-normal, #edit-textarea-normal-02',
+	    selector: '#edit-textarea-normal, #edit-textarea-normal-02, [id*="edit-textarea-normal"]',
 	    statusbar: false,
   		menubar : false,
 		height: "230",

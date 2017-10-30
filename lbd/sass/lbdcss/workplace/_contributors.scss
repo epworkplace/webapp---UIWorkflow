@@ -635,6 +635,21 @@
         }
     }
 }
+.global-new-user-profile-modal{
+  @extend .global-user-profile-modal;
+  .modal-content{
+    .modal-body{
+      .modal-title{
+        text-transform: none;
+      }
+    }
+  }
+    .chosen-container {
+        a.chosen-single {
+            height: 38px !important;
+        }
+    }
+}
 
 .change-user-image-modal {
     @extend %modal;
@@ -824,11 +839,6 @@
 .my-profile-edit-address-modal {
     @extend .my-profile-edit-cotnact-modal;
 
-    .chosen-container {
-        a.chosen-single {
-            height: 38px !important;
-        }
-    }
 }
 
 .my-profile-edit-acc-info-modal {
