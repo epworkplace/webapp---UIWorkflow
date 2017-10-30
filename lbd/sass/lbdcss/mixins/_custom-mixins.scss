@@ -625,12 +625,14 @@
                         .user-name, .activity-name {
                             color: #353f53;
                             font-weight: 700;
-                            .edit-bot{
+
+                            .edit-bot {
                                 font-weight: 700;
                             }
                         }
-                        .activity-name{
-                            font-weight: 600;
+
+                        .activity-name {
+                            font-weight: 400;
                         }
 
                         .comment {
@@ -644,15 +646,18 @@
                                 color: #447DF7;
                                 text-decoration: underline;
                             }
+
                             &.activity {
                                 margin: 10px 0 0 15px;
-                                border-left: 2px solid #edeff1
+                                border-left: 2px solid #edeff1;
                             }
                         }
-                        .morelink{
+
+                        .morelink {
                             margin-left: 15px;
                         }
-                        &:last-child{
+
+                        &:last-child {
                             padding-right: 15px;
                         }
                     }
