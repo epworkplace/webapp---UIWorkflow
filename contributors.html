@@ -370,18 +370,18 @@ $(document).ready(function(){
         });
     })*/
 
-/*    $uploadCrop = $('#upload-demo').croppie({
-        enableExif: true,
-        viewport: {
-            width: 100,
-            height: 100,
-            type: 'circle'
-        },
-        boundary: {
-            width: 200,
-            height: 200
-        }
-    });*/
+    /* Edit Myprofile User name */
+    $(document).on('click', ".user-details .bo-user", function(e){
+        e.stopPropagation();
+        $(this).parents('.user-name').hide(100);
+        $(this).parents('.row').find('.edit-update-name').show(100);
+    });
+    $(document).on('click', "#updateUserProfileName", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).parents('.edit-update-name').hide(100);
+        $(this).parents('.list-head-container').find('.user-name').show(100);
+    });
 
     
 

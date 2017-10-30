@@ -537,6 +537,28 @@
         }
     }
 
+    .user-details{
+      .user-name{
+        label{
+          font-size: 18px;
+          &.bo-user:hover{
+            cursor: pointer;
+          }
+        }
+      }
+      .edit-update-name{
+        .input-group{
+          button{
+            &:last-child{
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+            }
+          }
+        }
+      }      
+    }
+
+
     .general-info {
         [class^='contact-'] {
             padding: 0;
@@ -568,6 +590,9 @@
                 }
             }
         }
+    }
+    [class*='-title'] {
+        color: $main;
     }
 
     .contact-account-info {
