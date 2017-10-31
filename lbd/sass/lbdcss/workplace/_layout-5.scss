@@ -917,7 +917,7 @@
                                                             }
 
                                                             .announce-visibility {
-                                                                padding: 25px 20px 18px 20px;
+                                                                padding: 25px 15px 18px;
                                                                 margin-bottom: 17px;
 
                                                                 .switch-visiblity {
@@ -930,6 +930,7 @@
                                                                     color: #353f53;
                                                                     font-size: 14px;
                                                                     font-weight: 600;
+                                                                    width: 45%;
 
                                                                     span.yes {
                                                                         color: #448AFF;
@@ -946,6 +947,15 @@
                                                                     span {
                                                                         color: #353f53;
                                                                         font-weight: 600;
+                                                                    }
+                                                                }
+
+                                                                .sharing-announce {
+                                                                    padding-right: 0;
+
+                                                                    a {
+                                                                        width: 100% !important;
+                                                                        margin: 0;
                                                                     }
                                                                 }
                                                             }
