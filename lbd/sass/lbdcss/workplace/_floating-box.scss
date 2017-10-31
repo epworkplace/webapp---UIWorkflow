@@ -420,7 +420,7 @@
                                             i {
                                                 position: relative;
                                                 right: 25px;
-                                                top: -3px;
+                                                top: -1px;
                                             }
                                         }
 
@@ -444,13 +444,16 @@
                                     }
                                 }
 
-                                p {
-                                    margin: 0;
-                                    color: #B4B9C0;
-                                    font-size: 14px;
+                                .comment {
+                                    p {
+                                        margin: 0;
+                                        color: #B4B9C0;
+                                        font-size: 14px;
 
-                                    span.atMention {
-                                        color: #438BFE;
+                                        span.atMention {
+                                            color: #438BFE;
+                                            text-decoration: underline;
+                                        }
                                     }
                                 }
                             }
@@ -458,11 +461,20 @@
 
                         li.activity {
                             .chat-body {
-                                margin: 20px 0;
+                                .header {
+                                    p {
+                                        margin: 0 75px 0 0;
+                                        font-size: 14px;
+                                        color: #7d889a;
+                                    }
+                                }
 
-                                p {
-                                    font-size: 14px;
-                                    color: #7d889a;
+                                .comment {
+                                    border-left: 2px solid #edeff1;
+
+                                    p {
+                                        margin: 10px 0 0 15px;
+                                    }
                                 }
                             }
                         }
@@ -478,6 +490,8 @@
                     width: 100%;
 
                     .input-group {
+                        width: 100%;
+
                         textarea.form-control {
                             border: none;
                             padding: 8px 8px 8px 0;
