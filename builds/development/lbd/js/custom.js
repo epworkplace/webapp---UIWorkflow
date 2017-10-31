@@ -41,7 +41,6 @@ $(document).ready(function(){
 	        $('.task-note-list').removeClass('floating-box-display');
 	    });
 	    $('.comments-module').click(function() {
-	    	 /*initialize plugin once modal shown*/
 	        $('.comments-module').addClass('icon-0').removeClass('icon-1 icon-2');
 	        $('.task-note-module').addClass('icon-1').removeClass('icon-0 icon-2');
 	        $('.agenda-module').addClass('icon-2').removeClass('icon-0 icon-1');
