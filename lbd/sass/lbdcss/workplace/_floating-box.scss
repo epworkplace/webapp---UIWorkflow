@@ -410,6 +410,12 @@
                                         color: #7d889a;
                                     }
 
+                                    span.atMention, span.hashTag {
+                                        font-weight: 400;
+                                        color: #438BFE;
+                                        text-decoration: underline;
+                                    }
+
                                     small {
                                         position: relative;
 
@@ -450,7 +456,7 @@
                                         color: #B4B9C0;
                                         font-size: 14px;
 
-                                        span.atMention {
+                                        span.atMention, span.hashTag {
                                             color: #438BFE;
                                             text-decoration: underline;
                                         }
