@@ -175,7 +175,7 @@
                                                                                 <span class="edit" data-toggle="modal" data-target="#edit-overview-modal"><a href="javascript:void(0);">Edit</a></span>
                                                                                 <div class="col-md-12  overview">
                                                                                     <h4 class="title">Customer Story</h4>
-                                                                                    <div class="more"><p>
+                                                                                    <div class="comment"><p>
                                                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
                                                                                 </div>
                                                                             </div>
@@ -2610,8 +2610,27 @@ $(document).on('click', 'a[data-target="#browseMissionModal"]', function(e){
 </script>
 
 
-<script type="text/javascript"> // Browse mission modal list selection
+<script type="text/javascript"> 
+/*Read more / Read less*/
+     $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
 
+     $('.modal').one('show.bs.modal', function () {
+      $(this).find('.comment').css({overflow: "hidden"});
+        }).one('shown.bs.modal shown.bs.tab', function () {
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+    });  
 </script>
 
 </body>
