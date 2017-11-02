@@ -111,7 +111,16 @@ html {
 
             .logo {
                 padding: 10px 12px;
-                margin: 17px 0 35px;
+                margin: 17px 0 0px;
+                &:after{
+                    display: block;
+                    content: "";
+                    margin: 20px auto 0;
+                    width: 85%;
+                    height: 1px;
+                    background-color: $divider;
+                    
+                }
             }
 
             .sidebar-wrapper {
@@ -123,7 +132,7 @@ html {
                 }
 
                 > ul.nav {
-                    margin-top: 2px;
+                    margin-top: 0px;
 
                     li {
                         display: -webkit-box;
@@ -169,6 +178,76 @@ html {
                             color: #9a9fa9;
                             font-weight: 500;
                             text-align: center;
+                        }
+                        .dropdown-menu{
+                            &.main-nav{
+                                position: fixed;
+                                top: 75px;
+                                left: 70px;
+                                margin: 0;
+                                &:before,&:after {
+                                    border-bottom: 11px solid transparent;
+                                    border-top: 11px solid transparent;
+                                    border-right: 11px solid rgba(0,0,0,0.2);
+                                    content: "";
+                                    display: inline-block;
+                                    position: absolute;
+                                    left: -23px;
+                                    top: 25px;
+                                }
+                                &:after{
+                                    border-right: 11px solid #ffffff;
+                                    left: -22px;
+                                }
+                                li{
+                                    width: 100%;
+                                    display: -webkit-flex;
+                                    display: -moz-flex;
+                                    display: -ms-flex;
+                                    display: -o-flex;
+                                    display: flex;
+                                    margin: 0;
+
+                                    a,i{
+                                        color: $main;
+                                    }
+
+                                    a{
+                                        padding: 6px 5px;
+                                        margin: 0;
+                                        width: 100%;
+                                        display: -webkit-flex;
+                                        display: -moz-flex;
+                                        display: -ms-flex;
+                                        display: -o-flex;
+                                        display: flex;
+                                        align-items: center;
+                                        font-weight: 600;
+                                    }
+
+                                    i{
+                                        margin-right: 6px;
+                                    }
+
+                                    &:hover{
+                                        background: $selected;
+                                        color: #ffffff;
+                                        a, i{
+                                            color: #ffffff;
+                                        }
+                                    }
+                                    &:first-child{
+                                        padding-top: 5px;
+                                        border-top-left-radius:10px;
+                                        border-top-right-radius:10px;
+                                    }
+                                    &:last-child{
+                                        border-bottom-left-radius:10px;
+                                        border-bottom-right-radius:10px;
+                                        padding-bottom: 5px;
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -6208,7 +6287,7 @@ html {
                     }
 
                     li.add-file {
-                        margin: 20px 0;
+                        margin: 0 0 20px 0;
 
                         .file-card {
                             height: auto;
@@ -6397,7 +6476,7 @@ html {
                     }
 
                     li.add-stakeholder {
-                        margin: 20px 0;
+                        margin: 0 0 20px 0;
 
                         .stakeholder {
                             height: auto;

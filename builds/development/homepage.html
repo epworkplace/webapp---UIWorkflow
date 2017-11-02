@@ -52,41 +52,67 @@
                 </a>
             </div>
             <div class="sidebar-wrapper">
+        
                 <ul class="nav">
                     <li class="active">
-                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-container="body" data-placement="right" title="Home">
-                            <i class="material-icons">dashboard</i>
-                            <!-- <p>Home</p> -->
+                        
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-toggle="dropdown" data-container="body" href="javascript:;">
+                            <span class="nav-link d-flex" data-toggle="tooltip" data-container="body" data-placement="right" title="Menu">
+                                <i class="material-icons">menu</i>
+                            </span>
                         </a>
+                        
+                        <ul class="dropdown-menu main-nav" data-container="body" role="menu">
+                            <li>
+                                <a href="javascript:;" class="nav-link">
+                                    <i class="material-icons">dashboard</i>
+                                    Dashboard
+                                    <!-- <p>Home</p> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="nav-link">
+                                    <i class="material-icons">business</i>
+                                    Business
+                                    <!-- <p>Clients</p> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="nav-link">
+                                    <i class="material-icons">monetization_on</i>
+                                    Quotes
+                                    <!-- <p>Quotes</p> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="nav-link">
+                                    <i class="material-icons">assignment</i>
+                                    Contracts
+                                    <!-- <p>Contracts</p> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="nav-link">
+                                    <i class="material-icons">alarm</i>
+                                    Missions
+                                    <!-- <p>Missions</p> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="nav-link">
+                                    <i class="material-icons">face</i>
+                                    Users
+                                    <!-- <p>Users</p> -->
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="business">
-                            <i class="material-icons">business</i>
-                            <!-- <p>Clients</p> -->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Quotes">
-                            <i class="material-icons">monetization_on</i>
-                            <!-- <p>Quotes</p> -->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Contracts">
-                            <i class="material-icons">assignment</i>
-                            <!-- <p>Contracts</p> -->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Missions">
-                            <i class="material-icons">alarm</i>
-                            <!-- <p>Missions</p> -->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="nav-link" data-toggle="tooltip" data-placement="right" data-container="body" title="Users">
-                            <i class="material-icons">face</i>
-                            <!-- <p>Users</p> -->
+                        <a href="javascript:;" class="nav-link" data-toggle="modal" data-target="#dashboardNotificationsModal">
+                            <span class="d-flex" data-toggle="tooltip" data-container="body" data-placement="right" title="Notifications">
+                                <i class="material-icons">notifications_none</i>
+                                <span class="notification">3</span>
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -1735,6 +1761,255 @@
         </div>
     </div>
 </div>
+<div aria-labelledby="dashboardNotificationsModal" class="modal fade dashboard-notifications-modal" id="dashboardNotificationsModal" role="modal" tabindex="-1" style="">
+    <div class="modal-dialog modal-lg" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="edit-content clearfix">
+                    <span class="close">
+                        <a data-dismiss="modal" href="javascript:;">
+                            <i class="material-icons">
+                                close
+                            </i>
+                        </a>
+                    </span>
+                    <div class="modal-title df-ac">
+                        <i class="material-icons mr-10">notifications_none</i>
+                        Notifications (3)
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12 card feeds-container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-12 feeds-comments-container" data-container="body">
+                                    <ul class="notifications-unread">
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                <span class="atMention">@Paulmartin</span> has <strong>paused</strong> <span class="hashTag">#blog2019</span>
+                                                                with comment: &laquo; We are waiting for client validation. 14 days left. I will tell you if anything moving. Laborum voluptatem? Voluptatum delectus, asperiores. To all projects (...) &raquo;
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View mission</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                Just now 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <div class="card-user">
+                                                            <div class="card-user-empty user">
+                                                                Pr
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                <span class="atMention">@MichaelMartin</span> as <strong>Writer</strong> did not sent articles on time on <span class="hashTag">#200blogarticles</span>.
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View card</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                10m ago 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                No <strong>Writers</strong> applied on <span class="hashTag">#BUTtendences2017</span>.
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View card</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                1h ago 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="notifications-old">
+                                        <li class="divider">
+                                            Older notifications
+                                        </li>
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                <span class="atMention">@Paulmartin</span> has <strong>paused</strong> <span class="hashTag">#blog2019</span>
+                                                                with comment: &laquo; We are waiting for client validation. 14 days left. I will tell you if anything moving. Laborum voluptatem? Voluptatum delectus, asperiores. To all projects (...) &raquo;
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View mission</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                Just now 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <div class="card-user">
+                                                            <div class="card-user-empty user">
+                                                                Pr
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                <span class="atMention">@MichaelMartin</span> as <strong>Writer</strong> did not sent articles on time on <span class="hashTag">#200blogarticles</span>.
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View card</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                10m ago 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                No <strong>Writers</strong> applied on <span class="hashTag">#BUTtendences2017</span>.
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View card</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                1h ago 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                <span class="atMention">@Paulmartin</span> has <strong>paused</strong> <span class="hashTag">#blog2019</span>
+                                                                with comment: &laquo; We are waiting for client validation. 14 days left. I will tell you if anything moving. Laborum voluptatem? Voluptatum delectus, asperiores. To all projects (...) &raquo;
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View mission</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                Just now 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <div class="card-user">
+                                                            <div class="card-user-empty user">
+                                                                Pr
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                <span class="atMention">@MichaelMartin</span> as <strong>Writer</strong> did not sent articles on time on <span class="hashTag">#200blogarticles</span>.
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View card</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                10m ago 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-12 comments-section">
+                                                <div class="row">
+                                                    <div class="col-md-1 user-image">
+                                                        <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                    </div>
+                                                    <div class="col-md-11 comment-container">
+                                                        <div class="row">
+                                                            <div class="col-md-10 notifications">
+                                                                No <strong>Writers</strong> applied on <span class="hashTag">#BUTtendences2017</span>.
+                                                                <br />
+                                                                <a class="helper-text d-inline-block mt-5" href="javascript:;">View card</a>
+                                                            </div>
+                                                            <div class="col-md-2 comment-date p-0">
+                                                                1h ago 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="divider">
+                                            <button class="btn btn-default btn-fill full-width btn-wd btn-yes" type="button">
+                                                Load more...
+                                            </button> 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modals Ends -->
 
 <!--   Core JS Files   -->
