@@ -112,14 +112,14 @@ html {
             .logo {
                 padding: 10px 12px;
                 margin: 17px 0 0px;
-                &:after{
+
+                &:after {
                     display: block;
                     content: "";
                     margin: 20px auto 0;
                     width: 85%;
                     height: 1px;
                     background-color: $divider;
-                    
                 }
             }
 
@@ -147,6 +147,12 @@ html {
                             color: #9a9fa9;
                             padding: 5px 0;
                             margin: 3px 0;
+                            opacity: 1;
+
+                            span.notification {
+                                top: -1px;
+                                right: -6px;
+                            }
                         }
 
                         &:hover, &:focus {
@@ -159,7 +165,8 @@ html {
                             }
 
                             i {
-                                color: #448aff;
+                                /* color: #448aff; */
+                                color: #9a9fa9;
                             }
                         }
 
@@ -179,27 +186,40 @@ html {
                             font-weight: 500;
                             text-align: center;
                         }
-                        .dropdown-menu{
-                            &.main-nav{
+
+                        .dropdown-menu {
+                            &.main-nav {
                                 position: fixed;
-                                top: 75px;
-                                left: 70px;
+                                top: 26px;
+                                left: 104px;
                                 margin: 0;
-                                &:before,&:after {
+                                width: 230px;
+                                border-radius: 4px;
+                                -webkit-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+                                -moz-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+                                -ms-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+                                -o-filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+                                filter: drop-shadow(0 1px 2px rgba(63, 63, 68, 0.3));
+                                box-shadow: none;
+                                border: 0;
+
+                                &:before, &:after {
                                     border-bottom: 11px solid transparent;
                                     border-top: 11px solid transparent;
-                                    border-right: 11px solid rgba(0,0,0,0.2);
+                                    border-right: 11px solid rgba(0, 0, 0, 0);
                                     content: "";
                                     display: inline-block;
                                     position: absolute;
                                     left: -23px;
-                                    top: 25px;
+                                    top: 74px;
                                 }
-                                &:after{
+
+                                &:after {
                                     border-right: 11px solid #ffffff;
                                     left: -22px;
                                 }
-                                li{
+
+                                li {
                                     width: 100%;
                                     display: -webkit-flex;
                                     display: -moz-flex;
@@ -208,12 +228,12 @@ html {
                                     display: flex;
                                     margin: 0;
 
-                                    a,i{
-                                        color: $main;
+                                    a, i {
+                                        color: #9a9fa9;
                                     }
 
-                                    a{
-                                        padding: 6px 5px;
+                                    a {
+                                        padding: 10px 20px;
                                         margin: 0;
                                         width: 100%;
                                         display: -webkit-flex;
@@ -225,25 +245,29 @@ html {
                                         font-weight: 600;
                                     }
 
-                                    i{
-                                        margin-right: 6px;
+                                    i {
+                                        font-size: 20px;
+                                        margin: 0 15px 0 0;
                                     }
 
-                                    &:hover{
+                                    &:hover {
                                         background: $selected;
                                         color: #ffffff;
-                                        a, i{
+
+                                        a, i {
                                             color: #ffffff;
                                         }
                                     }
-                                    &:first-child{
+
+                                    &:first-child {
                                         padding-top: 5px;
-                                        border-top-left-radius:10px;
-                                        border-top-right-radius:10px;
+                                        border-top-left-radius: 4px;
+                                        border-top-right-radius: 4px;
                                     }
-                                    &:last-child{
-                                        border-bottom-left-radius:10px;
-                                        border-bottom-right-radius:10px;
+
+                                    &:last-child {
+                                        border-bottom-left-radius: 4px;
+                                        border-bottom-right-radius: 4px;
                                         padding-bottom: 5px;
                                     }
                                 }
@@ -6207,8 +6231,6 @@ html {
                                 color: #354052;
 
                                 i {
-                                    // position: relative;
-                                    // top: 6px;
                                     margin-right: 12px;
                                 }
                             }
