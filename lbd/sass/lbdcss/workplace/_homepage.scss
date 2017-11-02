@@ -749,6 +749,99 @@
     }
 }
 
+.dashboard-notifications-modal{
+    @extend .show-all-comments-modal;
+    .modal-title{
+        font-size: 16px !important;
+    }
+    .feeds-container{
+        margin: 0 !important;
+        .feeds-comments-container{
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            height: 75vh;
+            ul{
+                li{
+                    @include clearfix;
+                    padding: 15px;
+                    background: $highlight-03;
+                    border-bottom: none;
+                    border-radius: 0;
+                    width: calc(100% - 10px);
+
+                }
+                &[class*='notifications-']{
+                    .user-image {
+                        width: 40px;
+                        padding: 0;
+                        // margin-right: 5px;
+
+                        img {
+                            max-width: 100%;
+                            width: 40px;
+                            height: 40px;
+                            object-fit: cover;
+                        }
+                        .card-user{
+                            padding: 0;
+                            height: 40px;
+                        }
+
+                        .card-user-empty {
+                            height: 40px;
+                        }
+                    }
+                    &[class*='unread']{
+                        .user-image{
+                            &:before, &:after{
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                background: $delete;
+                                width: 14px;
+                                height: 14px;
+                                border-radius: 50%;
+                                border: 2px solid #ffffff; 
+                            }
+                        }
+                    }
+                    .comments-section{
+                        .comment-container{
+                            .notifications{
+                                width: calc(83.333333% + 25px);
+                                a{
+                                    &:last-child{
+                                        color: $helper;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                            .comment-date{
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+                &.notifications-un
+                &.notifications-old{
+                    li{
+                        &:first-child,&:last-child{
+                            background: none;
+                            padding: 15px 0 0;
+                            font-weight: 600;
+                        }
+                        &:first-child{
+                            margin: 15px 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .send-comment-actions {
     margin-top: 15px;
 }
