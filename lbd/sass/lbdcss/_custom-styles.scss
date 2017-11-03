@@ -5737,6 +5737,10 @@ html {
                         margin: 15px 0 0;
                         font-size: 14px;
 
+                        .comment {
+                            word-wrap: break-word;
+                        }
+
                         p {
                             font-size: 14px;
                         }
