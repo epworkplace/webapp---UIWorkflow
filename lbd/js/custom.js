@@ -57,6 +57,16 @@ $(document).ready(function(){
 	});
 
 
+	$('.modal').on('hidden.bs.modal', function (e) {
+    if($('.modal').hasClass('in')) {
+    $('body').addClass('modal-open');
+    } else{
+    	$('body').removeClass('modal-open');
+    	$('body').css({'padding-right':'0'});
+    }    
+	});
+
+
 	//Custom Scrollbar
 	$(".floating-box-body .panel #panel-body, .month-values-panel, .reviews, .recommended-reviews, .leftside-column").mCustomScrollbar({
 		autoDraggerLength: false,
