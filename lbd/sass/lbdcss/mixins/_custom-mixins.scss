@@ -110,11 +110,13 @@
 
         .client-image-container {
             width: 52px;
-            height: 52px img {
+            height: 52px;
+
+            img {
                 width: 52px;
                 height: 52px;
                 object-fit: cover;
-            };
+            }
 
             .card-user-empty {
                 height: 52px;
@@ -531,11 +533,13 @@
             padding: 0;
 
             img {
-                display: block;
-                max-width: 100%;
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
             }
 
             .card-user-empty {
+                width: 40px;
                 height: 40px;
             }
         }
@@ -601,8 +605,14 @@
                         align-items: center;
 
                         img {
-                            display: block;
-                            max-width: 100%;
+                            width: 40px;
+                            height: 40px;
+                            object-fit: cover;
+                        }
+
+                        .card-user-empty {
+                            width: 40px;
+                            height: 40px;
                         }
 
                         i {
@@ -736,8 +746,14 @@
                         padding: 0;
 
                         img {
-                            display: block;
-                            max-width: 100%;
+                            width: 40px;
+                            height: 40px;
+                            object-fit: cover;
+                        }
+
+                        .card-user-empty {
+                            width: 40px;
+                            height: 40px;
                         }
                     }
 

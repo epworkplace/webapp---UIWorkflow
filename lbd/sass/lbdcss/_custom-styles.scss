@@ -5737,6 +5737,10 @@ html {
                         margin: 15px 0 0;
                         font-size: 14px;
 
+                        .comment {
+                            word-wrap: break-word;
+                        }
+
                         p {
                             font-size: 14px;
                         }
@@ -11046,6 +11050,18 @@ body.mce-content-body {
 
 /* Popover Style Ends */
 
-/*New WP STYLES Ends*/
-
 /* Modal overlay styles */
+
+/* Timepicker cutsom style starts*/
+
+.bootstrap-datetimepicker-widget table tr td.new {
+    display: none;
+}
+
+.bootstrap-datetimepicker-widget table tr td.old {
+    visibility: hidden;
+}
+
+/* Timepicker cutsom style ends*/
+
+/*New WP STYLES Ends*/
