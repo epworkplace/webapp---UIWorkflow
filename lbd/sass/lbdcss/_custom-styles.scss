@@ -11050,4 +11050,16 @@ body.mce-content-body {
 
 /* Popover Style Ends */
 
+/* Timepicker cutsom style starts*/
+
+.bootstrap-datetimepicker-widget table tr td.new {
+    display: none;
+}
+
+.bootstrap-datetimepicker-widget table tr td.old {
+    visibility: hidden;
+}
+
+/* Timepicker cutsom style ends*/
+
 /*New WP STYLES Ends*/
