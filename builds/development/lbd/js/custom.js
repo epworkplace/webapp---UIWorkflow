@@ -56,6 +56,7 @@ $(document).ready(function(){
 	    $("#upload:hidden").trigger('click');
 	});
 
+/*Bootstrap Multible Modals inside Modal double scroll issue fix*/
 
 	$('.modal').on('hidden.bs.modal', function (e) {
     if($('.modal').hasClass('in')) {
