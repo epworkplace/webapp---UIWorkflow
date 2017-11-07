@@ -1015,3 +1015,24 @@
         }
     }
 }
+
+span.edit {
+    i {
+        font-size: 12px;
+        margin: 0;
+        position: relative;
+        top: 1px;
+        color: #448AFF;
+    }
+
+    a {
+        font-size: 14px;
+        color: #448AFF !important;
+        color: #448AFF;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

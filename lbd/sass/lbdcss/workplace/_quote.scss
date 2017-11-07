@@ -42,16 +42,6 @@
             right: 20px;
             top: 20px;
             z-index: 9;
-
-            a {
-                font-size: 14px;
-                color: #448AFF;
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
         }
 
         .overview {
@@ -134,20 +124,14 @@
         .bill {
             position: relative;
 
-            a.edit {
+            span.edit {
                 visibility: hidden;
                 opacity: 0;
                 transition: all .3s ease;
                 position: absolute;
                 right: 15px;
-                top: 0;
+                top: -3px;
                 z-index: 9;
-                color: #448AFF;
-                text-decoration: none;
-
-                &:hover {
-                    text-decoration: underline;
-                }
             }
 
             .amount {
@@ -225,7 +209,7 @@
             }
 
             &:hover {
-                a.edit {
+                span.edit {
                     visibility: visible;
                     opacity: 1;
                     transition: all .3s ease;

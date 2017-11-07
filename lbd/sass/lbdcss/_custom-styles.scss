@@ -4765,15 +4765,6 @@ html {
         top: 15px;
         z-index: 9;
         font-size: 12px;
-
-        a {
-            color: #448AFF;
-            text-decoration: underline;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
     }
 
     .track-elements {
@@ -5707,16 +5698,6 @@ html {
                         right: 20px;
                         top: 20 px;
                         z-index: 9;
-
-                        a {
-                            font-size: 14px;
-                            color: #448AFF;
-                            text-decoration: none;
-
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
                     }
 
                     .duration {
