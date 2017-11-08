@@ -783,10 +783,6 @@
                     }
                 }
 
-                .load-more {
-                    margin-top: 20px;
-                }
-
                 &[class*='notifications-'] {
                     .user-image {
                         width: 40px;
@@ -861,6 +857,11 @@
                         }
                     }
                 }
+            }
+
+            .load-more {
+                margin-top: 20px;
+                width: 99% !important;
             }
         }
     }
