@@ -4799,11 +4799,12 @@ html {
         z-index: 9;
         font-size: 12px;
     }
-    
-    .mission-status{
+
+    .mission-status {
         @extend %mission-status;
     }
-    .mission-status &{
+
+    .mission-status & {
         padding: 20px !important;
     }
 
@@ -4894,8 +4895,8 @@ html {
     }
 }
 
-.assignment{
-    .track-overview{
+.assignment {
+    .track-overview {
         padding: 20px;
     }
 }
@@ -11093,8 +11094,9 @@ body.mce-content-body {
 
 /* Breadcrumb styles */
 .breadcrumbs {
-  @extend %breadcrumb;
+    @extend %breadcrumb;
 }
+
 /* Breadcrumb styles ends */
 
 /*New WP STYLES Ends*/
