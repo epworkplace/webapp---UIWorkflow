@@ -1018,94 +1018,103 @@
 }
 
 %breadcrumb {
-  list-style: none;
-  overflow: hidden;
-  font: 18px Helvetica, Arial, Sans-Serif;
-  margin: 0px;
-  padding: 0;
-  display: flex;
-  background:none;
+    list-style: none;
+    overflow: hidden;
+    font: 18px Helvetica, Arial, Sans-Serif;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    background: none;
 
-  li {
-    // float: left;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+    li {
+        // float: left;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
 
-    // a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 0 10px 10px;
-      background: $not-started;
-      position: relative;
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 12px;
+        // a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 0 10px 10px;
+        background: $not-started;
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
 
-      [class*='-date'] {
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 600;
-      }
-
-      &:before, &:after {
-        content: ' ';
-        display: block;
-        width: 0;
-        height: 0;
-        border-top: 26px solid transparent; /* Go big on the size, and let overflow hide */
-        border-bottom: 26px solid transparent;
-        border-left: 30px solid $not-started;
-        position: absolute;
-        top: 50%;
-        margin-top: -26px;
-        left: 100%;
-        z-index: 2;
-      }
-
-      &:before {
-        border-left: 30px solid white;
-        margin-left: 10px;
-        z-index: 1;
-      }
-    // }
-
-    &:first-child {
-      // a {
-        padding-left: 10px !important;
-        border-radius: 4px 0 0 4px;
-      // }
-    }
-
-    &:last-child {
-      // a {
-        padding-right: 10px !important;
-        padding-left: 50px !important;
-        border-radius: 0 4px 4px 0;
-
-        &:after, &:before {
-          border: 0;
-          content: none;
+        [class*='-date'] {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
         }
-      // }
+
+        &:before, &:after {
+            content: ' ';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 26px solid transparent;
+
+            /* Go big on the size, and let overflow hide */
+            border-bottom: 26px solid transparent;
+            border-left: 30px solid $not-started;
+            position: absolute;
+            top: 50%;
+            margin-top: -26px;
+            left: 100%;
+            z-index: 2;
+        }
+
+        &:before {
+            border-left: 30px solid white;
+            margin-left: 10px;
+            z-index: 1;
+        }
+
+        // }
+
+        &:first-child {
+            // a {
+            padding-left: 10px !important;
+            border-radius: 4px 0 0 4px;
+
+            // }
+       
+        }
+
+        &:last-child {
+            // a {
+            padding-right: 10px !important;
+            padding-left: 50px !important;
+            border-radius: 0 4px 4px 0;
+
+            &:after, &:before {
+                border: 0;
+                content: none;
+            }
+
+            // }
+       
+        }
     }
-  }
 }
 
-%mission-status{
-    .mission-timing{
+%mission-status {
+    .mission-timing {
         color: $not-started;
         margin-bottom: 20px;
-        .timing-title{
+
+        .timing-title {
             text-transform: uppercase;
             font-size: 12px;
             color: $main;
-            font-weight: 600;
+            font-weight: 700;
         }
-        .mission-actions{
+
+        .mission-actions {
             display: -webkit-flex;
             display: -moz-flex;
             display: -ms-flex;
@@ -1113,10 +1122,12 @@
             display: flex;
             justify-content: flex-end;
         }
-        span{
-            &.edit{
+
+        span {
+            &.edit {
                 opacity: 1;
                 font-size: 12px;
+
                 // color: $not-started;
                 position: inherit;
                 visibility: visible;
@@ -1130,11 +1141,14 @@
                     margin: 0 5px 0 0;
                     position: relative;
                     top: 1px;
+
                     // color: $not-started;
+               
                 }
 
                 a {
                     font-size: 14px;
+
                     // color: $not-started !important;
                     text-decoration: underline;
 
@@ -1145,49 +1159,60 @@
             }
         }
     }
-    .breadcrumbs{
+
+    .breadcrumbs {
         @extend %breadcrumb;
     }
-    .track-progress-bar{
+
+    .track-progress-bar {
         margin: 10px 0 5px;
-        [id*='trackProgressBar']{
+
+        [id*='trackProgressBar'] {
             // display: block;
             // width: 100% !important;
             height: 6px !important;
             position: relative;
-            svg{
+
+            svg {
                 position: absolute;
                 top: 0;
                 border-radius: 6px !important;
             }
         }
     }
-    .track-date-due{
+
+    .track-date-due {
         font-size: 14px;
-        .due{
+
+        .due {
             text-align: left !important;
             color: $not-started;
-            [class*='-day']{
+
+            [class*='-day'] {
                 font-weight: 700;
             }
         }
-        .mission-progress-status{
+
+        .mission-progress-status {
             color: $main;
             padding: 0;
             text-align: right;
-            [class*='-days']{
+
+            [class*='-days'] {
                 font-weight: 700;
             }
         }
     }
-    .mission-delivery{
-        .delivery-title{
+
+    .mission-delivery {
+        .delivery-title {
             text-transform: uppercase;
             color: $main;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 12px;
         }
-        .items{
+
+        .items {
             background: $highlight-03;
             border-radius: 4px;
             display: -webkit-flex;
@@ -1201,103 +1226,113 @@
             font-size: 14px;
             align-items: center;
             justify-content: center;
+
             // flex-grow: 1;
 
-            i{
+            i {
                 font-size: 16px;
                 margin-right: 5px;
                 color: $selected;
             }
 
-            &:last-child{
+            &:last-child {
                 margin: 0;
             }
 
-            &.delivery-type{
+            &.delivery-type {
                 font-weight: 700;
                 color: $main;
                 justify-content: flex-start;
                 flex-grow: 1;
             }
         }
-        .one-shot-delivery{
-            .items{
-                &:last-child{
+
+        .one-shot-delivery {
+            .items {
+                &:last-child {
                     flex-grow: 1;
                 }
             }
         }
-
     }
 
-    &.ongoing{
-        .breadcrumbs{
-            li{
+    &.ongoing {
+        .breadcrumbs {
+            li {
                 background: $selected;
+
                 &:after {
                     border-left-color: $selected;
                 }
-                &:last-child{
-                    background: $main;    
+
+                &:last-child {
+                    background: $main;
                 }
             }
         }
-        .track-date-due{
-            .due{
+
+        .track-date-due {
+            .due {
                 color: $selected;
             }
-        }        
+        }
     }
-    &.validated{
-        .breadcrumbs{
-            li{
+
+    &.validated {
+        .breadcrumbs {
+            li {
                 background: $selected;
+
                 &:after {
                     border-left-color: $selected;
                 }
             }
         }
-        .track-date-due{
-            .due{
+
+        .track-date-due {
+            .due {
                 color: $selected;
             }
-        }         
+        }
     }
-    &.paused{
-        .breadcrumbs{
-            li{
+
+    &.paused {
+        .breadcrumbs {
+            li {
                 background: $main;
+
                 &:after {
                     border-left-color: $main;
                 }
             }
         }
-        .track-date-due{
-            .due{
+
+        .track-date-due {
+            .due {
                 color: $main;
             }
-        }         
+        }
     }
-    &.delayed{
-        .breadcrumbs{
-            li{
-                &:last-child{
-                    background: $delete;    
+
+    &.delayed {
+        .breadcrumbs {
+            li {
+                &:last-child {
+                    background: $delete;
                 }
             }
         }
-        .track-date-due{
-            .due{
+
+        .track-date-due {
+            .due {
                 color: $delete;
             }
-            .mission-progress-status{
+
+            .mission-progress-status {
                 color: $delete;
             }
-        } 
+        }
     }
-
-
-
 }
 
 span.edit {
@@ -1320,4 +1355,3 @@ span.edit {
         }
     }
 }
-
