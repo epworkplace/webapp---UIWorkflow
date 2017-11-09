@@ -4799,6 +4799,13 @@ html {
         z-index: 9;
         font-size: 12px;
     }
+    
+    .mission-status{
+        @extend %mission-status;
+    }
+    .mission-status &{
+        padding: 20px !important;
+    }
 
     .track-elements {
         @include clearfix;
@@ -4884,6 +4891,12 @@ html {
             visibility: visible;
             opacity: 1;
         }
+    }
+}
+
+.assignment{
+    .track-overview{
+        padding: 20px;
     }
 }
 
@@ -11077,5 +11090,11 @@ body.mce-content-body {
 }
 
 /* Timepicker cutsom style ends*/
+
+/* Breadcrumb styles */
+.breadcrumbs {
+  @extend %breadcrumb;
+}
+/* Breadcrumb styles ends */
 
 /*New WP STYLES Ends*/
