@@ -512,12 +512,13 @@ html {
 
                                         .page-title-language {
                                             padding: 0;
-
-                                            // margin-top: 15px;
-                                            border: 2px solid #ddd;
+                                            margin: 15px 0 20px;
+                                            border: none;
                                             border-radius: 6px;
-                                            width: 146px;
-                                            height: 50px;
+                                            width: 100%;
+
+                                            // height: 50px;
+                                            height: auto;
                                             display: -webkit-box;
                                             display: -moz-box;
                                             display: -ms-flexbox;
@@ -553,6 +554,149 @@ html {
                                                     padding: 0;
                                                     text-align: center;
                                                 }
+
+                                                &#breadcrumbs-two {
+                                                    overflow: hidden;
+                                                    width: 100%;
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    list-style-type: none;
+                                                    display: -webkit-flex;
+                                                    display: -moz-flex;
+                                                    display: -ms-flex;
+                                                    display: -o-flex;
+                                                    display: flex;
+
+                                                    li {
+                                                        // float: left;
+                                                        display: inline-flex;
+                                                        margin: 0 15px 0 0;
+                                                        background: none;
+                                                        text-transform: uppercase;
+                                                        padding: 0;
+                                                        height: 38px;
+                                                        text-decoration: none;
+                                                        color: #444;
+                                                        position: relative;
+                                                        border-top: 2px solid #ddd;
+                                                        border-bottom: 2px solid #ddd;
+
+                                                        a {
+                                                            display: -webkit-flex;
+                                                            display: -moz-flex;
+                                                            display: -ms-flex;
+                                                            display: -o-flex;
+                                                            display: flex;
+                                                            align-items: center;
+                                                            padding: 0 15px 0 30px;
+                                                            color: $body;
+
+                                                            img {
+                                                                margin-right: 10px;
+                                                            }
+
+                                                            &:hover {
+                                                                cursor: text;
+                                                            }
+
+                                                            &:before {
+                                                                content: '';
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                left: 1px;
+                                                                margin-top: -19px;
+                                                                border-top: 19px solid transparent;
+                                                                border-bottom: 19px solid transparent;
+                                                                border-left: 16px solid #dddddd;
+                                                            }
+
+                                                            &:after {
+                                                                content: '';
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                left: 0;
+                                                                margin-top: -17px;
+                                                                border-top: 17px solid transparent;
+                                                                border-bottom: 17px solid transparent;
+                                                                border-left: 14px solid $tab-panel-bg;
+                                                            }
+                                                        }
+
+                                                        &:before {
+                                                            content: '';
+                                                            position: absolute;
+                                                            top: 50%;
+                                                            right: -15px;
+                                                            margin-top: -19px;
+                                                            border-top: 19px solid transparent;
+                                                            border-bottom: 19px solid transparent;
+                                                            border-left: 16px solid #dddddd;
+                                                        }
+
+                                                        &:after {
+                                                            content: '';
+                                                            position: absolute;
+                                                            top: 50%;
+                                                            right: -12px;
+                                                            margin-top: -17px;
+                                                            border-top: 17px solid transparent;
+                                                            border-bottom: 17px solid transparent;
+                                                            border-left: 14px solid $tab-panel-bg;
+                                                        }
+
+                                                        &:first-child {
+                                                            // margin: 0 15px 0 0;
+                                                            border-radius: 4px 0 0 4px;
+                                                            border-left: 2px solid #ddd;
+                                                            border-right: 0;
+
+                                                            a {
+                                                                padding-left: 15px;
+
+                                                                &:after, &:before {
+                                                                    content: none;
+                                                                }
+                                                            }
+
+                                                            &:before {
+                                                                content: '';
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                right: -15px;
+                                                                margin-top: -19px;
+                                                                border-top: 19px solid transparent;
+                                                                border-bottom: 19px solid transparent;
+                                                                border-left: 16px solid #dddddd;
+                                                            }
+
+                                                            &:after {
+                                                                content: '';
+                                                                position: absolute;
+                                                                top: 50%;
+                                                                right: -12px;
+                                                                margin-top: -17px;
+                                                                border-top: 17px solid transparent;
+                                                                border-bottom: 17px solid transparent;
+                                                                border-left: 14px solid $tab-panel-bg;
+                                                            }
+                                                        }
+
+                                                        &:last-child {
+                                                            margin-right: 0;
+                                                            border-radius: 0 4px 4px 0;
+                                                            border-right: 2px solid #ddd;
+                                                            border-left: 0;
+
+                                                            a {
+                                                                padding: 0 15px 0 30px;
+                                                            }
+
+                                                            &:before, &:after {
+                                                                content: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
 
@@ -569,7 +713,7 @@ html {
                                         }
 
                                         .production-owner {
-                                            margin: 20px 0 30px;
+                                            margin: 0 0 30px;
                                             position: relative;
 
                                             &:before {
