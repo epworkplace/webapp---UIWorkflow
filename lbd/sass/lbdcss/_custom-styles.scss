@@ -3949,6 +3949,37 @@ html {
 
 /*Question list container Ends*/
 
+/* Duplicate Card Modal Starts */
+
+.duplicate-cards-modal {
+    .add-new-card {
+        ul.dropdown-menu {
+            width: 70%;
+
+            li {
+                .attach-link {
+                    padding: 0 15px 15px;
+
+                    > div {
+                        margin-bottom: 5px;
+                    }
+
+                    input[type="text"] {
+                        border: 1px solid #EAEBED !important;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            li.divider {
+                padding: 0;
+            }
+        }
+    }
+}
+
+/* Duplicate Card Modal Ends */
+
 /*Add Exclude Modal Audience Starts*/
 
 .exclusion-modal {
