@@ -1197,11 +1197,11 @@
             display: flex;
             margin-right: 10px;
             padding: 10px;
-            // width: 31%;
+            width: 27%;
             font-size: 14px;
             align-items: center;
             justify-content: center;
-            flex-grow: 1;
+            // flex-grow: 1;
 
             i{
                 font-size: 16px;
@@ -1214,8 +1214,17 @@
             }
 
             &.delivery-type{
-                font-weight: 600;
+                font-weight: 700;
+                color: $main;
                 justify-content: flex-start;
+                flex-grow: 1;
+            }
+        }
+        .one-shot-delivery{
+            .items{
+                &:last-child{
+                    flex-grow: 1;
+                }
             }
         }
 
