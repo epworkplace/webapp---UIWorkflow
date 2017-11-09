@@ -4769,11 +4769,12 @@ html {
         font-size: 12px;
     }
     
-    .mission-status{
+    .mission-status, .delivery-status{
         @extend %mission-status;
-    }
-    .mission-status &{
-        padding: 20px !important;
+        margin-bottom: 15px;
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 
     .track-elements {
@@ -4864,8 +4865,12 @@ html {
 }
 
 .assignment{
+    > div{
+        margin-bottom: 10px;
+    }
     .track-overview{
         padding: 20px;
+        // margin-bottom: 10px;
     }
 }
 

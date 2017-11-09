@@ -103,6 +103,12 @@ $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
     color: $main;
     font-weight: 600;
 }
+.fw600{
+    font-weight: 600 !important;
+}
+.fw700{
+    font-weight: 700 !important;
+}
 
 .primary-font {
     font-size: 14px;
