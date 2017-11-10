@@ -555,7 +555,7 @@ html {
                                                     text-align: center;
                                                 }
 
-                                                &#breadcrumbs-two {
+                                                &#breadcrumbs-two, &.breadcrumbs-two {
                                                     overflow: hidden;
                                                     width: 100%;
                                                     padding: 0;
@@ -693,6 +693,14 @@ html {
 
                                                             &:before, &:after {
                                                                 content: none;
+                                                            }
+                                                        }
+
+                                                        &:only-child{
+                                                            border-left: 2px solid #ddd;
+                                                            border-radius: 4px;
+                                                            a{
+                                                                padding: 0 15px;
                                                             }
                                                         }
                                                     }
