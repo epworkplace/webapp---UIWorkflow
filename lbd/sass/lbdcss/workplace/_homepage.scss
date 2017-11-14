@@ -780,10 +780,11 @@
 
                     &.divider {
                         background: transparent !important;
-                        padding: 15px 0;
+                        padding: 0 0 15px 0;
                         font-weight: 700;
                         cursor: text;
                         border: 2px solid transparent;
+                        margin-top: 0;
 
                         &:hover {
                             border: 2px solid transparent;
@@ -826,6 +827,11 @@
                     }
 
                     &[class*='unread'] {
+                        li{
+                            &:last-child{
+                                margin-bottom: 20px;
+                            }
+                        }
                         .user-image {
                             &:before, &:after {
                                 content: "";
@@ -845,6 +851,7 @@
                         .comment-container {
                             .notifications {
                                 width: calc(83.333333% + 25px);
+                                word-break: break-all;
 
                                 a {
                                     &:last-child {
@@ -855,7 +862,7 @@
                             }
 
                             .comment-date {
-                                width: 100px;
+                                width: 95px;
                             }
                         }
                     }
