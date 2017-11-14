@@ -696,10 +696,11 @@ html {
                                                             }
                                                         }
 
-                                                        &:only-child{
+                                                        &:only-child {
                                                             border-left: 2px solid #ddd;
                                                             border-radius: 4px;
-                                                            a{
+
+                                                            a {
                                                                 padding: 0 15px;
                                                             }
                                                         }
@@ -7921,6 +7922,8 @@ html {
             margin-bottom: 10px;
 
             .review-rate {
+                z-index: 1;
+
                 .star-rating-label {
                     color: #353f53;
                     font-size: 14px;
