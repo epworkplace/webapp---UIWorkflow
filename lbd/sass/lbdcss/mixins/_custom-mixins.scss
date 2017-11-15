@@ -1335,6 +1335,27 @@
             }
         }
     }
+    &.deleted {
+        .breadcrumbs {
+            li {
+                background: $delete;
+
+                &:after {
+                    border-left-color: $delete;
+                }
+            }
+        }
+
+        .track-date-due {
+            .due, .mission-progress-status{
+                color: $delete;
+            }
+
+            /* .mission-progress-status {
+                color: $delete;
+            } */
+        }
+    }    
 }
 
 span.edit {
