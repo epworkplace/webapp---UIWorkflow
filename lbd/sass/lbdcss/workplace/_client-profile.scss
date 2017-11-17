@@ -1,112 +1,110 @@
 /* Client-profile page styles */
 
 .layout-3.wp-app {
-    &.clientProfile {
-        .page-wrap {
-            .main-panel {
-                .main-panel-page {
-                    .main-container.client-profile-list-page {
-                        /* tab panel container starts */
-                        .tab-panel-container {
-                            .tab-panel {
-                                &.outside {
-                                    padding: 16px 7px 0px 16px;
+    .page-wrap {
+        .main-panel {
+            .main-panel-page {
+                .main-container.client-profile-list-page.clientProfile {
+                    /* tab panel container starts */
+                    .tab-panel-container {
+                        .tab-panel {
+                            &.outside {
+                                padding: 16px 7px 0px 16px;
 
-                                    .mCustomScrollBox {
-                                        // overflow: visible;
+                                .mCustomScrollBox {
+                                    // overflow: visible;
 
-                                        .mCSB_container {
-                                            // padding-right: 9px;
-                                       
-                                        }
+                                    .mCSB_container {
+                                        // padding-right: 9px;
 
-                                        .mCSB_scrollTools {
-                                            // margin-right: -10px;
-                                       
-                                        }
-                                    }
-                                }
-
-                                .client-details, .client-actions {
-                                    padding: 0;
-                                }
-
-                                .client-details {
-                                    @extend %client-details;
-                                }
-
-                                .client-actions {
-                                    &.divider {
-                                        @include divider;
                                     }
 
-                                    .action-list-container {
-                                        *[class*='-title'] {
-                                            font-weight: 600;
-                                            color: #353F53;
-                                            margin-bottom: 10px;
-                                            text-transform: uppercase;
-                                        }
+                                    .mCSB_scrollTools {
+                                        // margin-right: -10px;
 
-                                        .action-list {
-                                            .list-container {
+                                    }
+                                }
+                            }
+
+                            .client-details, .client-actions {
+                                padding: 0;
+                            }
+
+                            .client-details {
+                                @extend %client-details;
+                            }
+
+                            .client-actions {
+                                &.divider {
+                                    @include divider;
+                                }
+
+                                .action-list-container {
+                                    *[class*='-title'] {
+                                        font-weight: 600;
+                                        color: #353F53;
+                                        margin-bottom: 10px;
+                                        text-transform: uppercase;
+                                    }
+
+                                    .action-list {
+                                        .list-container {
+                                            display: flex;
+                                            flex-flow: column;
+                                            padding: 0;
+                                            margin: 0;
+
+                                            li {
                                                 display: flex;
-                                                flex-flow: column;
-                                                padding: 0;
-                                                margin: 0;
 
-                                                li {
+                                                &:last-child {
+                                                    margin-top: 15px;
+                                                }
+
+                                                a {
                                                     display: flex;
+                                                    align-items: center;
+                                                    justify-content: flex-start;
+                                                    width: 100%;
+                                                    color: #D7D9DC;
+                                                    background: #ffffff;
+                                                    box-shadow: 1px 1px 2px 1px #eceeef;
+                                                    border-radius: 4px;
+                                                    transition: all .3s ease;
 
-                                                    &:last-child {
-                                                        margin-top: 15px;
-                                                    }
-
-                                                    a {
-                                                        display: flex;
-                                                        align-items: center;
-                                                        justify-content: flex-start;
-                                                        width: 100%;
-                                                        color: #D7D9DC;
-                                                        background: #ffffff;
+                                                    &.card {
+                                                        padding: 15px;
+                                                        margin-bottom: 10px;
+                                                        border: none;
                                                         box-shadow: 1px 1px 2px 1px #eceeef;
-                                                        border-radius: 4px;
-                                                        transition: all .3s ease;
 
-                                                        &.card {
-                                                            padding: 15px;
-                                                            margin-bottom: 10px;
-                                                            border: none;
-                                                            box-shadow: 1px 1px 2px 1px #eceeef;
-
-                                                            &:hover {
-                                                                box-shadow: 1px 1px 5px 3px #eceeef;
-                                                            }
-
-                                                            &.add-card {
-                                                                justify-content: center;
-                                                            }
+                                                        &:hover {
+                                                            box-shadow: 1px 1px 5px 3px #eceeef;
                                                         }
 
-                                                        .action-icon {
-                                                            margin-right: 10px;
-                                                            width: 24px;
-                                                            font-size: 24px;
-                                                        }
-
-                                                        .action-name {
-                                                            font-size: 14px;
-                                                            margin: 0;
-                                                            color: #353F53;
-                                                            font-weight: 600;
+                                                        &.add-card {
+                                                            justify-content: center;
                                                         }
                                                     }
 
-                                                    &.active {
-                                                        a {
-                                                            &.card {
-                                                                border: 1px solid $selected;
-                                                            }
+                                                    .action-icon {
+                                                        margin-right: 10px;
+                                                        width: 24px;
+                                                        font-size: 24px;
+                                                    }
+
+                                                    .action-name {
+                                                        font-size: 14px;
+                                                        margin: 0;
+                                                        color: #353F53;
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                &.active {
+                                                    a {
+                                                        &.card {
+                                                            border: 1px solid $selected;
                                                         }
                                                     }
                                                 }
@@ -116,670 +114,670 @@
                                 }
                             }
                         }
+                    }
 
-                        /* tab panel container ends */
-                        /* main panel container starts */
-                        .main-panel-container {
-                            .data-container {
-                                padding: 15px;
+                    /* tab panel container ends */
+                    /* main panel container starts */
+                    .main-panel-container {
+                        .data-container {
+                            padding: 15px;
 
-                                .card {
-                                    margin-bottom: 15px;
+                            .card {
+                                margin-bottom: 15px;
 
-                                    &[class*='container'] {
-                                        padding: 20px;
+                                &[class*='container'] {
+                                    padding: 20px;
 
-                                        a {
-                                            font-size: 12px;
-                                            color: #a2a6b0;
-                                            text-decoration: underline;
+                                    a {
+                                        font-size: 12px;
+                                        color: #a2a6b0;
+                                        text-decoration: underline;
 
-                                            &[class*='add'] {}
+                                        &[class*='add'] {}
 
-                                            &.source, &.external-website-link, &.morelink {
-                                                color: #448aff;
-                                            }
-
-                                            &.chosen-single {
-                                                text-decoration: none;
-                                            }
-
-                                            &:hover {
-                                                text-decoration: none;
-                                            }
+                                        &.source, &.external-website-link, &.morelink {
+                                            color: #448aff;
                                         }
 
-                                        .title {
-                                            color: #353f53;
+                                        &.chosen-single {
+                                            text-decoration: none;
+                                        }
+
+                                        &:hover {
+                                            text-decoration: none;
+                                        }
+                                    }
+
+                                    .title {
+                                        color: #353f53;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        margin: 0;
+                                        padding: 0;
+                                        text-transform: uppercase;
+                                    }
+
+                                    .overview {
+                                        &, & p {
                                             font-size: 14px;
-                                            font-weight: 600;
-                                            margin: 0;
-                                            padding: 0;
-                                            text-transform: uppercase;
                                         }
 
-                                        .overview {
-                                            &, & p {
-                                                font-size: 14px;
-                                            }
+                                        p:first-of-type {
+                                            margin-top: 10px;
+                                        }
+                                    }
 
-                                            p:first-of-type {
-                                                margin-top: 10px;
+                                    .chosen-container {
+                                        .chosen-single {
+                                            .chose-image-small {
+                                                margin: 0 13px 0 0;
                                             }
                                         }
 
-                                        .chosen-container {
-                                            .chosen-single {
-                                                .chose-image-small {
-                                                    margin: 0 13px 0 0;
-                                                }
-                                            }
+                                        .chosen-drop {
+                                            .chosen-search {}
 
-                                            .chosen-drop {
-                                                .chosen-search {}
-
-                                                .chosen-results {
-                                                    .active-result {
-                                                        &.result-selected {}
-                                                    }
+                                            .chosen-results {
+                                                .active-result {
+                                                    &.result-selected {}
                                                 }
                                             }
                                         }
                                     }
+                                }
 
-                                    &.sector-container {}
+                                &.sector-container {}
 
-                                    &.annual-turnover-container {
-                                        .annual-turnover {
-                                            font-size: 20px;
-                                            font-weight: 600;
+                                &.annual-turnover-container {
+                                    .annual-turnover {
+                                        font-size: 20px;
+                                        font-weight: 600;
 
-                                            span {
-                                                font-size: 12px;
-                                                font-weight: 400;
-                                            }
+                                        span {
+                                            font-size: 12px;
+                                            font-weight: 400;
                                         }
                                     }
+                                }
 
-                                    &.address-container {
-                                        .address {
-                                            .client-country {
-                                                margin-bottom: 15px;
-                                            }
-
-                                            .client-address {}
+                                &.address-container {
+                                    .address {
+                                        .client-country {
+                                            margin-bottom: 15px;
                                         }
+
+                                        .client-address {}
                                     }
+                                }
 
-                                    &.external-links-container {
-                                        .external-links {
-                                            .website-links {
-                                                ul {
-                                                    padding-left: 15px;
-                                                    list-style-type: none;
+                                &.external-links-container {
+                                    .external-links {
+                                        .website-links {
+                                            ul {
+                                                padding-left: 15px;
+                                                list-style-type: none;
 
-                                                    li {
-                                                        a {}
-                                                    }
+                                                li {
+                                                    a {}
                                                 }
                                             }
+                                        }
 
-                                            .socialmedia-links {
-                                                ul {
-                                                    padding-left: 15px;
-                                                    list-style-type: none;
-                                                    margin-bottom: 0;
+                                        .socialmedia-links {
+                                            ul {
+                                                padding-left: 15px;
+                                                list-style-type: none;
+                                                margin-bottom: 0;
 
-                                                    li {
-                                                        display: flex;
-                                                        width: 40px;
-                                                        margin-right: 15px;
-                                                    }
+                                                li {
+                                                    display: flex;
+                                                    width: 40px;
+                                                    margin-right: 15px;
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
+                        }
 
-                            .setting-wrap-container {
-                                [class*='-list-container'] {
-                                    top: 0;
-                                    width: calc(100% - (31.4% + 87px));
-                                    padding-top: 0;
+                        .setting-wrap-container {
+                            [class*='-list-container'] {
+                                top: 0;
+                                width: calc(100% - (31.4% + 87px));
+                                padding-top: 0;
 
-                                    .main-panel-header {
-                                        position: fixed;
-                                        width: calc(100% - (32% + 87px));
-                                        z-index: 1000;
-                                        margin-left: -25px;
-                                        box-shadow: inset 0px 5px 5px 0px rgba(197, 197, 197, 0.2);
-                                        padding: 30px 0 20px 0;
-                                        background: #fff;
+                                .main-panel-header {
+                                    position: fixed;
+                                    width: calc(100% - (32% + 87px));
+                                    z-index: 1000;
+                                    margin-left: -25px;
+                                    box-shadow: inset 0px 5px 5px 0px rgba(197, 197, 197, 0.2);
+                                    padding: 30px 0 20px 0;
+                                    background: #fff;
 
-                                        span.close {
-                                            position: absolute;
-                                            right: 10px;
-                                            top: 10px;
-                                        }
+                                    span.close {
+                                        position: absolute;
+                                        right: 10px;
+                                        top: 10px;
+                                    }
 
-                                        .list-title {
-                                            h3 {
-                                                font-size: 16px;
-                                                font-weight: 600;
-                                                margin: 0px 0 20px;
-                                                padding-left: 10px;
-                                            }
-                                        }
-
-                                        .filter-container {
+                                    .list-title {
+                                        h3 {
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            margin: 0px 0 20px;
                                             padding-left: 10px;
-                                        }
-
-                                        [class*='create-new'] {
-                                            padding-right: 10px;
-                                        }
-
-                                        .btn-download {
-                                            flex-grow: 1;
                                         }
                                     }
 
-                                    [class*='list-content-container'] {
-                                        margin-top: 130px;
+                                    .filter-container {
+                                        padding-left: 10px;
+                                    }
 
-                                        &.tab-step {
-                                            padding: 0 15px;
-                                            margin-top: 67px;
+                                    [class*='create-new'] {
+                                        padding-right: 10px;
+                                    }
 
-                                            .tab-step-content {
-                                                .nav {
-                                                    position: fixed;
-                                                    z-index: 2;
-                                                    width: calc(58% + 8px);
-                                                    padding-bottom: 25px;
-                                                    margin: 0 -3px;
-                                                    background: #fff;
+                                    .btn-download {
+                                        flex-grow: 1;
+                                    }
+                                }
 
-                                                    &:before {
-                                                        bottom: 16px;
-                                                    }
+                                [class*='list-content-container'] {
+                                    margin-top: 130px;
+
+                                    &.tab-step {
+                                        padding: 0 15px;
+                                        margin-top: 67px;
+
+                                        .tab-step-content {
+                                            .nav {
+                                                position: fixed;
+                                                z-index: 2;
+                                                width: calc(58% + 8px);
+                                                padding-bottom: 25px;
+                                                margin: 0 -3px;
+                                                background: #fff;
+
+                                                &:before {
+                                                    bottom: 16px;
                                                 }
+                                            }
 
-                                                .tab-content {
-                                                    .tab-pane {
-                                                        .tab-content-header {
-                                                            padding: 20px 0;
-                                                            position: fixed;
-                                                            width: 60%;
-                                                            z-index: 1;
-                                                            background: white;
-                                                            top: 95px;
+                                            .tab-content {
+                                                .tab-pane {
+                                                    .tab-content-header {
+                                                        padding: 20px 0;
+                                                        position: fixed;
+                                                        width: 60%;
+                                                        z-index: 1;
+                                                        background: white;
+                                                        top: 95px;
 
-                                                            [class*='create-new'] {
-                                                                // padding-right: 10px;
-                                                           
-                                                            }
+                                                        [class*='create-new'] {
+                                                            // padding-right: 10px;
 
-                                                            .btn-download {
-                                                                flex-grow: 1;
-                                                            }
                                                         }
 
-                                                        .tab-content-container {
-                                                            margin-top: 110px;
+                                                        .btn-download {
+                                                            flex-grow: 1;
                                                         }
+                                                    }
+
+                                                    .tab-content-container {
+                                                        margin-top: 110px;
                                                     }
                                                 }
                                             }
                                         }
+                                    }
 
-                                        .card-section-list {
-                                            ul {
-                                                padding: 0;
-                                                margin: 0;
-                                                list-style-type: none;
-                                            }
+                                    .card-section-list {
+                                        ul {
+                                            padding: 0;
+                                            margin: 0;
+                                            list-style-type: none;
+                                        }
 
-                                            li {
-                                                @include clearfix;
+                                        li {
+                                            @include clearfix;
 
-                                                .card {
-                                                    padding: 13px 3px;
-                                                    margin-bottom: 10px;
-                                                    height: auto;
-                                                    border: 1px solid #fff;
-                                                    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
-                                                    -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
-                                                    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
-                                                    position: relative;
-                                                    display: flex;
-                                                    align-items: center;
+                                            .card {
+                                                padding: 13px 3px;
+                                                margin-bottom: 10px;
+                                                height: auto;
+                                                border: 1px solid #fff;
+                                                -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
+                                                -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
+                                                box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
+                                                position: relative;
+                                                display: flex;
+                                                align-items: center;
 
-                                                    .check {
-                                                        width: 37px;
-                                                        padding: 0px 0px 0 15px;
+                                                .check {
+                                                    width: 37px;
+                                                    padding: 0px 0px 0 15px;
 
-                                                        label.checkbox {
-                                                            padding: 21px 18px 14px 0;
+                                                    label.checkbox {
+                                                        padding: 21px 18px 14px 0;
 
-                                                            span.icons {
-                                                                position: absolute;
-                                                                top: 6px;
-                                                            }
+                                                        span.icons {
+                                                            position: absolute;
+                                                            top: 6px;
                                                         }
                                                     }
+                                                }
 
-                                                    .list-image-container {
-                                                        width: 72px;
-                                                        margin: 0;
-                                                        padding-right: 0;
+                                                .list-image-container {
+                                                    width: 72px;
+                                                    margin: 0;
+                                                    padding-right: 0;
 
-                                                        .list-image {
+                                                    .list-image {
+                                                        width: 50px;
+                                                        height: 50px;
+                                                        margin: 0px;
+                                                        position: inherit;
+
+                                                        img {
                                                             width: 50px;
                                                             height: 50px;
-                                                            margin: 0px;
                                                             position: inherit;
+                                                            object-fit: cover;
+                                                            top: 0;
+                                                            left: 0;
 
-                                                            img {
-                                                                width: 50px;
-                                                                height: 50px;
-                                                                position: inherit;
+                                                            &[data-original-title*='Progress'], &[data-title*='Progress'] {
+                                                                width: 40px;
+                                                                height: 40px;
                                                                 object-fit: cover;
-                                                                top: 0;
-                                                                left: 0;
-
-                                                                &[data-original-title*='Progress'], &[data-title*='Progress'] {
-                                                                    width: 40px;
-                                                                    height: 40px;
-                                                                    object-fit: cover;
-                                                                    position: absolute;
-                                                                    top: 5px;
-                                                                    left: 4.6px;
-                                                                }
+                                                                position: absolute;
+                                                                top: 5px;
+                                                                left: 4.6px;
                                                             }
+                                                        }
 
-                                                            .card-user-empty {
-                                                                width: 50px;
-                                                                height: 50px;
-                                                                left: 0;
-                                                                top: 0;
-                                                            }
+                                                        .card-user-empty {
+                                                            width: 50px;
+                                                            height: 50px;
+                                                            left: 0;
+                                                            top: 0;
+                                                        }
 
-                                                            &.empty-image {
-                                                                width: 50px;
-                                                                height: 50px;
-                                                                border: 2px dashed #d7d9dc;
-                                                                color: #d7d9dc;
-                                                                border-radius: 50px;
-                                                                position: relative;
+                                                        &.empty-image {
+                                                            width: 50px;
+                                                            height: 50px;
+                                                            border: 2px dashed #d7d9dc;
+                                                            color: #d7d9dc;
+                                                            border-radius: 50px;
+                                                            position: relative;
 
-                                                                &:before {
-                                                                    content: '\E8A6';
-                                                                    font-family: 'Material Icons';
-                                                                    position: absolute;
-                                                                    top: -4px;
-                                                                    left: 5px;
-                                                                    font-size: 35px;
-                                                                }
+                                                            &:before {
+                                                                content: '\E8A6';
+                                                                font-family: 'Material Icons';
+                                                                position: absolute;
+                                                                top: -4px;
+                                                                left: 5px;
+                                                                font-size: 35px;
                                                             }
                                                         }
                                                     }
+                                                }
 
-                                                    .list-head-container {
-                                                        margin: 0;
+                                                .list-head-container {
+                                                    margin: 0;
 
-                                                        .header {
-                                                            padding: 0;
+                                                    .header {
+                                                        padding: 0;
 
-                                                            [class*='-spec'] {
-                                                                span {
-                                                                    &.label {
-                                                                        &.owner {
-                                                                            background: $ongoning-bg;
-                                                                        }
-                                                                    }
-
-                                                                    &[class*='-role'] {
-                                                                        font-size: 12px;
-                                                                        color: $helper;
+                                                        [class*='-spec'] {
+                                                            span {
+                                                                &.label {
+                                                                    &.owner {
+                                                                        background: $ongoning-bg;
                                                                     }
                                                                 }
+
+                                                                &[class*='-role'] {
+                                                                    font-size: 12px;
+                                                                    color: $helper;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        .status-label {
+                                                            font-size: 11px;
+                                                            color: #fff;
+                                                            font-weight: 500;
+                                                            line-height: normal;
+                                                            margin-bottom: 0px;
+                                                            display: flex;
+                                                            align-items: center;
+
+                                                            .label {
+                                                                line-height: normal;
+                                                                margin-right: 10px;
                                                             }
 
-                                                            .status-label {
-                                                                font-size: 11px;
-                                                                color: #fff;
-                                                                font-weight: 500;
-                                                                line-height: normal;
-                                                                margin-bottom: 0px;
+                                                            .dates {
+                                                                margin-left: 0px;
                                                                 display: flex;
                                                                 align-items: center;
 
-                                                                .label {
-                                                                    line-height: normal;
-                                                                    margin-right: 10px;
+                                                                span {
+                                                                    color: #B0B4BB;
+                                                                    text-transform: uppercase;
+                                                                    font-size: 12px;
+                                                                    font-weight: 600;
                                                                 }
 
-                                                                .dates {
-                                                                    margin-left: 0px;
-                                                                    display: flex;
-                                                                    align-items: center;
-
-                                                                    span {
-                                                                        color: #B0B4BB;
-                                                                        text-transform: uppercase;
-                                                                        font-size: 12px;
-                                                                        font-weight: 600;
-                                                                    }
-
-                                                                    span.due {
-                                                                        color: #ee0a5f;
-                                                                    }
-
-                                                                    i {
-                                                                        position: relative;
-                                                                        top: 0px;
-                                                                        margin: 0 5px;
-                                                                        font-size: 16px;
-                                                                        color: #B0B4BB;
-                                                                    }
-                                                                }
-                                                            }
-
-                                                            .tempo-mission {
-                                                                position: relative;
-                                                                top: 4px;
-                                                                margin-right: 10px;
-
-                                                                &:before {
-                                                                    content: '';
-                                                                    position: absolute;
-                                                                    width: 20px;
-                                                                    height: 20px;
-                                                                    background: #447DF7;
-                                                                    border-radius: 50%;
-                                                                    top: 3px;
-                                                                    left: -2px;
+                                                                span.due {
+                                                                    color: #ee0a5f;
                                                                 }
 
                                                                 i {
                                                                     position: relative;
-                                                                    font-size: 16px;
-                                                                    color: #fff;
-                                                                    z-index: 1;
-                                                                }
-                                                            }
-
-                                                            .primary-font {
-                                                                color: #485262;
-                                                                font-size: 14px;
-                                                                display: inline-flex;
-                                                                margin-top: 2px;
-                                                            }
-
-                                                            .brief {
-                                                                color: #B0B4BB;
-                                                                font-size: 12px;
-                                                            }
-
-                                                            .language, .language-to {
-                                                                i {
-                                                                    position: relative;
-                                                                    top: 3px;
+                                                                    top: 0px;
+                                                                    margin: 0 5px;
                                                                     font-size: 16px;
                                                                     color: #B0B4BB;
                                                                 }
                                                             }
                                                         }
 
-                                                        &.list-head-quote-mission {
-                                                            width: 44%;
-                                                        }
-                                                    }
-
-                                                    .list-footer-container {
-                                                        font-size: 12px;
-
-                                                        [class*='-phone'] {
-                                                            color: $sub-heading;
-                                                            font-size: 14px;
-                                                        }
-
-                                                        [class*='-email'] {
-                                                            text-decoration: underline;
-                                                        }
-
-                                                        .helper-text {}
-                                                    }
-
-                                                    .task-price {
-                                                        width: 234px;
-                                                        float: right;
-
-                                                        .numbers {
-                                                            width: 98px;
-                                                            margin-top: 11px;
-                                                            text-align: center;
-                                                            color: #485262;
-                                                            font-size: 16px;
-                                                            font-weight: 600;
-
-                                                            span {
-                                                                display: block;
-                                                                color: #C5C8CE;
-                                                                font-size: 14px;
-                                                                line-height: 1;
-                                                            }
-
+                                                        .tempo-mission {
                                                             position: relative;
+                                                            top: 4px;
+                                                            margin-right: 10px;
 
-                                                            &:before, &:after {
+                                                            &:before {
                                                                 content: '';
                                                                 position: absolute;
-                                                                left: 0;
-                                                                top: 8px;
-                                                                background: #EAEBED;
-                                                                height: 15px;
-                                                                width: 1px;
+                                                                width: 20px;
+                                                                height: 20px;
+                                                                background: #447DF7;
+                                                                border-radius: 50%;
+                                                                top: 3px;
+                                                                left: -2px;
                                                             }
 
-                                                            &:after {
-                                                                right: 0;
-                                                                left: auto;
+                                                            i {
+                                                                position: relative;
+                                                                font-size: 16px;
+                                                                color: #fff;
+                                                                z-index: 1;
                                                             }
                                                         }
 
-                                                        .turnover {
-                                                            width: 136px;
-                                                            margin-top: 11px;
-                                                            text-align: center;
+                                                        .primary-font {
                                                             color: #485262;
-                                                            font-size: 16px;
-                                                            font-weight: 600;
-
-                                                            span {
-                                                                display: block;
-                                                                color: #C5C8CE;
-                                                                font-size: 14px;
-                                                                line-height: 1;
-                                                            }
+                                                            font-size: 14px;
+                                                            display: inline-flex;
+                                                            margin-top: 2px;
                                                         }
 
-                                                        &.task-price-quote-mission {
-                                                            width: 332px;
+                                                        .brief {
+                                                            color: #B0B4BB;
+                                                            font-size: 12px;
+                                                        }
+
+                                                        .language, .language-to {
+                                                            i {
+                                                                position: relative;
+                                                                top: 3px;
+                                                                font-size: 16px;
+                                                                color: #B0B4BB;
+                                                            }
                                                         }
                                                     }
 
-                                                    .cta-container {
-                                                        visibility: hidden;
-                                                        opacity: 0;
-                                                        transition: all .3s ease;
-                                                        position: absolute;
-                                                        right: 0;
-                                                        top: 0;
-                                                        width: 43%;
-                                                        height: 100%;
-                                                        background: #fff;
+                                                    &.list-head-quote-mission {
+                                                        width: 44%;
+                                                    }
+                                                }
 
-                                                        .cta {
-                                                            float: right;
-                                                            display: flex;
-                                                            -webkit-flex-flow: row wrap;
-                                                            align-items: center;
-                                                            height: 100%;
+                                                .list-footer-container {
+                                                    font-size: 12px;
+
+                                                    [class*='-phone'] {
+                                                        color: $sub-heading;
+                                                        font-size: 14px;
+                                                    }
+
+                                                    [class*='-email'] {
+                                                        text-decoration: underline;
+                                                    }
+
+                                                    .helper-text {}
+                                                }
+
+                                                .task-price {
+                                                    width: 234px;
+                                                    float: right;
+
+                                                    .numbers {
+                                                        width: 98px;
+                                                        margin-top: 11px;
+                                                        text-align: center;
+                                                        color: #485262;
+                                                        font-size: 16px;
+                                                        font-weight: 600;
+
+                                                        span {
+                                                            display: block;
+                                                            color: #C5C8CE;
+                                                            font-size: 14px;
+                                                            line-height: 1;
+                                                        }
+
+                                                        position: relative;
+
+                                                        &:before, &:after {
+                                                            content: '';
                                                             position: absolute;
-                                                            right: 25px;
+                                                            left: 0;
+                                                            top: 8px;
+                                                            background: #EAEBED;
+                                                            height: 15px;
+                                                            width: 1px;
+                                                        }
 
-                                                            ul {
-                                                                padding: 0;
-                                                                margin: 0;
-                                                                list-style-type: none;
+                                                        &:after {
+                                                            right: 0;
+                                                            left: auto;
+                                                        }
+                                                    }
 
-                                                                li {
-                                                                    display: inline-block;
-                                                                    margin-right: 20px;
+                                                    .turnover {
+                                                        width: 136px;
+                                                        margin-top: 11px;
+                                                        text-align: center;
+                                                        color: #485262;
+                                                        font-size: 16px;
+                                                        font-weight: 600;
 
-                                                                    a {
+                                                        span {
+                                                            display: block;
+                                                            color: #C5C8CE;
+                                                            font-size: 14px;
+                                                            line-height: 1;
+                                                        }
+                                                    }
+
+                                                    &.task-price-quote-mission {
+                                                        width: 332px;
+                                                    }
+                                                }
+
+                                                .cta-container {
+                                                    visibility: hidden;
+                                                    opacity: 0;
+                                                    transition: all .3s ease;
+                                                    position: absolute;
+                                                    right: 0;
+                                                    top: 0;
+                                                    width: 43%;
+                                                    height: 100%;
+                                                    background: #fff;
+
+                                                    .cta {
+                                                        float: right;
+                                                        display: flex;
+                                                        -webkit-flex-flow: row wrap;
+                                                        align-items: center;
+                                                        height: 100%;
+                                                        position: absolute;
+                                                        right: 25px;
+
+                                                        ul {
+                                                            padding: 0;
+                                                            margin: 0;
+                                                            list-style-type: none;
+
+                                                            li {
+                                                                display: inline-block;
+                                                                margin-right: 20px;
+
+                                                                a {
+                                                                    cursor: pointer;
+                                                                    color: #DFE1E3;
+
+                                                                    span {
                                                                         cursor: pointer;
-                                                                        color: #DFE1E3;
+                                                                    }
 
-                                                                        span {
-                                                                            cursor: pointer;
-                                                                        }
-
-                                                                        &:hover, &:focus {
-                                                                            color: #485262;
-                                                                        }
+                                                                    &:hover, &:focus {
+                                                                        color: #485262;
                                                                     }
                                                                 }
+                                                            }
 
-                                                                li:last-child {
-                                                                    margin-right: 0;
-                                                                }
+                                                            li:last-child {
+                                                                margin-right: 0;
                                                             }
                                                         }
                                                     }
                                                 }
+                                            }
 
-                                                .card-mission {
-                                                    height: 121px;
+                                            .card-mission {
+                                                height: 121px;
 
-                                                    .check {
-                                                        padding: 23px 15px;
-                                                    }
+                                                .check {
+                                                    padding: 23px 15px;
+                                                }
 
-                                                    .list-image-container {
-                                                        width: 52px;
-                                                        margin: 22px 20px 0 5px;
+                                                .list-image-container {
+                                                    width: 52px;
+                                                    margin: 22px 20px 0 5px;
 
-                                                        .list-image {
-                                                            margin-top: 0;
+                                                    .list-image {
+                                                        margin-top: 0;
 
-                                                            .card-user-empty {
-                                                                height: 50px;
-                                                            }
+                                                        .card-user-empty {
+                                                            height: 50px;
                                                         }
                                                     }
+                                                }
 
-                                                    .list-head-container {
-                                                        margin-top: 3px;
-                                                        width: 55%;
+                                                .list-head-container {
+                                                    margin-top: 3px;
+                                                    width: 55%;
 
-                                                        .header {
-                                                            padding: 0;
-                                                        }
+                                                    .header {
+                                                        padding: 0;
+                                                    }
+                                                }
+
+                                                .task-price {
+                                                    .numbers {
+                                                        margin-top: 33px;
+                                                        font-size: 14px;
                                                     }
 
-                                                    .task-price {
-                                                        .numbers {
-                                                            margin-top: 33px;
-                                                            font-size: 14px;
-                                                        }
-
-                                                        .turnover {
-                                                            margin-top: 33px;
-                                                            font-size: 14px;
-                                                        }
+                                                    .turnover {
+                                                        margin-top: 33px;
+                                                        font-size: 14px;
                                                     }
+                                                }
 
-                                                    .cta-container {
+                                                .cta-container {
+                                                    height: 100%;
+
+                                                    .cta {
+                                                        display: flex;
+                                                        -webkit-flex-flow: row wrap;
+                                                        align-items: center;
                                                         height: 100%;
-
-                                                        .cta {
-                                                            display: flex;
-                                                            -webkit-flex-flow: row wrap;
-                                                            align-items: center;
-                                                            height: 100%;
-                                                            position: absolute;
-                                                            right: 25px;
-                                                        }
+                                                        position: absolute;
+                                                        right: 25px;
                                                     }
                                                 }
+                                            }
+
+                                            &:hover, &:focus {
+                                                .cta-container {
+                                                    visibility: visible;
+                                                    opacity: 1;
+                                                    transition: all .3s ease;
+                                                }
+                                            }
+                                        }
+
+                                        li.add-mission {
+                                            padding: 0;
+
+                                            a.add-card {
+                                                display: block;
+                                                text-align: center;
+                                                height: auto;
+                                                color: #d7d9dc;
 
                                                 &:hover, &:focus {
-                                                    .cta-container {
-                                                        visibility: visible;
-                                                        opacity: 1;
-                                                        transition: all .3s ease;
-                                                    }
-                                                }
-                                            }
-
-                                            li.add-mission {
-                                                padding: 0;
-
-                                                a.add-card {
-                                                    display: block;
-                                                    text-align: center;
-                                                    height: auto;
                                                     color: #d7d9dc;
-
-                                                    &:hover, &:focus {
-                                                        color: #d7d9dc;
-                                                    }
                                                 }
                                             }
                                         }
                                     }
+                                }
 
-                                    &.contacts-list-container {}
+                                &.contacts-list-container {}
 
-                                    &.quotes-contracts-list-container, &.crm-list-container {
-                                        .main-panel-header {
-                                            padding-bottom: 0;
-                                        }
+                                &.quotes-contracts-list-container, &.crm-list-container {
+                                    .main-panel-header {
+                                        padding-bottom: 0;
                                     }
+                                }
 
-                                    &.crm-list-container {
-                                        .list-head-container {
-                                            .status-label {
-                                                .label {
-                                                    margin-right: 10px;
-                                                }
+                                &.crm-list-container {
+                                    .list-head-container {
+                                        .status-label {
+                                            .label {
+                                                margin-right: 10px;
                                             }
+                                        }
 
-                                            .survey-source {
-                                                display: flex;
-                                                align-items: center;
-                                                margin-top: 5px;
+                                        .survey-source {
+                                            display: flex;
+                                            align-items: center;
+                                            margin-top: 5px;
 
-                                                label {
-                                                    color: $helper;
-                                                    font-weight: 400;
-                                                    font-size: 14px;
-                                                    margin: 0;
-                                                    padding: 0 15px;
-                                                }
+                                            label {
+                                                color: $helper;
+                                                font-weight: 400;
+                                                font-size: 14px;
+                                                margin: 0;
+                                                padding: 0 15px;
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-
-                        /* main panel container ends */
                     }
+
+                    /* main panel container ends */
                 }
             }
         }
@@ -812,7 +810,7 @@
 
             .btn {
                 // width: 100% !important;
-           
+
             }
 
             .modal-title {

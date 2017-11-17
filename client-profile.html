@@ -5,7 +5,7 @@
     <!-- @include _partials/_all-meta-head.html -->
 </head>
 
-<body class="wp-app layout-3 clientProfile">
+<body class="wp-app layout-3">
     <div class="wrapper">
         <!-- @include _partials/_sidebar.html -->
         <div class="container-fluid page-wrap">
@@ -13,7 +13,7 @@
                 <div class="col-md-12 main-panel-wrap">
                     <div class="main-panel">
                         <div class="container-fluid main-panel-page">
-                            <div class="row main-container client-profile-list-page">
+                            <div class="row main-container client-profile-list-page clientProfile">
                                 <div class="col-md-4 tab-panel-container">
                                     <div class="tab-panel outside">
                                         <div class="client-details col-md-12">
@@ -181,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <!-- Create new client modal -->
@@ -195,7 +195,7 @@
     <!-- Client Profile Annual turnover Modal -->
     <!-- @include _partials/_client-profile-annual-turnover-modal.html -->
     <!-- Client Profile Address Modal -->
-    <!-- @include _partials/_client-profile-address-modal.html -->        
+    <!-- @include _partials/_client-profile-address-modal.html -->
     <!-- Client Profile External Links Modal -->
     <!-- @include _partials/_client-profile-external-links-modal.html -->
     <!-- Client Profile Create new Survey Modal -->
@@ -205,7 +205,7 @@
     <!-- show all comments modal -->
     <!-- @include _partials/_show-all-comments-modal.html -->
 
-<!-- @include _partials/_all-js-files.html -->  
+<!-- @include _partials/_all-js-files.html -->
 <script type="text/javascript">
     $(document).ready(function() {
         $('#contacts-list, #quotes-contracts-list, #crm-list').on('click', function(e) {
@@ -269,7 +269,7 @@ $(document).ready(function(){
             $('#commentPost').each(function() {
                 $(this).autogrow({vertical: true, horizontal: false});
             });
-            
+
         });
     </script>
 
