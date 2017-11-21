@@ -973,12 +973,17 @@ html {
                                             .validate {
                                                 display: none;
                                                 margin-top: 22px;
-                                                width: 365px;
+                                                width: 476px;
 
                                                 button {
                                                     border: none;
                                                     color: #fff;
-                                                    width: 48%;
+                                                    width: 30% !important;
+                                                    margin-right: 10px;
+
+                                                    &:last-child {
+                                                        margin-right: 0;
+                                                    }
                                                 }
 
                                                 button.validate-btn {
@@ -4133,6 +4138,25 @@ html {
 
 /* Duplicate Card Modal Ends */
 
+/* Update Assignee Modal Starts */
+
+.update-assignee-modal {
+    .modal-title {
+        font-size: 20px;
+        color: #353f53;
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    a {
+        width: 100% !important;
+        margin-top: 10px;
+    }
+}
+
+/* Update Assignee Modal Ends */
+
 /*Add Exclude Modal Audience Starts*/
 
 .exclusion-modal {
@@ -5059,7 +5083,7 @@ html {
         padding: 20px;
 
         // margin-bottom: 10px;
-   
+
     }
 }
 
@@ -6434,7 +6458,7 @@ html {
                                 color: #a3a8b1;
 
                                 // margin-top: 10px;
-                           
+
                             }
                         }
 

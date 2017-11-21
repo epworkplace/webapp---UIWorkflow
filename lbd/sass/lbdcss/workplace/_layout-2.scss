@@ -236,14 +236,20 @@
                                     }
 
                                     .input-group {
-                                        display: -webkit-box;
+                                        /* display: -webkit-box;
                                         display: -moz-box;
                                         display: -ms-flexbox;
                                         display: -webkit-flex;
                                         display: flex;
-                                        align-items: center;
+                                        align-items: center; */
+                                        input[type="text"] {
+                                            width: 70%;
+                                            float: left;
+                                        }
 
                                         button {
+                                            width: 30% !important;
+                                            float: left;
                                             padding: 4px 0;
                                         }
                                     }

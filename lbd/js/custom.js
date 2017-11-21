@@ -64,7 +64,7 @@ $(document).ready(function(){
     } else{
     	$('body').removeClass('modal-open');
     	$('body').css({'padding-right':'0'});
-    }    
+    }
 	});
 
 
@@ -571,7 +571,7 @@ $(document).ready(function(){
 	  });
 
 	//Chosen Dropdown with Image
-	$(".mission-assignee, .chosen-default").chosen({width:"100%"});
+	$(".mission-assignee, .chosen-default, .update-assignee").chosen({width:"100%"});
 
 	//Settings popup
 	$('.show-reassign, .btn-mission-overview-reassign').click(function() {
