@@ -548,6 +548,14 @@
             }
         }
 
+        &.share {
+            background: #353f53;
+
+            &:hover {
+                background: #9c9696;
+            }
+        }
+
         &.download {
             background: #fec500;
 
@@ -690,6 +698,53 @@
 }
 
 /* Duplicate cards modal Ends */
+
+/*Duplicate card alert modal starts*/
+
+.duplication-alert-modal {
+    @extend %modal;
+
+    text-align: center;
+
+    &:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+
+    .modal-dialog {
+        width: 30%;
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+
+        .modal-body {
+            padding: 0 !important;
+
+            .duplication-alert-body {
+                .modal-title {
+                    font-size: 20px;
+                    color: #353f53;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                    padding: 0;
+                }
+
+                .duplication-alert-content {
+                    p {
+                        font-size: 16px;
+                        color: #7d889a;
+                        line-height: 1.5;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Duplicate card alert modal ends*/
 
 /*Card Design Ends*/
 

@@ -340,7 +340,7 @@
                                                                     </a>
                                                                 </li>
                                                             </ul>
-                                                              
+
                                                         </div>
                                                     </div>
 
@@ -1532,7 +1532,7 @@
                                                                         <ul class="dropdown-menu" role="menu">
                                                                             <li>
                                                                                 <a href="javascript:;">
-                                                                                    Slect all deck
+                                                                                    Select all deck
                                                                                 </a>
                                                                             </li>
                                                                             <li>
@@ -2144,7 +2144,7 @@
                                                                         <ul class="dropdown-menu" role="menu">
                                                                             <li>
                                                                                 <a href="javascript:;">
-                                                                                    Slect all deck
+                                                                                    Select all deck
                                                                                 </a>
                                                                             </li>
                                                                             <li>
@@ -2174,7 +2174,7 @@
                                                                     <button class=" btn btn-fill duplicate" data-target="#duplicate-cards-modal" data-toggle="modal" href="javascript:;">
                                                                     Duplicate
                                                                     </button>
-                                                                    <button class=" btn btn-fill delete">
+                                                                    <button class=" btn btn-fill delete" data-target="#duplicationAlertModal" data-toggle="modal" href="javascript:;">
                                                                     Delete
                                                                     </button>
                                                                 </div>
@@ -5504,34 +5504,6 @@
             </div>
         </div>
 <!-- Modals -->
-        <div aria-labelledby="refresh-page" class="modal fade refresh-page" id="refresh-page" role="modal" tabindex="-1" style="display: none;">
-            <div class="modal-dialog" role="modal">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="edit-content clearfix">
-                            <span class="close">
-                                <a data-dismiss="modal" href="javascript:;">
-                                    <i class="material-icons">
-                                        close
-                                    </i>
-                                </a>
-                            </span>
-                            <div class="row modal-title">
-                                You have been inactive for a while
-                                <span class="helper-text d-block">Please reload this page to get fresh content.</span>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-md-12">
-                                    <button class="btn btn-default btn-fill full-width btn-wd btn-yes" type="button">
-                                        Reload
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div aria-labelledby="myModalLabel" class="modal fade edit-announce-modal" id="edit-announce-modal" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-lg tiny-mce-modal-dialog" role="document">
                 <div class="modal-content tiny-mce-modal-content">
@@ -5809,8 +5781,63 @@
                 </div>
             </div>
         </div>
+        <div aria-labelledby="myModalLabel" class="modal fade duplication-alert-modal" id="duplicationAlertModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="duplication-alert-body clearfix">
+                            <span class="close">
+                                <a data-dismiss="modal" href="javascript:;">
+                                    <i class="material-icons">
+                                    close
+                                    </i>
+                                </a>
+                            </span>
+                            <div class="col-md-10 modal-title">
+                                Duplication Alert
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-12 duplication-alert-content">
+                                        <p>Impossible to duplicate this card as many times.<br /><b>It exceeds the mission volume</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div aria-labelledby="refresh-page" class="modal fade refresh-page" id="refresh-page" role="modal" tabindex="-1" style="display: none;">
+            <div class="modal-dialog" role="modal">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="edit-content clearfix">
+                            <span class="close">
+                                <a data-dismiss="modal" href="javascript:;">
+                                    <i class="material-icons">
+                                        close
+                                    </i>
+                                </a>
+                            </span>
+                            <div class="row modal-title">
+                                You have been inactive for a while
+                                <span class="helper-text d-block">Please reload this page to get fresh content.</span>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-12">
+                                    <button class="btn btn-default btn-fill full-width btn-wd btn-yes" type="button">
+                                        Reload
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!-- Modals ends -->
-        
+
     </div>
 
 
@@ -6177,7 +6204,7 @@ var bar = new ProgressBar.Line('#trackProgressBar', {
             trailColor: '#dfe2e5',
             trailWidth: 10,
             svgStyle: {width: '100%', height: '100%'}
-            })                            
+            })
 ;
 bar.animate(0);
 bar02.animate(0.40);
