@@ -973,17 +973,14 @@ html {
                                             .validate {
                                                 display: none;
                                                 margin-top: 22px;
-                                                width: 476px;
+                                                width: 485px;
 
                                                 button {
+                                                    float: right;
                                                     border: none;
                                                     color: #fff;
                                                     width: 30% !important;
-                                                    margin-right: 10px;
-
-                                                    &:last-child {
-                                                        margin-right: 0;
-                                                    }
+                                                    margin-left: 10px;
                                                 }
 
                                                 button.validate-btn {
@@ -1141,7 +1138,7 @@ html {
                                         }
 
                                         .client-content-container {
-                                            padding-bottom: 120px;
+                                            padding-bottom: 0px;
 
                                             .card-section-list {
                                                 padding-bottom: 0;
