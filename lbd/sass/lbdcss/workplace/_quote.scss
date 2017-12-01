@@ -1114,4 +1114,30 @@
 
 /*Browse mission Modal Ends*/
 
+/* Sign quote modal starts */
+.sign-quote-modal{
+  @extend %modal;
+  .modal-dialog{
+    .modal-content{
+        label{
+        font-size: 14px;
+        font-weight: 600;
+        &.checkbox {
+          color: $main;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+/* Sign quote modal ends */
+
+/* Close quote modal starts */
+.close-quote-modal{
+  @extend .sign-quote-modal;
+
+}
+/* Close quote modal ends */
+
+
 /* Quote template CSS Ends */

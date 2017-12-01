@@ -719,8 +719,8 @@
                                                                 <div class="cta-container">
                                                                     <div class="cta">
                                                                         <ul>
-                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Free Mission"><i class="material-icons">money_off</i></a></li>
-                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
+                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Free Mission"><span data-toggle="modal" data-target="#signQuote"><i class="material-icons">money_off</i></span></a></li>
+                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Duplicate"><span data-toggle="modal" data-target="#closeQuote"><i class="material-icons">content_copy</i></span></a></li>
                                                                             <li>
                                                                                 <span data-toggle="modal" data-target="#deleteConfirmation">
                                                                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Delete"><i class="material-icons">delete</i></a>
@@ -810,6 +810,10 @@
 <!-- @include _partials/_quote-browse-mission-modal.html -->
 <!-- Edit Overview modal -->
 <!-- @include _partials/_contract-edit-overview-modal.html -->
+<!-- Sign Quote modal -->
+<!-- @include _partials/_quote-sign-quote-modal.html -->
+<!-- Close Quote modal -->
+<!-- @include _partials/_quote-close-quote-modal.html -->
 
 
 <!-- @include _partials/_all-js-files.html -->
@@ -1064,6 +1068,13 @@ $(function () {
         $('.create-quote-mission-title-edit').hide();
         $('.create-quote-mission-title').show();
     });
+
+    /*Change color to free mission icon*/
+    $("a[data-original-title='Free Mission']").on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass("mission-freed");
+    });
+
 
 });
 

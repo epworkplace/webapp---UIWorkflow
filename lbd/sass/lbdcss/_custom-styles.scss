@@ -1464,6 +1464,12 @@ html {
                                     &:hover, &:focus {
                                         color: #485262;
                                     }
+
+                                    &.mission-freed{
+                                      &:hover, &:focus{
+                                        color: $selected;
+                                      }
+                                    }
                                 }
                             }
 

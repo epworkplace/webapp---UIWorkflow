@@ -831,8 +831,8 @@
                                                                 <div class="cta-container">
                                                                     <div class="cta">
                                                                         <ul>
-                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Free Mission"><i class="material-icons">money_off</i></a></li>
-                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
+                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Free Mission"><span data-toggle="modal" data-target="#signQuote"><i class="material-icons">money_off</i></span></a></li>
+                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Duplicate"><span data-toggle="modal" data-target="#closeQuote"><i class="material-icons">content_copy</i></span></a></li>
                                                                             <li>
                                                                                 <span data-toggle="modal" data-target="#deleteConfirmation">
                                                                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Delete"><i class="material-icons">delete</i></a>
@@ -2138,6 +2138,110 @@
         </div>
     </div>
 </div>
+<!-- Sign Quote modal -->
+<div aria-labelledby="signQuote" class="modal fade sign-quote-modal" id="signQuote" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="edit-content clearfix">
+                    <span class="close">
+                        <a data-dismiss="modal" href="javascript:;">
+                            <i class="material-icons">
+                                close
+                            </i>
+                        </a>
+                    </span>
+                    <div class="row modal-title">
+                        Sign Quote
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="">
+                               Siret
+                            </label>
+                            <input class="form-control" id="" placeholder="" value="Azer" type="text"/>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="checkbox">
+                              <input id="" type="checkbox" data-toggle="checkbox" value=""> Siret not applicable
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="">
+                               Numéro du client*
+                            </label>
+                            <input class="form-control" id="" placeholder="" value="C666" type=""/>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="edit-content-action col-md-12">
+                            <button class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal" type="button">
+                                Cancel
+                            </button>
+                            <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                                Validate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Close Quote modal -->
+<div aria-labelledby="closeQuote" class="modal fade close-quote-modal" id="closeQuote" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="edit-content clearfix">
+                    <span class="close">
+                        <a data-dismiss="modal" href="javascript:;">
+                            <i class="material-icons">
+                                close
+                            </i>
+                        </a>
+                    </span>
+                    <div class="row modal-title">
+                        Close Quote
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="">
+                               Reason*
+                            </label>
+                            <select name="filter" class="selectpicker" title="Select Reason">
+                                <option>Reason 01</option>
+                                <option>Reason 02</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="">
+                               Comments
+                            </label>
+                            <textarea name="" id="" cols="30" rows="5" class="form-control">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor debitis laudantium, aliquam obcaecati repellat necessitatibus eos earum a quasi ducimus sapiente fugit porro labore soluta veritatis suscipit itaque est! Accusantium.</textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="edit-content-action col-md-12">
+                            <button class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal" type="button">
+                                Cancel
+                            </button>
+                            <button class="btn btn-default btn-fill btn-wd btn-yes pull-right" type="button">
+                                Validate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <!--   Core JS Files   -->
@@ -2506,6 +2610,13 @@ $(function () {
         $('.create-quote-mission-title-edit').hide();
         $('.create-quote-mission-title').show();
     });
+
+    /*Change color to free mission icon*/
+    $("a[data-original-title='Free Mission']").on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass("mission-freed");
+    });
+
 
 });
 
