@@ -163,7 +163,7 @@ gulp.task('clean-jsliblive', function() {
 });
 
 gulp.task('clean-bundle', function(){
-  del(['lbd/css/lbd-bundle.css', 'lbd/js/lbd-bundle.js', 'lbd/lib/lib-live/**/*']);
+  del([dest + 'lbd/css/lbd-bundle.css', dest + 'lbd/js/lbd-bundle.js', dest + 'lbd/lib/lib-live/**/*']);
 });
 
 // build HTML files
@@ -205,7 +205,7 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
   return gulp.src(fonts.in)
     .pipe($.newer('lbd/fonts/'))
-    .pipe(gulp.dest('lbd/fonts/'));
+    .pipe(gulp.dest(dest + 'lbd/fonts/'));
 });
 
 // copy plugin css
@@ -249,7 +249,7 @@ gulp.task('css', ['fonts'], function() {
     .pipe($.webp())
     .pipe(imageFilter2.restore)*/
     .pipe($.size({title: 'CSS out '}))
-    .pipe(gulp.dest('lbd/css/'))
+    .pipe(gulp.dest(dest + 'lbd/css/'))
     .pipe(browserSync.stream({match: '**/*.css'}));
     // .pipe(reload({stream: true}));
 });
@@ -263,7 +263,7 @@ gulp.task('sass', ['fonts'], function() {
     .pipe($.size({title: 'SCSS in '}))
     // .pipe($.sourcemaps.write('./maps'))
     .pipe($.size({title: 'SCSS out '}))
-    .pipe(gulp.dest('lbd/css/'))
+    .pipe(gulp.dest(dest + 'lbd/css/'))
     .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
@@ -312,7 +312,7 @@ gulp.task('js', function() {
       // .pipe($.gzip({append: false}))
       .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
-      .pipe(gulp.dest('lbd/js/'));
+      .pipe(gulp.dest(dest + 'lbd/js/'));
   }
   else {
     del([
@@ -406,7 +406,7 @@ gulp.task('jsliblive', function() {
       // // .pipe($.jshint.reporter('default'))
       // // .pipe($.jshint.reporter('fail'))
       .pipe($.size({title: 'jsLibsLive out '}))
-      .pipe(gulp.dest('lbd/lib/lib-live/'));
+      .pipe(gulp.dest(dest + 'lbd/lib/lib-live/'));
 
   }
   else {
