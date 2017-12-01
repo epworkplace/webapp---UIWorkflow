@@ -44,7 +44,9 @@ var
     out: dest + 'lbd/css/',
     pluginCSS: {
       in: [source + 'lbd/css/**/*'],
-      liveIn: [source + 'lbd/css-live/**/*'],
+      liveIn: [source + 'lbd/css/bootstrap.min.css', source + 'lbd/css/font-awesome.min.css',
+                source + 'lbd/css/jquery.ui.min.css',source + 'lbd/css/jquery.mCustomScrollbar.min.css',
+                source + 'lbd/css/material-icons.css',source + 'lbd/css/*images/**/*'],
       watch: ['lbd/css/**/*.css'],
       liveWatch: ['lbd/css-live/**/*.css'],
       out: dest + 'lbd/css/'
@@ -74,7 +76,26 @@ var
 
   js = {
     in: source + 'lbd/js/**/*.js',
-    liveIn: source + 'lbd/js-live/**/*.js',
+    liveIn: [source + 'lbd/js/jquery.min.js',
+          source + 'lbd/js/jquery-ui-1.10.0.custom.min.js',
+          source + 'lbd/js/jquery.validate.min.js',
+          source + 'lbd/js/underscore-min.js',
+          source + 'lbd/js/moment.min.js',
+          source + 'lbd/js/bootstrap.min.js',
+          source + 'lbd/js/bootstrap-datetimepicker.js',
+          source + 'lbd/js/bootstrap-selectpicker.js',
+          source + 'lbd/js/bootstrap-checkbox-radio-switch-tags.js',
+          source + 'lbd/js/chartist.min.js',
+          source + 'lbd/js/bootstrap-notify.js',
+          source + 'lbd/js/sweetalert2.js',
+          source + 'lbd/js/jquery.bootstrap.wizard.min.js',
+          source + 'lbd/js/bootstrap-table.js',
+          source + 'lbd/js/fullcalendar.min.js',
+          source + 'lbd/js/light-bootstrap-dashboard.js',
+          source + 'lbd/js/jquery.mCustomScrollbar.concat.min.js',
+          source + 'lbd/js/jquery-ns-autogrow.min.js',
+          source + 'lbd/js/bootstrap-select.js',
+          source + 'lbd/js/custom.js'],
     out: dest + 'lbd/js/'
     // filename: 'main.js'
   },
@@ -204,7 +225,7 @@ gulp.task('images', function() {
 // copy fonts
 gulp.task('fonts', function() {
   return gulp.src(fonts.in)
-    .pipe($.newer('lbd/fonts/'))
+    .pipe($.newer(dest+ 'lbd/fonts/'))
     .pipe(gulp.dest(dest + 'lbd/fonts/'));
 });
 
@@ -219,7 +240,7 @@ gulp.task('css', ['fonts'], function() {
     .pipe($.size({title: 'CSS in '}))
     // .pipe($.pleeease(css.pleeeaseOpts))
     // .pipe($.sourcemaps.write('./maps'))
-    .pipe($.newer('lbd/css/'))
+    .pipe($.newer(dest + 'lbd/css/'))
     .pipe(cssFilter)
     .pipe($.order([
         'bootstrap.min.css',
@@ -257,11 +278,11 @@ gulp.task('css', ['fonts'], function() {
 // compile Sass
 gulp.task('sass', ['fonts'], function() {
   return gulp.src(css.in)
-    // .pipe($.sourcemaps.init())
+    .pipe($.sourcemaps.init())
     .pipe($.plumber())
     .pipe($.sass(css.sassOpts))
     .pipe($.size({title: 'SCSS in '}))
-    // .pipe($.sourcemaps.write('./maps'))
+    .pipe($.sourcemaps.write('./maps'))
     .pipe($.size({title: 'SCSS out '}))
     .pipe(gulp.dest(dest + 'lbd/css/'))
     .pipe(browserSync.stream({match: '**/*.css'}));
@@ -275,7 +296,7 @@ gulp.task('js', function() {
 
       // .pipe($.concat(js.filename))
       .pipe($.size({ title: 'JS in '}))
-      .pipe($.newer('lbd/js/'))
+      .pipe($.newer(dest + 'lbd/js/'))
       // .pipe($.deporder())
       // .pipe($.stripDebug())
       .pipe(jsFilter)
@@ -348,7 +369,25 @@ gulp.task('jsliblive', function() {
                             '!**/*ImageSelect.jquery.js'], {restore: true});
 
   if (devBuild) {
-    return gulp.src(jsLibs.liveIn)
+    return gulp.src([source + 'lbd/lib/chosen/chosen.jquery.min.js',
+                      source + 'lbd/lib/chosen/*.png',
+                      source + 'lbd/lib/chosen/chosen.css',
+                      source + 'lbd/lib/chosen/ImageSelect.jquery.js',
+                      source + 'lbd/lib/chosen/ImageSelect.css',
+                      source + 'lbd/lib/progressbarjs/progressbar.js',
+                      source + 'lbd/lib/jquery-tageditor-master/jquery.tag-editor.js',
+                      source + 'lbd/lib/jquery-tageditor-master/jquery.tag-editor.css',
+                      source + 'lbd/lib/progressbarjs/progressbar.js',
+                      source + 'lbd/lib/slick-1.6.0/slick/slick.min.js',
+                      source + 'lbd/lib/slick-1.6.0/slick/fonts/**/*',
+                      source + 'lbd/lib/slick-1.6.0/slick/slick.css',
+                      source + 'lbd/lib/rateyo/jquery.rateyo.min.js',
+                      source + 'lbd/lib/rateyo/jquery.rateyo.min.css',
+                      source + 'lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js',
+                      source + 'lbd/lib/bootstrap-tokenfield/css/bootstrap-tokenfield.min.css',
+                      source + 'lbd/lib/bootstrap-tokenfield/css/tokenfield-typeahead.min.css',
+                      source + 'lbd/lib/read-more/readmore.js',
+                      source + 'lbd/lib/*tinymce_4.2.5/**/*'])
       .pipe($.size({title: 'jsLibsLive in '}))
       .pipe($.newer(jsLibs.liveOut))
       .pipe(jsFilter)
@@ -406,7 +445,7 @@ gulp.task('jsliblive', function() {
       // // .pipe($.jshint.reporter('default'))
       // // .pipe($.jshint.reporter('fail'))
       .pipe($.size({title: 'jsLibsLive out '}))
-      .pipe(gulp.dest(dest + 'lbd/lib/lib-live/'));
+      .pipe(gulp.dest(dest + 'lbd/lib/'));
 
   }
   else {
