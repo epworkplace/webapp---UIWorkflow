@@ -1,0 +1,1 @@
+function WebkitGradientContainer(t){GradientContainer.apply(this,arguments),this.type="linear"===t.args[0]?this.TYPES.LINEAR:this.TYPES.RADIAL}WebkitGradientContainer.prototype=Object.create(GradientContainer.prototype);

@@ -1,0 +1,1 @@
+function XHR(n){return new Promise(function(r,e){var o=new XMLHttpRequest;o.open("GET",n),o.onload=function(){200===o.status?r(o.responseText):e(new Error(o.statusText))},o.onerror=function(){e(new Error("Network Error"))},o.send()})}

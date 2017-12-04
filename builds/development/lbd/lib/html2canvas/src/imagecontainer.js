@@ -1,0 +1,1 @@
+function ImageContainer(i,e){this.src=i,this.image=new Image;var n=this;this.tainted=null,this.promise=new Promise(function(a,m){n.image.onload=a,n.image.onerror=m,e&&(n.image.crossOrigin="anonymous"),n.image.src=i,!0===n.image.complete&&a(n.image)})}
