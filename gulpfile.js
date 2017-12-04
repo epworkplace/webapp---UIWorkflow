@@ -354,9 +354,41 @@ gulp.task('js', function() {
 //     .pipe(gulp.dest(js.out));
 // });
 
+gulp.task('tinymce', function(){
+  var htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
+      cssFilter = $.filter(['**/*.css'], {restore: true}),
+      imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
+      jsonFilter = $.filter(['**/*.json'], {restore: true}),
+      jsFilter = $.filter(['**/*.js'], {restore: true});
+
+  return gulp.src([source + 'lbd/lib/*tinymce_4.2.5/**/*'])
+      .pipe($.size({title: 'tinyMCE in '}))
+      .pipe(jsFilter)
+      .pipe($.uglify())
+      .pipe(jsFilter.restore)
+      .pipe(jsonFilter)
+      .pipe($.jsonMinify())
+      .pipe(jsonFilter.restore)
+      .pipe(cssFilter)
+      .pipe($.cleanCss({rebase:false}))
+      .pipe(cssFilter.restore)
+      .pipe(htmlFilter)
+      .pipe($.htmlclean())
+      .pipe(htmlFilter.restore)
+      .pipe(imageFilter)
+      .pipe($.imagemin())
+      .pipe(imageFilter.restore)
+      .pipe($.size({title: 'tinyMCE out '}))
+      .pipe(gulp.dest(dest + 'lbd/lib/'));
+});
+gulp.task('slick-fonts', function(){
+  return gulp.src([source + 'lbd/lib/slick-1.6.0/slick/fonts/**/*'])
+             .pipe(gulp.dest(dest + 'lbd/lib/fonts/'));
+});
+
 // copy js libraries
-gulp.task('jsliblive', function() {
-  var toExclude = ['lbd/lib-live/tinymce_4.2.5/**/*'],
+gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
+  var toExclude = ['lbd/lib/tinymce_4.2.5/**/*'],
       htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
       includeIgnoredJs = $.filter([toExclude[0] + '.js'], {restore: true}),
       includeIgnoredCss = $.filter(toExclude[0] + '.css', {restore: true}),
@@ -378,18 +410,18 @@ gulp.task('jsliblive', function() {
                       source + 'lbd/lib/jquery-tageditor-master/jquery.tag-editor.js',
                       source + 'lbd/lib/jquery-tageditor-master/jquery.tag-editor.css',
                       source + 'lbd/lib/progressbarjs/progressbar.js',
-                      source + 'lbd/lib/slick-1.6.0/slick/slick.min.js',
-                      source + 'lbd/lib/slick-1.6.0/slick/fonts/**/*',
-                      source + 'lbd/lib/slick-1.6.0/slick/slick.css',
                       source + 'lbd/lib/rateyo/jquery.rateyo.min.js',
                       source + 'lbd/lib/rateyo/jquery.rateyo.min.css',
                       source + 'lbd/lib/bootstrap-tokenfield/bootstrap-tokenfield.min.js',
                       source + 'lbd/lib/bootstrap-tokenfield/css/bootstrap-tokenfield.min.css',
                       source + 'lbd/lib/bootstrap-tokenfield/css/tokenfield-typeahead.min.css',
-                      source + 'lbd/lib/read-more/readmore.js',
-                      source + 'lbd/lib/*tinymce_4.2.5/**/*'])
+                      source + 'lbd/lib/slick-1.6.0/slick/slick.js',
+                      source + 'lbd/lib/slick-1.6.0/slick/slick.css',
+                      source + 'lbd/lib/slick-1.6.0/slick/ajax-loader.gif',
+                      source + 'lbd/lib/slick-1.6.0/slick/slick-theme.css',
+                      source + 'lbd/lib/read-more/readmore.js'])
       .pipe($.size({title: 'jsLibsLive in '}))
-      .pipe($.newer(jsLibs.liveOut))
+      // .pipe($.newer(jsLibs.liveOut))
       .pipe(jsFilter)
       // .pipe($.babel())
       // .pipe($.regenerator())
@@ -627,6 +659,6 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'jsliblive', 'jslib', 'js', 'watch', 'serve']);
+gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'jsliblive', 'js', 'watch', 'serve']);
 
 gulp.task('bundle', ['css', 'sass', 'js', 'jsliblive']);
