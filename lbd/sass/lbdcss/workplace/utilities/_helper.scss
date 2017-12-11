@@ -109,6 +109,9 @@ $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
 .fw700{
     font-weight: 700 !important;
 }
+.text-none{
+  text-transform: none !important;
+}
 
 .primary-font {
     font-size: 14px;
@@ -156,7 +159,7 @@ $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
             margin-bottom: 0;
 
             // margin-top: 15px;
-       
+
         }
     }
 }

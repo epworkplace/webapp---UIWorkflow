@@ -281,77 +281,70 @@
                                                                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- <div class="edit-content clearfix">
-                                                                                <div class="edit-duration">
-                                                                                    <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
-                                                                                    <div class="col-md-6">
-                                                                                        <label>Start Date</label>
-                                                                                        <input type="text" class="form-control datepicker-start" placeholder="Date Picker Here">
-                                                                                    </div>
-                                                                                    <div class="col-md-6">
-                                                                                        <label>End Date</label>
-                                                                                        <input type="text" class="form-control datepicker-end" placeholder="Date Picker Here">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-md-12  edit-overview">
-                                                                                    <textarea id="edit-textarea" class="form-control" rows="10">
-                                                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                                                                    </textarea>
-                                                                                </div>
-                                                                                <div class="edit-content-action col-md-12">
-                                                                                    <button type="button" class="btn btn-default btn-fill btn-wd btn-no">Cancel</button>
-                                                                                    <button type="button" class="btn btn-default btn-fill btn-wd btn-yes">Save Changes</button>
-                                                                                </div>
-                                                                            </div> -->
                                                                         </div>
-                                                                        <!-- <div class="col-md-12 upload-card card clearfix">
-                                                                            <div class="upload pull-left">
-                                                                                <div class="title">Purchase Order</div>
-                                                                                <div class="status">Not Uploaded</div>
-                                                                            </div>
-                                                                            <div class="upload-btn pull-right">
-                                                                                <input id="upload" type="file"/>
-                                                                                <a id="upload_link" type="button" class="btn btn-primary btn-fill">Upload</a>
-                                                                            </div>
-                                                                        </div> -->
-                                                                        <!-- <div class="upload-card-container">
+
+                                                                        <div class="upload-card-container">
                                                                             <div class="col-md-12 upload-card card clearfix">
-                                                                                <div class="droppable-purchase1">
-                                                                                    <div class="upload sign-po">
-                                                                                        <div class="title">Purchase Order</div>
-                                                                                        <div class="status">
-                                                                                            <input id="upload" type="file"/>
-                                                                                            <strong class="primary-font output">
-                                                                                                <i class="material-icons">insert_drive_file</i>
-                                                                                                PO_3105725824585156541854217.pdf
-                                                                                                <span class="delete">
-                                                                                                    <a href="fgjavascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="Delete"><i class="material-icons">close</i></a>
-                                                                                                </span>
-                                                                                                <span class="download">
-                                                                                                    <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="Download"><i class="material-icons">file_download</i></a>
-                                                                                                </span>
-                                                                                            </strong>
-                                                                                        </div>
-                                                                                        <div class="status">
-                                                                                            <input id="upload" type="file"/>
-                                                                                            <strong class="primary-font output">
-                                                                                                <i class="material-icons">insert_drive_file</i>
-                                                                                                PO_3104217.pdf
-                                                                                                <span class="delete">
-                                                                                                    <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="Delete"><i class="material-icons">close</i></a>
-                                                                                                </span>
-                                                                                                <span class="download">
-                                                                                                    <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" data-original-title="Download"><i class="material-icons">file_download</i></a>
-                                                                                                </span>
-                                                                                            </strong>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="upload-btn pull-right">
-                                                                                        <a class="draggable-tagline">
-                                                                                            <i class="material-icons">file_upload</i><br />
-                                                                                    </div>
+                                                                                <div class="row upload-card-header">
+                                                                                    <div class="col-md-6 title">Purchase Order</div>
+                                                                                    <a href="javascript:;" class="col-md-6 btn btn-yes btn-fill sign-po disabled">Sign PO</a>
                                                                                 </div>
-                                                                                <div class="card-footer">
+                                                                                <div class="row">
+                                                                                   <div class="col-md-12 drop-area">
+                                                                                        <div class="make-droppable">
+                                                                                            <strong>Drag and Drop your file here</strong>
+                                                                                        </div>
+                                                                                   </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="d-flex col-md-12 p-0">
+                                                                              <div class="col-md-12 card brand-history-container">
+                                                                                <span class="edit pull-right" data-target="#edit-brand-history-modal" data-toggle="modal">
+                                                                                  <i class="material-icons">create</i>
+                                                                                  <a href="javascript:;">
+                                                                                    Edit
+                                                                                  </a>
+                                                                                </span>
+                                                                                <div class="brand-history">
+                                                                                  <h4 class="title">
+                                                                                  Title 01
+                                                                                  </h4>
+                                                                                  <div class="overview clearfix">
+                                                                                    <a class="add-brand-history d-block" href="javascript:;">
+                                                                                      + Add content for block 1
+                                                                                    </a>
+                                                                                  </div>
+                                                                                </div>
+                                                                                <div class="brand-history mt-15">
+                                                                                  <h4 class="title">
+                                                                                  Title 02
+                                                                                  </h4>
+                                                                                  <div class="overview clearfix">
+                                                                                    <a class="add-brand-history d-block" href="javascript:;">
+                                                                                      + Add content for block 2
+                                                                                    </a>
+                                                                                  </div>
+                                                                                </div>
+                                                                                <div class="brand-history mt-15">
+                                                                                  <h4 class="title">
+                                                                                  Title 02
+                                                                                  </h4>
+                                                                                  <div class="overview clearfix">
+                                                                                    <div class="more">
+                                                                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis, esse molestiae! Unde a ipsam voluptates officiis, harum. Amet officia tenetur distinctio in inventore nesciunt doloremque explicabo quaerat, perspiciatis sed.
+                                                                                      <p>
+                                                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint obcaecati officiis necessitatibus recusandae, tempore ex soluta rerum delectus, totam nulla voluptate dolores natus dolore repellendus vel libero, cupiditate. Doloremque, quasi.
+                                                                                      </p>
+                                                                                      <p>
+                                                                                        Tempora magni aut iure quae praesentium nobis laudantium ad hic architecto consectetur, earum porro, adipisci eligendi quasi mollitia sunt minima. Reiciendis sunt maxime voluptate consequatur eaque, dolorem necessitatibus dolores assumenda!
+                                                                                      </p>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>
+                                                                            <div class="col-md-12 p-0">
+                                                                                <div class="card card-footer">
                                                                                     <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                                                                                         <i class="material-icons">add</i>
                                                                                     </a>
@@ -376,52 +369,8 @@
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="signpo-button">
-                                                                                <button type="button" class="btn btn-success btn-fill not-started-link">Po signed <i class="fa fa-check" aria-hidden="true"></i></button>
-                                                                            </div>
-                                                                        </div> -->
-                                                                        <div class="upload-card-container">
-                                                                            <div class="col-md-12 upload-card card clearfix">
-                                                                                <div class="row upload-card-header">
-                                                                                    <div class="col-md-6 title">Purchase Order</div>
-                                                                                    <a href="javascript:;" class="col-md-6 btn btn-yes btn-fill sign-po disabled">Sign PO</a>
-                                                                                </div>
-                                                                                <div class="row">
-                                                                                   <div class="col-md-12 drop-area">
-                                                                                        <div class="make-droppable">
-                                                                                            <strong>Drag and Drop your file here</strong>
-                                                                                        </div>
-                                                                                   </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12">
-                                                                                    <div class="card card-footer">
-                                                                                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                                                                                            <i class="material-icons">add</i>
-                                                                                        </a>
-                                                                                        <ul class="dropdown-menu" role="menu">
-                                                                                            <li>
-                                                                                                <input id="upload" type="file"/>
-                                                                                                <a href="#" id="upload_link">Upload from Computer</a>
-                                                                                            </li>
-                                                                                            <li><a href="#">Upload from Google Drive</a></li>
-                                                                                            <li class="divider"></li>
-                                                                                            <li>
-                                                                                                <div class="attatch-link">
-                                                                                                    <div>Upload Link</div>
-                                                                                                    <div class="input-group">
-                                                                                                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Your link Here." />
-                                                                                                        <span class="input-group-btn">
-                                                                                                            <button class="btn btn-primary btn-fill" id="btn-chat">Attach</button>
-                                                                                                        </span>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
+
+
                                                                         </div>
                                                                         <div class="upload-card-container">
                                                                             <div class="col-md-12 upload-card card clearfix">

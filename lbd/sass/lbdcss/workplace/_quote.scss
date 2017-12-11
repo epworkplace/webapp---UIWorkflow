@@ -225,6 +225,8 @@
     .bill-box.one {
         width: 100%;
     }
+
+
 }
 
 .contract-owner-box {
@@ -473,6 +475,75 @@
         }
     }
 }
+
+/* UI Circle  slider starts */
+#circles-slider.ui-slider {
+  border-radius: 10px;
+  background: #eee;
+  border: none;
+  height: 15px;
+  margin: 15px 5px;
+  border: 1px solid #bdc1c8;;
+
+  .ui-slider-handle {
+
+    border-radius: 23px;
+    height: 23px;
+    width: 23px;
+    top: -7px;
+    margin-left: -11px;
+    background: $highlight-01;
+    // border: 2px solid #fffaf7;
+  }
+
+  .ui-slider-range{
+    border-radius: 10px;
+  }
+
+  .ui-widget-header{
+    background: $selected;
+  }
+
+  .ui-slider-pip {
+    top: 0px;
+
+    .ui-slider-line {
+      width: 1px;
+      height: 100%;
+      border-radius: 0;
+      margin-left: 0;
+      background: #bdc1c8;
+      z-index: 1;
+    }
+
+
+
+    &.ui-slider-pip-last, &.ui-slider-pip-first {
+      // top: -7px;
+
+      .ui-slider-line, .ui-slider-label{
+        display: none;
+      }
+
+    }
+
+    &.ui-slider-pip-selected-initial, &.ui-slider-pip-selected{
+      color: #434d5a;
+    }
+
+    &.ui-slider-pip-selected-initial{
+      font-weight: normal;
+    }
+
+    &.ui-slider-pip-selected{
+      font-weight: bold;
+    }
+
+  }
+
+}
+
+/* UI Circle slider ends */
 
 /*Edit create quote mission Starts*/
 

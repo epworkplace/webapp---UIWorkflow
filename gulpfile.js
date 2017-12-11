@@ -77,7 +77,7 @@ var
   js = {
     in: source + 'lbd/js/**/*.js',
     liveIn: [source + 'lbd/js/jquery.min.js',
-          source + 'lbd/js/jquery-ui-1.10.0.custom.min.js',
+          source + 'lbd/js/jquery-ui.min.js',
           source + 'lbd/js/jquery.validate.min.js',
           source + 'lbd/js/underscore-min.js',
           source + 'lbd/js/moment.min.js',
@@ -419,6 +419,8 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
                       source + 'lbd/lib/slick-1.6.0/slick/slick.css',
                       source + 'lbd/lib/slick-1.6.0/slick/ajax-loader.gif',
                       source + 'lbd/lib/slick-1.6.0/slick/slick-theme.css',
+                      source + 'lbd/lib/jquery-slider-pipe/jquery-ui-slider-pips.js',
+                      source + 'lbd/lib/jquery-slider-pipe/jquery-ui-slider-pips.css',
                       source + 'lbd/lib/read-more/readmore.js'])
       .pipe($.size({title: 'jsLibsLive in '}))
       // .pipe($.newer(jsLibs.liveOut))
@@ -433,6 +435,7 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
           "slick.min.js",
           "jquery.rateyo.min.js",
           "bootstrap-tokenfield.min.js",
+          "jquery-ui-slider-pips.js",
           "readmore.js"
           ]))
       .pipe($.concat('plugins-bundle.js'))
@@ -455,6 +458,7 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
           "slick-theme.css",
           "jquery.rateyo.min.css",
           "bootstrap-tokenfield.min.css",
+          "jquery-ui-slider-pips.js",
           "tokenfield-typeahead.min.css"
         ]))
       .pipe($.concatCss('plugins-bundle.css', {rebaseUrls: false}))
@@ -659,6 +663,6 @@ gulp.task('watch', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'jsliblive', 'js', 'watch', 'serve']);
+gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'jslib', 'jsliblive', 'js', 'watch', 'serve']);
 
 gulp.task('bundle', ['css', 'sass', 'js', 'jsliblive']);

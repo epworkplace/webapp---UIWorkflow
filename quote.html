@@ -102,16 +102,17 @@
                                                                             </div>
                                                                             <div class="col-md-6 bill-box even card">
                                                                                 <div class="col-md-12 bill">
-                                                                                    <span class="edit">
+                                                                                    <!-- <span class="edit">
                                                                                         <i class="material-icons">create</i>
                                                                                         <a href="javascript:void(0);">
                                                                                             Edit
                                                                                         </a>
-                                                                                    </span>
+                                                                                    </span> -->
                                                                                     <div class="amount">
                                                                                         Signature
                                                                                     </div>
-                                                                                    <div class="quote-signature" id="quoteSignature"></div>
+                                                                                    <div id="circles-slider"></div>
+                                                                                    <!-- <div class="quote-signature" id="quoteSignature"></div> -->
                                                                                     <div class="quote-signature-rate-date">
                                                                                         <span>30% - Very likely</span>May 30, 2019
                                                                                     </div>
@@ -579,6 +580,7 @@
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-12 quote-mission-list-container">
+
                                                 <div class="no-quote-mission-container">
                                                     <div class="no-quote-mission-info">
                                                         <h4>No mission yet</h4>
@@ -1193,6 +1195,16 @@ $(document).on('click', 'a[data-target="#browseMissionModal"]', function(e){
           if(listContainer) {listTable.addClass('has-container');}
 
     });
+
+$("#circles-slider")
+    .slider({
+        min: 0,
+        max: 100,
+        value: 20,
+        range: "min",
+        step: 20
+    })
+    .slider("pips");
 
 
 // $('#browseMissionModal').on('loaded.bs.modal', function (e) {
