@@ -221,7 +221,7 @@
                                                                                     <div id="circles-slider"></div>
                                                                                     <!-- <div class="quote-signature" id="quoteSignature"></div> -->
                                                                                     <div class="quote-signature-rate-date">
-                                                                                        <span>30% - Very likely</span>May 30, 2019
+                                                                                        <span><span class="signature-range">20</span>% - Very likely</span>May 30, 2019
                                                                                     </div>
                                                                                     <a href="javascript:;" class="bill-link add-probability">
                                                                                         <span>+ Add probability</span>
@@ -2431,7 +2431,7 @@ $(document).ready(function() {
 });
 
 /*Plagiarism Progress*/
-var bar = new ProgressBar.Line(quoteSignature, {
+/*var bar = new ProgressBar.Line(quoteSignature, {
     strokeWidth: 10,
     easing: 'easeInOut',
     duration: 1400,
@@ -2446,7 +2446,7 @@ var bar = new ProgressBar.Line(quoteSignature, {
     }
 });
 
-bar.animate(0.3);  /*Number from 0.0 to 1.0*/
+bar.animate(0.3);*/  /*Number from 0.0 to 1.0*/
 
 
 
@@ -2672,7 +2672,11 @@ $("#circles-slider")
         range: "min",
         step: 20
     })
-    .slider("pips");
+    .slider("pips")
+
+    .on("slidechange", function(e,ui) {
+        $(".signature-range").text(  ui.value );
+    });
 
 
 // $('#browseMissionModal').on('loaded.bs.modal', function (e) {
