@@ -76,8 +76,9 @@ var
 
   js = {
     in: source + 'lbd/js/**/*.js',
-    liveIn: [source + 'lbd/js/jquery.min.js',
+    liveIn: [source + 'lbd/js/jquery-1.12.4.min.js',
           source + 'lbd/js/jquery-ui.min.js',
+          // source + 'lbd/js/jquery-ui-1.10.0.custom.min.js',
           source + 'lbd/js/jquery.validate.min.js',
           source + 'lbd/js/underscore-min.js',
           source + 'lbd/js/moment.min.js',
@@ -307,8 +308,10 @@ gulp.task('js', function() {
       //   }
       // }))
       .pipe($.order([
-          "jquery.min.js",
-          "jquery-ui-1.10.0.custom.min.js",
+          // "jquery.min.js",
+          // "jquery-ui-1.10.0.custom.min.js",
+          "jquery-1.12.4.min.js",
+          "jquery-ui.min.js",
           "jquery.validate.min.js",
           "underscore-min.js",
           "moment.min.js",
