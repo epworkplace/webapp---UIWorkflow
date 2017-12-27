@@ -57,7 +57,7 @@
 
                                             .dropdown-menu {
                                                 // padding: 10px;
-                                           
+
                                             }
                                         }
 
@@ -299,6 +299,21 @@
                                     &:hover {
                                         text-decoration: underline;
                                     }
+                                    &.connect-to-fo-button {
+                                      margin-top: 15px;
+                                      display: block;
+                                      color: #fff;
+                                      background: #353f53;
+                                      font-weight: 600;
+                                      width: 60px;
+                                      height: 37px;
+                                      text-align: center;
+                                      line-height: 37px;
+                                      border-radius: 4px;
+                                      &:hover{
+                                        background: #B9BBBF;
+                                      }
+                                    }
                                 }
                             }
                         }
@@ -381,7 +396,7 @@
 
                         .mce-container {
                             // border
-                       
+
                         }
 
                         .user-language-edit {

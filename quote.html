@@ -102,18 +102,19 @@
                                                                             </div>
                                                                             <div class="col-md-6 bill-box even card">
                                                                                 <div class="col-md-12 bill">
-                                                                                    <span class="edit">
+                                                                                    <!-- <span class="edit">
                                                                                         <i class="material-icons">create</i>
                                                                                         <a href="javascript:void(0);">
                                                                                             Edit
                                                                                         </a>
-                                                                                    </span>
+                                                                                    </span> -->
                                                                                     <div class="amount">
                                                                                         Signature
                                                                                     </div>
-                                                                                    <div class="quote-signature" id="quoteSignature"></div>
+                                                                                    <div id="circles-slider"></div>
+                                                                                    <!-- <div class="quote-signature" id="quoteSignature"></div> -->
                                                                                     <div class="quote-signature-rate-date">
-                                                                                        <span>30% - Very likely</span>May 30, 2019
+                                                                                        <span><span class="signature-range">20</span>% - Very likely</span>May 30, 2019
                                                                                     </div>
                                                                                     <a href="javascript:;" class="bill-link add-probability">
                                                                                         <span>+ Add probability</span>
@@ -579,6 +580,7 @@
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-12 quote-mission-list-container">
+
                                                 <div class="no-quote-mission-container">
                                                     <div class="no-quote-mission-info">
                                                         <h4>No mission yet</h4>
@@ -719,8 +721,8 @@
                                                                 <div class="cta-container">
                                                                     <div class="cta">
                                                                         <ul>
-                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Free Mission"><i class="material-icons">money_off</i></a></li>
-                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
+                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Free Mission"><span data-toggle="modal" data-target="#signQuote"><i class="material-icons">money_off</i></span></a></li>
+                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Duplicate"><span data-toggle="modal" data-target="#closeQuote"><i class="material-icons">content_copy</i></span></a></li>
                                                                             <li>
                                                                                 <span data-toggle="modal" data-target="#deleteConfirmation">
                                                                                     <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Delete"><i class="material-icons">delete</i></a>
@@ -810,6 +812,10 @@
 <!-- @include _partials/_quote-browse-mission-modal.html -->
 <!-- Edit Overview modal -->
 <!-- @include _partials/_contract-edit-overview-modal.html -->
+<!-- Sign Quote modal -->
+<!-- @include _partials/_quote-sign-quote-modal.html -->
+<!-- Close Quote modal -->
+<!-- @include _partials/_quote-close-quote-modal.html -->
 
 
 <!-- @include _partials/_all-js-files.html -->
@@ -957,7 +963,7 @@ $(document).ready(function() {
 });
 
 /*Plagiarism Progress*/
-var bar = new ProgressBar.Line(quoteSignature, {
+/*var bar = new ProgressBar.Line(quoteSignature, {
     strokeWidth: 10,
     easing: 'easeInOut',
     duration: 1400,
@@ -972,7 +978,7 @@ var bar = new ProgressBar.Line(quoteSignature, {
     }
 });
 
-bar.animate(0.3);  /*Number from 0.0 to 1.0*/
+bar.animate(0.3);*/  /*Number from 0.0 to 1.0*/
 
 
 
@@ -1064,6 +1070,13 @@ $(function () {
         $('.create-quote-mission-title-edit').hide();
         $('.create-quote-mission-title').show();
     });
+
+    /*Change color to free mission icon*/
+    $("a[data-original-title='Free Mission']").on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass("mission-freed");
+    });
+
 
 });
 
@@ -1181,6 +1194,20 @@ $(document).on('click', 'a[data-target="#browseMissionModal"]', function(e){
 
           if(listContainer) {listTable.addClass('has-container');}
 
+    });
+
+$("#circles-slider")
+    .slider({
+        min: 0,
+        max: 100,
+        value: 20,
+        range: "min",
+        step: 20
+    })
+    .slider("pips")
+
+    .on("slidechange", function(e,ui) {
+        $(".signature-range").text(  ui.value );
     });
 
 

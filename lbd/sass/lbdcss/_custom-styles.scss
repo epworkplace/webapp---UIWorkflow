@@ -1464,6 +1464,10 @@ html {
                                     &:hover, &:focus {
                                         color: #485262;
                                     }
+
+                                    &.mission-freed{
+                                        color: $selected;
+                                    }
                                 }
                             }
 
@@ -6200,7 +6204,7 @@ html {
                 }
 
                 .card-footer {
-                    margin: 10px 0 0 0;
+                    // margin: 10px 0 0 0;
                     position: relative;
 
                     a {
@@ -6268,6 +6272,137 @@ html {
                         }
                     }
                 }
+
+                .card {
+                  margin-bottom: 15px;
+
+                  &[class*='container'] {
+                      padding: 20px;
+
+                      a {
+                          font-size: 12px;
+                          color: #a2a6b0;
+                          text-decoration: underline;
+
+                          &[class*='add'] {}
+
+                          &.source, &.external-website-link, &.morelink {
+                              color: #448aff;
+                          }
+
+                          &.chosen-single {
+                              text-decoration: none;
+                          }
+
+                          &:hover {
+                              text-decoration: none;
+                          }
+                      }
+
+                      .title {
+                          color: #353f53;
+                          font-size: 14px;
+                          font-weight: 600;
+                          margin: 0;
+                          padding: 0;
+                          text-transform: uppercase;
+                      }
+
+                      .overview {
+                          &, & p {
+                              font-size: 14px;
+                          }
+
+                          p:first-of-type {
+                              margin-top: 10px;
+                          }
+                      }
+
+                      .chosen-container {
+                          .chosen-single {
+                              .chose-image-small {
+                                  margin: 0 13px 0 0;
+                              }
+                          }
+
+                          .chosen-drop {
+                              .chosen-search {}
+
+                              .chosen-results {
+                                  .active-result {
+                                      &.result-selected {}
+                                  }
+                              }
+                          }
+                      }
+                      span.edit{
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all .3s ease;
+                      }
+                      &:hover{
+                        span.edit{
+                          visibility: visible;
+                          opacity: 1;
+                          transition: all .3s ease;
+                        }
+                      }
+                  }
+
+                  &.sector-container {}
+
+                  &.annual-turnover-container {
+                      .annual-turnover {
+                          font-size: 20px;
+                          font-weight: 600;
+
+                          span {
+                              font-size: 12px;
+                              font-weight: 400;
+                          }
+                      }
+                  }
+
+                  &.address-container {
+                      .address {
+                          .client-country {
+                              margin-bottom: 15px;
+                          }
+
+                          .client-address {}
+                      }
+                  }
+
+                  &.external-links-container {
+                      .external-links {
+                          .website-links {
+                              ul {
+                                  padding-left: 15px;
+                                  list-style-type: none;
+
+                                  li {
+                                      a {}
+                                  }
+                              }
+                          }
+
+                          .socialmedia-links {
+                              ul {
+                                  padding-left: 15px;
+                                  list-style-type: none;
+                                  margin-bottom: 0;
+
+                                  li {
+                                      display: flex;
+                                      width: 40px;
+                                      margin-right: 15px;
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+
             }
 
             .turnover {
