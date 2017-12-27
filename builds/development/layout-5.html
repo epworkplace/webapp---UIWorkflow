@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="lbd/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Light Bootstrap Dashboard PRO by Creative Tim</title>
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="lbd/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--  Light Bootstrap Dashboard core CSS    -->
+    <link href="lbd/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+
+    <!-- Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    <link href="lbd/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <!-- Chosen Plugin -->
+    <link href="lbd/lib/chosen/chosen.css" type="text/css" rel="stylesheet" />
+    <link href="lbd/lib/chosen/ImageSelect.css" type="text/css" rel="stylesheet" />
+    <!-- Tags -->
+    <link rel="StyleSheet" href="lbd/lib/jquery-tageditor-master/jquery.tag-editor.css" type="text/css" />
+    <!-- Temporary css for Layouts     -->
+    
+</head>
+<body class="wp-app layout-5">
+<div class="wrapper">
+    <div class="sidebar">
+        <div class="logo">
+            <a href="/">
+                <img src="lbd/img/wp-logo.png" alt="Logo" />
+            </a>
+        </div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="active">
+                    <a href="#">
+                        <i class="material-icons">dashboard</i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">business</i>
+                        <p>Clients</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">monetization_on</i>
+                        <p>Quotes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">assignment</i>
+                        <p>Contracts</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">alarm</i>
+                        <p>Missions</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="charts.html">
+                        <i class="material-icons">face</i>
+                        <p>Users</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a class="profile clearfix" href="#">
+                    <div class="profile_pic">
+                        <img src="lbd/img/default-avatar.png" alt="..." class="img-circle profile_img" />
+                    </div>
+                    <div class="profile_info">
+                        <p>Clarrise</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid page-wrap">
+        <div class="row">
+            <div class="col-md-12 main-panel-wrap">
+                <div class="main-panel">
+                    <div class="container-fluid main-panel-page">
+                        <div class="col-md-12 main-panel-page-header clearfix">
+                            <div class="col-md-1 contract-image">
+                                <div class="contract-image-container">
+                                    <img src="lbd/img/webedia.jpg" class="img-circle" />
+                                </div>
+                            </div>
+                            <div class="col-md-5 contract">
+                                <div class="contract-spec pull-left">
+                                    <div class="contract-breadcrumb">
+                                    <a href="javascript:;">Webedia Group</a><i class="material-icons">chevron_right</i><a href="javascript:;">Devis - Webedia Group - May 2019</a></div>
+                                    <div class="contract-name">
+                                        <span class="label not-started">Not Started</span><strong class="primary-font">C01-ZVA-2018-001-WEBEDIA</strong>
+                                    </div>
+                                </div>
+                                <div class="nav-button pull-right">
+                                    <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Open Menu"><i class="material-icons">more_vert</i></a>
+                                </div>
+                            </div>
+                            <div class="right col-md-6">
+                                <div class="col-md-4 end-date-container">
+                                    <a class= end-date dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="javascript:;">
+                                        <span class="warning-indicator">
+                                            <span class="icon-flipped"><i class="material-icons">info</i></span>
+                                        </span>
+                                        <span class="title">Ending date</span>
+                                        Jul 03, 2019
+                                        <span class="caret-drop">
+                                            <i class="material-icons">expand_more</i>
+                                        </span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="javascript:;">
+                                                <i class="material-icons">pause</i>
+                                                <span>Pause ...</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 mission-validate">
+                                    <span class="title">Missions validated</span>
+                                    <span class="mission">1</span> <small>/</small> 3
+                                </div>
+                                <a href="javascript:;" class="col-md-4 validate not-started-link">
+                                    Validate
+                                </a>
+                            </div>
+                            <div class="col-md-5 open-menu-top-bar">
+                                <div class="col-md-12 client-info">
+                                    <div class="col-md-2 user-image">
+                                        <img src="lbd/img/webedia.jpg" class="img-circle">
+                                    </div>
+                                    <div class="col-md-10 contract-title-edit">
+                                        <div class="input-group">
+                                            <input type="text" name="" id="" value="C001-ZVA-2018-001-A-WEBIDIA" class="form-control">
+                                            <button class="btn btn-fill name-update">Update</button>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" class="col-md-1 close-nav">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                </div>
+                                <div class="col-md-12 navigation-tabs">
+                                    <ul class="btn-group btn-group-justified">
+                                        <li>
+                                            <a href="javascript:;" class="btn btn-default">
+                                                <i class="material-icons">check</i>
+                                                <p>Finished</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn btn-default">
+                                                <i class="material-icons">delete</i>
+                                                <p>Delete</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn btn-default">
+                                                <i class="material-icons">today</i>
+                                                <p>Project Plan</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn btn-default">
+                                                <i class="material-icons">assignment</i>
+                                                <p>Related Quote</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" data-toggle="modal" data-target="#turnover-evolution" class="btn btn-default">
+                                                <i class="material-icons">euro_symbol</i>
+                                                <p>Turnover Evolution</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="btn btn-default">
+                                                <i class="material-icons">receipt</i>
+                                                <p>Invoicing</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row main-container">
+                            <div class="overlay-main-container"></div>
+                            <div class="col-md-8 tab-panel-container">
+                                <div class="tab-panel">
+                                    <nav class="navbar navbar-default">
+                                        <div class="container-fluid">
+                                            <div class="navbar-header">
+                                                <!-- <button type="button" class="navbar-toggle" data-toggle="collapse">
+                                                    <span class="sr-only">Toggle navigation</span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button> -->
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 page-title">
+                                                    <a class="navbar-brand" href="#">Contract Overview</a>  
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 tab-step">
+                                                    <div class="tab-step-content">
+                                                        <ul class="nav">
+                                                            <li class="active"><a href="#tab1" data-toggle="tab">Informations</a></li>
+                                                            <li><a href="#tab2" data-toggle="tab">Related Files (0)</a></li>
+                                                            <li><a href="#tab3" data-toggle="tab">Stakeholders (3)</a></li>
+                                                        </ul>
+                                                        <div class="tab-content tab-content-progress">
+                                                            <div class="tab-pane active" id="tab1">
+                                                                <div class="row informations">
+                                                                    <div class="col-md-12">
+                                                                        <div class="alert alert-info warning">
+                                                                            <button type="button" aria-hidden="true" class="close">×</button>
+                                                                            <p><span class="icon-flipped"><i class="material-icons">info_outline</i></span> <strong>WARNING</strong> - One or several mission exceeds the planned date.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <div class="info-content card">
+                                                                            <div class="display-content clearfix">
+                                                                                <span class="edit" data-toggle="modal" data-target="#edit-overview-modal"><a href="javascript:;">Edit</a></span>
+                                                                                <div class="col-md-12 duration">May 01, 2019<i class="material-icons">chevron_right</i>Jul 03, 2019</div>
+                                                                                <div class="col-md-12  overview">
+                                                                                    <div class="more"><p>
+                                                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- <div class="edit-content clearfix">
+                                                                                <div class="edit-duration">
+                                                                                    <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
+                                                                                    <div class="col-md-6">
+                                                                                        <label>Start Date</label>
+                                                                                        <input type="text" class="form-control datepicker-start" placeholder="Date Picker Here">
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <label>End Date</label>
+                                                                                        <input type="text" class="form-control datepicker-end" placeholder="Date Picker Here">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-12  edit-overview">
+                                                                                    <textarea id="edit-textarea" class="form-control" rows="10">
+                                                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                                                                    </textarea>
+                                                                                </div>
+                                                                                <div class="edit-content-action col-md-12">
+                                                                                    <button type="button" class="btn btn-default btn-fill btn-wd btn-no">Cancel</button>
+                                                                                    <button type="button" class="btn btn-default btn-fill btn-wd btn-yes">Save Changes</button>
+                                                                                </div>
+                                                                            </div> -->
+                                                                        </div>
+                                                                        <!-- <div class="col-md-12 upload-card card clearfix">
+                                                                            <div class="upload pull-left">
+                                                                                <div class="title">Purchase Order</div>
+                                                                                <div class="status">Not Uploaded</div>
+                                                                            </div>
+                                                                            <div class="upload-btn pull-right">
+                                                                                <input id="upload" type="file"/>
+                                                                                <a id="upload_link" type="button" class="btn btn-primary btn-fill">Upload</a>
+                                                                            </div>
+                                                                        </div> -->
+                                                                        <div class="col-md-12 upload-card card clearfix">
+                                                                            <div class="droppable-purchase">
+                                                                                <div class="upload sign-po pull-left">
+                                                                                    <div class="title">Purchase Order</div>
+                                                                                    <div class="status">
+                                                                                        <input id="upload" type="file"/>
+                                                                                        <strong class="primary-font output">
+                                                                                            <i class="material-icons">insert_drive_file</i>
+                                                                                            PO_3105725824585156541854217.pdf
+                                                                                            <span class="delete">
+                                                                                                <a href="javascript:;"><i class="material-icons">close</i></a>
+                                                                                            </span>
+                                                                                        </strong> 
+                                                                                    </div>
+                                                                                    <div class="status">
+                                                                                        <input id="upload" type="file"/>
+                                                                                        <strong class="primary-font output">
+                                                                                            <i class="material-icons">insert_drive_file</i>
+                                                                                            PO_3104217.pdf 
+                                                                                            <span class="delete">
+                                                                                                <a href="javascript:;"><i class="material-icons">close</i></a>
+                                                                                            </span>
+                                                                                        </strong>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="upload-btn pull-right">
+                                                                                    <a id="upload_link" type="button" class="btn btn-primary btn-fill">Sign PO</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- <div class="droppable-purchase">
+                                                                            <div class="droppable-tagline">
+                                                                                <i class="material-icons">file_upload</i><br />
+                                                                                Drag your File here<br />
+                                                                                OR<br />
+                                                                                Click here to upload from Computer
+                                                                            </div>
+                                                                        </div> -->
+                                                                        <div class="col-md-12 left-module-title">Turnover</div>
+                                                                        <div class="turnover">
+                                                                            <div class="col-md-6 bill-box card">
+                                                                                <div class="col-md-12 bill">
+                                                                                    <div class="amount">
+                                                                                        Theory<span>67000.00 &#8364;</span>
+                                                                                    </div>
+                                                                                    <div class="bill-desc">
+                                                                                        <p>60.00% margin</p>
+                                                                                    </div>
+                                                                                    <a href="javascript:;" data-toggle="modal" data-target="#turnover-evolution" class="bill-link">
+                                                                                        <span>View Quote</span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6 bill-box even card">
+                                                                                <div class="col-md-12 bill">
+                                                                                    <div class="amount">
+                                                                                        Agreed<span>71630.00 &#8364;</span>
+                                                                                    </div>
+                                                                                    <div class="bill-desc">
+                                                                                        <p>60.00% margin</p>
+                                                                                    </div>
+                                                                                    <a href="javascript:;" data-toggle="modal" data-target="#turnover-evolution" class="bill-link">
+                                                                                        <span>View Quote</span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6 bill-box card">
+                                                                                <div class="col-md-12 bill">
+                                                                                    <div class="amount">
+                                                                                        Real<span>0.00 &#8364;</span>
+                                                                                    </div>
+                                                                                    <div class="bill-desc">
+                                                                                        <p>-</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6 bill-box even card">
+                                                                                <div class="col-md-12 bill">
+                                                                                    <div class="amount">
+                                                                                        Invoiced<span>0.00 &#8364;</span>
+                                                                                    </div>
+                                                                                    <a href="javascript:;" class="bill-link">
+                                                                                        <span>Manage</span>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 left-module-title">Contract Owner</div>
+                                                                        <div class="col-md-12 contract-owner-box card">
+                                                                            <div class="col-md-8 contract-owner">
+                                                                                <div class="user-image">
+                                                                                    <img class="img-circle" src="lbd/img/default-avatar.png" />
+                                                                                </div>
+                                                                                <div class="user-name">Lucie Zvanovec</div>
+                                                                            </div>
+                                                                            <div class="col-md-4 update-contract-owner">
+                                                                                <button class="btn pull-right">Update</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 left-module-title">Tags</div>
+                                                                        <div class="col-md-12 contract-tags">
+                                                                            <div class="control-group"> 
+                                                                                <textarea id="contract-tags"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane" id="tab2">
+                                                                <div class="row related-files">
+                                                                    <div class="col-md-12 related-files-filter-search">
+                                                                        <div class="col-md-5 related-files-filter">
+                                                                            <select name="filter" class="selectpicker">
+                                                                                <option>Newest First</option>
+                                                                                <option>Oldest First</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-md-7 related-files-search">
+                                                                            <input type="text" placeholder="Search a file..." class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12 related-files-stack">
+                                                                        <div class="droppable">
+                                                                            <div class="droppable-tagline">
+                                                                                <i class="material-icons">file_upload</i><br />
+                                                                                Drag your File here<br />
+                                                                                OR<br />
+                                                                                Click here to upload from Computer
+                                                                            </div>
+                                                                        </div>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="card file-card">
+                                                                                    <strong class="primary-font output"><i class="material-icons">insert_drive_file</i>PO_3104217.pdf</strong> 
+                                                                                    <div class="time-stamp pull-right">12 Months ago</div>
+                                                                                </div>
+                                                                                <div class="cta-container">
+                                                                                    <div class="cta">
+                                                                                        <ul>
+                                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Download"><i class="material-icons">file_download</i></a></li>
+                                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="card file-card">
+                                                                                    <strong class="primary-font output"><i class="material-icons">insert_drive_file</i>PO_3104217.pdf</strong>
+                                                                                    <div class="time-stamp pull-right">12 Months ago</div>
+                                                                                </div>
+                                                                                <div class="cta-container">
+                                                                                    <div class="cta">
+                                                                                        <ul>
+                                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Download"><i class="material-icons">file_download</i></a></li>
+                                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="add-file">
+                                                                                <div class="card file-card">
+                                                                                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                                                                        <i class="material-icons">add</i>
+                                                                                    </a>
+                                                                                    <ul class="dropdown-menu" role="menu"><!-- 
+                                                                                        <li>
+                                                                                            <input id="upload" type="file"/>
+                                                                                            <a href="#" id="upload_link">Upload from Computer</a>
+                                                                                        </li> -->
+                                                                                        <li><a href="#">Upload from Google Drive</a></li>
+                                                                                        <li class="divider"></li>
+                                                                                        <li>
+                                                                                            <div class="attatch-link">
+                                                                                                <div>Upload Link</div>
+                                                                                                <div class="input-group">
+                                                                                                    <input id="btn-input" type="text" class="form-control input-sm" placeholder="Your link Here." />
+                                                                                                    <span class="input-group-btn">
+                                                                                                        <button class="btn btn-primary btn-fill" id="btn-chat">Attach</button>
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane" id="tab3">
+                                                                <div class="row stakeholders">
+                                                                    <div class="col-md-12 stakeholders-list">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="card stakeholder">
+                                                                                    <div class="user-image">
+                                                                                        <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                                    </div>
+                                                                                    <div class="stakeholder-name">Lucie Zvanovec <span class="label ongoing">Ongoing</span></div>
+                                                                                    <div class="stakeholder-designation">
+                                                                                        <div class="designation">
+                                                                                            Head of Sales &amp; Marketing
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="cta-container">
+                                                                                    <div class="cta">
+                                                                                        <ul>
+                                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">close</i></a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="card stakeholder">
+                                                                                    <div class="user-image">
+                                                                                        <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                                    </div>
+                                                                                    <div class="stakeholder-name">Clarisse</div>
+                                                                                    <div class="stakeholder-designation">
+                                                                                        <div class="designation">
+                                                                                            Project Manager
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="cta-container">
+                                                                                    <div class="cta">
+                                                                                        <ul>
+                                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">close</i></a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="card stakeholder">
+                                                                                    <div class="user-image">
+                                                                                        <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                                    </div>
+                                                                                    <div class="stakeholder-name">Michael Martin</div>
+                                                                                    <div class="stakeholder-designation">
+                                                                                         <div class="designation">
+                                                                                            UX and ART
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="cta-container">
+                                                                                    <div class="cta">
+                                                                                        <ul>
+                                                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">close</i></a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="add-stakeholder">
+                                                                                <div class="card stakeholder">
+                                                                                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                                                                        <i class="material-icons">add</i>
+                                                                                    </a>
+                                                                                    <ul class="dropdown-menu" role="menu">
+                                                                                        <li>
+                                                                                            <div class="input-group">
+                                                                                                <input id="btn-input" type="text" class="form-control input-sm" name="stakeholders" placeholder="Search Stakeholders" />
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-md-4 main-panel-container">
+                                <div class="content">
+                                    <div class="card-container">
+                                        <ul id="card-container">
+                                            <li>
+                                                <div class="card-wrap">
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                </div>
+                                                <div class="card-wrap">
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                </div>
+                                                <div class="card-wrap">
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                </div>
+                                                <div class="card-wrap">
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="card-wrap">
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="card-wrap">
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="card-wrap">
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+    <!--   Core JS Files   -->
+    <script src="lbd/js/jquery.min.js" type="text/javascript"></script>
+    <script src="lbd/js/underscore-min.js" type="text/javascript"></script>
+    <script src="lbd/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="lbd/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Forms Validations Plugin -->
+    <script src="lbd/js/jquery.validate.min.js"></script>
+
+    <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+    <script src="lbd/js/moment.min.js"></script>
+
+    <!--  Date Time Picker Plugin is included in this js file -->
+    <script src="lbd/js/bootstrap-datetimepicker.js"></script>
+
+    <!--  Select Picker Plugin -->
+    <script src="lbd/js/bootstrap-selectpicker.js"></script>
+
+    <!--  Checkbox, Radio, Switch and Tags Input Plugins -->
+    <script src="lbd/js/bootstrap-checkbox-radio-switch-tags.js"></script>
+
+    <!--  Charts Plugin -->
+    <script src="lbd/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="lbd/js/bootstrap-notify.js"></script>
+
+    <!-- Sweet Alert 2 plugin -->
+    <script src="lbd/js/sweetalert2.js"></script>
+
+    <!-- Vector Map plugin -->
+    <script src="lbd/js/jquery-jvectormap.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <!-- Wizard Plugin    -->
+    <script src="lbd/js/jquery.bootstrap.wizard.min.js"></script>
+
+    <!--  Datatable Plugin    -->
+    <script src="lbd/js/bootstrap-table.js"></script>
+
+    <!--  Full Calendar Plugin    -->
+    <script src="lbd/js/fullcalendar.min.js"></script>
+
+    <!-- Light Bootstrap Dashboard Core javascript and methods -->
+    <script src="lbd/js/light-bootstrap-dashboard.js"></script>
+
+    <!-- Custom Scrollbar -->
+    <script src="lbd/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Progress Bar JS -->
+    <script src="lbd/lib/progressbarjs/progressbar.js"></script>
+
+    <!--  Chosen Plugin -->
+    <script type="text/javascript" src="lbd/lib/chosen/chosen.jquery.js"></script>
+    <script type="text/javascript" src="lbd/lib/chosen/ImageSelect.jquery.js"></script>
+
+    <!-- Bootstrap Selelect Picker --> 
+    <script type="text/javascript" src="lbd/js/bootstrap-select.js"></script>
+
+    <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+    <script src="lbd/js/demo.js"></script>
+
+    <!--Tags-->
+    <script src="lbd/lib/jquery-tageditor-master/jquery.tag-editor.js"></script>
+
+    <!-- TinyMCE-->
+    <script type="text/javascript" src="lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="lbd/js/custom.js"></script> 
+    
+</html>
