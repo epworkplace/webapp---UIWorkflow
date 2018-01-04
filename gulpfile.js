@@ -171,7 +171,7 @@ gulp.task('clean-jsliblive', function() {
 });
 
 gulp.task('clean-bundle', function(){
-  del([dest + 'lbd/css/lbd-bundle.css', dest + 'lbd/js/lbd-bundle.js', dest + 'lbd/lib/lib-live/**/*']);
+  del([dest + 'lbd/css/lbd-bundle.css', dest + 'lbd/js/lbd-bundle.js', dest + 'lbd/lib/plugins-bundle.*']);
 });
 
 // build HTML files
@@ -336,17 +336,13 @@ gulp.task('tinymce', function(){
       cssFilter = $.filter(['**/*.css'], {restore: true}),
       imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
       jsonFilter = $.filter(['**/*.json'], {restore: true}),
-      jsFilter = $.filter(['**/*.js'], {restore: true}),
-      tinyTheme = $.filter(['**/*theme.min.js'], {restore: true});
+      jsFilter = $.filter(['**/*.js'], {restore: true});
 
-  return gulp.src([source + 'lbd/lib/tinymce_4.2.5/js/tinymce/**/*', '!**/*tinymce.min.js'])
+  return gulp.src([source + 'lbd/lib/*tinymce_4.2.5/**/*'])
       .pipe($.size({title: 'tinyMCE in '}))
       .pipe(jsFilter)
       .pipe($.uglify())
       .pipe(jsFilter.restore)
-      .pipe(tinyTheme)
-      .pipe($.rename('themes/modern/theme.js'))
-      .pipe(tinyTheme.restore)
       .pipe(jsonFilter)
       .pipe($.jsonMinify())
       .pipe(jsonFilter.restore)
@@ -362,6 +358,7 @@ gulp.task('tinymce', function(){
       .pipe($.size({title: 'tinyMCE out '}))
       .pipe(gulp.dest(dest + 'lbd/lib/'));
 });
+
 gulp.task('slick-fonts', function(){
   return gulp.src([source + 'lbd/lib/slick-1.6.0/slick/fonts/**/*'])
              .pipe(gulp.dest(dest + 'lbd/lib/fonts/'));
@@ -369,10 +366,10 @@ gulp.task('slick-fonts', function(){
 
 // copy js libraries
 gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
-  var toExclude = ['lbd/lib/tinymce_4.2.5/**/*'],
-      htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
-      includeIgnoredJs = $.filter([toExclude[0] + '.js'], {restore: true}),
-      includeIgnoredCss = $.filter(toExclude[0] + '.css', {restore: true}),
+  var htmlFilter = $.filter(['**/*.html', '**/*.md'], {restore: true}),
+      // toExclude = ['lbd/lib/tinymce_4.2.5/**/*'],
+      // includeIgnoredJs = $.filter([toExclude[0] + '.js'], {restore: true}),
+      // includeIgnoredCss = $.filter(toExclude[0] + '.css', {restore: true}),
       cssFilter = $.filter(['**/*.css'], {restore: true}),
       imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
       imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true}),
@@ -385,7 +382,6 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
                       source + 'lbd/lib/chosen/chosen.css',
                       source + 'lbd/lib/chosen/ImageSelect.jquery.js',
                       source + 'lbd/lib/chosen/ImageSelect.css',
-                      source + 'lbd/lib/progressbarjs/progressbar.js',
                       source + 'lbd/lib/jquery-tageditor-master/jquery.tag-editor.min.js',
                       source + 'lbd/lib/jquery-tageditor-master/jquery.tag-editor.css',
                       source + 'lbd/lib/tag_editmaster/js/jquery.tagedit.js',
@@ -409,7 +405,7 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
                       source + 'lbd/lib/validation-engine/jquery.validationEngine-fr.js',
                       source + 'lbd/lib/validation-engine/jquery.validationEngine.js',
                       source + 'lbd/lib/validation-engine/validationEngine.jquery.css',
-                      source + 'lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js',
+                      // source + 'lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js',
                       source + 'lbd/lib/readmore-js/readmore.js'])
       .pipe($.size({title: 'jsLibsLive in '}))
       .pipe($.newer(dest + 'lbd/lib/'))
@@ -417,6 +413,8 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
       // .pipe($.babel())
       // .pipe($.regenerator())
       .pipe($.order([
+          "chosen.jquery.min.js",
+          "ImageSelect.jquery.js",
           "progressbar.js",
           "jquery.tagedit.js",
           "jquery.tag-editor.min.js",
@@ -429,9 +427,7 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
           "sweetalert2.min.js",
           "jquery.validationEngine-fr.js",
           "jquery.validationEngine.js",
-          "chosen.jquery.min.js",
-          "ImageSelect.jquery.js",
-          "tinymce.min.js",
+          // "tinymce.min.js",
           "readmore.js"
           ]))
       .pipe($.concat('plugins-bundle.js'))
@@ -439,10 +435,10 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
       .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
       // .pipe(webpack())
       .pipe(jsFilter.restore)
-      .pipe(includeIgnoredJs)
+/*      .pipe(includeIgnoredJs)
       .pipe($.uglify())
       .pipe(includeIgnoredJs.restore)
-      .pipe(jsonFilter)
+*/      .pipe(jsonFilter)
       .pipe($.jsonMinify())
       .pipe(jsonFilter.restore)
       .pipe(cssFilter)
@@ -463,22 +459,15 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
       .pipe($.concatCss('plugins-bundle.css', {rebaseUrls: false}))
       .pipe($.cleanCss({rebase:false}))
       .pipe(cssFilter.restore)
-      .pipe(includeIgnoredCss)
+/*      .pipe(includeIgnoredCss)
       .pipe($.cleanCss({rebase:false}))
       .pipe(includeIgnoredCss.restore)
-      .pipe(htmlFilter)
+*/      .pipe(htmlFilter)
       .pipe($.htmlclean())
       .pipe(htmlFilter.restore)
       .pipe(imageFilter)
       .pipe($.imagemin())
       .pipe(imageFilter.restore)
-      // /*.pipe(imageFilter2)
-      // .pipe($.webp())
-      // .pipe(imageFilter2.restore)*/
-
-      // // .pipe($.jshint())
-      // // .pipe($.jshint.reporter('default'))
-      // // .pipe($.jshint.reporter('fail'))
       .pipe($.size({title: 'jsLibsLive out '}))
       .pipe(gulp.dest(dest + 'lbd/lib/'));
 
@@ -533,13 +522,6 @@ gulp.task('jslib', function() {
       .pipe(imageFilter)
       .pipe($.imagemin())
       .pipe(imageFilter.restore)
-      // /*.pipe(imageFilter2)
-      // .pipe($.webp())
-      // .pipe(imageFilter2.restore)*/
-
-      // // .pipe($.jshint())
-      // // .pipe($.jshint.reporter('default'))
-      // // .pipe($.jshint.reporter('fail'))
       .pipe($.size({title: 'jsLibs out '}))
       .pipe(gulp.dest(jsLibs.out));
 
@@ -631,9 +613,6 @@ $.watch([dest + '**/*.css'], $.batch(function (events, done) {
 });
 
 
-// chokidar.watch(html.watch).on('all', function(){
-//   return ['html', reload];
-// });
 
 gulp.task('watch', function() {
 

@@ -1,4 +1,4 @@
-/*Card Design Starts*/
+// Card Design Starts
 
 .card-container {
     // padding: 15px;
@@ -128,7 +128,7 @@
 
         li.decks:nth-child(even) {
             // background: #edeff1;
-       
+
         }
     }
 }
@@ -661,7 +661,7 @@
         .form-group {
             &:last-of-type {
                 // margin-bottom: 0;
-           
+
             }
         }
 
@@ -698,6 +698,175 @@
 }
 
 /* Duplicate cards modal Ends */
+
+/* Bulk duplicate cards modal Strats */
+.bulk-duplicate-cards-modal{
+  @extend %modal;
+  .modal-title{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .modal-title-edit{
+    display: none;
+    margin-bottom: 15px;
+    .input-group{
+      button{
+        width: auto !important;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+  }
+  .job-setting-proofreader-container{
+    width: 100%;
+    top: unset;
+    padding: 0;
+    .job-settings-proofreader {
+      .initial-setup {
+        .job-settings-header {
+          label{
+            text-transform: uppercase;
+            &:last-child{
+              text-transform: none;
+            }
+          }
+        }
+        .navigation-divider{
+          width: calc(100% + 60px);
+          margin-left: -30px;
+        }
+        .job-user-role-container{
+          @include clearfix;
+          input[type='text']{
+            margin-bottom: 0;
+          }
+          margin-top: 20px;
+          .job-user-role{
+            label {
+              text-transform: uppercase;
+              font-weight: 600;
+            }
+            .job-role-title{
+              margin-bottom: 15px;
+              color: $main;
+              font-size: 16px;
+              font-weight: 700;
+            }
+            .job-assigned{
+              .chosen-container{
+                .chosen-single{
+                  height: 50px !important;
+                  div{
+                    b{
+                      background-position: 0 15px;
+                    }
+                  }
+                }
+                &.chosen-disabled{
+                  .chosen-single{
+                    text-decoration: line-through;
+                  }
+                }
+              }
+            }
+            .role-selection{
+              label {
+                font-weight: normal;
+                text-transform: none;
+              }
+            }
+          }
+        }
+        .drag-drop-files-modal-container{
+          margin: 0;
+          .card-footer {
+              // margin: 10px 0 0 0;
+              position: relative;
+
+              a {
+                  display: block;
+                  text-align: center;
+                  color: $not-started;
+                  font-size: 14px;
+
+                  &:hover {
+
+                  }
+                  &.alternate-file-upload{
+                    display: inline;
+                    text-decoration: underline;
+                    font-weight: 600;
+                    &:hover{
+                      text-decoration: none;
+                    }
+                  }
+              }
+
+              ul.dropdown-menu {
+                  position: absolute;
+                  width: 100%;
+
+                  li {
+                      text-align: center;
+                      &.divider{
+                        padding: 0;
+                        margin: 9px 0;
+                      }
+
+                      #upload {
+                          display: none;
+                      }
+
+                      a {
+                          font-size: 14px;
+                          font-weight: 400;
+                          padding: 8px 16px;
+                          color: #333;
+                      }
+
+                      .attatch-link {
+                          padding: 5px 10px 10px 10px;
+
+                          > div {
+                              color: #333;
+                              margin-bottom: 5px;
+                          }
+
+                          .input-group {
+                              input.form-control {
+                                  border: 1px solid #ccc;
+                                  border-radius: 4px 0 0 4px;
+                              }
+
+                              .input-group-btn {
+                                  padding: 0;
+                              }
+
+                              button {
+                                  margin: 0;
+                                  // height: 40px;
+                                  top: -5px;
+                              }
+                          }
+
+                          input.form-control {
+                              border: 1px solid #ccc;
+                              margin-bottom: 10px;
+                          }
+
+                          button {
+                              margin: 0;
+                          }
+                      }
+                  }
+              }
+          }
+        }
+      }
+    }
+  }
+}
+/* Bulk duplicate cards modal Ends */
 
 /*Duplicate card alert modal starts*/
 

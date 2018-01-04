@@ -1423,6 +1423,7 @@
 <!-- Modals -->
         <!-- @include _partials/_mission-ov-v2-edit-announce-modal.html -->
         <!-- @include _partials/_mission-ov-v2-duplicate-cards-modal.html -->
+        <!-- @include _partials/_mission-ov-v2-bulk-duplicate-cards-modal.html -->
         <!-- @include _partials/_mission-ov-v2-edit-announce-preview-modal.html -->
         <!-- @include _partials/_production-share-announce-modal.html -->
         <!-- @include _partials/_no-duplication-alert-modal.html -->
@@ -1701,20 +1702,36 @@ $(document).ready(function(){
         // console.log('Clicked on card-box');
         window.open('contract-overview.html','_blank');
     }
-    // console.log('Clicked on card-box 02');
 })
 
+/* Edit bulk duplicate modal Title*/
+  $('.modal-title').click(function() {
+      $('.modal-title-edit').show();
+      $(this).hide();
+  });
+  $('#saveModalTitle').click(function() {
+      $('.modal-title-edit').hide();
+      $('.modal-title').show();
+  });
+
+/*Disable chosen after a click of button*/
+$(".disable-selection").on('click', function (event) {
+    event.preventDefault();
+    $(this).parents(".form-group").find(".job-assigned .chosen-select").prop('disabled', true).trigger('chosen:updated');
+});
+$(".enable-selection").on('click', function (event) {
+    event.preventDefault();
+    $(this).parents(".form-group").find(".job-assigned .chosen-select").prop('disabled', false).trigger('chosen:updated');
+});
 
 });
 </script>
 <script type="text/javascript" defer>
 // Page refresh after some time interval
-
-
 $(window).load(function(){
-    setTimeout(function(){
+/*    setTimeout(function(){
         $('#refresh-page').modal('show');
-    }, 15000);
+    }, 15000);*/
 });
 </script>
 
