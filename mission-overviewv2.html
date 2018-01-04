@@ -1705,9 +1705,10 @@ $(document).ready(function(){
 })
 
 /* Edit bulk duplicate modal Title*/
-  $('.modal-title').click(function() {
+  $('#editCreateMissionTitle').click(function(e) {
+      e.preventDefault();
       $('.modal-title-edit').show();
-      $(this).hide();
+      $('.modal-title').hide();
   });
   $('#saveModalTitle').click(function() {
       $('.modal-title-edit').hide();

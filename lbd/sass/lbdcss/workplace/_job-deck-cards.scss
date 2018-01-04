@@ -702,11 +702,6 @@
 /* Bulk duplicate cards modal Strats */
 .bulk-duplicate-cards-modal{
   @extend %modal;
-  .modal-title{
-    &:hover{
-      cursor: pointer;
-    }
-  }
   .modal-title-edit{
     display: none;
     margin-bottom: 15px;
