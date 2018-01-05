@@ -1,0 +1,51 @@
+.offers-list-page {
+    .main-container {
+        .main-panel-container {
+            .content {
+                .tab-content {
+                    .main-panel-header {
+                        .page-status {
+                            text-align: left !important;
+                        }
+
+                        .sort-offers {
+                            margin-top: 22px;
+                        }
+                    }
+
+                    .card-section-list {
+                        ul {
+                            li {
+                                .card-mission {
+                                    .list-head-container {
+                                        width: 47%;
+                                        padding-right: 0;
+                                    }
+
+                                    @-moz-document url-prefix() {
+                                        .list-head-container {
+                                            width: 46%;
+                                        }
+                                    }
+                                }
+
+                                .card {
+                                    .task-price {
+                                        width: 336px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .no-data-container {
+                .create {
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+    }
+}

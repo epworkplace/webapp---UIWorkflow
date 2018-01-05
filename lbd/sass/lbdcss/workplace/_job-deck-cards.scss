@@ -110,6 +110,11 @@
                         border-radius: 4px;
                         transition: all .3s ease;
 
+                        span {
+                            margin-left: 10px;
+                            font-weight: 700;
+                        }
+
                         i {
                             transition: all .3s ease;
                         }
@@ -579,6 +584,11 @@
 
     a.add-card {
         @extend %add-button;
+
+        span {
+            margin-left: 10px;
+            font-weight: 700;
+        }
     }
 }
 
