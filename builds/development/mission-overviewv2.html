@@ -2166,7 +2166,7 @@
                                                                     <button class="btn btn-fill start">
                                                                     Start
                                                                     </button>
-                                                                    <button class=" btn btn-fill duplicate" data-target="#duplicate-cards-modal" data-toggle="modal" href="javascript:;">
+                                                                    <button class=" btn btn-fill duplicate" data-target="#bulkDuplicateCards" data-toggle="modal" href="javascript:;">
                                                                     Duplicate
                                                                     </button>
                                                                     <button class=" btn btn-fill delete" data-target="#duplicationAlertModal" data-toggle="modal" href="javascript:;">
@@ -2666,7 +2666,7 @@
                                                                     <button class="btn btn-fill start">
                                                                     Start
                                                                     </button>
-                                                                    <button class=" btn btn-fill duplicate" data-target="#duplicate-cards-modal" data-toggle="modal" href="javascript:;">
+                                                                    <button class=" btn btn-fill duplicate" data-target="#bulkDuplicateCards" data-toggle="modal" href="javascript:;">
                                                                     Duplicate
                                                                     </button>
                                                                     <button class=" btn btn-fill delete">
@@ -2918,6 +2918,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
+                                                    
                                                     <li class="decks">
                                                         <div class="decks-header">
                                                             <div class="row">
@@ -3235,7 +3236,7 @@
                                                                     <button class="btn btn-fill start">
                                                                     Start
                                                                     </button>
-                                                                    <button class=" btn btn-fill duplicate" data-target="#duplicate-cards-modal" data-toggle="modal" href="javascript:;">
+                                                                    <button class=" btn btn-fill duplicate" data-target="#bulkDuplicateCards" data-toggle="modal" href="javascript:;">
                                                                     Duplicate
                                                                     </button>
                                                                     <button class=" btn btn-fill delete">
@@ -3487,6 +3488,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
+                                                    
                                                     <li class="decks">
                                                         <div class="decks-header">
                                                             <div class="row">
@@ -3804,7 +3806,7 @@
                                                                     <button class="btn btn-fill start">
                                                                     Start
                                                                     </button>
-                                                                    <button class=" btn btn-fill duplicate" data-target="#duplicate-cards-modal" data-toggle="modal" href="javascript:;">
+                                                                    <button class=" btn btn-fill duplicate" data-target="#bulkDuplicateCards" data-toggle="modal" href="javascript:;">
                                                                     Duplicate
                                                                     </button>
                                                                     <button class=" btn btn-fill delete">
@@ -4056,6 +4058,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
+                                                    
                                                     <li class="decks">
                                                         <div class="decks-header">
                                                             <div class="row">
@@ -4373,7 +4376,7 @@
                                                                     <button class="btn btn-fill start">
                                                                     Start
                                                                     </button>
-                                                                    <button class=" btn btn-fill duplicate" data-target="#duplicate-cards-modal" data-toggle="modal" href="javascript:;">
+                                                                    <button class=" btn btn-fill duplicate" data-target="#bulkDuplicateCards" data-toggle="modal" href="javascript:;">
                                                                     Duplicate
                                                                     </button>
                                                                     <button class=" btn btn-fill delete">
@@ -4625,6 +4628,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
+                                                    
                                                     <li class="decks">
                                                         <div class="decks-header">
                                                             <div class="row">
@@ -4942,7 +4946,7 @@
                                                                     <button class="btn btn-fill start">
                                                                     Start
                                                                     </button>
-                                                                    <button class=" btn btn-fill duplicate" data-target="#duplicate-cards-modal" data-toggle="modal" href="javascript:;">
+                                                                    <button class=" btn btn-fill duplicate" data-target="#bulkDuplicateCards" data-toggle="modal" href="javascript:;">
                                                                     Duplicate
                                                                     </button>
                                                                     <button class=" btn btn-fill delete">
@@ -5194,6 +5198,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
+                                                    
                                                     <li class="decks">
                                                         <div class="decks-header">
                                                             <div class="row">
@@ -5483,6 +5488,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -5639,6 +5645,715 @@
                 </div>
             </div>
         </div>
+        <div aria-labelledby="bulkDuplicateCards" class="modal fade bulk-duplicate-cards-modal" id="bulkDuplicateCards" role="dialog" tabindex="-1" style="">
+            <div class="modal-dialog modal-lg" role="modal">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="duplicate-cards clearfix">
+                            <span class="close">
+                                <a data-dismiss="modal" href="javascript:;">
+                                    <i class="material-icons">
+                                    close
+                                    </i>
+                                </a>
+                            </span>
+                            <div class="modal-title">
+                                Duplicate Webedia blog e-sport trends blog <span class="edit"><a href="javascript:void(0);" id="editCreateMissionTitle">Edit title</a></span>
+                            </div>
+                            <div class="modal-title-edit col-md-10 pl-0">
+                                <div class="input-group d-flex">
+                                    <input type="text" placeholder="Edit Title" class="form-control" value="Duplicate Webedia blog e-sport trends blog"/>
+                                    <button type="" id="saveModalTitle" class="btn btn-fill btn-wd btn-yes">Save</button>
+                                </div>
+                            </div>
+                            <div class="form">
+                              <div class="col-md-12 job-setting-proofreader-container">
+                                <div class="row">
+                                    <div class="col-md-12 job-settings-proofreader">
+                                        <div class="row">
+                                            <div class="col-md-12 initial-setup">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12 progress-steps">
+                                                            <div id="wizardCard">
+                                                                <form action="" id="wizardForm" method="">
+                                                                    <div class="tab-links">
+                                                                        <ul class="nav">
+                                                                            <li>
+                                                                                <a data-toggle="tab" href="#generalSettings">
+                                                                                    General settings
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                <a data-toggle="tab" href="#briefs">
+                                                                                    Briefs
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a data-toggle="tab" href="#cardDetails">
+                                                                                    Card details
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="tab-content">
+                                                                            <div class="tab-pane" id="generalSettings">
+                                                                                <div class="row">
+                                                                                  <div class="col-md-12">
+                                                                                      <div class="job-settings-header">
+                                                                                          <div class="col-md-2 pr-0">
+                                                                                              <label>Duplication Number</label>
+                                                                                              <input class="form-control" name="" type="number" value="3"/>
+                                                                                          </div>
+                                                                                          <div class="col-md-3 pl-30">
+                                                                                              <label>Deck Due Date</label>
+                                                                                              <input class="form-control datepicker-end" placeholder="Due Date" type="text"/>
+                                                                                          </div>
+                                                                                          <div class="col-md-7">
+                                                                                            <div class="col-md-4">
+                                                                                                <label>Cards Volume</label>
+                                                                                                <input class="form-control" name="" type="text" value="200"/>
+                                                                                            </div>
+                                                                                            <div class="col-md-8 p-0">
+                                                                                                <label class="pull-right text-none">1000 articles left <span>on this mission<span></label>
+                                                                                                <select class="selectpicker" disabled name="">
+                                                                                                    <option>
+                                                                                                        Articles
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        Blogs
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        Translations
+                                                                                                    </option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                      </div>
+                                                                                  </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="job-user-role-container">
+                                                                                        <div class="col-md-6 job-user-role">
+                                                                                            <div class="col-md-12 form-group">
+                                                                                                <div class="row">
+                                                                                                  <div class="job-role-title">
+                                                                                                    Writer
+                                                                                                  </div>
+                                                                                                  <div class="job-assigned">
+                                                                                                    <select class="chosen-default chosen-select" id="assignedContributor">
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Michael Martin
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Alice Myer
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 03
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 04
+                                                                                                      </option>
+                                                                                                    </select>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                                <div class="row role-selection">
+                                                                                                    <label class="radio checked enable-selection">
+                                                                                                        <input class="" type="radio" data-toggle="radio" name="roleOption" id="" value="option01" />
+                                                                                                          Apply this <span class="fw600">Writer</span> on all duplicate cards
+                                                                                                    </label>
+                                                                                                    <label class="radio disable-selection">
+                                                                                                        <input class="" type="radio" data-toggle="radio" name="roleOption" id="" value="option02" />
+                                                                                                          Keep <span class="fw600">Audiance</span> on all duplicate cards
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-12 form-group">
+                                                                                                <div class="row">
+                                                                                                    <label for="">Bidding Duration <span class="required">*</span></label>
+                                                                                                    <select class="selectpicker" id="biddingDuration" title="">
+                                                                                                        <option>5 minutes</option>
+                                                                                                        <option>15 minutes</option>
+                                                                                                        <option>30 minutes</option>
+                                                                                                        <option>1 hour</option>
+                                                                                                        <option>2 hours</option>
+                                                                                                        <option>3 hours</option>
+                                                                                                        <option>6 hours</option>
+                                                                                                        <option>12 hours</option>
+                                                                                                        <option>1 day</option>
+                                                                                                        <option>2 days</option>
+                                                                                                        <option>3 days</option>
+                                                                                                        <option>1 week</option>
+                                                                                                        <option>2 weeks</option>
+                                                                                                        <option>3 weeks</option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-12 form-group">
+                                                                                              <div class="row">
+                                                                                                <div class="col-md-12">
+                                                                                                  <div class="row">
+                                                                                                    <label>
+                                                                                                      Start date <span class="required">*</span>
+                                                                                                    </label>
+                                                                                                  </div>
+                                                                                                  <div class="row">
+                                                                                                    <div class="col-md-7 pl-0">
+                                                                                                      <input class="form-control datepicker" placeholder="Date Here" type="text"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-5 pr-0">
+                                                                                                      <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                              <div class="row mt-5">
+                                                                                                <div class="col-md-12">
+                                                                                                  <div class="row">
+                                                                                                    <label>
+                                                                                                      End date <span class="required">*</span>
+                                                                                                    </label>
+                                                                                                  </div>
+                                                                                                  <div class="row">
+                                                                                                    <div class="col-md-7 pl-0">
+                                                                                                      <input class="form-control datepicker" placeholder="Date Here" type="text"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-5 pr-0">
+                                                                                                      <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-6 job-user-role">
+                                                                                            <div class="col-md-12 form-group">
+                                                                                                <div class="row">
+                                                                                                  <div class="job-role-title">
+                                                                                                    Profreader
+                                                                                                  </div>
+                                                                                                  <div class="job-assigned">
+                                                                                                    <select class="chosen-default chosen-select" id="assignedContributor">
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Michael Martin
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Alice Myer
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 03
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 04
+                                                                                                      </option>
+                                                                                                    </select>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                                <div class="row role-selection">
+                                                                                                    <label class="radio checked enable-selection">
+                                                                                                        <input class="" type="radio" data-toggle="radio" name="roleOption02" id="" value="option01" />
+                                                                                                          Apply this <span class="fw600">Proofreader</span> on all duplicate cards
+                                                                                                    </label>
+                                                                                                    <label class="radio disable-selection">
+                                                                                                        <input class="" type="radio" data-toggle="radio" name="roleOption02" id="" value="option02" />
+                                                                                                          Keep <span class="fw600">Audiance</span> on all duplicate cards
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-12 form-group">
+                                                                                                <div class="row">
+                                                                                                    <label for="">Bidding Duration <span class="required">*</span></label>
+                                                                                                    <select class="selectpicker" id="biddingDuration" title="">
+                                                                                                        <option>5 minutes</option>
+                                                                                                        <option>15 minutes</option>
+                                                                                                        <option>30 minutes</option>
+                                                                                                        <option>1 hour</option>
+                                                                                                        <option>2 hours</option>
+                                                                                                        <option>3 hours</option>
+                                                                                                        <option>6 hours</option>
+                                                                                                        <option>12 hours</option>
+                                                                                                        <option>1 day</option>
+                                                                                                        <option>2 days</option>
+                                                                                                        <option>3 days</option>
+                                                                                                        <option>1 week</option>
+                                                                                                        <option>2 weeks</option>
+                                                                                                        <option>3 weeks</option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-12 form-group">
+                                                                                              <div class="row">
+                                                                                                <div class="col-md-12">
+                                                                                                  <div class="row">
+                                                                                                    <label>
+                                                                                                      Start date <span class="required">*</span>
+                                                                                                    </label>
+                                                                                                  </div>
+                                                                                                  <div class="row">
+                                                                                                    <div class="col-md-7 pl-0">
+                                                                                                      <input class="form-control datepicker" placeholder="Date Here" type="text"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-5 pr-0">
+                                                                                                      <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                              <div class="row mt-5">
+                                                                                                <div class="col-md-12">
+                                                                                                  <div class="row">
+                                                                                                    <label>
+                                                                                                      End date <span class="required">*</span>
+                                                                                                    </label>
+                                                                                                  </div>
+                                                                                                  <div class="row">
+                                                                                                    <div class="col-md-7 pl-0">
+                                                                                                      <input class="form-control datepicker" placeholder="Date Here" type="text"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-5 pr-0">
+                                                                                                      <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="divider navigation-divider"></div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <button class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left" type="button">
+                                                                                            Cancel
+                                                                                        </button>
+                                                                                        <button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+                                                                                            Next
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="tab-pane" id="briefs">
+                                                                                <div class="row">
+                                                                                  <div class="col-md-12 drag-drop-files-modal-container">
+                                                                                    <div class="row">
+                                                                                      <div class="col-md-12">
+                                                                                        <a class="drag-drop-files-modal" href="javascript:;">
+                                                                                          <div class="placeholder">
+                                                                                            Drag and drop your file
+                                                                                            <span>
+                                                                                              or click here to join a file
+                                                                                            </span>
+                                                                                          </div>
+                                                                                        </a>
+                                                                                      </div>
+                                                                                      <div class="col-md-12">
+                                                                                        <div class="card-footer text-left mb-20">
+                                                                                          <a href="javascript:;" class="dropdown-toggle alternate-file-upload" data-toggle="dropdown">
+                                                                                            Add another way (Drive, URL...)
+                                                                                          </a>
+                                                                                          <ul class="dropdown-menu" role="menu">
+                                                                                            <li>
+                                                                                              <input id="upload" type="file"/>
+                                                                                              <a href="#" id="upload_link">Upload from Computer</a>
+                                                                                            </li>
+                                                                                            <li><a href="#">Upload from Google Drive</a></li>
+                                                                                            <li class="divider"></li>
+                                                                                            <li>
+                                                                                              <div class="attatch-link">
+                                                                                                <div>Upload Link</div>
+                                                                                                <div class="input-group">
+                                                                                                  <input id="btn-input" type="text" class="form-control input-sm" placeholder="Your link Here." />
+                                                                                                  <span class="input-group-btn">
+                                                                                                    <button class="btn btn-primary btn-fill" id="btn-chat">Attach</button>
+                                                                                                  </span>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </li>
+                                                                                          </ul>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                      <div class="col-md-6">
+                                                                                        <div class="col-md-12 card uploaded-drop-files-container half-width">
+                                                                                          <div class="uploaded-files">
+                                                                                            <div class="row">
+                                                                                              <div class="col-md-12 uploaded-job-file">
+                                                                                                <div class="row">
+                                                                                                  <div class="col-md-1 check-files">
+                                                                                                    <label class="checkbox">
+                                                                                                      <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                                    </label>
+                                                                                                  </div>
+                                                                                                  <a class="col-md-7 file-name" href="javascript:;">
+                                                                                                    <span>
+                                                                                                      <i class="material-icons">
+                                                                                                      insert_drive_file
+                                                                                                      </i>
+                                                                                                    </span>
+                                                                                                    brief_writer.pdf
+                                                                                                  </a>
+                                                                                                  <div class="col-md-4 upload-time">
+                                                                                                    Yesterday - 8.60 Mb
+                                                                                                  </div>
+                                                                                                  <div class="cta-container">
+                                                                                                    <div class="cta">
+                                                                                                      <ul>
+                                                                                                        <li>
+                                                                                                          <a data-original-title="Download" data-placement="bottom" data-toggle="tooltip" href="javascript:;" title="">
+                                                                                                            <i class="material-icons">
+                                                                                                            file_download
+                                                                                                            </i>
+                                                                                                          </a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                          <a data-original-title="Delete" data-placement="bottom" data-toggle="tooltip" href="javascript:;" title="">
+                                                                                                            <i class="material-icons">
+                                                                                                            delete
+                                                                                                            </i>
+                                                                                                          </a>
+                                                                                                        </li>
+                                                                                                      </ul>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                              <div class="col-md-12 file-permission">
+                                                                                                <select class="selectpicker" id="permission" title="Provide Permission">
+                                                                                                  <option data-hidden="true">
+                                                                                                  </option>
+                                                                                                  <option>
+                                                                                                    Only Writers can download
+                                                                                                  </option>
+                                                                                                  <option>
+                                                                                                    Only Proofreaders can download
+                                                                                                  </option>
+                                                                                                  <option>
+                                                                                                    All can download
+                                                                                                  </option>
+                                                                                                </select>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                      <div class="col-md-6">
+                                                                                        <div class="col-md-12 card uploaded-drop-files-container half-width">
+                                                                                          <div class="uploaded-files">
+                                                                                            <div class="row">
+                                                                                              <div class="col-md-12 uploaded-job-file">
+                                                                                                <div class="row">
+                                                                                                  <div class="col-md-1 check-files">
+                                                                                                    <label class="checkbox">
+                                                                                                      <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                                    </label>
+                                                                                                  </div>
+                                                                                                  <a class="col-md-7 file-name" href="javascript:;">
+                                                                                                    <span>
+                                                                                                      <i class="material-icons">
+                                                                                                      insert_drive_file
+                                                                                                      </i>
+                                                                                                    </span>
+                                                                                                    brief_writer.pdf
+                                                                                                  </a>
+                                                                                                  <div class="col-md-4 upload-time">
+                                                                                                    Yesterday - 8.60 Mb
+                                                                                                  </div>
+                                                                                                  <div class="cta-container">
+                                                                                                    <div class="cta">
+                                                                                                      <ul>
+                                                                                                        <li>
+                                                                                                          <a data-original-title="Download" data-placement="bottom" data-toggle="tooltip" href="javascript:;" title="">
+                                                                                                            <i class="material-icons">
+                                                                                                            file_download
+                                                                                                            </i>
+                                                                                                          </a>
+                                                                                                        </li>
+                                                                                                        <li>
+                                                                                                          <a data-original-title="Delete" data-placement="bottom" data-toggle="tooltip" href="javascript:;" title="">
+                                                                                                            <i class="material-icons">
+                                                                                                            delete
+                                                                                                            </i>
+                                                                                                          </a>
+                                                                                                        </li>
+                                                                                                      </ul>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                              <div class="col-md-12 file-permission">
+                                                                                                <select class="selectpicker" id="permission" title="Provide Permission">
+                                                                                                  <option data-hidden="true">
+                                                                                                  </option>
+                                                                                                  <option>
+                                                                                                    Only Writers can download
+                                                                                                  </option>
+                                                                                                  <option>
+                                                                                                    Only Proofreaders can download
+                                                                                                  </option>
+                                                                                                  <option>
+                                                                                                    All can download
+                                                                                                  </option>
+                                                                                                </select>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </div>
+                                                                                <div class="divider navigation-divider"></div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <button class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back" type="button">
+                                                                                            Back
+                                                                                        </button>
+                                                                                        <button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+                                                                                            Next
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="tab-pane" id="cardDetails">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12 participation-settings-container">
+                                                                                        <div class="row">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-12">
+                                                                                                    <h4 class="title col-md-6">Production Time</h4>
+                                                                                                    <div class="col-md-6 previous-job-settings pull-right">
+                                                                                                        <a href="javascript:;"
+                                                                                                        data-toggle="popover"
+                                                                                                        data-placement="bottom"
+                                                                                                        data-html="true"
+                                                                                                        data-trigger="hover"
+                                                                                                        data-content="Starting on: <br />
+                                                                                                        <b>Jun 7, 2017 - 01:00 AM </b><br /><br />
+                                                                                                        Ending on: <br />
+                                                                                                        <b>Oct 31, 2017 - 01:00 PM</b>">
+                                                                                                            See previous job settings
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- <div class="col-md-3">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12">
+                                                                                                        <label>
+                                                                                                            Job duration
+                                                                                                        </label>
+                                                                                                        <div class="input-group">
+                                                                                                            <input class="form-control" type="text" value="3">
+                                                                                                                <span class="input-group-addon">
+                                                                                                                    <select class="selectpicker" name="tempo">
+                                                                                                                        <option>
+                                                                                                                            hours
+                                                                                                                        </option>
+                                                                                                                        <option>
+                                                                                                                            days
+                                                                                                                        </option>
+                                                                                                                        <option>
+                                                                                                                            months
+                                                                                                                        </option>
+                                                                                                                        <option>
+                                                                                                                            years
+                                                                                                                        </option>
+                                                                                                                    </select>
+                                                                                                                </span>
+                                                                                                            </input>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-6 pull-right">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>
+                                                                                                            Starting date
+                                                                                                        </label>
+                                                                                                        <input class="form-control datepicker-start-down" placeholder="Date Here" type="text"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <label>
+                                                                                                            Ending date
+                                                                                                        </label>
+                                                                                                        <input class="form-control datepicker-end-down" placeholder="Date Here" type="text"/>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div> -->
+                                                                                            <div class="col-md-6">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12">
+                                                                                                        <label>
+                                                                                                            Duration
+                                                                                                        </label>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-4">
+                                                                                                                <input class="form-control" type="text" value="12"/>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-5">
+                                                                                                                <select class="selectpicker" name="filter">
+                                                                                                                    <option>hours</option>
+                                                                                                                    <option>days</option>
+                                                                                                                    <option>weeks</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-6">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12">
+                                                                                                        <label>
+                                                                                                            Starting date
+                                                                                                        </label>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-7">
+                                                                                                                <input class="form-control datepicker" placeholder="Date Here" type="text"/>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-5 ">
+                                                                                                                <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                <!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-6">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12">
+                                                                                                        <label>
+                                                                                                            Ending date
+                                                                                                        </label>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-7">
+                                                                                                                <input class="form-control datepicker" placeholder="Date Here" type="text"/>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-5 ">
+                                                                                                                <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                <!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <h4 class="title col-md-12">
+                                                                                                More options
+                                                                                            </h4>
+                                                                                            <div class="col-md-6">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12 activation-nobg">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12 activation-container">
+                                                                                                                <div class="col-md-2 activation-switch">
+                                                                                                                    <div class="switch" data-off-label="" data-on-label="">
+                                                                                                                        <input type="checkbox"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-9 activation-statement">
+                                                                                                                    Add additional time (if refused):
+                                                                                                                    <span class="no">
+                                                                                                                        NO
+                                                                                                                    </span>
+                                                                                                                    <span class="yes">
+                                                                                                                        YES
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row mt-20">
+                                                                                                    <div class="col-md-12">
+                                                                                                        <label>
+                                                                                                            Duration
+                                                                                                        </label>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-4">
+                                                                                                                <input class="form-control" type="text" value="12"/>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-5">
+                                                                                                                <select class="selectpicker" name="filter">
+                                                                                                                    <option>hours</option>
+                                                                                                                    <option>days</option>
+                                                                                                                    <option>weeks</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-md-6">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12 activation-nobg">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12 activation-container">
+                                                                                                                <div class="col-md-2 activation-switch">
+                                                                                                                    <div class="switch" data-off-label="" data-on-label="">
+                                                                                                                        <input type="checkbox"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-9 activation-statement">
+                                                                                                                    Add plagiarism bot after this job:
+                                                                                                                    <span class="no">
+                                                                                                                        NO
+                                                                                                                    </span>
+                                                                                                                    <span class="yes">
+                                                                                                                        YES
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 timeline-chart">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="divider navigation-divider"></div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <button class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back" type="button">
+                                                                                            Back
+                                                                                        </button>
+                                                                                        <button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-finish" type="button">
+                                                                                            Generate <span>3</span> Cards
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div aria-labelledby="myModalLabel" class="modal fade edit-announce-preview-modal" id="edit-announce-preview-modal" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-lg tiny-mce-modal-dialog" role="document">
                 <div class="modal-content tiny-mce-modal-content">
@@ -5877,6 +6592,7 @@
 <script src="lbd/js/lbd-bundle.js" type="text/javascript"></script>
 <!-- Bundled plugin js files -->
 <script type="text/javascript" src="lbd/lib/plugins-bundle.js"></script>
+<script src="lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="lbd/js/custom.js"></script>
 
 <!--  Google Maps Plugin    -->
@@ -6152,20 +6868,37 @@ $(document).ready(function(){
         // console.log('Clicked on card-box');
         window.open('contract-overview.html','_blank');
     }
-    // console.log('Clicked on card-box 02');
 })
 
+/* Edit bulk duplicate modal Title*/
+  $('#editCreateMissionTitle').click(function(e) {
+      e.preventDefault();
+      $('.modal-title-edit').show();
+      $('.modal-title').hide();
+  });
+  $('#saveModalTitle').click(function() {
+      $('.modal-title-edit').hide();
+      $('.modal-title').show();
+  });
+
+/*Disable chosen after a click of button*/
+$(".disable-selection").on('click', function (event) {
+    event.preventDefault();
+    $(this).parents(".form-group").find(".job-assigned .chosen-select").prop('disabled', true).trigger('chosen:updated');
+});
+$(".enable-selection").on('click', function (event) {
+    event.preventDefault();
+    $(this).parents(".form-group").find(".job-assigned .chosen-select").prop('disabled', false).trigger('chosen:updated');
+});
 
 });
 </script>
 <script type="text/javascript" defer>
 // Page refresh after some time interval
-
-
 $(window).load(function(){
-    setTimeout(function(){
+/*    setTimeout(function(){
         $('#refresh-page').modal('show');
-    }, 15000);
+    }, 15000);*/
 });
 </script>
 

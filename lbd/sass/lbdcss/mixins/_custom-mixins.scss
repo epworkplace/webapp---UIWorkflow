@@ -649,7 +649,7 @@
                         .comment {
                             position: relative;
                             word-break: break-all;
-                            
+
 
                             p {
                                 font-size: 14px;
@@ -956,10 +956,12 @@
 
 // Modal styles
 %modal {
-    .divider {
-        @include divider;
-    }
-
+  .divider {
+      @include divider;
+  }
+  .required {
+    color: $delete;
+  }
     .modal-dialog {
         span.close {
             position: absolute;
@@ -1014,6 +1016,11 @@
         .chosen-container {
             a.chosen-single {
                 height: 38px !important;
+                div{
+                  b{
+                    background-position: 0 10px;
+                  }
+                }
             }
         }
     }
@@ -1084,7 +1091,7 @@
             border-radius: 4px 0 0 4px;
 
             // }
-       
+
         }
 
         &:last-child {
@@ -1099,7 +1106,7 @@
             }
 
             // }
-       
+
         }
     }
 }
@@ -1145,7 +1152,7 @@
                     top: 1px;
 
                     // color: $not-started;
-               
+
                 }
 
                 a {
@@ -1355,7 +1362,7 @@
                 color: $delete;
             } */
         }
-    }    
+    }
 }
 
 span.edit {
