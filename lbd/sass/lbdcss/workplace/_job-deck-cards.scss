@@ -749,6 +749,14 @@
                 background-position: 0 15px;
               }
             }
+            abbr{
+              top: unset;
+              height: 12px;
+              background-position-y: 1px;
+              &:hover{
+                background-position-y: -10px;
+              }
+            }
           }
           &.chosen-disabled{
             .chosen-single{

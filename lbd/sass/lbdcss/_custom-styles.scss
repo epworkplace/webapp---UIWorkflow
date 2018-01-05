@@ -10334,6 +10334,23 @@ html {
     .btn {
         font-weight: 400;
     }
+    .filter-option, .dropdown-menu{
+      img{
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+    &.flags{
+      .filter-option, .dropdown-menu{
+        img{
+          width: auto;
+          height: auto;
+          border-radius: 0;
+        }
+      }
+    }
 }
 
 .filter-list .bootstrap-select.btn-group .dropdown-menu li a, .bootstrap-select.show-tick.btn-group .dropdown-menu li a {
