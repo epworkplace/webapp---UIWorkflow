@@ -420,11 +420,13 @@
                                 padding: 0;
 
                                 img {
-                                    max-width: 100%;
+                                    width: 40px;
+                                    height: 40px;
+                                    object-fit: cover;
                                 }
 
                                 .card-user-empty {
-                                    height: 35px;
+                                    height: 40px;
                                 }
                             }
 
@@ -480,11 +482,13 @@
                     margin-right: 20px;
 
                     img {
-                        max-width: 100%;
+                        width: 52px;
+                        height: 52px;
+                        object-fit: cover;
                     }
 
                     .card-user-empty {
-                        height: 50px;
+                        height: 52px;
                     }
                 }
             }
@@ -562,7 +566,7 @@
             border: 0;
 
             // padding-top: 11px;
-       
+
         }
     }
 
@@ -829,11 +833,12 @@
                     }
 
                     &[class*='unread'] {
-                        li{
-                            &:last-child{
+                        li {
+                            &:last-child {
                                 margin-bottom: 20px;
                             }
                         }
+
                         .user-image {
                             &:before, &:after {
                                 content: "";
