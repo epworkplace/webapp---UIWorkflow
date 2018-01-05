@@ -5645,7 +5645,7 @@
                 </div>
             </div>
         </div>
-        <div aria-labelledby="bulkDuplicateCards" class="modal fade bulk-duplicate-cards-modal" id="bulkDuplicateCards" role="dialog" tabindex="-1" style="">
+        <div aria-labelledby="bulkDuplicateCards" class="modal fade bulk-duplicate-cards-modal in" id="bulkDuplicateCards" role="dialog" tabindex="-1" style="display: block;">
             <div class="modal-dialog modal-lg" role="modal">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -5689,7 +5689,7 @@
                                                                                     Briefs
                                                                                 </a>
                                                                             </li>
-                                                                            <li>
+                                                                            <li class="active">
                                                                                 <a data-toggle="tab" href="#cardDetails">
                                                                                     Card details
                                                                                 </a>
@@ -5740,7 +5740,7 @@
                                                                                                     Writer
                                                                                                   </div>
                                                                                                   <div class="job-assigned">
-                                                                                                    <select class="chosen-default chosen-select" id="assignedContributor">
+                                                                                                    <select class="chosen-default chosen-select" id="">
                                                                                                       <option data-img-src="lbd/img/default-avatar.png">
                                                                                                         Michael Martin
                                                                                                       </option>
@@ -5757,11 +5757,11 @@
                                                                                                   </div>
                                                                                                 </div>
                                                                                                 <div class="row role-selection">
-                                                                                                    <label class="radio checked enable-selection">
+                                                                                                    <label class="radio checked enable-selection text-none">
                                                                                                         <input class="" type="radio" data-toggle="radio" name="roleOption" id="" value="option01" />
                                                                                                           Apply this <span class="fw600">Writer</span> on all duplicate cards
                                                                                                     </label>
-                                                                                                    <label class="radio disable-selection">
+                                                                                                    <label class="radio disable-selection text-none">
                                                                                                         <input class="" type="radio" data-toggle="radio" name="roleOption" id="" value="option02" />
                                                                                                           Keep <span class="fw600">Audiance</span> on all duplicate cards
                                                                                                     </label>
@@ -5832,7 +5832,7 @@
                                                                                                     Profreader
                                                                                                   </div>
                                                                                                   <div class="job-assigned">
-                                                                                                    <select class="chosen-default chosen-select" id="assignedContributor">
+                                                                                                    <select class="chosen-default chosen-select" id="">
                                                                                                       <option data-img-src="lbd/img/default-avatar.png">
                                                                                                         Michael Martin
                                                                                                       </option>
@@ -5849,11 +5849,11 @@
                                                                                                   </div>
                                                                                                 </div>
                                                                                                 <div class="row role-selection">
-                                                                                                    <label class="radio checked enable-selection">
+                                                                                                    <label class="radio checked enable-selection text-none">
                                                                                                         <input class="" type="radio" data-toggle="radio" name="roleOption02" id="" value="option01" />
                                                                                                           Apply this <span class="fw600">Proofreader</span> on all duplicate cards
                                                                                                     </label>
-                                                                                                    <label class="radio disable-selection">
+                                                                                                    <label class="radio disable-selection text-none">
                                                                                                         <input class="" type="radio" data-toggle="radio" name="roleOption02" id="" value="option02" />
                                                                                                           Keep <span class="fw600">Audiance</span> on all duplicate cards
                                                                                                     </label>
@@ -6118,209 +6118,326 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="tab-pane" id="cardDetails">
+                                                                            <div class="tab-pane active" id="cardDetails">
                                                                                 <div class="row">
-                                                                                    <div class="col-md-12 participation-settings-container">
-                                                                                        <div class="row">
+                                                                                    <div class="col-md-12 card-details-container">
+                                                                                      <div class="row">
+                                                                                        <h4 class="title col-md-6">Duplication #1</h4>
+                                                                                        <div class="col-md-12 card-details">
                                                                                             <div class="row">
-                                                                                                <div class="col-md-12">
-                                                                                                    <h4 class="title col-md-6">Production Time</h4>
-                                                                                                    <div class="col-md-6 previous-job-settings pull-right">
-                                                                                                        <a href="javascript:;"
-                                                                                                        data-toggle="popover"
-                                                                                                        data-placement="bottom"
-                                                                                                        data-html="true"
-                                                                                                        data-trigger="hover"
-                                                                                                        data-content="Starting on: <br />
-                                                                                                        <b>Jun 7, 2017 - 01:00 AM </b><br /><br />
-                                                                                                        Ending on: <br />
-                                                                                                        <b>Oct 31, 2017 - 01:00 PM</b>">
-                                                                                                            See previous job settings
-                                                                                                        </a>
-                                                                                                    </div>
+                                                                                                <div class="col-md-5">
+                                                                                                    <label>Card Name</label>
+                                                                                                    <input class="form-control" name="" type="text" value="Webedia blog e-sport trends blog - 2"/>
                                                                                                 </div>
-                                                                                            </div>
-                                                                                            <!-- <div class="col-md-3">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12">
-                                                                                                        <label>
-                                                                                                            Job duration
-                                                                                                        </label>
-                                                                                                        <div class="input-group">
-                                                                                                            <input class="form-control" type="text" value="3">
-                                                                                                                <span class="input-group-addon">
-                                                                                                                    <select class="selectpicker" name="tempo">
-                                                                                                                        <option>
-                                                                                                                            hours
-                                                                                                                        </option>
-                                                                                                                        <option>
-                                                                                                                            days
-                                                                                                                        </option>
-                                                                                                                        <option>
-                                                                                                                            months
-                                                                                                                        </option>
-                                                                                                                        <option>
-                                                                                                                            years
-                                                                                                                        </option>
-                                                                                                                    </select>
-                                                                                                                </span>
-                                                                                                            </input>
+                                                                                                <div class="col-md-6 pull-right">
+                                                                                                  <div class="row">
+                                                                                                    <div class="col-md-3">
+                                                                                                        <label>Volume</label>
+                                                                                                        <input class="form-control" name="" type="text" value="200"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-4 pl-0">
+                                                                                                        <label>Deck Due Date</label>
+                                                                                                        <input class="form-control datepicker-end" placeholder="Due Date" type="text"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-4 p-0 pull-right text-center">
+                                                                                                        <label>Immediate Launch ?</label>
+                                                                                                        <div class="df-ac-jc">
+                                                                                                          <div class="checkbox">
+                                                                                                            <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                                          </div>
                                                                                                         </div>
                                                                                                     </div>
+                                                                                                  </div>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <div class="col-md-6 pull-right">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-6">
-                                                                                                        <label>
-                                                                                                            Starting date
-                                                                                                        </label>
-                                                                                                        <input class="form-control datepicker-start-down" placeholder="Date Here" type="text"/>
-                                                                                                    </div>
-                                                                                                    <div class="col-md-6">
-                                                                                                        <label>
-                                                                                                            Ending date
-                                                                                                        </label>
-                                                                                                        <input class="form-control datepicker-end-down" placeholder="Date Here" type="text"/>
-                                                                                                    </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-5">
+                                                                                                    <label>Writer</label>
+                                                                                                    <select class="chosen-default chosen-select" id="">
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Michael Martin
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Alice Myer
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 03
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 04
+                                                                                                      </option>
+                                                                                                    </select>
                                                                                                 </div>
-                                                                                            </div> -->
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12">
-                                                                                                        <label>
-                                                                                                            Duration
-                                                                                                        </label>
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-4">
-                                                                                                                <input class="form-control" type="text" value="12"/>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-5">
-                                                                                                                <select class="selectpicker" name="filter">
-                                                                                                                    <option>hours</option>
-                                                                                                                    <option>days</option>
-                                                                                                                    <option>weeks</option>
-                                                                                                                </select>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
+                                                                                                <div class="col-md-6 pull-right">
+                                                                                                  <div class="row">
+                                                                                                      <div class="col-md-6">
+                                                                                                          <div class="row">
+                                                                                                              <div class="col-md-12">
+                                                                                                                  <label>
+                                                                                                                      Start date
+                                                                                                                  </label>
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6 pr-0">
+                                                                                                                          <input class="form-control datepicker" placeholder="Date" type="text"/>
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <input type="text" class="form-control timepicker" placeholder="Time"/>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                      <div class="col-md-6">
+                                                                                                          <div class="row">
+                                                                                                              <div class="col-md-12">
+                                                                                                                  <label>
+                                                                                                                      End date
+                                                                                                                  </label>
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6 pr-0">
+                                                                                                                          <input class="form-control datepicker" placeholder="Date" type="text"/>
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <input type="text" class="form-control timepicker" placeholder="Time"/>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                  </div>
                                                                                                 </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-5">
+                                                                                                    <label>Proofreader</label>
+                                                                                                    <select class="chosen-default chosen-select" id="" data-placeholder="Enter a name..">
+                                                                                                      <option class="hidden">Enter a name...</option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Michael Martin
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Alice Myer
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 03
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 04
+                                                                                                      </option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                                <div class="col-md-6 pull-right">
+                                                                                                  <div class="row">
+                                                                                                      <div class="col-md-6">
+                                                                                                          <div class="row">
+                                                                                                              <div class="col-md-12">
+                                                                                                                  <label>
+                                                                                                                      Start date
+                                                                                                                  </label>
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6 pr-0">
+                                                                                                                          <input class="form-control datepicker" placeholder="Date" type="text"/>
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <input type="text" class="form-control timepicker" placeholder="Time"/>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                      <div class="col-md-6">
+                                                                                                          <div class="row">
+                                                                                                              <div class="col-md-12">
+                                                                                                                  <label>
+                                                                                                                      End date
+                                                                                                                  </label>
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6 pr-0">
+                                                                                                                          <input class="form-control datepicker" placeholder="Date" type="text"/>
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <input type="text" class="form-control timepicker" placeholder="Time"/>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                              <div class="col-md-12">
+                                                                                                <label for="" class="text-none"><span class="fw600">Audiance</span> from card master will be kept.</label>
+                                                                                              </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12">
-                                                                                                        <label>
-                                                                                                            Starting date
-                                                                                                        </label>
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-7">
-                                                                                                                <input class="form-control datepicker" placeholder="Date Here" type="text"/>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-5 ">
-                                                                                                                <input type="text" class="form-control timepicker" placeholder="Time Here"/>
-                                                                                                                <!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
-                                                                                                            </div>
+                                                                                      </div>
+                                                                                      <div class="divider"></div>
+                                                                                      <div class="row">
+                                                                                        <h4 class="title col-md-6">Duplication #2</h4>
+                                                                                        <div class="col-md-12 card-details">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-5">
+                                                                                                    <label>Card Name</label>
+                                                                                                    <input class="form-control" name="" type="text" value="Webedia blog e-sport trends blog - 2"/>
+                                                                                                </div>
+                                                                                                <div class="col-md-6 pull-right">
+                                                                                                  <div class="row">
+                                                                                                    <div class="col-md-3">
+                                                                                                        <label>Volume</label>
+                                                                                                        <input class="form-control" name="" type="text" value="200"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-4 pl-0">
+                                                                                                        <label>Deck Due Date</label>
+                                                                                                        <input class="form-control datepicker-end" placeholder="Due Date" type="text"/>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-4 p-0 pull-right text-center">
+                                                                                                        <label>Immediate Launch ?</label>
+                                                                                                        <div class="df-ac-jc">
+                                                                                                          <div class="checkbox">
+                                                                                                            <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                                          </div>
                                                                                                         </div>
                                                                                                     </div>
+                                                                                                  </div>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12">
-                                                                                                        <label>
-                                                                                                            Ending date
-                                                                                                        </label>
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-7">
-                                                                                                                <input class="form-control datepicker" placeholder="Date Here" type="text"/>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-5 ">
-                                                                                                                <input type="text" class="form-control timepicker" placeholder="Time Here"/>
-                                                                                                                <!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-5">
+                                                                                                    <label>Writer</label>
+                                                                                                    <select class="chosen-default chosen-select" id="">
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Michael Martin
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Alice Myer
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 03
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 04
+                                                                                                      </option>
+                                                                                                    </select>
                                                                                                 </div>
+                                                                                                <div class="col-md-6 pull-right">
+                                                                                                  <div class="row">
+                                                                                                      <div class="col-md-6">
+                                                                                                          <div class="row">
+                                                                                                              <div class="col-md-12">
+                                                                                                                  <label>
+                                                                                                                      Start date
+                                                                                                                  </label>
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6 pr-0">
+                                                                                                                          <input class="form-control datepicker" placeholder="Date" type="text"/>
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <input type="text" class="form-control timepicker" placeholder="Time"/>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                      <div class="col-md-6">
+                                                                                                          <div class="row">
+                                                                                                              <div class="col-md-12">
+                                                                                                                  <label>
+                                                                                                                      End date
+                                                                                                                  </label>
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6 pr-0">
+                                                                                                                          <input class="form-control datepicker" placeholder="Date" type="text"/>
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <input type="text" class="form-control timepicker" placeholder="Time"/>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-5">
+                                                                                                    <label>Proofreader</label>
+                                                                                                    <!-- <select class="chosen-default chosen-select-deselect" id="" data-placeholder="Enter a name..">
+                                                                                                      <option class="hidden">Enter a name...</option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Michael Martin
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        Alice Myer
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 03
+                                                                                                      </option>
+                                                                                                      <option data-img-src="lbd/img/default-avatar.png">
+                                                                                                        User 04
+                                                                                                      </option>
+                                                                                                    </select> -->
+                                                                                                    <select id="" class="selectpicker" data-live-search="true" title="">
+                                                                                                      <option value="1" data-content="<img src='lbd/img/default-avatar.png'> Michael Martin">Michael Martin</option>
+                                                                                                      <option value="2" data-content="<img src='lbd/img/default-avatar.png'> Alice Myer">Alice Myer</option>
+                                                                                                      <option value="3" data-content="<img src='lbd/img/default-avatar.png'> User 03">User 03</option>
+                                                                                                      <option value="4" data-content="<img src='lbd/img/default-avatar.png'> User 04">User 04</option>
+                                                                                                    </select>
+                                                                                                    <select id="" class="selectpicker flags" data-live-search="true" title="">
+                                                                                                      <option value="1" data-content="<img src='lbd/img/flag/us.gif'> EN (US)">EN (US)</option>
+                                                                                                      <option value="2" data-content="<img src='lbd/img/flag/fr.gif'> FR">FR</option>
+                                                                                                      <option value="3" data-content="<img src='lbd/img/flag/uk.gif'> EN (UK)">EN (UK)</option>
+                                                                                                      <option value="4" data-content="<img src='lbd/img/flag/sp.gif'> ES">ES</option>
+                                                                                                      <option value="5" data-content="<img src='lbd/img/flag/pol.gif'> PO">PO</option>
+                                                                                                    </select>
+        
+                                                                                                </div>
+                                                                                                <div class="col-md-6 pull-right">
+                                                                                                  <div class="row">
+                                                                                                      <div class="col-md-6">
+                                                                                                          <div class="row">
+                                                                                                              <div class="col-md-12">
+                                                                                                                  <label>
+                                                                                                                      Start date
+                                                                                                                  </label>
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6 pr-0">
+                                                                                                                          <input class="form-control datepicker" placeholder="Date" type="text"/>
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <input type="text" class="form-control timepicker" placeholder="Time"/>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                      <div class="col-md-6">
+                                                                                                          <div class="row">
+                                                                                                              <div class="col-md-12">
+                                                                                                                  <label>
+                                                                                                                      End date
+                                                                                                                  </label>
+                                                                                                                  <div class="row">
+                                                                                                                      <div class="col-md-6 pr-0">
+                                                                                                                          <input class="form-control datepicker" placeholder="Date" type="text"/>
+                                                                                                                      </div>
+                                                                                                                      <div class="col-md-6">
+                                                                                                                          <input type="text" class="form-control timepicker" placeholder="Time"/>
+                                                                                                                      </div>
+                                                                                                                  </div>
+                                                                                                              </div>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                              <div class="col-md-12">
+                                                                                                <label for="" class="text-none"><span class="fw600">Audiance</span> from card master will be kept.</label>
+                                                                                              </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        <div class="row">
-                                                                                            <h4 class="title col-md-12">
-                                                                                                More options
-                                                                                            </h4>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12 activation-nobg">
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-12 activation-container">
-                                                                                                                <div class="col-md-2 activation-switch">
-                                                                                                                    <div class="switch" data-off-label="" data-on-label="">
-                                                                                                                        <input type="checkbox"/>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div class="col-md-9 activation-statement">
-                                                                                                                    Add additional time (if refused):
-                                                                                                                    <span class="no">
-                                                                                                                        NO
-                                                                                                                    </span>
-                                                                                                                    <span class="yes">
-                                                                                                                        YES
-                                                                                                                    </span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="row mt-20">
-                                                                                                    <div class="col-md-12">
-                                                                                                        <label>
-                                                                                                            Duration
-                                                                                                        </label>
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-4">
-                                                                                                                <input class="form-control" type="text" value="12"/>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-5">
-                                                                                                                <select class="selectpicker" name="filter">
-                                                                                                                    <option>hours</option>
-                                                                                                                    <option>days</option>
-                                                                                                                    <option>weeks</option>
-                                                                                                                </select>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="col-md-6">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12 activation-nobg">
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-12 activation-container">
-                                                                                                                <div class="col-md-2 activation-switch">
-                                                                                                                    <div class="switch" data-off-label="" data-on-label="">
-                                                                                                                        <input type="checkbox"/>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div class="col-md-9 activation-statement">
-                                                                                                                    Add plagiarism bot after this job:
-                                                                                                                    <span class="no">
-                                                                                                                        NO
-                                                                                                                    </span>
-                                                                                                                    <span class="yes">
-                                                                                                                        YES
-                                                                                                                    </span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="row">
-                                                                                            <div class="col-md-12 timeline-chart">
-                                                                                            </div>
-                                                                                        </div>
+                                                                                      </div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="divider navigation-divider"></div>
@@ -6592,6 +6709,8 @@
 <script src="lbd/js/lbd-bundle.js" type="text/javascript"></script>
 <!-- Bundled plugin js files -->
 <script type="text/javascript" src="lbd/lib/plugins-bundle.js"></script>
+<!-- <script src="lbd/lib/chosen/chosen.jquery.min.js" type="text/javascript"></script>
+<script src="lbd/lib/chosen/ImageSelect.jquery.js" type="text/javascript"></script> -->
 <script src="lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="lbd/js/custom.js"></script>
 

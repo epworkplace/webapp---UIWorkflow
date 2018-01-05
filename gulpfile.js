@@ -113,15 +113,6 @@ var
       index: 'index.html'
     },
     open: false,
-    // files: [
-    //         source + '**/*.html',
-    //         '!' + source + 'builds/**/*',
-    //         '!' + source + 'node_modules/**/*',
-    //         '!' + css.in,
-    //         '!' + css.out + 'maps/**/*',
-    //         '!' + css.out + 'images/**/*',
-    //         css.out + '**/*.css'
-    //     ],
     injectChanges: true,
     reloadDelay: 0,
     notify: true
@@ -312,7 +303,7 @@ gulp.task('js', function() {
           // "lbd/js/custom.js"
           ]))
       .pipe($.concat('lbd-bundle.js', {rebaseUrls: false}))
-      .pipe($.uglify())
+      // .pipe($.uglify())
       // .pipe($.gzip({append: false}))
       .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
@@ -431,7 +422,7 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
           "readmore.js"
           ]))
       .pipe($.concat('plugins-bundle.js'))
-      .pipe($.uglify())
+      // .pipe($.uglify())
       .on('error', function (err) { $.util.log($.util.colors.red('[Error]'), err.toString()); })
       // .pipe(webpack())
       .pipe(jsFilter.restore)
@@ -636,8 +627,8 @@ gulp.task('watch', function() {
   gulp.watch(js.in, ['js', reload]);
 
   // javascript libraries changes
-  gulp.watch(jsLibs.in, ['jslib', reload]);
-  gulp.watch(jsLibs.liveIn, ['jsliblive', reload]);
+  gulp.watch(jsLibs.in, ['jslib', 'jsliblive', reload]);
+  // gulp.watch(jsLibs.in, [ reload]);
 });
 
 // default task

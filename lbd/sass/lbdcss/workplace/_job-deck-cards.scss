@@ -718,17 +718,33 @@
     padding: 0;
     .job-settings-proofreader {
       .initial-setup {
-        .job-settings-header {
-          label{
-            text-transform: uppercase;
-            &:last-child{
-              text-transform: none;
-            }
+        label {
+          text-transform: uppercase;
+          font-weight: 600;
+          &.text-none{
+            font-weight: normal;
           }
+        }
+        .job-settings-header {
         }
         .navigation-divider{
           width: calc(100% + 60px);
           margin-left: -30px;
+        }
+        .chosen-container{
+          .chosen-single{
+            height: 50px !important;
+            div{
+              b{
+                background-position: 0 15px;
+              }
+            }
+          }
+          &.chosen-disabled{
+            .chosen-single{
+              text-decoration: line-through;
+            }
+          }
         }
         .job-user-role-container{
           @include clearfix;
@@ -737,38 +753,11 @@
           }
           margin-top: 20px;
           .job-user-role{
-            label {
-              text-transform: uppercase;
-              font-weight: 600;
-            }
             .job-role-title{
               margin-bottom: 15px;
               color: $main;
               font-size: 16px;
               font-weight: 700;
-            }
-            .job-assigned{
-              .chosen-container{
-                .chosen-single{
-                  height: 50px !important;
-                  div{
-                    b{
-                      background-position: 0 15px;
-                    }
-                  }
-                }
-                &.chosen-disabled{
-                  .chosen-single{
-                    text-decoration: line-through;
-                  }
-                }
-              }
-            }
-            .role-selection{
-              label {
-                font-weight: normal;
-                text-transform: none;
-              }
             }
           }
         }
@@ -857,6 +846,7 @@
               }
           }
         }
+
       }
     }
   }
