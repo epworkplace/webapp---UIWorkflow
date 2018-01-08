@@ -403,7 +403,7 @@ $(document).ready(function(){
     $('#wizardCard, #wizardCard-testArticle').bootstrapWizard({
     	tabClass: 'nav nav-pills',
     	nextSelector: '.btn-next',
-        previousSelector: '.btn-back',
+      previousSelector: '.btn-back',
     	onNext: function(tab, navigation, index) {
     		var $valid = $('#wizardForm').valid();
     		if(!$valid) {
@@ -442,6 +442,39 @@ $(document).ready(function(){
             }
         }
     });
+
+/*    $('#wizardCardTapable').bootstrapWizard({
+      tabClass: 'nav nav-pills',
+      nextSelector: '.btn-next',
+      previousSelector: '.btn-back',
+      onNext: function(tab, navigation, index) {
+        var $valid = $('#wizardForm').valid();
+        if(!$valid) {
+          $validator.focusInvalid();
+          return false;
+        }
+      },
+      onTabClick : function(tab, navigation, index){
+            // Disable the posibility to click on tabs
+            return true;
+        },
+        onTabShow: function(tab, navigation, index) {
+            var $total = navigation.find('li').length;
+            var $current = index+1;
+            var wizard = navigation.closest('.card-wizard');
+            // If it's the last tab then hide the last button and show the finish instead
+            if($current >= $total) {
+                $(wizard).find('.btn-next').hide();
+                $(wizard).find('.btn-finish').show();
+            } else if($current == 1){
+                $(wizard).find('.btn-back').hide();
+            } else {
+                $(wizard).find('.btn-back').show();
+                $(wizard).find('.btn-next').show();
+                $(wizard).find('.btn-finish').hide();
+            }
+        }
+    });*/
 
 
     //contract Tag
