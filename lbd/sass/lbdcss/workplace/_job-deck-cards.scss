@@ -735,6 +735,16 @@
             font-weight: normal;
           }
         }
+        .has-feedback{
+          .input-group{
+            input{
+              padding: 8px 5px 8px 12px;
+            }
+            span{
+              padding: 8px 10px;
+            }
+          }
+        }
         .job-settings-header {
         }
         .navigation-divider{
@@ -883,6 +893,18 @@
           /* height: calc(100vh - 310px);
           overflow: hidden;
           overflow-y: auto; */
+          input[type='text']{
+            margin-bottom: 0;
+          }
+          .proofreader-option{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            height: 30px;
+          }
         }
       }
     }
