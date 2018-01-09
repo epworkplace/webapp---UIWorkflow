@@ -1,0 +1,317 @@
+<div aria-labelledby="create-offer-job-modal" style="display: block" class="modal fade create-offer-job-modal in" id="createOfferJobModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close">
+                    <a data-dismiss="modal" href="javascript:;">
+                        <i class="material-icons">
+                            close
+                        </i>
+                    </a>
+                </span>
+                <div class="modal-title">
+                    Create a job
+                </div>
+                <div class="row">
+                  <div class="col-md-12 create-offers-job-settings">
+                    <div class="col-md-12 progress-steps">
+                      <div id="wizardCard">
+                          <form action="" id="wizardForm" method="">
+                              <div class="tab-links">
+                                  <ul class="nav">
+                                      <li>
+                                          <a data-toggle="tab" href="#tab-generalSettings">
+                                              General settings
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a data-toggle="tab" href="#tab-availabilities">
+                                              Availabilities
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a data-toggle="tab" href="#tab-quizzSurvey">
+                                              Quizz / Survey
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a data-toggle="tab" href="#tab-test">
+                                              Test
+                                          </a>
+                                      </li>
+                                  </ul>
+                                  <div class="tab-content">
+                                      <div class="tab-pane" id="tab-generalSettings">
+                                          <div class="row">
+                                              <div class="audience-container">
+                                                  <div class="col-md-6 audience-module">
+                                                      <div class="clearfix">
+                                                          <div class="col-md-12 form-group include-roles">
+                                                              <div class="row">
+                                                                  <label>
+                                                                      Include
+                                                                  </label>
+                                                                  <select class="selectpicker" multiple="" name="filter">
+                                                                      <option data-content="<span class='label senior'>Senior</span>">Senior</option>
+                                                                      <option data-content="<span class='label junior'>Junior</span>">Junior</option>
+                                                                      <option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
+                                                                  </select>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                          <div class="col-md-12 check-box audience-check">
+                                                              <div class="row">
+                                                                  <label class="checkbox include-check">
+                                                                      <input data-toggle="checkbox" type="checkbox" value="">
+                                                                          Number of participants
+                                                                      </input>
+                                                                  </label>
+                                                                  <label class="checkbox include-check">
+                                                                      <input data-toggle="checkbox" type="checkbox" value="">
+                                                                          Test Passed
+                                                                      </input>
+                                                                  </label>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                          <div class="col-md-12 include-drops">
+                                                              <div class="row">
+                                                                  <select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="clients" multiple="" title="All Clients">
+                                                                      <option data-hidden="true">
+                                                                      </option>
+                                                                      <option>
+                                                                          0
+                                                                      </option>
+                                                                      <option>
+                                                                          1
+                                                                      </option>
+                                                                      <option>
+                                                                          2
+                                                                      </option>
+                                                                      <option>
+                                                                          3
+                                                                      </option>
+                                                                      <option>
+                                                                          4
+                                                                      </option>
+                                                                  </select>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                          <div class="col-md-12 include-drops">
+                                                              <div class="row">
+                                                                  <select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="categories" multiple="" title="All Categories">
+                                                                      <option data-hidden="true">
+                                                                      </option>
+                                                                      <option>
+                                                                          0
+                                                                      </option>
+                                                                      <option>
+                                                                          1
+                                                                      </option>
+                                                                      <option>
+                                                                          2
+                                                                      </option>
+                                                                      <option>
+                                                                          3
+                                                                      </option>
+                                                                      <option>
+                                                                          4
+                                                                      </option>
+                                                                  </select>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                          <div class="col-md-12 include-drops">
+                                                              <div class="row">
+                                                                  <select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="clients" multiple="" title="All Clients">
+                                                                      <option data-hidden="true">
+                                                                      </option>
+                                                                      <option>
+                                                                          0
+                                                                      </option>
+                                                                      <option>
+                                                                          1
+                                                                      </option>
+                                                                      <option>
+                                                                          2
+                                                                      </option>
+                                                                      <option>
+                                                                          3
+                                                                      </option>
+                                                                      <option>
+                                                                          4
+                                                                      </option>
+                                                                  </select>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                          <div class="col-md-12 check-box">
+                                                              <div class="row">
+                                                                  <label class="checkbox include-check">
+                                                                      <input data-toggle="checkbox" type="checkbox" value="">
+                                                                          Language Group
+                                                                      </input>
+                                                                  </label>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 audience-module">
+                                                      <div class="clearfix">
+                                                          <div class="col-md-12 exclude-container">
+                                                              <label>
+                                                                  Exclude
+                                                              </label>
+                                                              <div class="card exclude-card">
+                                                                  <div class="col-md-2 exclude-card-cta">
+                                                                      <ul>
+                                                                          <li>
+                                                                              <span data-target="#addExclusion" data-toggle="modal">
+                                                                                  <a data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Edit">
+                                                                                      <i class="material-icons">
+                                                                                          mode_edit
+                                                                                      </i>
+                                                                                  </a>
+                                                                                  <span>
+                                                                                  </span>
+                                                                              </span>
+                                                                          </li>
+                                                                          <li>
+                                                                              <span data-target="#deleteConfirmation" data-toggle="modal">
+                                                                                  <a data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Remove">
+                                                                                      <i class="material-icons">
+                                                                                          close
+                                                                                      </i>
+                                                                                  </a>
+                                                                                  <span>
+                                                                                  </span>
+                                                                              </span>
+                                                                          </li>
+                                                                      </ul>
+                                                                  </div>
+                                                                  <div class="col-md-10 exclude-card-content">
+                                                                      Client
+                                                                      <span>
+                                                                          <i class="material-icons">
+                                                                              chevron_right
+                                                                          </i>
+                                                                      </span>
+                                                                      Contract
+                                                                      <span>
+                                                                          <i class="material-icons">
+                                                                              chevron_right
+                                                                          </i>
+                                                                      </span>
+                                                                      Mission
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                          <a class="add-exclusion" data-target="#addExclusion" data-toggle="modal" href="javascript:;">
+                                                              + Add Exclusion
+                                                          </a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <hr/>
+                                          <div class="row">
+                                              <div class="col-md-6 audience-container targeted">
+                                                  <h4 class="title">
+                                                      25 users will be targeted :
+                                                  </h4>
+                                                  <select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="targeted" multiple="" title="To be targeted..">
+                                                      <option data-hidden="true">
+                                                      </option>
+                                                      <option>
+                                                          Ram
+                                                      </option>
+                                                      <option>
+                                                          Lakshman
+                                                      </option>
+                                                      <option>
+                                                          Bharat
+                                                      </option>
+                                                      <option>
+                                                          Shatrughan
+                                                      </option>
+                                                      <option>
+                                                          Maruti
+                                                      </option>
+                                                      <option>
+                                                          Sugreeve
+                                                      </option>
+                                                      <option>
+                                                          Ravan
+                                                      </option>
+                                                      <option>
+                                                          Meghnad
+                                                      </option>
+                                                      <option>
+                                                          Angad
+                                                      </option>
+                                                      <option>
+                                                          Bali
+                                                      </option>
+                                                      <option>
+                                                          Kunbhakaran
+                                                      </option>
+                                                      <option>
+                                                          Vibhishan
+                                                      </option>
+                                                      <option>
+                                                          Jamavan
+                                                      </option>
+                                                      <option>
+                                                          Jatayu
+                                                      </option>
+                                                      <option>
+                                                          Kumbh
+                                                      </option>
+                                                      <option>
+                                                          Nikumbh
+                                                      </option>
+                                                      <option>
+                                                          Dasharath
+                                                      </option>
+                                                  </select>
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-md-12 tab-navigation">
+                                                  <button class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left" type="button">
+                                                      Cancel
+                                                  </button>
+                                                  <button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+                                                      Next
+                                                  </button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane" id="tab-availabilities">
+                                        <div class="row">bbb</div>
+                                      </div>
+                                      <div class="tab-pane" id="tab-quizzSurvey">
+                                         <div class="row">ccc</div>
+                                      </div>
+                                      <div class="tab-pane" id="tab-test">
+                                        <div class="row">ddd</div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
