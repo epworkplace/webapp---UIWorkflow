@@ -5367,6 +5367,20 @@ html {
                 }
             }
         }
+
+        .tab-content {
+            h4.title {
+                margin: 0;
+                font-size: 16px;
+                color: #353f53;
+                font-weight: 700;
+            }
+
+            label {
+                font-weight: 600;
+                color: #a0a5af;
+            }
+        }
     }
 }
 
@@ -10328,6 +10342,10 @@ html {
 
 .bootstrap-select.btn-group .dropdown-menu li a:hover, .bootstrap-select.btn-group .dropdown-menu li a:focus {
     color: #fff;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    color: #7d889a;
 }
 
 .bootstrap-select {
