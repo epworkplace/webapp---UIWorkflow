@@ -23,7 +23,9 @@
 /* Image for Single mode */
 .chose-image-small {
 	width: 30px;
-	max-height: 30px;
+  height: 30px;
+  max-height: 30px;
+  object-fit: cover;
 	border-radius: 50%;
 	vertical-align: middle;
 	margin: 0px 13px 0 0;
@@ -36,7 +38,9 @@
 /* Images appended to the li(s) */
 .chose-image-list {
 	width: 30px;
-	max-height: 30px;
+  height: 30px;
+  max-height: 30px;
+  object-fit: cover;
 	border-radius: 50%;
 	vertical-align: middle;
 	margin: -3px 13px 0 0;

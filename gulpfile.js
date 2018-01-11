@@ -94,6 +94,7 @@ var
   jsLibs = {
     in: source + 'lbd/lib/**/*',
     liveIn: source + 'lbd/lib-live/**/*',
+    watch: 'lbd/lib/**/*',
     out: dest + 'lbd/lib/',
     liveOut: dest + 'lbd/lib/lib-live/'
     // filename: 'main.js'

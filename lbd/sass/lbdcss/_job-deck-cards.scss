@@ -29,7 +29,7 @@
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        display: flex; 
+        display: flex;
         position: relative;
         white-space: normal;
         overflow-y: auto;
@@ -112,7 +112,7 @@
       color: #353f53;
       font-weight: 600;
       span{
-        display: block; 
+        display: block;
         color: #9a9fa9;
         font-size: 12px;
       }
@@ -137,7 +137,7 @@
   }
   &.draft{
     color: #d7d9dc;
-  }  
+  }
 }
 
 .open-card{
