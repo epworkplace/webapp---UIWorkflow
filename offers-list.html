@@ -2385,6 +2385,12 @@
 
         });
 
+        //Onclick link to upload files
+        $("a.add-general-settings-file").on('click', function(e){
+            e.preventDefault();
+            $("#upload-general-settings-file:hidden").trigger('click');
+        });
+
     });
 </script>
 

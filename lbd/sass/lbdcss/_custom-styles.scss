@@ -4123,7 +4123,7 @@ html {
     }
 }
 
-.activation, .activation-nobg {
+.activation, .activation-nobg, .activation-border {
     margin-bottom: 30px;
 
     .activation-container {
@@ -4159,12 +4159,19 @@ html {
     }
 }
 
-.activation-nobg {
+.activation-nobg, .activation-border {
     margin-bottom: 0;
 
     .activation-container {
         background: none;
     }
+}
+
+.activation-border {
+    border: 1px solid #dfe2e5;
+    border-radius: 4px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .edit-survey-question, .edit-quizz-question {
