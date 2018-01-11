@@ -331,7 +331,7 @@
                                 <div class="no-data-container">
                                     <div class="no-data-placeholder">
                                         <h2>Play with filters or type a keyword</h2>
-                                          <a href="javascript:;" class="btn btn-fill btn-download create">
+                                          <a href="javascript:;" data-toggle="modal" data-target="#createOfferJobModal" class="btn btn-fill btn-download create">
                                             <span class="btn-label">
                                                 <i class="material-icons">add</i>
                                             </span>
@@ -2526,6 +2526,242 @@
         </div>
     </div>
 </div>
+<div aria-labelledby="create-offer-job-modal" style="display: block" class="modal fade create-offer-job-modal in" id="createOfferJobModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close">
+                    <a data-dismiss="modal" href="javascript:;">
+                        <i class="material-icons">
+                            close
+                        </i>
+                    </a>
+                </span>
+                <div class="modal-title">
+                    Create a job
+                </div>
+                <div class="row">
+                  <div class="col-md-12 create-offers-job-settings">
+                    <div class="col-md-12 progress-steps">
+                      <div id="wizardCard">
+                          <form action="" id="wizardForm" method="">
+                              <div class="tab-links">
+                                  <ul class="nav">
+                                      <li>
+                                          <a data-toggle="tab" href="#tab-generalSettings">
+                                              General settings
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a data-toggle="tab" href="#tab-availabilities">
+                                              Availabilities
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a data-toggle="tab" href="#tab-quizzSurvey">
+                                              Quizz / Survey
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a data-toggle="tab" href="#tab-test">
+                                              Test
+                                          </a>
+                                      </li>
+                                  </ul>
+                                  <div class="tab-content">
+                                      <div class="tab-pane" id="tab-generalSettings">
+                                          <div class="row">
+                                            <div class="col-md-12 general-settings-container">
+                                              <h4 class="title">Job and brief</h4>
+                                              <div class="row">
+                                                <div class="col-md-6 general-settings-module">
+                                                  <label>
+                                                      Job
+                                                  </label>
+                                                  <select class="selectpicker" title="Select a job">
+                                                    <option data-hidden="true"></option>
+                                                    <option>Translator</option>
+                                                    <option>Writer</option>
+                                                    <option>Proofreader</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-md-6 general-settings-module">
+                                                  <div class="row">
+                                                    <div class="col-md-4">
+                                                      <label>Qty *</label>
+                                                      <input type="number" class="form-control" placeholder="ex: 3" />
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                      <label># Candidate max</label>
+                                                      <input type="number" class="form-control" placeholder="ex: 40" />
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-md-6 general-settings-module">
+                                                  <label>Language *</label>
+                                                  <select class="chosen-default flags" data-placeholder="Select a language">
+                                                    <option value=""></option>
+                                                    <option data-img-src="lbd/img/flag/us.gif">
+                                                        EN (US)
+                                                    </option>
+                                                    <option data-img-src="lbd/img/flag/fr.gif">
+                                                        FR
+                                                    </option>
+                                                    <option data-img-src="lbd/img/flag/uk.gif">
+                                                        EN (UK)
+                                                    </option>
+                                                    <option data-img-src="lbd/img/flag/sp.gif">
+                                                        ES
+                                                    </option>
+                                                    <option data-img-src="lbd/img/flag/pol.gif">
+                                                        PO
+                                                    </option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-md-6 general-settings-module">
+                                                  <label>Destination language (if translation)</label>
+                                                  <select class="chosen-default flags" data-placeholder="Select a language">
+                                                    <option value=""></option>
+                                                    <option data-img-src="lbd/img/flag/us.gif">
+                                                        EN (US)
+                                                    </option>
+                                                    <option data-img-src="lbd/img/flag/fr.gif">
+                                                        FR
+                                                    </option>
+                                                    <option data-img-src="lbd/img/flag/uk.gif">
+                                                        EN (UK)
+                                                    </option>
+                                                    <option data-img-src="lbd/img/flag/sp.gif">
+                                                        ES
+                                                    </option>
+                                                    <option data-img-src="lbd/img/flag/pol.gif">
+                                                        PO
+                                                    </option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                 <div class="col-md-4 general-settings-module">
+                                                  <label>Bidding</label>
+                                                  <select class="selectpicker" title="Select your bidding">
+                                                  <option data-hidden="true"></option>
+                                                  <option>Price per item</option>
+                                                  <option>Price per item 1</option>
+                                                  <option>Price per item 2</option>
+                                                  </select>
+                                                 </div>
+                                                 <div class="col-md-2 general-settings-module">
+                                                    <label>Min. Cost</label>
+                                                    <input type="number" class="form-control" placeholder="ex: 40" />
+                                                 </div>
+                                                 <div class="col-md-2 general-settings-module">
+                                                    <label>Max. Cost</label>
+                                                    <input type="number" class="form-control" placeholder="ex: 40" />
+                                                 </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-md-4 general-settings-module">
+                                                  <label class="checkbox include-check">
+                                                      <input data-toggle="checkbox" type="checkbox" value="">
+                                                          Allow to exceed maximum price
+                                                      </input>
+                                                  </label>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-md-4 general-settings-module">
+                                                  <label>Service</label>
+                                                  <select class="selectpicker" title="Select a service">
+                                                  <option data-hidden="true"></option>
+                                                  <option>Editorial</option>
+                                                  <option>Editorial 2</option>
+                                                  <option>Editorial 3</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-md-4 general-settings-module">
+                                                  <label>Type</label>
+                                                  <select class="selectpicker" title="Select a type">
+                                                  <option data-hidden="true"></option>
+                                                  <option>Translation</option>
+                                                  <option>Translation 2</option>
+                                                  <option>Translation 3</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-md-4 general-settings-module">
+                                                  <label>Product</label>
+                                                  <select class="selectpicker" title="Select a product">
+                                                  <option data-hidden="true"></option>
+                                                  <option>Product</option>
+                                                  <option>Product 2</option>
+                                                  <option>Product 3</option>
+                                                  </select>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-md-4 general-settings-module">
+                                                  <label>Number of words</label>
+                                                  <input type="number" class="form-control" placeholder="ex: 400" />
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-md-12 general-settings-module">
+                                                  <input id="upload-general-settings-file" type="file">
+                                                  <a class="add-general-settings-file" href="javascript:;">
+                                                    + Add brief
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div class="row">
+                                                <div class="col-md-12 general-settings-module">
+                                                  <div class="added-general-settings-file-container">
+                                                    <div class="added-general-settings-file">
+                                                      <div class="col-md-1"><i class="material-icons pull-right">insert_drive_file</i></div>
+                                                      <div class="col-md-10 file-name">Allocine_brief-writer.pdf</div>
+                                                      <div class="col-md-1">
+                                                        <a href="javascript:;">
+                                                          <i class="material-icons">delete</i>
+                                                        </a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-md-12 tab-navigation">
+                                                  <button class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left" type="button">
+                                                      Cancel
+                                                  </button>
+                                                  <button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+                                                      Next
+                                                  </button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane" id="tab-availabilities">
+                                        <div class="row">bbb</div>
+                                      </div>
+                                      <div class="tab-pane" id="tab-quizzSurvey">
+                                         <div class="row">ccc</div>
+                                      </div>
+                                      <div class="tab-pane" id="tab-test">
+                                        <div class="row">ddd</div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modals Ends -->
 
 <!--   Core JS Files   -->

@@ -2699,11 +2699,11 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
             this.checkTabIndex();
             this.clickListener();
             var menuPadding = parseInt(menu.css('padding-top')) + parseInt(menu.css('padding-bottom')) + parseInt(menu.css('border-top-width')) + parseInt(menu.css('border-bottom-width'));
-            
+
             if (this.options.size == 'auto') {
-                
+
                 // Creative Tim Changes: We changed the regular function made in bootstrap-select with this function so the getSize() will not be triggered one million times per second while you scroll.
-                
+
                 var getSize = debounce(function() {
                     var selectOffset_top_scroll = selectOffset_top - $('.main-panel').scrollTop();
                     var windowHeight = $('.main-panel').innerHeight();
@@ -2713,22 +2713,22 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                     if (select.hasClass('dropup')) {
                         menuHeight = selectOffset_top_scroll - menuExtras;
                     }
-                                        
+
                     //limit menuHeight to 300px to have a smooth transition on dropdown
                     if(menuHeight >= 300){
                         menuHeight = 300;
                     }
 
                     menu.css({'max-height' : menuHeight + 'px', 'overflow-y' : 'auto', 'min-height' : liHeight * 3 + 'px'});
-                    
+
                 }, 50);
 
 
                 getSize();
-                
+
                 $('.main-panel').on('scroll', getSize);
                 $(window).on('resize', getSize);
-        
+
                 if (window.MutationObserver) {
                     new MutationObserver(getSize).observe(this.$element.get(0), {
                         childList: true
@@ -2757,7 +2757,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 
         createDropdown: function() {
             var drop =
-                "<div class='btn-group select'>" +                    
+                "<div class='btn-group select'>" +
                     "<button class='btn dropdown-toggle clearfix' data-toggle='dropdown'>" +
                         "<span class='filter-option'></span>&nbsp;" +
                         "<span class='caret'></span>" +
@@ -2822,12 +2822,12 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                         if ($(this)[0].index != 0) {
                             _liA.push(
                                 '<div class="divider"></div>'+
-                                '<dt>'+label+'</dt>'+ 
+                                '<dt>'+label+'</dt>'+
                                 _this.createA(text, "opt " + optionClass )
                                 );
                         } else {
                             _liA.push(
-                                '<dt>'+label+'</dt>'+ 
+                                '<dt>'+label+'</dt>'+
                                 _this.createA(text, "opt " + optionClass ));
                         }
                     } else {
@@ -2891,27 +2891,27 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                 }
             }).toArray();
 
-            //Convert all the values into a comma delimited string    
+            //Convert all the values into a comma delimited string
             var title = selectedItems.join(", ");
 
-            //If this is multi select, and the selectText type is count, the show 1 of 2 selected etc..                    
+            //If this is multi select, and the selectText type is count, the show 1 of 2 selected etc..
             if(_this.multiple && _this.options.selectedTextFormat.indexOf('count') > -1) {
                 var max = _this.options.selectedTextFormat.split(">");
                 if( (max.length>1 && selectedItems.length > max[1]) || (max.length==1 && selectedItems.length>=2)) {
                     title = selectedItems.length +' of ' + this.$element.find('option').length + ' selected';
                 }
-             }  
-            
+             }
+
             //If we dont have a title, then use the default, or if nothing is set at all, use the not selected text
             if(!title) {
-                title = _this.options.title != undefined ? _this.options.title : _this.options.noneSelectedText;    
+                title = _this.options.title != undefined ? _this.options.title : _this.options.noneSelectedText;
             }
-            
+
             this.$element.next('.select').find('.filter-option').html( title );
 	    },
-	    
-        
-        
+
+
+
         setSelected:function(index, selected) {
             if(selected) {
                 this.$newElement.find('li').eq(index).addClass('selected');
@@ -2919,7 +2919,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                 this.$newElement.find('li').eq(index).removeClass('selected');
             }
         },
-        
+
         setDisabled:function(index, disabled) {
             if(disabled) {
                 this.$newElement.find('li').eq(index).addClass('disabled');
@@ -2927,7 +2927,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                 this.$newElement.find('li').eq(index).removeClass('disabled');
             }
         },
-       
+
         checkDisabled: function() {
             if (this.$element.is(':disabled')) {
                 this.button.addClass('disabled');
@@ -2936,53 +2936,53 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                 });
             }
         },
-		
+
 		checkTabIndex: function() {
 			if (this.$element.is('[tabindex]')) {
 				var tabindex = this.$element.attr("tabindex");
 				this.button.attr('tabindex', tabindex);
 			}
 		},
-		
+
 		clickListener: function() {
             var _this = this;
-            
+
             $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
-            
-           
-            
+
+
+
             this.$newElement.on('click', 'li a', function(e){
                 var clickedIndex = $(this).parent().index(),
                     $this = $(this).parent(),
                     $select = $this.parents('.select');
-                
-                
-                //Dont close on multi choice menu    
+
+
+                //Dont close on multi choice menu
                 if(_this.multiple) {
                     e.stopPropagation();
                 }
-                
+
                 e.preventDefault();
-                
+
                 //Dont run if we have been disabled
                 if ($select.prev('select').not(':disabled') && !$(this).parent().hasClass('disabled')){
                     //Deselect all others if not multi select box
                     if (!_this.multiple) {
                         $select.prev('select').find('option').removeAttr('selected');
                         $select.prev('select').find('option').eq(clickedIndex).prop('selected', true).attr('selected', 'selected');
-                    } 
+                    }
                     //Else toggle the one we have chosen if we are multi selet.
                     else {
                         var selected = $select.prev('select').find('option').eq(clickedIndex).prop('selected');
-                        
+
                         if(selected) {
                             $select.prev('select').find('option').eq(clickedIndex).removeAttr('selected');
                         } else {
                             $select.prev('select').find('option').eq(clickedIndex).prop('selected', true).attr('selected', 'selected');
                         }
                     }
-                    
-                    
+
+
                     $select.find('.filter-option').html($this.text());
                     $select.find('button').focus();
 
@@ -2991,7 +2991,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                 }
 
             });
-            
+
            this.$newElement.on('click', 'li.disabled a, li dt, li .divider', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -3003,12 +3003,12 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                 _this.render();
             });
         },
-        
+
         val:function(value) {
-            
+
             if(value!=undefined) {
                 this.$element.val( value );
-                
+
                 this.$element.trigger('change');
                 return this.$element;
             } else {
@@ -3026,7 +3026,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
             var $this = $(this),
                 data = $this.data('selectpicker'),
                 options = typeof option == 'object' && option;
-            
+
             if (!data) {
             	$this.data('selectpicker', (data = new Selectpicker(this, options, event)));
             } else {
@@ -3034,7 +3034,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
             		data[i]=option[i];
             	}
             }
-            
+
             if (typeof option == 'string') {
                 //Copy the value of option, as once we shift the arguments
                 //it also shifts the value of option.
@@ -3047,12 +3047,12 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
                 }
             }
         });
-        
+
         if(value!=undefined) {
             return value;
         } else {
             return chain;
-        } 
+        }
     };
 
     $.fn.selectpicker.defaults = {

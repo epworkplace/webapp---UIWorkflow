@@ -1714,7 +1714,7 @@
                                                                                                         <h4 class="title">
                                                                                                             25 users will be targeted :
                                                                                                         </h4>
-                                                                                                        <select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="targeted" multiple="" title="To be targeted..">
+                                                                                                        <select class="selectpicker dropup" data-dropup-auto="true" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="targeted" multiple="" title="To be targeted..">
                                                                                                             <option data-hidden="true">
                                                                                                             </option>
                                                                                                             <option>
@@ -5325,6 +5325,10 @@ $('div').delegate('.card-section-list ul li .card', 'click', function(e){
                 $('.edit-number-container button').click(function() {
                   $('.edit-number-container').hide();
                 });
+            });
+
+            $('.selectpicker').selectpicker({
+                dropupAuto: true
             });
         </script>
     </body>

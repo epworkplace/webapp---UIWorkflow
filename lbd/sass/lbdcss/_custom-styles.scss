@@ -4115,7 +4115,7 @@ html {
 
 .tab-navigation {
     margin-top: 30px;
-    padding-bottom: 200px;
+    padding-bottom: 60px;
 
     button {
         width: 48% !important;
@@ -5365,6 +5365,20 @@ html {
                         background: #448aff;
                     }
                 }
+            }
+        }
+
+        .tab-content {
+            h4.title {
+                margin: 0;
+                font-size: 16px;
+                color: #353f53;
+                font-weight: 700;
+            }
+
+            label {
+                font-weight: 600;
+                color: #a0a5af;
             }
         }
     }
@@ -10330,26 +10344,32 @@ html {
     color: #fff;
 }
 
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    color: #7d889a;
+}
+
 .bootstrap-select {
     .btn {
         font-weight: 400;
     }
-    .filter-option, .dropdown-menu{
-      img{
-        margin-right: 10px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-      }
-    }
-    &.flags{
-      .filter-option, .dropdown-menu{
-        img{
-          width: auto;
-          height: auto;
-          border-radius: 0;
+
+    .filter-option, .dropdown-menu {
+        img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
         }
-      }
+    }
+
+    &.flags {
+        .filter-option, .dropdown-menu {
+            img {
+                width: auto;
+                height: auto;
+                border-radius: 0;
+            }
+        }
     }
 }
 
