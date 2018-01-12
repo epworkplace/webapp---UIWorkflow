@@ -108,6 +108,12 @@
                                     font-weight: 600;
                                     position: relative;
 
+                                    i{
+                                      &[class*='check']{
+                                        color: $selected;
+                                      }
+                                    }
+
                                     &:before {
                                         content: '';
                                         position: absolute;
