@@ -187,6 +187,16 @@
                 }
             }
         }
+
+        .job-tests-container {
+            .job-tests-module {
+                margin-bottom: 10px;
+
+                &.test-job-title {
+                    margin-top: 12px;
+                }
+            }
+        }
     }
 }
 
