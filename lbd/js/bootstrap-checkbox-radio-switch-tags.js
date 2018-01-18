@@ -659,7 +659,7 @@
 				$('#'+id+'_tagsinput .tag').remove();
 				str = '';
 				for (i=0; i< old.length; i++) {
-					if (old[i] != value.trim()) { 
+					if (old[i] != value.trim()) {
 						str = str + delimiter[id] +old[i];
 					}
 				}
