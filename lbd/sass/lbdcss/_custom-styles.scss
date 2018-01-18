@@ -2420,11 +2420,18 @@ html {
     right: 0;
     top: 78px;
     left: auto;
+    padding-bottom: 100px;
 
     .header {
         .primary-font {
             font-size: 16px;
             color: #353f53;
+        }
+    }
+
+    @-moz-document url-prefix() {
+        .tab-content {
+            padding-bottom: 50px;
         }
     }
 
@@ -5378,7 +5385,7 @@ html {
         .tab-content {
             h4.title {
                 margin: 0;
-                font-size: 16px;
+                font-size: 14px;
                 color: #353f53;
                 font-weight: 700;
             }
@@ -6216,131 +6223,131 @@ html {
                         }
                     }
 
-                    /* .upload {
-                        margin: 24px 0;
-                        width: 100%;
+                    										/* .upload {
+                    												margin: 24px 0;
+                    												width: 100%;
 
-                        .title {
-                            font-size: 14px;
-                            color: #353f53;
-                            font-weight: 600;
-                        }
+                    												.title {
+                    														font-size: 14px;
+                    														color: #353f53;
+                    														font-weight: 600;
+                    												}
 
-                        .status {
-                            font-size: 14px;
-                            width: 100%;
-                            word-break: break-all;
-                        }
-                    }
+                    												.status {
+                    														font-size: 14px;
+                    														width: 100%;
+                    														word-break: break-all;
+                    												}
+                    										}
 
-                    .upload.sign-po {
-                        width: 100%;
-                        margin: 15px;
-                        padding-bottom: 20px;
+                    										.upload.sign-po {
+                    												width: 100%;
+                    												margin: 15px;
+                    												padding-bottom: 20px;
 
-                        .status {
-                            font-size: 14px;
-                            color: #353f53;
-                            width: 60%;
-                            font-weight: 600;
+                    												.status {
+                    														font-size: 14px;
+                    														color: #353f53;
+                    														width: 60%;
+                    														font-weight: 600;
 
-                            .primary-font {
-                                display: block;
-                                font-size: 12px;
-                                color: #354052;
+                    														.primary-font {
+                    																display: block;
+                    																font-size: 12px;
+                    																color: #354052;
 
-                                i {
-                                    position: relative;
-                                    top: 6px;
-                                    margin-right: 5px;
-                                }
+                    																i {
+                    																		position: relative;
+                    																		top: 6px;
+                    																		margin-right: 5px;
+                    																}
 
-                                a {
-                                    font-size: 12px;
-                                    color: #354052;
-                                    font-weight: 600;
-                                    text-decoration: none;
+                    																a {
+                    																		font-size: 12px;
+                    																		color: #354052;
+                    																		font-weight: 600;
+                    																		text-decoration: none;
 
-                                    &:hover {
-                                        color: #354052;
-                                        text-decoration: underline;
-                                    }
-                                }
+                    																		&:hover {
+                    																				color: #354052;
+                    																				text-decoration: underline;
+                    																		}
+                    																}
 
-                                span.delete {
-                                    position: relative;
-                                    right: -10px;
-                                    top: -2px;
+                    																span.delete {
+                    																		position: relative;
+                    																		right: -10px;
+                    																		top: -2px;
 
-                                    a {
-                                        color: #353f53;
-                                        cursor: pointer;
+                    																		a {
+                    																				color: #353f53;
+                    																				cursor: pointer;
 
-                                        i {
-                                            font-size: 16px;
-                                            line-height: 1;
-                                        }
+                    																				i {
+                    																						font-size: 16px;
+                    																						line-height: 1;
+                    																				}
 
-                                        &:hover, &:focus {
-                                            color: #353f53;
-                                        }
-                                    }
-                                }
+                    																				&:hover, &:focus {
+                    																						color: #353f53;
+                    																				}
+                    																		}
+                    																}
 
-                                span.download {
-                                    position: relative;
-                                    right: -10px;
-                                    top: -2px;
+                    																span.download {
+                    																		position: relative;
+                    																		right: -10px;
+                    																		top: -2px;
 
-                                    a {
-                                        color: #353f53;
-                                        cursor: pointer;
+                    																		a {
+                    																				color: #353f53;
+                    																				cursor: pointer;
 
-                                        i {
-                                            font-size: 16px;
-                                            line-height: 1;
-                                        }
+                    																				i {
+                    																						font-size: 16px;
+                    																						line-height: 1;
+                    																				}
 
-                                        &:hover, &:focus {
-                                            color: #353f53;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    																				&:hover, &:focus {
+                    																						color: #353f53;
+                    																				}
+                    																		}
+                    																}
+                    														}
+                    												}
+                    										}
 
-                    .upload-btn {
-                        -webkit-flex-flow: row wrap;
-                        align-items: center;
-                        height: calc(100% - 70px);
-                        position: absolute;
-                        right: 15px;
-                        top: 15px;
-                        display: -webkit-box;
-                        display: -moz-box;
-                        display: -ms-flexbox;
-                        display: -webkit-flex;
-                        display: flex;
-                        overflow: hidden;
-                        justify-content: center;
-                        align-items: center;
+                    										.upload-btn {
+                    												-webkit-flex-flow: row wrap;
+                    												align-items: center;
+                    												height: calc(100% - 70px);
+                    												position: absolute;
+                    												right: 15px;
+                    												top: 15px;
+                    												display: -webkit-box;
+                    												display: -moz-box;
+                    												display: -ms-flexbox;
+                    												display: -webkit-flex;
+                    												display: flex;
+                    												overflow: hidden;
+                    												justify-content: center;
+                    												align-items: center;
 
-                        a {
-                            width: 109px;
-                            line-height: 1.6;
-                            font-size: 12px;
-                            font-weight: 600;
-                            text-align: center;
-                            display: block;
-                            color: #7d889a;
-                        }
+                    												a {
+                    														width: 109px;
+                    														line-height: 1.6;
+                    														font-size: 12px;
+                    														font-weight: 600;
+                    														text-align: center;
+                    														display: block;
+                    														color: #7d889a;
+                    												}
 
-                        button {
-                            width: 109px;
-                            color: #fff;
-                        }
-                    } */
+                    												button {
+                    														width: 109px;
+                    														color: #fff;
+                    												}
+                    										} */
                 }
 
                 .card-footer {
@@ -10281,23 +10288,23 @@ html {
 /*Centerize Modal Starts*/
 
 /* .modal {
-    text-align: center;
-    padding: 0 !important;
-    overflow-y: scroll;
+		text-align: center;
+		padding: 0 !important;
+		overflow-y: scroll;
 }
 
 .modal:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -4px;
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -4px;
 }
 
 .modal-dialog {
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
+		display: inline-block;
+		text-align: left;
+		vertical-align: middle;
 } */
 
 /*Centerize Modal Ends*/
@@ -11095,16 +11102,16 @@ html {
     overflow: hidden;
 
     /*     position: relative;
-        z-index: 1;
-        height: 100vh;
-        width: 92px;
-        left: 45%;
-        top: 42%;
-      img{
-        position: absolute;
-        left: 0;
-        top: 0;
-      } */
+    		z-index: 1;
+    		height: 100vh;
+    		width: 92px;
+    		left: 45%;
+    		top: 42%;
+    	img{
+    		position: absolute;
+    		left: 0;
+    		top: 0;
+    	} */
 }
 
 .panel-body {
@@ -11217,45 +11224,45 @@ span.more {
 
 /*Drag and Drop Files Starts*/
 /* .droppable {
-  background: transparent;
-  width: 100%;
-  min-height: 500px;
-  height: 120%;
-  text-align: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-  align-items: flex-end;
-  border: 2px solid #fcfdfd;
-  border-radius: 5px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all .3s ease;
-  .droppable-tagline{
-    color: #A9A9A9;
-    font-weight: 600;
-    font-size: 14px;
-    i{
-      font-size: 40px;
-    }
-  }
-  .droppable-tagline.small{
-    margin-bottom: 20%;
-  }
+	background: transparent;
+	width: 100%;
+	min-height: 500px;
+	height: 120%;
+	text-align: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+	align-items: flex-end;
+	border: 2px solid #fcfdfd;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .3s ease;
+	.droppable-tagline{
+		color: #A9A9A9;
+		font-weight: 600;
+		font-size: 14px;
+		i{
+			font-size: 40px;
+		}
+	}
+	.droppable-tagline.small{
+		margin-bottom: 20%;
+	}
 }
 
 .droppable.dragover {
-  background: rgba(68,138,255,0.2);
-  border: 2px dashed #A9A9A9;
-  z-index: 9;
-  transition: all .3s ease;
-  .droppable-tagline{
-  }
+	background: rgba(68,138,255,0.2);
+	border: 2px dashed #A9A9A9;
+	z-index: 9;
+	transition: all .3s ease;
+	.droppable-tagline{
+	}
 } */
 
 .dragndrop {
