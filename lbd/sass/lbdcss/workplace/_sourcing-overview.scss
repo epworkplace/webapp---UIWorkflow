@@ -1,0 +1,105 @@
+// Sourcing Overview styles
+
+.sourcing-overview-page {
+  .main-container {
+    .tab-panel-container {
+      .list-navigation {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        margin-bottom: 35px;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+
+        li {
+          height: 34px;
+          width: 50%;
+          transition: all .3s ease;
+
+          a {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+            color: $body;
+            height: 100%;
+            font-size: 14px;
+            font-weight: 600;
+          }
+
+          &.active, &:hover {
+            background: $selected;
+
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .list-nav-container {
+        padding-bottom: 500px;
+
+        .team-list-container {
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: flex;
+          flex-flow: column;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+
+          > li {
+            @include clearfix;
+
+            &[class*='-list']{
+            	margin-bottom: 10px;
+            	padding: 15px;
+	            // transition: all .3s ease;
+	            -webkit-transition: all .5s ease-out;
+						  -moz-transition: all .5s ease-out ;
+						  -ms-transition: all .5s ease-out ;
+						  -o-transition: all .5s ease-out ;
+						  transition: all .5s ease-out ;
+
+							.language-to{
+								@extend %language-breadcrum;
+								width: auto;
+								margin-right: 15px;
+							}
+							[class*='-details']{
+								[class*='-title']{
+									font-size: 14px;
+									font-weight: 600;
+									color: $main;
+								}
+								[class*='-numbers'] {
+									font-size: 12px;
+									color: $helper;
+								}
+							}
+            }
+
+            &:hover{
+            	box-shadow: inset 0px 0px 0px 2px rgba(68, 138, 255,1);
+            }
+
+          }
+        }
+      }
+    }
+
+    .main-panel-container {}
+  }
+}
