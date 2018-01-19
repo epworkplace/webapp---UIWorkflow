@@ -754,13 +754,20 @@
         .chosen-container{
           .chosen-single{
             height: 50px !important;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            position: relative;
             div{
               b{
                 background-position: 0 15px;
               }
             }
             abbr{
-              top: unset;
+              top: 18px;
               height: 12px;
               background-position-y: 1px;
               &:hover{
