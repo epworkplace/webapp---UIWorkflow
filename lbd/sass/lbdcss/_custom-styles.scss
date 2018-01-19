@@ -1296,12 +1296,13 @@ html {
                                 left: 5px;
                                 font-size: 35px;
                             }
-                            img, .card-user-empty{
-                            	position: unset;
-                            	top: unset;
-                            	left: unset;
-                            	z-index: 1;
-                            	object-fit: cover;
+
+                            img, .card-user-empty {
+                                position: unset;
+                                top: unset;
+                                left: unset;
+                                z-index: 1;
+                                object-fit: cover;
                             }
                         }
                     }
@@ -1653,11 +1654,12 @@ html {
                 height: 121px;
                 height: auto !important;
 
-                span.close{
-                	position: absolute;
-                	top: 15px;
-                	right: 15px;
+                span.close {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
                 }
+
                 .check {
                     padding: 23px 15px;
                 }
@@ -1704,22 +1706,25 @@ html {
                         right: 25px;
                     }
                 }
-                .sourcing-creation-action{
-                	display: -webkit-flex;
-                	display: -moz-flex;
-                	display: -ms-flex;
-                	display: -o-flex;
-                	display: flex;
-                	align-items: center;
-                	justify-content: space-between;
-                	a.link-to{
-                		text-decoration: underline;
-                		color: $helper;
-                		font-weight: 600;
-                		&:hover{
-                			text-decoration: none;
-                		}
-                	}
+
+                .sourcing-creation-action {
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    a.link-to {
+                        text-decoration: underline;
+                        color: $helper;
+                        font-weight: 600;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
 
@@ -4998,6 +5003,12 @@ html {
 
 .modal {
     overflow-y: scroll;
+
+    @-moz-document url-prefix() {
+        .tab-content {
+            padding-bottom: 0;
+        }
+    }
 }
 
 .content-title {
