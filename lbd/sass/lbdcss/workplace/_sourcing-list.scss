@@ -19,6 +19,10 @@
                         ul {
                             li {
                                 .card-mission {
+                                	&.quote-mission-creation{
+                                		height: auto !important;
+                                	}
+
                                     .list-head-container {
                                         width: 47%;
                                         padding-right: 0;
@@ -34,6 +38,17 @@
                                 .card {
                                     .task-price {
                                         width: 336px;
+                                        display: -webkit-flex;
+                                        display: -moz-flex;
+                                        display: -ms-flex;
+                                        display: -o-flex;
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        .turnover{
+                                        	&.draft{
+                                        		margin-top: 39px;
+                                        	}
+                                        }
                                     }
                                 }
                             }
