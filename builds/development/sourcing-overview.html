@@ -226,7 +226,7 @@
 																												<div class="col-md-12 p-0">
 																													<ul class="list-navigation">
 																														<li class="active sourcing-list-tab"><a href="javascript:;" class="">Sourcing overview</a></li>
-																														<li class="team-list-tab"><a href="javascript:;" class="">Team list</a></li>
+																														<li class="dashboard-tab"><a href="javascript:;" class="">Dashboard</a></li>
 																													</ul>
 																												</div>
 																										</div>
@@ -266,6 +266,81 @@
 																																		</span>
 																																</div>
 																														</div>
+																												</div>
+																												<div class="row">
+																													<div class="col-md-12 left-module-title">Turnover</div>
+          	                                                <div class="turnover">
+          	                                                    <div class="col-md-6 bill-box card">
+          	                                                        <div class="col-md-12 bill">
+          	                                                            <div class="amount">
+          	                                                                Theory<span>67000.00 &#8364;</span>
+          	                                                            </div>
+          	                                                            <div class="bill-desc">
+          	                                                                <p>60.00% margin</p>
+          	                                                            </div>
+          	                                                            <a href="javascript:;" data-toggle="modal" data-target="#turnover-evolution" class="bill-link">
+          	                                                                <span>View Quote</span>
+          	                                                            </a>
+          	                                                        </div>
+          	                                                    </div>
+          	                                                    <div class="col-md-6 bill-box even card">
+          	                                                        <div class="col-md-12 bill">
+          	                                                            <div class="amount">
+          	                                                                Agreed<span>71630.00 &#8364;</span>
+          	                                                            </div>
+          	                                                            <div class="bill-desc">
+          	                                                                <p>60.00% margin</p>
+          	                                                            </div>
+          	                                                            <a href="javascript:;" data-toggle="modal" data-target="#turnover-evolution" class="bill-link">
+          	                                                                <span>View Quote</span>
+          	                                                            </a>
+          	                                                        </div>
+          	                                                    </div>
+          	                                                    <div class="col-md-6 bill-box card">
+          	                                                        <div class="col-md-12 bill">
+          	                                                            <div class="amount">
+          	                                                                Real<span>0.00 &#8364;</span>
+          	                                                            </div>
+          	                                                            <div class="bill-desc">
+          	                                                                <p>-</p>
+          	                                                            </div>
+          	                                                        </div>
+          	                                                    </div>
+          	                                                    <div class="col-md-6 bill-box even card">
+          	                                                        <div class="col-md-12 bill">
+          	                                                            <div class="amount">
+          	                                                                Invoiced<span>0.00 &#8364;</span>
+          	                                                            </div>
+          	                                                            <a href="javascript:;" class="bill-link">
+          	                                                                <span>Manage</span>
+          	                                                            </a>
+          	                                                        </div>
+          	                                                    </div>
+          	                                                </div>
+          	                                                <div class="col-md-12 left-module-title">Sourcing Owner</div>
+          	                                                <div class="col-md-12 contract-owner-box card">
+          	                                                    <div class="col-md-8 contract-owner">
+          	                                                        <div class="user-image">
+          	                                                            <!-- <img class="img-circle" src="lbd/img/default-avatar.png" /> -->
+          	                                                            <div class="card-user-empty user">
+          	                                                                PC
+          	                                                            </div>
+          	                                                        </div>
+          	                                                        <div class="user-name-block">
+          	                                                            <div class="user-name">
+          	                                                                Clarisse Courtois <span>Sourcing Manager</span>
+          	                                                            </div>
+          	                                                        </div>
+          	                                                    </div>
+          	                                                    <div class="col-md-4 update-contract-owner">
+          	                                                        <span class="edit pull-right">
+																																				<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+																																				<a href="javascript:;">
+																																						Reassign
+																																				</a>
+																																		</span>
+          	                                                    </div>
+          	                                                </div>
 																												</div>
 																											</div>
 																											<div class="col-md-12 team-list-nav-container" style="display: none;">
@@ -486,7 +561,7 @@
 			$('.team-list-nav-container').hide();
 			$('.sourcing-list-nav-container').show();
 		});
-		$(document).on('click', '.list-navigation .team-list-tab' , function(e){
+		$(document).on('click', '.list-navigation .dashboard-tab' , function(e){
 			e.preventDefault();
 			$(this).parent('.list-navigation').find('li').removeClass('active');
 			$(this).addClass('active');
