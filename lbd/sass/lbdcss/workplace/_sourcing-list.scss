@@ -19,9 +19,9 @@
                         ul {
                             li {
                                 .card-mission {
-                                	&.quote-mission-creation{
-                                		height: auto !important;
-                                	}
+                                    &.quote-mission-creation {
+                                        height: auto !important;
+                                    }
 
                                     .list-head-container {
                                         width: 47%;
@@ -44,10 +44,11 @@
                                         display: -o-flex;
                                         display: flex;
                                         justify-content: flex-end;
-                                        .turnover{
-                                        	&.draft{
-                                        		margin-top: 14px;
-                                        	}
+
+                                        .turnover {
+                                            &.draft {
+                                                margin-top: 14px;
+                                            }
                                         }
                                     }
                                 }
@@ -217,4 +218,57 @@
     }
 }
 
-/* Offers Job Create Ends */
+/* Sourcing list Ends */
+
+/* Sourcing Create modal Starts */
+
+.create-sourcing-modal {
+    .modal-title {
+        font-size: 20px;
+        color: #353f53;
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    .modal-title-edit {
+        display: none;
+    }
+
+    .create-sourcing-container {
+        h4.title {
+            font-size: 16px;
+        }
+
+        .sourcing-client-module {
+            margin-bottom: 15px;
+        }
+
+        .chosen-container {
+            margin-bottom: 10px;
+        }
+
+        .chosen-container-single .chosen-single {
+            height: 38px;
+            color: #353f53;
+            font-weight: 700;
+        }
+
+        .chosen-container-single .chosen-single div b {
+            background-position: -2px 10px;
+        }
+
+        .create-client-link {
+            a {
+                text-decoration: underline;
+                color: #353f53;
+
+                &:hover, &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* Sourcing Create modal Ends */
