@@ -233,15 +233,15 @@
 
     .modal-title-edit {
         display: none;
+
+        button {
+            width: 140px !important;
+        }
     }
 
     .create-sourcing-container {
         h4.title {
             font-size: 16px;
-        }
-
-        .sourcing-client-module {
-            margin-bottom: 15px;
         }
 
         .chosen-container {
@@ -250,8 +250,6 @@
 
         .chosen-container-single .chosen-single {
             height: 38px;
-            color: #353f53;
-            font-weight: 700;
         }
 
         .chosen-container-single .chosen-single div b {
