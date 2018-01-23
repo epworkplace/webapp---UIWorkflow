@@ -60,17 +60,19 @@ $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
     @include custom-btn($no, $main);
 }
 
-.btn-disapprove {
+.btn-disapprove, .btn-delete {
     @include custom-btn($delete, $delete-hover);
 }
 
-.btn-confirm {
+.btn-confirm, .btn-pause {
     @include custom-btn($main, $not-started);
 }
 
 .btn-download {
     @include custom-btn($default-bg, $default-bg-hover);
 }
+
+
 
 .btn-yes.btn-no-final {
     @include custom-btn-no-final($yes, $yes-hover);

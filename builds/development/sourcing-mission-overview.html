@@ -717,6 +717,18 @@
                         	                </div>
                         	            </div>
                         	        </div>
+                        	        <div class="no-data-container">
+										<div class="no-data-placeholder">
+											<h2>No job yet.</h2>
+											<p>Click on the button below to create one.</p>
+											<a href="javascript:;" data-toggle="modal" data-target="#createSourcingModal" class="btn btn-fill btn-download create">
+												<span class="btn-label">
+													<i class="material-icons">add</i>
+												</span>
+												Create a job
+											</a>
+										</div>
+									</div>
                         	        <div class="content">
                         	        	<div class="sourcing-contents">
                         	        		<div class="overview-content-container">
@@ -733,63 +745,103 @@
 		                        	                                </div>
 		                        	                            </div>
 		                        	                            <div class="col-md-3 pull-right project-planner">
-		                        	                                <a href="javascript:;" class="project-plan pull-right btn btn-fill">
+		                        	                                <a href="javascript:;" class="sourcing-job-filters pull-right btn">
 		                        	                                    <span class="btn-label">
-		                        	                                        <i class="material-icons">today</i>
+		                        	                                        <i class="material-icons">tune</i>
 		                        	                                    </span>
-		                        	                                    Project Plan
+		                        	                                    Filters
 		                        	                                </a>
 		                        	                            </div>
-		                        	                            <!-- <div class="col-md-7 pull-right sort-contracts">
-		                        	                                <div class="sort">
-		                        	                                    <select name="filter" class="selectpicker">
-		                        	                                        <option>Newest First</option>
-		                        	                                        <option>Oldest First</option>
-		                        	                                    </select>
-		                        	                                </div>
-		                        	                                <a href="javascript:;" class="project-plan btn btn-fill">
-		                        	                                    <span class="btn-label">
-		                        	                                        <i class="material-icons">today</i>
-		                        	                                    </span>
-		                        	                                    Project Plan
-		                        	                                </a>
-		                        	                            </div> -->
 		                        	                            <div class="col-md-6 pull-right validate">
-		                        	                                <button class="btn btn-wd btn-confirm">Pause</button>
-		                        	                                <button class="btn btn-wd btn-yes">Close</button>
-		                        	                                <button class="btn btn-fill btn-wd delete-btn">Delete</button>
+		                        	                                <button class="btn btn-fill btn-wd btn-delete">Delete</button>
+		                        	                                <button class="btn btn-wd btn-confirm">Close</button>
+		                        	                                <button class="btn btn-wd btn-yes">Pause</button>
 		                        	                            </div>
 		                        	                        </div>
 		                        	                    </div>
 		                        	                </div>
 		                        	                <div class="col-md-12 header-bottom-panel">
-		                        	                    <div class="col-md-3 sort">
-		                        	                        <select name="filter" class="selectpicker">
-		                        	                            <option>Newest First</option>
-		                        	                            <option>Oldest First</option>
-		                        	                        </select>
-		                        	                    </div>
-		                        	                    <div class="col-md-4 select-with-label">
-		                        	                        <select name="filter" title="Select a status" multiple class="selectpicker form-control" data-actions-box="true">
-		                        	                            <option data-content="<span class='label draft paused'>Draft</span>">Draft</option>
-		                        	                            <option data-content="<span class='label bidding default'>Bidding</span>">Bidding</option>
-		                        	                            <option data-content="<span class='label correct default'>Correct</span>">Correct</option>
-		                        	                            <option data-content="<span class='label delivered delete'>Delivered</span>">Delivered</option>
-		                        	                            <option data-content="<span class='label validated ongoing'>Validated</span>">Validated</option>
-		                        	                            <option data-content="<span class='label writing default'>Writing</span>">Writing</option>
-		                        	                        </select>
-		                        	                    </div>
-		                        	                    <div class="col-md-4 pull-right related-files-search">
-		                        	                        <input type="text" placeholder="Search a file..." class="form-control">
-		                        	                    </div>
+		                        	                    <form action="" class="col-md-12 clearfix job-filter-options" style="display: none;">
+	                        	                    		<div class="col-md-12 p-20 job-filter-options-container">
+	                        	                    			<div class="row">
+	                        	                    				<div class="col-md-4 select-with-label">
+	                        	                    				    <label for="">Status</label>
+	                        	                    				    <select name="status-filter" title="Select a status" multiple class="selectpicker form-control" data-actions-box="true">
+	                        	                    				        <option data-content="<span class='label draft paused'>Draft</span>">Draft</option>
+	                        	                    				        <option data-content="<span class='label bidding default'>Ongoing</span>">Ongoing</option>
+	                        	                    				        <option data-content="<span class='label correct default'>Pause</span>">Pause</option>
+	                        	                    				        <option data-content="<span class='label delivered delete'>Done</span>">Done</option>
+	                        	                    				        <option data-content="<span class='label validated ongoing'>Deleted</span>">Deleted</option>
+	                        	                    				    </select>
+	                        	                    				</div>
+	                        	                    				<div class="col-md-4 select-with-label">
+	                        	                    				    <label for="">Type</label>
+	                        	                    				    <select name="type-filter" title="Select a type" multiple class="selectpicker form-control" data-actions-box="true">
+	                        	                    				        <option value="">Type 01</option>
+	                        	                    				        <option value="">Type 02</option>
+	                        	                    				        <option value="">Type 03</option>
+	                        	                    				        <option value="">Type 04</option>
+	                        	                    				        <option value="">Type 05</option>
+	                        	                    				    </select>
+	                        	                    				</div>
+	                        	                    				<div class="col-md-4 select-with-label">
+	                        	                    				    <label for="">Destination Language</label>
+	                        	                    				    <select name="language-filter" title="Select a language" multiple class="selectpicker form-control" data-actions-box="true">
+	                        	                    				        <option value="">Language 01</option>
+	                        	                    				        <option value="">Language 02</option>
+	                        	                    				        <option value="">Language 03</option>
+	                        	                    				        <option value="">Language 04</option>
+	                        	                    				        <option value="">Language 05</option>
+	                        	                    				    </select>
+	                        	                    				</div>
+	                        	                    			</div>
+	                        	                    			<hr class="divider-line">
+	                        	                    			<div class="row">
+	                        	                    				<div class="col-md-4 related-files-search">
+	                        	                    					<label for="">Search</label>
+	                        	                    				    <input type="text" placeholder="Search a keyword..." class="form-control">
+	                        	                    				</div>
+	                        	                    				<div class="col-md-4 sort">
+	                        	                    				    <label for="">Sort By</label>
+	                        	                    				    <select name="sort-filter" class="selectpicker">
+	                        	                    				        <option>Newest First</option>
+	                        	                    				        <option>Oldest First</option>
+	                        	                    				    </select>
+	                        	                    				</div>
+	                        	                    			</div>
+	                        	                    			<div class="row">
+	                        	                    				<div class="col-md-4">
+	                        	                    					<a href="javascript:;" class="clear-filter-options">Clear all</a>
+	                        	                    				</div>
+	                        	                    			</div>
+	                        	                    		</div>
+		                        	                    </form>
 		                        	                </div>
 		                        	                <div class="tab-content-container">
 		                        	                   <div class="col-md-12 client-content-container">
 		                        	                        <div class="row">
 		                        	                            <div class="col-md-12 add-new-card">
+		                        	                                <div class="no-cards">
+																		<div class="no-cards-placeholder">
+																			<h2>
+																			No job yet.
+																			</h2>
+																			<p>
+																				Click on the button below to create one.
+																			</p>
+																			<a href="javascript:;" class="add-card">
+				                        	                                    <i class="material-icons">add</i>
+				                        	                                    <span>Create a job</span>
+				                        	                                </a>
+																		</div>
+																	</div>
+		                        	                            </div>
+		                        	                        </div>
+		                        	                        <div class="row">
+		                        	                            <div class="col-md-12 add-new-card">
 		                        	                                <a href="javascript:;" class="add-card">
 		                        	                                    <i class="material-icons">add</i>
-		                        	                                    <span>Create a mission</span>
+		                        	                                    <span>Create a job</span>
 		                        	                                </a>
 		                        	                            </div>
 		                        	                        </div>
@@ -797,566 +849,329 @@
 		                        	                            <div class="col-md-12">
 		                        	                                <div class="card-section-list">
 		                        	                                    <ul>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card card-mission quote-mission-creation">
-		                        	                                                <div class="row">
-		                        	                                                    <div class="col-md-12">
-		                        	                                                        <div class="col-md-1 check">
-		                        	                                                            <label class="checkbox">
-		                        	                                                                <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                            </label>
-		                        	                                                        </div>
-		                        	                                                        <div class="col-md-1 list-image-container">
-		                        	                                                            <div class="list-image empty-image" id="" data-value="60"></div>
-		                        	                                                        </div>
-		                        	                                                        <div class="col-md-6 list-head-container list-head-quote-mission-creation">
-		                        	                                                            <div class="header">
-		                        	                                                                <label>Mission name</label>
-		                        	                                                                <input type="text" class="form-control" value="" placeholder="Type title here">
-		                        	                                                            </div>
-		                        	                                                        </div>
-		                        	                                                        <a class="col-md-1 pull-right delete-create-mission" href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete">
-		                        	                                                            <i class="material-icons">delete</i>
-		                        	                                                        </a>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="row">
-		                        	                                                    <div class="col-md-12 mission-type-creation">
-		                        	                                                        <div class="col-md-4">
-		                        	                                                            <select name="" class="selectpicker" title="Service">
-		                        	                                                                <option>Service 1</option>
-		                        	                                                                <option>Service 2</option>
-		                        	                                                                <option>Service 3</option>
-		                        	                                                                <option>Service 4</option>
-		                        	                                                            </select>
-		                        	                                                        </div>
-		                        	                                                        <div class="col-md-4">
-		                        	                                                            <select name="" class="selectpicker" title="Mission type">
-		                        	                                                                <option>Mission type 1</option>
-		                        	                                                                <option>Mission type 2</option>
-		                        	                                                                <option>Mission type 3</option>
-		                        	                                                                <option>Mission type 4</option>
-		                        	                                                            </select>
-		                        	                                                        </div>
-		                        	                                                        <div class="col-md-4">
-		                        	                                                            <select name="" class="selectpicker" title="Product">
-		                        	                                                                <option>Product 1</option>
-		                        	                                                                <option>Product 2</option>
-		                        	                                                                <option>Product 3</option>
-		                        	                                                                <option>Product 4</option>
-		                        	                                                            </select>
-		                        	                                                        </div>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="row">
-		                        	                                                    <div class="col-md-12">
-		                        	                                                        <div class="col-md-5">
-		                        	                                                            <div class="row">
-		                        	                                                                <div class="col-md-6">
-		                        	                                                                    <select class="chosen-default flags">
-		                        	                                                                        <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
-		                        	                                                                        <option data-img-src="lbd/img/flag/fr.gif">FR</option>
-		                        	                                                                        <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
-		                        	                                                                        <option data-img-src="lbd/img/flag/sp.gif">ES</option>
-		                        	                                                                        <option data-img-src="lbd/img/flag/pol.gif">PO</option>
-		                        	                                                                    </select>
-		                        	                                                                </div>
-		                        	                                                                <div class="col-md-6 flags-to">
-		                        	                                                                    <select class="chosen-default flags">
-		                        	                                                                        <option data-img-src="lbd/img/flag/us.gif">EN (US)</option>
-		                        	                                                                        <option data-img-src="lbd/img/flag/fr.gif">FR</option>
-		                        	                                                                        <option data-img-src="lbd/img/flag/uk.gif">EN (UK)</option>
-		                        	                                                                        <option data-img-src="lbd/img/flag/sp.gif">ES</option>
-		                        	                                                                        <option data-img-src="lbd/img/flag/pol.gif">PO</option>
-		                        	                                                                    </select>
-		                        	                                                                </div>
-		                        	                                                            </div>
-		                        	                                                        </div>
-		                        	                                                        <div class="col-md-4 pull-right">
-		                        	                                                            <button type="" data-toggle="modal" data-target="#createQuoteMissionModal" class="btn btn-fill btn-yes pull-right">Edit Details</button>
-		                        	                                                        </div>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                    </ul>
-		                        	                                </div>
-		                        	                            </div>
-		                        	                        </div>
-		                        	                        <div class="row">
-		                        	                            <div class="col-md-12">
-		                        	                                <div class="card-section-list">
-		                        	                                    <ul>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card card-mission card-draft">
-		                        	                                                <div class="col-md-1 check">
-		                        	                                                    <label class="checkbox">
-		                        	                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                    </label>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-1 list-image-container">
-		                        	                                                    <div class="list-image empty-image" id="" data-value="60"></div>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-6 list-head-container">
-		                        	                                                    <div class="header">
-		                        	                                                        <div class="status-label">
-		                        	                                                            <span class="label paused">Draft</span>
-		                        	                                                            <span class="no-dates">
-		                        	                                                                <span>Selling Prices and durations</span> are missing
-		                        	                                                            </span>
-		                        	                                                        </div>
-		                        	                                                        <strong class="primary-font">Translation articles FR to US</strong>
-		                        	                                                        <div class="brief">
-		                        	                                                            Editorial - Blog Articles - 400 Words
-		                        	                                                        </div>
-		                        	                                                        <div class="language">
-		                        	                                                            <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-		                        	                                                                <img src="lbd/img/flag/fr.gif">
-		                        	                                                        </div>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="task-price">
-		                        	                                                    <div class="col-md-2 pull-right numbers">
-		                        	                                                        20<span>articles</span>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="cta-container">
-		                        	                                                    <div class="cta">
-		                        	                                                        <ul>
-		                        	                                                            <li>
-		                        	                                                                <span data-toggle="tooltip" data-container="body" data-placement="bottom" title="Edit">
-		                        	                                                                    <a href="javascript:void(0);" data-toggle="modal" data-target="#createQuoteMissionModal"><i class="material-icons">mode_edit</i></a>
-		                        	                                                                </span>
-		                        	                                                            </li>
-		                        	                                                            <li>
-		                        	                                                                <span data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete">
-		                        	                                                                    <a href="javascript:void(0);" data-toggle="modal" data-target="#deleteConfirmation"><i class="material-icons">delete</i></a>
-		                        	                                                                </span>
-		                        	                                                            </li>
-		                        	                                                        </ul>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card card-mission">
-		                        	                                                <div class="col-md-1 check">
-		                        	                                                    <label class="checkbox">
-		                        	                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                    </label>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-1 list-image-container">
-		                        	                                                    <div class="list-image" id="missionImage1" data-value="60">
-		                        	                                                        <!-- <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%"> -->
-		                        	                                                        <div class="card-user-empty user" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
-		                        	                                                                PC
-		                        	                                                        </div>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-6 list-head-container">
-		                        	                                                    <div class="header">
-		                        	                                                        <div class="status-label">
-		                        	                                                            <span class="label not-started">Not Started</span>
-		                        	                                                            <span class="dates">
-		                        	                                                                <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span class="due">Jul 03 2019 (+3 days)</span>
-		                        	                                                            </span>
-		                        	                                                        </div>
-		                        	                                                        <strong class="primary-font">Aricles blog - FRENCH</strong>
-		                        	                                                        <div class="brief">
-		                        	                                                            Editorial - Blog Articles - 400 Words
-		                        	                                                        </div>
-		                        	                                                        <div class="language">
-		                        	                                                            <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-		                        	                                                                <img src="lbd/img/flag/fr.gif">
-		                        	                                                        </div>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="task-price">
-		                        	                                                    <div class="col-md-2 numbers">
-		                        	                                                        20<span>articles</span>
-		                        	                                                    </div>
-		                        	                                                    <div class="col-md-2 turnover">
-		                        	                                                        36,500.00 &#8364;<span>60.00 % margin</span>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="cta-container">
-		                        	                                                    <div class="cta">
-		                        	                                                        <ul>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-		                        	                                                            <li><a class="show-reassign" href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Reassign"><i class="material-icons">redo</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
-		                        	                                                            <li class="more-cta">
-		                        	                                                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_horiz</i></a>
-		                        	                                                                <ul class="dropdown-menu">
-		                        	                                                                    <li><a href="javascript:;">Project Plan</a></li>
-		                        	                                                                    <li><a href="javascript:;">Validate</a></li>
-		                        	                                                                    <li><a href="javascript:;">Duplicate</a></li>
-		                        	                                                                    <li><a href="javascript:;">Delete</li>
-		                        	                                                                </ul>
-		                        	                                                            </li>
-		                        	                                                        </ul>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card card-mission">
-		                        	                                                <div class="col-md-1 check">
-		                        	                                                    <label class="checkbox">
-		                        	                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                    </label>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-1 list-image-container">
-		                        	                                                    <div class="list-image" id="missionImage2" data-value="60">
-		                        	                                                        <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-6 list-head-container">
-		                        	                                                  <div class="header">
-		                        	                                                      <div class="status-label">
-		                        	                                                          <span class="label ongoing">Ongoing</span>
-		                        	                                                          <span class="dates">
-		                        	                                                              <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-		                        	                                                          </span>
-		                        	                                                      </div>
-		                        	                                                      <strong class="primary-font">Aricles blog - SPANISH</strong>
-		                        	                                                      <div class="brief">
-		                        	                                                          Translation - Blog Articles - 400 Words
-		                        	                                                      </div>
-		                        	                                                      <div class="language-to">
-		                        	                                                        <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-		                        	                                                            <img src="lbd/img/flag/fr.gif">
-		                        	                                                        </a>
-		                        	                                                        <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Espanol">
-		                        	                                                            <img src="lbd/img/flag/sp.gif">
-		                        	                                                        </a>
-		                        	                                                      </div>
-		                        	                                                  </div>
-		                        	                                                </div>
-		                        	                                                <div class="task-price">
-		                        	                                                    <div class="col-md-2 numbers">
-		                        	                                                        20<span>articles</span>
-		                        	                                                    </div>
-		                        	                                                    <div class="col-md-2 turnover">
-		                        	                                                        36,500.00 &#8364;<span>60.00 % margin</span>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="cta-container">
-		                        	                                                    <div class="cta">
-		                        	                                                        <ul>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-		                        	                                                            <li><a class="show-reassign" href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Reassign"><i class="material-icons">redo</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
-		                        	                                                            <li class="more-cta">
-		                        	                                                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_horiz</i></a>
-		                        	                                                                <ul class="dropdown-menu">
-		                        	                                                                    <li><a href="javascript:;">Project Plan</a></li>
-		                        	                                                                    <li><a href="javascript:;">Validate</a></li>
-		                        	                                                                    <li><a href="javascript:;">Duplicate</a></li>
-		                        	                                                                    <li> <a href="javascript:;">Delete</li>
-		                        	                                                                </ul>
-		                        	                                                            </li>
-		                        	                                                        </ul>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card card-mission">
-		                        	                                                <div class="col-md-1 check">
-		                        	                                                    <label class="checkbox">
-		                        	                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                    </label>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-1 list-image-container">
-		                        	                                                    <div class="list-image" id="missionImage3" data-value="60">
-		                        	                                                        <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-6 list-head-container">
-		                        	                                                        <div class="header">
-		                        	                                                            <div class="status-label">
-		                        	                                                                <span class="label to-validate">To Validate</span>
-		                        	                                                                <span class="dates">
-		                        	                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-		                        	                                                                </span>
-		                        	                                                            </div>
-		                        	                                                            <strong class="primary-font">Aricles blog - ENGLISH (US)</strong>
-		                        	                                                            <div class="brief">
-		                        	                                                                Translation - Blog Articles - 400 Words
-		                        	                                                            </div>
-		                        	                                                            <div class="language-to">
-		                        	                                                              <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-		                        	                                                                  <img src="lbd/img/flag/fr.gif">
-		                        	                                                              </a>
-		                        	                                                              <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="English (US)">
-		                        	                                                                  <img src="lbd/img/flag/us.gif">
-		                        	                                                              </a>
-		                        	                                                            </div>
-		                        	                                                        </div>
-		                        	                                                    </a>
-		                        	                                                </div>
-		                        	                                                <div class="task-price">
-		                        	                                                    <div class="col-md-2 numbers">
-		                        	                                                        20<span>articles</span>
-		                        	                                                    </div>
-		                        	                                                    <div class="col-md-2 turnover">
-		                        	                                                        36,500.00 &#8364;<span>60.00 % margin</span>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="cta-container">
-		                        	                                                    <div class="cta">
-		                        	                                                        <ul>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-		                        	                                                            <li><a class="show-reassign" href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Reassign"><i class="material-icons">redo</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
-		                        	                                                            <li class="more-cta">
-		                        	                                                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_horiz</i></a>
-		                        	                                                                <ul class="dropdown-menu">
-		                        	                                                                    <li><a href="javascript:;">Project Plan</a></li>
-		                        	                                                                    <li><a href="javascript:;">Validate</a></li>
-		                        	                                                                    <li><a href="javascript:;">Duplicate</a></li>
-		                        	                                                                    <li> <a href="javascript:;">Delete</li>
-		                        	                                                                </ul>
-		                        	                                                            </li>
-		                        	                                                        </ul>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card">
-		                        	                                                <div class="col-md-1 check">
-		                        	                                                    <label class="checkbox">
-		                        	                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                    </label>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-1 list-image-container">
-		                        	                                                    <div class="list-image" id="missionImage4" data-value="60">
-		                        	                                                        <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-6 list-head-container">
-		                        	                                                        <div class="header">
-		                        	                                                            <div class="status-label">
-		                        	                                                                <span class="label paused">Paused</span>
-		                        	                                                                <span class="dates">
-		                        	                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-		                        	                                                                </span>
-		                        	                                                            </div>
-		                        	                                                            <strong class="primary-font">Technical optimization 2019 Q1</strong>
-		                        	                                                            <div class="brief">
-		                        	                                                                Mission Task
-		                        	                                                            </div>
-		                        	                                                        </div>
-		                        	                                                    </a>
-		                        	                                                </div>
-		                        	                                                <div class="task-price">
-		                        	                                                    <div class="col-md-2 numbers">
-		                        	                                                        1<span>task</span>
-		                        	                                                    </div>
-		                        	                                                    <div class="col-md-2 turnover">
-		                        	                                                        36,500.00 &#8364;<span>60.00 % margin</span>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="cta-container">
-		                        	                                                    <div class="cta">
-		                        	                                                        <ul>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Pause"><i class="material-icons">pause</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Close"><i class="material-icons">close</i></a></li>
-		                        	                                                            <li><a class="show-reassign" href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Reassign"><i class="material-icons">redo</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
-		                        	                                                            <li>
-		                        	                                                                <span data-toggle="modal" data-target="#deleteConfirmation">
-		                        	                                                                    <a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
-		                        	                                                                <span>
-		                        	                                                            </li>
-		                        	                                                        </ul>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card card-mission">
-		                        	                                                <div class="col-md-1 check">
-		                        	                                                    <label class="checkbox">
-		                        	                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                    </label>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-1 list-image-container">
-		                        	                                                    <div class="list-image" id="missionImage5" data-value="60">
-		                        	                                                        <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-6 list-head-container">
-		                        	                                                        <div class="header">
-		                        	                                                            <div class="status-label">
-		                        	                                                                <span class="label validate">Validate</span>
-		                        	                                                                <span class="dates">
-		                        	                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-		                        	                                                                </span>
-		                        	                                                            </div>
-		                        	                                                            <strong class="primary-font">Adobe - Brand Content</strong>
-		                        	                                                            <div class="brief">
-		                        	                                                                Editorial - Blog Articles - 400 Words
-		                        	                                                            </div>
-		                        	                                                            <div class="language">
-		                        	                                                                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-		                        	                                                                    <img src="lbd/img/flag/fr.gif">
-		                        	                                                            </div>
-		                        	                                                        </div>
-		                        	                                                    </a>
-		                        	                                                </div>
-		                        	                                                <div class="task-price">
-		                        	                                                    <div class="col-md-2 numbers">
-		                        	                                                        20<span>articles</span>
-		                        	                                                    </div>
-		                        	                                                    <div class="col-md-2 turnover">
-		                        	                                                        36,500.00 &#8364;<span>60.00 % margin</span>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="cta-container">
-		                        	                                                    <div class="cta">
-		                        	                                                        <ul>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Pause"><i class="material-icons">pause</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Close"><i class="material-icons">close</i></a></li>
-		                        	                                                            <li><a class="show-reassign" href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Reassign"><i class="material-icons">redo</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
-		                        	                                                            <li>
-		                        	                                                                <span data-toggle="modal" data-target="#deleteConfirmation">
-		                        	                                                                    <a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
-		                        	                                                                <span>
-		                        	                                                            </li>
-		                        	                                                        </ul>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card card-mission">
-		                        	                                                <div class="col-md-1 check">
-		                        	                                                    <label class="checkbox">
-		                        	                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                    </label>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-1 list-image-container">
-		                        	                                                    <div class="list-image" id="missionImage6" data-value="60">
-		                        	                                                        <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-6 list-head-container">
-		                        	                                                        <div class="header">
-		                        	                                                            <div class="status-label">
-		                        	                                                                <span class="label closed">Closed</span>
-		                        	                                                                <span class="dates">
-		                        	                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-		                        	                                                                </span>
-		                        	                                                            </div>
-		                        	                                                            <strong class="primary-font">Adobe - Brand Content</strong>
-		                        	                                                            <div class="brief">
-		                        	                                                                Editorial - Blog Articles - 400 Words
-		                        	                                                            </div>
-		                        	                                                            <div class="language-to">
-		                        	                                                              <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-		                        	                                                                  <img src="lbd/img/flag/fr.gif">
-		                        	                                                              </a>
-		                        	                                                              <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Espanol">
-		                        	                                                                  <img src="lbd/img/flag/sp.gif">
-		                        	                                                              </a>
-		                        	                                                            </div>
-		                        	                                                        </div>
-		                        	                                                    </a>
-		                        	                                                </div>
-		                        	                                                <div class="task-price">
-		                        	                                                    <div class="col-md-2 numbers">
-		                        	                                                        20<span>articles</span>
-		                        	                                                    </div>
-		                        	                                                    <div class="col-md-2 turnover">
-		                        	                                                        36,500.00 &#8364;<span>60.00 % margin</span>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="cta-container">
-		                        	                                                    <div class="cta">
-		                        	                                                        <ul>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Pause"><i class="material-icons">pause</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Close"><i class="material-icons">close</i></a></li>
-		                        	                                                            <li><a class="show-reassign" href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Reassign"><i class="material-icons">redo</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
-		                        	                                                            <li>
-		                        	                                                                <span data-toggle="modal" data-target="#deleteConfirmation">
-		                        	                                                                    <a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
-		                        	                                                                <span>
-		                        	                                                            </li>
-		                        	                                                        </ul>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                        <li>
-		                        	                                            <div class="col-md-12 card card-mission">
-		                        	                                                <div class="col-md-1 check">
-		                        	                                                    <label class="checkbox">
-		                        	                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-		                        	                                                    </label>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-1 list-image-container">
-		                        	                                                    <div class="list-image" id="missionImage7" data-value="60">
-		                        	                                                        <img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="col-md-6 list-head-container">
-		                        	                                                        <div class="header">
-		                        	                                                            <div class="status-label">
-		                        	                                                                <span class="label delete">Deleted</span>
-		                        	                                                                <span class="dates">
-		                        	                                                                    <span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
-		                        	                                                                </span>
-		                        	                                                            </div>
-		                        	                                                            <strong class="primary-font">Adobe - Brand Content</strong>
-		                        	                                                            <div class="brief">
-		                        	                                                                Editorial - Blog Articles - 400 Words
-		                        	                                                            </div>
-		                        	                                                            <div class="language-to">
-		                        	                                                              <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-		                        	                                                                  <img src="lbd/img/flag/fr.gif">
-		                        	                                                              </a>
-		                        	                                                              <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Espanol">
-		                        	                                                                  <img src="lbd/img/flag/sp.gif">
-		                        	                                                              </a>
-		                        	                                                            </div>
-		                        	                                                        </div>
-		                        	                                                    </a>
-		                        	                                                </div>
-		                        	                                                <div class="task-price">
-		                        	                                                    <div class="col-md-2 numbers">
-		                        	                                                        20<span>articles</span>
-		                        	                                                    </div>
-		                        	                                                    <div class="col-md-2 turnover">
-		                        	                                                        36,500.00 &#8364;<span>60.00 % margin</span>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                                <div class="cta-container">
-		                        	                                                    <div class="cta">
-		                        	                                                        <ul>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Calendar"><i class="material-icons">today</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Pause"><i class="material-icons">pause</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Close"><i class="material-icons">close</i></a></li>
-		                        	                                                            <li><a class="show-reassign" href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Reassign"><i class="material-icons">redo</i></a></li>
-		                        	                                                            <li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
-		                        	                                                            <li>
-		                        	                                                                <span data-toggle="modal" data-target="#deleteConfirmation">
-		                        	                                                                    <a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
-		                        	                                                                <span>
-		                        	                                                            </li>
-		                        	                                                        </ul>
-		                        	                                                    </div>
-		                        	                                                </div>
-		                        	                                            </div>
-		                        	                                        </li>
-		                        	                                    </ul>
+																			<li>
+																				<div class="col-md-12 card card-mission">
+																					<div class="col-md-1 check">
+	                                                                                    <label class="checkbox">
+	                                                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+	                                                                                    </label>
+	                                                                                </div>
+																					<div class="col-md-1 list-image-container">
+																						<div class="list-image" id="missionImage8" data-value="60">
+																							<img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+																						</div>
+																					</div>
+																					<div class="col-md-6 list-head-container">
+																						<div class="header">
+																							<div class="status-label">
+																								<span class="label not-started">Draft</span>
+																								<span class="dates">
+																									<span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
+																								</span>
+																							</div>
+																							<strong class="primary-font">Aricles blog - FRENCH</strong>
+																							<div class="row">
+																								<div class="col-md-4 language">
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
+																										<img src="lbd/img/flag/fr.gif">
+																									</a>
+																								</div>
+																								<div class="col-md-8 test-numbers">
+																									<i class="material-icons"  data-toggle="tooltip" data-container="body" data-placement="bottom" title="Public">language</i> - Quizz- Test
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="task-price">
+																						<div class="col-md-2 numbers">
+																							0/40<span>application</span>
+																						</div>
+																						<div class="col-md-2 numbers">
+																							-<span>teamlist</span>
+																						</div>
+																						<div class="col-md-2 turnover">
+																							-<span>bidding</span>
+																						</div>
+																					</div>
+																					<div class="cta-container">
+																						<div class="cta">
+																							<ul>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Settings"><i class="material-icons">settings</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Link"><i class="material-icons">insert_link</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Copy"><i class="material-icons">content_copy</i></a></li>
+																								<li>
+																									<span data-toggle="modal" data-target="#deleteConfirmation">
+																										<a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+																										<span>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																				</div>
+																			</li>
+																			<li>
+																				<div class="col-md-12 card card-mission">
+																					<div class="col-md-1 check">
+	                                                                                    <label class="checkbox">
+	                                                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+	                                                                                    </label>
+	                                                                                </div>
+																					<div class="col-md-1 list-image-container">
+																						<div class="list-image" id="missionImage188" data-value="60">
+																							<img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+																						</div>
+																					</div>
+																					<div class="col-md-6 list-head-container">
+																						<div class="header">
+																							<div class="status-label">
+																								<span class="label to-validate">Applicat.</span>
+																								<span class="timer" data-toggle="tooltip" data-container="body" data-placement="top" title="Oct 31 2019 > Nov 03 2019">
+																									<i aria-hidden="true" class="fa fa-clock-o"></i> 1d - 12:18:16
+																								</span>
+																							</div>
+																							<strong class="primary-font">Gaming experts - Writer</strong>
+																							<div class="row">
+																								<div class="col-md-4 language-to">
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
+																										<img src="lbd/img/flag/fr.gif">
+																									</a>
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Espanol">
+																										<img src="lbd/img/flag/sp.gif">
+																									</a>
+																								</div>
+																								<div class="col-md-8 test-numbers">
+																									<i class="material-icons" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Public">language</i> - 20 quizz succeded - 10 tests
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="task-price">
+																						<div class="task-price">
+																							<div class="col-md-2 numbers">
+																								35/40<span>application</span>
+																							</div>
+																							<div class="col-md-2 numbers">
+																								7/15<span>teamlist</span>
+																							</div>
+																							<div class="col-md-2 turnover">
+																								8.58 - 9.25 &#8364;<span>bidding</span>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="cta-container">
+																						<div class="cta">
+																							<ul>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Settings"><i class="material-icons">settings</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Link"><i class="material-icons">insert_link</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Copy"><i class="material-icons">content_copy</i></a></li>
+																								<li>
+																									<span data-toggle="modal" data-target="#deleteConfirmation">
+																										<a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+																										<span>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																				</div>
+																			</li>
+																			<li>
+																				<div class="col-md-12 card card-mission">
+																					<div class="col-md-1 check">
+	                                                                                    <label class="checkbox">
+	                                                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+	                                                                                    </label>
+	                                                                                </div>
+																					<div class="col-md-1 list-image-container">
+																						<div class="list-image" id="missionImage189" data-value="60">
+																							<img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+																						</div>
+																					</div>
+																					<div class="col-md-6 list-head-container">
+																						<div class="header">
+																							<div class="status-label">
+																								<span class="label to-validate">Applicat.</span>
+																								<span class="timer" data-toggle="tooltip" data-container="body" data-placement="top" title="Oct 31 2019 > Nov 03 2019">
+																									<i aria-hidden="true" class="fa fa-clock-o"></i> 1d - 12:18:16
+																								</span>
+																							</div>
+																							<strong class="primary-font">Gaming experts - Writer</strong>
+																							<div class="row">
+																								<div class="col-md-4 language-to">
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
+																										<img src="lbd/img/flag/fr.gif">
+																									</a>
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Espanol">
+																										<img src="lbd/img/flag/sp.gif">
+																									</a>
+																								</div>
+																								<div class="col-md-8 test-numbers">
+																									<i class="material-icons" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Public">language</i> - 20 quizz succeded - 10 tests
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="task-price">
+																						<div class="task-price">
+																							<div class="col-md-2 numbers">
+																								35/40<span>application</span>
+																							</div>
+																							<div class="col-md-2 numbers">
+																								7/15<span>teamlist</span>
+																							</div>
+																							<div class="col-md-2 turnover">
+																								8.58 - 9.25 &#8364;<span>bidding</span>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="cta-container">
+																						<div class="cta">
+																							<ul>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Settings"><i class="material-icons">settings</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Link"><i class="material-icons">insert_link</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Copy"><i class="material-icons">content_copy</i></a></li>
+																								<li>
+																									<span data-toggle="modal" data-target="#deleteConfirmation">
+																										<a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+																										<span>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																				</div>
+																			</li>
+																			<li>
+																				<div class="col-md-12 card card-mission">
+																					<div class="col-md-1 check">
+	                                                                                    <label class="checkbox">
+	                                                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+	                                                                                    </label>
+	                                                                                </div>
+																					<div class="col-md-1 list-image-container">
+																						<div class="list-image" id="missionImage288" data-value="60">
+																							<img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+																						</div>
+																					</div>
+																					<div class="col-md-6 list-head-container">
+																						<div class="header">
+																							<div class="status-label">
+																								<span class="label validate">Select.</span>
+																								<span class="timer" data-toggle="tooltip" data-container="body" data-placement="top" title="Oct 31 2019 > Nov 03 2019">
+																									<i aria-hidden="true" class="fa fa-clock-o"></i> 1d - 12:18:16
+																								</span>
+																							</div>
+																							<strong class="primary-font">Gaming experts - Writer</strong>
+																							<div class="row">
+																								<div class="col-md-4 language-to">
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
+																										<img src="lbd/img/flag/fr.gif">
+																									</a>
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Espanol">
+																										<img src="lbd/img/flag/sp.gif">
+																									</a>
+																								</div>
+																								<div class="col-md-8 test-numbers">
+																									<i class="material-icons" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Public">language</i> - 20 quizz succeded - 10 tests
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="task-price">
+																						<div class="task-price">
+																							<div class="col-md-2 numbers">
+																								35/40<span>application</span>
+																							</div>
+																							<div class="col-md-2 numbers">
+																								18/20<span>teamlist</span>
+																							</div>
+																							<div class="col-md-2 turnover">
+																								11.10 - 13.98 &#8364;<span>bidding</span>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="cta-container">
+																						<div class="cta">
+																							<ul>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Settings"><i class="material-icons">settings</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Link"><i class="material-icons">insert_link</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Team List"><i class="material-icons">list</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Copy"><i class="material-icons">content_copy</i></a></li>
+																								<li>
+																									<span data-toggle="modal" data-target="#deleteConfirmation">
+																										<a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+																										<span>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																				</div>
+																			</li>
+																			<li>
+																				<div class="col-md-12 card card-mission">
+																					<div class="col-md-1 check">
+	                                                                                    <label class="checkbox">
+	                                                                                        <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+	                                                                                    </label>
+	                                                                                </div>
+																					<div class="col-md-1 list-image-container">
+																						<div class="list-image" id="missionImage388" data-value="60">
+																							<img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+																						</div>
+																					</div>
+																					<div class="col-md-6 list-head-container">
+																						<div class="header">
+																							<div class="status-label">
+																								<span class="label closed">Completed</span>
+																								<span class="dates">
+																									<span>May 01 2019</span><i class="material-icons">keyboard_arrow_right</i><span>Jul 03 2019</span>
+																								</span>
+																							</div>
+																							<strong class="primary-font">Gaming experts - Writer</strong>
+																							<div class="row">
+																								<div class="col-md-4 language-to">
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
+																										<img src="lbd/img/flag/fr.gif">
+																									</a>
+																									<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Espanol">
+																										<img src="lbd/img/flag/sp.gif">
+																									</a>
+																								</div>
+																								<div class="col-md-8 test-numbers">
+																									<i class="material-icons" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Public">language</i> - 20 quizz succeded - 10 tests
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="task-price">
+																						<div class="task-price">
+																							<div class="col-md-2 numbers">
+																								25/40<span>application</span>
+																							</div>
+																							<div class="col-md-2 numbers">
+																								15/15<span>teamlist</span>
+																							</div>
+																							<div class="col-md-2 turnover">
+																								10.25 - 14.95 &#8364;<span>bidding</span>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="cta-container">
+																						<div class="cta">
+																							<ul>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Settings"><i class="material-icons">settings</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Link"><i class="material-icons">insert_link</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Team List"><i class="material-icons">list</i></a></li>
+																								<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Copy"><i class="material-icons">content_copy</i></a></li>
+																								<li>
+																									<span data-toggle="modal" data-target="#deleteConfirmation">
+																										<a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a>
+																										<span>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																				</div>
+																			</li>
+																		</ul>
 		                        	                                </div>
 		                        	                            </div>
 		                        	                        </div>
@@ -2622,87 +2437,6 @@
     });
 </script>
 
-<script type="text/javascript">
-
-    // Browse mission modal list selection
-    $(document).on('click', ".quote-select-radio .radio", function(e){
-      var listContainer = '.quote-list-container';
-      var thisSiblings = $(this).parents('.quote-list-item').siblings();
-      var thisListItem = $(this).parents('.quote-list-item');
-      var checkedRadio = thisListItem.find('.radio');
-        if ($(this).hasClass('checked')) {
-            thisListItem.addClass('selected-in-list');
-            thisSiblings.removeClass('selected-in-list');
-        } else {
-            thisSiblings.removeClass('selected-in-list');
-            thisListItem.addClass('selected-in-list');
-        }
-    });
-
-
-  (function(window) {
-    function triggerCallback(e, callback) {
-      if(!callback || typeof callback !== 'function') {
-        return;
-      }
-      var files;
-      if(e.dataTransfer) {
-        files = e.dataTransfer.files;
-      } else if(e.target) {
-        files = e.target.files;
-      }
-      callback.call(null, files);
-    }
-    function makeDroppable(ele, callback) {
-      var input = document.createElement('input');
-      input.setAttribute('type', 'file');
-      input.setAttribute('multiple', true);
-      input.style.display = 'none';
-      input.addEventListener('change', function(e) {
-        triggerCallback(e, callback);
-      });
-      ele.appendChild(input);
-
-      ele.addEventListener('dragover', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        ele.classList.add('dragover');
-      });
-
-      ele.addEventListener('dragleave', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        ele.classList.remove('dragover');
-      });
-
-      ele.addEventListener('drop', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        ele.classList.remove('dragover');
-        triggerCallback(e, callback);
-      });
-
-      /*ele.addEventListener('click', function() {
-        input.value = null;
-        input.click();
-      });*/
-    }
-    window.makeDroppable = makeDroppable;
-  })(this);
-  (function(window) {
-    makeDroppable(window.document.querySelector('.make-droppable'), function(files) {
-      console.log(files);
-      var output = document.querySelector('.output');
-      output.innerHTML = '';
-      for(var i=0; i<files.length; i++) {
-        /*if(files[i].type.indexOf('image/') === 0) {
-          output.innerHTML += '<img width="200" src="' + URL.createObjectURL(files[i]) + '" />';
-        }*/
-        output.innerHTML += '<strong class="primary-font output"><i class="material-icons">insert_drive_file</i>'+files[i].name+'</strong>';
-      }
-    });
-  })(this);
-</script>
 
 <script>
 // Card-mission click to open Specific mission
@@ -2760,12 +2494,18 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
                 lessLink: '<a href="#" class="morelink">See Less</a>'
             });
     });
+    /*Read more / Read less ends */
 
 });
 </script>
-<!-- Toggeling Sourcing overview and Dashboard -->
+
+
+
 <script type="text/javascript">
+
 	$(document).ready(function() {
+
+/*Toggeling Sourcing overview and Dashboard*/
 		$(document).on('click', '.list-navigation .sourcing-list-tab' , function(e){
 			e.preventDefault();
 			$(this).parent('.list-navigation').find('li').removeClass('active');
@@ -2780,7 +2520,20 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
 			$('.sourcing-list-nav-container').hide();
 			$('.team-list-nav-container').show();
 		});
+/*Toggeling Sourcing overview and Dashboard ends*/
+
+/*Show filter options*/
+		$(document).on('click', '.sourcing-job-filters' , function(e){
+			e.preventDefault();
+			$(this).toggleClass('open').find('i').toggleClass('rotate90');
+			$('.job-filter-options').slideToggle(200);
+		});
+/*Show filter options ends*/
+
 	});
+
+
+
 </script>
 
 </body>

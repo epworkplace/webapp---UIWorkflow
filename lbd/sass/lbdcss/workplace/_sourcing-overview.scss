@@ -100,6 +100,63 @@
       }
     }
 
-    .main-panel-container {}
+    .main-panel-container {
+			.sourcing-contents{
+				.overview-content-container{
+					.job-filter-options{
+						.job-filter-options-container{
+							background: $highlight-04;
+							label{
+								text-transform: uppercase;
+							}
+							hr{
+								border-top: 2px solid $divider-02;
+							}
+							.clear-filter-options{
+								color: $main;
+								font-weight: 700;
+								text-decoration: underline;
+								display: inline-block;
+								margin-top: 10px;
+								&:hover{
+									text-decoration: none;
+								}
+							}
+						}
+					}
+					.client-content-container{
+						.add-new-card{
+							.no-cards{
+								@extend %no-cards;
+							}
+						}
+						.card-section-list {
+							ul {
+								li {
+									.card {
+										.task-price{
+											width: 336px;
+										}
+										.list-head-container{
+											width: 43%;
+									    padding-right: 0;
+									    .header{
+									    	.language{
+													width: 18.333%;
+									    	}
+									    	.language-to{
+													width: 31.333%;
+									    	}
+									    }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+    }
   }
 }

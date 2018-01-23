@@ -928,6 +928,17 @@ html {
                                                 @include clearfix;
 
                                                 padding-bottom: 20px;
+                                                [class*='-job-filters']{
+                                                	&.open{
+                                                		color: $selected;
+                                                		i.rotate90{
+                                                			transform: rotate(90deg);
+                                                		}
+                                                	}
+                                                	.btn-label{
+                                                		margin-right: 5px;
+                                                	}
+                                                }
                                             }
 
                                             .select-all-container {
