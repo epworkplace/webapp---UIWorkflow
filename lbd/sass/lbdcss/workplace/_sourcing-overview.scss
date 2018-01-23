@@ -160,3 +160,9 @@
     }
   }
 }
+
+/* Modal styles */
+.edit-description-modal{
+	@extend %modal;
+}
+/* Modal styles ends*/

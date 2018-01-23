@@ -174,7 +174,7 @@
 			            	                                            <div class="col-md-12">
 			            	                                                <div class="info-content card">
 			            	                                                    <div class="display-content clearfix">
-			            	                                                        <span class="edit" data-toggle="modal" data-target="#edit-overview-modal">
+			            	                                                        <span class="edit" data-toggle="modal" data-target="#edit-description-modal">
 			            	                                                            <i class="material-icons">create</i>
 			            	                                                            <a href="javascript:;">
 			            	                                                                Edit
@@ -191,12 +191,12 @@
 			            	                                                <div class="turnover">
 			            	                                                    <div class="col-md-6 bill-box card">
 			            	                                                        <div class="col-md-12 bill">
-				            	                                                        <!-- <span class="edit" data-toggle="" data-target="">
+				            	                                                        <span class="edit" data-toggle="" data-target="">
 				            	                                                            <i class="material-icons">create</i>
 				            	                                                            <a href="javascript:;">
 				            	                                                                Edit
 				            	                                                            </a>
-				            	                                                        </span> -->
+				            	                                                        </span>
 			            	                                                            <div class="amount">
 			            	                                                                Sourcing Budget<span>67000.00 &#8364;</span>
 			            	                                                            </div>
@@ -220,6 +220,12 @@
 			            	                                                    </div>
 			            	                                                    <div class="col-md-6 bill-box card">
 			            	                                                        <div class="col-md-12 bill">
+			            	                                                        	<span class="edit" data-toggle="" data-target="">
+				            	                                                            <i class="material-icons">create</i>
+				            	                                                            <a href="javascript:;">
+				            	                                                                Edit
+				            	                                                            </a>
+				            	                                                        </span>
 			            	                                                            <div class="amount">
 			            	                                                                Theorical Cost<span>1000.00 &#8364;</span>
 			            	                                                            </div>
@@ -227,6 +233,12 @@
 			            	                                                    </div>
 			            	                                                    <div class="col-md-6 bill-box even card">
 			            	                                                        <div class="col-md-12 bill">
+			            	                                                        	<span class="edit" data-toggle="" data-target="">
+				            	                                                            <i class="material-icons">create</i>
+				            	                                                            <a href="javascript:;">
+				            	                                                                Edit
+				            	                                                            </a>
+				            	                                                        </span>
 			            	                                                            <div class="amount">
 			            	                                                                Margin<span>66.67 %</span>
 			            	                                                            </div>
@@ -234,12 +246,12 @@
 			            	                                                    </div>
 			            	                                                    <div class="col-md-12 bill-box even one card">
 			            	                                                        <div class="col-md-12 bill">
-			            	                                                        	<!-- <span class="edit" data-toggle="" data-target="">
+			            	                                                        	<span class="edit" data-toggle="" data-target="">
 				            	                                                            <i class="material-icons">create</i>
 				            	                                                            <a href="javascript:;">
 				            	                                                                Edit
 				            	                                                            </a>
-				            	                                                        </span> -->
+				            	                                                        </span>
 			            	                                                            <div class="amount">
 			            	                                                                Dashboard<span class="df-ac-jc dashboard-block"><i class="fa fa-question" aria-hidden="true"></i></span>
 			            	                                                            </div>
@@ -714,24 +726,6 @@
 		                        	                   <div class="col-md-12 client-content-container">
 		                        	                        <div class="row">
 		                        	                            <div class="col-md-12 add-new-card">
-		                        	                                <div class="no-cards">
-																		<div class="no-cards-placeholder">
-																			<h2>
-																			No job yet.
-																			</h2>
-																			<p>
-																				Click on the button below to create one.
-																			</p>
-																			<a href="javascript:;" class="add-card">
-				                        	                                    <i class="material-icons">add</i>
-				                        	                                    <span>Create a job</span>
-				                        	                                </a>
-																		</div>
-																	</div>
-		                        	                            </div>
-		                        	                        </div>
-		                        	                        <div class="row">
-		                        	                            <div class="col-md-12 add-new-card">
 		                        	                                <a href="javascript:;" class="add-card">
 		                        	                                    <i class="material-icons">add</i>
 		                        	                                    <span>Create a job</span>
@@ -1093,7 +1087,7 @@
 <!-- turnover evolution modal -->
 <!-- @include _partials/_contract-turnover-evolution-modal.html -->
 <!-- Edit Overview modal -->
-<!-- @include _partials/_contract-edit-overview-modal.html -->
+<!-- @include _partials/_sourcing-edit-description-modal.html -->
 <!-- Quote Create Quote mission modal -->
 <!-- @include _partials/_quote-create-quote-mission-modal.html -->
 <!-- Quote Browse mission modal -->
@@ -1267,6 +1261,13 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
 			$('.job-filter-options').slideToggle(200);
 		});
 /*Show filter options ends*/
+/*Reset job filter options*/
+		$(document).on('click', '.clear-filter-options' , function(e){
+			e.preventDefault();
+			$(this).closest('form').reset()
+								   .find('.selectpicker').selectpicker('deselectAll');
+		});
+/*Reset job filter options ends*/
 
 	});
 
