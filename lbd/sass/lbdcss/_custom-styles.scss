@@ -6125,7 +6125,7 @@ html {
                         transition: all .3s ease;
                         position: absolute;
                         right: 20px;
-                        top: 20 px;
+                        top: 10px;
                         z-index: 9;
                     }
 
@@ -6141,6 +6141,12 @@ html {
                             margin: 0 5px;
                             font-size: 16px;
                         }
+                    }
+                    .section-title{
+                    	color: $body;
+                    	font-weight: 600;
+                    	text-transform: uppercase;
+                    	font-size: 14px;
                     }
 
                     .overview {
@@ -6605,6 +6611,13 @@ html {
                 @include clearfix;
 
                 margin-bottom: 10px;
+                width: 100%;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                flex-flow: row wrap;
 
                 .bill-box {
                     @include clearfix;
@@ -6613,7 +6626,12 @@ html {
                     margin-bottom: 10px;
                     margin-right: 10px;
                     width: 48.555%;
-                    height: 132px;
+                    height: auto;
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
 
                     .bill {
                         .amount {
@@ -6627,6 +6645,12 @@ html {
                                 display: block;
                                 font-size: 20px;
                                 color: #353f53;
+                                &.dashboard-block{
+                                	padding: 50px 0;
+                                	i{
+                                		font-size: 24px;
+                                	}
+                                }
                             }
                         }
 
@@ -6657,6 +6681,15 @@ html {
                 .bill-box.one {
                     width: 100%;
                 }
+            }
+
+            .dashboard-description{
+            	@include clearfix;
+            	display: -webkit-flex;
+            	display: -moz-flex;
+            	display: -ms-flex;
+            	display: -o-flex;
+            	display: flex;
             }
 
             .contract-tags {

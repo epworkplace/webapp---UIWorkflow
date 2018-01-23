@@ -94,7 +94,7 @@
                             padding: 0;
                             float: right;
 
-                            .end-date-container {
+                            .end-date-container, .jobs-completed-container {
                                 padding: 0;
 
                                 a.end-date {
@@ -168,18 +168,27 @@
                                     li {
                                         a {
                                             padding-top: 4px;
-                                            margin-top: 0;
+                                            padding: 15px;
+                                            margin: 0;
                                             color: #7d889a;
+                                            display: -webkit-flex;
+                                            display: -moz-flex;
+                                            display: -ms-flex;
+                                            display: -o-flex;
+                                            display: flex;
+                                            align-items: center;
 
                                             i {
                                                 position: relative;
-                                                top: 7px;
+                                                // top: 7px;
                                                 margin-right: 5px;
+                                                // font-size: 24px;
                                             }
 
                                             &:hover {
                                                 color: #fff;
                                                 background: #448AFF;
+                                                border-radius: 0;
                                             }
                                         }
                                     }
