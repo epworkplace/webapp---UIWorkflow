@@ -287,10 +287,6 @@
 																	<option value="">Per Owner</option>
 																</select> -->
 															</div>
-															<div class="col-md-6 pull-right validate">
-																<button class="btn btn-fill btn-wd validate-btn">Validate</button>
-																<button class="btn btn-fill btn-wd delete-btn">Delete</button>
-															</div>
 														</div>
 														<div class="tab-content-container">
 															<div class="col-md-12 client-content-container">
@@ -301,6 +297,12 @@
 																		</a>
 																	</div>
 																</div>
+																<div class="no-quote-mission-container">
+		                                <div class="no-quote-mission-info">
+		                                    <h4>No Sourcing yet</h4>
+		                                    <p>Get started by creating the first one</p>
+		                                </div>
+		                            </div>
 															</div>
 															<div class="col-md-12 client-content-container">
 																<div class="row">
@@ -345,6 +347,105 @@
 																							</div>
 																							<div class="col-md-2 turnover draft">
 																								2000.50 €
+																							</div>
+																						</div>
+																						<div class="cta-container">
+																							<div class="cta">
+																								<ul>
+																									<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Edit"><i class="material-icons">edit</i></a></li>
+																									<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Pause"><i class="material-icons">pause</i></a></li>
+																								</ul>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="col-md-12 card card-contract">
+																						<div class="col-md-1 list-image-container">
+																							<div class="list-image" id="missionImage014" data-value="60">
+																								<img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+																							</div>
+																						</div>
+																						<div class="col-md-6 list-head-container">
+																							<div class="header">
+																								<div class="status-label">
+																									<span class="label not-started">Draft</span>
+																								</div>
+																								<strong class="primary-font">Aricles blog - FRENCH</strong>
+																							</div>
+																						</div>
+																						<div class="task-price">
+																							<div class="col-md-2 numbers">
+																								3<span>Jobs</span>
+																							</div>
+																							<div class="col-md-2 turnover draft">
+																								2000.50 €
+																							</div>
+																						</div>
+																						<div class="cta-container">
+																							<div class="cta">
+																								<ul>
+																									<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Edit"><i class="material-icons">edit</i></a></li>
+																									<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Pause"><i class="material-icons">pause</i></a></li>
+																								</ul>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="col-md-12 card card-contract">
+																						<div class="col-md-1 list-image-container">
+																							<div class="list-image" id="missionImage012" data-value="60">
+																								<img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+																							</div>
+																						</div>
+																						<div class="col-md-6 list-head-container">
+																							<div class="header">
+																								<div class="status-label">
+																									<span class="label not-started">Draft</span>
+																								</div>
+																								<strong class="primary-font">Aricles blog - FRENCH</strong>
+																							</div>
+																						</div>
+																						<div class="task-price">
+																							<div class="col-md-2 numbers">
+																								3<span>Jobs</span>
+																							</div>
+																							<div class="col-md-2 turnover draft">
+																								-
+																							</div>
+																						</div>
+																						<div class="cta-container">
+																							<div class="cta">
+																								<ul>
+																									<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Edit"><i class="material-icons">edit</i></a></li>
+																									<li><a href="javascript:void(0);" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Pause"><i class="material-icons">pause</i></a></li>
+																								</ul>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																				<li>
+																					<div class="col-md-12 card card-contract">
+																						<div class="col-md-1 list-image-container">
+																							<div class="list-image" id="missionImage015" data-value="60">
+																								<img src="lbd/img/webedia.jpg" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Progress: 60%">
+																							</div>
+																						</div>
+																						<div class="col-md-6 list-head-container">
+																							<div class="header">
+																								<div class="status-label">
+																									<span class="label not-started">Draft</span>
+																								</div>
+																								<strong class="primary-font">Aricles blog - FRENCH</strong>
+																							</div>
+																						</div>
+																						<div class="task-price">
+																							<div class="col-md-2 numbers">
+																								0<span>Jobs</span>
+																							</div>
+																							<div class="col-md-2 turnover draft">
+																								-
 																							</div>
 																						</div>
 																						<div class="cta-container">
@@ -518,7 +619,7 @@
 															<div class="col-md-12 client-content-container">
 																<div class="row">
 																	<div class="col-md-12 add-new-card">
-																		<a href="javascript:;" class="add-card">
+																		<a href="javascript:;" class="add-card" data-toggle="modal" data-target="#createSourcingModal">
 																			<i class="material-icons">add</i><span>Create a sourcing</span>
 																		</a>
 																	</div>
@@ -740,7 +841,7 @@
 															<div class="col-md-12 client-content-container">
 																<div class="row">
 																	<div class="col-md-12 add-new-card">
-																		<a href="javascript:;" class="add-card">
+																		<a href="javascript:;" class="add-card" data-toggle="modal" data-target="#createSourcingModal">
 																			<i class="material-icons">add</i><span>Create a sourcing</span>
 																		</a>
 																	</div>
@@ -962,7 +1063,7 @@
 															<div class="col-md-12 client-content-container">
 																<div class="row">
 																	<div class="col-md-12 add-new-card">
-																		<a href="javascript:;" class="add-card">
+																		<a href="javascript:;" class="add-card" data-toggle="modal" data-target="#createSourcingModal">
 																			<i class="material-icons">add</i><span>Create a sourcing</span>
 																		</a>
 																	</div>
@@ -1184,7 +1285,7 @@
 															<div class="col-md-12 client-content-container">
 																<div class="row">
 																	<div class="col-md-12 add-new-card">
-																		<a href="javascript:;" class="add-card">
+																		<a href="javascript:;" class="add-card" data-toggle="modal" data-target="#createSourcingModal">
 																			<i class="material-icons">add</i><span>Create a sourcing</span>
 																		</a>
 																	</div>
@@ -1463,21 +1564,22 @@
 									</i>
 								</a>
 							</span>
-							<div class="modal-title">
+							<div class="modal-title mb-15">
 								Sourcing name <span class="edit ml-10"><a href="javascript:void(0);" id="editCreateSourcingTitle">Edit <i class="material-icons">mode_edit</i></a></span>
 							</div>
-							<div class="modal-title-edit col-md-10 pl-0">
+							<div class="modal-title-edit col-md-10 pl-0  mb-15">
 								<div class="input-group d-flex">
 									<input type="text" placeholder="Edit Title" class="form-control" value="Sourcing name">
 									<button type="" id="saveModalTitle" class="btn btn-fill btn-wd btn-yes">Save</button>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-md-12 create-sourcing-container">
+								<div class="col-md-12 create-sourcing-container  mb-15">
 									<div class="row">
 										<div class="col-md-5 sourcing-client-module mb-5">
 											<label>Client name *</label>
-											<select class="chosen-default">
+											<select class="chosen-default" data-placeholder="Choose a client...">
+												<option value=""></option>
 												<option data-img-src="lbd/img/webedia.jpg">
 													<span class="client-id">C002</span> Webedia Group
 												</option>
@@ -1492,12 +1594,12 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12 create-client-link mb-10">
-											<a href="javascript:;">+ Create a new client</a>
+											<a href="javascript:;" data-toggle="modal" data-target="#create-new-client-modal" data-dismiss="modal">+ Create a new client</a>
 										</div>
 									</div>
 									<hr />
 									<div class="row">
-										<div class="col-md-5 sourcing-client-module">
+										<div class="col-md-5 sourcing-client-module  mb-15">
 											<label>Duration</label>
 											<div class="row">
 												<div class="col-md-6">
@@ -1505,17 +1607,16 @@
 												</div>
 												<div class="col-md-6">
 													<select name="" class="selectpicker">
-														<option>weeks</option>
 														<option>days</option>
-														<option>hours</option>
-														<option>mins</option>
+														<option>weeks</option>
+														<option>months</option>
 													</select>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-md-8 sourcing-client-module">
+										<div class="col-md-8 sourcing-client-module  mb-15">
 											<div class="row">
 												<div class="col-md-6">
 													<label>Starting date</label>
@@ -1529,18 +1630,17 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-md-5 sourcing-client-module">
+										<div class="col-md-5 sourcing-client-module  mb-15">
 											<label>Turnover</label>
 											<div class="row">
 												<div class="col-md-6">
-													<input type="number" class="form-control" placeholder="ex : 150000">
+													<input type="text" class="form-control" placeholder="ex : 150000">
 												</div>
 												<div class="col-md-6">
 													<select name="" class="selectpicker">
 														<option>euros (&#8364;)</option>
 														<option>pounds (&#163;)</option>
-														<option>rupees (&#8377;)</option>
-														<option>US dollars (&#36;)</option>
+														<option>dollars (&#36;)</option>
 													</select>
 												</div>
 											</div>
@@ -1569,6 +1669,204 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			
+			<div aria-labelledby="create-new-client-modal" class="modal fade create-new-client-modal" id="create-new-client-modal" role="dialog" tabindex="-1">
+			    <div class="modal-dialog modal-lg" role="document">
+			        <div class="modal-content">
+			            <div class="modal-body">
+			                <span class="close">
+			                    <a data-dismiss="modal" href="javascript:;">
+			                        <i class="material-icons">
+			                        close
+			                        </i>
+			                    </a>
+			                </span>
+			                <div class="modal-title">
+			                    Create a new client
+			                </div>
+			                <form action="" class="form clearfix">
+			                    <div class="form-group">
+			                        <div class="row">
+			                            <div class="col-md-2">
+			                                <label for="clientId">
+			                                    Client ID
+			                                </label>
+			                                <input class="form-control" id="clientId" placeholder="C017" type="text"/>
+			                            </div>
+			                            <div class="col-md-6">
+			                                <label for="clientName">
+			                                    Client Name
+			                                </label>
+			                                <input class="form-control" id="clientName" placeholder="ex: Webedia, LVMH.." type="text"/>
+			                            </div>
+			                            <div class="col-md-3 pull-right">
+			                                <label for="clientHashtag">
+			                                    Client Hashtag
+			                                </label>
+			                                <input type="text" class="form-control selectpicker" id="clientHashtag" value="" placeholder="Type tags and enter" />
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="form-group client-logo">
+			                        <div class="row">
+			                            <div class="col-md-12">
+			                                <label for="upload-client-logo">
+			                                    Client Logo
+			                                </label>
+			                            </div>
+			                            <div class="client-logo empty">
+			                                <div class="col-md-12">
+			                                    <input id="upload-client-logo" type="file"/>
+			                                    <a class="add-client-logo" href="javascript:;">
+			                                        <div class="col-md-12">
+			                                            Add an image
+			                                            <span class="d-block">
+			                                                from your computer
+			                                            </span>
+			                                        </div>
+			                                    </a>
+			                                </div>
+			                                <div class="col-md-12">
+			                                    <a class="import-from-twitter d-block" href="javascript:;">
+			                                        Or import it from twitter
+			                                    </a>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="form-group client-logo">
+			                        <div class="row">
+			                            <div class="col-md-12">
+			                                <label for="upload-client-logo">
+			                                    Client Logo
+			                                </label>
+			                            </div>
+			                            <div class="client-logo full col-md-10">
+			                                <div class="col-md-3 image-container">
+			                                    <img class="image-loaded" src="lbd/img/blog-1.jpg">
+			                                    </img>
+			                                </div>
+			                                <div class="col-md-9 client-desc-container">
+			                                    <div class="description">
+			                                        <strong>
+			                                        Twitter user:
+			                                        </strong>
+			                                        <a class="client-name" href="javascript:;">
+			                                            @Allocine
+			                                        </a>
+			                                    </div>
+			                                    <div class="image-action">
+			                                        <a class="replace" href="javascript:;">
+			                                            Replace Image
+			                                        </a>
+			                                        <a class="remove" href="javascript:;">
+			                                            Remove image
+			                                        </a>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="form-group divider">
+			                        <div class="row">
+			                            <div>
+			                                <label class="col-md-12" for="clientSector">
+			                                    Sector
+			                                </label>
+			                                <div class="">
+			                                    <div class="col-md-6">
+			                                        <select class="chosen-default chosen-select" id="clientSector">
+			                                            <option data-img-src="lbd/img/default-avatar.png">
+			                                                Creation & Entertainment
+			                                            </option>
+			                                            <option data-img-src="lbd/img/default-avatar.png">
+			                                                Creation
+			                                            </option>
+			                                            <option data-img-src="lbd/img/default-avatar.png">
+			                                                Entertainment
+			                                            </option>
+			                                            <option data-img-src="lbd/img/default-avatar.png">
+			                                                Social Media
+			                                            </option>
+			                                        </select>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="form-group">
+			                        <div class="row">
+			                            <div>
+			                                <label class="col-md-12" for="clientAddress">
+			                                    Address
+			                                </label>
+			                                <div class="">
+			                                    <div class="col-md-12">
+			                                        <textarea class="form-control" id="clientAddress" placeholder="-" rows="3">
+			                                        </textarea>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="form-group">
+			                        <div class="row">
+			                            <div>
+			                                <label class="col-md-12 control-label" for="clientCountry">
+			                                    Country
+			                                </label>
+			                                <div class="">
+			                                    <div class="col-md-4">
+			                                        <select class="chosen-default chosen-select flags" id="clientCountry">
+			                                            <option data-img-src="lbd/img/flag/fr.gif" value="">
+			                                                France
+			                                            </option>
+			                                            <option data-img-src="lbd/img/flag/in.gif" value="">
+			                                                india
+			                                            </option>
+			                                            <option data-img-src="lbd/img/flag/jm.gif" value="">
+			                                                Jamaica
+			                                            </option>
+			                                            <option data-img-src="lbd/img/flag/us.gif" value="">
+			                                                US
+			                                            </option>
+			                                            <option data-img-src="lbd/img/flag/uk.gif" value="">
+			                                                UK
+			                                            </option>
+			                                            <option data-img-src="lbd/img/flag/su.gif" value="">
+			                                                Switzerland
+			                                            </option>
+			                                            <option data-img-src="lbd/img/flag/es.gif" value="">
+			                                                Spain
+			                                            </option>
+			                                            <option data-img-src="lbd/img/flag/pol.gif" value="">
+			                                                Poland
+			                                            </option>
+			                                        </select>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="form-group">
+			                        <div class="row">
+			                            <div class="col-md-6">
+			                                <button class="btn btn-default btn-fill btn-wd btn-no pull-left form-control" data-dismiss="modal" type="button">
+			                                Cancel
+			                                </button>
+			                            </div>
+			                            <div class="col-md-6">
+			                                <button class="btn btn-default btn-fill btn-wd btn-yes pull-right form-control" type="button">
+			                                Create client
+			                                </button>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </form>
+			            </div>
+			        </div>
+			    </div>
 			</div>
 			
 			<!-- Modals Ends -->
