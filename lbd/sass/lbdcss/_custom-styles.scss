@@ -903,6 +903,11 @@ html {
                                             color: #D7D9DC;
                                             text-align: center;
                                         }
+
+                                        a.create {
+                                            margin: 0 auto;
+                                            display: block;
+                                        }
                                     }
                                 }
 
@@ -1652,6 +1657,7 @@ html {
 
             .card-mission {
                 height: 121px;
+
                 // height: auto !important;
 
                 span.close {
@@ -6142,11 +6148,12 @@ html {
                             font-size: 16px;
                         }
                     }
-                    .section-title{
-                    	color: $body;
-                    	font-weight: 600;
-                    	text-transform: uppercase;
-                    	font-size: 14px;
+
+                    .section-title {
+                        color: $body;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        font-size: 14px;
                     }
 
                     .overview {
@@ -6645,11 +6652,13 @@ html {
                                 display: block;
                                 font-size: 20px;
                                 color: #353f53;
-                                &.dashboard-block{
-                                	padding: 50px 0;
-                                	i{
-                                		font-size: 24px;
-                                	}
+
+                                &.dashboard-block {
+                                    padding: 50px 0;
+
+                                    i {
+                                        font-size: 24px;
+                                    }
                                 }
                             }
                         }
@@ -6683,13 +6692,14 @@ html {
                 }
             }
 
-            .dashboard-description{
-            	@include clearfix;
-            	display: -webkit-flex;
-            	display: -moz-flex;
-            	display: -ms-flex;
-            	display: -o-flex;
-            	display: flex;
+            .dashboard-description {
+                @include clearfix;
+
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
             }
 
             .contract-tags {
