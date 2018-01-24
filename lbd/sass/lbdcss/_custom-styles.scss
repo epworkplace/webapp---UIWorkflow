@@ -936,12 +936,20 @@ html {
                                                 padding-bottom: 20px;
 
                                                 [class*='-job-filters'] {
+                                                    i {
+                                                    	-webkit-transition: all .3s ease;
+									                    -moz-transition: all .3s ease;
+									                    -o-transition: all .3s ease;
+									                    transition: all .3s ease;
+									                    &.rotate-90 {
+                                                            transform: rotate(-90deg);
+                                                        }
+                                                        // &.back2org {
+                                                        //     transform: rotate(0deg);
+                                                        // }
+                                                    }
                                                     &.open {
                                                         color: $selected;
-
-                                                        i.rotate90 {
-                                                            transform: rotate(90deg);
-                                                        }
                                                     }
 
                                                     .btn-label {
