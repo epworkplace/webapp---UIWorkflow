@@ -48,7 +48,29 @@
 
       .list-nav-container {
         padding-bottom: 500px;
-
+				.sourcing-list-nav-container{
+					.display-content{
+						&.empty{
+							padding: 12px;
+						}
+					}
+					.info-content, .overview{
+						height: auto !important;
+						min-height: auto;
+					}
+					.add-sourcing-description{
+						font-size: 14px;
+						color: $selected;
+						font-weight: 600;
+						text-decoration: underline;
+						&:hover{
+							text-decoration: none;
+						}
+					}
+					.overview:only-of-type{
+						margin-top: 0;
+					}
+				}
         .team-list-container {
           display: -webkit-flex;
           display: -moz-flex;
