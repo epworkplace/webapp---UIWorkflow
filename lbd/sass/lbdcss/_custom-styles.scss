@@ -907,6 +907,7 @@ html {
                                         a.create {
                                             margin: 0 auto;
                                             display: block;
+                                            min-width: 140px;
                                         }
                                     }
                                 }
@@ -933,16 +934,19 @@ html {
                                                 @include clearfix;
 
                                                 padding-bottom: 20px;
-                                                [class*='-job-filters']{
-                                                	&.open{
-                                                		color: $selected;
-                                                		i.rotate90{
-                                                			transform: rotate(90deg);
-                                                		}
-                                                	}
-                                                	.btn-label{
-                                                		margin-right: 5px;
-                                                	}
+
+                                                [class*='-job-filters'] {
+                                                    &.open {
+                                                        color: $selected;
+
+                                                        i.rotate90 {
+                                                            transform: rotate(90deg);
+                                                        }
+                                                    }
+
+                                                    .btn-label {
+                                                        margin-right: 5px;
+                                                    }
                                                 }
                                             }
 
@@ -8426,6 +8430,22 @@ html {
 }
 
 /*Labels Ends*/
+
+/* Labels with info popovers Starts*/
+
+.label-with-info {
+    span.info {
+        margin-left: 10px;
+
+        a {
+            i {
+                line-height: 0;
+            }
+        }
+    }
+}
+
+/* Labels with info popovers Ends*/
 
 /*Contract Card Selection Starts*/
 
