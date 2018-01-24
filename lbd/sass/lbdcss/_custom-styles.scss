@@ -8446,7 +8446,6 @@ html {
         margin-left: 10px;
         top: 7px;
         padding: 0;
-        background: #fff;
 
         a {
             position: relative;
@@ -8478,6 +8477,11 @@ html {
 }
 
 /* Labels with info popovers Ends*/
+
+.error {
+    color: #EE0A5F;
+    font-style: italic;
+}
 
 /*Contract Card Selection Starts*/
 
@@ -11685,21 +11689,6 @@ body.mce-content-body {
     padding: 0 15px 15px 15px;
     color: #353f53 !important;
     font-size: 14px;
-}
-
-.popover {
-    .arrow {
-        border: 0;
-    }
-
-    &.top .arrow {
-        margin-left: 0;
-        left: 56% !important;
-    }
-
-    &.bottom .arrow:after {
-        border-bottom-color: #fff;
-    }
 }
 
 .popover-filter {
