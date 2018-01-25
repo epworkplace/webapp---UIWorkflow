@@ -937,17 +937,21 @@ html {
 
                                                 [class*='-job-filters'] {
                                                     i {
-                                                    	-webkit-transition: all .3s ease;
-									                    -moz-transition: all .3s ease;
-									                    -o-transition: all .3s ease;
-									                    transition: all .3s ease;
-									                    &.rotate-90 {
+                                                        -webkit-transition: all .3s ease;
+                                                        -moz-transition: all .3s ease;
+                                                        -o-transition: all .3s ease;
+                                                        transition: all .3s ease;
+
+                                                        &.rotate-90 {
                                                             transform: rotate(-90deg);
                                                         }
+
                                                         // &.back2org {
                                                         //     transform: rotate(0deg);
                                                         // }
+
                                                     }
+
                                                     &.open {
                                                         color: $selected;
                                                     }
@@ -8479,7 +8483,7 @@ html {
 /* Labels with info popovers Ends*/
 
 .error {
-    color: #EE0A5F;
+    color: #EE0A5F !important;
     font-style: italic;
 }
 
