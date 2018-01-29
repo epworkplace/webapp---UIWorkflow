@@ -937,17 +937,21 @@ html {
 
                                                 [class*='-job-filters'] {
                                                     i {
-                                                    	-webkit-transition: all .3s ease;
-									                    -moz-transition: all .3s ease;
-									                    -o-transition: all .3s ease;
-									                    transition: all .3s ease;
-									                    &.rotate-90 {
+                                                        -webkit-transition: all .3s ease;
+                                                        -moz-transition: all .3s ease;
+                                                        -o-transition: all .3s ease;
+                                                        transition: all .3s ease;
+
+                                                        &.rotate-90 {
                                                             transform: rotate(-90deg);
                                                         }
+
                                                         // &.back2org {
                                                         //     transform: rotate(0deg);
                                                         // }
+
                                                     }
+
                                                     &.open {
                                                         color: $selected;
                                                     }
@@ -2022,6 +2026,20 @@ html {
                     -o-transition: all .2s ease;
                     transition: all .2s ease;
 
+                    i {
+                        font-size: 24px;
+                        position: relative;
+                        background: $highlight-05;
+
+                        i {
+                            position: absolute;
+                            top: 8px;
+                            left: 10px;
+                            width: 15px;
+                            font-size: 20px;
+                        }
+                    }
+
                     p {
                         color: #A7ABB4;
                         font-size: 14px;
@@ -2031,6 +2049,10 @@ html {
                         color: #fff;
                         background: #448AFF;
                         opacity: 1;
+
+                        i {
+                            background: $selected;
+                        }
 
                         p {
                             color: #fff;
@@ -4198,6 +4220,10 @@ html {
     button {
         width: 48% !important;
         font-weight: 600;
+
+        &.full-width {
+            width: 100% !important;
+        }
     }
 }
 
@@ -6684,6 +6710,24 @@ html {
                                     }
                                 }
                             }
+
+                            .input-group {
+                                margin-top: 5px;
+
+                                input[type="text"] {
+                                    width: 70%;
+                                    float: left;
+                                }
+
+                                button {
+                                    width: 30% !important;
+                                    float: left;
+                                    padding: 4px 0;
+                                    height: 38px;
+                                    border-radius: 0 4px 4px 0px;
+                                    margin: 0;
+                                }
+                            }
                         }
 
                         .bill-desc {
@@ -8443,17 +8487,9 @@ html {
 
 .label-with-info {
     span {
-        margin-left: 10px;
-        top: 7px;
-        padding: 0;
-
         a {
             position: relative;
             top: 5px;
-
-            i {
-                line-height: 0;
-            }
         }
 
         &.info {
@@ -8479,7 +8515,7 @@ html {
 /* Labels with info popovers Ends*/
 
 .error {
-    color: #EE0A5F;
+    color: #EE0A5F !important;
     font-style: italic;
 }
 

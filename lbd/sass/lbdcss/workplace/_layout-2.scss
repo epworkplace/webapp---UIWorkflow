@@ -251,12 +251,6 @@
                                     }
 
                                     .input-group {
-                                        /* display: -webkit-box;
-                                        display: -moz-box;
-                                        display: -ms-flexbox;
-                                        display: -webkit-flex;
-                                        display: flex;
-                                        align-items: center; */
                                         input[type="text"] {
                                             width: 70%;
                                             float: left;
@@ -266,6 +260,8 @@
                                             width: 30% !important;
                                             float: left;
                                             padding: 4px 0;
+                                            height: 38px;
+		                                    border-radius: 0 4px 4px 0px;
                                         }
                                     }
                                 }

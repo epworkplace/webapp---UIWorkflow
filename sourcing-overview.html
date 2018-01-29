@@ -43,7 +43,7 @@
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
-                                            <a href="javascript:;">
+                                            <a href="javascript:;" data-target="#changeCardDate" data-toggle="modal" href="javascript:;">
                                                 <i class="material-icons">date_range</i>
                                                 <span>Change date</span>
                                             </a>
@@ -51,14 +51,14 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-4 jobs-completed-container">
-                                    <a class= "end-date" data-toggle="dropdown" aria-expanded="false" href="javascript:;">
+                                    <a class= "end-date" data-toggle="" aria-expanded="" href="javascript:;">
                                         <span class="title">Job completed</span>
                                         <span class="mission">1</span> <small>/</small> 5
-                                        <span class="caret-drop">
+                                       <!--  <span class="caret-drop">
                                             <i class="material-icons">expand_more</i>
-                                        </span>
+                                        </span> -->
                                     </a>
-                                    <ul class="dropdown-menu" role="menu">
+                                    <!-- <ul class="dropdown-menu" role="menu">
                                         <li>
                                             <a href="javascript:;">
                                                 <i class="material-icons">pause</i>
@@ -66,8 +66,9 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <!-- <span class="title">Job</span>
-                                    <span class="mission">1</span> <small>/</small> 5 -->
+                                    <span class="title">Job</span>
+                                    <span class="mission">1</span> <small>/</small> 5
+                                    </ul> -->
                                 </div>
                                 <a href="javascript:;" class="col-md-4 validate not-started-link">
                                     Close
@@ -95,8 +96,8 @@
                                     <ul class="btn-group btn-group-justified">
                                         <li>
                                             <a href="javascript:;" class="btn btn-default">
-                                                <i class="material-icons">check</i>
-                                                <p>Finished</p>
+                                                <i class="material-icons">pause</i>
+                                                <p>Pause</p>
                                             </a>
                                         </li>
                                         <li>
@@ -107,26 +108,8 @@
                                         </li>
                                         <li>
                                             <a href="javascript:;" class="btn btn-default">
-                                                <i class="material-icons">today</i>
-                                                <p>Project Plan</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;" class="btn btn-default">
-                                                <i class="material-icons">assignment</i>
-                                                <p>Related Quote</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;" data-toggle="modal" data-target="#turnover-evolution" class="btn btn-default">
-                                                <i class="material-icons">euro_symbol</i>
-                                                <p>Turnover Evolution</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;" class="btn btn-default">
-                                                <i class="material-icons">receipt</i>
-                                                <p>Invoicing</p>
+                                                <i class="fa fa-database" aria-hidden="true"><i class="fa fa-database" aria-hidden="true"></i></i>
+                                                <p>Turnover</p>
                                             </a>
                                         </li>
                                     </ul>
@@ -204,7 +187,7 @@
 			            	                                                <!-- <div class="col-md-12 left-module-title">Turnover</div> -->
 			            	                                                <div class="turnover">
 			            	                                                    <div class="col-md-6 bill-box card">
-			            	                                                        <div class="col-md-12 bill">
+			            	                                                        <div class="col-md-12 bill sourcing-budget">
 				            	                                                        <span class="edit" data-toggle="" data-target="">
 				            	                                                            <i class="material-icons">create</i>
 				            	                                                            <a href="javascript:;">
@@ -213,6 +196,12 @@
 				            	                                                        </span>
 			            	                                                            <div class="amount">
 			            	                                                                Sourcing Budget<span>67000.00 &#8364;</span>
+				            	                                                            <div class="input-group" style="display: none;">
+												                                                <input type="text" class="form-control" name="" value="67000.00">
+												                                                <button type="submit" class="btn btn-yes">
+												                                                  <i class="material-icons">chevron_right</i>
+												                                                </button>
+												                                            </div>
 			            	                                                            </div>
 			            	                                                            <!-- <div class="bill-desc">
 			            	                                                                <p>60.00% margin</p>
@@ -220,7 +209,7 @@
 			            	                                                        </div>
 			            	                                                    </div>
 			            	                                                    <div class="col-md-6 bill-box even card">
-			            	                                                        <div class="col-md-12 bill">
+			            	                                                        <div class="col-md-12 bill agreed-budget">
 			            	                                                        	<span class="edit" data-toggle="" data-target="">
 				            	                                                            <i class="material-icons">create</i>
 				            	                                                            <a href="javascript:;">
@@ -229,6 +218,12 @@
 				            	                                                        </span>
 			            	                                                            <div class="amount">
 			            	                                                                Agreed Budget<span>71630.00 &#8364;</span>
+			            	                                                                <div class="input-group" style="display: none;">
+												                                                <input type="text" class="form-control" name="" value="71630.00">
+												                                                <button type="submit" class="btn btn-yes">
+												                                                  <i class="material-icons">chevron_right</i>
+												                                                </button>
+												                                            </div>
 			            	                                                            </div>
 			            	                                                        </div>
 			            	                                                    </div>
@@ -290,7 +285,7 @@
 			            	                                                    <div class="col-md-4 update-contract-owner">
 			            	                                                        <span class="edit pull-right">
 																						<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-																						<a href="javascript:;">
+																						<a href="javascript:;" data-toggle="modal" data-target="#updateAssigneeModal">
 																							Reassign
 																						</a>
 																					</span>
@@ -704,12 +699,12 @@
 	                        	                    				</div>
 	                        	                    				<div class="col-md-4 select-with-label">
 	                        	                    				    <label for="">Destination Language</label>
-	                        	                    				    <select name="language-filter" title="Select a language" multiple class="selectpicker form-control" data-actions-box="true">
-	                        	                    				        <option value="">Language 01</option>
-	                        	                    				        <option value="">Language 02</option>
-	                        	                    				        <option value="">Language 03</option>
-	                        	                    				        <option value="">Language 04</option>
-	                        	                    				        <option value="">Language 05</option>
+	                        	                    				    <select name="language-filter" title="Select a language" multiple class="selectpicker form-control flags" data-live-search="true" data-actions-box="true">
+		                        	                    				    <option value="1" data-content="<img src='lbd/img/flag/us.gif'> EN (US)">EN (US)</option>
+											                                <option value="2" data-content="<img src='lbd/img/flag/fr.gif'> FR">FR</option>
+											                                <option value="3" data-content="<img src='lbd/img/flag/uk.gif'> EN (UK)">EN (UK)</option>
+											                                <option value="4" data-content="<img src='lbd/img/flag/sp.gif'> ES">ES</option>
+											                                <option value="5" data-content="<img src='lbd/img/flag/pol.gif'> PO">PO</option>
 	                        	                    				    </select>
 	                        	                    				</div>
 	                        	                    			</div>
@@ -1100,6 +1095,10 @@
 <!-- @include _partials/_quote-browse-mission-modal.html -->
 <!-- Delete confirmation modal -->
 <!-- @include _partials/_delete-confirmation-modal.html -->
+<!-- Change card date modal -->
+<!-- @include _partials/_production-change-card-date-modal.html -->
+<!-- Contract owner assignee modal -->
+<!-- @include _partials/_contract-owner-update-modal.html -->
 <!-- Modals Ends -->
 
 <!--   Core JS Files   -->
@@ -1276,7 +1275,28 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
 								   .find('.selectpicker').selectpicker('deselectAll');
 		});
 /*Reset job filter options ends*/
+<<<<<<< HEAD
 
+=======
+/*Edit budget amount*/
+		$(document).on('click', '[class*="-budget"] .edit' , function(e){
+			e.preventDefault();
+			$(this).hide();
+			$(this).siblings('.amount')
+				   .find('> span').hide('fast');
+			$(this).siblings('.amount')
+				   .find('.input-group').show('fast');
+		});
+		$(document).on('click', '[class*="-budget"] button' , function(e){
+			e.preventDefault();
+			$(this).parent('.input-group').hide();
+			$(this).parents('[class*="-budget"]')
+				   .find('span.edit').show('fast');
+			$(this).parents('[class*="-budget"]')
+				   .find('.amount > span').show('fast');
+		});
+/*Edit budget amount ends*/
+>>>>>>> e9f2bcf37ec02b34a76ce66198ee8f7200f64c68
 	});
 
 

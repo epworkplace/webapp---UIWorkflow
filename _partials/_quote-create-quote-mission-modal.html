@@ -84,62 +84,134 @@
                                                 <div class="row">
                                                     <div class="col-md-12 tab-mission-create-settings">
                                                         <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="row">
-                                                                    <div class="col-md-4">
-                                                                        <label>MISSION VOLUME</label>
-                                                                        <input type="text" name="" value="200" class="form-control" placeholder=""/>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label>ITEMS</label>
-                                                                        <select name="" class="selectpicker" title="Items">
-                                                                            <option>Items 1</option>
-                                                                            <option>Items 2</option>
-                                                                            <option>Items 3</option>
-                                                                            <option>Items 4</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row"><!--
-                                                                    <div class="col-md-4">
-                                                                        <label>DURATION (DAYS)</label>
-                                                                        <input type="text" name="" value="40" class="form-control" placeholder=""/>
-                                                                    </div> -->
-                                                                    <div class="col-md-6 label-with-info">
-                                                                        <label>DELIVERY TIMIMG</label><span class="info"><a href="javascript:;" title="Note" data-toggle="popover" data-placement="right" data-content="We consider a day = 8 working hours"><i class="material-icons">info_outline</i></a></span>
-                                                                        <select name="" class="selectpicker" title="Delivery timing">
-                                                                            <option>Delivery timing 1</option>
-                                                                            <option>Delivery timing 2</option>
-                                                                            <option>Delivery timing 3</option>
-                                                                            <option>Delivery timing 4</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="row">
-                                                                    <div class="col-md-3">
-                                                                        <label>NB WORDS</label>
-                                                                        <input type="text" name="" value="400" class="form-control" placeholder=""/>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-md-6">
-                                                                        <label>VOLUME PER DELIVERY</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" class="form-control" value="20"/>
-                                                                            <span class="input-group-addon">articles</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <label>DELIVERY EVERY...</label>
-                                                                        <div class="input-group">
-                                                                            <input type="text" class="form-control" value="7"/>
-                                                                            <span class="input-group-addon">days</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                        	<div class="col-md-12">
+                                                        		<div class="row">
+                                                        			<div class="col-md-6">
+		                                                        		<div class="row">
+		                                                                    <div class="col-md-4">
+		                                                                        <label>ITEM</label>
+		                                                                        <input type="text" name="" value="200" class="form-control" placeholder=""/>
+		                                                                    </div>
+		                                                                    <div class="col-md-6">
+		                                                                        <label>ITEMS</label>
+		                                                                        <input type="text" name="" value="Development" class="form-control" placeholder=""/>
+		                                                                    </div>
+		                                                                </div>
+		                                                        	</div>
+                                                        		</div>
+                                                        		<div class="row">
+																	<div class="col-md-10">
+																		<div class="row">
+																			<div class="col-md-5">
+																				<label>DELIVERY TIMING TO CUSTOMER IN DAYS (!)</label>
+		                                                                        <input type="text" name="" value="200" class="form-control" placeholder=""/>
+																			</div>
+																			<div class="col-md-5">
+																				<label>TEMPO</label>
+																				<select name="" class="selectpicker" title="Tempo">
+		                                                                            <option>Oneshot</option>
+		                                                                            <option>Recurrent</option>
+		                                                                        </select>
+																			</div>
+																		</div>
+																	</div>
+                                                        		</div>
+                                                        		<div class="row">
+																	<div class="col-md-8">
+																		<div class="row">
+																			<div class="col-md-4">
+																				<label>PACKS PER DELIVERY (!)</label>
+		                                                                        <div class="input-group">
+		                                                                            <input type="text" class="form-control" value="20"/>
+		                                                                            <span class="input-group-addon">packs</span>
+		                                                                        </div>
+																			</div>
+																			<div class="col-md-4">
+																				<label>TEMPO</label>
+																				<select name="" class="selectpicker" title="Tempo">
+		                                                                            <option>Fix</option>
+		                                                                            <option>Max</option>
+		                                                                        </select>
+																			</div>
+																			<div class="col-md-4">
+																				<label>DELIVERY EVERY...</label>
+		                                                                        <div class="input-group">
+		                                                                            <input type="text" class="form-control" value="7"/>
+		                                                                            <span class="input-group-addon">days</span>
+		                                                                        </div>
+																			</div>
+																		</div>
+																	</div>
+                                                        		</div>
+                                                        		<div class="row">
+                                                        			<div class="col-md-12">
+                                                        				<label>MAN DAY INVOICED TO THE CUSTOMER IN HOURS</label>
+                                                        				<div class="row">
+                                                        					<div class="col-md-5">
+                                                        						<input type="text" class="form-control" value="20"/>
+                                                        					</div>
+                                                        					<div class="col-md-6 label-with-info">
+                                                        						<span class="info"><a href="javascript:;" title="Note" data-toggle="popover" data-placement="right" data-content="We consider a day = 8 working hours"><i class="material-icons">info_outline</i></a></span>
+                                                        					</div>
+                                                        				</div>
+                                                        			</div>
+                                                        		</div>
+                                                        	</div>
+															<!--                                                             <div class="col-md-6">
+															    <div class="row">
+															        <div class="col-md-4">
+															            <label>MISSION VOLUME</label>
+															            <input type="text" name="" value="200" class="form-control" placeholder=""/>
+															        </div>
+															        <div class="col-md-6">
+															            <label>ITEMS</label>
+															            <select name="" class="selectpicker" title="Items">
+															                <option>Items 1</option>
+															                <option>Items 2</option>
+															                <option>Items 3</option>
+															                <option>Items 4</option>
+															            </select>
+															        </div>
+															    </div>
+															    <div class="row"><div class="col-md-4">
+															            <label>DURATION (DAYS)</label>
+															            <input type="text" name="" value="40" class="form-control" placeholder=""/>
+															        </div>
+															        <div class="col-md-6 label-with-info">
+															            <label>DELIVERY TIMIMG</label>
+															            <select name="" class="selectpicker" title="Delivery timing">
+															                <option>Delivery timing 1</option>
+															                <option>Delivery timing 2</option>
+															                <option>Delivery timing 3</option>
+															                <option>Delivery timing 4</option>
+															            </select>
+															        </div>
+															    </div>
+															</div>
+															<div class="col-md-6">
+															    <div class="row">
+															        <div class="col-md-3">
+															            <label>NB WORDS</label>
+															            <input type="text" name="" value="400" class="form-control" placeholder=""/>
+															        </div>
+															    </div>
+															    <div class="row">
+															        <div class="col-md-6">
+															            <label>VOLUME PER DELIVERY</label>
+															            <div class="input-group">
+															                <input type="text" class="form-control" value="20"/>
+															                <span class="input-group-addon">articles</span>
+															            </div>
+															        </div>
+															        <div class="col-md-6">
+															            <label>DELIVERY EVERY...</label>
+															            <div class="input-group">
+															                <input type="text" class="form-control" value="7"/>
+															                <span class="input-group-addon">days</span>
+															            </div>
+															        </div>
+															    </div>
+															</div> -->
                                                         </div>
                                                     </div>
                                                 </div>
