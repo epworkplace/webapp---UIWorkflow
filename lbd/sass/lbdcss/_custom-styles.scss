@@ -907,7 +907,7 @@ html {
                                         a.create {
                                             margin: 0 auto;
                                             display: block;
-                                            min-width: 140px;
+                                            min-width: 204px;
                                         }
                                     }
                                 }
@@ -2508,12 +2508,12 @@ html {
 /* Fullscreen Modal Ends */
 
 /*Settings-wrap Content Starts*/
-.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container {
+.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container {
     width: calc(100% - (31.4% + 80px));
     right: 0;
     top: 78px;
     left: auto;
-    padding-bottom: 100px;
+    padding-bottom: 120px !important;
 
     .header {
         .primary-font {
