@@ -8434,57 +8434,49 @@ html {
     -moz-border-radius: 3px;
     border-radius: 3px;
     text-transform: uppercase;
-}
+    &.default{
+	    background: #fec500;
+    }
+    &.ongoing{
+	    background: #11BFE3;
+    }
+    &.validate{
+	    background: #FF6F00;
+    }
+    &.to-validate{
+	    background: #FFA534;
+    }
+    &.closed{
+	    background: #78b414;
+    }
+    &.delete{
+	    background: #ee0a5f;
+    }
+    &.not-started{
+	    background: #9A9FA9;
+    }
+    &.paused{
+	    background: #353F53;
+    }
+    &.draft{
+	    background: $highlight-06;
+    }
+    &.archived{
+	    background: #000;
+    }
+    &.senior{
+	    background: #FB8C00;
+	    border-radius: 30px;
+    }
+    &.junior{
+	    background: #3F51B5;
+	    border-radius: 30px;
+    }
+    &.beginner{
+	    background: #388E3C;
+	    border-radius: 30px;
+    }
 
-.label.default {
-    background: #fec500;
-}
-
-.label.ongoing {
-    background: #11BFE3;
-}
-
-.label.to-validate {
-    background: #FFA534;
-}
-
-.label.validate {
-    background: #FF6F00;
-}
-
-.label.closed {
-    background: #78b414;
-}
-
-.label.delete {
-    background: #ee0a5f;
-}
-
-.label.not-started {
-    background: #9A9FA9;
-}
-
-.label.paused {
-    background: #353F53;
-}
-
-.label.archived {
-    background: #000;
-}
-
-.label.senior {
-    background: #FB8C00;
-    border-radius: 30px;
-}
-
-.label.junior {
-    background: #3F51B5;
-    border-radius: 30px;
-}
-
-.label.beginner {
-    background: #388E3C;
-    border-radius: 30px;
 }
 
 /*Labels Ends*/
