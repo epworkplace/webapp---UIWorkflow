@@ -1683,9 +1683,9 @@ html {
             }
 
             .card-mission {
-                height: 121px;
+                height: auto;
 
-                // height: auto !important;
+                /* height: auto !important; */
 
                 span.close {
                     position: absolute;
@@ -2508,6 +2508,12 @@ html {
 /* Fullscreen Modal Ends */
 
 /*Settings-wrap Content Starts*/
+.modal {
+    .reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container {
+        padding-bottom: 0 !important;
+    }
+}
+
 .reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container {
     width: calc(100% - (31.4% + 80px));
     right: 0;
