@@ -849,6 +849,7 @@ html {
                         }
                       }
                     }
+<<<<<<< HEAD
 
                     .filter-list-container {
                       .filter-title {
@@ -857,6 +858,21 @@ html {
                         margin-bottom: 10px;
                         text-transform: uppercase;
                       }
+=======
+                }
+            }
+
+            .card-mission {
+                height: auto;
+
+                /* height: auto !important; */
+
+                span.close {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                }
+>>>>>>> 53964a81ec90221040787f1f56b4364821c9d5d0
 
                       .filter-list {
                         ul {
@@ -1762,8 +1778,23 @@ html {
         }
       }
 
+<<<<<<< HEAD
       .card-contract {
         height: 77px;
+/*Settings-wrap Content Starts*/
+.modal {
+    .reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container {
+        padding-bottom: 0 !important;
+    }
+}
+
+.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container {
+    width: calc(100% - (31.4% + 80px));
+    right: 0;
+    top: 78px;
+    left: auto;
+    padding-bottom: 120px !important;
+>>>>>>> 53964a81ec90221040787f1f56b4364821c9d5d0
 
         .check {
           padding: 2px 15px;
