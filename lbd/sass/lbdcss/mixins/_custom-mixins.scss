@@ -62,7 +62,7 @@
   color: $color !important;
   background: #fff !important;
   border: 1px solid $color !important;
- 	opacity: $opacity !important;
+  opacity: $opacity !important;
 }
 
 /**
@@ -1267,188 +1267,194 @@
       }
     }
   }
-  &.medium{
-  	li{
-  		height: 30px;
-  		margin-right: 8px;
-  		background: $highlight-01;
 
-	    a {
-	      padding: 0 0px 0 30px;
+  &.medium {
+    li {
+      height: 30px;
+      margin-right: 8px;
+      background: $highlight-01;
 
-	      img {
-	        margin-right: 0px;
-	      }
+      a {
+        padding: 0 0px 0 30px;
 
-	      &:hover {
-	        cursor: pointer;
-	      }
+        img {
+          margin-right: 0px;
+        }
 
-	      &:before {
-	        margin-top: -15px;
-	        border-top: 15px solid transparent;
-	        border-bottom: 15px solid transparent;
-	        border-left: 10px solid #dddddd;
-	        z-index: 3;
-	      }
+        &:hover {
+          cursor: pointer;
+        }
 
-	      &:after {
-	        content: '';
-	        position: absolute;
-	        top: 50%;
-	        left: 0;
-	        margin-top: -14px;
-	        border-top: 14px solid transparent;
-	        border-bottom: 14px solid transparent;
-	        border-left: 8px solid #fff;
-	        z-index: 3;
-	      }
-	    }
+        &:before {
+          margin-top: -15px;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          border-left: 10px solid #dddddd;
+          z-index: 3;
+        }
 
-	    &:first-child {
-	      a {
-	        padding-left: 15px;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -14px;
+          border-top: 14px solid transparent;
+          border-bottom: 14px solid transparent;
+          border-left: 8px solid #fff;
+          z-index: 3;
+        }
+      }
 
-					img{
-						margin-right: 10px;
-					}
+      &:first-child {
+        a {
+          padding-left: 15px;
 
-	        &:after, &:before {
-	          content: none;
-	        }
-	      }
+          img {
+            margin-right: 10px;
+          }
 
-	      &:before {
-	        right: -10px;
-			    margin-top: -15px;
-			    border-top: 15px solid transparent;
-			    border-bottom: 15px solid transparent;
-			    border-left: 10px solid #dddddd;
-			    z-index: 4;
-	      }
+          &:after, &:before {
+            content: none;
+          }
+        }
 
-	      &:after {
-	        right: -7px;
-			    margin-top: -14px;
-			    border-top: 14px solid transparent;
-			    border-bottom: 14px solid transparent;
-			    border-left: 8px solid $highlight-01;
-			    z-index: 4;
-	      }
-	    }
+        &:before {
+          right: -10px;
+          margin-top: -15px;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          border-left: 10px solid #dddddd;
+          z-index: 4;
+        }
 
-	    &:last-child {
-	    	margin: 0;
-	      a {
-	        padding: 0 15px 0 20px;
-	      }
+        &:after {
+          right: -7px;
+          margin-top: -14px;
+          border-top: 14px solid transparent;
+          border-bottom: 14px solid transparent;
+          border-left: 8px solid $highlight-01;
+          z-index: 4;
+        }
+      }
 
-	      &:before, &:after {
-	        content: none;
-	      }
-	    }
+      &:last-child {
+        margin: 0;
 
-	    &:only-child {
-	      a {
-	        padding: 0 15px;
-	        img{
-	        	margin: 0;
-	        }
-	      }
-	    }
-  	}
+        a {
+          padding: 0 15px 0 20px;
+        }
+
+        &:before, &:after {
+          content: none;
+        }
+      }
+
+      &:only-child {
+        a {
+          padding: 0 15px;
+
+          img {
+            margin: 0;
+          }
+        }
+      }
+    }
   }
-  &.small{
-		li{
-			height: 26px;
-			margin-right: 8px;
-			background: $highlight-01;
 
-	    a {
-	      padding: 0 0px 0 30px;
+  &.small {
+    li {
+      height: 26px;
+      margin-right: 8px;
+      background: $highlight-01;
 
-	      img {
-	        margin-right: 0px;
-	      }
+      a {
+        padding: 0 0px 0 30px;
 
-	      &:hover {
-	        cursor: pointer;
-	      }
+        img {
+          margin-right: 0px;
+        }
 
-	      &:before {
-	        margin-top: -13px;
-	        border-top: 13px solid transparent;
-	        border-bottom: 13px solid transparent;
-	        border-left: 9px solid #dddddd;
-	        z-index: 3;
-	      }
+        &:hover {
+          cursor: pointer;
+        }
 
-	      &:after {
-	        content: '';
-	        position: absolute;
-	        top: 50%;
-	        left: 0;
-	        margin-top: -12px;
-	        border-top: 12px solid transparent;
-	        border-bottom: 12px solid transparent;
-	        border-left: 9px solid #fff;
-	        z-index: 3;
-	      }
-	    }
+        &:before {
+          margin-top: -13px;
+          border-top: 13px solid transparent;
+          border-bottom: 13px solid transparent;
+          border-left: 9px solid #dddddd;
+          z-index: 3;
+        }
 
-	    &:first-child {
-	      a {
-	        padding-left: 10px;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -12px;
+          border-top: 12px solid transparent;
+          border-bottom: 12px solid transparent;
+          border-left: 9px solid #fff;
+          z-index: 3;
+        }
+      }
 
-					img{
-						margin-right: 10px;
-					}
+      &:first-child {
+        a {
+          padding-left: 10px;
 
-	        &:after, &:before {
-	          content: none;
-	        }
-	      }
+          img {
+            margin-right: 10px;
+          }
 
-	      &:before {
-	        right: -9px;
-			    margin-top: -13px;
-			    border-top: 13px solid transparent;
-			    border-bottom: 13px solid transparent;
-			    border-left: 9px solid #dddddd;
-			    z-index: 4;
-	      }
+          &:after, &:before {
+            content: none;
+          }
+        }
 
-	      &:after {
-	        right: -8px;
-			    margin-top: -12px;
-			    border-top: 12px solid transparent;
-			    border-bottom: 12px solid transparent;
-			    border-left: 9px solid $highlight-01;
-			    z-index: 4;
-	      }
-	    }
+        &:before {
+          right: -9px;
+          margin-top: -13px;
+          border-top: 13px solid transparent;
+          border-bottom: 13px solid transparent;
+          border-left: 9px solid #dddddd;
+          z-index: 4;
+        }
 
-	    &:last-child {
-	    	margin: 0;
-	      a {
-	        padding: 0 10px 0 20px;
-	      }
+        &:after {
+          right: -8px;
+          margin-top: -12px;
+          border-top: 12px solid transparent;
+          border-bottom: 12px solid transparent;
+          border-left: 9px solid $highlight-01;
+          z-index: 4;
+        }
+      }
 
-	      &:before, &:after {
-	        content: none;
-	      }
-	    }
+      &:last-child {
+        margin: 0;
 
-	    &:only-child {
-	      a {
-	        padding: 0 15px;
-	        img{
-	        	margin: 0;
-	        }
-	      }
-	    }
-		}
-	}
+        a {
+          padding: 0 10px 0 20px;
+        }
+
+        &:before, &:after {
+          content: none;
+        }
+      }
+
+      &:only-child {
+        a {
+          padding: 0 15px;
+
+          img {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 %mission-status {
@@ -1706,10 +1712,11 @@
   }
 }
 
-%no-cards{
+%no-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
   // overflow: hidden;
   width: 100%;
   height: calc(100vh - 25%);
@@ -1721,20 +1728,20 @@
   align-items: center;
 
   .no-cards-placeholder {
-      h2 {
-          color: #D7D9DC;
-          text-align: center;
-          font-weight: 700;
-      }
+    h2 {
+      color: #D7D9DC;
+      text-align: center;
+      font-weight: 700;
+    }
 
-      p {
-          color: #D7D9DC;
-          text-align: center;
-      }
+    p {
+      color: #D7D9DC;
+      text-align: center;
+    }
 
-      a.add-card {
-				@extend %add-button;
-      }
+    a.add-card {
+      @extend %add-button;
+    }
   }
 }
 

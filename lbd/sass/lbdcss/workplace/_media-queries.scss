@@ -46,6 +46,12 @@
     }
 }
 
+@media screen and (max-width: 1240px) {
+    .container-content {
+        width: 100% !important;
+    }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1300px) {
     /* Home page CSS Starts*/
 
