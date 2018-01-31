@@ -510,6 +510,12 @@
                         }
 
                         .input-group-btn {
+                            vertical-align: bottom;
+
+                            &.attach-comment-file {
+                                bottom: 6px;
+                            }
+
                             button {
                                 width: 92px;
                                 -webkit-border-radius: 5px;
