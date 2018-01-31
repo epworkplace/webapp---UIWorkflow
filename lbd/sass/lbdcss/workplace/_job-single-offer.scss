@@ -160,6 +160,14 @@
 							position: absolute;
 							bottom: 25px;
 							color: #fff;
+							transition: all .3s ease;
+							width: calc(100% - 40px);
+							&.offer-title{
+								.btn-yes{
+									border-radius: 0 4px 4px 0;
+								}
+							}
+
 						}
         	}
         	.offer-content{
@@ -170,6 +178,12 @@
         			position: absolute;
         			right: 20px;
         			top: 20px;
+        			&:hover{
+        				cursor: pointer;
+        			}
+        		}
+        		[class$='-edit']{
+        			display: none;
         		}
         		h4, p{
         			color: $main;
@@ -182,29 +196,19 @@
         		p{
         			font-size: 14px;
         		}
+						a{
+							color: $selected;
+							text-decoration: underline;
+							&:hover{
+								text-decoration: none;
+							}
+						}
 						.no-data-placeholder{
 							h4, p {
 								color: $helper;
 							}
 						}
-						.desc-title{
 
-						}
-						.desc-content{
-							padding: 10px 20px;
-							ul{
-								padding-left: 15px;
-							}
-						}
-						.desc-footer{
-							a{
-								color: $selected;
-								text-decoration: underline;
-								&:hover{
-									text-decoration: none;
-								}
-							}
-						}
         	}
         }
     }
