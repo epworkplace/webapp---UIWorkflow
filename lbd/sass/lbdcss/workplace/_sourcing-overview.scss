@@ -99,6 +99,13 @@
 								@extend %language-breadcrum;
 								width: auto;
 								margin-right: 15px;
+								li{
+									a{
+										&:after{
+											border-left-color: #fff !important;
+										}
+									}
+								}
 							}
 							[class*='-details']{
 								[class*='-title']{
@@ -167,6 +174,7 @@
 													width: 18.333%;
 									    	}
 									    	.language-to{
+									    		@extend %language-breadcrum;
 													width: 31.333%;
 									    	}
 									    }

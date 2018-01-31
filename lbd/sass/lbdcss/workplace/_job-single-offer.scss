@@ -211,6 +211,18 @@
 
         	}
         }
+        [class*='-content-aside']{
+        	.language-to{
+        		@extend %language-breadcrum;
+        		li{
+        			a{
+        				&:after{
+        					border-left-color: #fff !important;
+        				}
+        			}
+        		}
+        	}
+        }
     }
 
   }
