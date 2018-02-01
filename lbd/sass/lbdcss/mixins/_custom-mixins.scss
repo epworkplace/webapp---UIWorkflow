@@ -1169,14 +1169,6 @@
     }
 
     a {
-      &:before, &:after {
-        left: 0px;
-        right: unset;
-        z-index: 3;
-      }
-    }
-
-    a {
       display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flex;
@@ -1189,6 +1181,12 @@
 
       img {
         margin-right: 10px;
+      }
+
+      &:before, &:after {
+        left: 0px;
+        right: unset;
+        z-index: 3;
       }
     }
 
@@ -1247,7 +1245,6 @@
         border-top: 22px solid transparent;
         border-bottom: 22px solid transparent;
         border-left: 22px solid #dddddd;
-        z-index: 4;
       }
 
       &:after, a:after {
@@ -1256,7 +1253,6 @@
         border-top: 19px solid transparent;
         border-bottom: 19px solid transparent;
         border-left: 19px solid $highlight-01;
-        z-index: 4;
       }
 
       &:first-child {}
@@ -1269,24 +1265,24 @@
 
   &.medium {
     li {
-      height: 30px;
+      height: 32px;
       background: $highlight-01;
 
       &:before, a:before {
-        right: -15px;
-        margin-top: -17px;
-        border-top: 17px solid transparent;
-        border-bottom: 17px solid transparent;
-        border-left: 17px solid #dddddd;
+        right: -16px;
+        margin-top: -18px;
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-left: 18px solid #dddddd;
         z-index: 4;
       }
 
       &:after, a:after {
-        right: -12px;
-        margin-top: -14px;
-        border-top: 14px solid transparent;
-        border-bottom: 14px solid transparent;
-        border-left: 14px solid $highlight-01;
+        right: -13px;
+        margin-top: -15px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid $highlight-01;
         z-index: 4;
       }
 
@@ -1650,6 +1646,58 @@
       @extend %add-button;
     }
   }
+}
+
+%select-with-label{
+	.bootstrap-select {
+	  background: #fff;
+	  height: auto;
+
+	  .dropdown-menu {
+	    padding: 8px 0;
+	  }
+
+	  .dropdown-toggle {
+	    height: auto;
+	    display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+
+	    .filter-option {
+	      display: -webkit-box;
+	      display: -moz-box;
+	      display: -ms-flexbox;
+	      display: -webkit-flex;
+	      display: flex;
+	      margin: 0;
+	      flex-wrap: wrap;
+	      color: rgba(0, 0, 0, 0.5);
+	      text-decoration: none;
+	      font-size: 14px;
+	      align-items: center;
+	      justify-content: flex-start;
+
+	      span.label {
+	        line-height: normal;
+	      }
+	    }
+
+	    .actions-btn {
+	      width: 48%;
+	    }
+	  }
+	}
+
+	.bs-actionsbox .btn-block button.actions-btn {
+	  width: 48%;
+	}
+}
+.select-with-label{
+	@extend %select-with-label;
 }
 
 span.edit {
