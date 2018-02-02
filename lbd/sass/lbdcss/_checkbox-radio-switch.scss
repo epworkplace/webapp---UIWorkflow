@@ -132,115 +132,179 @@
     overflow: hidden;
     position: relative;
     text-align: left;
-    width: 60px;    
- 
-   -webkit-user-select: none;  
+    width: 60px;
+
+   -webkit-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
    -o-user-select: none;
    user-select: none;
-     
+
     /*   this code is for fixing safari bug with hidden overflow for border-radius   */
     -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
     -webkit-mask-size: 60px 28px;
     mask: url('../img/mask.png') 0 0 no-repeat;
-}
-.has-switch.deactivate {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  cursor: default !important;
-}
-.has-switch.deactivate label,
-.has-switch.deactivate span {
-  cursor: default !important;
-}
-.has-switch > div {
-   position: relative;
-   top: 0;
-   width: 100px;
-}
-.has-switch > div.switch-animate {
-  -webkit-transition: left 0.25s ease-out;
-  transition: left 0.25s ease-out;
-}
-.has-switch > div.switch-off {
-  left: -32px;
-}
 
-.has-switch > div.switch-on {
-  left: 0;
-}
-.has-switch > div label {
-  background-color: #FFFFFF;
-  @include line-gradient (rgba(255,255,255,1), rgba(241,241,242,1));
-  
-  box-shadow: 0 1px 1px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-}
-.has-switch input[type=checkbox] {
-  display: none;
-}
-.has-switch span {
-/*     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset; */
-    cursor: pointer;
-    float: left;
-    font-size: 11px;
-    font-weight: 400;
-    height: 28px;
-    line-height: 15px;
-    margin: 0;
-    padding-bottom: 6px;
-    padding-top: 7px;
-    position: relative;
-    text-align: center;
-    text-indent: -10px;
-    width: 50%;
-    z-index: 1;
-  -webkit-transition: 0.25s ease-out;
-  transition: 0.25s ease-out;
-}
-.has-switch span.switch-left {
-    background-color: $info-color;
-    border-left: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 30px 0 0 30px;
-    color: #FFFFFF;
-}
-.has-switch .switch-off span.switch-left{
-    background-color: $medium-gray;
-}
-.has-switch span.switch-right {
-  border-radius: 0 30px 30px 0;
-  background-color: $info-color;
-  color: #ffffff;
-  text-indent: -3px;
-}
-.has-switch .switch-off span.switch-right{
-    background-color: $medium-gray;
-}
+		input{
+			display: none;
+		}
+		label{
+	    border-radius: 12px;
+	    float: left;
+	    height: 22px;
+	    margin: 3px -15px;
+	    padding: 0;
+	    position: relative;
+	    transition: all 0.25s ease-out 0s;
+	    vertical-align: middle;
+	    width: 22px;
+	    z-index: 100;
+		  -webkit-transition: 0.25s ease-out;
+		  transition: 0.25s ease-out;
+		}
+		span{
+			/* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset; */
+	    cursor: pointer;
+	    float: left;
+	    font-size: 11px;
+	    font-weight: 400;
+	    height: 28px;
+	    line-height: 15px;
+	    margin: 0;
+	    padding-bottom: 6px;
+	    padding-top: 7px;
+	    position: relative;
+	    text-align: center;
+	    text-indent: -10px;
+	    width: 50%;
+	    z-index: 1;
+		  -webkit-transition: 0.25s ease-out;
+		  transition: 0.25s ease-out;
+		  &.switch-left{
+		    background-color: $info-color;
+		    border-left: 1px solid rgba(0, 0, 0, 0);
+		    border-radius: 30px 0 0 30px;
+		    color: #FFFFFF;
+		  }
+		  &.switch-right{
+			  border-radius: 0 30px 30px 0;
+			  background-color: $info-color;
+			  color: #ffffff;
+			  text-indent: -3px;
+		  }
+		}
+		> div{
+		   position: relative;
+		   top: 0;
+		   width: 100px;
+		   &.switch-animate{
+			  -webkit-transition: left 0.25s ease-out;
+			  transition: left 0.25s ease-out;
+		   }
+		   &.switch-off{
+		   	left: -32px;
+		   }
+		   &.switch-on{
+		   	left: 0;
+		   }
+		   label{
+			  background-color: #FFFFFF;
+			  @include line-gradient (rgba(255,255,255,1), rgba(241,241,242,1));
 
-.has-switch label {
-    border-radius: 12px;
-    float: left;
-    height: 22px;
-    margin: 3px -15px;
-    padding: 0;
-    position: relative;
-    transition: all 0.25s ease-out 0s;
-    vertical-align: middle;
-    width: 22px;
-    z-index: 100;
-  -webkit-transition: 0.25s ease-out;
-  transition: 0.25s ease-out;
-}
-.has-switch .switch-on .fa-check:before{
-    margin-left: 10px;
-}
-.has-switch:hover .switch-on label{
-    margin: 3px -19px;
-    width: 26px;
-}
-.has-switch:hover .switch-off label{
-    margin: 3px -15px;
-    width: 26px;
+			  box-shadow: 0 1px 1px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.25);
+			  cursor: pointer;
+		   }
+		}
+
+		.switch-off{
+			span{
+				&.switch-left, &.switch-right{
+			    background-color: $medium-gray;
+				}
+			}
+			label{
+		    // margin: 3px -15px;
+		    width: 22px;
+			}
+		}
+		.switch-on{
+			.fa-check:before{
+				margin-left: 10px;
+			}
+			label{
+		    // margin: 3px -15px;
+		    width: 22px;
+			}
+		}
+		&.deactivate{
+		  opacity: 0.5;
+		  filter: alpha(opacity=50);
+		  cursor: default !important;
+		  label, span{
+		  	cursor: pointer !important;
+		  }
+		}
+
+    &.switch-small{
+    	width: 36px;
+    	border-radius: 18px;
+	    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
+	    -webkit-mask-size: 36px 18px;
+	    mask: url('../img/mask.png') 0 0 no-repeat;
+
+	    label{
+	    	border-radius: 7px;
+	    	height: 14px;
+	    	width: 14px;
+	    	margin: 2px -15px;
+	    }
+	    > div{
+	    	width: 56px;
+	    	&.switch-off{
+	    		left: -10px;
+	    	}
+	    }
+	    span{
+	    	height: 18px;
+	    	line-height: 7px;
+	    	padding-top: 5px;
+	    	padding-bottom: 4px;
+	    	&.switch-left{
+					border-radius: 18px 0 0 18px;
+	    	}
+	    	&.switch-right{
+					border-radius: 0 18px 18px 0;
+	    	}
+	    }
+	    .switch-off{
+				label{
+					// width: 20px;
+				}
+	    }
+	    .switch-on{
+				.fa-check:before{
+					margin-left: 10px;
+				}
+				label{
+			    margin: 2px -8px;
+			    width: 14px;
+				}
+	    }
+
+	    &:hover{
+	    	.switch-off, .switch-on{
+		    	label{
+		    		width: 18px;
+	    			margin: 2px -15px;
+		    	}
+	    	}
+	    	.switch-on{
+	    		label{
+	    			margin: 2px -12px;
+	    		}
+	    	}
+	    }
+
+    }
 }
 

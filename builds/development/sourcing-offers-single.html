@@ -250,11 +250,21 @@
                              	  			    <span>Change image</span> <i class="material-icons">photo</i>
                              	  					<input id="file-upload" type="file"/>
                              	  				</label>
-                             	  				<h3 class="offer-title"><a href="javascript:;">+ add a title</a></h3>
+                             	  				<h3 class="offer-title">
+                             	  					<a href="javascript:;" class="edit-offer-title">+ add a title</a>
+                             	  					<div class="offer-title-edit" style="display: none;">
+                             	  	          <form action="" class="form">
+                             	  	          	<div class="input-group d-flex">
+                             	  	          	    <input type="text" placeholder="" class="form-control" value="add a title">
+                             	  	          	    <button type="" id="saveOfferTitle" class="btn btn-fill btn-wd btn-yes">Save</button>
+                             	  	          	</div>
+                             	  	          </form>
+                             	  	        </div>
+                             	  				</h3>
                              	  			</div>
                              	  		</div>
                              	  		<div class="row offer-content">
-                             	  			<span class="edit" data-toggle="" data-target="">
+                             	  			<span class="edit edit-offer-content" data-toggle="" data-target="">
                              	          <i class="material-icons">create</i><a href="javascript:;">Edit</a>
                              	        </span>
                              	  			<div class="col-sm-12 p-0">
@@ -262,136 +272,301 @@
                              	  					<h4>No Description for this offer</h4>
                              	  					<p>Please write a long description for you contributors.</p>
                              	  				</div>
-                             	  				<div class="clearfix">
-                             	  					<h4 class="desc-title">Resume de la mission</h4>
-                             	  					<div class="desc-content">
-                             	  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad soluta voluptate laborum nisi explicabo animi amet repudiandae sint quibusdam atque!</p>
-                             	  						<p>Vos mission serent :</p>
-                             	  						<ul>
-                             	  							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                             	  							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est modi consequuntur sequi.</li>
-                             	  							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, ex.</li>
-                             	  							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam deserunt sunt porro mollitia, saepe fuga aspernatur placeat ipsam facilis alias modi expedita totam officia pariatur quas delectus ut, omnis quis!</li>
-                             	  						</ul>
-                             	  					</div>
-                             	  					<div class="desc-footer">
-                             	  						<strong>Des qustions?</strong> Envoyez-nous un mail a : <a href="mailto:candidature@edit-place.fr">candidature@edit-place.fr</a>
+                             	  				<div class="row offer-desc-container">
+                             	  					<div class="col-md-12">
+                             	  						<h4 class="desc-title">Resume de la mission</h4>
+                             	  						<div class="desc-content">
+                             	  							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad soluta voluptate laborum nisi explicabo animi amet repudiandae sint quibusdam atque!</p>
+                             	  							<p>Vos mission serent :</p>
+                             	  							<ul>
+                             	  								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                             	  								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est modi consequuntur sequi.</li>
+                             	  								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, ex.</li>
+                             	  								<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam deserunt sunt porro mollitia, saepe fuga aspernatur placeat ipsam facilis alias modi expedita totam officia pariatur quas delectus ut, omnis quis!</li>
+                             	  							</ul>
+                             	  						</div>
+                             	  						<div class="desc-footer">
+                             	  							<strong>Des qustions?</strong> Envoyez-nous un mail a : <a href="mailto:candidature@edit-place.fr">candidature@edit-place.fr</a>
+                             	  						</div>
                              	  					</div>
                              	  				</div>
+                             	  				<div class="row offer-desc-edit">
+                             	  			    <div class="col-md-12">
+                             	  			      <form action="" class="form offer-desc-edit-form">
+                             	  			        <div class="row form-group">
+                             	  			            <div class="col-md-12">
+                             	  			                <textarea class="form-control" id="edit-textarea-normal" rows="10">
+                             	  			                    <h4 class="desc-title">Resume de la mission</h4>
+                             	  													<div class="desc-content">
+                             	  														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad soluta voluptate laborum nisi explicabo animi amet repudiandae sint quibusdam atque!</p>
+                             	  														<p>Vos mission serent :</p>
+                             	  														<ul>
+                             	  															<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                             	  															<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est modi consequuntur sequi.</li>
+                             	  															<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, ex.</li>
+                             	  															<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam deserunt sunt porro mollitia, saepe fuga aspernatur placeat ipsam facilis alias modi expedita totam officia pariatur quas delectus ut, omnis quis!</li>
+                             	  														</ul>
+                             	  													</div>
+                             	  													<div class="desc-footer">
+                             	  														<strong>Des qustions?</strong> Envoyez-nous un mail a : <a href="mailto:candidature@edit-place.fr">candidature@edit-place.fr</a>
+                             	  													</div>
+                             	  			                </textarea>
+                             	  			            </div>
+                             	  			        </div>
+                             	  			        <div class="row desc-edit-actions">
+                             	  			            <div class="col-md-6">
+                             	  			                <button class="btn btn-fill full-width btn-wd cancel-btn" data-dismiss="">
+                             	  			                Cancel
+                             	  			                </button>
+                             	  			            </div>
+                             	  			            <div class="col-md-6">
+                             	  			                <button class="btn btn-fill full-width btn-yes">
+                             	  			                Save
+                             	  			                </button>
+                             	  			            </div>
+                             	  			        </div>
+                             	  			      </form>
+                             	  			    </div>
+                             	  			</div>
                              	  			</div>
                              	  		</div>
                              	  	</div>
                              	  </div>
                              	  
-                             	  <div class="royalties-content-aside col-md-4 hidden-xs">
-                             	  	<div class="col-md-12 card p-15">
-                             	  		<div class="row payment-activities">
+                             	  <div class="offers-single-content-aside col-md-4 hidden-xs">
+                             	  	<div class="col-md-12 card p-20">
+                             	  		<div class="row bidding-info">
                              	  			<div class="col-sm-12">
-                             	  				<h4 class="mt-0 fw700 mb-15">Last payment orders</h4>
-                             	  				<ul class="payment-history-list">
-                             	  					<li class="no-payment">
-                             	  						<div class="alert alert-default">
-                             	  							No Orders found
-                             	  						</div>
-                             	  					</li>
-                             	  					<li>
-                             	  						<div class="row">
-                             	  							<div class="payment-status df-ac">
-                             	  								<div class="col-xs-4 df-ac">
-                             	  									<span class="label validate">
-                             	  										Unpaid
-                             	  									</span>
-                             	  								</div>
-                             	  								<div class="request-time col-xs-8 text-right">Requested on 12-05-2017</div>
-                             	  							</div>
-                             	  						</div>
-                             	  						<div class="row">
-                             	  							<div class="payment-order-number col-sm-12">Payment order #01927</div>
-                             	  						</div>
-                             	  						<div class="row">
-                             	  							<div class="df-ac">
-                             	  								<div class="col-xs-4 order-value"><span class="">644.92 €</span></div>
-                             	  								<div class="payment-time col-xs-8 text-right">Transfered on 15-07-2017</div>
-                             	  							</div>
-                             	  						</div>
-                             	  					</li>
-                             	  					<li>
-                             	  						<div class="row">
-                             	  							<div class="payment-status df-ac">
-                             	  								<div class="col-xs-4 df-ac">
-                             	  									<span class="label to-validate">
-                             	  										Ongoing
-                             	  									</span>
-                             	  								</div>
-                             	  								<div class="request-time col-xs-8 text-right">2h ago</div>
-                             	  							</div>
-                             	  						</div>
-                             	  						<div class="row">
-                             	  							<div class="payment-order-number col-sm-12">Payment order #01927</div>
-                             	  						</div>
-                             	  						<div class="row">
-                             	  							<div class="df-ac">
-                             	  								<div class="col-xs-4 order-value"><span class="">644.92 €</span></div>
-                             	  								<!-- <div class="col-xs-8 submit-claim text-right p-0">
-                             	  									<a class="" href="javasctipt:;">Submit a claim</a>
-                             	  								</div> -->
-                             	  							</div>
-                             	  						</div>
-                             	  						<div class="row">
-                             	  							<div class="payment-actions col-sm-12">
-                             	  								<div class="col-sm-12 p-0">
-                             	  									<div class="alert alert-default">
-                             	  										Available on <span class="fw600">Aug.15, 2019</span>
-                             	  									</div>
-                             	  								</div>
-                             	  							</div>
-                             	  						</div>
-                             	  					</li>
-                             	  					<li>
-                             	  						<div class="row">
-                             	  							<div class="payment-status df-ac">
-                             	  								<div class="col-xs-4 df-ac">
-                             	  									<span class="label ongoing">
-                             	  										Paid
-                             	  									</span>
-                             	  								</div>
-                             	  								<div class="request-time col-xs-8 text-right">04-08-2014</div>
-                             	  							</div>
-                             	  						</div>
-                             	  						<div class="row">
-                             	  							<div class="payment-order-number col-sm-12">Payment order #01927</div>
-                             	  						</div>
-                             	  						<div class="row">
-                             	  							<div class="df-ac">
-                             	  								<div class="col-xs-4 order-value"><span class="">644.92 €</span></div>
-                             	  								<div class="payment-time col-xs-8 text-right"></div>
-                             	  							</div>
-                             	  						</div>
-                             	  						<div class="row">
-                             	  							<div class="payment-actions col-sm-12">
-                             	  								<div class="row">
-                             	  									<div class="col-xs-6">
-                             	  										<button class="btn full-width" type="" data-toggle="modal" data-target="#viewBillRoyalty">
-                             	  											View bill
-                             	  										</button>
-                             	  									</div>
-                             	  									<div class="col-xs-6">
-                             	  										<button class="btn btn-primary btn-fill full-width" type="submit">
-                             	  											Download
-                             	  										</button>
-                             	  									</div>
-                             	  								</div>
-                             	  							</div>
-                             	  						</div>
-                             	  					</li>
-                             	  					<li>
-                             	  						<div class="row">
-                             	  							<div class="col-sm-12">
-                             	  								<a class="df-ac-jc show-more-activities" href="javascript:;">All payment order (7)</a>
-                             	  							</div>
-                             	  						</div>
-                             	  					</li>
+                             	          <ul class="language-to medium full">
+                             	  						<li>
+                             	  							<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
+                             	  								<img src="lbd/img/flag/fr.gif"> <span>FR</span>
+                             	  							</a>
+                             	  						</li>
+                             	  						<li>
+                             	  							<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="English (UK)">
+                             	  								<img src="lbd/img/flag/uk.gif"> <span>EN (UK)</span>
+                             	  							</a>
+                             	  						</li>
                              	  				</ul>
+                             	  				<div class="offer-bidding">
+                             	  					<div class="bidding-price">
+                             	  						<i class="fa fa-database" aria-hidden="true"><i class="fa fa-database" aria-hidden="true"></i></i> No bidding specified
+                             	  					</div>
+                             	  					<div class="bidding-price">
+                             	  						<i class="fa fa-database" aria-hidden="true"><i class="fa fa-database" aria-hidden="true"></i></i> From 10 € <span>/ article</span>
+                             	  					</div>
+                             	  					<div class="bidding-price">
+                             	  						<i class="fa fa-database" aria-hidden="true"><i class="fa fa-database" aria-hidden="true"></i></i> Upto 10 € <span>/ article</span>
+                             	  					</div>
+                             	  					<div class="bidding-price">
+                             	  						<i class="fa fa-database" aria-hidden="true"><i class="fa fa-database" aria-hidden="true"></i></i> 10 - 12 € <span>/ article</span>
+                             	  					</div>
+                             	  					<div class="bidding-contributors">
+                             	  	          <div class="applied-contributors">
+                             	  	          	<div class="user-image">
+                             	  	          	    <img class="img-circle" src="lbd/img/default-avatar.png"  data-toggle="tooltip" data-container="body" data-placement="bottom" title="User Name" />
+                             	  	          	</div>
+                             	  	          	<div class="user-image">
+                             	  	          	    <div class="card-user-empty user">
+                             	  	          	        PC
+                             	  	          	    </div>
+                             	  	          	</div>
+                             	  	          	<div class="user-image">
+                             	  	          	    <img class="img-circle" src="lbd/img/default-avatar.png"  data-toggle="tooltip" data-container="body" data-placement="bottom" title="User Name" />
+                             	  	          	</div>
+                             	  	          	<div class="user-image">
+                             	  	          	    <img class="img-circle" src="lbd/img/default-avatar.png"  data-toggle="tooltip" data-container="body" data-placement="bottom" title="User Name" />
+                             	  	          	</div>
+                             	  	          	<div class="user-image">
+                             	  	          	    <div class="card-user-empty user">
+                             	  	          	        +49
+                             	  	          	    </div>
+                             	  	          	</div>
+                             	  	          </div>
+                             	  	          <div class="text-center"><span class="fw600">No contributros</span> applied to this offer.</div>
+                             	  					</div>
+                             	  				</div>
+                             	  				<div class="bidding-actions form-group">
+                             	  					<button class="btn btn-fill full-width mb-10" disabled type="">
+                             	              Manage candidates
+                             	            </button>
+                             	            <button class="btn full-width" type="">
+                             	              Edit general settings
+                             	            </button>
+                             	  				</div>
+                             	  				<div class="bidding-actions-more">
+                             	  					<h4 class="section-title">More actions</h4>
+                             	  					<ul class="more-actions-list">
+                             	  						<li class="list-item">
+                             	  							<div class="col-sm-12 card">
+                             	                    <span class="df-ac">
+                             	                      <div class="switch mr-10" data-off-label="" data-on-label="">
+                             	                        <input  type="checkbox" />
+                             	                      </div>
+                             	                      <span class="fw700">Ask for availabilities : <span class="no">No</span> <span class="yes">Yes</span></span>
+                             	                      <span class="edit">
+                             	  							        <i class="material-icons">create</i> <a href="javascript:;">Edit</a>
+                             	  							      </span>
+                             	                    </span>
+                             	                </div>
+                             	  						</li>
+                             	  						<li class="list-item">
+                             	  							<div class="col-sm-12 card">
+                             	                    <span class="df-ac">
+                             	                      <div class="switch mr-10" data-off-label="" data-on-label="">
+                             	                        <input  type="checkbox" />
+                             	                      </div>
+                             	                      <span class="fw700">Quiz : <span class="no">No</span> <span class="yes">Yes</span></span>
+                             	                      <span class="edit">
+                             	  							        <i class="material-icons">create</i> <a href="javascript:;">Edit</a>
+                             	  							      </span>
+                             	                    </span>
+                             	                </div>
+                             	  						</li>
+                             	  						<li class="list-item">
+                             	  							<div class="col-sm-12 card">
+                             	                    <span class="df-ac">
+                             	                      <div class="switch mr-10" data-off-label="" data-on-label="">
+                             	                        <input  type="checkbox" />
+                             	                      </div>
+                             	                      <span class="fw700">Survey : <span class="no">No</span> <span class="yes">Yes</span></span>
+                             	                      <span class="edit">
+                             	  							        <i class="material-icons">create</i> <a href="javascript:;">Edit</a>
+                             	  							      </span>
+                             	                    </span>
+                             	                </div>
+                             	  						</li>
+                             	  						<li class="list-item">
+                             	  							<div class="col-sm-12 card">
+                             	                    <span class="df-ac">
+                             	                      <div class="switch mr-10" data-off-label="" data-on-label="">
+                             	                        <input  type="checkbox" />
+                             	                      </div>
+                             	                      <span class="fw700">Test article : <span class="no">No</span> <span class="yes">Yes</span></span>
+                             	                      <span class="edit">
+                             	  							        <i class="material-icons">create</i> <a href="javascript:;">Edit</a>
+                             	  							      </span>
+                             	                    </span>
+                             	                </div>
+                             	  						</li>
+                             	  					</ul>
+                             	  				</div>
+                             	  			</div>
+                             	  		</div>
+                             	  	</div>
+                             	  	<div class="col-md-12 card p-20">
+                             	  		<div class="row eligibility-info">
+                             	  			<div class="col-sm-12">
+                             	  				<div class="bidding-actions-more">
+                             	  					<h4 class="section-title">Who can apply to this job ?</h4>
+                             	  					<div class="card elibibility-filter">
+                             	  						<div class="col-md-12 form-group include-roles">
+                             	                <div class="row select-with-label">
+                             	                    <label>
+                             	                        Contributor rank
+                             	                    </label>
+                             	                    <select class="selectpicker" multiple name="filter" data-actions-box="true">
+                             	                        <option data-content="<span class='label senior'>Senior</span>">Senior</option>
+                             	                        <option data-content="<span class='label junior'>Junior</span>">Junior</option>
+                             	                        <option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
+                             	                        <option data-content="<span class='label senior'>Intermediate</span>">Intermediate</option>
+                             	                        <option data-content="<span class='label junior'>Expert</span>">Expert</option>
+                             	                    </select>
+                             	                </div>
+                             	  	          </div>
+                             	  	          <div class="col-md-12 form-group include-roles">
+                             	                <div class="row select-with-label">
+                             	                    <label>
+                             	                        Sectors
+                             	                    </label>
+                             	                    <select name="language-filter" title="Select a language" multiple class="selectpicker form-control flags" data-live-search="true" data-actions-box="true">
+                             	                  		<option value="1" data-content="<img src='lbd/img/default-avatar.png'> Creation & Entertainment">Creation &amp; Entertainment</option>
+                             	                      <option value="2" data-content="<img src='lbd/img/default-avatar.png'> Creation">Creation</option>
+                             	                      <option value="3" data-content="<img src='lbd/img/default-avatar.png'> Entertainment">Entertainment</option>
+                             	                      <option value="4" data-content="<img src='lbd/img/default-avatar.png'> Social Media">Social Media</option>
+                             	                		</select>
+                             	                    <!-- <select class="chosen-default chosen-select" multiple id="Sector">
+                             	  										<option data-img-src="lbd/img/default-avatar.png">
+                             	  											Creation &amp; Entertainment
+                             	  										</option>
+                             	  										<option data-img-src="lbd/img/default-avatar.png">
+                             	  											Creation
+                             	  										</option>
+                             	  										<option data-img-src="lbd/img/default-avatar.png">
+                             	  											Entertainment
+                             	  										</option>
+                             	  										<option data-img-src="lbd/img/default-avatar.png">
+                             	  											Social Media
+                             	  										</option>
+                             	  									</select> -->
+                             	                </div>
+                             	  	          </div>
+                             	  					</div>
+                             	  				</div>
+                             	  			</div>
+                             	  		</div>
+                             	  	</div>
+                             	  	<div class="col-md-12 card p-20">
+                             	  		<div class="row publish-info">
+                             	  			<div class="col-sm-12">
+                             	  				<div class="bidding-actions-more">
+                             	  					<h4 class="section-title">Publish</h4>
+                             	  					<ul class="more-actions-list">
+                             	  						<li class="list-item">
+                             	  							<div class="col-sm-12 card">
+                             	                    <span class="df-ac">
+                             	                      <div class="switch mr-10" data-off-label="" data-on-label="">
+                             	                        <input  type="checkbox" />
+                             	                      </div>
+                             	                      <span class="fw700">Ask for availabilities : <span class="no">No</span> <span class="yes">Yes</span></span>
+                             	                      <span class="edit">
+                             	  							        <i class="material-icons">create</i> <a href="javascript:;">Edit</a>
+                             	  							      </span>
+                             	                    </span>
+                             	                </div>
+                             	  						</li>
+                             	  						<li class="list-item">
+                             	  							<div class="col-sm-12 card">
+                             	                    <span class="df-ac">
+                             	                      <div class="switch mr-10" data-off-label="" data-on-label="">
+                             	                        <input  type="checkbox" />
+                             	                      </div>
+                             	                      <span class="fw700">Quiz : <span class="no">No</span> <span class="yes">Yes</span></span>
+                             	                      <span class="edit">
+                             	  							        <i class="material-icons">create</i> <a href="javascript:;">Edit</a>
+                             	  							      </span>
+                             	                    </span>
+                             	                </div>
+                             	  						</li>
+                             	  						<li class="list-item">
+                             	  							<div class="col-sm-12 card">
+                             	                    <span class="df-ac">
+                             	                      <div class="switch mr-10" data-off-label="" data-on-label="">
+                             	                        <input  type="checkbox" />
+                             	                      </div>
+                             	                      <span class="fw700">Survey : <span class="no">No</span> <span class="yes">Yes</span></span>
+                             	                      <span class="edit">
+                             	  							        <i class="material-icons">create</i> <a href="javascript:;">Edit</a>
+                             	  							      </span>
+                             	                    </span>
+                             	                </div>
+                             	  						</li>
+                             	  						<li class="list-item">
+                             	  							<div class="col-sm-12 card">
+                             	                    <span class="df-ac">
+                             	                      <div class="switch mr-10" data-off-label="" data-on-label="">
+                             	                        <input  type="checkbox" />
+                             	                      </div>
+                             	                      <span class="fw700">Test article : <span class="no">No</span> <span class="yes">Yes</span></span>
+                             	                      <span class="edit">
+                             	  							        <i class="material-icons">create</i> <a href="javascript:;">Edit</a>
+                             	  							      </span>
+                             	                    </span>
+                             	                </div>
+                             	  						</li>
+                             	  					</ul>
+                             	  				</div>
                              	  			</div>
                              	  		</div>
                              	  	</div>
@@ -1735,194 +1910,57 @@
 
 
 <!-- Custom scripts -->
-<!-- Bootstraptable for mission modal -->
-<script>
-    var $table = $('#mission-quote-table');
-
-    function operateFormatter(value, row, index) {
-    return [
-    '<a rel="tooltip" title="View" class="btn btn-simple btn-info btn-icon table-action view" href="javascript:void(0)">',
-        '<i class="fa fa-image"></i>',
-    '</a>',
-    '<a rel="tooltip" title="Edit" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
-        '<i class="fa fa-edit"></i>',
-    '</a>',
-    '<a rel="tooltip" title="Remove" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
-        '<i class="fa fa-remove"></i>',
-    '</a>'
-    ].join('');
-    }
-    $().ready(function() {
-        window.operateEvents = {
-            'click .view': function(e, value, row, index) {
-                info = JSON.stringify(row);
-                swal('You click view icon, row: ', info);
-                console.log(info);
-            },
-            'click .edit': function(e, value, row, index) {
-                info = JSON.stringify(row);
-                swal('You click edit icon, row: ', info);
-                console.log(info);
-            },
-            'click .remove': function(e, value, row, index) {
-                console.log(row);
-                $table.bootstrapTable('remove', {
-                    field: 'id',
-                    values: [row.id]
-                });
-            }
-        };
-        $table.bootstrapTable({
-            toolbar: ".toolbar",
-            clickToSelect: true,
-            showRefresh: true,
-            search: true,
-            showToggle: true,
-            showColumns: true,
-            pagination: false,
-            searchAlign: 'left',
-            pageSize: 5,
-            clickToSelect: false,
-            pageList: [5, 10, 25, 50, 100],
-            formatShowingRows: function(pageFrom, pageTo, totalRows) {
-                //do nothing here, we don't want to show the text "showing x of y from..."
-            },
-            formatRecordsPerPage: function(pageNumber) {
-                return pageNumber + " rows visible";
-            },
-            icons: {
-                refresh: 'fa fa-refresh',
-                toggle: 'fa fa-th-list',
-                columns: 'fa fa-columns',
-                detailOpen: 'fa fa-plus-circle',
-                detailClose: 'fa fa-minus-circle'
-            }
-        });
-        //activate the tooltips after the data table is initialized
-        $('[rel="tooltip"]').tooltip();
-        $(window).resize(function() {
-            $table.bootstrapTable('resetView');
-        });
-    });
-</script>
-
-
-<script>
-// Card-mission click to open Specific mission
-$(document).ready(function(){
-$('div').delegate('.card-section-list ul li .card', 'click', function(e){
-   if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
-      // code placed inside this condition is not executed on clicking the element #test
-e.stopPropagation();
-// console.log('Clicked on card-box');
-    window.open('contract-overview.html','_blank');
-   }
-// console.log('Clicked on card-box 02');
-});
-
-$('div').delegate('.card-section-list ul li .card', 'mouseover', function(e){
-   if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
-      // code placed inside this condition is not executed on clicking the element #test
-      $(this).closest('.card').css({'cursor':'pointer', 'box-shadow':'0px 0px 1px 1px rgba(68,138,255,1)'});
-   }
-});
-$('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
-   if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
-      // code placed inside this condition is not executed on clicking the element #test
-      $(this).closest('.card').css({'cursor':'auto', 'box-shadow':'0px 0px 5px 0px rgba(50,50,50,0.1)'});
-   }
-});
-
-/* Edit Create Mission Title*/
-    $('#editCreateMissionTitle').click(function() {
-        $('.create-quote-mission-title-edit').show();
-        $('.create-quote-mission-title').hide();
-    });
-    $('#saveCreateMissionTitle').click(function() {
-        $('.create-quote-mission-title-edit').hide();
-        $('.create-quote-mission-title').show();
-    });
-
-    /*Read more / Read less*/
-     $('.comment').each(function(){
-        $(this).readmore({
-                speed : 100,
-                collapsedHeight: 60,
-                moreLink: '<a href="#" class="morelink">See more</a>',
-                lessLink: '<a href="#" class="morelink">See Less</a>'
-            });
-     });
-
-     $('.modal').one('show.bs.modal', function () {
-      $(this).find('.comment').css({overflow: "hidden"});
-        }).one('shown.bs.modal shown.bs.tab', function () {
-            $(this).find('.comment').readmore({
-                speed : 100,
-                collapsedHeight: 60,
-                moreLink: '<a href="#" class="morelink">See more</a>',
-                lessLink: '<a href="#" class="morelink">See Less</a>'
-            });
-    });
-    /*Read more / Read less ends */
-
-});
-</script>
-
-
-
 <script type="text/javascript">
 
 	$(document).ready(function() {
 
-/*Toggeling Sourcing overview and Dashboard*/
-		$(document).on('click', '.list-navigation .sourcing-list-tab' , function(e){
-			e.preventDefault();
-			$(this).parent('.list-navigation').find('li').removeClass('active');
-			$(this).addClass('active');
-			$('.team-list-nav-container').hide();
-			$('.sourcing-list-nav-container').show();
-		});
-		$(document).on('click', '.list-navigation .dashboard-tab' , function(e){
-			e.preventDefault();
-			$(this).parent('.list-navigation').find('li').removeClass('active');
-			$(this).addClass('active');
-			$('.sourcing-list-nav-container').hide();
-			$('.team-list-nav-container').show();
-		});
-/*Toggeling Sourcing overview and Dashboard ends*/
+/* Edit offer title */
+    $(document).on('click', ".edit-offer-title", function(e){
+        e.stopPropagation();
+        var prevTitle = $(this).text();
+        $(this).hide('fast');
+        $('.offer-title-edit').find('input').val(prevTitle).focus().parents('.offer-title-edit').show('fast');
+        // $('.offer-title-edit').show('fast');
+    });
+    $(document).on('click', ".offer-title-edit .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var updatedTitle = $(this).siblings('input').val();
+        $('.offer-title-edit').hide('fast');
+        $('.edit-offer-title').text(updatedTitle).show('fast');
+        // $('.edit-offer-title').show('fast');
+    });
+/* Edit offer title ends*/
+/* Edit offer description */
+    $(document).on('click', ".edit-offer-content", function(e){
+        e.stopPropagation();
+        // $(this).hide()
+        $('.offer-desc-container, .edit-offer-content').slideUp();
+        $('.offer-desc-edit').slideDown();
+    });
+    $(document).on('click', ".desc-edit-actions .cancel-btn, .desc-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.offer-desc-edit').slideUp();
+        $('.offer-desc-container, .edit-offer-content').slideDown();
+    });
+/* Edit offer description ends*/
 
 /*Show filter options*/
-		$(document).on('click', '.sourcing-job-filters' , function(e){
-			e.preventDefault();
-			$(this).toggleClass('open').find('i').toggleClass('rotate-90');
-			$('.job-filter-options').slideToggle(200);
-		});
+	$(document).on('click', '.sourcing-job-filters' , function(e){
+		e.preventDefault();
+		$(this).toggleClass('open').find('i').toggleClass('rotate-90');
+		$('.job-filter-options').slideToggle(200);
+	});
 /*Show filter options ends*/
 /*Reset job filter options*/
-		$(document).on('click', '.clear-filter-options' , function(e){
-			e.preventDefault();
-			$(this).closest('form').reset()
-								   .find('.selectpicker').selectpicker('deselectAll');
-		});
+	$(document).on('click', '.clear-filter-options' , function(e){
+		e.preventDefault();
+		$(this).closest('form').reset()
+							   .find('.selectpicker').selectpicker('deselectAll');
+	});
 /*Reset job filter options ends*/
-/*Edit budget amount*/
-		$(document).on('click', '[class*="-budget"] .edit' , function(e){
-			e.preventDefault();
-			$(this).hide();
-			$(this).siblings('.amount')
-				   .find('> span').hide('fast');
-			$(this).siblings('.amount')
-				   .find('.input-group').show('fast');
-		});
-		$(document).on('click', '[class*="-budget"] button' , function(e){
-			e.preventDefault();
-			$(this).parent('.input-group').hide();
-			$(this).parents('[class*="-budget"]')
-				   .find('span.edit').show('fast');
-			$(this).parents('[class*="-budget"]')
-				   .find('.amount > span').show('fast');
-		});
-/*Edit budget amount ends*/
+
 	});
 
 

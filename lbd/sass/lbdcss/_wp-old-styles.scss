@@ -262,7 +262,7 @@ Copyright (c) 2015 Daniel Eden
         line-height: 60px;
         display: block;
       }
-    
+
       p {
         font-size: 16px;
         text-align: center;
@@ -3658,7 +3658,7 @@ select::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-
 }
 
 .fa {
-    width: 18px;
+    width: 24px;
     text-align: center;
 }
 
@@ -8204,7 +8204,7 @@ ul.zg-ul-select {
         background-image: url('https://images.unsplash.com/photo-1438978280647-f359d95ebda4?q=80&fm=jpg&s=73cb1239b517411534379c92660b2660');
         background-size: cover;
         z-index: 1;
-         
+
         &:before{
             position: absolute;
             width: 94%;
@@ -8216,8 +8216,8 @@ ul.zg-ul-select {
             border-radius: 6px;
             content: "";
             box-shadow: 0 3px 40px rgba(0, 0, 0, 0.2);
-            top: 24px;  
-        } 
+            top: 24px;
+        }
     */
     /*
         .footer div{
