@@ -218,6 +218,9 @@
     				padding: 0;
     				margin: 0;
     			}
+    			label{
+    				font-weight: 600;
+    			}
     			.card{
     				margin-bottom: 10px;
 	    			&:last-child{
@@ -317,13 +320,37 @@
         				}
         			}
         		}
-        		.elibibility-filter{
+        		.eligibility-filters{
         			@include clearfix;
         			padding: 10px;
         			border-radius: 4px;
         			background: $highlight-01;
         			.select-with-label{
 								@extend %select-with-label;
+							}
+							.more-filters{
+								display: none;
+							}
+							.toggle-more-filters{
+								transition: all .3s ease;
+								&.open{
+									i{
+										transform: rotateX(0);
+									}
+								}
+								i{
+									transform: rotateX(-180deg);
+									margin-right: 5px;
+								}
+								span{
+									text-decoration: underline;
+								}
+								&:hover{
+									cursor: pointer;
+									span{
+										text-decoration: none;
+									}
+								}
 							}
         		}
         	}
