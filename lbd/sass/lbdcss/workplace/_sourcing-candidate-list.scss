@@ -1,0 +1,126 @@
+// Sourcing Candidate List
+
+.sourcing-candidate-list-page {
+    .content {
+        .tab-content {
+            .main-panel-header {
+                .validate {
+                    button {
+                        float: left !important;
+                    }
+                }
+            }
+        }
+
+        .card-section-list {
+            ul {
+                li {
+                    .card-contract {
+                        .list-head-container {
+                            margin-top: 0;
+                            width: 32%;
+
+                            .header {
+                                line-height: 1.2;
+
+                                .status-label {
+                                    line-height: 1.5;
+                                }
+                            }
+                        }
+
+                        .task-price {
+                            width: 420px;
+
+                            .numbers {
+                                i {
+                                    position: relative;
+                                    top: 5px;
+                                    line-height: 0;
+                                }
+
+                                &:before, &:after {
+                                    background: 000;
+                                }
+
+                                &.done {
+                                    color: #447DF7;
+                                }
+
+                                &.process {
+                                    color: #353f53;
+                                }
+
+                                &.reject {
+                                    color: #EE0A5F;
+                                }
+
+                                i.star-rate {
+                                    position: absolute;
+                                    top: 9px;
+                                    font-size: 18px;
+                                    color: #FEC500;
+                                    right: 13px;
+                                }
+
+                                &.bidding {
+                                    .bidding-data {
+                                        background: #f3f5f7;
+                                        color: #353f53;
+                                        font-weight: 600;
+                                        padding: 7px 12px;
+                                        margin-top: -7px;
+
+                                        span {
+                                            color: #cdd0d5;
+                                        }
+                                    }
+                                }
+
+                                &.more-options {
+                                    width: 20px;
+                                    padding: 9px 0 0 0;
+
+                                    a.card-more-options {
+                                        color: #d7d9dc;
+
+                                        &:hover, &:focus {
+                                            color: #353f53;
+                                        }
+                                    }
+
+                                    .dropdown-menu {
+                                        right: -15px;
+
+                                        &:before, &:after {
+                                            left: auto;
+                                            right: 12px;
+                                        }
+
+                                        li {
+                                            a {
+                                                color: #9fa4ad;
+                                            }
+
+                                            &.confirm {
+                                                a {
+                                                    color: #353f53;
+                                                }
+                                            }
+
+                                            &.delete {
+                                                a {
+                                                    color: #EE0A5F;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -214,6 +214,14 @@
         }
     }
 
+    .header-title-edit {
+        display: none;
+
+        .btn {
+            width: 140px !important;
+        }
+    }
+
     .create-offers-job-settings {
         padding-bottom: 120px !important;
 
