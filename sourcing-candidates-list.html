@@ -43,17 +43,26 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="right col-md-4">
-										<div class="col-md-6 jobs-completed-container">
-											<a class= "end-date" data-toggle="" aria-expanded="" href="javascript:;">
-												<span class="title">Application time</span>
-												<span class="mission">0d - 23:18:06</span>
-											</a>
-										</div>
-										<a href="javascript:;" class="col-md-6 validate pause-link">
-											<span class="fw700">Show team list</span>&nbsp;(1/4)
-										</a>
-									</div>
+                                    <div class="right col-md-6">
+		                                <div class="col-md-4 end-date-container">
+		                                    <a class= "end-date" data-toggle="dropdown" aria-expanded="false" href="javascript:;">
+		                                        <span class="title">Application time</span>
+		                                        2d - 00:00:00
+		                                    </a>
+		                                </div>
+		                                <div class="col-md-4 jobs-completed-container">
+		                                    <a class= "end-date" data-toggle="dropdown" aria-expanded="false" href="javascript:;">
+		                                        <span class="title">Application Candidate</span>
+		                                        <span class="mission">0</span> <small>/</small> 40
+		                                    </a>
+		                                </div>
+		                                <!-- <a href="javascript:;" class="col-md-4 validate not-started-link">
+		                                    Close
+		                                </a> -->
+		                                <a href="javascript:;" class="col-md-4 validate start-link">
+		                                    Launch offer
+		                                </a>
+		                            </div>
                                 </div>
                                 <div class="row main-container">
                                     <div class="overlay-main-container"></div>
@@ -67,9 +76,9 @@
 			                                            <div class="col-md-12 mt-10 mb-15">
 			                                            	<div class="row">
 				                                                <ul class="nav container-nav col-md-12">
-				                                                	<li><a href="job-single-offer.html">Offer</a></li>
-				                                                	<li class="active"><a href="job-single-candidatelist.html">Candidate list</a></li>
-				                                                	<li><a href="job-single-teamlist.html">Team list</a></li>
+				                                                	<li><a href="sourcing-offers-single.html">Offer</a></li>
+				                                                	<li class="active"><a href="sourcing-candidates-list.html">Candidate list</a></li>
+				                                                	<li><a href="sourcing-team-list.html">Team list</a></li>
 				                                                </ul>
 			                                                </div>
 			                                            </div>
@@ -82,7 +91,7 @@
 			                                            </div>
 			                                        </div>
 			                                        <div class="row">
-                    	                    			<div class="col-md-12 left-module-title">Assignees</div>
+                    	                    			<div class="col-md-12 left-module-title">Assignee</div>
     	                                                <div class="col-md-12 contract-owner-box card">
     	                                                	<div class="col-md-8 contract-owner">
     	                                                		<div class="user-image">
@@ -94,26 +103,6 @@
     	                                                		<div class="user-name-block">
     	                                                			<div class="user-name">
     	                                                				Lucie Zvanovec <span>Writer</span>
-    	                                                			</div>
-    	                                                		</div>
-    	                                                	</div>
-    	                                                	<div class="col-md-4 update-contract-owner">
-    	                                                		<span class="edit pull-right">
-    	                                                			<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-    	                                                			<a href="javascript:;" data-toggle="modal" data-target="#updateAssigneeModal">
-    	                                                				Reassign
-    	                                                			</a>
-    	                                                		</span>
-    	                                                	</div>
-    	                                                </div>
-    	                                                <div class="col-md-12 contract-owner-box card">
-    	                                                	<div class="col-md-8 contract-owner">
-    	                                                		<div class="user-image">
-    	                                                		<img class="img-circle" src="lbd/img/default-avatar.png" />
-    	                                                		</div>
-    	                                                		<div class="user-name-block">
-    	                                                			<div class="user-name">
-    	                                                				Alexis Sanchez <span>Proofreader</span>
     	                                                			</div>
     	                                                		</div>
     	                                                	</div>
@@ -167,6 +156,276 @@
 						                                    <div class="row">
 						                                    	<div class="tab-content-container pt-20">
 						                                           <div class="col-md-12 contract-content-container">
+                                                                        <div class="col-md-12 define-mission-container">
+                                                                            <div class="define-mission">
+                                                                                <div class="define-title">No candidates yet here!</div>
+                                                                                <div class="define-tagline">
+                                                                                    Check out the announce and launch publish or enlarge the audience to see the first candidates applications.
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+						                                           		<div class="row">
+						                                           			<div class="col-md-12 card-section-list-headers">
+						                                           				<div class="row">
+						                                           					<div class="col-md-5 header-title">
+						                                           						<h4 class="title">Pinned (4)</h4>
+						                                           					</div>
+						                                           					<div class="col-md-7 right-column">
+						                                           						<div class="col-md-3 numbers">Survey</div>
+						                                           						<div class="col-md-3 numbers">Quizz</div>
+						                                           						<div class="col-md-3 numbers">Test</div>
+						                                           						<div class="col-md-3 numbers">Bidding</div>
+						                                           					</div>
+						                                           				</div>
+						                                           			</div>
+						                                           		</div>
+						                                           		<div class="divider"></div>
+						                                                <div class="row">
+						                                                    <div class="col-md-12">
+						                                                        <div class="card-section-list" data-role="contract-section-list">
+						                                                            <ul>
+						                                                                <li>
+						                                                                    <div class="col-md-12 card card-contract">
+						                                                                        <div class="col-md-1 check">
+						                                                                            <label class="checkbox">
+						                                                                                <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+						                                                                            </label>
+						                                                                        </div>
+						                                                                        <div class="col-md-1 list-image-container">
+						                                                                        	<span class="pin"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+						                                                                            <div class="list-image">
+						                                                                                <img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+						                                                                            </div>
+						                                                                        </div>
+						                                                                        <div class="col-md-6 list-head-container">
+						                                                                            <div class="header">
+						                                                                                <strong class="primary-font">Michael Martin</strong>
+						                                                                                <div class="status-label">
+						                                                                                    <span class="label senior">Senior</span>
+						                                                                                    <span class="dates">
+						                                                                                        <span>Sept 14 - 08:56 AM
+						                                                                                    </span>
+						                                                                            	</div>
+						                                                                            </div>
+						                                                                        </div>
+						                                                                        <div class="task-price">
+						                                                                            <div class="col-md-2 numbers done">
+						                                                                                <i class="material-icons">check</i><span>Done</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-2 numbers done">
+						                                                                                8/10<span>Passed</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-2 numbers done">
+						                                                                                10/10 <i class="star-rate material-icons">star</i><span>Done</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-3 numbers bidding">
+						                                                                                <div class="bidding-data">
+						                                                                                	12.10 &#8364;<span>58.33%</span>
+						                                                                                </div>
+						                                                                            </div>
+																									<div class="col-md-1 numbers more-options">
+																										<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+						                                                                                <ul class="dropdown-menu dropdown-menu-right">
+																											<li class="confirm"><a href="#">+ Add to teamlist</a></li>
+																											<li><a href="#">Add as a backup</a></li>
+																											<li><a href="#">Pin</a></li>
+																											<li><a href="#">Send test</a></li>
+																											<li><a href="#">Send quizz</a></li>
+																											<li><a href="#">Send survey</a></li>
+																											<li class="delete"><a href="#">Reject</a></li>
+																										</ul>
+																									</div>
+						                                                                        </div>
+						                                                                    </div>
+						                                                                </li>
+						                                                                <li>
+						                                                                    <div class="col-md-12 card card-contract">
+						                                                                        <div class="col-md-1 check">
+						                                                                            <label class="checkbox">
+						                                                                                <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+						                                                                            </label>
+						                                                                        </div>
+						                                                                        <div class="col-md-1 list-image-container">
+						                                                                        	<span class="pin"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+						                                                                            <div class="list-image">
+						                                                                                <img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+						                                                                            </div>
+						                                                                        </div>
+						                                                                        <div class="col-md-6 list-head-container">
+						                                                                            <div class="header">
+						                                                                                <strong class="primary-font">Michael Martin</strong>
+						                                                                                <div class="status-label">
+						                                                                                    <span class="label beginner">Beginner</span>
+						                                                                                    <span class="dates">
+						                                                                                        <span>Sept 14 - 08:56 AM
+						                                                                                    </span>
+						                                                                            	</div>
+						                                                                            </div>
+						                                                                        </div>
+						                                                                        <div class="task-price">
+						                                                                            <div class="col-md-2 numbers process">
+						                                                                                <i class="material-icons">close</i><span>No</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-2 numbers done">
+						                                                                                8/10<span>Passed</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-2 numbers reject">
+						                                                                                4/10 <i class="star-rate material-icons">star</i><span>Missed</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-3 numbers bidding">
+						                                                                                <div class="bidding-data">
+						                                                                                	12.10 &#8364;<span>58.33%</span>
+						                                                                                </div>
+						                                                                            </div>
+																									<div class="col-md-1 numbers more-options">
+																										<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+						                                                                                <ul class="dropdown-menu dropdown-menu-right">
+																											<li class="confirm"><a href="#">+ Add to teamlist</a></li>
+																											<li><a href="#">Add as a backup</a></li>
+																											<li><a href="#">Pin</a></li>
+																											<li><a href="#">Send test</a></li>
+																											<li><a href="#">Send quizz</a></li>
+																											<li><a href="#">Send survey</a></li>
+																											<li class="delete"><a href="#">Reject</a></li>
+																										</ul>
+																									</div>
+						                                                                        </div>
+						                                                                    </div>
+						                                                                </li>
+						                                                                <li>
+						                                                                    <div class="col-md-12 card card-contract">
+						                                                                        <div class="col-md-1 check">
+						                                                                            <label class="checkbox">
+						                                                                                <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+						                                                                            </label>
+						                                                                        </div>
+						                                                                        <div class="col-md-1 list-image-container">
+						                                                                        	<span class="pin"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+						                                                                            <div class="list-image">
+						                                                                                <img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+						                                                                            </div>
+						                                                                        </div>
+						                                                                        <div class="col-md-6 list-head-container">
+						                                                                            <div class="header">
+						                                                                                <strong class="primary-font">Michael Martin</strong>
+						                                                                                <div class="status-label">
+						                                                                                    <span class="label junior">Junior</span>
+						                                                                                    <span class="dates">
+						                                                                                        <span>Sept 14 - 08:56 AM
+						                                                                                    </span>
+						                                                                            	</div>
+						                                                                            </div>
+						                                                                        </div>
+						                                                                        <div class="task-price">
+						                                                                            <div class="col-md-2 numbers process">
+						                                                                                <i class="material-icons">close</i><span>No</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-2 numbers done">
+						                                                                                8/10<span>Passed</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-2 numbers process">
+						                                                                                <i class="material-icons">hourglass_empty</i><span>Waiting</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-3 numbers bidding">
+						                                                                                <div class="bidding-data">
+						                                                                                	12.10 &#8364;<span>58.33%</span>
+						                                                                                </div>
+						                                                                            </div>
+																									<div class="col-md-1 numbers more-options">
+																										<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+						                                                                                <ul class="dropdown-menu dropdown-menu-right">
+																											<li class="confirm"><a href="#">+ Add to teamlist</a></li>
+																											<li><a href="#">Add as a backup</a></li>
+																											<li><a href="#">Pin</a></li>
+																											<li><a href="#">Send test</a></li>
+																											<li><a href="#">Send quizz</a></li>
+																											<li><a href="#">Send survey</a></li>
+																											<li class="delete"><a href="#">Reject</a></li>
+																										</ul>
+																									</div>
+						                                                                        </div>
+						                                                                    </div>
+						                                                                </li>
+						                                                                <li>
+						                                                                    <div class="col-md-12 card card-contract">
+						                                                                        <div class="col-md-1 check">
+						                                                                            <label class="checkbox">
+						                                                                                <input id="contract1" type="checkbox" data-toggle="checkbox" value="">
+						                                                                            </label>
+						                                                                        </div>
+						                                                                        <div class="col-md-1 list-image-container">
+						                                                                        	<span class="pin"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+						                                                                            <div class="list-image">
+						                                                                                <img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+						                                                                            </div>
+						                                                                        </div>
+						                                                                        <div class="col-md-6 list-head-container">
+						                                                                            <div class="header">
+						                                                                                <strong class="primary-font">Michael Martin</strong>
+						                                                                                <div class="status-label">
+						                                                                                    <span class="label senior">Senior</span>
+						                                                                                    <span class="dates">
+						                                                                                        <span>Sept 14 - 08:56 AM
+						                                                                                    </span>
+						                                                                            	</div>
+						                                                                            </div>
+						                                                                        </div>
+						                                                                        <div class="task-price">
+						                                                                            <div class="col-md-2 numbers process">
+						                                                                                <i class="material-icons">close</i><span>No</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-2 numbers done">
+						                                                                                8/10<span>Passed</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-2 numbers process">
+						                                                                                <i class="material-icons">send</i><span>Send</span>
+						                                                                            </div>
+						                                                                            <div class="col-md-3 numbers bidding">
+						                                                                                <div class="bidding-data">
+						                                                                                	12.10 &#8364;<span>58.33%</span>
+						                                                                                </div>
+						                                                                            </div>
+																									<div class="col-md-1 numbers more-options">
+																										<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+						                                                                                <ul class="dropdown-menu dropdown-menu-right">
+																											<li class="confirm"><a href="#">+ Add to teamlist</a></li>
+																											<li><a href="#">Add as a backup</a></li>
+																											<li><a href="#">Pin</a></li>
+																											<li><a href="#">Send test</a></li>
+																											<li><a href="#">Send quizz</a></li>
+																											<li><a href="#">Send survey</a></li>
+																											<li class="delete"><a href="#">Reject</a></li>
+																										</ul>
+																									</div>
+						                                                                        </div>
+						                                                                    </div>
+						                                                                </li>
+						                                                            </ul>
+						                                                        </div>
+						                                                    </div>
+						                                                </div>
+						                                           </div>
+						                                       </div>
+						                                    </div>
+						                                    <div class="row">
+						                                    	<div class="tab-content-container pt-20">
+						                                           <div class="col-md-12 contract-content-container">
+						                                           		<div class="row">
+						                                           			<div class="col-md-12 card-section-list-headers">
+						                                           				<div class="row">
+						                                           					<div class="col-md-5 header-title">
+						                                           						<h4 class="title">Candidates (4)</h4>
+						                                           					</div>
+						                                           					<div class="col-md-7 right-column">
+						                                           						<div class="col-md-3 numbers">Survey</div>
+						                                           						<div class="col-md-3 numbers">Quizz</div>
+						                                           						<div class="col-md-3 numbers">Test</div>
+						                                           						<div class="col-md-3 numbers">Bidding</div>
+						                                           					</div>
+						                                           				</div>
+						                                           			</div>
+						                                           		</div>
+						                                           		<div class="divider"></div>
 						                                                <div class="row">
 						                                                    <div class="col-md-12">
 						                                                        <div class="card-section-list" data-role="contract-section-list">
@@ -404,6 +663,8 @@
             </div>
         </div>
         <!-- Modal -->
+        <!--Update Assignee Modal -->
+		<!-- @include _partials/_contract-owner-update-modal.html -->
 
 		<!--   Core JS Files   -->
 		<!-- @include _partials/_all-js-files.html -->

@@ -76,58 +76,6 @@
                         margin-top: 0;
                     }
                 }
-
-                .team-list-container {
-                    display: -webkit-flex;
-                    display: -moz-flex;
-                    display: -ms-flex;
-                    display: -o-flex;
-                    display: flex;
-                    flex-flow: column;
-                    list-style-type: none;
-                    padding: 0;
-                    margin: 0;
-
-                    > li {
-                        @include clearfix;
-
-                        &[class*='-list'] {
-                            margin-bottom: 10px;
-                            padding: 15px;
-
-                            // transition: all .3s ease;
-                            -webkit-transition: all .5s ease-out;
-                            -moz-transition: all 0.5s ease-out;
-                            -ms-transition: all 0.5s ease-out;
-                            -o-transition: all 0.5s ease-out;
-                            transition: all 0.5s ease-out;
-
-                            .language-to {
-                                @extend %language-breadcrum;
-
-                                width: auto;
-                                margin-right: 15px;
-                            }
-
-                            [class*='-details'] {
-                                [class*='-title'] {
-                                    font-size: 14px;
-                                    font-weight: 600;
-                                    color: $main;
-                                }
-
-                                [class*='-numbers'] {
-                                    font-size: 12px;
-                                    color: $helper;
-                                }
-                            }
-                        }
-
-                        &:hover {
-                            box-shadow: inset 0px 0px 0px 2px rgba(68, 138, 255, 1);
-                        }
-                    }
-                }
             }
         }
 
@@ -196,6 +144,58 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.team-list-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    > li {
+        @include clearfix;
+
+        &[class*='-list'] {
+            margin-bottom: 10px;
+            padding: 15px;
+
+            // transition: all .3s ease;
+            -webkit-transition: all .5s ease-out;
+            -moz-transition: all 0.5s ease-out;
+            -ms-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            transition: all 0.5s ease-out;
+
+            .language-to {
+                @extend %language-breadcrum;
+
+                width: auto;
+                margin-right: 15px;
+            }
+
+            [class*='-details'] {
+                [class*='-title'] {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $main;
+                }
+
+                [class*='-numbers'] {
+                    font-size: 12px;
+                    color: $helper;
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: inset 0px 0px 0px 2px rgba(68, 138, 255, 1);
         }
     }
 }

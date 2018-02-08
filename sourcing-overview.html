@@ -1495,6 +1495,19 @@
 		  																																																</div>
 		  																																															</div>
 		  																																															<div class="row">
+		  																																																<div class="col-md-3 job-tests-module">
+		  																																																	<label>Production time duration</label>
+		  																																																	<input type="number" class="form-control" placeholder="ex : 169" />
+		  																																																</div>
+		  																																																<div class="col-md-3 job-tests-module test-job-title mt-25">
+		  																																																	<select class="selectpicker" title="Select a time unit">
+		  																																																		<option data-hidden="true"></option>
+		  																																																		<option>hour(s)</option>
+		  																																																		<option>day(s)</option>
+		  																																																	</select>
+		  																																																</div>
+		  																																															</div>
+		  																																															<div class="row">
 		  																																																<div class="col-md-6 job-tests-module">
 		  																																																	<label>Pricing</label>
 		  																																																	<div class="col-md-12 activation-border">
@@ -1519,6 +1532,29 @@
 		  																																																<div class="col-md-3 job-tests-module test-job-title">
 		  																																																	<label>Cost *</label>
 		  																																																	<input type="number" class="form-control" placeholder="ex : 5.20" />
+		  																																																</div>
+		  																																															</div>
+		  																																															<div class="row">
+		  																																																<div class="col-md-6 job-tests-module">
+		  																																																	<label>Automatic sending</label>
+		  																																																	<div class="col-md-12 activation-border">
+		  																																																		<div class="col-md-12 activation-container">
+		  																																																			<div class="col-md-2 activation-switch">
+		  																																																				<div class="switch" data-off-label="" data-on-label="">
+		  																																																					<input type="checkbox"/>
+		  																																																				</div>
+		  																																																			</div>
+		  																																																			<div class="col-md-9 activation-statement">
+		  																																																				Send articles automatically:
+		  																																																				<span class="no">
+		  																																																					NO
+		  																																																				</span>
+		  																																																				<span class="yes">
+		  																																																					YES
+		  																																																				</span>
+		  																																																			</div>
+		  																																																		</div>
+		  																																																	</div>
 		  																																																</div>
 		  																																															</div>
 		  																																															<div class="row">
@@ -1573,10 +1609,53 @@
 		  																																																			</div>
 		  																																																		</div>
 		  																																																	</div>
-		  																																																	<h4 class="title">Stakeholders</h4>
+		  																																																	<h4 class="title">Proofreading</h4>
 		  																																																	<div class="row">
+				  																																																<div class="col-md-6 job-tests-module">
+				  																																																	<div class="col-md-12 activation-border">
+				  																																																		<div class="col-md-12 activation-container">
+				  																																																			<div class="col-md-2 activation-switch">
+				  																																																				<div class="switch" data-off-label="" data-on-label="">
+				  																																																					<input type="checkbox"/>
+				  																																																				</div>
+				  																																																			</div>
+				  																																																			<div class="col-md-9 activation-statement">
+				  																																																				Proofreading:
+				  																																																				<span class="no">
+				  																																																					NO
+				  																																																				</span>
+				  																																																				<span class="yes">
+				  																																																					YES
+				  																																																				</span>
+				  																																																			</div>
+				  																																																		</div>
+				  																																																	</div>
+				  																																																</div>
+				  																																																<div class="col-md-6 job-tests-module">
+				  																																																	<div class="col-md-12 activation-border">
+				  																																																		<div class="col-md-12 activation-container">
+				  																																																			<div class="col-md-2 activation-switch">
+				  																																																				<div class="switch" data-off-label="" data-on-label="">
+				  																																																					<input type="checkbox"/>
+				  																																																				</div>
+				  																																																			</div>
+				  																																																			<div class="col-md-9 activation-statement">
+				  																																																				Internal:
+				  																																																				<span class="no">
+				  																																																					NO
+				  																																																				</span>
+				  																																																				<span class="yes">
+				  																																																					YES
+				  																																																				</span>
+				  																																																			</div>
+				  																																																		</div>
+				  																																																	</div>
+				  																																																</div>
+				  																																															</div>
+				  																																															<div class="row">
 		  																																																		<div class="col-md-6 job-tests-module">
 		  																																																			<div class="search-user">
+		  																																																				<label>Assign on this job</label>
 		  																																																				<input type="text" class="form-control" placeholder="Search user" />
 		  																																																			</div>
 		  																																																		</div>
@@ -1647,70 +1726,6 @@
 		  																																																					</span>
 		  																																																				</div>
 		  																																																			</div>
-		  																																																		</div>
-		  																																																	</div>
-		  																																																	<h4 class="title">Source</h4>
-		  																																																	<div class="row">
-		  																																																		<div class="col-md-6 job-tests-module">
-		  																																																			<label>Client</label>
-		  																																																			<select class="selectpicker" title="Choose a client">
-		  																																																				<option data-hidden="true"></option>
-		  																																																				<option>Allocine</option>
-		  																																																				<option>Webedia</option>
-		  																																																				<option>Amazon</option>
-		  																																																				<option>Adobe</option>
-		  																																																			</select>
-		  																																																		</div>
-		  																																																		<div class="col-md-6 job-tests-module mt-15">
-		  																																																			<div class="col-md-12 activation-border">
-		  																																																				<div class="col-md-12 activation-container">
-		  																																																					<div class="col-md-2 activation-switch">
-		  																																																						<div class="switch" data-off-label="" data-on-label="">
-		  																																																							<input type="checkbox"/>
-		  																																																						</div>
-		  																																																					</div>
-		  																																																					<div class="col-md-9 activation-statement">
-		  																																																						Show client to contributor:
-		  																																																						<span class="no">
-		  																																																							NO
-		  																																																						</span>
-		  																																																						<span class="yes">
-		  																																																							YES
-		  																																																						</span>
-		  																																																					</div>
-		  																																																				</div>
-		  																																																			</div>
-		  																																																		</div>
-		  																																																	</div>
-		  																																																	<div class="row">
-		  																																																		<div class="col-md-6 job-tests-module">
-		  																																																			<select class="selectpicker" title="Choose a quote" disabled>
-		  																																																				<option data-hidden="true"></option>
-		  																																																				<option>Quote 1</option>
-		  																																																				<option>Quote 2</option>
-		  																																																				<option>Quote 3</option>
-		  																																																				<option>Quote 4</option>
-		  																																																			</select>
-		  																																																		</div>
-		  																																																		<div class="col-md-6 job-tests-module">
-		  																																																			<select class="selectpicker" title="Choose a contract" disabled>
-		  																																																				<option data-hidden="true"></option>
-		  																																																				<option>Contract 1</option>
-		  																																																				<option>Contract 2</option>
-		  																																																				<option>Contract 3</option>
-		  																																																				<option>Contract 4</option>
-		  																																																			</select>
-		  																																																		</div>
-		  																																																	</div>
-		  																																																	<div class="row">
-		  																																																		<div class="col-md-6 job-tests-module">
-		  																																																			<select class="selectpicker" title="Choose a mission" disabled>
-		  																																																				<option data-hidden="true"></option>
-		  																																																				<option>Mission 1</option>
-		  																																																				<option>Mission 2</option>
-		  																																																				<option>Mission 3</option>
-		  																																																				<option>Mission 4</option>
-		  																																																			</select>
 		  																																																		</div>
 		  																																																	</div>
 		  																																																</div>
