@@ -1,0 +1,189 @@
+// Sourcing Candidate List
+
+.sourcing-candidate-list-page {
+    .content {
+        .tab-content {
+            .main-panel-header {
+                .validate {
+                    button {
+                        float: left !important;
+                    }
+                }
+            }
+        }
+
+        .define-mission-container {
+            height: 100px;
+        }
+
+        .card-section-list-headers {
+            .header-title {
+                width: 43.666%;
+
+                h4.title {
+                    color: #485262;
+                    font-size: 16px;
+                    font-weight: 700;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1;
+                }
+            }
+
+            .right-column {
+                float: right;
+                width: 455px;
+
+                .numbers {
+                    width: 98px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .card-section-list {
+            ul {
+                li {
+                    .card-contract {
+                        .list-image-container {
+                            position: relative;
+
+                            span.pin {
+                                position: absolute;
+                                right: 18px;
+                                z-index: 1;
+
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: -1px;
+                                    left: 1px;
+                                    width: 22px;
+                                    height: 22px;
+                                    background: #447DF7;
+                                    -moz-border-radius: 50%;
+                                    -webkit-border-radius: 50%;
+                                    border-radius: 50%;
+                                }
+
+                                i {
+                                    color: #fff;
+                                    -webkit-transform: rotate(45deg);
+                                    -moz-transform: rotate(45deg);
+                                    -o-transform: rotate(45deg);
+                                    -ms-transform: rotate(45deg);
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+
+                        .list-head-container {
+                            margin-top: 0;
+                            width: 32%;
+
+                            .header {
+                                line-height: 1.2;
+
+                                .status-label {
+                                    line-height: 1.5;
+                                }
+                            }
+                        }
+
+                        .task-price {
+                            width: 420px;
+
+                            .numbers {
+                                i {
+                                    position: relative;
+                                    top: 5px;
+                                    line-height: 0;
+                                }
+
+                                &:before, &:after {
+                                    background: 000;
+                                }
+
+                                &.done {
+                                    color: #447DF7;
+                                }
+
+                                &.process {
+                                    color: #353f53;
+                                }
+
+                                &.reject {
+                                    color: #EE0A5F;
+                                }
+
+                                i.star-rate {
+                                    position: absolute;
+                                    top: 9px;
+                                    font-size: 18px;
+                                    color: #FEC500;
+                                    right: 13px;
+                                }
+
+                                &.bidding {
+                                    .bidding-data {
+                                        background: #f3f5f7;
+                                        color: #353f53;
+                                        font-weight: 600;
+                                        padding: 7px 12px;
+                                        margin-top: -7px;
+
+                                        span {
+                                            color: #cdd0d5;
+                                        }
+                                    }
+                                }
+
+                                &.more-options {
+                                    width: 20px;
+                                    padding: 9px 0 0 0;
+
+                                    a.card-more-options {
+                                        color: #d7d9dc;
+
+                                        &:hover, &:focus {
+                                            color: #353f53;
+                                        }
+                                    }
+
+                                    .dropdown-menu {
+                                        right: -15px;
+
+                                        &:before, &:after {
+                                            left: auto;
+                                            right: 12px;
+                                        }
+
+                                        li {
+                                            a {
+                                                color: #9fa4ad;
+                                            }
+
+                                            &.confirm {
+                                                a {
+                                                    color: #353f53;
+                                                }
+                                            }
+
+                                            &.delete {
+                                                a {
+                                                    color: #EE0A5F;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

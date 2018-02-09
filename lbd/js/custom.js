@@ -483,6 +483,10 @@ $(document).ready(function(){
         autocomplete: { minLength: 3, delay: 250, html: true, position: { collision: 'flip' } }
     });
 
+    $('[data-toggle="tooltip"]').tooltip({
+	    trigger : 'hover'
+	})
+
 
 	//Tab Edit content toggle
 	$('.contract .nav-button').click(function(e) {

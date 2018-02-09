@@ -3,8 +3,9 @@
 @media screen and (max-width: 1400px) {
     .layout-2.wp-app .page-wrap .main-panel-wrap .main-panel .main-panel-page .main-panel-page-header .contract {
         width: 41.333%;
-        &.sourcing{
-          width: 58%;
+
+        &.sourcing {
+            width: 58%;
         }
     }
 
@@ -24,16 +25,19 @@
     } */
     .open-menu-top-bar {
         width: 47%;
-        &.open-menu-sourcing{
-          width: 63%;
-          .contract-title-edit{
-            width: 90.33%;
-          }
-          .client-info{
-            a.close-nav{
-              margin-left: 10px;
+
+        &.open-menu-sourcing {
+            width: 63%;
+
+            .contract-title-edit {
+                width: 90.33%;
             }
-          }
+
+            .client-info {
+                a.close-nav {
+                    margin-left: 10px;
+                }
+            }
         }
     }
 
