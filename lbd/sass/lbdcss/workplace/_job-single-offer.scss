@@ -171,12 +171,12 @@
 						}
         	}
         	.offer-content{
-        		padding: 40px 20px 20px 20px;
+        		padding: 40px 30px 30px;
         		position: relative;
         		color: $main;
         		span.edit{
         			position: absolute;
-        			right: 20px;
+        			right: 30px;
         			top: 20px;
         			&:hover{
         				cursor: pointer;
@@ -241,7 +241,7 @@
 	        	.offer-bidding{
 	        		padding: 10px 20px 0px;
 	        		.bidding-price{
-	        			font-size: 24px;
+	        			font-size: 20px;
 	        			font-weight: 700;
 	        			color: $main;
 	        			text-align: center;
@@ -317,6 +317,13 @@
       								margin: 0;
       							}
       						}
+        				}
+        				.help{
+        					position: absolute;
+        					right: 15px;
+        					i{
+        						font-size: 22px;
+        					}
         				}
         			}
         		}

@@ -107,6 +107,15 @@
 
                                 width: auto;
                                 margin-right: 15px;
+                                li{
+
+                                	&:last-child{
+                                		&:after, a:after{
+	                                		border-left-color: #fff !important;
+	                                	}
+                                	}
+
+                                }
                             }
 
                             [class*='-details'] {
