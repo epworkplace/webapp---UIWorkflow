@@ -389,345 +389,49 @@
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-        width: 1160px;
-        padding: 25px 0;
-        margin: 0 auto;
-
-        [class*='-content-main']{
-        	.offer-banner{
-						width: 100%;
-						height: 240px;
-						background: url('../img/fo-bg.jpg') no-repeat center center;
-						background-size: cover;
-						padding: 25px;
-						border-radius: 4px 4px 0 0;
-						input[type="file"] {
-						    display: none;
-						}
-						.custom-file-upload {
-						    display: -webkit-inline-flex;
-						    display: -moz-inline-flex;
-						    display: -ms-inline-flex;
-						    display: -o-inline-flex;
-						    display: inline-flex;
-						    align-items: center;
-						    justify-content: center;
-						    padding: 6px 10px;
-						    margin: 0;
-						    cursor: pointer;
-						    position: absolute;
-						    right: 15px;
-						    color: #fff;
-						    font-size: 14px;
-						    font-weight: normal;
-						    span{
-						    	text-decoration: underline;
-						    }
-						    i{
-						    	font-size: 16px;
-						    	margin-left: 5px;
-						    }
-						    &:hover{
-						    	span{
-						    		text-decoration: none;
-						    	}
-						    }
-						}
-						a{
-							color: #fff;
-							&.change-banner{
-								input[type="file"]{
-									position: absolute;
-									height: 100%;
-									width: 100%;
-									top: 0;
-									left: 0;
-									opacity: 0;
-									&:hover{
-										cursor: pointer;
-									}
-								}
-								display: -webkit-inline-flex;
-								display: -moz-inline-flex;
-								display: -ms-inline-flex;
-								display: -o-inline-flex;
-								display: inline-flex;
-								align-items: center;
-								justify-content: center;
-								font-size: 14px;
-								position: absolute;
-								right: 25px;
-									span{
-										text-decoration: underline;
-									}
-									i{
-										margin-left: 10px;
-										font-size: 14px;
-									}
-								&:hover{
-									cursor: pointer;
-									span{
-										text-decoration: none;
-									}
-									input{
-										cursor: pointer;
-										&:hover{
-											cursor: pointer;
-										}
-									}
-								}
-							}
-						}
-						h3{
-							margin: 0;
-							position: absolute;
-							bottom: 25px;
-							color: #fff;
-							transition: all .3s ease;
-							width: calc(100% - 40px);
-							&.offer-title{
-								.btn-yes{
-									border-radius: 0 4px 4px 0;
-								}
-							}
-
-						}
-        	}
-        	.offer-content{
-        		padding: 40px 30px 30px;
-        		position: relative;
-        		color: $main;
-        		span.edit{
-        			position: absolute;
-        			right: 30px;
-        			top: 20px;
-        			&:hover{
-        				cursor: pointer;
-        			}
-        		}
-        		[class$='-edit']{
-        			display: none;
-        		}
-        		h4, p{
-        			color: $main;
-        		}
-        		h4{
-        			font-size: 16px;
-        			font-weight: 600;
-        			margin: 0;
-        		}
-        		p{
-        			font-size: 14px;
-        		}
-				a{
-					color: $selected;
-					text-decoration: underline;
-					&:hover{
-						text-decoration: none;
-					}
-				}
-				.no-data-placeholder{
-					h4, p {
-						color: $helper;
-					}
-				}
-
-        	}
-        }
-        [class*='-content-aside']{
-        	.section-title{
-    				color: $main;
-    				font-weight: 600;
-    				padding: 0;
-    				margin: 0;
-    			}
-    			label{
-    				font-weight: 600;
-    			}
-    			.card{
-    				margin-bottom: 10px;
-	    			&:last-child{
-	    				margin: 0;
-	    			}
-    			}
-        	[class*='-info']{
-	        	.language-to{
-	        		@extend %language-breadcrum;
-	        		li{
-	        			a{
-	        				&:after{
-	        					border-left-color: #fff !important;
-	        				}
-	        			}
-	        		}
-	        	}
-	        	.offer-bidding{
-	        		padding: 10px 20px 0px;
-	        		.bidding-price{
-	        			font-size: 20px;
-	        			font-weight: 700;
-	        			color: $main;
-	        			text-align: center;
-	        			padding: 10px;
-	        			.fa-database{
-	        				display: -webkit-inline-flex;
-	        				display: -moz-inline-flex;
-	        				display: -ms-inline-flex;
-	        				display: -o-inline-flex;
-	        				display: inline-flex;
-	        				margin-right: 10px;
-	        				position: relative;
-	        				.fa-database{
-								    position: absolute;
-								    left: 0.5em;
-								    width: 0.8em;
-								    /* height: 0.8em; */
-								    top: 0.4em;
-								    font-size: 0.8em;
-								    background: white;
-	        				}
-	        			}
-	        			span{
-	        				font-weight: normal;
-	        			}
-	        		}
-	        		.bidding-contributors{
-	        			margin: 20px 0;
-	        			.applied-contributors{
-		        			display: -webkit-flex;
-		        			display: -moz-flex;
-		        			display: -ms-flex;
-		        			display: -o-flex;
-		        			display: flex;
-		        			justify-content: center;
-		        			flex-flow: row wrap;
-		        			.user-image{
-		        				margin: 0 10px 15px 0px;
-		        				&:last-child{
-		        					margin-right: 0;
-		        				}
-		        			}
-	        			}
-	        		}
-	        	}
-	        	[class$='-actions']{
-	        		margin-bottom: 25px;
-	        	}
-        		[class*='-actions-more']{
-        			.section-title{
-        				color: $main;
-        				font-weight: 600;
-        				padding: 0;
-        				margin: 0 0 10px 0;
-        			}
-        			[class*='-actions-list']{
-        				padding: 0;
-        				margin: 0;
-        				list-style-type: none;
-        				li{
-        					@include clearfix;
-        					.card{
-        						padding: 7px 15px;
-        						margin-bottom: 10px;
-        						color: $main;
-        						.edit{
-        							position: absolute;
-        							right: 15px;
-        						}
-        					}
-      						&:last-child{
-      							.card{
-      								margin: 0;
-      							}
-      						}
-        				}
-        				.help{
-        					position: absolute;
-        					right: 15px;
-        					i{
-        						font-size: 22px;
-        					}
-        				}
-        			}
-        		}
-        		.eligibility-filters{
-        			@include clearfix;
-        			padding: 10px;
-        			border-radius: 4px;
-        			background: $highlight-01;
-        			.select-with-label{
-								@extend %select-with-label;
-							}
-							.more-filters{
-								display: none;
-							}
-							.toggle-more-filters{
-								transition: all .3s ease;
-								&.open{
-									i{
-										transform: rotateX(0);
-									}
-								}
-								i{
-									transform: rotateX(-180deg);
-									margin-right: 5px;
-								}
-								span{
-									text-decoration: underline;
-								}
-								&:hover{
-									cursor: pointer;
-									span{
-										text-decoration: none;
-									}
-								}
-							}
-        		}
-        	}
         border-radius: 4px;
 
-	        li {
-	            display: -webkit-inline-flex;
-	            display: -moz-inline-flex;
-	            display: -ms-inline-flex;
-	            display: -o-inline-flex;
-	            display: inline-flex;
-	            flex: 1;
-	            transition: all .3s ease;
-	            border-right: 1px solid $border-color;
+        li {
+            display: -webkit-inline-flex;
+            display: -moz-inline-flex;
+            display: -ms-inline-flex;
+            display: -o-inline-flex;
+            display: inline-flex;
+            flex: 1;
+            transition: all .3s ease;
+            border-right: 1px solid $border-color;
 
-	            a {
-	                display: -webkit-flex;
-	                display: -moz-flex;
-	                display: -ms-flex;
-	                display: -o-flex;
-	                display: flex;
-	                flex: 1;
-	                padding: 8px;
-	                align-items: center;
-	                justify-content: center;
-	                font-size: 14px;
-	                font-weight: 600;
-	            }
+            a {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                flex: 1;
+                padding: 8px;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                font-weight: 600;
+            }
 
-	            &.active, &:hover {
-	                background: $selected;
+            &.active, &:hover {
+                background: $selected;
 
-	                a {
-	                    color: #fff;
-	                }
-	            }
+                a {
+                    color: #fff;
+                }
+            }
 
-	            &:first-child {
-	                border-radius: 4px 0 0 4px;
-	            }
+            &:first-child {
+                border-radius: 4px 0 0 4px;
+            }
 
-	            &:last-child {
-	                border-radius: 0px 4px 4px 0;
-	                border-right: none;
-	            }
-	        }
-	    }
+            &:last-child {
+                border-radius: 0px 4px 4px 0;
+                border-right: none;
+            }
+        }
     }
 }
 

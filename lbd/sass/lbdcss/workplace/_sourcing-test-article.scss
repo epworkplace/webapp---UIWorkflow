@@ -1,0 +1,240 @@
+.sourcing-test-article=-page {
+    .tab-panel-container {
+        .tab-panel {
+            .tab-step {
+                padding: 15px;
+
+                .tab-step-content {
+                    .tab-content-progress {
+                        padding: 0 15px;
+
+                        .tab-pane {
+                            .assignment {
+                                padding-bottom: 300px;
+
+                                .assignment-bidding-rules {
+                                    height: 100px;
+                                    margin-bottom: 20px;
+                                    display: -webkit-box;
+                                    display: -moz-box;
+                                    display: -ms-flexbox;
+                                    display: -webkit-flex;
+                                    display: flex;
+                                    -webkit-flex-flow: row wrap;
+                                    justify-content: space-around;
+                                    align-items: center;
+
+                                    .bidding-elements {
+                                        text-align: center;
+                                        padding: 0;
+
+                                        .header {
+                                            padding: 0;
+                                            font-size: 14px;
+                                            color: #9a9fa9;
+                                            font-weight: 400;
+                                        }
+
+                                        .numbers {
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                            color: #353f53;
+                                            padding: 5px 0;
+                                        }
+
+                                        .tag {
+                                            font-size: 12px;
+                                            color: #9a9fa9;
+                                        }
+
+                                        .right-arrow {
+                                            position: absolute;
+                                            top: 34%;
+                                            right: -8px;
+
+                                            i {
+                                                color: #d9dbde;
+                                                font-size: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .assignment-tempo-container {
+                                    padding: 15px;
+
+                                    // height: 72px;
+                                    margin-bottom: 20px;
+                                    display: -webkit-box;
+                                    display: -moz-box;
+                                    display: -ms-flexbox;
+                                    display: -webkit-flex;
+                                    display: flex;
+                                    -webkit-flex-flow: row wrap;
+                                    justify-content: space-around;
+                                    align-items: center;
+
+                                    .tempo-desc {
+                                        width: 31%;
+                                        color: #448AFF;
+                                        font-size: 12px;
+                                        font-weight: 600;
+                                        margin-right: 12px;
+                                        padding: 10px 10px 10px 30px;
+                                        position: relative;
+
+                                        &:before {
+                                            content: '';
+                                            position: absolute;
+
+                                            // top: 9px;
+                                            right: 0;
+                                            background: #f7f9fa;
+                                            width: 2px;
+                                            height: 22px;
+                                        }
+
+                                        span {
+                                            position: absolute;
+                                            top: 9px;
+                                            left: 0;
+                                        }
+                                    }
+
+                                    .tempo-desc.extended {
+                                        i {
+                                            font-size: 16px;
+                                            font-weight: bold;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 10px;
+                                        }
+
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+
+                                    .tempo-desc.small {
+                                        display: none;
+                                    }
+
+                                    .tempo-desc.items {
+                                        background: #f7f9fa;
+                                        color: #353f53;
+                                        text-align: center;
+                                        padding: 10px;
+                                        border: none;
+
+                                        &:before {
+                                            background: none;
+                                        }
+                                    }
+
+                                    .tempo-desc:nth-last-of-type(1) {
+                                        margin-right: 0;
+                                    }
+                                }
+
+                                .investement-status {
+                                    font-size: 12px;
+                                    color: $not-started;
+                                    padding: 20px 15px;
+
+                                    [class*='-title'] {
+                                        text-transform: uppercase;
+                                        font-weight: 700;
+                                    }
+
+                                    [class*='prev-'] {
+                                        font-weight: 600;
+                                    }
+
+                                    [class*='current-'] {
+                                        [class*='-value'] {
+                                            font-size: 20px;
+                                            color: $main;
+                                            font-weight: 700;
+                                        }
+                                    }
+
+                                    .cost-per-item {
+                                        font-size: 16px;
+                                        font-weight: 700;
+                                        color: $main;
+                                    }
+
+                                    .divider {
+                                        @include divider(1px);
+                                    }
+
+                                    .mission-bidding {
+                                        .bidding-cost {
+                                            margin-bottom: 15px;
+
+                                            span {
+                                                &.edit {
+                                                    font-size: 12px;
+
+                                                    i {
+                                                        top: 0;
+                                                    }
+
+                                                    a {
+                                                        font-size: 12px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .mission-requirements {
+                                        > .col-md-12 {
+                                            margin-bottom: 10px;
+
+                                            &:last-child {
+                                                margin: 0;
+                                            }
+                                        }
+
+                                        [class*='required-'] {
+                                            padding: 10px;
+                                            background: $highlight-03;
+                                            border-radius: 4px;
+
+                                            .card-user {
+                                                height: 40px;
+                                                width: 40px !important;
+                                                padding: 0;
+
+                                                img {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    object-fit: cover;
+                                                }
+
+                                                .card-user-empty {
+                                                    height: 40px;
+                                                    background: $not-started;
+                                                    color: #fff;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .stakeholders {
+                                padding-bottom: 300px;
+
+                                .stakeholders-list {
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

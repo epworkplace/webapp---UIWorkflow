@@ -754,7 +754,8 @@
 
                         .role-selection {
                             label {
-                                display: inline-block;
+                                float: left;
+                                clear: both;
                             }
                         }
                     }
