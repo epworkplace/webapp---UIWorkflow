@@ -372,13 +372,6 @@
     }
 }
 
-/* Modal styles */
-.edit-description-modal {
-    @extend %modal;
-}
-
-/* Modal styles ends*/
-
 /*Sourcing navigation left Styles Starts*/
 .nav {
     &.container-nav {
@@ -436,3 +429,27 @@
 }
 
 /*Sourcing navigation left Styles Ends*/
+
+/* Modal styles */
+.edit-description-modal {
+    @extend %modal;
+}
+
+.sourcing-manage-filters{
+	@extend %modal;
+
+	.sec-title{
+		color: $main;
+		font-weight: 600;
+		margin-bottom: 5px;
+		display: block;
+	}
+	.filters-container{
+		border-bottom: 2px solid $divider;
+		margin-bottom: 10px;
+	}
+
+}
+
+
+/* Modal styles ends*/
