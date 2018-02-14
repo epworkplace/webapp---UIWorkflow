@@ -1,8 +1,8 @@
-.sourcing-test-article=-page {
+.sourcing-test-article-page {
     .tab-panel-container {
         .tab-panel {
             .tab-step {
-                padding: 15px;
+                padding: 15px 0;
 
                 .tab-step-content {
                     .tab-content-progress {
@@ -232,6 +232,83 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .page-header-swap-container {
+        .page-title {
+            margin: 0;
+            font-size: 20px;
+            color: #353F53;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .selected-articles-swap {
+            .select-all-container {
+                width: 21%;
+                max-width: 173px;
+
+                .select-all {
+                    @include clearfix;
+
+                    display: block;
+                    padding: 8px 15px;
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+
+                    label.checkbox {
+                        margin: 0;
+                        float: left;
+                        min-height: 20px;
+                    }
+
+                    .select {
+                        float: right;
+                        color: #A6ABB4;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .test-article-card-list {
+        @extend .d-flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: flex-start;
+        padding-right: 0;
+
+        .card-box {
+            width: 252px;
+            padding: 10px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+
+            .check-card {
+                label.checkbox {
+                    padding: 0 20px 0 0;
+                }
+            }
+
+            .card-body {
+                padding: 15px 0;
+            }
+
+            .card-footer {
+                .card-details {
+                    color: #9ba1aa;
+
+                    i {
+                        line-height: 0;
+                        font-size: 14px;
+                        position: relative;
+                        top: 3px;
+                        margin-right: 5px;
                     }
                 }
             }
