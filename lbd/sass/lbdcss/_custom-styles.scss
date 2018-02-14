@@ -11733,7 +11733,11 @@ body.mce-content-body {
 .breadcrumbs {
     @extend %breadcrumb;
 }
-
 /* Breadcrumb styles ends */
+/* Divider styles */
+.divider-bottom{
+	@include divider-bottom;
+}
+/* Divider styles ends */
 
 /*New WP STYLES Ends*/
