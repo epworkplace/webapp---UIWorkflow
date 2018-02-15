@@ -248,6 +248,8 @@
         }
 
         .selected-articles-swap {
+            display: none;
+
             .select-all-container {
                 width: 21%;
                 max-width: 173px;
@@ -309,6 +311,22 @@
                         position: relative;
                         top: 3px;
                         margin-right: 5px;
+                    }
+
+                    .test-article-rate {
+                        @include clearfix;
+
+                        width: 60%;
+                        margin: 0 auto;
+                        clear: both;
+
+                        div {
+                            padding: 0;
+
+                            .star-rating-label {
+                                font-weight: 400;
+                            }
+                        }
                     }
                 }
             }

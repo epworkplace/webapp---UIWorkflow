@@ -141,7 +141,7 @@
 		                                                                <!-- <button class="btn pull-right">Reassign</button> -->
 		                                                                <span class="edit pull-right">
 		                                                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-		                                                                    <a href="javascript:;">
+		                                                                    <a href="javascript:;" data-toggle="modal" data-target="#updateAssigneeModal">
 		                                                                        Reassign
 		                                                                    </a>
 		                                                                </span>
@@ -596,46 +596,6 @@
 		                                                                                        </div>
 		                                                                                    </div>
 		                                                                                </div>
-
-		                                                                                <!-- <div class="row delivery-status mt-15">
-		                                                                                    <div class="col-md-12 mission-delivery" style="">
-		                                                                                        <div class="row">
-		                                                                                            <div class="col-md-12 delivery-title mb-10">
-		                                                                                                Delivery
-		                                                                                            </div>
-		                                                                                        </div>
-		                                                                                        <div class="row mb-10">
-		                                                                                            <div class="col-md-12 d-flex recurrent-delivery">
-		                                                                                                <div class="col-md-4 delivery-type items">
-		                                                                                                    <i class="material-icons">
-		                                                                                                        autorenew
-		                                                                                                    </i>
-		                                                                                                    RECURRENT
-		                                                                                                </div>
-		                                                                                                <div class="col-md-4 items">
-		                                                                                                    40 items
-		                                                                                                </div>
-		                                                                                                <div class="col-md-4 items">
-		                                                                                                    Every 3 days
-		                                                                                                </div>
-		                                                                                            </div>
-		                                                                                        </div>
-		                                                                                        <div class="row">
-		                                                                                            <div class="col-md-12 d-flex one-shot-delivery">
-		                                                                                                <div class="col-md-4 delivery-type items">
-		                                                                                                    <i class="material-icons">
-		                                                                                                        center_focus_strong
-		                                                                                                    </i>
-		                                                                                                    ONE SHOT
-		                                                                                                </div>
-		                                                                                                <div class="col-md-4 items">
-		                                                                                                    100 items
-		                                                                                                </div>
-		                                                                                            </div>
-		                                                                                        </div>
-		                                                                                    </div>
-		                                                                                </div> -->
-
 		                                                                            </div>
 		                                                                            <div class="col-md-12 card investement-status">
 		                                                                                <div class="row">
@@ -838,6 +798,12 @@
 		                                    </div>
 		                                    <div class="col-md-8 main-panel-container">
 		                                        <div class="content">
+		                                        	<div class="no-data-container">
+														<div class="no-data-placeholder">
+															<h2>No candidates signed.</h2>
+															<p>Candidates who are assigned Test Articles will appear here.</p>
+														</div>
+													</div>
 													<div class="col-md-12 mt-30">
 														<div class="row">
 															<div class="col-md-12 page-header-swap-container">
@@ -883,7 +849,7 @@
 																</div>
 																<div class="row">
 																	<div class="col-md-12 test-article-card-list">
-																		<div class="card card-wrap card-box">
+																		<div class="card card-wrap card-box selected">
 			                                                                <div class="row">
 			                                                                    <div class="col-md-12 card-header">
 			                                                                        <div class="col-md-3 card-label">
@@ -892,7 +858,7 @@
 			                                                                            </span>
 			                                                                        </div>
 			                                                                        <div class="col-md-3 check-card pull-right">
-			                                                                            <label class="checkbox">
+			                                                                            <label class="checkbox checked">
 			                                                                                <span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox" value="">
 			                                                                            </label>
 			                                                                        </div>
@@ -1153,6 +1119,294 @@
 																</div>
 															</div>
 														</div>
+														<div class="row">
+															<div class="col-md-12">
+																<div class="row">
+																	<div class="col-md-12">
+																		<h2 class="content-title">
+						                                                    Passed tests
+						                                                </h2>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-12 test-article-card-list">
+																		<div class="card card-wrap card-box">
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-header">
+			                                                                        <div class="col-md-3 card-label">
+			                                                                            <span class="label ongoing">
+			                                                                                Completed
+			                                                                            </span>
+			                                                                        </div>
+			                                                                        <div class="col-md-3 check-card pull-right">
+			                                                                            <label class="checkbox">
+			                                                                                <span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox" value="">
+			                                                                            </label>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-title text-center">
+			                                                                        Test Article - Colin Estrugon
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-body two-user">
+			                                                                        <div class="card-user chevron">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                        <div class="card-user">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-footer">
+			                                                                        <div class="col-md-12 card-details">
+		                                                                        		<div class="test-article-rate">
+		                                                                        			<div class="col-md-8" id="testArticleRate1"></div>
+	                                                                                        <div class="col-md-4">
+	                                                                                            <div class="star-rating-label"></div>
+	                                                                                        </div>
+		                                                                        		</div>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                            </div>
+			                                                            <div class="card card-wrap card-box">
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-header">
+			                                                                        <div class="col-md-3 card-label">
+			                                                                            <span class="label ongoing">
+			                                                                                Completed
+			                                                                            </span>
+			                                                                        </div>
+			                                                                        <div class="col-md-3 check-card pull-right">
+			                                                                            <label class="checkbox">
+			                                                                                <span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox" value="">
+			                                                                            </label>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-title text-center">
+			                                                                        Test Article - bertrand Rossignal
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-body two-user">
+			                                                                        <div class="card-user chevron">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                        <div class="card-user">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-footer">
+			                                                                        <div class="col-md-12 card-details">
+			                                                                            <div class="test-article-rate">
+		                                                                        			<div class="col-md-8" id="testArticleRate1"></div>
+	                                                                                        <div class="col-md-4">
+	                                                                                            <div class="star-rating-label"></div>
+	                                                                                        </div>
+		                                                                        		</div>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                            </div>
+			                                                            <div class="card card-wrap card-box">
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-header">
+			                                                                        <div class="col-md-3 card-label">
+			                                                                            <span class="label ongoing">
+			                                                                                Completed
+			                                                                            </span>
+			                                                                        </div>
+			                                                                        <div class="col-md-3 check-card pull-right">
+			                                                                            <label class="checkbox">
+			                                                                                <span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox" value="">
+			                                                                            </label>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-title text-center">
+			                                                                        Test Article - Lea Nbache
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-body two-user">
+			                                                                        <div class="card-user chevron">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                        <div class="card-user">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-footer">
+			                                                                        <div class="col-md-12 card-details">
+			                                                                            <div class="test-article-rate">
+		                                                                        			<div class="col-md-8" id="testArticleRate1"></div>
+	                                                                                        <div class="col-md-4">
+	                                                                                            <div class="star-rating-label"></div>
+	                                                                                        </div>
+		                                                                        		</div>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                            </div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12">
+																<div class="row">
+																	<div class="col-md-12">
+																		<h2 class="content-title">
+						                                                    Failed tests
+						                                                </h2>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-12 test-article-card-list">
+																		<div class="card card-wrap card-box">
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-header">
+			                                                                        <div class="col-md-3 card-label">
+			                                                                            <span class="label delete">
+			                                                                                Failed
+			                                                                            </span>
+			                                                                        </div>
+			                                                                        <div class="col-md-3 check-card pull-right">
+			                                                                            <label class="checkbox">
+			                                                                                <span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox" value="">
+			                                                                            </label>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-title text-center">
+			                                                                        Test Article - Colin Estrugon
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-body two-user">
+			                                                                        <div class="card-user chevron">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                        <div class="card-user">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-footer">
+			                                                                        <div class="col-md-12 card-details">
+			                                                                            <div class="test-article-rate">
+		                                                                        			<div class="col-md-8" id="testArticleRate1"></div>
+	                                                                                        <div class="col-md-4">
+	                                                                                            <div class="star-rating-label"></div>
+	                                                                                        </div>
+		                                                                        		</div>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                            </div>
+			                                                            <div class="card card-wrap card-box">
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-header">
+			                                                                        <div class="col-md-3 card-label">
+			                                                                            <span class="label delete">
+			                                                                                Failed
+			                                                                            </span>
+			                                                                        </div>
+			                                                                        <div class="col-md-3 check-card pull-right">
+			                                                                            <label class="checkbox">
+			                                                                                <span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox" value="">
+			                                                                            </label>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-title text-center">
+			                                                                        Test Article - bertrand Rossignal
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-body two-user">
+			                                                                        <div class="card-user chevron">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                        <div class="card-user">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-footer">
+			                                                                        <div class="col-md-12 card-details">
+			                                                                            <div class="test-article-rate">
+		                                                                        			<div class="col-md-8" id="testArticleRate1"></div>
+	                                                                                        <div class="col-md-4">
+	                                                                                            <div class="star-rating-label"></div>
+	                                                                                        </div>
+		                                                                        		</div>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                            </div>
+			                                                            <div class="card card-wrap card-box">
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-header">
+			                                                                        <div class="col-md-3 card-label">
+			                                                                            <span class="label delete">
+			                                                                                Failed
+			                                                                            </span>
+			                                                                        </div>
+			                                                                        <div class="col-md-3 check-card pull-right">
+			                                                                            <label class="checkbox">
+			                                                                                <span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox" value="">
+			                                                                            </label>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-title text-center">
+			                                                                        Test Article - Lea Nbache
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-body two-user">
+			                                                                        <div class="card-user chevron">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                        <div class="card-user">
+			                                                                            <img alt="" class="img-circle" data-container="body" data-original-title="User Name" data-placement="bottom" data-toggle="tooltip" src="lbd/img/default-avatar.png" title="">
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                                <div class="row">
+			                                                                    <div class="col-md-12 card-footer">
+			                                                                        <div class="col-md-12 card-details">
+			                                                                            <div class="test-article-rate">
+		                                                                        			<div class="col-md-8" id="testArticleRate1"></div>
+	                                                                                        <div class="col-md-4">
+	                                                                                            <div class="star-rating-label"></div>
+	                                                                                        </div>
+		                                                                        		</div>
+			                                                                        </div>
+			                                                                    </div>
+			                                                                </div>
+			                                                            </div>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
 		                                        </div>
 		                                    </div>
@@ -1165,7 +1419,8 @@
 	            </div>
 	        </div>
 	        <!-- Modal -->
-
+			<!-- Reassignee modal -->
+		  	<!-- @include _partials/_contract-owner-update-modal.html -->
 
 
 	<!-- <script src="lbd/js/jquery.min.js" type="text/javascript"></script>
@@ -1203,246 +1458,56 @@
 
 	<script type="text/javascript">
 	    $(document).ready(function() {
-	        $('#writerSettings').click(function(e) {
-	            e.preventDefault();
-	            $(this).parent('.assessment-card').addClass('active');
-	            $(this).closest('.assessment-dot').addClass('active');
-	            $('.job-setting-writer-container').fadeIn(function(){
-	                $('.job-setting-writer-container').css({
-	                    display: 'block'
-	                });
-	            });
-	            $('.starting-files-container, .starting-files-import-search-container, .job-setting-proofreader-container, .job-candidate-list-container, .plagiarism-container').fadeOut(function(){
-	                $('.starting-files-container, .starting-files-import-search-container, .job-setting-proofreader-container, .job-candidate-list-container, .plagiarism-container').css({
-	                    display: 'none;'
-	                });
-	            });
-	            $('.wp-app').css({
-	                overflow: 'hidden'
-	            });
-	        });
 
-	        $('#proofreaderSettings, #jobNotAssigned').click(function(e) {
-	           e.preventDefault();
-	           $(this).parent('.assessment-card').addClass('active');
-	           $(this).closest('.assessment-dot').addClass('active');
-	           $('.job-setting-proofreader-container').fadeIn(function(){
-	                $('.job-setting-proofreader-container').css({
-	                    display: 'block'
-	                });
-	            });
-	            $('.starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-candidate-list-container, .plagiarism-container').fadeOut(function(){
-	                $('.starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-candidate-list-container, .plagiarism-container').css({
-	                    display: 'none;'
-	                });
-	            });
-	            $('.wp-app').css({
-	                overflow: 'hidden'
-	            });
-	        });
+	    	/*Select Job*/
+	    	$('.select-all .checkbox').click(function(){
+			if ($(this).hasClass('checked')) {
+				$('.check-card .checkbox').removeClass('checked');
+				$('.test-article-card-list .card-box').removeClass('selected');
+				$('.page-header-swap-container .selected-articles-swap').show();
+				$('.page-header-swap-container .page-title').hide();
+			}else{
+				$('.check-card .checkbox').addClass('checked');
+				$('.test-article-card-list .card-box').addClass('selected');
+				$('.page-header-swap-container .selected-articles-swap').hide();
+				$('.page-header-swap-container .page-title').show();
+			}
+		});
+	    $('.check-card .checkbox').click(function() {
+			if ($(this).hasClass('checked')) {
+				$(this).removeClass('checked');
+				$(this).parents('.card').removeClass('selected');
+				$('.page-header-swap-container .selected-articles-swap').show();
+				$('.page-header-swap-container .page-title').hide();
+			}else{
+				$(this).addClass('checked');
+				$(this).parents('.card').addClass('selected');
+				$('.page-header-swap-container .selected-articles-swap').hide();
+				$('.page-header-swap-container .page-title').show();
+			}
+		});
 
-	        $('#startingFiles').click(function(e) {
-	            e.preventDefault();
-	            $(this).parent('.assessment-card').addClass('active');
-	            $(this).closest('.assessment-dot').addClass('active');
-	            $('.starting-files-container').fadeIn(function(){
-	                $('.starting-files-container').css({
-	                    display: 'block'
-	                });
-	            });
-	            $('.job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container').fadeOut(function(){
-	                $('.job-setting-writer-container, .job-setting-proofreader-container, .job-candidate-list-container, .plagiarism-container').css({
-	                    display: 'none;'
-	                });
-	            });
-	            $('.wp-app').css({
-	                overflow: 'hidden'
-	            });
-	        });
-
-	        $('.settings-wrap .close a, .settings-wrap .tab-navigation button.btn-cancel-settings').click(function() {
-	            $('.overlay-main-container, .settings-wrap').fadeOut(function(){
-	                $('.settings-wrap').css({
-	                    display: 'none'
-	                });
-	                $('.wp-app').css({
-	                    overflow: 'auto'
-	                });
-	            })
-	        });
-
-	        $('#importStartingFiles').click(function(e) {
-	            e.preventDefault();
-	            $('.starting-files-container').fadeOut(function(){
-	                $('.starting-files-container').css({
-	                    display: 'none;'
-	                });
-	            });
-	            $('.starting-files-import-search-container').fadeIn(function(){
-	                $('.starting-files-import-search-container').css({
-	                    display: 'block'
-	                });
-	            });
-	        });
-
-	        $('.starting-files-import-search-container .back').click(function(e) {
-	           e.preventDefault();
-	           $('.starting-files-container').fadeIn(function(){
-	                $(this).css({
-	                    display: 'block'
-	                });
-	            });
-	           $('.starting-files-import-search-container').fadeOut(function(){
-	                $(this).css({
-	                    display: 'none'
-	                });
-	            });
-	        });
-
-	        $('#jobCandidateList').click(function(e) {
-	            e.preventDefault();
-	            $(this).parent('.assessment-card').addClass('active');
-	            $(this).closest('.assessment-dot').addClass('active');
-	            $('.job-candidate-list-container').fadeIn(function(){
-	                $('.job-candidate-list-container').css({
-	                    display: 'block'
-	                });
-	            });
-	            $('.starting-files-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container').fadeOut(function(){
-	                $('.starting-files-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container').css({
-	                    display: 'none;'
-	                });
-	            });
-	            $('.wp-app').css({
-	                overflow: 'hidden'
-	            });
-	        });
-
-	        $('#plagiarism, #plagiarismShow').click(function(e) {
-	            e.preventDefault();
-	            $(this).parent('.assessment-card').addClass('active');
-	            $(this).closest('.assessment-dot').addClass('active');
-	            $('.plagiarism-container').fadeIn(function(){
-	                $('.plagiarism-container').css({
-	                    display: 'block'
-	                });
-	            });
-	            $('.starting-files-container, .job-setting-writer-container, .job-setting-proofreader-container, .job-candidate-list-container').fadeOut(function(){
-	                $('.starting-files-container, .job-setting-writer-container, .job-setting-proofreader-container, .job-candidate-list-container').css({
-	                    display: 'none;'
-	                });
-	            });
-	            $('.wp-app').css({
-	                overflow: 'hidden'
-	            });
-	        });
-
-	        //Plagiarism Progress
-	        var bar = new ProgressBar.Line(plagiarismProgressBar, {
-	            strokeWidth: 15,
-	            easing: 'easeInOut',
-	            duration: 1400,
-	            color: '#d7d9dc',
-	            trailColor: '#f3f5f7',
-	            trailWidth: 15,
-	            svgStyle: {width: '100%', height: '100%'}
-	        });
-
-	        bar.animate(0.6);  /* Number from 0.0 to 1.0*/
-
-
-
-	    /*Job star rating*/
-	    $(function () {
-	        var $rateYo = $("#jobTaskpreviousJob").rateYo({
-	            rating: 0,
-	            spacing: "4px",
-	            numStars: 5,
-	            normalFill: "#d4d6dc",
-	            ratedFill: "#fec500",
-	            starWidth: "18px"
-	        });
-	        $("#jobTaskpreviousJob").click(function () {
-	            var rating = $rateYo.rateYo('rating');
-	            if (rating <= 1) {
-	                $('.star-rating-label').text(rating + " - Awful");
-	            }
-	            else if ((rating > 1) && (rating <=2)) {
-	                $('.star-rating-label').text(rating + " - OK");
-	            }
-	            else if ((rating > 2) && (rating <=3)) {
-	                $('.star-rating-label').text(rating + " - Good");
-	            }
-	            else if ((rating > 3) && (rating <=4)) {
-	                $('.star-rating-label').text(rating + " - Very Good");
-	            }
-	            else{
-	                $('.star-rating-label').text(rating + " - Exellent");
-	            }
-
-	        });
-	    });
-	    $(function () {
-	        var $rateYo = $("#jobTaskDisapproveRating").rateYo({
-	            rating: 0,
-	            spacing: "2px",
-	            numStars: 5,
-	            normalFill: "#d4d6dc",
-	            ratedFill: "#fec500",
-	            starWidth: "16px"
-	        });
-	        $("#jobTaskDisapproveRating").click(function () {
-	            var rating = $rateYo.rateYo('rating');
-	            if (rating <= 1) {
-	                $('.star-rating-label').text(rating + " - Awful");
-	            }
-	            else if ((rating > 1) && (rating <=2)) {
-	                $('.star-rating-label').text(rating + " - OK");
-	            }
-	            else if ((rating > 2) && (rating <=3)) {
-	                $('.star-rating-label').text(rating + " - Good");
-	            }
-	            else if ((rating > 3) && (rating <=4)) {
-	                $('.star-rating-label').text(rating + " - Very Good");
-	            }
-	            else{
-	                $('.star-rating-label').text(rating + " - Exellent");
-	            }
-
-	        });
-	    });
-	    $(function () {
-	        var $rateYo = $("#jobTaskApproveRating").rateYo({
-	            rating: 0,
-	            spacing: "2px",
-	            numStars: 5,
-	            normalFill: "#d4d6dc",
-	            ratedFill: "#fec500",
-	            starWidth: "16px"
-	        });
-	        $("#jobTaskApproveRating").click(function () {
-	            var rating = $rateYo.rateYo('rating');
-	            if (rating <= 1) {
-	                $('.star-rating-label').text(rating + " - Awful");
-	            }
-	            else if ((rating > 1) && (rating <=2)) {
-	                $('.star-rating-label').text(rating + " - OK");
-	            }
-	            else if ((rating > 2) && (rating <=3)) {
-	                $('.star-rating-label').text(rating + " - Good");
-	            }
-	            else if ((rating > 3) && (rating <=4)) {
-	                $('.star-rating-label').text(rating + " - Very Good");
-	            }
-	            else{
-	                $('.star-rating-label').text(rating + " - Exellent");
-	            }
-	        });
-	    });
-
-	    /*review rate Starts*/
-
-	   $('[id^="reviewRate"]').each(function(i){
+		$('.select-all .checkbox, .check-card .checkbox').change(function(){
+			if($('.select-all .checkbox, .check-card .checkbox').hasClass('checked')){
+				var numberOfChecked = $('.check-card .checkbox.checked').length;
+				if(numberOfChecked > 0){
+					$('.select-all .select').text(numberOfChecked + ' Selected');
+					$('.page-header-swap-container .selected-articles-swap').show();
+					$('.page-header-swap-container .page-title').hide();
+				}
+				else{
+					$('.select-all .select').text('Select all');
+					$('.page-header-swap-container .selected-articles-swap').hide();
+					$('.page-header-swap-container .page-title').show();
+				}
+			}
+			else{
+				$('.select-all .select').text('Select all');
+				$('.page-header-swap-container .selected-articles-swap').show();
+			}
+		});
+	    /*TestArticle star rating*/
+		 $('[id^="testArticleRate"]').each(function(i){
 	        var $rateYo = $(this).rateYo({
 	            rating: 3.5,
 	            spacing: "2px",
@@ -1453,76 +1518,65 @@
 	            starWidth: "16px"
 	        });
 	        var rating = $rateYo.rateYo('rating');
-	        if (rating <= 1) {
-	            $('.star-rating-label').text(rating + " - Awful");
-	        }
-	        else if ((rating > 1) && (rating <=2)) {
-	            $('.star-rating-label').text(rating + " - OK");
-	        }
-	        else if ((rating > 2) && (rating <=3)) {
-	            $('.star-rating-label').text(rating + " - Good");
-	        }
-	        else if ((rating > 3) && (rating <=4)) {
-	            $('.star-rating-label').text(rating + " - Very Good");
-	        }
-	        else{
-	            $('.star-rating-label').text(rating + " - Exellent");
-	        }
+	            $('.star-rating-label').html(rating + " / <b>5</b>");
 	   });
-
-	    /*review rate Ends*/
-
-
-	$(function () {
-	    $("#candidateTaskRating").rateYo({
-	        rating: 3.5,
-	        spacing: "2px",
-	        numStars: 5,
-	        normalFill: "#d4d6dc",
-	        ratedFill: "#fec500",
-	        readOnly: true,
-	        starWidth: "16px"
-	    });
 	});
+        </script>
+        <script>
+/*Mission Overview Track progressbar*/
+var bar = new ProgressBar.Line('#trackProgressBar', {
+            strokeWidth: 10,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#448AFF',
+            trailColor: '#dfe2e5',
+            trailWidth: 10,
+            svgStyle: {width: '100%', height: '100%'}
+            }),
+    bar02 = new ProgressBar.Line('#trackProgressBarOngoing', {
+            strokeWidth: 10,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#448AFF',
+            trailColor: '#dfe2e5',
+            trailWidth: 10,
+            svgStyle: {width: '100%', height: '100%'}
+            }),
+    bar03 = new ProgressBar.Line('#trackProgressBarValidated', {
+            strokeWidth: 10,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#448AFF',
+            trailColor: '#dfe2e5',
+            trailWidth: 10,
+            svgStyle: {width: '100%', height: '100%'}
+            }),
+    bar04 = new ProgressBar.Line('#trackProgressBarPasued', {
+            strokeWidth: 10,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#353F53',
+            trailColor: '#dfe2e5',
+            trailWidth: 10,
+            svgStyle: {width: '100%', height: '100%'}
+            }),
+    bar05 = new ProgressBar.Line('#trackProgressBarDelayed', {
+            strokeWidth: 10,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#ee0a5f',
+            trailColor: '#dfe2e5',
+            trailWidth: 10,
+            svgStyle: {width: '100%', height: '100%'}
+            })
+;
+bar.animate(0);
+bar02.animate(0.40);
+bar03.animate(1.00);
+bar04.animate(0.40);
+bar05.animate(1);
 
-	/*Upload Job on Click*/
-	$("#update-job-container").on('click', function(e){
-	    e.preventDefault();
-	    $("#upload-job:hidden").trigger('click');
-	});
-
-	/*Card-mission click to open Specific mission*/
-	$('div').delegate('.card-section-list ul li .card', 'click', function(e){
-	   if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
-	      /*code placed inside this condition is not executed on clicking the element #test*/
-	        e.stopPropagation();
-	      window.open('contract-overview.html','_blank');
-	      /*$('#contributorUserProfileModal').modal('show')*/
-	   }
-
-	});
-
-	});
-	        </script>
-	        <script type="text/javascript">
-	            $(document).ready(function() {
-	                $('[data-toggle="popover"]').popover({
-	                    container: 'body'
-	                });
-
-	                // Edit production
-	                $('a.edit-number').click(function() {
-	                  $('.edit-number-container').show();
-	                });
-	                $('.edit-number-container button').click(function() {
-	                  $('.edit-number-container').hide();
-	                });
-	            });
-
-	            $('.selectpicker').selectpicker({
-	                dropupAuto: true
-	            });
-	        </script>
-	    </body>
-
-	</html>
+/*Number from 0.0 to 1.0*/
+</script>
+    </body>
+</html>
