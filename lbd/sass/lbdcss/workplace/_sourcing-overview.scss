@@ -194,6 +194,14 @@
 
                                                 .language-to {
                                                     width: 31.333%;
+                                                    @-moz-document url-prefix(){
+                                                    	width: 34%;
+                                                    }
+                                                }
+                                                .test-numbers{
+                                                	@-moz-document url-prefix(){
+                                                    	width: 65%;
+                                                    }
                                                 }
                                             }
                                         }
