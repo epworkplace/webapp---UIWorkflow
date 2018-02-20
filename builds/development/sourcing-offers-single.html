@@ -1655,7 +1655,7 @@
 </div>
 
 <!-- Manage filters -->
-<div aria-labelledby="sourcingMangaeFilters" class="modal fade sourcing-manage-filters in" id="sourcingMangaeFilters" role="dialog" tabindex="-1" style="display: block;">
+<div aria-labelledby="sourcingMangaeFilters" class="modal fade sourcing-manage-filters" id="sourcingMangaeFilters" role="dialog" tabindex="-1" style="">
     <div class="modal-dialog modal-lg" role="modal">
         <div class="modal-content">
             <div class="modal-body">
@@ -1706,7 +1706,7 @@
                         </div>
                       </div>
                       <div class="row form-group">
-                        <div class="col-md-6 include-filters">
+                       <div class="col-md-6 include-filters">
 			                    <div class="row form-group">
 			                        <div class="col-md-12">
 	                                <label>Contributor Rank</label>
@@ -1731,12 +1731,12 @@
 	                                </select>
 			                        </div>
 			                    </div>
-			                    <div class="row form-group">
+			                    <div class="row form-group toggle-more-filter">
 			                        <div class="col-md-12">
 	                                <a href="javascript:;" class="add-filter-clients">+ Add clients</a>
 			                        </div>
 			                    </div>
-			                    <div class="row form-group">
+			                    <div class="row form-group clients-filter" style="display: none;">
 			                        <div class="col-md-12">
 	                                <label>Clients</label>
 	                                <select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="" multiple="" title="All Clients">
@@ -1776,12 +1776,12 @@
 	                                </div>
 			                        </div>
 			                    </div>
-													<div class="row form-group">
+													<div class="row form-group toggle-more-filter">
 			                        <div class="col-md-12">
 	                                <a href="javascript:;" class="add-filter-language">+ Add languages</a>
 			                        </div>
 			                    </div>
-													<div class="row form-group">
+													<div class="row form-group language-filter" style="display: none;">
 			                        <div class="col-md-12">
 	                                <label>Languages</label>
 	                                <select class="chosen-default chosen-select flags" data-placeholder="Select a language">
@@ -1800,12 +1800,12 @@
 			                    </div>
 			                </div>
 			                <div class="col-md-6 exclude-filters">
-			                    <div class="row form-group">
+			                    <div class="row form-group toggle-more-filter">
 			                        <div class="col-md-12">
 	                                <a href="javascript:;" class="add-filter-clients">+ Add clients</a>
 			                        </div>
 			                    </div>
-			                    <div class="row form-group">
+			                    <div class="row form-group" style="display: none;">
 			                        <div class="col-md-12">
 	                                <label>Clients</label>
 	                                <select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="" multiple="" title="All Clients">
@@ -1844,7 +1844,7 @@
 				                                <ul class="exclusion-filters-list">
 				                                	<li class="list-item">
 				                                		<label class="checkbox include-check">
-						                                    <input data-toggle="checkbox" type="checkbox" value="" />Trageted audience
+						                                    <input data-toggle="checkbox" type="checkbox" value="" />Targeted audience
 						                                </label>
 				                                	</li>
 				                                	<li class="list-item">
@@ -1872,12 +1872,12 @@
 	                                </div>
 			                        </div>
 			                    </div>
-													<div class="row form-group">
+													<div class="row form-group toggle-more-filter">
 			                        <div class="col-md-12">
 	                                <a href="javascript:;" class="add-filter-language">+ Add exclude participants</a>
 			                        </div>
 			                    </div>
-													<div class="row form-group">
+													<div class="row form-group" style="display: none;">
 			                        <div class="col-md-12">
 	                                <label>Excluded Participants</label>
 	                                <select class="selectpicker dropup" data-dropup-auto="true" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="targeted" multiple="" title="To be targeted..">
@@ -2049,6 +2049,18 @@
 		$(this).parents('.eligibility-filters').find('.more-filters').slideToggle(200);
 	});*/
 /*Toggle more filter for optionsEligibility filter options*/
+
+/*Manage filter options toggle*/
+	$(document).on('click', '.include-filters [class*="add-"], .exclude-filters [class*="add-"]' , function(e){
+		e.preventDefault();
+		$(this).parents('.toggle-more-filter').hide('200');
+		$($(this).parents('.form-group').next()[0]).show('200');
+			// toShow).show('200');
+
+		// $(this).toggleClass('open').find('i').toggleClass('rotate-90');
+		// $('.job-filter-options').slideToggle(200);
+	});
+/*Manage filter options toggle ends*/
 
 	});
 
