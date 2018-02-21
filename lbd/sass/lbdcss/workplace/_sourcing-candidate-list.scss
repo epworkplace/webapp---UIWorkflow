@@ -100,6 +100,7 @@
                                     position: relative;
                                     top: 5px;
                                     line-height: 0;
+                                    font-size: 16px;
                                 }
 
                                 &:before, &:after {
@@ -119,11 +120,10 @@
                                 }
 
                                 i.star-rate {
-                                    position: absolute;
-                                    top: 9px;
+                                    position: relative;
+                                    top: 3.5px;
                                     font-size: 18px;
                                     color: #FEC500;
-                                    right: 13px;
                                 }
 
                                 &.bidding {
@@ -142,7 +142,7 @@
 
                                 &.more-options {
                                     width: 20px;
-                                    padding: 9px 0 0 0;
+                                    padding: 5px 0 0 0;
 
                                     a.card-more-options {
                                         color: #d7d9dc;
