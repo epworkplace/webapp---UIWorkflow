@@ -139,14 +139,23 @@
 <script type="text/javascript">
 
 	$(document).ready(function() {
-
-	$('#createModalAvailability').click(function(e) {
-		e.preventDefault();
-		$('#createOfferJobModal ul.nav-pills li').not(':eq(1)').removeClass('active')
-		$('#createOfferJobModal ul.nav-pills li').eq(1).addClass('active');
-		$('.tab-pane').removeClass('active');
-		$('#tab-availabilities').addClass('active');
-	});
+		/* Modal particular Link Step*/
+		$('#createModalAvailability').click(function(e) {
+			e.preventDefault();
+			$('#wizardCard').bootstrapWizard('show',1)
+		});
+		$('#createModalQuizz').click(function(e) {
+			e.preventDefault();
+			$('#wizardCard').bootstrapWizard('show',2)
+		});
+		$('#createModalSurvey').click(function(e) {
+			e.preventDefault();
+			$('#wizardCard').bootstrapWizard('show',3)
+		});
+		$('#createModalTestArticle').click(function(e) {
+			e.preventDefault();
+			$('#wizardCard').bootstrapWizard('show',4)
+		});
 
 /* Edit offer title */
     $(document).on('click', ".edit-offer-title", function(e){
@@ -191,7 +200,7 @@
 	$(document).on('click', '.clear-filter-options' , function(e){
 		e.preventDefault();
 		$(this).closest('form').reset()
-							   .find('.selectpicker').selectpicker('deselectAll');
+			 .find('.selectpicker').selectpicker('deselectAll');
 	});
 /*Reset job filter options ends*/
 /*Toggle more filter for optionsEligibility filter options*/

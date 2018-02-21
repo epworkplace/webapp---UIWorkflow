@@ -2,11 +2,11 @@ searchVisible = 0;
 transparent = true;
 
 $(document).ready(function(){
-	
+
 
 	//$.validator.setDefaults({ ignore: ".hidden" });
 			$validator= $("#create_quote_mission").validate({
-				
+
 				submitHandler : function(form) {
 		        form.submit();
 				},
@@ -19,8 +19,8 @@ $(document).ready(function(){
 										}   },
 					languagedest:  { required:function(element) {
 										return $('input:radio[name=product]:checked').val()=='traduction';
-											
-										} 
+
+										}
 									},
 					producttype:  { required: true },
 					otherproducttype:{ required:function(element) {
@@ -28,8 +28,8 @@ $(document).ready(function(){
 									} }	,
 					producttypeother:  { required:function(element) {
 										return $('#otherproducttype').val()=='0';
-									} },			
-		          	nb_words: 
+									} },
+		          	nb_words:
 		          	{
 							required : true,
 							number: true,
@@ -71,7 +71,7 @@ $(document).ready(function(){
 					prodmissionslist:{
 							required:function(element) {
 										return $('#prod_mission_selected').val()=='Yes';
-									} 
+									}
 							},
 					strategy_mission_cost:{
 							required:function(element) {
@@ -81,8 +81,8 @@ $(document).ready(function(){
 										return $('#product:checked').val()=='content_strategy';
 									}
 							}
-					
-							
+
+
 				},
 				messages: {
 					language: { required: "Please select the language" },
@@ -114,58 +114,58 @@ $(document).ready(function(){
 						required: "Enter the mission cost"
 					},
 					otherproducttype:{
-						required: "Please select the other product"	
+						required: "Please select the other product"
 					},
 					producttypeother:{
 						required: "Please enter the text"
 					}
-				},		
+				},
 				  debug: true,
 				  errorClass:'has-error error',
 				  validClass:'success',
 				  errorElement:'span',
-				  highlight: function (element, errorClass, validClass) { 
-					$(element).parents("div.form-group").addClass(errorClass).removeClass(validClass); 
+				  highlight: function (element, errorClass, validClass) {
+					$(element).parents("div.form-group").addClass(errorClass).removeClass(validClass);
 
-				  }, 
-				  unhighlight: function (element, errorClass, validClass) { 
-						  $(element).parents(".error").removeClass(errorClass).addClass(validClass); 
+				  },
+				  unhighlight: function (element, errorClass, validClass) {
+						  $(element).parents(".error").removeClass(errorClass).addClass(validClass);
 				  }
-				 
-				  
+
+
 				  //validate choosen select (select with search)
-		           //ignore: ":hidden:not(select)" 
+		           //ignore: ":hidden:not(select)"
 		           //ignore: ':hidden:not(.chzn-done)'
-		           //  ignore: '*:not([name])'		
-			     
+		           //  ignore: '*:not([name])'
+
 			});
-				
-	
+
+
     /*  Activate the tooltips      */
     $('[rel="tooltip"]').tooltip();
-      
+
     $('.wizard-card').bootstrapWizard({
         'tabClass': 'nav nav-pills',
         'nextSelector': '.btn-next',
         'previousSelector': '.btn-previous',
-         
+
          onInit : function(tab, navigation, index){
-            
+
            //check number of tabs and fill the entire row
            var $total = navigation.find('li').length;
            $width = 100/$total;
-           
+
            $display_width = $(document).width();
-           
+
            if($display_width < 600 && $total > 3){
                $width = 50;
            }
-           
+
            navigation.find('li').css('width',$width + '%');
-           
+
         },
         onNext: function(tab, navigation, index){
-          
+
           if(!$("#create_quote_mission").valid())
           {
 
@@ -176,16 +176,16 @@ $(document).ready(function(){
 	            var producttype=$("#producttype").val();
 	            var otherproducttype=$("#otherproducttype").val();
 	            var producttypeother=$("#producttypeother").val();
-	            
+
 	            if(product_val=='tech')
 				{
-					
+
 					if(tech_title=="")
 					{
 					$('#tech_title').closest('.form-group').addClass('has-error error');
 					$('#tech_title').closest('.form-group').append('<span id="tech_title-error" class="has-error error">Please select a title</span>');
 					}
-								
+
 				}
 				else if(product_val=='translation')
 				{
@@ -194,7 +194,7 @@ $(document).ready(function(){
 					{
 					$('#language').closest('.form-group').addClass('has-error error');
 					$('.all_languages').append('<span id="language-error" class="has-error error">Please select a language</span>');
-									
+
 					}
 					else if(languagedest_=='' && language_!="")
 					{
@@ -204,7 +204,7 @@ $(document).ready(function(){
 					else if(languagedest_=='' && language_=="")
 					{
 					$('#language').closest('.form-group').addClass('has-error error');
-					$('.all_languages').append('<span id="language-error" class="has-error error">Please select a language</span>');	
+					$('.all_languages').append('<span id="language-error" class="has-error error">Please select a language</span>');
 					$('.all_languages').append('<span id="languagedest-error" class="has-error error">Please select a language2</span>');
 					}
 					else if(languagedest_==language_)
@@ -213,13 +213,13 @@ $(document).ready(function(){
 					$('#languagedest').closest('.form-group').addClass('has-error error');
 					$('.all_languages').append('<span id="languagedest-error" class="has-error error">Please select different language</span>');
 					}
-					
+
 				}
 				else if(product_val=='redaction')
 				{
 					if(language_=="")
 					{
-						
+
 					$('#language').closest('.form-group').addClass('has-error error');
 					$('#language').closest('.form-group').append('<span id="language-error" class="has-error error">Please select a language</span>');
 					}
@@ -245,20 +245,20 @@ $(document).ready(function(){
 					$validator.focusInvalid();
 					return false;
 			}
-			else 
+			else
 			{
 				$("#producttype").selectpicker();
 				return true;
-			}    
+			}
         },
         onTabClick : function(tab, navigation, index){
             // Disable the posibility to click on tabs
             return false;
-        }, 
+        },
         onTabShow: function(tab, navigation, index) {
             var $total = navigation.find('li').length;
             var $current = index+1;
-            
+
             var wizard = navigation.closest('.wizard-card');
             var product_val=$("#product:checked").val();
             var language_=$("#language").val();
@@ -267,8 +267,8 @@ $(document).ready(function(){
             var producttype=$("#producttype").val();
              var otherproducttype=$("#otherproducttype").val();
             var producttypeother=$("#producttypeother").val();
-	            
-            
+
+
 
 			if(product_val=='tech' && $current==2)
 			{
@@ -277,10 +277,10 @@ $(document).ready(function(){
 				$('#language').closest('.form-group').addClass('has-error error');
 				$('#language').closest('.form-group').append('<span id="language-error" class="has-error error">Please select a language</span>');
 				$('ul.nav-pills li a[href="#mission-step1"]').tab('show');
-				$current=1;	
+				$current=1;
 				}
-				
-			
+
+
 			}
 			else if(product_val=='content_strategy' && $current==2)
 			{
@@ -289,14 +289,14 @@ $(document).ready(function(){
 				$('#language').closest('.form-group').addClass('has-error error');
 				$('#language').closest('.form-group').append('<span id="language-error" class="has-error error">Please select a language</span>');
 				$('ul.nav-pills li a[href="#mission-step1"]').tab('show');
-				$current=1;	
+				$current=1;
 				}
 				else {
 				$('ul.nav-pills li a[href="#mission-step4"]').tab('show');
 				$current=$total;
 				}
-				
-			
+
+
 			}
 			else if(product_val=='translation' && $current==2)
 			{
@@ -307,7 +307,7 @@ $(document).ready(function(){
 				$('.all_languages').append('<span id="language-error" class="has-error error">Please select a language</span>');
 				$('ul.nav-pills li a[href="#mission-step1"]').tab('show');
 
-				$current=1;	
+				$current=1;
 				}
 				else if(languagedest_=='' )
 				{
@@ -325,7 +325,7 @@ $(document).ready(function(){
 				$('ul.nav-pills li a[href="#mission-step1"]').tab('show');
 				$current=1;
 				}
-				
+
 			}
 			else if(product_val=='redaction' && $current==2)
 			{
@@ -334,7 +334,7 @@ $(document).ready(function(){
 				$('#language').closest('.form-group').addClass('has-error error');
 				$('#language').closest('.form-group').append('<span id="language-error" class="has-error error">Please select a language</span>');
 				$('ul.nav-pills li a[href="#mission-step1"]').tab('show');
-				$current=1;	
+				$current=1;
 				}
 			}
 			else if(producttype=="" && $current==3 && product_val!='tech' && product_val!='content_strategy')
@@ -342,21 +342,21 @@ $(document).ready(function(){
 
 			$('#producttype').closest('.form-group').addClass('has-error error');
 			$('#producttype').closest('.form-group').append('<span id="producttype-error" class="has-error error">Please select a product</span>');
-			$('ul.nav-pills li a[href="#mission-step2"]').tab('show');	
+			$('ul.nav-pills li a[href="#mission-step2"]').tab('show');
 			}
 			else if(otherproducttype=="" && producttype=="autre" && $current==3 && product_val!='tech' && product_val!='content_strategy')
 			{
 
 			$('#otherproducttype').closest('.form-group').addClass('has-error error');
 			$('#otherproducttype').closest('.form-group').append('<span id="producttype-error" class="has-error error">Please select a other product</span>');
-			$('ul.nav-pills li a[href="#mission-step2"]').tab('show');	
+			$('ul.nav-pills li a[href="#mission-step2"]').tab('show');
 			}
 			else if(otherproducttype=="0" && producttypeother=="" && producttype=="autre" && $current==3 && product_val!='tech' && product_val!='content_strategy')
 			{
 
 			$('#producttypeother').closest('.form-group').addClass('has-error error');
 			$('#producttypeother').closest('.form-group').append('<span id="producttypeother-error" class="has-error error">Please enter the text</span>');
-			$('ul.nav-pills li a[href="#mission-step2"]').tab('show');	
+			$('ul.nav-pills li a[href="#mission-step2"]').tab('show');
 			}
 			else if(product_val=='tech' && $current==3)
 			{
@@ -366,23 +366,23 @@ $(document).ready(function(){
 				{
 				$('#prodmissionslist').closest('.form-group').addClass('has-error error');
 				$('#prodmissionslist').closest('.form-group').append('<span id="prodmissionslist-error" class="has-error error">Please select a prod mission</span>');
-				$('ul.nav-pills li a[href="#mission-step2"]').tab('show');	
+				$('ul.nav-pills li a[href="#mission-step2"]').tab('show');
 				}
-				
+
 			}
 			else if(product_val=='tech' && $current==4 )
 			{
-								
+
 				if(tech_title=='')
 				{
 				$('#tech_title').closest('.form-group').addClass('has-error error');
 				$('#tech_title').closest('.form-group').append('<span id="tech_title-error" class="has-error error">Please select a title</span>');
-				$('ul.nav-pills li a[href="#mission-step3"]').tab('show');	
+				$('ul.nav-pills li a[href="#mission-step3"]').tab('show');
 				$current=3;
 				}
-				
+
 			}
-			
+
 			if($current==1)
 			{
 			$(wizard).find('.btn-previous').hide();
@@ -403,8 +403,8 @@ $(document).ready(function(){
         }
     });
 
-      
-    
+
+
     $('[data-toggle="wizard-radio"]').click(function(){
         wizard = $(this).closest('.wizard-card');
         wizard.find('[data-toggle="wizard-radio"]').removeClass('active');
@@ -412,7 +412,7 @@ $(document).ready(function(){
         $(wizard).find('[type="radio"]').removeAttr('checked');
         $(this).find('[type="radio"]').attr('checked','true');
     });
-    
+
     $('[data-toggle="wizard-checkbox"]').click(function(){
         if( $(this).hasClass('active')){
             $(this).removeClass('active');
@@ -422,24 +422,24 @@ $(document).ready(function(){
             $(this).find('[type="checkbox"]').attr('checked','true');
         }
     });
-    
+
     $height = $(document).height();
     $('.set-full-height').css('height',$height);
-    
-    
+
+
 });
 
 function validateFirstStep(){
-	
+
     /*  $('#create_quote_mission').validationEngine();*/
-  	
-	
-	
+
+
+
 	return true;
 }
 
 function validateSecondStep(){
-  
+
     $("#create_quote_mission").validate({
 		rules: {
 			nb_words_:"required",
@@ -447,19 +447,19 @@ function validateSecondStep(){
 		messages: {
 			nb_words_: "Please enter the volume",
 		}
-	}); 
-	
+	});
+
 	if(!$("#create_quote_mission").valid()){
     	return false;
 	}
-	return true; 
-    
+	return true;
+
 }
 
 function validateThirdStep(){
     //code here for third step
-    
-    
+
+
 }
 
  //Function to show image before upload

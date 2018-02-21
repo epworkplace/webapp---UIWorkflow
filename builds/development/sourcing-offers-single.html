@@ -397,7 +397,7 @@
                              	  								</div>
                              	  								<span class="fw700">Quiz : <span class="no">No</span> <span class="yes">Yes</span></span>
                              	  								<span class="edit">
-                             	  									<i class="material-icons">create</i> <a href="javascript:;" data-toggle="modal" data-target="#createOfferJobModal">Edit</a>
+                             	  									<i class="material-icons">create</i> <a href="javascript:;" id="createModalQuizz" data-toggle="modal" data-target="#createOfferJobModal">Edit</a>
                              	  								</span>
                              	  								</span>
                              	                				</div>
@@ -410,7 +410,7 @@
                              	  									</div>
                              	  									<span class="fw700">Survey : <span class="no">No</span> <span class="yes">Yes</span></span>
                              	  									<span class="edit">
-                             	  										<i class="material-icons">create</i> <a href="javascript:;" data-toggle="modal" data-target="#createOfferJobModal">Edit</a>
+                             	  										<i class="material-icons">create</i> <a href="javascript:;" id="createModalSurvey" data-toggle="modal" data-target="#createOfferJobModal">Edit</a>
                              	  									</span>
                              	  								</span>
                              	  							</div>
@@ -423,7 +423,7 @@
                              	  									</div>
                              	  									<span class="fw700">Test article : <span class="no">No</span> <span class="yes">Yes</span></span>
                              	  									<span class="edit">
-                             	  										<i class="material-icons">create</i> <a href="javascript:;" data-toggle="modal" data-target="#createOfferJobModal">Edit</a>
+                             	  										<i class="material-icons">create</i> <a href="javascript:;" id="createModalTestArticle" data-toggle="modal" data-target="#createOfferJobModal">Edit</a>
                              	  									</span>
                              	  								</span>
                              	  							</div>
@@ -1655,11 +1655,7 @@
 </div>
 
 <!-- Manage filters -->
-<<<<<<< HEAD
 <div aria-labelledby="sourcingMangaeFilters" class="modal fade sourcing-manage-filters" id="sourcingMangaeFilters" role="dialog" tabindex="-1">
-=======
-<div aria-labelledby="sourcingMangaeFilters" class="modal fade sourcing-manage-filters" id="sourcingMangaeFilters" role="dialog" tabindex="-1" style="">
->>>>>>> ddc2b014c0ead852646ec41753b17a2f142076aa
     <div class="modal-dialog modal-lg" role="modal">
         <div class="modal-content">
             <div class="modal-body">
@@ -1991,14 +1987,23 @@
 <script type="text/javascript">
 
 	$(document).ready(function() {
-
-	$('#createModalAvailability').click(function(e) {
-		e.preventDefault();
-		$('#createOfferJobModal ul.nav-pills li').not(':eq(1)').removeClass('active')
-		$('#createOfferJobModal ul.nav-pills li').eq(1).addClass('active');
-		$('.tab-pane').removeClass('active');
-		$('#tab-availabilities').addClass('active');
-	});
+		/* Modal particular Link Step*/
+		$('#createModalAvailability').click(function(e) {
+			e.preventDefault();
+			$('#wizardCard').bootstrapWizard('show',1)
+		});
+		$('#createModalQuizz').click(function(e) {
+			e.preventDefault();
+			$('#wizardCard').bootstrapWizard('show',2)
+		});
+		$('#createModalSurvey').click(function(e) {
+			e.preventDefault();
+			$('#wizardCard').bootstrapWizard('show',3)
+		});
+		$('#createModalTestArticle').click(function(e) {
+			e.preventDefault();
+			$('#wizardCard').bootstrapWizard('show',4)
+		});
 
 /* Edit offer title */
     $(document).on('click', ".edit-offer-title", function(e){
@@ -2043,7 +2048,7 @@
 	$(document).on('click', '.clear-filter-options' , function(e){
 		e.preventDefault();
 		$(this).closest('form').reset()
-							   .find('.selectpicker').selectpicker('deselectAll');
+			 .find('.selectpicker').selectpicker('deselectAll');
 	});
 /*Reset job filter options ends*/
 /*Toggle more filter for optionsEligibility filter options*/
