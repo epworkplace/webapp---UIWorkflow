@@ -202,6 +202,18 @@
 	});*/
 /*Toggle more filter for optionsEligibility filter options*/
 
+/*Manage filter options toggle*/
+	$(document).on('click', '.include-filters [class*="add-"], .exclude-filters [class*="add-"]' , function(e){
+		e.preventDefault();
+		$(this).parents('.toggle-more-filter').hide('200');
+		$($(this).parents('.form-group').next()[0]).show('200');
+			// toShow).show('200');
+
+		// $(this).toggleClass('open').find('i').toggleClass('rotate-90');
+		// $('.job-filter-options').slideToggle(200);
+	});
+/*Manage filter options toggle ends*/
+
 	});
 
 
