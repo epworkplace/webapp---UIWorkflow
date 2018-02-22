@@ -535,8 +535,13 @@ $(document).ready(function(){
 	tinymce.init({
 	    selector: '#edit-textarea-normal, #edit-textarea-normal-02, [id*="edit-textarea-normal"]',
 	    statusbar: false,
-  		menubar : false,
-		height: "230",
+		height: "300",
+		plugins: [
+		"advlist autolink lists link image charmap print preview anchor",
+		"searchreplace visualblocks code fullscreen",
+		"insertdatetime media table contextmenu paste imagetools wordcount"
+		],
+		toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
   		allow_html_in_named_anchor: true,
   		force_p_newlines : true,
@@ -547,7 +552,6 @@ $(document).ready(function(){
 	tinymce.init({
 	    selector: '#editSendTestMessage',
 	    statusbar: false,
-  		menubar : false,
   		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
   		allow_html_in_named_anchor: true,
   		force_p_newlines : true,
