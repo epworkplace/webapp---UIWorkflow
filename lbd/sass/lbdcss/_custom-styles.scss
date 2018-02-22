@@ -81,7 +81,6 @@ iframe {
 }
 
 /* BASE STYLES */
-
 html {
     font-size: 62.5%;
 }
@@ -91,7 +90,6 @@ html {
 }
 
 //Custom Styles
-
 .wp-app {
     .wrapper {
         position: relative;
@@ -714,7 +712,6 @@ html {
                                     z-index: 1;
                                     background: #FCFDFD;
                                     padding: 20px 16px 0 16px; */
-
                                     .navbar-default {
                                         background: none;
                                         padding: 0;
@@ -949,285 +946,285 @@ html {
 
                                                         // &.back2org {
                                                         //     transform: rotate(0deg);
-                                                        // }
+                                                        //
 
-                                                    }
-
-                                                    &.open {
-                                                        color: $selected;
-                                                    }
-
-                                                    .btn-label {
-                                                        margin-right: 5px;
-                                                    }
-                                                }
-                                            }
-
-                                            .select-all-container {
-                                                width: 21%;
-                                                max-width: 173px;
-                                                margin-top: 22px;
-
-                                                .select-all {
-                                                    @include clearfix;
-
-                                                    display: block;
-                                                    padding: 8px 15px;
-                                                    border: 1px solid #ddd;
-                                                    border-radius: 6px;
-
-                                                    label.checkbox {
-                                                        margin: 0;
-                                                        float: left;
-                                                        min-height: 20px;
-                                                    }
-
-                                                    .select {
-                                                        float: right;
-                                                        color: #A6ABB4;
-                                                        font-weight: 600;
-                                                    }
-                                                }
-                                            }
-
-                                            .page-status {
-                                                margin: 32px 0 0 0;
-                                                font-size: 16px;
-                                                color: #A6ABB4;
-                                                text-align: right;
-                                                font-weight: 500;
-                                                line-height: 1.6;
-
-                                                span {
-                                                    font-weight: 600;
-                                                }
-                                            }
-
-                                            .validate {
-                                                display: none;
-                                                margin-top: 22px;
-                                                width: 485px;
-
-                                                button {
-                                                    float: right;
-                                                    border: none;
-                                                    color: #fff;
-                                                    width: 30% !important;
-                                                    margin-left: 10px;
-                                                }
-
-                                                button.validate-btn {
-                                                    margin-right: 10px;
-                                                    background: #69A1FF;
-                                                    border: 1px solid #69A1FF;
-
-                                                    &:hover, &:focus {
-                                                        background: #447DF7;
-                                                        border: 1px solid #447DF7;
                                                     }
                                                 }
 
-                                                button.delete-btn {
-                                                    background: #353F53;
-                                                    border: 1px solid #353F53;
-
-                                                    &:hover, &:focus {
-                                                        background: #9c9696;
-                                                        border: 1px solid #353F53;
-                                                    }
+                                                &.open {
+                                                    color: $selected;
                                                 }
 
-                                                button.unpause-btn {
-                                                    margin-right: 10px;
-                                                    color: #447DF7;
-                                                    border: 1px solid #447DF7;
-                                                    background: none;
-
-                                                    &:hover, &:focus {
-                                                        background: #447DF7;
-                                                        color: #fff;
-                                                    }
-                                                }
-                                            }
-
-                                            .project-planner {
-                                                margin-top: 30px;
-
-                                                a.project-plan {
-                                                    float: right;
-                                                    width: 180px;
-                                                    height: 38px;
-                                                    padding: 8px 0;
-                                                    font-weight: 600;
-                                                    font-size: 14px;
-                                                    background: #353f53 !important;
-
-                                                    .btn-label {
-                                                        position: relative;
-                                                        top: 1px;
-                                                        margin-right: 5px;
-
-                                                        i {
-                                                            line-height: 0;
-                                                        }
-                                                    }
-
-                                                    &:hover, &:focus {
-                                                        background: #9c9696 !important;
-                                                    }
-                                                }
-                                            }
-
-                                            .project-planner {
-                                                a.project-plan {
-                                                    float: right;
-                                                    width: 180px;
-                                                    height: 38px;
-                                                    padding: 8px 0;
-                                                    font-weight: 600;
-                                                    font-size: 14px;
-                                                    background: #353f53 !important;
-
-                                                    .btn-label {
-                                                        position: relative;
-                                                        top: 1px;
-                                                        margin-right: 5px;
-
-                                                        i {
-                                                            line-height: 0;
-                                                        }
-                                                    }
-
-                                                    &:hover, &:focus {
-                                                        background: #9c9696 !important;
-                                                    }
+                                                .btn-label {
+                                                    margin-right: 5px;
                                                 }
                                             }
                                         }
 
-                                        .header-bottom-panel {
-                                            @include clearfix;
+                                        .select-all-container {
+                                            width: 21%;
+                                            max-width: 173px;
+                                            margin-top: 22px;
 
-                                            border-top: 1px solid #e9ebee;
-                                            padding: 20px 0;
+                                            .select-all {
+                                                @include clearfix;
 
-                                            .select-with-label {
-                                                .bootstrap-select {
-                                                    background: #fff;
-                                                    height: auto;
+                                                display: block;
+                                                padding: 8px 15px;
+                                                border: 1px solid #ddd;
+                                                border-radius: 6px;
 
-                                                    .dropdown-menu {
-                                                        padding: 8px 0;
+                                                label.checkbox {
+                                                    margin: 0;
+                                                    float: left;
+                                                    min-height: 20px;
+                                                }
+
+                                                .select {
+                                                    float: right;
+                                                    color: #A6ABB4;
+                                                    font-weight: 600;
+                                                }
+                                            }
+                                        }
+
+                                        .page-status {
+                                            margin: 32px 0 0 0;
+                                            font-size: 16px;
+                                            color: #A6ABB4;
+                                            text-align: right;
+                                            font-weight: 500;
+                                            line-height: 1.6;
+
+                                            span {
+                                                font-weight: 600;
+                                            }
+                                        }
+
+                                        .validate {
+                                            display: none;
+                                            margin-top: 22px;
+                                            width: 485px;
+
+                                            button {
+                                                float: right;
+                                                border: none;
+                                                color: #fff;
+                                                width: 30% !important;
+                                                margin-left: 10px;
+                                            }
+
+                                            button.validate-btn {
+                                                margin-right: 10px;
+                                                background: #69A1FF;
+                                                border: 1px solid #69A1FF;
+
+                                                &:hover, &:focus {
+                                                    background: #447DF7;
+                                                    border: 1px solid #447DF7;
+                                                }
+                                            }
+
+                                            button.delete-btn {
+                                                background: #353F53;
+                                                border: 1px solid #353F53;
+
+                                                &:hover, &:focus {
+                                                    background: #9c9696;
+                                                    border: 1px solid #353F53;
+                                                }
+                                            }
+
+                                            button.unpause-btn {
+                                                margin-right: 10px;
+                                                color: #447DF7;
+                                                border: 1px solid #447DF7;
+                                                background: none;
+
+                                                &:hover, &:focus {
+                                                    background: #447DF7;
+                                                    color: #fff;
+                                                }
+                                            }
+                                        }
+
+                                        .project-planner {
+                                            margin-top: 30px;
+
+                                            a.project-plan {
+                                                float: right;
+                                                width: 180px;
+                                                height: 38px;
+                                                padding: 8px 0;
+                                                font-weight: 600;
+                                                font-size: 14px;
+                                                background: #353f53 !important;
+
+                                                .btn-label {
+                                                    position: relative;
+                                                    top: 1px;
+                                                    margin-right: 5px;
+
+                                                    i {
+                                                        line-height: 0;
                                                     }
+                                                }
 
-                                                    .dropdown-toggle {
-                                                        height: auto;
+                                                &:hover, &:focus {
+                                                    background: #9c9696 !important;
+                                                }
+                                            }
+                                        }
+
+                                        .project-planner {
+                                            a.project-plan {
+                                                float: right;
+                                                width: 180px;
+                                                height: 38px;
+                                                padding: 8px 0;
+                                                font-weight: 600;
+                                                font-size: 14px;
+                                                background: #353f53 !important;
+
+                                                .btn-label {
+                                                    position: relative;
+                                                    top: 1px;
+                                                    margin-right: 5px;
+
+                                                    i {
+                                                        line-height: 0;
+                                                    }
+                                                }
+
+                                                &:hover, &:focus {
+                                                    background: #9c9696 !important;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .header-bottom-panel {
+                                        @include clearfix;
+
+                                        border-top: 1px solid #e9ebee;
+                                        padding: 20px 0;
+
+                                        .select-with-label {
+                                            .bootstrap-select {
+                                                background: #fff;
+                                                height: auto;
+
+                                                .dropdown-menu {
+                                                    padding: 8px 0;
+                                                }
+
+                                                .dropdown-toggle {
+                                                    height: auto;
+                                                    display: -webkit-box;
+                                                    display: -moz-box;
+                                                    display: -ms-flexbox;
+                                                    display: -webkit-flex;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+
+                                                    .filter-option {
                                                         display: -webkit-box;
                                                         display: -moz-box;
                                                         display: -ms-flexbox;
                                                         display: -webkit-flex;
                                                         display: flex;
+                                                        margin: 0;
+                                                        flex-wrap: wrap;
+                                                        color: rgba(0, 0, 0, 0.5);
+                                                        text-decoration: none;
+                                                        font-size: 14px;
                                                         align-items: center;
-                                                        justify-content: center;
+                                                        justify-content: flex-start;
 
-                                                        .filter-option {
-                                                            display: -webkit-box;
-                                                            display: -moz-box;
-                                                            display: -ms-flexbox;
-                                                            display: -webkit-flex;
-                                                            display: flex;
-                                                            margin: 0;
-                                                            flex-wrap: wrap;
-                                                            color: rgba(0, 0, 0, 0.5);
-                                                            text-decoration: none;
-                                                            font-size: 14px;
-                                                            align-items: center;
-                                                            justify-content: flex-start;
-
-                                                            span.label {
-                                                                line-height: normal;
-                                                            }
-                                                        }
-
-                                                        .actions-btn {
-                                                            width: 48%;
+                                                        span.label {
+                                                            line-height: normal;
                                                         }
                                                     }
-                                                }
 
-                                                .bs-actionsbox .btn-block button.actions-btn {
-                                                    width: 48%;
+                                                    .actions-btn {
+                                                        width: 48%;
+                                                    }
                                                 }
                                             }
 
-                                            .related-files-search {
-                                                input {
-                                                    height: 37px;
-                                                    padding-left: 39px;
-                                                    background: #fff url(../img/search.svg) no-repeat 9px 6px;
-                                                    background-size: 20px;
-                                                }
+                                            .bs-actionsbox .btn-block button.actions-btn {
+                                                width: 48%;
                                             }
                                         }
 
-                                        .client-content-container {
-                                            padding-bottom: 0px;
-
-                                            .card-section-list {
-                                                padding-bottom: 0;
+                                        .related-files-search {
+                                            input {
+                                                height: 37px;
+                                                padding-left: 39px;
+                                                background: #fff url(../img/search.svg) no-repeat 9px 6px;
+                                                background-size: 20px;
                                             }
+                                        }
+                                    }
 
-                                            .client-title {
-                                                display: -webkit-box;
-                                                display: -moz-box;
-                                                display: -ms-flexbox;
-                                                display: -webkit-flex;
-                                                display: flex;
-                                                align-items: center;
+                                    .client-content-container {
+                                        padding-bottom: 0px;
 
-                                                .client-logo {
+                                        .card-section-list {
+                                            padding-bottom: 0;
+                                        }
+
+                                        .client-title {
+                                            display: -webkit-box;
+                                            display: -moz-box;
+                                            display: -ms-flexbox;
+                                            display: -webkit-flex;
+                                            display: flex;
+                                            align-items: center;
+
+                                            .client-logo {
+                                                width: 60px;
+                                                height: 60px;
+                                                float: left;
+                                                margin-right: 30px;
+
+                                                img {
+                                                    max-width: 100%;
                                                     width: 60px;
                                                     height: 60px;
-                                                    float: left;
-                                                    margin-right: 30px;
-
-                                                    img {
-                                                        max-width: 100%;
-                                                        width: 60px;
-                                                        height: 60px;
-                                                        object-fit: cover;
-                                                    }
-
-                                                    .card-user-empty {
-                                                        height: 60px;
-                                                    }
+                                                    object-fit: cover;
                                                 }
 
-                                                .client-name {
-                                                    color: #353F53;
-                                                    font-weight: 700;
-                                                    font-size: 25px;
+                                                .card-user-empty {
+                                                    height: 60px;
                                                 }
                                             }
 
-                                            .section-title-container {
-                                                margin: 22px 0 8px;
+                                            .client-name {
+                                                color: #353F53;
+                                                font-weight: 700;
+                                                font-size: 25px;
+                                            }
+                                        }
 
-                                                span.section-title-bolded {
-                                                    color: #353F53;
-                                                    font-size: 15px;
-                                                    font-weight: 700;
-                                                    text-transform: uppercase;
-                                                    padding-right: 10px;
-                                                }
+                                        .section-title-container {
+                                            margin: 22px 0 8px;
 
-                                                span.section-title {
-                                                    text-transform: uppercase;
-                                                    font-size: 14px;
-                                                    font-weight: 600;
-                                                    color: #A1A6AF;
-                                                    z-index: 9;
-                                                }
+                                            span.section-title-bolded {
+                                                color: #353F53;
+                                                font-size: 15px;
+                                                font-weight: 700;
+                                                text-transform: uppercase;
+                                                padding-right: 10px;
+                                            }
+
+                                            span.section-title {
+                                                text-transform: uppercase;
+                                                font-size: 14px;
+                                                font-weight: 600;
+                                                color: #A1A6AF;
+                                                z-index: 9;
                                             }
                                         }
                                     }
@@ -1246,7 +1243,6 @@ html {
 }
 
 /*Section List Starts*/
-
 .card-section-list {
     @include clearfix;
 
@@ -1879,7 +1875,6 @@ html {
 /*Section List Ends*/
 
 /* Empty User Starts*/
-
 .card-section-list {
     .card-user-empty {
         position: absolute;
@@ -1918,7 +1913,6 @@ html {
 }
 
 /* Empty User Ends*/
-
 .open-menu-top-bar {
     display: none;
     background: #fbfbfb;
@@ -2066,7 +2060,6 @@ html {
 }
 
 /* Steps Timeline Starts */
-
 .card-notification {
     padding: 15px;
     margin-bottom: 0;
@@ -2492,7 +2485,6 @@ html {
 /* Steps Timeline Ends */
 
 /* Fullscreen Modal Starts */
-
 .tiny-mce-modal-dialog {
     width: 100%;
     height: 100%;
@@ -3152,7 +3144,6 @@ html {
 /*Announce Source Ends*/
 
 /* Starting Files Container Starts */
-
 .starting-files-container {
     .header {
         margin-bottom: 10px;
@@ -3294,7 +3285,6 @@ html {
 /* Starting Files Container Ends */
 
 /* Plagiarism bot Starts*/
-
 .plagiarism-container {
     .header {
         margin-bottom: 20px;
@@ -3476,7 +3466,6 @@ html {
 /* Plagiarism bot Ends*/
 
 /* Job Settings Container Starts*/
-
 .job-setting-writer-container, .job-setting-proofreader-container {
     .header {
         margin-bottom: 20px;
@@ -3841,7 +3830,6 @@ html {
 /* Job Settings Container Ends*/
 
 /* Job Candidate Lists Starts*/
-
 .job-candidate-list-container {
     .header {
         margin-bottom: 20px;
@@ -4067,7 +4055,6 @@ html {
 }
 
 /* Job Candidate Lists Ends*/
-
 .tab-navigation {
     margin-top: 30px;
     padding-bottom: 60px;
@@ -4252,7 +4239,6 @@ html {
 /*Question list container Ends*/
 
 /* Duplicate Card Modal Starts */
-
 .duplicate-cards-modal {
     .add-new-card {
         ul.dropdown-menu {
@@ -4283,7 +4269,6 @@ html {
 /* Duplicate Card Modal Ends */
 
 /* Update Assignee Modal Starts */
-
 .update-assignee-modal {
     .modal-title {
         font-size: 20px;
@@ -4302,7 +4287,6 @@ html {
 /* Update Assignee Modal Ends */
 
 /*Add Exclude Modal Audience Starts*/
-
 .exclusion-modal {
     .exclude-settings-title {
         font-size: 20px;
@@ -4315,7 +4299,6 @@ html {
 /*Add Exclude Modal Audience Ends*/
 
 /*Add Delivery Job Starts*/
-
 .delivery-job-modal {
     .delivery-job-title {
         font-size: 20px;
@@ -4380,7 +4363,6 @@ html {
 /*Add Delivery Job Ends*/
 
 /* Test Article Container Starts*/
-
 .test-article-container {
     .header {
         margin-bottom: 10px;
@@ -4524,7 +4506,6 @@ html {
 /* Test Article Container Ends*/
 
 /*Mission Settings Modal Starts*/
-
 .mission-settings-modal {
     .mission-settings-title {
         font-size: 20px;
@@ -4614,7 +4595,6 @@ html {
 /*Mission Settings Modal Ends*/
 
 /*Sourcing Mission Announce Starts*/
-
 .announce-container {
     .header {
         margin-bottom: 20px;
@@ -4634,7 +4614,6 @@ html {
 /*Sourcing Mission Announce Ends*/
 
 /*Sourcing Left Panel Starts*/
-
 .define-mission-container {
     border: 2px dashed #e7e9eb;
     border-radius: 4px;
@@ -4973,7 +4952,6 @@ html {
 }
 
 /*Sourcing Left Panel Ends*/
-
 .modal {
     overflow-y: scroll;
 
@@ -5308,7 +5286,6 @@ html {
 }
 
 /*Step Settings for Layout Starts*/
-
 .overlay-main-container {
     display: none;
     position: fixed;
@@ -5960,7 +5937,6 @@ html {
 /* Source Mission Default Assets Ends*/
 
 /*Contract-validate Colors Starts*/
-
 .create-link {
     background: #fec500;
 
@@ -6021,7 +5997,6 @@ html {
 /* Layout-1 Changes Ends */
 
 /*Nav Progress Steps Starts*/
-
 .tab-step {
     .tab-step-content {
         .nav {
@@ -6251,131 +6226,112 @@ html {
                         }
                     }
 
-                    										/* .upload {
-                    												margin: 24px 0;
-                    												width: 100%;
-
-                    												.title {
-                    														font-size: 14px;
-                    														color: #353f53;
-                    														font-weight: 600;
-                    												}
-
-                    												.status {
-                    														font-size: 14px;
-                    														width: 100%;
-                    														word-break: break-all;
-                    												}
-                    										}
-
-                    										.upload.sign-po {
-                    												width: 100%;
-                    												margin: 15px;
-                    												padding-bottom: 20px;
-
-                    												.status {
-                    														font-size: 14px;
-                    														color: #353f53;
-                    														width: 60%;
-                    														font-weight: 600;
-
-                    														.primary-font {
-                    																display: block;
-                    																font-size: 12px;
-                    																color: #354052;
-
-                    																i {
-                    																		position: relative;
-                    																		top: 6px;
-                    																		margin-right: 5px;
-                    																}
-
-                    																a {
-                    																		font-size: 12px;
-                    																		color: #354052;
-                    																		font-weight: 600;
-                    																		text-decoration: none;
-
-                    																		&:hover {
-                    																				color: #354052;
-                    																				text-decoration: underline;
-                    																		}
-                    																}
-
-                    																span.delete {
-                    																		position: relative;
-                    																		right: -10px;
-                    																		top: -2px;
-
-                    																		a {
-                    																				color: #353f53;
-                    																				cursor: pointer;
-
-                    																				i {
-                    																						font-size: 16px;
-                    																						line-height: 1;
-                    																				}
-
-                    																				&:hover, &:focus {
-                    																						color: #353f53;
-                    																				}
-                    																		}
-                    																}
-
-                    																span.download {
-                    																		position: relative;
-                    																		right: -10px;
-                    																		top: -2px;
-
-                    																		a {
-                    																				color: #353f53;
-                    																				cursor: pointer;
-
-                    																				i {
-                    																						font-size: 16px;
-                    																						line-height: 1;
-                    																				}
-
-                    																				&:hover, &:focus {
-                    																						color: #353f53;
-                    																				}
-                    																		}
-                    																}
-                    														}
-                    												}
-                    										}
-
-                    										.upload-btn {
-                    												-webkit-flex-flow: row wrap;
-                    												align-items: center;
-                    												height: calc(100% - 70px);
-                    												position: absolute;
-                    												right: 15px;
-                    												top: 15px;
-                    												display: -webkit-box;
-                    												display: -moz-box;
-                    												display: -ms-flexbox;
-                    												display: -webkit-flex;
-                    												display: flex;
-                    												overflow: hidden;
-                    												justify-content: center;
-                    												align-items: center;
-
-                    												a {
-                    														width: 109px;
-                    														line-height: 1.6;
-                    														font-size: 12px;
-                    														font-weight: 600;
-                    														text-align: center;
-                    														display: block;
-                    														color: #7d889a;
-                    												}
-
-                    												button {
-                    														width: 109px;
-                    														color: #fff;
-                    												}
-                    										} */
+                    /* .upload {
+                    margin: 24px 0;
+                    width: 100%;
+                    .title {
+                    font-size: 14px;
+                    color: #353f53;
+                    font-weight: 600;
+                    }
+                    .status {
+                    font-size: 14px;
+                    width: 100%;
+                    word-break: break-all;
+                    }
+                    }
+                    .upload.sign-po {
+                    width: 100%;
+                    margin: 15px;
+                    padding-bottom: 20px;
+                    .status {
+                    font-size: 14px;
+                    color: #353f53;
+                    width: 60%;
+                    font-weight: 600;
+                    .primary-font {
+                    display: block;
+                    font-size: 12px;
+                    color: #354052;
+                    i {
+                    position: relative;
+                    top: 6px;
+                    margin-right: 5px;
+                    }
+                    a {
+                    font-size: 12px;
+                    color: #354052;
+                    font-weight: 600;
+                    text-decoration: none;
+                    &:hover {
+                    color: #354052;
+                    text-decoration: underline;
+                    }
+                    }
+                    span.delete {
+                    position: relative;
+                    right: -10px;
+                    top: -2px;
+                    a {
+                    color: #353f53;
+                    cursor: pointer;
+                    i {
+                    font-size: 16px;
+                    line-height: 1;
+                    }
+                    &:hover, &:focus {
+                    color: #353f53;
+                    }
+                    }
+                    }
+                    span.download {
+                    position: relative;
+                    right: -10px;
+                    top: -2px;
+                    a {
+                    color: #353f53;
+                    cursor: pointer;
+                    i {
+                    font-size: 16px;
+                    line-height: 1;
+                    }
+                    &:hover, &:focus {
+                    color: #353f53;
+                    }
+                    }
+                    }
+                    }
+                    }
+                    }
+                    .upload-btn {
+                    -webkit-flex-flow: row wrap;
+                    align-items: center;
+                    height: calc(100% - 70px);
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    overflow: hidden;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                    width: 109px;
+                    line-height: 1.6;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-align: center;
+                    display: block;
+                    color: #7d889a;
+                    }
+                    button {
+                    width: 109px;
+                    color: #fff;
+                    }
+                    } */
                 }
 
                 .card-footer {
@@ -7439,7 +7395,6 @@ html {
 }
 
 /*Project Plan List Starts*/
-
 .project-plan-filters {
     padding-bottom: 300px;
 }
@@ -7580,7 +7535,6 @@ html {
 /*Project Plan List Ends*/
 
 /* Project Plan Calendar Starts*/
-
 .calendar-container {
     background: #fff;
     padding: 30px 20px;
@@ -7596,10 +7550,7 @@ html {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.fc-state-hover,
-.fc-state-down,
-.fc-state-active,
-.fc-state-disabled {
+.fc-state-hover, .fc-state-down, .fc-state-active, .fc-state-disabled {
     color: #333333;
     background-color: #e6e6e6;
 }
@@ -7615,8 +7566,7 @@ html {
     transition: background-position 0.1s linear;
 }
 
-.fc-state-down,
-.fc-state-active {
+.fc-state-down, .fc-state-active {
     background-color: #448AFF !important;
     color: #fff !important;
     background-image: none;
@@ -7644,7 +7594,6 @@ html {
 /* Project Plan Calendar Ends*/
 
 /*Turnover Evolution Graph Starts*/
-
 .turnover-evolution {
     h4.graph-title {
         padding: 0;
@@ -7687,7 +7636,6 @@ html {
 /*Turnover Evolution Graph Ends*/
 
 /*Row Click Starts*/
-
 .clickable-row {
     cursor: pointer;
 }
@@ -7714,7 +7662,6 @@ html {
 }
 
 /* Disabled button*/
-
 .btn-label {
     i {
         position: relative;
@@ -7726,7 +7673,6 @@ html {
 /*Nav Progress Steps Ends*/
 
 /* Job List Starts */
-
 .job-list-container {
     margin-top: 20px;
 
@@ -8335,7 +8281,6 @@ html {
 /* Job List Ends */
 
 /*Labels Starts*/
-
 .label {
     font-size: 10px;
     color: #fff;
@@ -8406,7 +8351,6 @@ html {
 /*Labels Ends*/
 
 /* Labels with info popovers Starts*/
-
 .label-with-info {
     span {
         a {
@@ -8435,14 +8379,12 @@ html {
 }
 
 /* Labels with info popovers Ends*/
-
 .error {
     color: #EE0A5F !important;
     font-style: italic;
 }
 
 /*Contract Card Selection Starts*/
-
 .card-select {
     border: 1px solid #448AFF !important;
 }
@@ -8450,7 +8392,6 @@ html {
 /*Contract Card Selection Ends*/
 
 /* Mention autocomplete List Starts*/
-
 .mentions-input-box .mentions-autocomplete-list {
     top: auto !important;
     bottom: 0 !important;
@@ -8463,8 +8404,7 @@ html {
     height: auto !important;
 }
 
-.mentions-input-box .mentions-autocomplete-list li > img,
-.mentions-input-box .mentions-autocomplete-list li > div.icon {
+.mentions-input-box .mentions-autocomplete-list li > img, .mentions-input-box .mentions-autocomplete-list li > div.icon {
     width: 23px !important;
     height: 23px !important;
     margin-top: 0 !important;
@@ -8479,7 +8419,6 @@ html {
 /* Mention autocomplete List Ends*/
 
 /*Profile Modal Starts*/
-
 .wp-app {
     .profile {
         .modal-body {
@@ -8517,7 +8456,6 @@ html {
 /*Profile Modal Ends*/
 
 /*Send Test Modal Starts*/
-
 .send-test-modal {
     .send-test-title {
         font-size: 20px;
@@ -8586,7 +8524,6 @@ html {
 /*Send Test Modal Ends*/
 
 /* Fire Modal Starts*/
-
 .fire-modal {
     .fire-modal-title {
         margin-bottom: 20px;
@@ -8656,7 +8593,6 @@ html {
 /* Fire Modal Ends*/
 
 /* Candidate profile Action Modal Starts*/
-
 .candidate-action-container {
     .candidate-container {
         .candidate-container-left {
@@ -9141,7 +9077,6 @@ html {
 /* Candidate profile Action Modal Ends*/
 
 /*Share Announce Media Modal Starts*/
-
 .share-announce-modal {
     .share-announce-title {
         font-size: 20px;
@@ -9297,7 +9232,6 @@ html {
 /*Share Announce Media Modal Ends*/
 
 /*Share Send Message Modal Starts*/
-
 .send-share-message-modal {
     .send-share-message-title {
         font-size: 20px;
@@ -9331,7 +9265,6 @@ html {
 /*Share Send Message Modal Ends*/
 
 /* Report File Modal Starts*/
-
 .report-file-modal {
     .report-file-modal-title {
         margin-bottom: 20px;
@@ -9390,7 +9323,6 @@ html {
 /* Report File Modal Ends*/
 
 /*Job More Options Starts*/
-
 .job-more-options {
     .job-more-options-modal-title {
         margin-bottom: 20px;
@@ -9506,7 +9438,6 @@ html {
 /*Job More Options Ends*/
 
 /*Skip plagiarism Starts */
-
 .skip-plagiarism-modal {
     .skip-plagiarism-modal-title {
         .modal-title {
@@ -9521,7 +9452,6 @@ html {
 /*Skip plagiarism Ends */
 
 /* Disapprove Modal Starts*/
-
 .disapprove-modal {
     .disapprove-modal-title {
         margin-bottom: 20px;
@@ -9681,7 +9611,6 @@ html {
 /* Disapprove Modal Ends*/
 
 /* Drag and drop for files in Modal Starts*/
-
 .drag-drop-files-modal-container {
     margin-bottom: 25px;
 }
@@ -9929,7 +9858,6 @@ html {
 /* Drag and drop for files in Modal Ends*/
 
 /* Approve Modal Starts*/
-
 .approve-modal {
     .approve-modal-title {
         margin-bottom: 20px;
@@ -10059,7 +9987,6 @@ html {
 /* Approve Modal Ends*/
 
 /* Confirm Modal Starts*/
-
 .confirm-modal {
     .confirm-modal-title {
         margin-bottom: 20px;
@@ -10118,7 +10045,6 @@ html {
 /* Confirm Modal Ends*/
 
 /* Send Message Display and Edit Starts */
-
 .send-message-container {
     .send-message-display {
         .message-subject {
@@ -10178,7 +10104,6 @@ html {
 /* Send Message Display and Edit Ends */
 
 /* Card User Empty USer*/
-
 .card-user-empty {
     display: flex;
     color: #353f53;
@@ -10235,7 +10160,6 @@ html {
 /* Card User Empty USer*/
 
 /*Undo Delete Starts*/
-
 .delete-undo-container {
     position: fixed !important;
     right: 0px !important;
@@ -10279,7 +10203,6 @@ html {
 /*Undo Delete Ends*/
 
 /*Contract Delete Modal Starts*/
-
 .swal2-modal {
     h2 {
         color: #50596A;
@@ -10323,7 +10246,6 @@ html {
 /*Contract Delete Modal ends*/
 
 /*Change Card Date Modal Starts*/
-
 .change-card-date-modal {
     .change-card-date-title {
         font-size: 20px;
@@ -10419,27 +10341,24 @@ html {
 /*Centerize Modal Starts*/
 
 /* .modal {
-		text-align: center;
-		padding: 0 !important;
-		overflow-y: scroll;
+text-align: center;
+padding: 0 !important;
+overflow-y: scroll;
 }
-
 .modal:before {
-		content: '';
-		display: inline-block;
-		height: 100%;
-		vertical-align: middle;
-		margin-right: -4px;
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+margin-right: -4px;
 }
-
 .modal-dialog {
-		display: inline-block;
-		text-align: left;
-		vertical-align: middle;
+display: inline-block;
+text-align: left;
+vertical-align: middle;
 } */
 
 /*Centerize Modal Ends*/
-
 .modal-body {
     .tab-navigation {
         padding-bottom: 0;
@@ -10451,7 +10370,6 @@ html {
 }
 
 /* Multiple Select Search Box Starts*/
-
 .bs-searchbox {
     margin: 10px 10px 5px;
 
@@ -10667,7 +10585,6 @@ html {
 /*Custom Scrollbar Styles Ends*/
 
 /*data Table Starts*/
-
 .wp-app {
     .data-table-wrapper {
         .data-table-container {
@@ -10925,7 +10842,6 @@ html {
 /*Progress bar with task list *7 Ends */
 
 /*Billing Modal Starts*/
-
 .wp-app {
     .billing-modal-wrap {
         display: -webkit-box;
@@ -11195,7 +11111,6 @@ html {
 /*Billing Modal Ends*/
 
 /*Tooltip Starts*/
-
 .list-image {
     .tooltip {
         width: 140px;
@@ -11218,7 +11133,6 @@ html {
 /*Rating Ends*/
 
 /*Page Loader Starts*/
-
 .loader {
     display: -webkit-box;
     display: -moz-box;
@@ -11232,17 +11146,17 @@ html {
     align-items: center;
     overflow: hidden;
 
-    /*     position: relative;
-    		z-index: 1;
-    		height: 100vh;
-    		width: 92px;
-    		left: 45%;
-    		top: 42%;
-    	img{
-    		position: absolute;
-    		left: 0;
-    		top: 0;
-    	} */
+                     /*     position: relative;
+z-index: 1;
+height: 100vh;
+width: 92px;
+left: 45%;
+top: 42%;
+img{
+position: absolute;
+left: 0;
+top: 0;
+} */
 }
 
 .panel-body {
@@ -11267,7 +11181,6 @@ html {
 /*Page Loader Ends*/
 
 /*TinyMCE Panel Starts*/
-
 .mce-panel {
     border-radius: 5px;
 }
@@ -11275,7 +11188,6 @@ html {
 /*TinyMCE Panel Ends*/
 
 /*Warning Alert Starts*/
-
 .alert.alert-info {
     background: #F7F9FA;
     margin-bottom: 10px;
@@ -11337,7 +11249,6 @@ html {
 }
 
 /*Yes No Switch Starts*/
-
 span.yes {
     color: #448AFF;
 }
@@ -11388,48 +11299,47 @@ span.more {
 /*See More Content Ends*/
 
 /*Drag and Drop Files Starts*/
+
 /* .droppable {
-	background: transparent;
-	width: 100%;
-	min-height: 500px;
-	height: 120%;
-	text-align: center;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	overflow: hidden;
-	justify-content: center;
-	align-items: flex-end;
-	border: 2px solid #fcfdfd;
-	border-radius: 5px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: all .3s ease;
-	.droppable-tagline{
-		color: #A9A9A9;
-		font-weight: 600;
-		font-size: 14px;
-		i{
-			font-size: 40px;
-		}
-	}
-	.droppable-tagline.small{
-		margin-bottom: 20%;
-	}
+background: transparent;
+width: 100%;
+min-height: 500px;
+height: 120%;
+text-align: center;
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+overflow: hidden;
+justify-content: center;
+align-items: flex-end;
+border: 2px solid #fcfdfd;
+border-radius: 5px;
+position: absolute;
+top: 0;
+left: 0;
+transition: all .3s ease;
+.droppable-tagline{
+color: #A9A9A9;
+font-weight: 600;
+font-size: 14px;
+i{
+font-size: 40px;
 }
-
+}
+.droppable-tagline.small{
+margin-bottom: 20%;
+}
+}
 .droppable.dragover {
-	background: rgba(68,138,255,0.2);
-	border: 2px dashed #A9A9A9;
-	z-index: 9;
-	transition: all .3s ease;
-	.droppable-tagline{
-	}
+background: rgba(68,138,255,0.2);
+border: 2px dashed #A9A9A9;
+z-index: 9;
+transition: all .3s ease;
+.droppable-tagline{
+}
 } */
-
 .dragndrop {
     .droppable-purchase {
         padding: 0 15px;
@@ -11443,18 +11353,6 @@ span.more {
         display: -webkit-flex;
         display: flex;
         overflow: hidden;
-
-        /* height: 200px;
-        margin-bottom: 30px;
-        text-align: center;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        overflow: hidden;
-        justify-content: center;
-        align-items: flex-end; */
         border: 2px solid transparent;
         border-radius: 5px;
         transition: all .3s ease;
@@ -11508,18 +11406,6 @@ span.more {
         display: -webkit-flex;
         display: flex;
         overflow: hidden;
-
-        /* height: 200px;
-        margin-bottom: 30px;
-        text-align: center;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        overflow: hidden;
-        justify-content: center;
-        align-items: flex-end; */
         border: 2px solid transparent;
         border-radius: 5px;
         transition: all .3s ease;
@@ -11563,7 +11449,6 @@ span.more {
 /*Drag and Drop Files Ends*/
 
 /* Icon Flip Starts*/
-
 .icon-flipped i {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -11575,7 +11460,6 @@ span.more {
 /* Icon Flip Ends*/
 
 /* Notification Badge Starts*/
-
 .notification {
     position: absolute;
     background-color: #ee0a5f;
@@ -11595,7 +11479,6 @@ span.more {
 /* Notification Badge Ends*/
 
 /*TinyMCE Custom Changes Starts*/
-
 body.mce-content-body {
     background: #fff !important;
     color: #000 !important;
@@ -11613,7 +11496,6 @@ body.mce-content-body {
 /*TinyMCE Custom Changes Ends*/
 
 /*Mozilla Fixtures Starts*/
-
 @-moz-document url-prefix() {
     .project-list-tab ul li .list-tab .list-tab-title {
         display: -webkit-box;
@@ -11640,7 +11522,6 @@ body.mce-content-body {
 /*Mozilla Fixtures Ends*/
 
 /*Document Preview Modal Starts*/
-
 #document_drive_view {
     .modal-body {
         .file-preview {
@@ -11661,7 +11542,6 @@ body.mce-content-body {
 /*Document Preview Modal Ends*/
 
 /* Popover Style Starts */
-
 .popover {
     max-width: 100% !important;
     padding: 0;
@@ -11709,7 +11589,7 @@ body.mce-content-body {
     opacity: 0;
     filter: alpha(opacity = 0);
     visibility: hidden;
-    transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear;
 
     &.in {
         visibility: visible;
@@ -11724,7 +11604,6 @@ body.mce-content-body {
 /* Modal overlay styles */
 
 /* Timepicker cutsom style starts*/
-
 .bootstrap-datetimepicker-widget table tr td.new {
     display: none;
 }
@@ -11741,6 +11620,7 @@ body.mce-content-body {
 }
 
 /* Breadcrumb styles ends */
+
 /* Divider styles */
 .divider-bottom {
     @include divider-bottom;
