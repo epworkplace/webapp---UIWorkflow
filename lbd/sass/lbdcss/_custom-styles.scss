@@ -2517,7 +2517,7 @@ html {
     left: auto;
 }
 
-.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container {
+.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container, .create-job-settings {
     width: calc(100% - (31.4% + 80px));
     right: 0;
     top: 78px;
@@ -2529,6 +2529,25 @@ html {
             font-size: 16px;
             color: #353f53;
         }
+    }
+
+    .settings-wrap-title {
+        font-size: 20px;
+        color: #353f53;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    h4.title {
+        margin: 0;
+        font-size: 14px;
+        color: #353f53;
+        font-weight: 700;
+    }
+
+    label {
+        font-weight: 600;
+        color: #a0a5af;
     }
 
     @-moz-document url-prefix() {
@@ -2746,6 +2765,81 @@ html {
 }
 
 /*Setting-wrap Content Ends*/
+
+/*Create Job Settings Starts*/
+
+.create-job-settings {
+    display: none;
+
+    .create-job-container-module {
+        margin-bottom: 15px;
+
+        #upload-create-job-file {
+            display: none;
+        }
+
+        .add-create-job-file {
+            margin: 15px 0;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 65px;
+            color: #a0a5af;
+            text-decoration: underline;
+            text-align: center;
+            border: 2px dashed #D7D9DC;
+            border-radius: 4px;
+            transition: all .3s ease;
+
+            &:hover, &:focus {
+                border: 2px dashed #448AFF;
+                color: #448AFF;
+            }
+        }
+
+        .added-create-job-file-container {
+            margin: 15px 0;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            height: 65px;
+            border: 2px solid #D7D9DC;
+            border-radius: 4px;
+
+            .added-create-job-file {
+                width: 100%;
+
+                i {
+                    line-height: 1.6;
+                }
+
+                .file-name {
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-flex-flow: row wrap;
+                    align-items: center;
+                    height: 38px;
+                }
+            }
+        }
+    }
+}
+
+/*Create Job Settings Ends*/
 
 /*Announce Source Starts*/
 .announce-container-source {
@@ -5284,6 +5378,49 @@ html {
         background: #eee;
     }
 }
+
+/* Teamlist import left Column Start */
+
+.teamlist-left-container {
+    height: 100vh;
+
+    .no-import-teamlist-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: calc(100vh - 25%);
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        .no-import-teamlist {
+            text-align: center;
+            width: 100%;
+
+            h2 {
+                color: #9a9fa9;
+                text-align: center;
+                font-weight: 700;
+                font-size: 20px;
+                margin: 0;
+            }
+
+            .add-new-card {
+                a {
+                    width: 48.5%;
+                    margin: 15px auto 0;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* Teamlist import left Column End */
 
 /*Step Settings for Layout Starts*/
 .overlay-main-container {
