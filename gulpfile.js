@@ -87,6 +87,7 @@ var
           source + 'lbd/js/countdown.js',
           source + 'lbd/js/ggdrive.js',
           source + 'lbd/js/jquery.MultiFileQuote.js',
+          source + 'lbd/js/bootstrap-show-password.min.js',
           source + 'lbd/js/custom.js'],
     out: dest + 'lbd/js/'
   },
@@ -259,7 +260,7 @@ gulp.task('sass', ['fonts'], function() {
 
 // js tasks
 gulp.task('js', function() {
-  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
+  // var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
   if (devBuild) {
     return gulp.src(js.liveIn)
 
@@ -268,7 +269,7 @@ gulp.task('js', function() {
       .pipe($.newer(dest + 'lbd/js/'))
       // .pipe($.deporder())
       // .pipe($.stripDebug())
-      .pipe(jsFilter)
+      // .pipe(jsFilter)
       .pipe($.uglify())
       .pipe($.order([
           "jquery.min.js",
@@ -295,13 +296,14 @@ gulp.task('js', function() {
           "ggdrive.js",
           "jquery.MultiFileQuote.js",
           // "bootstrap-select.js",
+          "bootstrap-show-password.min.js",
           "countdown.js"
           // "lbd/js/custom.js"
           ]))
       .pipe($.concat('lbd-bundle.js', {rebaseUrls: false}))
       // .pipe($.uglify())
       // .pipe($.gzip({append: false}))
-      .pipe(jsFilter.restore)
+      // .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
       .pipe(gulp.dest(dest + 'lbd/js/'));
   }
@@ -392,7 +394,7 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
                       source + 'lbd/lib/validation-engine/jquery.validationEngine-fr.js',
                       source + 'lbd/lib/validation-engine/jquery.validationEngine.js',
                       source + 'lbd/lib/validation-engine/validationEngine.jquery.css',
-                      // source + 'lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js',
+                      source + 'lbd/lib/matchmedia/matchMedia.js',
                       source + 'lbd/lib/readmore-js/readmore.js'])
       .pipe($.size({title: 'jsLibsLive in '}))
       .pipe($.newer(dest + 'lbd/lib/'))
@@ -415,7 +417,7 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
           "sweetalert2.min.js",
           "jquery.validationEngine-fr.js",
           "jquery.validationEngine.js",
-          // "tinymce.min.js",
+          "matchMedia.js",
           "readmore.js"
           ]))
       .pipe($.concat('plugins-bundle.js'))
@@ -631,4 +633,4 @@ gulp.task('watch', function() {
 // default task
 gulp.task('default', ['html', 'images', 'fonts', 'css', 'sass', 'jslib', 'jsliblive', 'js', 'watch', 'serve']);
 
-gulp.task('bundle', ['css', 'sass', 'js', 'jsliblive']);
+gulp.task('bundle', ['css', 'js', 'jsliblive']);
