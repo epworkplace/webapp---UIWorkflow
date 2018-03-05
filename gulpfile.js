@@ -54,7 +54,7 @@ var
       imagePath: '../img',
       precision: 3,
       errLogToConsole: true
-    },
+    }
   },
 
   fonts = {
@@ -269,12 +269,7 @@ gulp.task('js', function() {
       // .pipe($.deporder())
       // .pipe($.stripDebug())
       .pipe(jsFilter)
-      // .pipe($.deporder())
-      // .pipe($.webpack({
-      //   output: {
-      //     filename: 'bundle.js',
-      //   }
-      // }))
+      .pipe($.uglify())
       .pipe($.order([
           "jquery.min.js",
           // "jquery-1.12.4.min.js",
@@ -404,6 +399,7 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
       .pipe(jsFilter)
       // .pipe($.babel())
       // .pipe($.regenerator())
+      .pipe($.uglify())
       .pipe($.order([
           "chosen.jquery.min.js",
           "ImageSelect.jquery.js",
@@ -488,7 +484,7 @@ gulp.task('jslib', function() {
       imageFilter = $.filter(['**/*.+(jpg|png|gif|svg)'], {restore: true}),
       imageFilter2 = $.filter(['**/*.+(jpg|png|tiff|webp)'], {restore: true}),
       jsonFilter = $.filter(['**/*.json'], {restore: true}),
-      jsFilter = $.filter(['**/*.js',  '!lbd/lib/sweetalert2/src/**/*'], {restore: true});
+      jsFilter = $.filter(['**/*.js', '!lbd/lib/sweetalert2/src/**/*'], {restore: true});
 
   if (devBuild) {
     return gulp.src(jsLibs.in)
