@@ -1336,10 +1336,14 @@
             width: 50%;
 
             a {
-                justify-content: space-around;
+                justify-content: center;
 
                 img {
                     margin-right: 0;
+                }
+
+                span {
+                    margin: 0 10px;
                 }
             }
 

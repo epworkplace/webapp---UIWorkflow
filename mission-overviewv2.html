@@ -263,9 +263,10 @@
                                                             <div class="tab-step-content">
                                                                 <ul class="nav">
                                                                     <li class="active"><a href="#tab1" data-toggle="tab">Overview</a></li>
-                                                                    <li><a href="#tab2" data-toggle="tab">Announce</a></li>
-                                                                    <li><a href="#tab3" data-toggle="tab">Related Files (0)</a></li>
-                                                                    <li><a href="#tab4" data-toggle="tab">Stakeholders (3)</a></li>
+                                                                    <!-- <li><a href="#tab2" data-toggle="tab">Announce</a></li> -->
+                                                                    <li><a href="#tab2" data-toggle="tab">Teamlist (0)</a></li>
+                                                                    <li><a href="#tab3" data-toggle="tab">Stakeholders (3)</a></li>
+                                                                    <li><a href="#tab4" data-toggle="tab">Briefs (0)</a></li>
                                                                 </ul>
                                                                 <div class="tab-content tab-content-progress">
                                                                     <div class="tab-pane active" id="tab1">
@@ -853,7 +854,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="tab-pane" id="tab2">
+                                                                    <!-- <div class="tab-pane" id="tab2">
                                                                         <div class="row announce">
                                                                             <div class="col-12-md announce-container">
                                                                                 <div class="col-md-12 left-module-title">Visibility</div>
@@ -918,8 +919,114 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                    </div> -->
+                                                                    <div class="tab-pane" id="tab2">
+                                                                        <div class="row teamlist-left-container">
+                                                                            <div class="col-md-12 no-import-teamlist-container">
+																				<div class="no-import-teamlist">
+																					<h2>No linked teamlist yet.</h2>
+																					<div class="import-button">
+																						<a href="javascript:;" class="btn btn-fill btn-download create">
+																							<span class="btn-label">
+																								<i class="material-icons">file_download</i>
+																							</span>Import
+																						</a>
+																					</div>
+																					or
+																					<div class="add-new-card">
+					                                                                    <a class="add-card" id="createJobSettings" href="javascript:;">
+					                                                                        <span class="btn-label">
+																								<i class="material-icons">add</i>
+																							</span>Create
+					                                                                    </a>
+					                                                                </div>
+																				</div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="tab-pane" id="tab3">
+                                                                        <div class="row stakeholders">
+                                                                            <div class="col-md-12 stakeholders-list">
+                                                                                <ul>
+                                                                                    <li class="add-stakeholder">
+                                                                                        <div class="card stakeholder">
+                                                                                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                                                                                <i class="material-icons">add</i>
+                                                                                            </a>
+                                                                                            <ul class="dropdown-menu" role="menu">
+                                                                                                <li>
+                                                                                                    <div class="input-group">
+                                                                                                        <input id="btn-input" type="text" class="form-control input-sm" name="stakeholders" placeholder="Search Stakeholders" />
+                                                                                                    </div>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="card stakeholder">
+                                                                                            <div class="user-image">
+                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                                            </div>
+                                                                                            <div class="stakeholder-name">Lucie Zvanovec <span class="label ongoing">Ongoing</span></div>
+                                                                                            <div class="stakeholder-designation">
+                                                                                                <div class="designation">
+                                                                                                    Head of Sales &amp; Marketing
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="cta-container">
+                                                                                            <div class="cta">
+                                                                                                <ul>
+                                                                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="card stakeholder">
+                                                                                            <div class="user-image">
+                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                                            </div>
+                                                                                            <div class="stakeholder-name">Clarisse</div>
+                                                                                            <div class="stakeholder-designation">
+                                                                                                <div class="designation">
+                                                                                                    Project Manager
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="cta-container">
+                                                                                            <div class="cta">
+                                                                                                <ul>
+                                                                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="card stakeholder">
+                                                                                            <div class="user-image">
+                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                                            </div>
+                                                                                            <div class="stakeholder-name">Michael Martin</div>
+                                                                                            <div class="stakeholder-designation">
+                                                                                                <div class="designation">
+                                                                                                    UX and ART
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="cta-container">
+                                                                                            <div class="cta">
+                                                                                                <ul>
+                                                                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="tab4">
                                                                         <div class="row related-files">
                                                                             <div class="col-md-12 related-files-filter-search">
                                                                                 <div class="col-md-5 related-files-filter">
@@ -1033,88 +1140,6 @@
                                                                                             <div class="cta">
                                                                                                 <ul>
                                                                                                     <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Download"><i class="material-icons">file_download</i></a></li>
-                                                                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="tab-pane" id="tab4">
-                                                                        <div class="row stakeholders">
-                                                                            <div class="col-md-12 stakeholders-list">
-                                                                                <ul>
-                                                                                    <li class="add-stakeholder">
-                                                                                        <div class="card stakeholder">
-                                                                                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                                                                                                <i class="material-icons">add</i>
-                                                                                            </a>
-                                                                                            <ul class="dropdown-menu" role="menu">
-                                                                                                <li>
-                                                                                                    <div class="input-group">
-                                                                                                        <input id="btn-input" type="text" class="form-control input-sm" name="stakeholders" placeholder="Search Stakeholders" />
-                                                                                                    </div>
-                                                                                                </li>
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div class="card stakeholder">
-                                                                                            <div class="user-image">
-                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
-                                                                                            </div>
-                                                                                            <div class="stakeholder-name">Lucie Zvanovec <span class="label ongoing">Ongoing</span></div>
-                                                                                            <div class="stakeholder-designation">
-                                                                                                <div class="designation">
-                                                                                                    Head of Sales &amp; Marketing
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="cta-container">
-                                                                                            <div class="cta">
-                                                                                                <ul>
-                                                                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div class="card stakeholder">
-                                                                                            <div class="user-image">
-                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
-                                                                                            </div>
-                                                                                            <div class="stakeholder-name">Clarisse</div>
-                                                                                            <div class="stakeholder-designation">
-                                                                                                <div class="designation">
-                                                                                                    Project Manager
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="cta-container">
-                                                                                            <div class="cta">
-                                                                                                <ul>
-                                                                                                    <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div class="card stakeholder">
-                                                                                            <div class="user-image">
-                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle">
-                                                                                            </div>
-                                                                                            <div class="stakeholder-name">Michael Martin</div>
-                                                                                            <div class="stakeholder-designation">
-                                                                                                <div class="designation">
-                                                                                                    UX and ART
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="cta-container">
-                                                                                            <div class="cta">
-                                                                                                <ul>
                                                                                                     <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
                                                                                                 </ul>
                                                                                             </div>
@@ -1398,6 +1423,101 @@
                                                             </div>
                                                         </div>
                                                     </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 settings-wrap create-job-settings">
+                                            <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
+                                            <div class="row">
+                                            	<div class="col-md-10 settings-wrap-title">
+							                        Create a job
+							                    </div>
+                                            </div>
+											<div class="row">
+												<div class="col-md-12 create-job-container">
+													<h4 class="title">Job and Brief</h4>
+													<div class="row">
+														<div class="col-md-6 create-job-container-module">
+															<label>Job Name</label>
+                                                        	<input class="form-control" type="text"  />
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-6 create-job-container-module">
+															<label>What are you looking for? *</label>
+															<select name="tempo" class="selectpicker">
+                                                                <option>Translator</option>
+                                                                <option>Writer</option>
+                                                                <option>Proofreader</option>
+                                                            </select>
+														</div>
+														<div class="col-md-2 create-job-container-module">
+															<label>Qty*</label>
+															<input class="form-control" type="number"  />
+														</div>
+														<div class="col-md-2 create-job-container-module">
+															<label># Candidate max</label>
+															<input class="form-control" type="number"  />
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-12 create-job-container-module">
+															<input id="upload-create-job-file" type="file">
+															<a class="add-create-job-file" href="javascript:;">
+																+ Add brief
+															</a>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-12 create-job-container-module">
+															<div class="added-create-job-file-container">
+																<div class="added-create-job-file">
+																	<div class="col-md-1"><i class="material-icons pull-right">insert_drive_file</i></div>
+																	<div class="col-md-10 file-name">Allocine_brief-writer.pdf</div>
+																	<div class="col-md-1">
+																		<a href="javascript:;">
+																			<i class="material-icons">delete</i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-6">
+															<h4 class="title">Timimg</h4>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-6">
+															<label>Application phase - End time *</label>
+															<div class="row">
+																<div class="col-md-6 create-job-container-module">
+																	<input class="form-control datepicker" placeholder="Date Here" type="text"/>
+																</div>
+																<div class="col-md-4 create-job-container-module">
+																	<input type="text" class="form-control timepicker" placeholder="Time Here"/>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<label>Selection phase - End time *</label>
+															<div class="row">
+																<div class="col-md-6 create-job-container-module">
+																	<input class="form-control datepicker" placeholder="Date Here" type="text"/>
+																</div>
+																<div class="col-md-4 create-job-container-module">
+																	<input type="text" class="form-control timepicker" placeholder="Time Here"/>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+                                                <div class="col-md-12 tab-navigation">
+                                                    <button type="button" class="btn btn-no pull-left btn-back">Cancel</button>
+                                                    <button type="button" class="btn btn-yes pull-right btn-finish" onclick="onFinishWizard()">Create</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1772,6 +1892,13 @@ $('#wizardCardTapable').bootstrapWizard({
 
 });
 </script>
+<script type="text/javascript">
+	//upload brief in create job
+	$("a.add-create-job-file").on('click', function(e){
+	    e.preventDefault();
+	    $("#upload-create-job-file:hidden").trigger('click');
+	});
+</script>
 <script type="text/javascript" defer>
 // Page refresh after some time interval
 $(window).load(function(){
@@ -1779,6 +1906,21 @@ $(window).load(function(){
         $('#refresh-page').modal('show');
     }, 15000);*/
 });
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//Settings popup
+		$('#createJobSettings').click(function() {
+			$('.overlay-main-container, .settings-wrap').fadeIn(function(){
+				$('.overlay-main-container, .create-job-settings').css({
+					display: 'block'
+				});
+				$('.wp-app').css({
+					overflow: 'hidden'
+				});
+			})
+		});
+	});
 </script>
 
 
