@@ -977,7 +977,7 @@
                                     											<div class="no-import-teamlist">
                                     												<h2>No linked teamlist yet.</h2>
                                     												<div class="import-button">
-                                    													<a href="javascript:;" class="btn btn-fill btn-download create">
+                                    													<a href="javascript:;" class="btn btn-fill btn-download create" data-toggle="modal" data-target="#importTeamlist">
                                     														<span class="btn-label">
                                     															<i class="material-icons">file_download</i>
                                     														</span>Import
@@ -985,7 +985,7 @@
                                     												</div>
                                     												or
                                     												<div class="add-new-card">
-                                    													<a class="add-card" id="createJobSettings" href="javascript:;">
+                                    													<a class="add-card" id="createJobSettings-01" href="javascript:;">
                                     														<span class="btn-label">
                                     															<i class="material-icons">add</i>
                                     														</span>Create
@@ -994,6 +994,114 @@
                                     											</div>
                                     										</div>
                                     									</div>
+                                    									<div class="row teamlist-left-container">
+                                    										<div class="col-md-12 import-teamlist-container">
+                                    											<div class="row">
+                                    												<div class="col-md-12 teamlist-header">
+                                    													<div class="row">
+                                    														<div class="col-md-5 p-0">Imported teamlists <span class="d-block"><span>2</span> teamlists</span></div>
+                                    														<div class="col-md-7 pr-0">
+                                    															<div class="col-md-6 p-0 add-new-card">
+                                    																<!-- <button class="btn btn-confirm full-width btn-fill" id="createJobSettings">+ Create</button> -->
+                                    	        													<a class="add-card" id="createJobSettings-02" href="javascript:;">
+                                    	        														<span class="btn-label">
+                                    	        															<i class="material-icons">add</i>
+                                    	        														</span>Create
+                                    	        													</a>
+                                    															</div>
+                                    															<div class="col-md-6 pr-0"><button class="btn btn-download full-width btn-fill" data-toggle="modal" data-target="#importTeamlist">Import</button></div>
+                                    														</div>
+                                    													</div>
+                                    												</div>
+                                    											</div>
+                                    											<div class="row">
+                                    												<div class="col-md-12 card linked-teamlist">
+                                    													<ul>
+                                    														<li>Webedia - Sourcing - Translator FR -IT<a href="javascript:void(0);" class="pull-right" data-container="body" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+                                    														<li>Webedia - Sourcing - Proofreader IT <a href="javascript:void(0);" class="pull-right" data-container="body" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+                                    														<!-- <li class="create-link">
+                                    															<a href="javascript:;">+ Create a new link</a>
+                                    														</li> -->
+                                    													</ul>
+                                    												</div>
+                                    											</div>
+                                    											<div class="row contributors">
+                                    												<div class="sec-title">List of contributors</div>
+                                    												<div class="col-md-12 contributors-in-list">
+                                    													<ul>
+                                    														<li>
+                                    															<div class="card contributor">
+                                    																<div class="user-image">
+                                    																	<img src="lbd/img/default-avatar.png" class="img-circle">
+                                    																</div>
+                                    																<div class="contributor-info">Michael Martin
+                                    																	<span class="designation">
+                                    																		Translator
+                                    																	</span>
+                                    																</div>
+                                    															</div>
+                                    															<!-- <div class="cta-container">
+                                    																<div class="cta">
+                                    																	<ul>
+                                    																		<li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+                                    																	</ul>
+                                    																</div>
+                                    															</div> -->
+                                    														</li>
+                                    														<li>
+                                    															<div class="card contributor">
+                                    																<div class="user-image">
+                                    																	<img src="lbd/img/default-avatar.png" class="img-circle">
+                                    																</div>
+                                    																<div class="contributor-info">Paul Arnaud
+                                    																	<span class="designation">
+                                    																		Proofreader
+                                    																	</span>
+                                    																</div>
+                                    															</div>
+                                    														</li>
+                                    														<li>
+                                    															<div class="card contributor">
+                                    																<div class="user-image">
+                                    																	<img src="lbd/img/default-avatar.png" class="img-circle">
+                                    																</div>
+                                    																<div class="contributor-info">Alice Meyer
+                                    																	<span class="designation">
+                                    																		Proofreader
+                                    																	</span>
+                                    																</div>
+                                    															</div>
+                                    														</li>
+                                    														<li>
+                                    															<div class="card contributor">
+                                    																<div class="user-image">
+                                    																	<img src="lbd/img/default-avatar.png" class="img-circle">
+                                    																</div>
+                                    																<div class="contributor-info">Andrea Berti
+                                    																	<span class="designation">
+                                    																		Translator
+                                    																	</span>
+                                    																</div>
+                                    															</div>
+                                    														</li>
+                                    														<li>
+                                    															<div class="card contributor">
+                                    																<div class="user-image">
+                                    																	<img src="lbd/img/default-avatar.png" class="img-circle">
+                                    																</div>
+                                    																<div class="contributor-info">Emilia Georgio
+                                    																	<span class="designation">
+                                    																		Translator
+                                    																	</span>
+                                    																</div>
+                                    															</div>
+                                    														</li>
+                                    													</ul>
+                                    												</div>
+                                    											</div>
+                                    										</div>
+                                    									</div>
+                                    	
                                     								</div>
                                     								<div class="tab-pane" id="tab3">
                                     									<div class="row stakeholders">
@@ -1207,6 +1315,7 @@
                                     			</div>
                                     		</nav>
                                     	</div>
+                                    	
                                     </div>
                                     <div class="toggle-panel-container" style="">
                                         <a href="javascript:;"><i class="material-icons">close</i></a>
@@ -5561,6 +5670,7 @@
                                         </div>
                                         <a href="javascript:;" data-toggle="modal" data-target="#page-refresh" style="display: none;">Alert to reload page</a>
                                         
+
                                     </div>
                                 </div>
                             </div>
@@ -6802,6 +6912,162 @@
                 </div>
             </div>
         </div>
+        <div aria-labelledby="importTeamlist" class="modal fade import-teamlist-modal in" id="importTeamlist" role="dialog" tabindex="-1" style="display: block;">
+            <div class="modal-dialog modal-lg" role="modal">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="duplicate-cards clearfix">
+                            <span class="close">
+                                <a data-dismiss="modal" href="javascript:;">
+                                    <i class="material-icons">
+                                    close
+                                    </i>
+                                </a>
+                            </span>
+                            <div class="modal-title">
+                                Import teamlist
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <div class="row">
+                                    <div class="col-md-4 teamlist-filters">
+        															<div class="row form-group">
+        																<div class="search-input col-md-12">
+        																	<input type="text" class="form-control" name="company" required="" placeholder="Search a teamlist...">
+        																	<div class="search-icon search-icon-none"></div>
+        																</div>
+        															</div>
+        															<div class="row form-group">
+        																<div class="from-filter-container col-md-12">
+        																	<div class="from-filter clearfix">
+        																		<div class="sec-title">From...</div>
+        																		<select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Client" id="missions">
+        																			<option data-hidden="true"></option>
+        																			<option>Client 00</option>
+        																			<option>Client 01</option>
+        																			<option>Client 02</option>
+        																			<option>Client 03</option>
+        																			<option>Client 04</option>
+        																		</select>
+        																		<select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Job" id="missions">
+        																			<option data-hidden="true"></option>
+        																			<option>Job 00</option>
+        																			<option>Job 01</option>
+        																			<option>Job 02</option>
+        																			<option>Job 03</option>
+        																			<option>Job 04</option>
+        																		</select>
+        																		<select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Quotes" id="missions">
+        																			<option data-hidden="true"></option>
+        																			<option>Quote 00</option>
+        																			<option>Quote 01</option>
+        																			<option>Quote 02</option>
+        																			<option>Quote 03</option>
+        																			<option>Quote 04</option>
+        																		</select>
+        																		<select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All missions" id="missions">
+        																			<option data-hidden="true"></option>
+        																			<option>Mission 00</option>
+        																			<option>Mission 01</option>
+        																			<option>Mission 02</option>
+        																			<option>Mission 03</option>
+        																			<option>Mission 04</option>
+        																		</select>
+        																	</div>
+        																</div>
+        															</div>
+        															<div class="row form-group">
+        																<div class="job-filter-container col-md-12">
+        																	<div class="job-filter clearfix">
+        																		<div class="sec-title">Filter by job</div>
+        																		<select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Client" id="missions">
+        																			<option data-hidden="true"></option>
+        																			<option>Client 00</option>
+        																			<option>Client 01</option>
+        																			<option>Client 02</option>
+        																			<option>Client 03</option>
+        																			<option>Client 04</option>
+        																		</select>
+        																		<select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Job" id="missions">
+        																			<option data-hidden="true"></option>
+        																			<option>Job 00</option>
+        																			<option>Job 01</option>
+        																			<option>Job 02</option>
+        																			<option>Job 03</option>
+        																			<option>Job 04</option>
+        																		</select>
+        																		<select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Quotes" id="missions">
+        																			<option data-hidden="true"></option>
+        																			<option>Quote 00</option>
+        																			<option>Quote 01</option>
+        																			<option>Quote 02</option>
+        																			<option>Quote 03</option>
+        																			<option>Quote 04</option>
+        																		</select>
+        																		<select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All missions" id="missions">
+        																			<option data-hidden="true"></option>
+        																			<option>Mission 00</option>
+        																			<option>Mission 01</option>
+        																			<option>Mission 02</option>
+        																			<option>Mission 03</option>
+        																			<option>Mission 04</option>
+        																		</select>
+        																	</div>
+        																</div>
+        															</div>
+                                    </div>
+                                    <div class="col-md-8 teamlist-container">
+                                      <div class="row">
+                                        <div class="col-md-12 card-details">
+                                            <div class="row form-group">
+                                                <div class="col-md-6">
+                                                    <label>Card Name</label>
+                                                    <input class="form-control" name="" type="text" value="Webedia blog e-sport trends blog - 2"/>
+                                                </div>
+                                                <div class="col-md-6">
+                                                  <div class="row">
+                                                    <div class="col-md-3">
+                                                        <label>Volume</label>
+                                                        <input class="form-control" name="" type="number" value="200"/>
+                                                    </div>
+                                                    <div class="col-md-4 pl-0">
+                                                        <label>Deck Due Date</label>
+                                                        <input class="form-control datepicker-end" placeholder="Due Date" type="text"/>
+                                                    </div>
+                                                    <div class="col-md-4 p-0 pull-right text-center">
+                                                        <label>Immediate Launch ?</label>
+                                                        <div class="df-ac-jc">
+                                                          <div class="checkbox">
+                                                            <input type="checkbox" data-toggle="checkbox" value="">
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="divider navigation-divider"></div>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <button class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back" type="button" data-dismiss="modal">
+                                              Cancel
+                                          </button>
+                                          <button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-finish" type="button">
+                                              Import
+                                          </button>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 <!-- Modals ends -->
 
     </div>
@@ -6948,253 +7214,246 @@
 
 
 <script>
+	$(document).on('ready', function() {
 
-$(document).on('ready', function() {
-/*scrolling decks*/
+		/*scrolling decks*/
 
-    var $item = $('#card-container .decks'), /*Cache your DOM selector*/
-        visible = 2, /*Set the number of items that will be visible*/
-        index = 0, /*Starting index*/
-        endIndex = ( $item.length / visible ) - 1; /*End index*/
-        if($item.length > 3){
-            $('.cards-filter-prev, .cards-filter-next').fadeIn(400);
-        }
+		    var $item = $('#card-container .decks'), /*Cache your DOM selector*/
+		        visible = 2, /*Set the number of items that will be visible*/
+		        index = 0, /*Starting index*/
+		        endIndex = ( $item.length / visible ) - 1; /*End index*/
+		        if($item.length > 3){
+		            $('.cards-filter-prev, .cards-filter-next').fadeIn(400);
+		        }
 
-    $('.cards-filter-next').on('click', function(e){
-        e.stopPropagation();
-        var leftPos = $('ul#card-container').scrollLeft();
-        console.log(leftPos);
-          $('ul#card-container').animate({
-                scrollLeft: leftPos + 365
-            }, 300);
-          leftPos -= 10;
-          console.log(leftPos);
-        // $('ul#card-container').mCustomScrollbar("scrollTo", "-=360");
-    });
+		    $('.cards-filter-next').on('click', function(e){
+		        e.stopPropagation();
+		        var leftPos = $('ul#card-container').scrollLeft();
+		        console.log(leftPos);
+		          $('ul#card-container').animate({
+		                scrollLeft: leftPos + 365
+		            }, 300);
+		          leftPos -= 10;
+		          console.log(leftPos);
+		        // $('ul#card-container').mCustomScrollbar("scrollTo", "-=360");
+		    });
 
-    $('.cards-filter-prev').on('click', function(e){
-        e.stopPropagation();
-        var leftPos = $('ul#card-container').scrollLeft();
-        console.log(leftPos);
-          $('ul#card-container').animate({
-                scrollLeft: leftPos - 365
-            }, 300);
-          leftPos += 10;
-          console.log(leftPos);
-          // $('ul#card-container').mCustomScrollbar("scrollTo", "+=360");
+		    $('.cards-filter-prev').on('click', function(e){
+		        e.stopPropagation();
+		        var leftPos = $('ul#card-container').scrollLeft();
+		        console.log(leftPos);
+		          $('ul#card-container').animate({
+		                scrollLeft: leftPos - 365
+		            }, 300);
+		          leftPos += 10;
+		          console.log(leftPos);
+		          // $('ul#card-container').mCustomScrollbar("scrollTo", "+=360");
 
-    });
-/*
-scrolling decks
+		    });
+		/* scrolling decks mCustomScrollbar*/
 
+		/* Bootstrap Plus & Minus for number input field*/
+		$('.btn-number').click(function(e) {
+		    e.preventDefault();
+		    fieldName = $(this).attr('data-field');
+		    type = $(this).attr('data-type');
+		    var input = $("input[name='" + fieldName + "']");
+		    var currentVal = parseInt(input.val());
+		    if (!isNaN(currentVal)) {
+		        if (type == 'minus') {
+		            if (currentVal > input.attr('min')) {
+		                input.val(currentVal - 1).change();
+		            }
+		            if (parseInt(input.val()) == input.attr('min')) {
+		                $(this).attr('disabled', true);
+		            }
+		        } else if (type == 'plus') {
+		            if (currentVal < input.attr('max')) {
+		                input.val(currentVal + 1).change();
+		            }
+		            if (parseInt(input.val()) == input.attr('max')) {
+		                $(this).attr('disabled', true);
+		            }
+		        }
+		    } else {
+		        input.val(0);
+		    }
+		});
+		$('.input-number').focusin(function() {
+		    $(this).data('oldValue', $(this).val());
+		});
+		$('.input-number').change(function() {
+		    minValue = parseInt($(this).attr('min'));
+		    maxValue = parseInt($(this).attr('max'));
+		    valueCurrent = parseInt($(this).val());
+		    name = $(this).attr('name');
+		    if (valueCurrent >= minValue) {
+		        $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled')
+		    } else {
+		        alert('Sorry, the minimum value was reached');
+		        $(this).val($(this).data('oldValue'));
+		    }
+		    if (valueCurrent <= maxValue) {
+		        $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled')
+		    } else {
+		        alert('Sorry, the maximum value was reached');
+		        $(this).val($(this).data('oldValue'));
+		    }
+		});
+		$(".input-number").keydown(function(e) {
+		    // Allow: backspace, delete, tab, escape, enter and .
+		    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+		        // Allow: Ctrl+A
+		        (e.keyCode == 65 && e.ctrlKey === true) ||
+		        // Allow: home, end, left, right
+		        (e.keyCode >= 35 && e.keyCode <= 39)) {
+		        // let it happen, don't do anything
+		        return;
+		    }
+		    // Ensure that it is a number and stop the keypress
+		    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+		        e.preventDefault();
+		    }
+		});
 
-
-mCustomScrollbar*/
-
-/* Bootstrap Plus & Minus for number input field*/
-$('.btn-number').click(function(e) {
-    e.preventDefault();
-    fieldName = $(this).attr('data-field');
-    type = $(this).attr('data-type');
-    var input = $("input[name='" + fieldName + "']");
-    var currentVal = parseInt(input.val());
-    if (!isNaN(currentVal)) {
-        if (type == 'minus') {
-            if (currentVal > input.attr('min')) {
-                input.val(currentVal - 1).change();
-            }
-            if (parseInt(input.val()) == input.attr('min')) {
-                $(this).attr('disabled', true);
-            }
-        } else if (type == 'plus') {
-            if (currentVal < input.attr('max')) {
-                input.val(currentVal + 1).change();
-            }
-            if (parseInt(input.val()) == input.attr('max')) {
-                $(this).attr('disabled', true);
-            }
-        }
-    } else {
-        input.val(0);
-    }
-});
-$('.input-number').focusin(function() {
-    $(this).data('oldValue', $(this).val());
-});
-$('.input-number').change(function() {
-    minValue = parseInt($(this).attr('min'));
-    maxValue = parseInt($(this).attr('max'));
-    valueCurrent = parseInt($(this).val());
-    name = $(this).attr('name');
-    if (valueCurrent >= minValue) {
-        $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled')
-    } else {
-        alert('Sorry, the minimum value was reached');
-        $(this).val($(this).data('oldValue'));
-    }
-    if (valueCurrent <= maxValue) {
-        $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled')
-    } else {
-        alert('Sorry, the maximum value was reached');
-        $(this).val($(this).data('oldValue'));
-    }
-});
-$(".input-number").keydown(function(e) {
-    // Allow: backspace, delete, tab, escape, enter and .
-    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
-        // Allow: Ctrl+A
-        (e.keyCode == 65 && e.ctrlKey === true) ||
-        // Allow: home, end, left, right
-        (e.keyCode >= 35 && e.keyCode <= 39)) {
-        // let it happen, don't do anything
-        return;
-    }
-    // Ensure that it is a number and stop the keypress
-    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-        e.preventDefault();
-    }
-});
-
-
-});
-
+	});
 </script>
 
 <script>
-/*Mission Overview Track progressbar*/
-var bar = new ProgressBar.Line('#trackProgressBar', {
-            strokeWidth: 10,
-            easing: 'easeInOut',
-            duration: 1400,
-            color: '#448AFF',
-            trailColor: '#dfe2e5',
-            trailWidth: 10,
-            svgStyle: {width: '100%', height: '100%'}
-            }),
-    bar02 = new ProgressBar.Line('#trackProgressBarOngoing', {
-            strokeWidth: 10,
-            easing: 'easeInOut',
-            duration: 1400,
-            color: '#448AFF',
-            trailColor: '#dfe2e5',
-            trailWidth: 10,
-            svgStyle: {width: '100%', height: '100%'}
-            }),
-    bar03 = new ProgressBar.Line('#trackProgressBarValidated', {
-            strokeWidth: 10,
-            easing: 'easeInOut',
-            duration: 1400,
-            color: '#448AFF',
-            trailColor: '#dfe2e5',
-            trailWidth: 10,
-            svgStyle: {width: '100%', height: '100%'}
-            }),
-    bar04 = new ProgressBar.Line('#trackProgressBarPasued', {
-            strokeWidth: 10,
-            easing: 'easeInOut',
-            duration: 1400,
-            color: '#353F53',
-            trailColor: '#dfe2e5',
-            trailWidth: 10,
-            svgStyle: {width: '100%', height: '100%'}
-            }),
-    bar05 = new ProgressBar.Line('#trackProgressBarDelayed', {
-            strokeWidth: 10,
-            easing: 'easeInOut',
-            duration: 1400,
-            color: '#ee0a5f',
-            trailColor: '#dfe2e5',
-            trailWidth: 10,
-            svgStyle: {width: '100%', height: '100%'}
-            })
-;
-bar.animate(0);
-bar02.animate(0.40);
-bar03.animate(1.00);
-bar04.animate(0.40);
-bar05.animate(1);
+	/*Mission Overview Track progressbar*/
+	var bar = new ProgressBar.Line('#trackProgressBar', {
+	            strokeWidth: 10,
+	            easing: 'easeInOut',
+	            duration: 1400,
+	            color: '#448AFF',
+	            trailColor: '#dfe2e5',
+	            trailWidth: 10,
+	            svgStyle: {width: '100%', height: '100%'}
+	            }),
+	    bar02 = new ProgressBar.Line('#trackProgressBarOngoing', {
+	            strokeWidth: 10,
+	            easing: 'easeInOut',
+	            duration: 1400,
+	            color: '#448AFF',
+	            trailColor: '#dfe2e5',
+	            trailWidth: 10,
+	            svgStyle: {width: '100%', height: '100%'}
+	            }),
+	    bar03 = new ProgressBar.Line('#trackProgressBarValidated', {
+	            strokeWidth: 10,
+	            easing: 'easeInOut',
+	            duration: 1400,
+	            color: '#448AFF',
+	            trailColor: '#dfe2e5',
+	            trailWidth: 10,
+	            svgStyle: {width: '100%', height: '100%'}
+	            }),
+	    bar04 = new ProgressBar.Line('#trackProgressBarPasued', {
+	            strokeWidth: 10,
+	            easing: 'easeInOut',
+	            duration: 1400,
+	            color: '#353F53',
+	            trailColor: '#dfe2e5',
+	            trailWidth: 10,
+	            svgStyle: {width: '100%', height: '100%'}
+	            }),
+	    bar05 = new ProgressBar.Line('#trackProgressBarDelayed', {
+	            strokeWidth: 10,
+	            easing: 'easeInOut',
+	            duration: 1400,
+	            color: '#ee0a5f',
+	            trailColor: '#dfe2e5',
+	            trailWidth: 10,
+	            svgStyle: {width: '100%', height: '100%'}
+	            })
+	;
+	bar.animate(0);
+	bar02.animate(0.40);
+	bar03.animate(1.00);
+	bar04.animate(0.40);
+	bar05.animate(1);
 
-/*Number from 0.0 to 1.0*/
+	/*Number from 0.0 to 1.0*/
 </script>
 <script>
-// Card-box click to open Contract-overview single page
-$(document).ready(function(){
-    $('div').delegate('.card-box', 'click', function(e){
-    if($(e.target).closest('.checkbox, a, button, .card-user').length === 0) {
-        // code placed inside this condition is not executed on clicking the element #test
-        e.stopPropagation();
-        // console.log('Clicked on card-box');
-        window.open('contract-overview.html','_blank');
-    }
-})
+	// Card-box click to open Contract-overview single page
+	$(document).ready(function(){
+	    $('div').delegate('.card-box', 'click', function(e){
+	    if($(e.target).closest('.checkbox, a, button, .card-user').length === 0) {
+	        // code placed inside this condition is not executed on clicking the element #test
+	        e.stopPropagation();
+	        // console.log('Clicked on card-box');
+	        window.open('contract-overview.html','_blank');
+	    }
+	})
 
-/* Edit bulk duplicate modal Title*/
-  $('#editCreateMissionTitle').click(function(e) {
-      e.preventDefault();
-      $('.modal-title-edit').show();
-      $('.modal-title').hide();
-  });
-  $('#saveModalTitle').click(function() {
-      $('.modal-title-edit').hide();
-      $('.modal-title').show();
-  });
+	/* Edit bulk duplicate modal Title*/
+	  $('#editCreateMissionTitle').click(function(e) {
+	      e.preventDefault();
+	      $('.modal-title-edit').show();
+	      $('.modal-title').hide();
+	  });
+	  $('#saveModalTitle').click(function() {
+	      $('.modal-title-edit').hide();
+	      $('.modal-title').show();
+	  });
 
-/*Disable chosen after a click of button*/
-$(".disable-selection").on('click', function (event) {
-    event.preventDefault();
-    $(this).parents(".form-group").find(".job-assigned .chosen-select").prop('disabled', true).trigger('chosen:updated');
-});
-$(".enable-selection").on('click', function (event) {
-    event.preventDefault();
-    $(this).parents(".form-group").find(".job-assigned .chosen-select").prop('disabled', false).trigger('chosen:updated');
-});
+	/*Disable chosen after a click of button*/
+	$(".disable-selection").on('click', function (event) {
+	    event.preventDefault();
+	    $(this).parents(".form-group").find(".job-assigned .chosen-select").prop('disabled', true).trigger('chosen:updated');
+	});
+	$(".enable-selection").on('click', function (event) {
+	    event.preventDefault();
+	    $(this).parents(".form-group").find(".job-assigned .chosen-select").prop('disabled', false).trigger('chosen:updated');
+	});
 
-/*Tapable wizard*/
+	/*Tapable wizard*/
 
-$('#wizardCardTapable').bootstrapWizard({
-  tabClass: 'nav nav-pills',
-  nextSelector: '.btn-next',
-  previousSelector: '.btn-back',
-  onNext: function(tab, navigation, index) {
-    var $valid = $('#wizardForm').valid();
-    if(!$valid) {
-      $validator.focusInvalid();
-      return false;
-    }
-  },
-  /*onInit : function(tab, navigation, index){
-        //check number of tabs and fill the entire row
-        var $total = navigation.find('li').length;
-        $width = 100/$total;
-        $display_width = $(document).width();
-        if($display_width < 600 && $total > 3){
-           $width = 50;
-        }
-        navigation.find('li').css('width',$width + '%');
-    },*/
-    onTabClick : function(tab, navigation, index){
-        // Disable the posibility to click on tabs
-        return true;
-    },
-    onTabShow: function(tab, navigation, index) {
-        var $total = navigation.find('li').length;
-        var $current = index+1;
-        var wizard = navigation.closest('.card-wizard');
-        // If it's the last tab then hide the last button and show the finish instead
-        if($current >= $total) {
-            $(wizard).find('.btn-next').hide();
-            $(wizard).find('.btn-finish').show();
-        } else if($current == 1){
-            $(wizard).find('.btn-back').hide();
-        } else {
-            $(wizard).find('.btn-back').show();
-            $(wizard).find('.btn-next').show();
-            $(wizard).find('.btn-finish').hide();
-        }
-    }
-});
+	$('#wizardCardTapable').bootstrapWizard({
+	  tabClass: 'nav nav-pills',
+	  nextSelector: '.btn-next',
+	  previousSelector: '.btn-back',
+	  onNext: function(tab, navigation, index) {
+	    var $valid = $('#wizardForm').valid();
+	    if(!$valid) {
+	      $validator.focusInvalid();
+	      return false;
+	    }
+	  },
+	  /*onInit : function(tab, navigation, index){
+	        //check number of tabs and fill the entire row
+	        var $total = navigation.find('li').length;
+	        $width = 100/$total;
+	        $display_width = $(document).width();
+	        if($display_width < 600 && $total > 3){
+	           $width = 50;
+	        }
+	        navigation.find('li').css('width',$width + '%');
+	    },*/
+	    onTabClick : function(tab, navigation, index){
+	        // Disable the posibility to click on tabs
+	        return true;
+	    },
+	    onTabShow: function(tab, navigation, index) {
+	        var $total = navigation.find('li').length;
+	        var $current = index+1;
+	        var wizard = navigation.closest('.card-wizard');
+	        // If it's the last tab then hide the last button and show the finish instead
+	        if($current >= $total) {
+	            $(wizard).find('.btn-next').hide();
+	            $(wizard).find('.btn-finish').show();
+	        } else if($current == 1){
+	            $(wizard).find('.btn-back').hide();
+	        } else {
+	            $(wizard).find('.btn-back').show();
+	            $(wizard).find('.btn-next').show();
+	            $(wizard).find('.btn-finish').hide();
+	        }
+	    }
+	});
 
-});
+	});
 </script>
 <script type="text/javascript">
 	//upload brief in create job
@@ -7204,17 +7463,17 @@ $('#wizardCardTapable').bootstrapWizard({
 	});
 </script>
 <script type="text/javascript" defer>
-// Page refresh after some time interval
-$(window).load(function(){
-/*    setTimeout(function(){
-        $('#refresh-page').modal('show');
-    }, 15000);*/
-});
+	// Page refresh after some time interval
+	$(window).load(function(){
+	/*    setTimeout(function(){
+	        $('#refresh-page').modal('show');
+	    }, 15000);*/
+	});
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		//Settings popup
-		$('#createJobSettings').click(function() {
+		$('[id*="createJobSettings"]').click(function() {
 			$('.overlay-main-container, .settings-wrap').fadeIn(function(){
 				$('.overlay-main-container, .create-job-settings').css({
 					display: 'block'

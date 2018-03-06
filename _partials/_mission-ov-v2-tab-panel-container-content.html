@@ -697,7 +697,7 @@
 										<div class="no-import-teamlist">
 											<h2>No linked teamlist yet.</h2>
 											<div class="import-button">
-												<a href="javascript:;" class="btn btn-fill btn-download create">
+												<a href="javascript:;" class="btn btn-fill btn-download create" data-toggle="modal" data-target="#importTeamlist">
 													<span class="btn-label">
 														<i class="material-icons">file_download</i>
 													</span>Import
@@ -705,7 +705,7 @@
 											</div>
 											or
 											<div class="add-new-card">
-												<a class="add-card" id="createJobSettings" href="javascript:;">
+												<a class="add-card" id="createJobSettings-01" href="javascript:;">
 													<span class="btn-label">
 														<i class="material-icons">add</i>
 													</span>Create
@@ -714,6 +714,114 @@
 										</div>
 									</div>
 								</div>
+								<div class="row teamlist-left-container">
+									<div class="col-md-12 import-teamlist-container">
+										<div class="row">
+											<div class="col-md-12 teamlist-header">
+												<div class="row">
+													<div class="col-md-5 p-0">Imported teamlists <span class="d-block"><span>2</span> teamlists</span></div>
+													<div class="col-md-7 pr-0">
+														<div class="col-md-6 p-0 add-new-card">
+															<!-- <button class="btn btn-confirm full-width btn-fill" id="createJobSettings">+ Create</button> -->
+        													<a class="add-card" id="createJobSettings-02" href="javascript:;">
+        														<span class="btn-label">
+        															<i class="material-icons">add</i>
+        														</span>Create
+        													</a>
+														</div>
+														<div class="col-md-6 pr-0"><button class="btn btn-download full-width btn-fill" data-toggle="modal" data-target="#importTeamlist">Import</button></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12 card linked-teamlist">
+												<ul>
+													<li>Webedia - Sourcing - Translator FR -IT<a href="javascript:void(0);" class="pull-right" data-container="body" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+													<li>Webedia - Sourcing - Proofreader IT <a href="javascript:void(0);" class="pull-right" data-container="body" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+													<!-- <li class="create-link">
+														<a href="javascript:;">+ Create a new link</a>
+													</li> -->
+												</ul>
+											</div>
+										</div>
+										<div class="row contributors">
+											<div class="sec-title">List of contributors</div>
+											<div class="col-md-12 contributors-in-list">
+												<ul>
+													<li>
+														<div class="card contributor">
+															<div class="user-image">
+																<img src="lbd/img/default-avatar.png" class="img-circle">
+															</div>
+															<div class="contributor-info">Michael Martin
+																<span class="designation">
+																	Translator
+																</span>
+															</div>
+														</div>
+														<!-- <div class="cta-container">
+															<div class="cta">
+																<ul>
+																	<li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="material-icons">delete</i></a></li>
+																</ul>
+															</div>
+														</div> -->
+													</li>
+													<li>
+														<div class="card contributor">
+															<div class="user-image">
+																<img src="lbd/img/default-avatar.png" class="img-circle">
+															</div>
+															<div class="contributor-info">Paul Arnaud
+																<span class="designation">
+																	Proofreader
+																</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="card contributor">
+															<div class="user-image">
+																<img src="lbd/img/default-avatar.png" class="img-circle">
+															</div>
+															<div class="contributor-info">Alice Meyer
+																<span class="designation">
+																	Proofreader
+																</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="card contributor">
+															<div class="user-image">
+																<img src="lbd/img/default-avatar.png" class="img-circle">
+															</div>
+															<div class="contributor-info">Andrea Berti
+																<span class="designation">
+																	Translator
+																</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="card contributor">
+															<div class="user-image">
+																<img src="lbd/img/default-avatar.png" class="img-circle">
+															</div>
+															<div class="contributor-info">Emilia Georgio
+																<span class="designation">
+																	Translator
+																</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
 							</div>
 							<div class="tab-pane" id="tab3">
 								<div class="row stakeholders">

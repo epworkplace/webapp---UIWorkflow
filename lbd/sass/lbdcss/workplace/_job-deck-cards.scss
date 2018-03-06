@@ -939,6 +939,47 @@
 }
 
 /*Duplicate card alert modal ends*/
+/* Import teamlist modal starts */
+.import-teamlist-modal{
+	@extend %modal;
+	.search-input{
+		input{
+			padding-left: 30px;
+		    background: #fff url(../img/search.svg) no-repeat 5px center;
+		    background-size: 20px;
+		    transition: all .6s ease;
+		}
+	}
+	[class*="-filter-container"]{
+		[class*="-filter"]{
+			background: $highlight-03;
+			padding: 15px;
+			border-radius: 4px;
+			[class*="-title"]{
+				font-size: 16px;
+				font-weight: 600;
+				color: $main;
+				margin-bottom: 15px;
+			}
+			.bootstrap-select{
+				margin-bottom: 10px;
+				.bs-searchbox{
+				    margin: 10px 6px 5px;
+				}
+				.bs-actionsbox {
+					.btn-block {
+						button{
+							&.actions-btn{
+								width: 48%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* Import teamlist modal ends */
 
 /*Card Design Ends*/
 
