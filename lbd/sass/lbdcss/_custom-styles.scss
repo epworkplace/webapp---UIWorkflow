@@ -2517,7 +2517,7 @@ html {
     left: auto;
 }
 
-.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container, .create-job-settings {
+.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container, .create-job-settings, .teamlist-creation-container {
     width: calc(100% - (31.4% + 80px));
     right: 0;
     top: 78px;
@@ -4152,6 +4152,9 @@ html {
 .tab-navigation {
     margin-top: 30px;
     padding-bottom: 60px;
+    @-moz-document url-prefix(){
+    	padding-bottom: 100px;
+    }
 
     button {
         width: 48% !important;
@@ -5461,18 +5464,79 @@ html {
 	        padding: 0;
 	        margin: 0;
 
-	        ul {
+	        > ul {
 	            margin: 0;
 	            padding: 0;
 
-	            li {
+	            > li {
+	            	@include clearfix;
 	                margin: 0;
 	                list-style-type: none;
-	                padding: 15px 20px;
+	                // padding: 15px 20px;
 	                color: $main;
 	                font-size: 14px;
 	                font-weight: 600;
 	                border-bottom: 1px solid #eaebed;
+	                &.card{
+	                	box-shadow: none;
+	                	border-radius: 0;
+	                	.card-title{
+	                		display: -webkit-flex;
+	                		display: -moz-flex;
+	                		display: -ms-flex;
+	                		display: -o-flex;
+	                		display: flex;
+	                		align-items: center;
+	                		transition: all .3s ease;
+	                		> a{
+	            				display: -webkit-flex;
+	            				display: -moz-flex;
+	            				display: -ms-flex;
+	            				display: -o-flex;
+	            				display: flex;
+	            				flex: 1;
+	            				padding: 15px 20px;
+	            				font-size: 14px;
+	            				color: $main;
+	            				font-weight: 600;
+	                			&:hover, &:active, &:focus{
+	                				color: $main;
+	                				// font-weight: 600;
+	                			}
+	                			&[aria-expanded="true"]{
+
+									i.fa-plus{
+										transition: all .3s ease;
+										&:before{
+											content: '\f068'
+										}
+									}
+	                			}
+	                		}
+	                		> span{
+	                			position: absolute;
+	                			right: 20px;
+	                			z-index: 2;
+	                			cursor: pointer;
+	                			color: $cta-icons;
+	                			&:hover{
+	                				color: $main;
+	                			}
+	                		}
+
+	                	}
+	                }
+	                &:first-child{
+	                	border-radius: 4px 4px 0 0;
+	                	.card-title a{border-radius: 4px 4px 0 0;}
+	                }
+	                &:last-child{
+	                	border-radius: 0 0 4px 4px;
+	                	.card-title a{border-radius: 0 0 4px 4px;}
+	                }
+	                &:only-child{
+	                	border-radius: 4px;
+	                }
 
 	                &.create-link {
 	                    border-bottom: 0;
@@ -5492,7 +5556,8 @@ html {
 	    }
 	    .contributors{
 	    	.contributors-in-list{
-	    		padding: 0;
+	    		padding: 15px 20px;
+	    		background: $main-panel-bg;
 	    		ul{
 	    			list-style-type: none;
 	    			padding: 0;
@@ -5524,6 +5589,9 @@ html {
 	    							font-weight: normal;
 	    						}
 	    					}
+	    				}
+	    				&:last-child{
+	    					margin: 0;
 	    				}
 	    			}
 	    		}

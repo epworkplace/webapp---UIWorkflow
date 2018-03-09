@@ -1,0 +1,842 @@
+<div class="settings-wrap-container">
+	<div class="col-md-12 settings-wrap teamlist-creation-container">
+		<span class="close">
+			<a href="javascript:;">
+				<i class="material-icons">
+				close
+				</i>
+			</a>
+		</span>
+		<div class="row">
+			<div class="col-md-10 settings-wrap-title">
+				Add contributor(s) in teamlist
+			</div>
+		</div>
+		<!-- <div class="header">
+			<strong class="primary-font">
+			Add contributor(s) in teamlist
+			</strong>
+		</div> -->
+		<div class="row">
+			<div class="col-md-12 job-settings-proofreader">
+				<div class="row">
+					<div class="col-md-12 initial-setup">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="alert alert-info default">
+                    <button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
+                    <p><strong>Heads up!</strong> This alert need your attanetion, but its not super important</p>
+                </div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 activation">
+								<div class="col-md-12 activation-container">
+									<div class="col-md-1 activation-switch">
+										<div class="switch" data-off-label="" data-on-label="">
+											<input type="checkbox"/>
+										</div>
+									</div>
+									<div class="col-md-10 activation-statement">
+										Look for candidates:
+										<span class="no">
+											NO
+										</span>
+										<span class="yes">
+											YES
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-12 progress-steps">
+									<div id="wizardCard">
+										<form action="" id="wizardForm" method="">
+											<div class="tab-links">
+												<ul class="nav">
+													<li>
+														<a data-toggle="tab" href="#tab-settings-1">
+															Audience
+														</a>
+													</li>
+													<li>
+														<a data-toggle="tab" href="#tab-settings-2">
+															Participation rules
+														</a>
+													</li>
+													<li>
+														<a data-toggle="tab" href="#tab-settings-3">
+															Production settings
+														</a>
+													</li>
+												</ul>
+												<div class="tab-content">
+													<div class="tab-pane" id="tab-settings-1">
+														<div class="row">
+															<div class="audience-container">
+																<div class="col-md-6 audience-module">
+																	<div class="clearfix">
+																		<div class="col-md-12 form-group include-roles">
+																			<div class="row">
+																				<label>
+																					Include
+																				</label>
+																				<select class="selectpicker" multiple="" name="filter">
+																					<option data-content="<span class='label senior'>Senior</span>">Senior</option>
+																					<option data-content="<span class='label junior'>Junior</span>">Junior</option>
+																					<option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="clearfix">
+																		<div class="col-md-12 check-box audience-check">
+																			<div class="row">
+																				<label class="checkbox include-check">
+																					<input data-toggle="checkbox" type="checkbox" value="">
+																					Number of participants
+																					</input>
+																				</label>
+																				<label class="checkbox include-check">
+																					<input data-toggle="checkbox" type="checkbox" value="">
+																					Test Passed
+																					</input>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="clearfix">
+																		<div class="col-md-12 include-drops">
+																			<div class="row">
+																				<select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="clients" multiple="" title="All Clients">
+																					<option data-hidden="true">
+																					</option>
+																					<option>0</option>
+																					<option>1</option>
+																					<option>2</option>
+																					<option>3</option>
+																					<option>4</option>
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="clearfix">
+																		<div class="col-md-12 include-drops">
+																			<div class="row">
+																				<select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="categories" multiple="" title="All Categories">
+																					<option data-hidden="true">
+																					</option>
+																					<option>0</option>
+																					<option>1</option>
+																					<option>2</option>
+																					<option>3</option>
+																					<option>4</option>
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="clearfix">
+																		<div class="col-md-12 include-drops">
+																			<div class="row">
+																				<select class="selectpicker" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="clients" multiple="" title="All Clients">
+																					<option data-hidden="true">
+																					</option>
+																					<option>0</option>
+																					<option>1</option>
+																					<option>2</option>
+																					<option>3</option>
+																					<option>4</option>
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="clearfix">
+																		<div class="col-md-12 check-box">
+																			<div class="row">
+																				<label class="checkbox include-check">
+																					<input data-toggle="checkbox" type="checkbox" value="">
+																					Language Group
+																					</input>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6 audience-module">
+																	<div class="clearfix">
+																		<div class="col-md-12 exclude-container">
+																			<label>
+																				Exclude
+																			</label>
+																			<div class="card exclude-card">
+																				<div class="col-md-2 exclude-card-cta">
+																					<ul>
+																						<li>
+																							<span data-target="#addExclusion" data-toggle="modal">
+																								<a data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Edit">
+																									<i class="material-icons">
+																									mode_edit
+																									</i>
+																								</a>
+																								<span>
+																								</span>
+																							</span>
+																						</li>
+																						<li>
+																							<span data-target="#deleteConfirmation" data-toggle="modal">
+																								<a data-container="body" data-placement="bottom" data-toggle="tooltip" href="javascript:void(0);" title="Remove">
+																									<i class="material-icons">
+																									close
+																									</i>
+																								</a>
+																								<span>
+																								</span>
+																							</span>
+																						</li>
+																					</ul>
+																				</div>
+																				<div class="col-md-10 exclude-card-content">
+																					Client
+																					<span>
+																						<i class="material-icons">
+																						chevron_right
+																						</i>
+																					</span>
+																					Contract
+																					<span>
+																						<i class="material-icons">
+																						chevron_right
+																						</i>
+																					</span>
+																					Mission
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="clearfix">
+																		<a class="add-exclusion" data-target="#addExclusion" data-toggle="modal" href="javascript:;">
+																			+ Add Exclusion
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<hr/>
+														<div class="row">
+															<div class="col-md-6 audience-container targeted">
+																<h4 class="title">
+																25 users will be targeted :
+																</h4>
+																<select class="selectpicker dropup" data-dropup-auto="true" data-actions-box="true" data-live-search="true" data-selected-text-format="count > 3" id="targeted" multiple="" title="To be targeted..">
+																	<option data-hidden="true"></option>
+																	<option>Ram</option>
+																	<option>Lakshman</option>
+																	<option>Bharat</option>
+																	<option>Shatrughan</option>
+																	<option>Maruti</option>
+																	<option>Sugreeve</option>
+																	<option>Ravan</option>
+																	<option>Meghnad</option>
+																	<option>Angad</option>
+																	<option>Bali</option>
+																	<option>Kunbhakaran</option>
+																	<option>Vibhishan</option>
+																	<option>Jamavan</option>
+																	<option>Jatayu</option>
+																	<option>Kumbh</option>
+																	<option>Nikumbh</option>
+																	<option>Dasharath</option>
+																</select>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12 tab-navigation">
+																<button class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left" type="button">
+																Cancel
+																</button>
+																<button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+																Next
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane" id="tab-settings-2">
+														<div class="row">
+															<div class="col-md-12 participation-rules-container">
+																<div class="row">
+																	<div class="col-md-6">
+																		<h4 class="title">
+																		Cost settings
+																		</h4>
+																		<div class="row">
+																			<div class="col-md-4">
+																				<label>
+																					Bidding Min.
+																				</label>
+																				<input class="form-control" type="text" value="2.00"/>
+																			</div>
+																			<div class="col-md-4">
+																				<label>
+																					Bidding Max.
+																				</label>
+																				<input class="form-control" type="text" value="5.00"/>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="price-place">
+																			<div class="col-md-6 recommeded">
+																				<span class="head">
+																					Recommended Max.
+																				</span>
+																				5.00 €
+																				<a href="javascript:;">
+																					apply
+																				</a>
+																			</div>
+																			<div class="col-md-6 recommeded">
+																				<span class="head">
+																					Estimated margin
+																				</span>
+																				61.33 %
+																				<span class="rise">
+																					(
+																					<i class="material-icons">
+																					arrow_upward
+																					</i>
+																					+1.33)
+																				</span>
+																				<span class="fall">
+																					(
+																					<i class="material-icons">
+																					arrow_downward
+																					</i>
+																					-1.33)
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<hr/>
+																<div class="row">
+																	<div class="col-md-6">
+																		<div class="row">
+																			<h4 class="title col-md-5">
+																			Bidding Time
+																			</h4>
+																		</div>
+																		<div class="row">
+																			<div class="col-md-12">
+																				<label>
+																					Duration
+																				</label>
+																				<div class="row">
+																					<div class="col-md-4">
+																						<input class="form-control" type="text" value="12"/>
+																					</div>
+																					<div class="col-md-5">
+																						<select class="selectpicker" name="filter">
+																							<option>hours</option>
+																							<option>days</option>
+																							<option>weeks</option>
+																						</select>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-6">
+																		<div class="row">
+																			<div class="col-md-12 activation-nobg">
+																				<div class="row">
+																					<div class="col-md-12 activation-container">
+																						<div class="col-md-2 activation-switch">
+																							<div class="switch" data-off-label="" data-on-label="">
+																								<input type="checkbox"/>
+																							</div>
+																						</div>
+																						<div class="col-md-9 activation-statement">
+																							Schedule bidding:
+																							<span class="no">
+																								NO
+																							</span>
+																							<span class="yes">
+																								YES
+																							</span>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="switch-tag">Bidding will begin when you start card if no dates are set</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="row mt-30">
+																	<div class="col-md-6">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<label>
+																					Starting date
+																				</label>
+																				<div class="row">
+																					<div class="col-md-7">
+																						<input class="form-control datepicker" placeholder="Date Here" type="text"/>
+																					</div>
+																					<div class="col-md-5 ">
+																						<input type="text" class="form-control timepicker" placeholder="Time Here"/>
+																						<!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<label>
+																					Ending date
+																				</label>
+																				<div class="row">
+																					<div class="col-md-7">
+																						<input class="form-control datepicker" placeholder="Date Here" type="text"/>
+																					</div>
+																					<div class="col-md-5 ">
+																						<input type="text" class="form-control timepicker" placeholder="Time Here"/>
+																						<!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12 tab-navigation">
+																<button class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back" type="button">
+																Back
+																</button>
+																<button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+																Next
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane" id="tab-settings-3">
+														<div class="row">
+															<div class="col-md-12 participation-settings-container">
+																<div class="row">
+																	<div class="row">
+																		<div class="col-md-12">
+																			<h4 class="title col-md-6">Production Time</h4>
+																			<div class="col-md-6 previous-job-settings pull-right">
+																				<a href="javascript:;"
+																					data-toggle="popover"
+																					data-placement="bottom"
+																					data-html="true"
+																					data-trigger="hover"
+																					data-content="Starting on: <br />
+																					<b>Jun 7, 2017 - 01:00 AM </b><br /><br />
+																					Ending on: <br />
+																					<b>Oct 31, 2017 - 01:00 PM</b>">
+																					See previous job settings
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<label>
+																					Duration
+																				</label>
+																				<div class="row">
+																					<div class="col-md-4">
+																						<input class="form-control" type="text" value="12"/>
+																					</div>
+																					<div class="col-md-5">
+																						<select class="selectpicker" name="filter">
+																							<option>hours</option>
+																							<option>days</option>
+																							<option>weeks</option>
+																						</select>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-6">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<label>
+																					Starting date
+																				</label>
+																				<div class="row">
+																					<div class="col-md-7">
+																						<input class="form-control datepicker" placeholder="Date Here" type="text"/>
+																					</div>
+																					<div class="col-md-5 ">
+																						<input type="text" class="form-control timepicker" placeholder="Time Here"/>
+																						<!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<label>
+																					Ending date
+																				</label>
+																				<div class="row">
+																					<div class="col-md-7">
+																						<input class="form-control datepicker" placeholder="Date Here" type="text"/>
+																					</div>
+																					<div class="col-md-5 ">
+																						<input type="text" class="form-control timepicker" placeholder="Time Here"/>
+																						<!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<h4 class="title col-md-12">
+																	More options
+																	</h4>
+																	<div class="col-md-6">
+																		<div class="row">
+																			<div class="col-md-12 activation-nobg">
+																				<div class="row">
+																					<div class="col-md-12 activation-container">
+																						<div class="col-md-2 activation-switch">
+																							<div class="switch" data-off-label="" data-on-label="">
+																								<input type="checkbox"/>
+																							</div>
+																						</div>
+																						<div class="col-md-9 activation-statement">
+																							Add additional time (if refused):
+																							<span class="no">
+																								NO
+																							</span>
+																							<span class="yes">
+																								YES
+																							</span>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-20">
+																			<div class="col-md-12">
+																				<label>
+																					Duration
+																				</label>
+																				<div class="row">
+																					<div class="col-md-4">
+																						<input class="form-control" type="text" value="12"/>
+																					</div>
+																					<div class="col-md-5">
+																						<select class="selectpicker" name="filter">
+																							<option>hours</option>
+																							<option>days</option>
+																							<option>weeks</option>
+																						</select>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="row">
+																			<div class="col-md-12 activation-nobg">
+																				<div class="row">
+																					<div class="col-md-12 activation-container">
+																						<div class="col-md-2 activation-switch">
+																							<div class="switch" data-off-label="" data-on-label="">
+																								<input type="checkbox"/>
+																							</div>
+																						</div>
+																						<div class="col-md-9 activation-statement">
+																							Add plagiarism bot after this job:
+																							<span class="no">
+																								NO
+																							</span>
+																							<span class="yes">
+																								YES
+																							</span>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-12 timeline-chart">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12 tab-navigation">
+																<button class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back" type="button">
+																Back
+																</button>
+																<button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+																Next
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="no-data-container">
+	<div class="no-data-placeholder">
+		<h2>No members yet.</h2>
+		<p>Go to the candidate list to choose a candidate or click below to manually add someone.</p>
+		<a href="javascript:;" class="btn btn-fill btn-download create" id="createTeamlistContainerShow">
+			<span class="btn-label">
+				<i class="material-icons">add</i>
+			</span>
+			Add
+		</a>
+	</div>
+</div>
+<div class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-12 tab-content">
+				<div class="row">
+					<div class="tab-content-container pt-20">
+						<div class="col-md-12 contract-content-container">
+							<div class="row">
+								<div class="col-md-12">
+									<h4 class="main-title">Translator - FR - ENG</h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 card-section-list-headers">
+									<div class="row">
+										<div class="col-md-5 header-title">
+											<h4 class="title"><i class="material-icons">check</i>Main List (3 / 4)</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="card-section-list" data-role="contract-section-list">
+										<ul>
+											<li>
+												<div class="col-md-12 card card-contract">
+													<div class="col-md-1 list-image-container">
+														<div class="list-image">
+															<img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+														</div>
+													</div>
+													<div class="col-md-6 list-head-container">
+														<div class="header">
+															<strong class="primary-font">Michael Martin</strong>
+															<div class="status-label">
+																<span class="label senior">Senior</span>
+															</div>
+														</div>
+													</div>
+													<div class="task-price">
+														<div class="col-md-3 numbers bidding">
+															<div class="bidding-data">
+																12.10 &#8364;<span>58.33%</span>
+															</div>
+														</div>
+														<div class="col-md-1 numbers more-options">
+															<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#">Promote to main list</a></li>
+																<li><a href="#">Show profile</a></li>
+																<li class="delete"><a href="#">Reject</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col-md-12 card card-contract">
+													<div class="col-md-1 list-image-container">
+														<div class="list-image">
+															<img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+														</div>
+													</div>
+													<div class="col-md-6 list-head-container">
+														<div class="header">
+															<strong class="primary-font">Michael Martin</strong>
+															<div class="status-label">
+																<span class="label senior">Senior</span>
+															</div>
+														</div>
+													</div>
+													<div class="task-price">
+														<div class="col-md-3 numbers bidding">
+															<div class="bidding-data">
+																12.10 &#8364;<span>58.33%</span>
+															</div>
+														</div>
+														<div class="col-md-1 numbers more-options">
+															<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#">Promote to main list</a></li>
+																<li><a href="#">Show profile</a></li>
+																<li class="delete"><a href="#">Reject</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col-md-12 card card-contract">
+													<div class="col-md-1 list-image-container">
+														<div class="list-image">
+															<img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+														</div>
+													</div>
+													<div class="col-md-6 list-head-container">
+														<div class="header">
+															<strong class="primary-font">Michael Martin</strong>
+															<div class="status-label">
+																<span class="label senior">Senior</span>
+															</div>
+														</div>
+													</div>
+													<div class="task-price">
+														<div class="col-md-3 numbers bidding">
+															<div class="bidding-data">
+																12.10 &#8364;<span>58.33%</span>
+															</div>
+														</div>
+														<div class="col-md-1 numbers more-options">
+															<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#">Promote to main list</a></li>
+																<li><a href="#">Show profile</a></li>
+																<li class="delete"><a href="#">Reject</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col-md-12 empty-card-team-list">
+													<p>4<span>/</span>4</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 card-section-list-headers">
+									<div class="row">
+										<div class="col-md-5 header-title">
+											<h4 class="title">Backup list (2)</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="card-section-list" data-role="contract-section-list">
+										<ul>
+											<li>
+												<div class="col-md-12 card card-contract">
+													<div class="col-md-1 list-image-container">
+														<div class="list-image">
+															<img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+														</div>
+													</div>
+													<div class="col-md-6 list-head-container">
+														<div class="header">
+															<strong class="primary-font">Michael Martin</strong>
+															<div class="status-label">
+																<span class="label senior">Senior</span>
+															</div>
+														</div>
+													</div>
+													<div class="task-price">
+														<div class="col-md-3 numbers bidding">
+															<div class="bidding-data">
+																12.10 &#8364;<span>58.33%</span>
+															</div>
+														</div>
+														<div class="col-md-1 numbers more-options">
+															<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#">Promote to main list</a></li>
+																<li><a href="#">Show profile</a></li>
+																<li class="delete"><a href="#">Reject</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="col-md-12 card card-contract">
+													<div class="col-md-1 list-image-container">
+														<div class="list-image">
+															<img src="lbd/img/webedia.jpg" alt="" class="img-circle" />
+														</div>
+													</div>
+													<div class="col-md-6 list-head-container">
+														<div class="header">
+															<strong class="primary-font">Michael Martin</strong>
+															<div class="status-label">
+																<span class="label senior">Senior</span>
+															</div>
+														</div>
+													</div>
+													<div class="task-price">
+														<div class="col-md-3 numbers bidding">
+															<div class="bidding-data">
+																12.10 &#8364;<span>58.33%</span>
+															</div>
+														</div>
+														<div class="col-md-1 numbers more-options">
+															<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+															<ul class="dropdown-menu dropdown-menu-right">
+																<li><a href="#">Promote to main list</a></li>
+																<li><a href="#">Show profile</a></li>
+																<li class="delete"><a href="#">Reject</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

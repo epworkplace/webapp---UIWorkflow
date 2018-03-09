@@ -562,6 +562,32 @@
 				});
 			})
 		});
+		$('.settings-wrap .close a, .settings-wrap .tab-navigation button.btn-cancel-settings').click(function() {
+            $('.overlay-main-container, .settings-wrap').fadeOut(function(){
+                $('.settings-wrap').css({
+                    display: 'none'
+                });
+                $('.wp-app.layout-5').css({
+                    'overflow-y': 'hidden'
+                });
+            })
+        });
+
+		/*Job filter select alljobs starts*/
+			// $(".job-filter-checklist .check-all").click(function () {
+			//     $("input:checkbox").prop('checked', $(this).prop("checked"));
+			// });
+		/*Job filter select alljobs starts*/
+		/*Teamlist single selection highlight*/
+			$(document).on('click', '.teamlist-container .card-contract', function(e){
+				// e.preventDefault();
+				// e.stipImmediatePropogation();
+				$(this).parents('.list-item').siblings().removeClass('selected');
+				$(this).parents('.list-item').addClass('selected');
+			});
+		/*Teamlist single selection highlight*/
+
+
 	});
 </script>
 
