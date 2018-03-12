@@ -3900,6 +3900,13 @@ html {
 .teamlist-creation-container{
 	.add-teamlist-filters{
 		.include-exclude-filters{
+			.add-exclusion-filter{
+				text-decoration: underline;
+				color: $main;
+				&:hover{
+					text-decoration: none;
+				}
+			}
 			ul.nav-tabs{
 				display: -webkit-flex;
 				display: -moz-flex;
@@ -3942,10 +3949,43 @@ html {
 				background: $highlight-07;
 				border-radius: 0 0 4px 4px;
 					[class*="-filter-container"]{
+						[class*="-title"]{
+							font-size: 12px;
+							font-weight: 600;
+							text-transform: uppercase;
+							// color: $main;
+							margin-bottom: 10px;
+						}
+						ul.job-filter-checklist{
+							list-style-type: none;
+							padding: 0;
+							margin: 0;
+							border-radius: 0;
+							border: none;
+							li{
+								@include clearfix;
+								margin-bottom: 5px;
+								label{
+									margin: 0;
+									// padding-left: 30px;
+									cursor: pointer;
+									&.checked{
+										color: $main;
+									}
+								}
+							}
+						}
 						[class*='-filter']{
+
+							label{
+								margin: 0;
+							}
 
 							.bootstrap-select{
 								margin-bottom: 10px;
+								&:last-child, &:only-child{
+									margin-bottom: 0;
+								}
 								.bs-searchbox{
 								    margin: 10px 6px 5px;
 								}
@@ -3981,36 +4021,117 @@ html {
 									}
 								}
 							}
-							[class*="-title"]{
+
+						}
+						.from-filter{
+							border-bottom: 2px solid $divider-03;
+							padding-bottom: 15px;
+						}
+					}
+			}
+		}
+	}
+	.tab-navigation{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		.filters-status{
+			color: $helper;
+			span{
+				color: $main;
+				font-weight: 600;
+			}
+		}
+	}
+	.teamlist-container{
+		height: 100%;
+		padding: 2px;
+		width: calc(100% - 5px);
+		li{
+			@include clearfix;
+			&.list-item{
+				.card{
+					height: auto;
+					display: -webkit-flex;
+					display: -moz-flex;
+					display: -ms-flex;
+					display: -o-flex;
+					display: flex;
+					align-items: center;
+					label{
+						margin: 0;
+						cursor: pointer;
+						display: -webkit-flex;
+						display: -moz-flex;
+						display: -ms-flex;
+						display: -o-flex;
+						display: flex;
+						flex: 1;
+						align-items: center;
+						padding: 15px 15px 15px 40px;
+						font-weight: normal;
+						span.icons{
+							top: unset;
+							left: 10px;
+						}
+						.list-image-container{
+							padding: 0;
+							margin: 0 10px 0 0;
+							width: 52px;
+						}
+						.list-details{
+							width: 75%;
+							font-size: 14px;
+							color: $main;
+							font-weight: 600;
+							span{
 								font-size: 12px;
-								font-weight: 600;
-								text-transform: uppercase;
-								// color: $main;
-								margin-bottom: 10px;
-							}
-							[class*='-checklist']{
-								list-style-type: none;
-								padding: 0;
-								margin: 0;
-								padding-bottom: 15px;
-								margin-bottom: 15px;
-								border-bottom: 1px solid $border-color;
-								border-radius: 0;
-								li{
-									@include clearfix;
-									margin-bottom: 5px;
-									label{
-										margin: 0;
-										padding-left: 30px;
-										cursor: pointer;
-										&.checked{
-											color: $main;
-										}
-									}
+								color: $helper;
+								font-weight: normal;
+								&.label{
+									font-size: 10px;
+									color: #fff;
 								}
+							}
+							.user-name{
+								font-weight: 600;
+							}
+						}
+						.list-created{
+							width: 30%;
+							text-align: right;
+						}
+						&.list-info{
+							display: -webkit-flex;
+							display: -moz-flex;
+							display: -ms-flex;
+							display: -o-flex;
+							display: flex;
+							flex: 1;
+							align-items: center;
+						}
+						.jobs-done{
+							color: $helper;
+							font-size: 12px;
+							text-align: center;
+							width: 15%;
+							span{
+								display: block;
+								color: $main;
+								font-size: 16px;
+								font-weight: 600;
 							}
 						}
 					}
+				}
+				&.selected{
+					.card{
+						box-shadow: inset 0 0 0 2px $selected !important;
+					}
+				}
 			}
 		}
 	}
@@ -4271,6 +4392,7 @@ html {
 .tab-navigation {
     margin-top: 30px;
     padding-bottom: 60px;
+
     @-moz-document url-prefix(){
     	padding-bottom: 100px;
     }
