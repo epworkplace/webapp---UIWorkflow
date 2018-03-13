@@ -939,6 +939,178 @@
 }
 
 /*Duplicate card alert modal ends*/
+/* Import teamlist modal starts */
+.import-teamlist-modal{
+	@extend %modal;
+	.search-input{
+		input{
+			padding-left: 30px;
+		    background: #fff url(../img/search.svg) no-repeat 5px center;
+		    background-size: 20px;
+		    transition: all .6s ease;
+		}
+	}
+	[class*="-filter-container"]{
+		[class*='-filter']{
+			background: $highlight-03;
+			padding: 15px;
+			border-radius: 4px;
+			.bootstrap-select{
+				margin-bottom: 10px;
+				.bs-searchbox{
+				    margin: 10px 6px 5px;
+				}
+				.bs-actionsbox {
+					.btn-block {
+						button{
+							&.actions-btn{
+								width: 48%;
+							}
+						}
+					}
+				}
+			}
+			[class*="-title"]{
+				font-size: 16px;
+				font-weight: 600;
+				color: $main;
+				margin-bottom: 15px;
+			}
+			[class*='-checklist']{
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+				padding-bottom: 15px;
+				margin-bottom: 15px;
+				border-bottom: 1px solid $border-color;
+				border-radius: 0;
+				li{
+					@include clearfix;
+					margin-bottom: 5px;
+					label{
+						margin: 0;
+						padding-left: 30px;
+						cursor: pointer;
+						&.checked{
+							color: $main;
+						}
+					}
+				}
+			}
+			.filter-footer{
+				text-align: center;
+				a{
+					text-decoration: underline;
+					color: $body;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	.teamlist-content{
+		.main-panel-header{
+			border-bottom: 2px solid $main-panel-bg;
+			padding-bottom: 15px;
+			.lists-status{
+				// font-weight: 600;
+				padding: 0;
+				span{
+					// font-weight: normal;
+				}
+			}
+		}
+		.form-group{
+			&:only-child{
+				margin: 0;
+				.no-data-container{
+					display: -webkit-box;
+				    display: -moz-box;
+				    display: -ms-flexbox;
+				    display: -webkit-flex;
+				    display: flex;
+				    overflow: hidden;
+				    width: 100%;
+				    height: 100vh;
+				    justify-content: center;
+				    align-items: center;
+				}
+			}
+		}
+		.card-section-list{
+			height: calc(100vh - 180px);
+			overflow: hidden;
+			overflow-y: auto;
+			padding-bottom: 0;
+			.teamlist-container{
+				height: 100%;
+				padding: 2px;
+				width: calc(100% - 5px);
+				li{
+					@include clearfix;
+					&.list-item{
+						.card{
+							height: auto;
+							display: -webkit-flex;
+							display: -moz-flex;
+							display: -ms-flex;
+							display: -o-flex;
+							display: flex;
+							align-items: center;
+							label{
+								margin: 0;
+								cursor: pointer;
+								display: -webkit-flex;
+								display: -moz-flex;
+								display: -ms-flex;
+								display: -o-flex;
+								display: flex;
+								flex: 1;
+								align-items: center;
+								padding: 15px 15px 15px 50px;
+								span.icons{
+									top: unset;
+									left: 10px;
+								}
+								.list-details{
+									width: 70%;
+									font-size: 14px;
+									color: $main;
+									font-weight: 600;
+									span{
+										font-size: 12px;
+										color: $helper;
+										font-weight: normal;
+									}
+								}
+								.list-created{
+									width: 30%;
+									text-align: right;
+								}
+								&.list-info{
+									display: -webkit-flex;
+									display: -moz-flex;
+									display: -ms-flex;
+									display: -o-flex;
+									display: flex;
+									flex: 1;
+									align-items: center;
+								}
+							}
+						}
+						&.selected{
+							.card{
+								box-shadow: inset 0 0 0 2px $selected !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* Import teamlist modal ends */
 
 /*Card Design Ends*/
 
