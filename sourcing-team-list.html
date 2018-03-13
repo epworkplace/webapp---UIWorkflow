@@ -233,7 +233,7 @@
 			    });
 
 	      /*Settings wrap toggling*/
-	        $('#createTeamlistContainerShow').click(function(e) {
+	        $(document).on('click', '.add-user-to-list, #createTeamlistContainerShow', function(e) {
 	            e.preventDefault();
 	            $('.starting-files-container').fadeOut(function(){
 	                $('.starting-files-container').css({
@@ -262,6 +262,14 @@
 	        });
 
 	      /*Settings wrap toggling ends*/
+	      /*Teamlist single selection highlight*/
+					$(document).on('click', '.teamlist-container .card-contract', function(e){
+						// e.preventDefault();
+						// e.stipImmediatePropogation();
+						// $(this).parents('.list-item').siblings().removeClass('selected');
+						$(this).parents('.list-item').toggleClass('selected');
+					});
+				/*Teamlist single selection highlight*/
 
 
 		  });
