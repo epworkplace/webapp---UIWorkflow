@@ -305,9 +305,6 @@
 																						<ul>
 																							<li>Articles blog Webedia - FRENCH</li>
 																							<li>C001-ZVA-2018-001-A-WEBEDIA</li>
-																							<li class="create-link">
-																								<a href="javascript:;">+ Create a new link</a>
-																							</li>
 																						</ul>
 																					</div>
 																				</div>
@@ -341,9 +338,11 @@
                               								<div class="row">
                               									<div class="col-md-12">
                               										<div class="alert alert-info default">
+                              											<button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
                               		                    <p><strong>Reminder : </strong> You can only select <strong>4 people maximum </strong>in main list.</p>
                               		                </div>
                               		                <div class="alert alert-info warning">
+                              		                	<button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
                               		                    <p><i class="material-icons">info_outline</i> <strong>Your main list is full : </strong> You can only select <strong>contributors as backup</strong> in main list.</p>
                               		                </div>
                               									</div>
@@ -383,9 +382,9 @@
                               																					        <li role="presentation" class="nav-item active">
                               																					            <a class="nav-link" id="info-tab" href="#includeFilter" data-toggle="tab">Include (3)</a>
                               																					        </li>
-                              																					        <li role="presentation" class="nav-item">
+                              																					        <!-- <li role="presentation" class="nav-item">
                               																					            <a class="nav-link" id="account-tab" href="#excludeFilter" data-toggle="tab">Exclude (3)</a>
-                              																					        </li>
+                              																					        </li> -->
                               																					    </ul>
                               																					    <div class="tab-content">
                               																					        <div id="includeFilter" class="tab-pane active" role="tabpanel" aria-labelledby="info-tab">
@@ -1491,7 +1490,6 @@
 	                                <div class="form-group">
 	                                    <div class="row form-group clients-filter" style="">
 					                        <div class="col-md-12">
-			                                <label>Client</label>
 			                                <select class="selectpicker" data-live-search="true" title="Select a client">
 			                                    <option data-hidden="true">
 			                                    </option>
@@ -1503,7 +1501,6 @@
 			                                </select>
 			                                <div class="col-md-12 filters-subsec">
 			                                	<div class="col-md-12 form-group">
-					                                <label>Contract</label>
 					                                <select class="selectpicker" data-live-search="true" title="Select a contract">
 					                                    <option data-hidden="true"></option>
 					                                    <option>0</option>
@@ -1514,7 +1511,6 @@
 					                                </select>
 							                    </div>
 							                    <div class="col-md-12 form-group">
-					                                <label>Mission</label>
 					                                <select class="selectpicker" data-live-search="true" title="Select a mission">
 					                                    <option data-hidden="true">
 					                                    </option>

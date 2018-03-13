@@ -714,7 +714,7 @@ html {
 									padding: 20px 16px 0 16px; */
 									.navbar-default {
 										background: none;
-										padding: 0;
+										padding: 0 0 200px 0;
 										border: none;
 
 										.navbar-header {}
@@ -3869,8 +3869,8 @@ html {
 					flex: 1;
 					a{
 						display: block;
-						padding: 8px 10px;
-						text-align: center;
+						padding: 8px 15px;
+						// text-align: center;
 						margin: 0;
 					}
 					&.active{
@@ -3887,6 +3887,10 @@ html {
 					}
 					&:last-child{
 						border-radius: 0 4px 0px 0;
+					}
+					&:only-child{
+						border-radius: 4px 4px 0 0;
+
 					}
 				}
 			}
