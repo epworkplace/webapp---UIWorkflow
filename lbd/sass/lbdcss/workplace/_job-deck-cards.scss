@@ -1010,6 +1010,7 @@
 		}
 	}
 	.teamlist-content{
+		// padding: 0;
 		.main-panel-header{
 			border-bottom: 2px solid $main-panel-bg;
 			padding-bottom: 15px;
@@ -1024,7 +1025,11 @@
 		.form-group{
 			&:only-child{
 				margin: 0;
+				.contract-content-container{
+					padding: 0;
+				}
 				.no-data-container{
+					padding: 0;
 					display: -webkit-box;
 				    display: -moz-box;
 				    display: -ms-flexbox;
@@ -1038,8 +1043,9 @@
 				}
 			}
 		}
+
 		.card-section-list{
-			height: calc(100vh - 180px);
+			height: 495px;
 			overflow: hidden;
 			overflow-y: auto;
 			padding-bottom: 0;
