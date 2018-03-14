@@ -4146,109 +4146,174 @@ html {
         }
     }
 
-    .teamlist-container {
-        height: 100%;
-        padding: 2px;
-        width: calc(100% - 5px);
+	.teamlist-content{
+		padding: 0;
+		.form-group{
+			&:last-child, &:only-child{
+				margin: 0;
+			}
+		}
+		.contract-content-container{
+			padding: 0;
+			.lists-status{
+				padding-left: 0;
+			}
+			.card-section-list{
+				padding-bottom: 0;
+				.teamlist-container{
+					padding: 2px;
+					width: 100%;
+					height: calc(100vh - 130px);
+					overflow: hidden;
+					overflow-y: auto;
+					li{
+						@include clearfix;
+						width: calc(100% - 5px);
+						&.list-item{
+							.card{
+								height: auto;
+								display: -webkit-flex;
+								display: -moz-flex;
+								display: -ms-flex;
+								display: -o-flex;
+								display: flex;
+								align-items: center;
+								label{
+									margin: 0;
+									cursor: pointer;
+									display: -webkit-flex;
+									display: -moz-flex;
+									display: -ms-flex;
+									display: -o-flex;
+									display: flex;
+									flex: 1;
+									align-items: center;
+									padding: 15px 15px 15px 40px;
+									font-weight: normal;
+									span.icons{
+										top: unset;
+										left: 10px;
+									}
+									.list-image-container{
+										padding: 0;
+										margin: 0 10px 0 0;
+										width: 52px;
+									}
+									.list-details{
+										width: 75%;
+										font-size: 14px;
+										color: $main;
+										font-weight: 600;
+										span{
+											font-size: 12px;
+											color: $helper;
+											font-weight: normal;
+											&.label{
+												font-size: 10px;
+												color: #fff;
+											}
+										}
+										.user-name{
+											font-weight: 600;
+										}
+									}
+									.list-created{
+										width: 30%;
+										text-align: right;
+									}
+									&.list-info{
+										display: -webkit-flex;
+										display: -moz-flex;
+										display: -ms-flex;
+										display: -o-flex;
+										display: flex;
+										flex: 1;
+										align-items: center;
+									}
+									.jobs-done{
+										color: $helper;
+										font-size: 12px;
+										text-align: center;
+										width: 15%;
+										span{
+											display: block;
+											color: $main;
+											font-size: 16px;
+											font-weight: 600;
+										}
+									}
+								}
+							}
+							&.selected{
+								.card{
+									box-shadow: inset 0 0 0 2px $selected !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
-        li {
-            @include clearfix;
-
-            &.list-item {
-                .card {
-                    height: auto;
-                    display: -webkit-flex;
-                    display: -moz-flex;
-                    display: -ms-flex;
-                    display: -o-flex;
-                    display: flex;
-                    align-items: center;
-
-                    label {
-                        margin: 0;
-                        cursor: pointer;
-                        display: -webkit-flex;
-                        display: -moz-flex;
-                        display: -ms-flex;
-                        display: -o-flex;
-                        display: flex;
-                        flex: 1;
-                        align-items: center;
-                        padding: 15px 15px 15px 40px;
-                        font-weight: normal;
-
-                        span.icons {
-                            top: unset;
-                            left: 10px;
-                        }
-
-                        .list-image-container {
-                            padding: 0;
-                            margin: 0 10px 0 0;
-                            width: 52px;
-                        }
-
-                        .list-details {
-                            width: 75%;
-                            font-size: 14px;
-                            color: $main;
-                            font-weight: 600;
-
-                            span {
-                                font-size: 12px;
-                                color: $helper;
-                                font-weight: normal;
-
-                                &.label {
-                                    font-size: 10px;
-                                    color: #fff;
-                                }
-                            }
-
-                            .user-name {
-                                font-weight: 600;
-                            }
-                        }
-
-                        .list-created {
-                            width: 30%;
-                            text-align: right;
-                        }
-
-                        &.list-info {
-                            display: -webkit-flex;
-                            display: -moz-flex;
-                            display: -ms-flex;
-                            display: -o-flex;
-                            display: flex;
-                            flex: 1;
-                            align-items: center;
-                        }
-
-                        .jobs-done {
-                            color: $helper;
-                            font-size: 12px;
-                            text-align: center;
-                            width: 15%;
-
-                            span {
-                                display: block;
-                                color: $main;
-                                font-size: 16px;
-                                font-weight: 600;
-                            }
-                        }
-                    }
-                }
-
-                &.selected {
-                    .card {
-                        box-shadow: inset 0 0 0 2px $selected !important;
-                    }
-                }
-            }
-        }
-    }
+	.bidding-rules-container{
+		.list-image-container{
+			@extend %list-image-container ;
+		}
+		.user-bidding-info{
+			margin-bottom: 15px;
+			// padding: 15px;
+			background: $highlight-07;
+			border-radius: 4px;
+			label {
+				text-transform: uppercase;
+				font-size: 12px;
+			}
+			> .row{
+				&:first-child{
+					padding-top: 15px;
+				}
+				&:last-child{
+					padding: 15px 0;
+					background: $highlight-04;
+					color: $main;
+					font-weight: 600;
+				}
+			}
+			.user-info{
+				.list-image-container{
+					padding: 0;
+					margin: 0 15px 0 0;
+					width: 40px;
+					.list-image{
+						margin: 0;
+						img{
+							left: unset;
+							top: unset;
+						}
+					}
+				}
+				.list-details{
+					float: left;
+					.user-name{
+						font-size: 16px;
+						font-weight: 600;
+						color: $main;
+					}
+				}
+				.user-profile{
+					margin-top: 10px;
+					a{
+						text-decoration: underline;
+						color: $body;
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .job-candidates-list {
@@ -5879,7 +5944,7 @@ html {
                                 display: -o-flex;
                                 display: flex;
                                 flex: 1;
-                                padding: 15px 20px;
+                                padding: 15px 65px 15px 15px;
                                 font-size: 14px;
                                 color: $main;
                                 font-weight: 600;
@@ -5912,8 +5977,9 @@ html {
                             }
 
                             > span {
+                                width: 55px;
                                 position: absolute;
-                                right: 20px;
+                                right: 10px;
                                 z-index: 2;
                                 cursor: pointer;
                                 color: $cta-icons;
@@ -5923,9 +5989,12 @@ html {
                                 display: -o-flex;
                                 display: flex;
                                 align-items: center;
+                                justify-content: space-between;
 
-                                &:hover {
-                                    color: $main;
+                                i{
+                                	&:hover {
+	                                    color: $main;
+	                                }
                                 }
                             }
                         }
@@ -11175,6 +11244,15 @@ vertical-align: middle;
             height: 30px;
             border-radius: 50%;
         }
+        li{
+			a{
+				span{
+					&.text{
+						white-space: normal !important;
+					}
+				}
+			}
+		}
     }
 
     &.flags {
