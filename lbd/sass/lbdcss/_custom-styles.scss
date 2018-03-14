@@ -5805,7 +5805,7 @@ html {
 								display: -o-flex;
 								display: flex;
 								flex: 1;
-								padding: 15px 20px;
+								padding: 15px 55px 15px 15px;
 								font-size: 14px;
 								color: $main;
 								font-weight: 600;
@@ -5842,8 +5842,12 @@ html {
 								display: -o-flex;
 								display: flex;
 								align-items: center;
-								&:hover{
-									color: $main;
+								width: 55px;
+							    justify-content: space-between;
+								i{
+									&:hover{
+										color: $main;
+									}
 								}
 							}
 
