@@ -2502,7 +2502,7 @@ html {
 
 /*Settings-wrap Content Starts*/
 .modal {
-    .reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container {
+    .reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container {
         padding-bottom: 0px !important;
     }
 }
@@ -2517,7 +2517,7 @@ html {
     left: auto;
 }
 
-.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container, .create-job-settings, .teamlist-creation-container {
+.reassignment-container, .mission-overview-reassign, .survey, .quizz, .announce-container-source, .test-article-container, .starting-files-container, .starting-files-import-search-container, .job-setting-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container, .job-candidate-list-container, .contacts-list-container, .quotes-contracts-list-container, .create-quote-mission-container, .create-job-settings, .teamlist-creation-container {
     width: calc(100% - (31.4% + 80px));
     right: 0;
     top: 78px;
@@ -3560,7 +3560,7 @@ html {
 /* Plagiarism bot Ends*/
 
 /* Job Settings Container Starts*/
-.job-setting-writer-container, .job-setting-proofreader-container {
+.job-setting-container, .job-setting-writer-container, .job-setting-proofreader-container {
     .header {
         margin-bottom: 20px;
 
@@ -3657,6 +3657,76 @@ html {
 .previous-job-settings {
     text-align: right;
     margin-bottom: 20px;
+}
+
+.assigned-user-container {
+    .assigned-user-module {
+        margin-bottom: 15px;
+    }
+
+    a.add-assignee {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border: 1px solid #EAEBED;
+        border-radius: 4px;
+        color: #448aff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .added-assignee {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        align-items: center;
+        height: 50px;
+        border: 1px solid #EAEBED;
+        position: relative;
+
+        span.edit {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .user-image {
+            width: 30px;
+            margin-right: 10px;
+
+            img {
+                max-width: 100%;
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+            }
+
+            .card-user-empty {
+                height: 30px;
+
+                &.user {
+                    font-size: 16px;
+                    height: 30px;
+                    border: 2px solid $helper;
+                    background: $helper;
+                    color: $sub-heading !important;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
 }
 
 .assigned-user {
@@ -3897,244 +3967,288 @@ html {
     }
 }
 
-.teamlist-creation-container{
-	.add-teamlist-filters{
-		.include-exclude-filters{
-			.add-exclusion-filter{
-				text-decoration: underline;
-				color: $main;
-				&:hover{
-					text-decoration: none;
-				}
-			}
-			ul.nav-tabs{
-				display: -webkit-flex;
-				display: -moz-flex;
-				display: -ms-flex;
-				display: -o-flex;
-				display: flex;
-				// border-radius: 4px 4px 0 0;
-				border: none;
-				&:before{
-					content: none;
-				}
-				li.nav-item{
-					background: $highlight-04;
-					flex: 1;
-					a{
-						display: block;
-						padding: 8px 10px;
-						text-align: center;
-						margin: 0;
-					}
-					&.active{
-						background: $highlight-07;
-						a{
-							color: $main;
-							&:before{
-								content: none;
-							}
-						}
-					}
-					&:first-child{
-						border-radius: 4px 0 0 0px;
-					}
-					&:last-child{
-						border-radius: 0 4px 0px 0;
-					}
-				}
-			}
-			.tab-content{
-				padding: 0 15px 10px;
-				background: $highlight-07;
-				border-radius: 0 0 4px 4px;
-					[class*="-filter-container"]{
-						[class*="-title"]{
-							font-size: 12px;
-							font-weight: 600;
-							text-transform: uppercase;
-							// color: $main;
-							margin-bottom: 10px;
-						}
-						ul.job-filter-checklist{
-							list-style-type: none;
-							padding: 0;
-							margin: 0;
-							border-radius: 0;
-							border: none;
-							li{
-								@include clearfix;
-								margin-bottom: 5px;
-								label{
-									margin: 0;
-									// padding-left: 30px;
-									cursor: pointer;
-									&.checked{
-										color: $main;
-									}
-								}
-							}
-						}
-						[class*='-filter']{
+.teamlist-creation-container {
+    .add-teamlist-filters {
+        .include-exclude-filters {
+            .add-exclusion-filter {
+                text-decoration: underline;
+                color: $main;
 
-							label{
-								margin: 0;
-							}
+                &:hover {
+                    text-decoration: none;
+                }
+            }
 
-							.bootstrap-select{
-								margin-bottom: 10px;
-								&:last-child, &:only-child{
-									margin-bottom: 0;
-								}
-								.bs-searchbox{
-								    margin: 10px 6px 5px;
-								}
-								.bs-actionsbox {
-									.btn-block {
-										button{
-											&.actions-btn{
-												width: 48%;
-											}
-										}
-									}
-								}
-								&.select-with-label{
-									.dropdown-toggle{
-										height: auto;
-									    .filter-option{
-									    	display: -webkit-box;
-										    display: -moz-box;
-										    display: -ms-flexbox;
-										    display: -webkit-flex;
-										    display: flex;
-										    margin: 0;
-										    flex-wrap: wrap;
-										    color: rgba(0,0,0,0.5);
-										    text-decoration: none;
-										    font-size: 14px;
-										    align-items: center;
-										    justify-content: flex-start;
-										    span.label{
-										    	line-height: normal;
-										    }
-									    }
-									}
-								}
-							}
+            ul.nav-tabs {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
 
-						}
-						.from-filter{
-							border-bottom: 2px solid $divider-03;
-							padding-bottom: 15px;
-						}
-					}
-			}
-		}
-	}
-	.tab-navigation{
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		align-items: center;
-		.filters-status{
-			color: $helper;
-			span{
-				color: $main;
-				font-weight: 600;
-			}
-		}
-	}
-	.teamlist-container{
-		height: 100%;
-		padding: 2px;
-		width: calc(100% - 5px);
-		li{
-			@include clearfix;
-			&.list-item{
-				.card{
-					height: auto;
-					display: -webkit-flex;
-					display: -moz-flex;
-					display: -ms-flex;
-					display: -o-flex;
-					display: flex;
-					align-items: center;
-					label{
-						margin: 0;
-						cursor: pointer;
-						display: -webkit-flex;
-						display: -moz-flex;
-						display: -ms-flex;
-						display: -o-flex;
-						display: flex;
-						flex: 1;
-						align-items: center;
-						padding: 15px 15px 15px 40px;
-						font-weight: normal;
-						span.icons{
-							top: unset;
-							left: 10px;
-						}
-						.list-image-container{
-							padding: 0;
-							margin: 0 10px 0 0;
-							width: 52px;
-						}
-						.list-details{
-							width: 75%;
-							font-size: 14px;
-							color: $main;
-							font-weight: 600;
-							span{
-								font-size: 12px;
-								color: $helper;
-								font-weight: normal;
-								&.label{
-									font-size: 10px;
-									color: #fff;
-								}
-							}
-							.user-name{
-								font-weight: 600;
-							}
-						}
-						.list-created{
-							width: 30%;
-							text-align: right;
-						}
-						&.list-info{
-							display: -webkit-flex;
-							display: -moz-flex;
-							display: -ms-flex;
-							display: -o-flex;
-							display: flex;
-							flex: 1;
-							align-items: center;
-						}
-						.jobs-done{
-							color: $helper;
-							font-size: 12px;
-							text-align: center;
-							width: 15%;
-							span{
-								display: block;
-								color: $main;
-								font-size: 16px;
-								font-weight: 600;
-							}
-						}
-					}
-				}
-				&.selected{
-					.card{
-						box-shadow: inset 0 0 0 2px $selected !important;
-					}
-				}
-			}
-		}
-	}
+                // border-radius: 4px 4px 0 0;
+                border: none;
+
+                &:before {
+                    content: none;
+                }
+
+                li.nav-item {
+                    background: $highlight-04;
+                    flex: 1;
+
+                    a {
+                        display: block;
+                        padding: 8px 10px;
+                        text-align: center;
+                        margin: 0;
+                    }
+
+                    &.active {
+                        background: $highlight-07;
+
+                        a {
+                            color: $main;
+
+                            &:before {
+                                content: none;
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        border-radius: 4px 0 0 0px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 4px 0px 0;
+                    }
+                }
+            }
+
+            .tab-content {
+                padding: 0 15px 10px;
+                background: $highlight-07;
+                border-radius: 0 0 4px 4px;
+
+                [class*="-filter-container"] {
+                    [class*="-title"] {
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+
+                        // color: $main;
+                        margin-bottom: 10px;
+                    }
+
+                    ul.job-filter-checklist {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                        border-radius: 0;
+                        border: none;
+
+                        li {
+                            @include clearfix;
+
+                            margin-bottom: 5px;
+
+                            label {
+                                margin: 0;
+
+                                // padding-left: 30px;
+                                cursor: pointer;
+
+                                &.checked {
+                                    color: $main;
+                                }
+                            }
+                        }
+                    }
+
+                    [class*='-filter'] {
+                        label {
+                            margin: 0;
+                        }
+
+                        .bootstrap-select {
+                            margin-bottom: 10px;
+
+                            &:last-child, &:only-child {
+                                margin-bottom: 0;
+                            }
+
+                            .bs-searchbox {
+                                margin: 10px 6px 5px;
+                            }
+
+                            .bs-actionsbox {
+                                .btn-block {
+                                    button {
+                                        &.actions-btn {
+                                            width: 48%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.select-with-label {
+                                .dropdown-toggle {
+                                    height: auto;
+
+                                    .filter-option {
+                                        display: -webkit-box;
+                                        display: -moz-box;
+                                        display: -ms-flexbox;
+                                        display: -webkit-flex;
+                                        display: flex;
+                                        margin: 0;
+                                        flex-wrap: wrap;
+                                        color: rgba(0, 0, 0, 0.5);
+                                        text-decoration: none;
+                                        font-size: 14px;
+                                        align-items: center;
+                                        justify-content: flex-start;
+
+                                        span.label {
+                                            line-height: normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .from-filter {
+                        border-bottom: 2px solid $divider-03;
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-navigation {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+
+        .filters-status {
+            color: $helper;
+
+            span {
+                color: $main;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .teamlist-container {
+        height: 100%;
+        padding: 2px;
+        width: calc(100% - 5px);
+
+        li {
+            @include clearfix;
+
+            &.list-item {
+                .card {
+                    height: auto;
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
+                    align-items: center;
+
+                    label {
+                        margin: 0;
+                        cursor: pointer;
+                        display: -webkit-flex;
+                        display: -moz-flex;
+                        display: -ms-flex;
+                        display: -o-flex;
+                        display: flex;
+                        flex: 1;
+                        align-items: center;
+                        padding: 15px 15px 15px 40px;
+                        font-weight: normal;
+
+                        span.icons {
+                            top: unset;
+                            left: 10px;
+                        }
+
+                        .list-image-container {
+                            padding: 0;
+                            margin: 0 10px 0 0;
+                            width: 52px;
+                        }
+
+                        .list-details {
+                            width: 75%;
+                            font-size: 14px;
+                            color: $main;
+                            font-weight: 600;
+
+                            span {
+                                font-size: 12px;
+                                color: $helper;
+                                font-weight: normal;
+
+                                &.label {
+                                    font-size: 10px;
+                                    color: #fff;
+                                }
+                            }
+
+                            .user-name {
+                                font-weight: 600;
+                            }
+                        }
+
+                        .list-created {
+                            width: 30%;
+                            text-align: right;
+                        }
+
+                        &.list-info {
+                            display: -webkit-flex;
+                            display: -moz-flex;
+                            display: -ms-flex;
+                            display: -o-flex;
+                            display: flex;
+                            flex: 1;
+                            align-items: center;
+                        }
+
+                        .jobs-done {
+                            color: $helper;
+                            font-size: 12px;
+                            text-align: center;
+                            width: 15%;
+
+                            span {
+                                display: block;
+                                color: $main;
+                                font-size: 16px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+                &.selected {
+                    .card {
+                        box-shadow: inset 0 0 0 2px $selected !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .job-candidates-list {
@@ -4393,8 +4507,8 @@ html {
     margin-top: 30px;
     padding-bottom: 60px;
 
-    @-moz-document url-prefix(){
-    	padding-bottom: 100px;
+    @-moz-document url-prefix() {
+        padding-bottom: 100px;
     }
 
     button {
@@ -4408,6 +4522,8 @@ html {
 }
 
 .activation, .activation-nobg, .activation-border {
+    @include clearfix;
+
     margin-bottom: 30px;
 
     .activation-container {
@@ -4424,11 +4540,9 @@ html {
 
         .activation-switch {
             padding: 0;
-            margin-right: 10px;
         }
 
         .activation-statement {
-            padding: 0;
             font-weight: 600;
             color: #353F53;
             line-height: 0;
@@ -4456,6 +4570,24 @@ html {
     border-radius: 4px;
     padding-left: 0;
     padding-right: 0;
+}
+
+.switch-status {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    padding-right: 30px;
+
+    span {
+        color: $main;
+        font-weight: 700;
+    }
 }
 
 .edit-survey-question, .edit-quizz-question {
@@ -5664,212 +5796,243 @@ html {
             }
         }
     }
-	.import-teamlist-container{
-		> .row{
-			margin-bottom: 20px;
-			.sec-title{
-				font-size: 16px;
-				color: $main;
-				font-weight: 600;
-				margin-bottom: 15px;
-			}
-		}
-		.teamlist-header{
-			>.row{
-				font-size: 16px;
-				color: $main;
-				font-weight: 600;
-				display: -webkit-flex;
-				display: -moz-flex;
-				display: -ms-flex;
-				display: -o-flex;
-				display: flex;
-				align-items: center;
-				span{
-					font-size: 14px;
-					font-weight: normal;
-					color: $helper;
-				}
-				.btn{
-					margin: 0;
-				}
-				.add-new-card{
-					margin: 0;
-					a{
-						font-size: 14px;
-					}
-				}
-			}
-		}
-	    .linked-teamlist {
-	        padding: 0;
-	        margin: 0;
-	        box-shadow: none;
 
-	        > ul {
-	            margin: 0;
-	            padding: 0;
+    .import-teamlist-container {
+        > .row {
+            margin-bottom: 20px;
 
-	            > li {
-	            	@include clearfix;
-	                margin-bottom: 10px;
-	                list-style-type: none;
-	                // padding: 15px 20px;
-	                color: $main;
-	                font-size: 14px;
-	                font-weight: 600;
-	                border-bottom: 1px solid #eaebed;
-	                &.card{
-	                	.card-title{
-	                		display: -webkit-flex;
-	                		display: -moz-flex;
-	                		display: -ms-flex;
-	                		display: -o-flex;
-	                		display: flex;
-	                		align-items: center;
-	                		transition: all .3s ease;
-	                		> a{
-	            				display: -webkit-flex;
-	            				display: -moz-flex;
-	            				display: -ms-flex;
-	            				display: -o-flex;
-	            				display: flex;
-	            				flex: 1;
-	            				padding: 15px 20px;
-	            				font-size: 14px;
-	            				color: $main;
-	            				font-weight: 600;
-	            				align-items: center;
-	                			&:hover, &:active, &:focus{
-	                				color: $main;
-	                				// font-weight: 600;
-	                			}
-	                			&[aria-expanded="true"]{
+            .sec-title {
+                font-size: 16px;
+                color: $main;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+        }
 
-									i.fa-angle-down{
-										transition: all .3s ease;
-										&:before{
-											content: '\f106'
-										}
-									}
-	                			}
-	                			i{
-	                				color: $not-started;
-		                			&.material-icons{
-		                				margin: 0 5px 0 5px;
-		                			}
-	                			}
-	                		}
-	                		> span{
-	                			position: absolute;
-	                			right: 20px;
-	                			z-index: 2;
-	                			cursor: pointer;
-	                			color: $cta-icons;
-	                			display: -webkit-flex;
-	                			display: -moz-flex;
-	                			display: -ms-flex;
-	                			display: -o-flex;
-	                			display: flex;
-	                			align-items: center;
-	                			&:hover{
-	                				color: $main;
-	                			}
-	                		}
+        .teamlist-header {
+            > .row {
+                font-size: 16px;
+                color: $main;
+                font-weight: 600;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                align-items: center;
 
-	                	}
-	                }
-	                /* &:first-child{
-	                	border-radius: 4px 4px 0 0;
-	                	.card-title a{border-radius: 4px 4px 0 0;}
-	                }
-	                &:only-child{
-	                	border-radius: 4px;
-	                } */
-	                &:last-child{
-	                	margin-bottom: 0;
-	                }
+                span {
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: $helper;
+                }
 
-	                &.create-link {
-	                    border-bottom: 0;
-	                    background: transparent;
+                .btn {
+                    margin: 0;
+                }
 
-	                    a {
-	                        color: #448AFF;
-	                        text-decoration: underline;
+                .add-new-card {
+                    margin: 0;
 
-	                        &:hover {
-	                            text-decoration: none;
-	                        }
-	                    }
-	                }
-	            }
-	        }
-	    }
-	    .contributors{
-	    	.contributors-in-list{
-	    		padding: 0px 20px 15px 20px;
-	    		// background: $main-panel-bg;
-	    		ul{
-	    			list-style-type: none;
-	    			padding: 0;
-	    			margin: 0;
-	    			li{
-	    				@include clearfix;
-	    				margin-bottom: 10px;
-	    				.card{
-	    					display: -webkit-flex;
-	    					display: -moz-flex;
-	    					display: -ms-flex;
-	    					display: -o-flex;
-	    					display: flex;
-	    					align-items: center;
-	    					margin: 0;
-	    					padding: 10px;
-	    					.user-image{
-	    						float: left;
-	    						margin-right: 10px;
-	    					}
-	    					.contributor-info{
-	    						font-size: 14px;
-	    						color: $main;
-	    						font-weight: 600;
-	    						width: 60%;
-	    						span{
-	    							display: block;
-	    							color: $helper;
-	    							font-size: 12px;
-	    							font-weight: normal;
-	    						}
-	    					}
-	    					.bidding-info{
-	    						display: -webkit-flex;
-	    						display: -moz-flex;
-	    						display: -ms-flex;
-	    						display: -o-flex;
-	    						display: flex;
-	    						flex-flow: column;
-	    						width: 25%;
-	    						align-items: center;
-	    						justify-content: center;
-	    						background: $highlight-01;
-	    						border-radius: 4px;
-	    						padding: 5px 8px;
-	    						font-size: 16px;
-	    						span{
-	    							color: $helper;
-	    							font-size: 12px;
-	    						}
-	    					}
-	    				}
-	    				&:last-child{
-	    					margin: 0;
-	    				}
-	    			}
-	    		}
-	    	}
-	    }
-	}
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .linked-teamlist {
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+
+            > ul {
+                margin: 0;
+                padding: 0;
+
+                > li {
+                    @include clearfix;
+
+                    margin-bottom: 10px;
+                    list-style-type: none;
+
+                    // padding: 15px 20px;
+                    color: $main;
+                    font-size: 14px;
+                    font-weight: 600;
+                    border-bottom: 1px solid #eaebed;
+
+                    &.card {
+                        .card-title {
+                            display: -webkit-flex;
+                            display: -moz-flex;
+                            display: -ms-flex;
+                            display: -o-flex;
+                            display: flex;
+                            align-items: center;
+                            transition: all .3s ease;
+
+                            > a {
+                                display: -webkit-flex;
+                                display: -moz-flex;
+                                display: -ms-flex;
+                                display: -o-flex;
+                                display: flex;
+                                flex: 1;
+                                padding: 15px 20px;
+                                font-size: 14px;
+                                color: $main;
+                                font-weight: 600;
+                                align-items: center;
+
+                                &:hover, &:active, &:focus {
+                                    color: $main;
+
+                                    // font-weight: 600;
+
+                                }
+
+                                &[aria-expanded="true"] {
+                                    i.fa-angle-down {
+                                        transition: all .3s ease;
+
+                                        &:before {
+                                            content: '\f106';
+                                        }
+                                    }
+                                }
+
+                                i {
+                                    color: $not-started;
+
+                                    &.material-icons {
+                                        margin: 0 5px 0 5px;
+                                    }
+                                }
+                            }
+
+                            > span {
+                                position: absolute;
+                                right: 20px;
+                                z-index: 2;
+                                cursor: pointer;
+                                color: $cta-icons;
+                                display: -webkit-flex;
+                                display: -moz-flex;
+                                display: -ms-flex;
+                                display: -o-flex;
+                                display: flex;
+                                align-items: center;
+
+                                &:hover {
+                                    color: $main;
+                                }
+                            }
+                        }
+                    }
+
+                    /* &:first-child{
+                    	border-radius: 4px 4px 0 0;
+                    	.card-title a{border-radius: 4px 4px 0 0;}
+                    }
+                    &:only-child{
+                    	border-radius: 4px;
+                    } */
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &.create-link {
+                        border-bottom: 0;
+                        background: transparent;
+
+                        a {
+                            color: #448AFF;
+                            text-decoration: underline;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contributors {
+            .contributors-in-list {
+                padding: 0px 20px 15px 20px;
+
+                // background: $main-panel-bg;
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        @include clearfix;
+
+                        margin-bottom: 10px;
+
+                        .card {
+                            display: -webkit-flex;
+                            display: -moz-flex;
+                            display: -ms-flex;
+                            display: -o-flex;
+                            display: flex;
+                            align-items: center;
+                            margin: 0;
+                            padding: 10px;
+
+                            .user-image {
+                                float: left;
+                                margin-right: 10px;
+                            }
+
+                            .contributor-info {
+                                font-size: 14px;
+                                color: $main;
+                                font-weight: 600;
+                                width: 60%;
+
+                                span {
+                                    display: block;
+                                    color: $helper;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                }
+                            }
+
+                            .bidding-info {
+                                display: -webkit-flex;
+                                display: -moz-flex;
+                                display: -ms-flex;
+                                display: -o-flex;
+                                display: flex;
+                                flex-flow: column;
+                                width: 25%;
+                                align-items: center;
+                                justify-content: center;
+                                background: $highlight-01;
+                                border-radius: 4px;
+                                padding: 5px 8px;
+                                font-size: 16px;
+
+                                span {
+                                    color: $helper;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Teamlist import left Column End */
@@ -11735,17 +11898,17 @@ vertical-align: middle;
     align-items: center;
     overflow: hidden;
 
-                     /*     position: relative;
-z-index: 1;
-height: 100vh;
-width: 92px;
-left: 45%;
-top: 42%;
-img{
-position: absolute;
-left: 0;
-top: 0;
-} */
+    					 /*     position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 92px;
+    left: 45%;
+    top: 42%;
+    img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    } */
 }
 
 .panel-body {
