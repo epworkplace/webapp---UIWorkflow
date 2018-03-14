@@ -24,7 +24,12 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="alert alert-info default">
-                    <p><strong>Heads up!</strong> This alert need your attanetion, but its not super important</p>
+									<button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
+                    <p><strong>Reminder : </strong> You can only select <strong>4 people maximum </strong>in main list.</p>
+                </div>
+                <div class="alert alert-info warning">
+                	<button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
+                    <p><i class="material-icons">info_outline</i> <strong>Your main list is full : </strong> You can only select <strong>contributors as backup</strong> in main list.</p>
                 </div>
 							</div>
 						</div>
@@ -63,9 +68,9 @@
 																			        <li role="presentation" class="nav-item active">
 																			            <a class="nav-link" id="info-tab" href="#includeFilter" data-toggle="tab">Include (3)</a>
 																			        </li>
-																			        <li role="presentation" class="nav-item">
-																			            <a class="nav-link" id="account-tab" href="#excludeFilter" data-toggle="tab">Exclude (0)</a>
-																			        </li>
+																			        <!-- <li role="presentation" class="nav-item">
+																			            <a class="nav-link" id="account-tab" href="#excludeFilter" data-toggle="tab">Exclude (3)</a>
+																			        </li> -->
 																			    </ul>
 																			    <div class="tab-content">
 																			        <div id="includeFilter" class="tab-pane active" role="tabpanel" aria-labelledby="info-tab">
@@ -154,20 +159,46 @@
 																										</ul>
 																									</div>
 																								</div>
-
 																			        </div>
 																			        <div id="excludeFilter" class="tab-pane" role="tabpanel" aria-labelledby="account-tab">
 																			            <div class="from-filter-container">
 																			            	<div class="sec-title">
 																			            		Filters
 																			            	</div>
+																			            	<div class="row">
+		                                                  <div class="col-md-12 col-sm-12 col-xs-12 interest-list-container">
+		                                                    <div class="row">
+		                                                      <div class="col-md-12 interest-list">
+		                                                        <ul>
+		                                                          <li>
+		                                                            <a href="javascript:;">
+		                                                              <i class="material-icons">close</i>
+		                                                            </a>
+		                                                            C003-FOU-2017-001-A-Garnier
+		                                                          </li>
+		                                                          <li>
+		                                                            <a href="javascript:;">
+		                                                              <i class="material-icons">close</i>
+		                                                            </a>
+		                                                            C003-FOU-2017-001-A-Garnier
+		                                                          </li>
+		                                                          <li>
+		                                                            <a href="javascript:;">
+		                                                              <i class="material-icons">close</i>
+		                                                            </a>
+		                                                            C003-FOU-2017-001-A-Garnier
+		                                                          </li>
+		                                                        </ul>
+		                                                      </div>
+		                                                    </div>
+		                                                  </div>
+		                                                </div>
 																			            	<a href="javascript:;" class="add-exclusion-filter" data-toggle="modal" data-target="#teamlistExcludeFilters">+ Add exclusion</a>
 																			            </div>
 																			        </div>
 																			    </div>
 																			</div>
 																		</div>
-
 			                            </div>
 			                            <div class="col-md-8 teamlist-content">
 			                            	<div class="row form-group">
@@ -183,19 +214,19 @@
 						                              <div class="row form-group">
 						                                <div class="col-md-12">
 																				        <div class="main-panel-header df-ac">
-																				        	<div class="col-md-9 pull-left lists-status">
+																				        	<div class="col-md-8 pull-left lists-status">
 																				        	    <span class="fw600">
 																				        	        540 teamlists
 																				        	    </span>
 																				        	    matching to criterias
 																				        	</div>
-																				        	<div class="col-md-3 pull-right pr-0">
+																				        	<div class="col-md-4 pull-right pr-0">
 																				        	    <select class="selectpicker">
 									                                        <option data-img-src="lbd/img/default-avatar.png">
-									                                            Newest first
+									                                            More jobs done
 									                                        </option>
 									                                        <option data-img-src="lbd/img/default-avatar.png">
-									                                            Oldest first
+									                                            Less jobs done
 									                                        </option>
 									                                    </select>
 																				        	</div>
@@ -203,11 +234,99 @@
 																				    </div>
 						                              </div>
 															            <div class="row">
-															                <div class="col-md-12 contract-content-container">
+															                <div class="col-md-12">
 																			            <div class="row">
 																			                <div class="col-md-12">
 																			                    <div class="card-section-list" data-role="contract-section-list">
 																			                        <ul class="teamlist-container">
+																			                            <li class="list-item">
+																			                                <div class="col-md-12 card card-contract p-0">
+																	                                        <label class="checkbox">
+													                                                    <input type="checkbox" id="" data-toggle="checkbox" name="quotePrice" value="option2">
+																			                                    		<div class="col-md-1 list-image-container">
+																					                                        <div class="list-image" data-value="60" id="">
+																					                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+																					                                        </div>
+																					                                    </div>
+																			                                    		<div class="list-details">
+																			                                    			<div class="user-name">Martine Pedro</div>
+																			                                    			<div class="user-status">
+																			                                    				<span class="label junior">Junior</span>
+																			                                    			</div>
+																			                                    		</div>
+																			                                    		<div class="jobs-done">
+																			                                    			<span>34</span>
+																			                                    			jobs done
+																			                                    		</div>
+													                                                </label>
+																			                                </div>
+																			                            </li>
+																			                            <li class="list-item">
+																			                                <div class="col-md-12 card card-contract p-0">
+																	                                        <label class="checkbox">
+													                                                    <input type="checkbox" id="" data-toggle="checkbox" name="quotePrice" value="option2">
+																			                                    		<div class="col-md-1 list-image-container">
+																					                                        <div class="list-image" data-value="60" id="">
+																					                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+																					                                        </div>
+																					                                    </div>
+																			                                    		<div class="list-details">
+																			                                    			<div class="user-name">Martine Pedro</div>
+																			                                    			<div class="user-status">
+																			                                    				<span class="label junior">Junior</span>
+																			                                    			</div>
+																			                                    		</div>
+																			                                    		<div class="jobs-done">
+																			                                    			<span>34</span>
+																			                                    			jobs done
+																			                                    		</div>
+													                                                </label>
+																			                                </div>
+																			                            </li>
+																			                            <li class="list-item">
+																			                                <div class="col-md-12 card card-contract p-0">
+																	                                        <label class="checkbox">
+													                                                    <input type="checkbox" id="" data-toggle="checkbox" name="quotePrice" value="option2">
+																			                                    		<div class="col-md-1 list-image-container">
+																					                                        <div class="list-image" data-value="60" id="">
+																					                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+																					                                        </div>
+																					                                    </div>
+																			                                    		<div class="list-details">
+																			                                    			<div class="user-name">Martine Pedro</div>
+																			                                    			<div class="user-status">
+																			                                    				<span class="label junior">Junior</span>
+																			                                    			</div>
+																			                                    		</div>
+																			                                    		<div class="jobs-done">
+																			                                    			<span>34</span>
+																			                                    			jobs done
+																			                                    		</div>
+													                                                </label>
+																			                                </div>
+																			                            </li>
+																			                            <li class="list-item">
+																			                                <div class="col-md-12 card card-contract p-0">
+																	                                        <label class="checkbox">
+													                                                    <input type="checkbox" id="" data-toggle="checkbox" name="quotePrice" value="option2">
+																			                                    		<div class="col-md-1 list-image-container">
+																					                                        <div class="list-image" data-value="60" id="">
+																					                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+																					                                        </div>
+																					                                    </div>
+																			                                    		<div class="list-details">
+																			                                    			<div class="user-name">Martine Pedro</div>
+																			                                    			<div class="user-status">
+																			                                    				<span class="label junior">Junior</span>
+																			                                    			</div>
+																			                                    		</div>
+																			                                    		<div class="jobs-done">
+																			                                    			<span>34</span>
+																			                                    			jobs done
+																			                                    		</div>
+													                                                </label>
+																			                                </div>
+																			                            </li>
 																			                            <li class="list-item">
 																			                                <div class="col-md-12 card card-contract p-0">
 																	                                        <label class="checkbox">
@@ -326,149 +445,386 @@
 													</div>
 													<div class="tab-pane" id="tab-settings-2">
 														<div class="row">
-															<div class="col-md-12 participation-rules-container">
+															<div class="col-md-12 bidding-rules-container">
 																<div class="row">
-																	<div class="col-md-6">
-																		<h4 class="title">
-																		Cost settings
-																		</h4>
-																		<div class="row">
-																			<div class="col-md-4">
-																				<label>
-																					Bidding Min.
-																				</label>
-																				<input class="form-control" type="text" value="2.00"/>
-																			</div>
-																			<div class="col-md-4">
-																				<label>
-																					Bidding Max.
-																				</label>
-																				<input class="form-control" type="text" value="5.00"/>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="col-md-6">
-																		<div class="price-place">
-																			<div class="col-md-6 recommeded">
-																				<span class="head">
-																					Recommended Max.
-																				</span>
-																				5.00 €
-																				<a href="javascript:;">
-																					apply
-																				</a>
-																			</div>
-																			<div class="col-md-6 recommeded">
-																				<span class="head">
-																					Estimated margin
-																				</span>
-																				61.33 %
-																				<span class="rise">
-																					(
-																					<i class="material-icons">
-																					arrow_upward
-																					</i>
-																					+1.33)
-																				</span>
-																				<span class="fall">
-																					(
-																					<i class="material-icons">
-																					arrow_downward
-																					</i>
-																					-1.33)
-																				</span>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<hr/>
-																<div class="row">
-																	<div class="col-md-6">
-																		<div class="row">
-																			<h4 class="title col-md-5">
-																			Bidding Time
-																			</h4>
-																		</div>
-																		<div class="row">
-																			<div class="col-md-12">
-																				<label>
-																					Duration
-																				</label>
-																				<div class="row">
-																					<div class="col-md-4">
-																						<input class="form-control" type="text" value="12"/>
-																					</div>
-																					<div class="col-md-5">
-																						<select class="selectpicker" name="filter">
-																							<option>hours</option>
-																							<option>days</option>
-																							<option>weeks</option>
-																						</select>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-md-6">
-																		<div class="row">
-																			<div class="col-md-12 activation-nobg">
-																				<div class="row">
-																					<div class="col-md-12 activation-container">
-																						<div class="col-md-2 activation-switch">
-																							<div class="switch" data-off-label="" data-on-label="">
-																								<input type="checkbox"/>
+																	<div class="col-md-12">
+																		<div class="col-md-12 card user-bidding-info">
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row">
+																						<div class="col-md-4 user-info">
+																							<div class="col-md-12">
+				                                    		<div class="col-md-1 list-image-container">
+						                                        <div class="list-image" data-value="60" id="">
+						                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+						                                            <!-- <div class="card-user-empty user">
+			                                                    PC
+			                                                  </div> -->
+						                                        </div>
+						                                    </div>
+				                                    		<div class="list-details">
+				                                    			<div class="user-name">Martine Pedro</div>
+				                                    			<div class="user-status">
+				                                    				<span class="label senior">Senior</span>
+				                                    			</div>
+				                                    		</div>
+							                                </div>
+							                                <div class="col-md-12 user-profile">
+							                                	<a href="javascript:;">View profile</a>
+							                                </div>
+																						</div>
+																						<div class="col-md-8">
+																							<label for="">Cost <span class="required">*</span></label>
+																							<div class="row df-ac">
+																								<div class="col-md-5">
+																									<input type="number" class="form-control" />
+																								</div>
+																								<div class="col-md-5">
+																									<select class="selectpicker" title="" id="">
+																										<option>Price per article</option>
+																										<option>Price per word</option>
+																									</select>
+																								</div>
+																								<div class="col-md-2 df-ac-jc">
+																									<i class="material-icons">delete</i>
+																								</div>
+																							</div>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<label class="checkbox text-none">
+					                                            <input data-toggle="checkbox" type="checkbox" value="" />
+					                                                Internal costs
+					                                        </label>
+																								</div>
 																							</div>
 																						</div>
-																						<div class="col-md-9 activation-statement">
-																							Schedule bidding:
-																							<span class="no">
-																								NO
-																							</span>
-																							<span class="yes">
-																								YES
-																							</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row df-ac">
+																						<div class="col-md-4">
+																							<div class="col-md-12">Which list ?</div>
+																						</div>
+																						<div class="col-md-8">
+																							<div class="row">
+																								<div class="col-md-6">
+																									<select class="selectpicker" title="" id="">
+																										<option>Main list</option>
+																										<option>Backup list</option>
+																									</select>
+																								</div>
+																							</div>
 																						</div>
 																					</div>
 																				</div>
-																				<div class="switch-tag">Bidding will begin when you start card if no dates are set</div>
 																			</div>
 																		</div>
 																	</div>
 																</div>
-																<div class="row mt-30">
-																	<div class="col-md-6">
-																		<div class="row">
-																			<div class="col-md-12">
-																				<label>
-																					Starting date
-																				</label>
-																				<div class="row">
-																					<div class="col-md-7">
-																						<input class="form-control datepicker" placeholder="Date Here" type="text"/>
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="col-md-12 card user-bidding-info">
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row">
+																						<div class="col-md-4 user-info">
+																							<div class="col-md-12">
+				                                    		<div class="col-md-1 list-image-container">
+						                                        <div class="list-image" data-value="60" id="">
+						                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+						                                            <!-- <div class="card-user-empty user">
+			                                                    PC
+			                                                  </div> -->
+						                                        </div>
+						                                    </div>
+				                                    		<div class="list-details">
+				                                    			<div class="user-name">Martine Pedro</div>
+				                                    			<div class="user-status">
+				                                    				<span class="label senior">Senior</span>
+				                                    			</div>
+				                                    		</div>
+							                                </div>
+							                                <div class="col-md-12 user-profile">
+							                                	<a href="javascript:;">View profile</a>
+							                                </div>
+																						</div>
+																						<div class="col-md-8">
+																							<label for="">Cost <span class="required">*</span></label>
+																							<div class="row df-ac">
+																								<div class="col-md-5">
+																									<input type="number" class="form-control" />
+																								</div>
+																								<div class="col-md-5">
+																									<select class="selectpicker" title="" id="">
+																										<option>Price per article</option>
+																										<option>Price per word</option>
+																									</select>
+																								</div>
+																								<div class="col-md-2 df-ac-jc">
+																									<i class="material-icons">delete</i>
+																								</div>
+																							</div>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<label class="checkbox text-none">
+					                                            <input data-toggle="checkbox" type="checkbox" value="" />
+					                                                Internal costs
+					                                        </label>
+																								</div>
+																							</div>
+																						</div>
 																					</div>
-																					<div class="col-md-5 ">
-																						<input type="text" class="form-control timepicker" placeholder="Time Here"/>
-																						<!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row df-ac">
+																						<div class="col-md-4">
+																							<div class="col-md-12">Which list ?</div>
+																						</div>
+																						<div class="col-md-8">
+																							<div class="row">
+																								<div class="col-md-6">
+																									<select class="selectpicker" title="" id="">
+																										<option>Main list</option>
+																										<option>Backup list</option>
+																									</select>
+																								</div>
+																							</div>
+																						</div>
 																					</div>
 																				</div>
 																			</div>
 																		</div>
 																	</div>
-																	<div class="col-md-6">
-																		<div class="row">
-																			<div class="col-md-12">
-																				<label>
-																					Ending date
-																				</label>
-																				<div class="row">
-																					<div class="col-md-7">
-																						<input class="form-control datepicker" placeholder="Date Here" type="text"/>
+																</div>
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="col-md-12 card user-bidding-info">
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row">
+																						<div class="col-md-4 user-info">
+																							<div class="col-md-12">
+				                                    		<div class="col-md-1 list-image-container">
+						                                        <div class="list-image" data-value="60" id="">
+						                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+						                                            <!-- <div class="card-user-empty user">
+			                                                    PC
+			                                                  </div> -->
+						                                        </div>
+						                                    </div>
+				                                    		<div class="list-details">
+				                                    			<div class="user-name">Martine Pedro</div>
+				                                    			<div class="user-status">
+				                                    				<span class="label senior">Senior</span>
+				                                    			</div>
+				                                    		</div>
+							                                </div>
+							                                <div class="col-md-12 user-profile">
+							                                	<a href="javascript:;">View profile</a>
+							                                </div>
+																						</div>
+																						<div class="col-md-8">
+																							<label for="">Cost <span class="required">*</span></label>
+																							<div class="row df-ac">
+																								<div class="col-md-5">
+																									<input type="number" class="form-control" />
+																								</div>
+																								<div class="col-md-5">
+																									<select class="selectpicker" title="" id="">
+																										<option>Price per article</option>
+																										<option>Price per word</option>
+																									</select>
+																								</div>
+																								<div class="col-md-2 df-ac-jc">
+																									<i class="material-icons">delete</i>
+																								</div>
+																							</div>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<label class="checkbox text-none">
+					                                            <input data-toggle="checkbox" type="checkbox" value="" />
+					                                                Internal costs
+					                                        </label>
+																								</div>
+																							</div>
+																						</div>
 																					</div>
-																					<div class="col-md-5 ">
-																						<input type="text" class="form-control timepicker" placeholder="Time Here"/>
-																						<!-- <input class="form-control" id="timepicker6" name="timepicker" placeholder="Time Here" type="text"/> -->
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row df-ac">
+																						<div class="col-md-4">
+																							<div class="col-md-12">Which list ?</div>
+																						</div>
+																						<div class="col-md-8">
+																							<div class="row">
+																								<div class="col-md-6">
+																									<select class="selectpicker" title="" id="">
+																										<option>Main list</option>
+																										<option>Backup list</option>
+																									</select>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="col-md-12 card user-bidding-info">
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row">
+																						<div class="col-md-4 user-info">
+																							<div class="col-md-12">
+				                                    		<div class="col-md-1 list-image-container">
+						                                        <div class="list-image" data-value="60" id="">
+						                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+						                                            <!-- <div class="card-user-empty user">
+			                                                    PC
+			                                                  </div> -->
+						                                        </div>
+						                                    </div>
+				                                    		<div class="list-details">
+				                                    			<div class="user-name">Martine Pedro</div>
+				                                    			<div class="user-status">
+				                                    				<span class="label senior">Senior</span>
+				                                    			</div>
+				                                    		</div>
+							                                </div>
+							                                <div class="col-md-12 user-profile">
+							                                	<a href="javascript:;">View profile</a>
+							                                </div>
+																						</div>
+																						<div class="col-md-8">
+																							<label for="">Cost <span class="required">*</span></label>
+																							<div class="row df-ac">
+																								<div class="col-md-5">
+																									<input type="number" class="form-control" />
+																								</div>
+																								<div class="col-md-5">
+																									<select class="selectpicker" title="" id="">
+																										<option>Price per article</option>
+																										<option>Price per word</option>
+																									</select>
+																								</div>
+																								<div class="col-md-2 df-ac-jc">
+																									<i class="material-icons">delete</i>
+																								</div>
+																							</div>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<label class="checkbox text-none">
+					                                            <input data-toggle="checkbox" type="checkbox" value="" />
+					                                                Internal costs
+					                                        </label>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row df-ac">
+																						<div class="col-md-4">
+																							<div class="col-md-12">Which list ?</div>
+																						</div>
+																						<div class="col-md-8">
+																							<div class="row">
+																								<div class="col-md-6">
+																									<select class="selectpicker" title="" id="">
+																										<option>Main list</option>
+																										<option>Backup list</option>
+																									</select>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="col-md-12 card user-bidding-info">
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row">
+																						<div class="col-md-4 user-info">
+																							<div class="col-md-12">
+				                                    		<div class="col-md-1 list-image-container">
+						                                        <div class="list-image" data-value="60" id="">
+						                                            <img class="img-circle" src="lbd/img/default-avatar.png">
+						                                            <!-- <div class="card-user-empty user">
+			                                                    PC
+			                                                  </div> -->
+						                                        </div>
+						                                    </div>
+				                                    		<div class="list-details">
+				                                    			<div class="user-name">Martine Pedro</div>
+				                                    			<div class="user-status">
+				                                    				<span class="label senior">Senior</span>
+				                                    			</div>
+				                                    		</div>
+							                                </div>
+							                                <div class="col-md-12 user-profile">
+							                                	<a href="javascript:;">View profile</a>
+							                                </div>
+																						</div>
+																						<div class="col-md-8">
+																							<label for="">Cost <span class="required">*</span></label>
+																							<div class="row df-ac">
+																								<div class="col-md-5">
+																									<input type="number" class="form-control" />
+																								</div>
+																								<div class="col-md-5">
+																									<select class="selectpicker" title="" id="">
+																										<option>Price per article</option>
+																										<option>Price per word</option>
+																									</select>
+																								</div>
+																								<div class="col-md-2 df-ac-jc">
+																									<i class="material-icons">delete</i>
+																								</div>
+																							</div>
+																							<div class="row">
+																								<div class="col-md-12">
+																									<label class="checkbox text-none">
+					                                            <input data-toggle="checkbox" type="checkbox" value="" />
+					                                                Internal costs
+					                                        </label>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-md-12">
+																					<div class="row df-ac">
+																						<div class="col-md-4">
+																							<div class="col-md-12">Which list ?</div>
+																						</div>
+																						<div class="col-md-8">
+																							<div class="row">
+																								<div class="col-md-6">
+																									<select class="selectpicker" title="" id="">
+																										<option>Main list</option>
+																										<option>Backup list</option>
+																									</select>
+																								</div>
+																							</div>
+																						</div>
 																					</div>
 																				</div>
 																			</div>
@@ -533,7 +889,7 @@
 								<div class="col-md-12 card-section-list-headers">
 									<div class="row">
 										<div class="col-md-5 header-title">
-											<h4 class="title"><i class="material-icons">check</i>Main List (3 / 4)</h4>
+											<h4 class="title"><i class="fa fa-check"></i>Main List (3 / 4)</h4>
 										</div>
 									</div>
 								</div>
@@ -542,6 +898,16 @@
 								<div class="col-md-12">
 									<div class="card-section-list" data-role="contract-section-list">
 										<ul>
+											<li class="add-new-block">
+                          <div class="add-block">
+                              <a class="add-card add-user-to-list" href="javascript:;">
+                                  <i class="material-icons">
+                                      add
+                                  </i>
+                                  <span>Add a contributor</span>
+                              </a>
+                          </div>
+                      </li>
 											<li>
 												<div class="col-md-12 card card-contract">
 													<div class="col-md-1 list-image-container">
@@ -566,9 +932,9 @@
 														<div class="col-md-1 numbers more-options">
 															<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
 															<ul class="dropdown-menu dropdown-menu-right">
-																<li><a href="#">Promote to main list</a></li>
+																<li><a href="#">Back as backup</a></li>
 																<li><a href="#">Show profile</a></li>
-																<li class="delete"><a href="#">Reject</a></li>
+																<li class="delete"><a href="#">Eject from teamlist</a></li>
 															</ul>
 														</div>
 													</div>
@@ -598,9 +964,9 @@
 														<div class="col-md-1 numbers more-options">
 															<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
 															<ul class="dropdown-menu dropdown-menu-right">
-																<li><a href="#">Promote to main list</a></li>
+																<li><a href="#">Back as backup</a></li>
 																<li><a href="#">Show profile</a></li>
-																<li class="delete"><a href="#">Reject</a></li>
+																<li class="delete"><a href="#">Eject from teamlist</a></li>
 															</ul>
 														</div>
 													</div>
@@ -630,9 +996,9 @@
 														<div class="col-md-1 numbers more-options">
 															<a  href="javascript:;" class="card-more-options dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
 															<ul class="dropdown-menu dropdown-menu-right">
-																<li><a href="#">Promote to main list</a></li>
+																<li><a href="#">Back as backup</a></li>
 																<li><a href="#">Show profile</a></li>
-																<li class="delete"><a href="#">Reject</a></li>
+																<li class="delete"><a href="#">Eject from teamlist</a></li>
 															</ul>
 														</div>
 													</div>
@@ -660,6 +1026,16 @@
 								<div class="col-md-12">
 									<div class="card-section-list" data-role="contract-section-list">
 										<ul>
+											<li class="add-new-block">
+                          <div class="add-block">
+                              <a class="add-card add-user-to-list" href="javascript:;">
+                                  <i class="material-icons">
+                                      add
+                                  </i>
+                                  <span>Add a contributor</span>
+                              </a>
+                          </div>
+                      </li>
 											<li>
 												<div class="col-md-12 card card-contract">
 													<div class="col-md-1 list-image-container">

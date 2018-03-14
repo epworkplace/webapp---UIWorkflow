@@ -125,11 +125,15 @@ $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
 
 .text-none {
 	text-transform: none !important;
+	font-weight: normal !important;
 }
 
 .primary-font {
 	font-size: 14px;
 	color: $sub-heading;
+}
+.required {
+    color: $delete;
 }
 
 .df-ac {
