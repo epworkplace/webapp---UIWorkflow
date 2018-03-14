@@ -11086,6 +11086,15 @@ vertical-align: middle;
 			height: 30px;
 			border-radius: 50%;
 		}
+		li{
+			a{
+				span{
+					&.text{
+						white-space: normal !important;
+					}
+				}
+			}
+		}
 	}
 
 	&.flags {
