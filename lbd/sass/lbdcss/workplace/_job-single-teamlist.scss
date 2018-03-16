@@ -48,29 +48,35 @@
 
       .list-nav-container {
         padding-bottom: 500px;
-				.sourcing-list-nav-container{
-					.display-content{
-						&.empty{
-							padding: 12px;
-						}
-					}
-					.info-content, .overview{
-						height: auto !important;
-						min-height: auto;
-					}
-					.add-sourcing-description{
-						font-size: 14px;
-						color: $selected;
-						font-weight: 600;
-						text-decoration: underline;
-						&:hover{
-							text-decoration: none;
-						}
-					}
-					.overview:only-of-type{
-						margin-top: 0;
-					}
-				}
+
+        .sourcing-list-nav-container {
+          .display-content {
+            &.empty {
+              padding: 12px;
+            }
+          }
+
+          .info-content, .overview {
+            height: auto !important;
+            min-height: auto;
+          }
+
+          .add-sourcing-description {
+            font-size: 14px;
+            color: $selected;
+            font-weight: 600;
+            text-decoration: underline;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+          .overview:only-of-type {
+            margin-top: 0;
+          }
+        }
+
         .team-list-container {
           display: -webkit-flex;
           display: -moz-flex;
@@ -85,106 +91,118 @@
           > li {
             @include clearfix;
 
-            &[class*='-list']{
-            	margin-bottom: 10px;
-            	padding: 15px;
-	            // transition: all .3s ease;
-	            -webkit-transition: all .5s ease-out;
-						  -moz-transition: all .5s ease-out ;
-						  -ms-transition: all .5s ease-out ;
-						  -o-transition: all .5s ease-out ;
-						  transition: all .5s ease-out ;
+            &[class*='-list'] {
+              margin-bottom: 10px;
+              padding: 15px;
 
-							.language-to{
-								@extend %language-breadcrum;
-								width: auto;
-								margin-right: 15px;
-							}
-							[class*='-details']{
-								[class*='-title']{
-									font-size: 14px;
-									font-weight: 600;
-									color: $main;
-								}
-								[class*='-numbers'] {
-									font-size: 12px;
-									color: $helper;
-								}
-							}
+              // transition: all .3s ease;
+              -webkit-transition: all .5s ease-out;
+              -moz-transition: all 0.5s ease-out;
+              -ms-transition: all 0.5s ease-out;
+              -o-transition: all 0.5s ease-out;
+              transition: all 0.5s ease-out;
+
+              .language-to {
+                @extend %language-breadcrum;
+
+                width: auto;
+                margin-right: 15px;
+              }
+
+              [class*='-details'] {
+                [class*='-title'] {
+                  font-size: 14px;
+                  font-weight: 600;
+                  color: $main;
+                }
+
+                [class*='-numbers'] {
+                  font-size: 12px;
+                  color: $helper;
+                }
+              }
             }
 
-            &:hover{
-            	box-shadow: inset 0px 0px 0px 2px rgba(68, 138, 255,1);
+            &:hover {
+              box-shadow: inset 0px 0px 0px 2px rgba(68, 138, 255, 1);
             }
-
           }
         }
       }
     }
 
     .main-panel-container {
-			.sourcing-contents{
-				.overview-content-container{
-					.job-filter-options{
-						.job-filter-options-container{
-							background: $highlight-04;
-							label{
-								text-transform: uppercase;
-							}
-							hr{
-								border-top: 2px solid $divider-02;
-							}
-							.clear-filter-options{
-								color: $main;
-								font-weight: 700;
-								text-decoration: underline;
-								display: inline-block;
-								margin-top: 10px;
-								&:hover{
-									text-decoration: none;
-								}
-							}
-						}
-					}
-					.client-content-container{
-						.add-new-card{
-							.no-cards{
-								@extend %no-cards;
-							}
-						}
-						.card-section-list {
-							ul {
-								li {
-									.card {
-										.task-price{
-											width: 336px;
-										}
-										.list-head-container{
-											width: 43%;
-									    padding-right: 0;
-									    .header{
-									    	.language{
-													width: 18.333%;
-									    	}
-									    	.language-to{
-													width: 31.333%;
-									    	}
-									    }
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+      .sourcing-contents {
+        .overview-content-container {
+          .job-filter-options {
+            .job-filter-options-container {
+              background: $highlight-04;
 
+              label {
+                text-transform: uppercase;
+              }
+
+              hr {
+                border-top: 2px solid $divider-02;
+              }
+
+              .clear-filter-options {
+                color: $main;
+                font-weight: 700;
+                text-decoration: underline;
+                display: inline-block;
+                margin-top: 10px;
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+
+          .client-content-container {
+            .add-new-card {
+              .no-cards {
+                @extend %no-cards;
+              }
+            }
+
+            .card-section-list {
+              ul {
+                li {
+                  .card {
+                    .task-price {
+                      width: 336px;
+                    }
+
+                    .list-head-container {
+                      width: 43%;
+                      padding-right: 0;
+
+                      .header {
+                        .language {
+                          width: 18.333%;
+                        }
+
+                        .language-to {
+                          width: 31.333%;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
 /* Modal styles */
-.edit-description-modal{
-	@extend %modal;
+.edit-description-modal {
+  @extend %modal;
 }
+
 /* Modal styles ends*/

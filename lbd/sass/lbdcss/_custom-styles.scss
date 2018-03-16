@@ -2145,6 +2145,16 @@ html {
             }
           }
 
+          &.ongoing {
+            i {
+              color: #fec500;
+            }
+
+            &:before {
+              border: 2px solid #fec500;
+            }
+          }
+
           &.plagiarized {
             i {
               color: #ee0a5f;
