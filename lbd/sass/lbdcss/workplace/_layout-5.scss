@@ -660,7 +660,7 @@
             }
 
             .tab-panel-container {
-              width: 33.333%;
+              width: 33%;
               transition: all .3s ease;
               box-shadow: 2px 0px 5px 3px #edeff1;
 
@@ -674,6 +674,10 @@
                 position: inherit;
                 overflow: hidden;
                 padding: 16px 2px 0 16px;
+                min-height: 100%;
+                height: 600px;
+                background: #FCFDFD;
+                z-index: 1;
 
                 .navbar-default {
                   .page-title {

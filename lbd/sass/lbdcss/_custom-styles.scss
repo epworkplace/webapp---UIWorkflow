@@ -1430,7 +1430,7 @@ html {
             }
 
             .language-to {
-              width: 28.333%;
+              width: 35.333%;
 
               a {
                 padding-right: 5px;
@@ -4615,10 +4615,6 @@ html {
   margin-top: 30px;
   padding-bottom: 60px;
 
-  @-moz-document url-prefix() {
-    padding-bottom: 100px;
-  }
-
   button {
     width: 48% !important;
     font-weight: 600;
@@ -4626,6 +4622,18 @@ html {
     &.full-width {
       width: 100% !important;
     }
+  }
+}
+
+@-moz-document url-prefix() {
+  .tab-navigation {
+    padding-bottom: 100px;
+  }
+}
+
+@supports (-moz-appearance: none) {
+  .tab-navigation {
+    padding-bottom: 100px;
   }
 }
 

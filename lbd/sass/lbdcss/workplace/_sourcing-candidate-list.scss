@@ -263,6 +263,49 @@
     }
   }
 
+  .linked-teamlist {
+    padding: 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0;
+        list-style-type: none;
+        padding: 15px 20px;
+        color: #354052;
+        font-weight: 600;
+        border-bottom: 1px solid #eaebed;
+
+        a {
+          color: #354052;
+          font-weight: 600;
+          border-bottom: 1px solid #eaebed;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &.create-link {
+          border-bottom: 0;
+          background: transparent;
+
+          a {
+            color: #448AFF;
+            text-decoration: underline;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .content {
     .tab-content {
       .main-panel-header {

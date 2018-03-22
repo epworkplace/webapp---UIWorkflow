@@ -143,7 +143,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-8 main-panel-container">
+              <div class="col-md-8 col-md-offset-4 main-panel-container">
                 <div class="no-data-container">
                   <div class="no-data-placeholder">
                     <h2>Play with filters or type a keyword</h2>
@@ -154,7 +154,7 @@
 
                   <!-- @include _partials/_contributors-fr-users-list.html -->
                   <!-- @include _partials/_contributors-uk-users-list.html -->
-                  
+
                 </div>
               </div>
             </div>
@@ -240,7 +240,7 @@ $(document).ready(function(){
         e.stopPropagation();
         $(this).parents('.add-phone').fadeOut();
         $(this).parents('.add-phone').siblings('.add-new-phone').fadeIn();
-    });    
+    });
 
     /* Edit User description info */
     $(document).on('click', ".general-info .description-edit", function(e){
@@ -266,7 +266,7 @@ $(document).ready(function(){
         e.stopPropagation();
         $('.about-info-edit').fadeOut();
         $('.user-about-info').fadeIn();
-    });    
+    });
 
     /* Edit User languages info */
     $(document).on('click', ".general-info .languages-edit, .add-new-language .add-a-language", function(e){
@@ -303,7 +303,7 @@ $(document).ready(function(){
         $('.add-new-website').parents('.list-item').show();
         $(this).parents('.list-item.add-website').hide();
     });
-    
+
 
     $(document).on('click', ".list-item .add-new-website", function(e){
         e.stopPropagation();
@@ -339,7 +339,7 @@ $(document).ready(function(){
           /*window.open('contract-overview.html','_blank');*/
           $('#contributorUserProfileModal').modal('show')
        }
-    
+
     });
 
     /*Read more / Read less*/
@@ -386,7 +386,7 @@ $(document).ready(function(){
     });
 
 
-    
+
 
 
 });

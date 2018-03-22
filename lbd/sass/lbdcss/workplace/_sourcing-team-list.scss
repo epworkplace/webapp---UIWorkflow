@@ -277,7 +277,15 @@
                 }
               }
 
-              .main-panel-container {}
+              .main-panel-container {
+                .teamlist-creation-container {
+                  .teamlist-content {
+                    .no-data-container {
+                      height: calc(100vh - 300px;);
+                    }
+                  }
+                }
+              }
             }
 
             .team-list-container {
@@ -331,6 +339,17 @@
                   color: #354052;
                   font-weight: 600;
                   border-bottom: 1px solid #eaebed;
+
+                  a {
+                    color: #354052;
+                    font-weight: 600;
+                    border-bottom: 1px solid #eaebed;
+                    text-decoration: underline;
+
+                    &:hover {
+                      text-decoration: none;
+                    }
+                  }
 
                   &.create-link {
                     border-bottom: 0;
