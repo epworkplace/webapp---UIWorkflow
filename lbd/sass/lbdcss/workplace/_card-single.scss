@@ -1,0 +1,89 @@
+.card-single-page {}
+
+.select-assignees-modal, .select-edit-assignees-modal {
+  .modal-title {
+    font-size: 20px;
+    color: #353f53;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .select-assignee-container {
+    margin-bottom: 20px;
+
+    h4.title {
+      padding: 0;
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      color: #353f53;
+      font-weight: 600;
+    }
+
+    .assignee-row {
+      border: 1px solid transparent;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+
+      .check {
+        padding-top: 7px;
+        padding-right: 0;
+      }
+
+      .user-image {
+        width: 40px;
+        padding: 7px 0 0 0;
+
+        img {
+          max-width: 100%;
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+        }
+
+        .card-user-empty {
+          height: 40px;
+        }
+      }
+
+      .contributor-info {
+        width: 65.666667%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        height: 50px;
+
+        .contributor-name {
+          color: #353f53;
+          font-weight: 700;
+        }
+      }
+
+      .bidding-info {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        background: #f3f5f7;
+        border-radius: 4px;
+        padding: 5px 8px;
+        font-size: 16px;
+        color: #353f53;
+        font-weight: 700;
+
+        span {
+          color: #B0B4BB;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
