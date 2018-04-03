@@ -1460,84 +1460,80 @@
                                         	<div class="" role="group">
                                         		<button type="button" class="btn btn-default cards-filter-dropup" id="cards-filter-dropup">June 2019 <span>Filter</span></button>
                                         		<div class="cards-filter-dropdown" style="display: none;" role="" aria-labelledby="cards-filter-dropup">
-                                        			<div class="row nav-container cards-filter-nav">
-                                        				<ul class="nav nav-icons" role="tablist">
-                                        					<li class="active">
-                                        						<a href="#upcomingCards" role="tab" data-toggle="tab">
-                                        							<label class="radio">
-                                        								<input type="radio" data-toggle="radio" name="optionsRadios" checked value="option1" />Upcoming Cards
-                                        							</label>
-                                        						</a>
-                                        					</li>
-                                        					<li>
-                                        						<a href="#filterPeriod" role="tab" data-toggle="tab">
-                                        							<label class="radio">
-                                        								<input type="radio" data-toggle="radio" name="optionsRadios" value="option1" />Filter by period
-                                        							</label>
-                                        						</a>
-                                        					</li>
-                                        					<li class="">
-                                        						<a href="#filterStatus" role="tab" data-toggle="tab">
-                                        							<label class="radio">
-                                        								<input type="radio" data-toggle="radio" name="optionsRadios"  value="option1" />Filter by status
-                                        							</label>
-                                        						</a>
-                                        					</li>
-                                        				</ul>
-                                        			</div>
-                                        			<div class="tab-content">
-                                        				<div class="tab-pane active" id="upcomingCards">
-                                        					<form class="form-inline">
-                                        						<div class="form-group dropup">
-                                        							<label for="ShowCards">Show: </label>
-                                        							<select id="ShowCards" class="selectpicker">
-                                        								<option value="1">10</option>
-                                        								<option value="2">20</option>
-                                        								<option value="3">30</option>
-                                        								<option value="4">40</option>
-                                        								<option value="5">50</option>
-                                        								<option value="6">60</option>
-                                        								<option value="7">70</option>
-                                        								<option value="8">80</option>
-                                        								<option value="9">90</option>
-                                        								<option value="10">100</option>
-                                        							</select>
-                                        							days from today
-                                        						</div>
-                                        					</form>
-                                        				</div>
-                                        				<div class="tab-pane" id="filterPeriod">
-                                        					<form class="">
-                                        						<div class="form-group">
-                                        							<label for="jobsFilterStart">From: </label>
-                                        							<input type="text" class="form-control datepicker-jobstart-date-up" id="jobsFilterStart" placeholder="June 2019" />
-                                        						</div>
-                                        						<div class="form-group">
-                                        							<label for="jobsFilterEnd">To: </label>
-                                        							<input type="text" class="form-control datepicker-jobend-date-up" id="jobsFilterEnd" placeholder="August 2019" />
-                                        						</div>
-                                        						<div class="form-group">
-                                        							<button type="reset" class="btn btn-fill delete pull-right">Clear Filter</button>
-                                        						</div>
-                                        					</form>
-                                        				</div>
-                                        				<div class="tab-pane" id="filterStatus">
-                                        					<form>
-                                        						<div class="form-group dropup">
-                                        							<label for="jobsFilterStatus">Show only: </label>
-                                        							<select name="filter" id="jobsFilterStatus" title="Select a status" multiple class="selectpicker form-control dropup" data-actions-box="true">
-                                        								<option data-content="<span class='label draft paused'>Draft</span>">Draft</option>
-                                        								<option data-content="<span class='label bidding default'>Bidding</span>">Bidding</option>
-                                        								<option data-content="<span class='label correct default'>Correct</span>">Correct</option>
-                                        								<option data-content="<span class='label delivered delete'>Delivered</span>">Delivered</option>
-                                        								<option data-content="<span class='label validated ongoing'>Validated</span>">Validated</option>
-                                        								<option data-content="<span class='label writing default'>Writing</span>">Writing</option>
-                                        							</select>
-                                        						</div>
-                                        					</form>
-                                        				</div>
-                                        			</div>
-                                        		</div>
+                                               <form id="filterForm">
+                                                 <div class="row nav-container cards-filter-nav" style="">
+                                                     <h5 class="card-title" style="">Hide Cards</h5>
+                                                     <a href="#" class="card-title" style="" onclick="clear_all_filters();">Clear all filters</a>
+                                                 </div>
+                                                 <div class="row nav-container cards-filter-nav" >
+                                                   <div class="col-md-6">
+                                                     <div class="row">
+                                                       <div class="col-md-12">
+                                                         <h5 class="card-title" style="">BEFORE THIS DATE</h5>
+                                                       </div>
+                                                     </div>
+                                                     <div class="row">
+                                                       <div class="col-md-12">
+                                                        <input type="text" class="form-control searchinput datepicker-jobstart-date-up" id="jobsFilterStart" name="jobsFilterStart" placeholder="-"  required>
+                                                        <a class="search-clear" id="searchclear" onclick="clearField('jobsFilterStart','date')">Clear</a>
+                                                      </div>
+                                                     </div>
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                     <div class="row">
+                                                       <div class="col-md-12">
+                                                         <h5 class="card-title" style="">AFTER THIS DATE</h5>
+                                                       </div>
+                                                     </div>
+                                                     <div class="row">
+                                                       <div class="col-md-12">
+                                                         <input type="text" class="form-control searchinput datepicker-jobend-date-up" id="jobsFilterEnd" name="jobsFilterEnd" placeholder="-" required>
+                                                         <a class="search-clear" id="searchclear" onclick="clearField('jobsFilterEnd','date')">Clear</a>
+                                                       </div>
+                                                     </div>
+                                                   </div>
+                                                 </div>
+                                        
+                                                 <div class="row nav-container cards-filter-nav" >
+                                                   <div class="col-md-12">
+                                                     <div class="row">
+                                                       <div class="col-md-12">
+                                                         <h5 class="card-title" style="">HIDE CARDS BY STATUS</h5>
+                                        
+                                                       </div>
+                                                     </div>
+                                                     <div class="tab-content" style="">
+                                                     <div class="tab-pane active" id="filterStatus">
+                                                           <form id="status_filter_form">
+                                                               <div class="form-group dropup" style="">
+                                                                   <select name="jobsFilterStatus[]" id="jobsFilterStatus" title="All status shown" multiple class="selectpicker selectpicker_cards searchinput form-control dropup" data-actions-box="true">
+                                                                       <option value="draft" data-content="<span class='label draft paused'>Draft</span>">Draft</option>
+                                                                       <option value="bidding" data-content="<span class='label bidding default'>Bidding</span>">Bidding</option>
+                                                                       <option value="writing" data-content="<span class='label writing default'>Writing</span>">Writing</option>
+                                                                       <option value="correction" data-content="<span class='label correct default'>Correct</span>">Correct</option>
+                                                                       <option value="moderation" data-content="<span class='label correct default'>Moderation</span>">Moderation</option>
+                                                                       <option value="delivered"  data-content="<span class='label delivered delete'>Delivered</span>">Delivered</option>
+                                                                       <option value="validated"  data-content="<span class='label validated ongoing'>Validated</span>">Validated</option>
+                                                                   </select>
+                                                                   <a class="search-clear" id="searchclear" onclick="clearField('jobsFilterStatus','status')">Clear</a>
+                                                               </div>
+                                                           </form>
+                                                     </div>
+                                                   </div>
+                                                   </div>
+                                                 </div>
+                                        
+                                                  <div class="row nav-container cards-filter-nav tab-content">
+                                                    <div class="col-md-6">
+                                                      <button type="reset" class="btn btn-fill delete  pull-left" style="background: #353f53;color: #ffffff;height: 30px;width: 60%;" onclick="undoFilter();">Undo</button>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                      <button type="button" class="btn btn-fill submit pull-right" style="background: #00bcd8;color: #ffffff;height: 30px;width: 60%;" onclick=" filter();">Filter</button>
+                                                    </div>
+                                                  </div>
+                                                </form>
+                                             </div>
+                                        
                                         		<!-- dropdown-menu -->
                                         	</div>
                                         	<button type="button" class="btn btn-default cards-filter-next" style="display: none;"><i class="material-icons">chevron_right</i></button>
