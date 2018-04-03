@@ -6,6 +6,7 @@
 </head>
 
 <body class="wp-app layout-2">
+	<!-- @include _partials/_main-menu.html -->
     <div class="wrapper">
         <!-- @include _partials/_sidebar.html -->
         <div class="container-fluid page-wrap">
@@ -130,7 +131,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-xs-12 page-title">
-                                                    <a class="navbar-brand" href="#">Card Overview</a>  
+                                                    <a class="navbar-brand" href="#">Card Overview</a>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -301,7 +302,7 @@
                         </ul>
                     </nav>
                     <p class="copyright pull-right">
-                        
+
                     </p>
                 </div>
             </footer>
@@ -416,7 +417,7 @@
     <script type="text/javascript" src="lbd/lib/chosen/chosen.jquery.js"></script>
     <script type="text/javascript" src="lbd/lib/chosen/ImageSelect.jquery.js"></script>
 
-    <!-- Bootstrap Selelect Picker --> 
+    <!-- Bootstrap Selelect Picker -->
     <script type="text/javascript" src="lbd/js/bootstrap-select.js"></script>
 
     <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
@@ -429,7 +430,7 @@
     <script type="text/javascript" src="lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="lbd/js/custom.js"></script> 
+    <script src="lbd/js/custom.js"></script>
 
     <script type="text/javascript">
   (function(window) {
@@ -454,7 +455,7 @@
         triggerCallback(e, callback);
       });
       ele.appendChild(input);
-      
+
       ele.addEventListener('dragover', function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -473,7 +474,7 @@
         ele.classList.remove('dragover');
         triggerCallback(e, callback);
       });
-      
+
       /*ele.addEventListener('click', function() {
         input.value = null;
         input.click();
@@ -495,5 +496,5 @@
     });
   })(this);
 </script>
-    
+
 </html>
