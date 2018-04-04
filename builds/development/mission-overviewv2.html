@@ -1474,7 +1474,7 @@
                                                      </div>
                                                      <div class="row">
                                                        <div class="col-md-12">
-                                                        <input type="text" class="form-control searchinput datepicker-jobstart-date-up" id="jobsFilterStart" name="jobsFilterStart" placeholder="-"  required>
+                                                        <input type="text" class="form-control searchinput datepicker-start" id="jobsFilterStart" name="jobsFilterStart" placeholder="-"  required>
                                                         <a class="search-clear" id="searchclear" onclick="clearField('jobsFilterStart','date')">Clear</a>
                                                       </div>
                                                      </div>
@@ -1487,7 +1487,7 @@
                                                      </div>
                                                      <div class="row">
                                                        <div class="col-md-12">
-                                                         <input type="text" class="form-control searchinput datepicker-jobend-date-up" id="jobsFilterEnd" name="jobsFilterEnd" placeholder="-" required>
+                                                         <input type="text" class="form-control searchinput datepicker-end" id="jobsFilterEnd" name="jobsFilterEnd" placeholder="-" required>
                                                          <a class="search-clear" id="searchclear" onclick="clearField('jobsFilterEnd','date')">Clear</a>
                                                        </div>
                                                      </div>
@@ -1524,11 +1524,11 @@
                                                  </div>
                                         
                                                   <div class="row nav-container cards-filter-nav tab-content">
-                                                    <div class="col-md-6">
-                                                      <button type="reset" class="btn btn-fill delete  pull-left" style="background: #353f53;color: #ffffff;height: 30px;width: 60%;" onclick="undoFilter();">Undo</button>
+                                                    <div class="col-md-6 pl-0">
+                                                      <button type="reset" class="btn btn-fill delete btn-confirm pull-left full-width" style="" onclick="undoFilter();">Undo</button>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                      <button type="button" class="btn btn-fill submit pull-right" style="background: #00bcd8;color: #ffffff;height: 30px;width: 60%;" onclick=" filter();">Filter</button>
+                                                    <div class="col-md-6 pr-0">
+                                                      <button type="button" class="btn btn-fill submit pull-right btn-yes full-width" style="" onclick=" filter();">Filter</button>
                                                     </div>
                                                   </div>
                                                 </form>
