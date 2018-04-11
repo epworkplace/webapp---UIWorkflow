@@ -2191,7 +2191,7 @@
 															<!-- Create a Job -->
 															<!-- @include _partials/_create-offer-job-modal.html -->
 															<!-- Edit Survey Questions -->
-															<div class="modal fade edit-survey-question" id="editSurveyQuestion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+															<!-- <div class="modal fade edit-survey-question" id="editSurveyQuestion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 																<div class="modal-dialog modal-lg" role="document">
 																	<div class="modal-content">
 																		<div class="modal-body">
@@ -2231,9 +2231,9 @@
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 															<!-- Survey template application-->
-															<div class="modal fade survey-template-application-modal" id="surveyTemplateApplicationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+															<!-- <div class="modal fade survey-template-application-modal" id="surveyTemplateApplicationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 																<div class="modal-dialog modal-lg" role="document">
 																	<div class="modal-content">
 																		<div class="modal-body">
@@ -2301,9 +2301,9 @@
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 															<!-- Edit Quizz Questions -->
-															<div class="modal fade edit-quizz-question" id="editQuizzQuestion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+															<!-- <div class="modal fade edit-quizz-question" id="editQuizzQuestion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 																<div class="modal-dialog modal-lg" role="document">
 																	<div class="modal-content">
 																		<div class="modal-body">
@@ -2390,9 +2390,9 @@
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 															<!-- Quizz template application-->
-															<div class="modal fade quizz-template-application-modal" id="quizzTemplateApplicationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+															<!-- <div class="modal fade quizz-template-application-modal" id="quizzTemplateApplicationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 																<div class="modal-dialog modal-lg" role="document">
 																	<div class="modal-content">
 																		<div class="modal-body">
@@ -2460,485 +2460,15 @@
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 															<!-- Test article settings Starts -->
-															<div class="modal fade test-articles-settings-modal" id="testArticlesSettingsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-																<div class="modal-dialog modal-lg" role="document">
-																	<div class="modal-content">
-																		<div class="modal-body">
-																			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-																				<span aria-hidden="true">
-																					<i class="material-icons">close</i>
-																				</span>
-																			</button>
-																			<div class="row">
-																				<div class="col-md-6 modal-title">
-																					Test articles settings
-																				</div>
-																			</div>
-																			<div class="row">
-																				<div class="col-md-12">
-																					<div class="row">
-																						<div class="col-md-12">
-																							<div class="col-md-12 progress-steps">
-																								<div id="wizardCard">
-																									<form action="" id="wizardForm" method="">
-																										<div class="tab-links">
-																											<ul class="nav">
-																												<li>
-																													<a data-toggle="tab" href="#tab-candidateSettings">
-																														Candidate settings
-																													</a>
-																												</li>
-																												<li>
-																													<a data-toggle="tab" href="#tab-proofreadingSettings">
-																														Proofreading settings
-																													</a>
-																												</li>
-																											</ul>
-																											<div class="tab-content">
-																												<div class="tab-pane" id="tab-candidateSettings">
-																													<div class="row">
-																														<div class="col-md-12 settings-container-module">
-																															<div class="row">
-																																<div class="col-md-6">
-																																	<label>Pricing *</label>
-																																	<div class="col-md-12 activation-border">
-																																		<div class="col-md-12 activation-container">
-																																			<div class="col-md-2 activation-switch">
-																																				<div class="switch" data-off-label="" data-on-label="">
-																																					<input type="checkbox"/>
-																																				</div>
-																																			</div>
-																																			<div class="col-md-9 activation-statement">
-																																				Paid articles:
-																																				<span class="no">
-																																					NO
-																																				</span>
-																																				<span class="yes">
-																																					YES
-																																				</span>
-																																			</div>
-																																		</div>
-																																	</div>
-																																</div>
-																																<div class="col-md-6">
-																																	<div class="row">
-																																		<div class="col-md-5">
-																																			<label>Cost per article *</label>
-																																			<input type="number" class="form-control mt-10" placeholder="Ex: 15">
-																																		</div>
-																																		<div class="col-md-7">
-																																			<label></label>
-																																			<select class="selectpicker mt-15">
-																																				<option value="">per article</option>
-																																				<option value="">per article</option>
-																																				<option value="">per article</option>
-																																				<option value="">per article</option>
-																																			</select>
-																																		</div>
-																																	</div>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-6">
-																															<div class="row">
-																																<div class="col-md-5 settings-container-module">
-																																	<label>Production Time *</label>
-																																	<input type="number" class="form-control" placeholder="Ex: 24">
-																																</div>
-																																<div class="col-md-7 settings-container-module">
-																																	<label></label>
-																																	<select class="selectpicker mt-5">
-																																		<option value="">hours</option>
-																																		<option value="">days</option>
-																																		<option value="">weeks</option>
-																																	</select>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-6 settings-container-module">
-																															<label>Check plagiarism *</label>
-																															<div class="col-md-12 activation-border">
-																																<div class="col-md-12 activation-container">
-																																	<div class="col-md-2 activation-switch">
-																																		<div class="switch" data-off-label="" data-on-label="">
-																																			<input type="checkbox"/>
-																																		</div>
-																																	</div>
-																																	<div class="col-md-9 activation-statement">
-																																		Plagiarism bot:
-																																		<span class="no">
-																																			NO
-																																		</span>
-																																		<span class="yes">
-																																			YES
-																																		</span>
-																																	</div>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-12 settings-container-module">
-																															<label>Add a brief</label>
-																															<a class="drag-drop-brief-settings" href="javascript:;">
-																					                                            <div class="placeholder">
-																					                                                Drag and drop your file(s) <span> - or click here to upload</span>
-																					                                            </div>
-																					                                        </a>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-12 settings-container-module">
-																															<div class="added-settings-brief">
-																																<div class="col-md-1 file-icon"><i class="material-icons pull-right">insert_drive_file</i></div>
-																																<div class="col-md-10 file-name">Allocine_brief-writer.pdf</div>
-																																<div class="col-md-1">
-																																	<a href="javascript:;">
-																																		<i class="material-icons">delete</i>
-																																	</a>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-12 tab-navigation">
-																															<div class="row">
-																																<div class="col-md-12">
-																																	<button class="btn btn-cancel btn-fill btn-wd btn-no btn-cancel-settings pull-left" type="button" data-dismiss="modal">
-																																		Cancel
-																																	</button>
-																																	<button class="btn btn-yes btn-fill btn-wd btn-yes pull-right btn-next" type="button">
-																																		Next
-																																	</button>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																												</div>
-																												<div class="tab-pane" id="tab-proofreadingSettings">
-																													<div class="row">
-																														<div class="col-md-6 settings-container-module">
-																															<label>Team list *</label>
-																															<div class="col-md-12 activation-border">
-																																<div class="col-md-12 activation-container">
-																																	<div class="col-md-2 activation-switch">
-																																		<div class="switch" data-off-label="" data-on-label="">
-																																			<input type="checkbox"/>
-																																		</div>
-																																	</div>
-																																	<div class="col-md-9 activation-statement">
-																																		Search assignee in a team list:
-																																		<span class="no">
-																																			NO
-																																		</span>
-																																		<span class="yes">
-																																			YES
-																																		</span>
-																																	</div>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-12 settings-container-module">
-																															<label>Assignee *</label>
-																															<select data-placeholder="Select an user" class="chosen-select-deselect" tabindex="12">
-																													            <option value=""></option>
-																													            <option data-img-src="lbd/img/default-avatar.png">Adnan Sagar</option>
-																									                            <option data-img-src="lbd/img/default-avatar.png">Rena Cugelman</option>
-																									                            <option selected data-img-src="lbd/img/default-avatar.png">Tavis Lochhead</option>
-																									                            <option data-img-src="lbd/img/default-avatar.png">Brain Cugelman</option>
-																													         </select>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-12 settings-container-module">
-																															<label>Assignee *</label>
-																															<a class="add-assignee-teamlist" href="javascript:;" data-toggle="modal" data-target="#importTeamlistCardSingle">
-																					                                            <div class="placeholder">
-																					                                                + Add assignee from a teamlist
-																					                                            </div>
-																					                                        </a>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-6 settings-container-module">
-																															<label>Cost per article *</label>
-																															<div class="row">
-																																<div class="col-md-5">
-																																	<input type="number" class="form-control" placeholder="Ex: 15">
-																																</div>
-																																<div class="col-md-7">
-																																	<select class="selectpicker">
-																																		<option value="">per article</option>
-																																		<option value="">per article</option>
-																																		<option value="">per article</option>
-																																		<option value="">per article</option>
-																																	</select>
-																																</div>
-																															</div>
-																														</div>
-																														<div class="col-md-6 settings-container-module">
-																															<label>Production Time *</label>
-																															<div class="row">
-																																<div class="col-md-5">
-																																	<input type="number" class="form-control" placeholder="Ex: 24">
-																																</div>
-																																<div class="col-md-7">
-																																	<select class="selectpicker">
-																																		<option value="">hours</option>
-																																		<option value="">days</option>
-																																		<option value="">weeks</option>
-																																	</select>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-12 settings-container-module">
-																															<label>Add a brief</label>
-																															<a class="drag-drop-brief-settings" href="javascript:;">
-																					                                            <div class="placeholder">
-																					                                                Drag and drop your file(s) <span> - or click here to upload</span>
-																					                                            </div>
-																					                                        </a>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-12 settings-container-module">
-																															<div class="added-settings-brief">
-																																<div class="col-md-1 file-icon"><i class="material-icons pull-right">insert_drive_file</i></div>
-																																<div class="col-md-10 file-name">Allocine_brief-writer.pdf</div>
-																																<div class="col-md-1">
-																																	<a href="javascript:;">
-																																		<i class="material-icons">delete</i>
-																																	</a>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																													<div class="row">
-																														<div class="col-md-12 tab-navigation">
-																															<div class="row">
-																																<div class="col-md-12">
-																																	<button class="btn btn-info btn-fill btn-wd btn-no btn-back pull-left" type="button">
-																																		Back
-																																	</button>
-																																	<button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-finish" onclick="onFinishWizard()" type="button">
-																																		Done
-																																	</button>
-																																</div>
-																															</div>
-																														</div>
-																													</div>
-																												</div>
-																											</div>
-																										</div>
-																									</form>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
+															<!-- @include _partials/_test-articles-settings-modal.html -->
 															<!-- Test article settings Ends -->
 															<!-- Import modal Starts-->
-															<!-- @include _partials/_card-single-import-teamlist-modal .html -->
+															<!-- @include _partials/_card-single-import-teamlist-modal.html -->
 															<!-- Import modal Ends-->
 															<!-- Select Assignee Starts-->
-															<div aria-labelledby="myModalLabel" class="modal fade select-assignees-modal" id="selectAssigneesModal" role="dialog" tabindex="-1">
-																<div class="modal-dialog" role="document">
-																	<div class="modal-content">
-																		<div class="modal-body">
-																			<button aria-label="Close" class="close" data-dismiss="modal" type="button">
-																			<span aria-hidden="true">
-																				<i class="material-icons">
-																				close
-																				</i>
-																			</span>
-																			</button>
-																			<div class="row df-ac">
-																				<a class="col-md-1 back pr-0" href="javascript:;" id="back" data-dismiss="modal" data-toggle="modal" data-target="#importTeamlistCardSingle">
-																					<i class="material-icons">
-																					arrow_back
-																					</i>
-																				</a>
-																				<div class="col-md-6 modal-title">
-																					Select assignee(s)
-																				</div>
-																			</div>
-																			<div class="row">
-																				<div class="col-md-12 select-assignee-container">
-																					<h4 class="title">Webedia - Sourcing - Translator FR-ENG</h4>
-																					<div class="col-md-12 card assignee-row">
-																						<div class="row">
-																							<div class="col-md-1 check">
-																								<label class="checkbox">
-																									<input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-																								</label>
-																							</div>
-																							<div class="col-md-2 user-image">
-																								<img src="lbd/img/default-avatar.png" class="img-circle">
-																							</div>
-																							<div class="col-md-8 contributor-info">
-																								<div class="contributor-name">Michael Martin</div>
-																								<div class="status-label">
-																									<span class="label senior">Senior</span>
-																								</div>
-																							</div>
-																							<div class="col-md-2 bidding-info">
-																								11.30 €
-																								<span>58.33 %</span>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="col-md-12 card assignee-row">
-																						<div class="row">
-																							<div class="col-md-1 check">
-																								<label class="checkbox">
-																									<input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-																								</label>
-																							</div>
-																							<div class="col-md-2 user-image">
-																								<img src="lbd/img/default-avatar.png" class="img-circle">
-																							</div>
-																							<div class="col-md-8 contributor-info">
-																								<div class="contributor-name">Michael Martin</div>
-																								<div class="status-label">
-																									<span class="label senior">Senior</span>
-																								</div>
-																							</div>
-																							<div class="col-md-2 bidding-info">
-																								11.30 €
-																								<span>58.33 %</span>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="col-md-12 card assignee-row">
-																						<div class="row">
-																							<div class="col-md-1 check">
-																								<label class="checkbox">
-																									<input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-																								</label>
-																							</div>
-																							<div class="col-md-2 user-image">
-																								<img src="lbd/img/default-avatar.png" class="img-circle">
-																							</div>
-																							<div class="col-md-8 contributor-info">
-																								<div class="contributor-name">Michael Martin</div>
-																								<div class="status-label">
-																									<span class="label senior">Senior</span>
-																								</div>
-																							</div>
-																							<div class="col-md-2 bidding-info">
-																								11.30 €
-																								<span>58.33 %</span>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="row">
-																				<div class="col-md-12 select-assignee-container">
-																					<h4 class="title">LVMH - Translator FR-ENG</h4>
-																					<div class="col-md-12 card assignee-row">
-																						<div class="row">
-																							<div class="col-md-1 check">
-																								<label class="checkbox">
-																									<input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-																								</label>
-																							</div>
-																							<div class="col-md-2 user-image">
-																								<img src="lbd/img/default-avatar.png" class="img-circle">
-																							</div>
-																							<div class="col-md-8 contributor-info">
-																								<div class="contributor-name">Michael Martin</div>
-																								<div class="status-label">
-																									<span class="label senior">Senior</span>
-																								</div>
-																							</div>
-																							<div class="col-md-2 bidding-info">
-																								11.30 €
-																								<span>58.33 %</span>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="col-md-12 card assignee-row">
-																						<div class="row">
-																							<div class="col-md-1 check">
-																								<label class="checkbox">
-																									<input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-																								</label>
-																							</div>
-																							<div class="col-md-2 user-image">
-																								<img src="lbd/img/default-avatar.png" class="img-circle">
-																							</div>
-																							<div class="col-md-8 contributor-info">
-																								<div class="contributor-name">Michael Martin</div>
-																								<div class="status-label">
-																									<span class="label senior">Senior</span>
-																								</div>
-																							</div>
-																							<div class="col-md-2 bidding-info">
-																								11.30 €
-																								<span>58.33 %</span>
-																							</div>
-																						</div>
-																					</div>
-																					<div class="col-md-12 card assignee-row">
-																						<div class="row">
-																							<div class="col-md-1 check">
-																								<label class="checkbox">
-																									<input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-																								</label>
-																							</div>
-																							<div class="col-md-2 user-image">
-																								<img src="lbd/img/default-avatar.png" class="img-circle">
-																							</div>
-																							<div class="col-md-8 contributor-info">
-																								<div class="contributor-name">Michael Martin</div>
-																								<div class="status-label">
-																									<span class="label senior">Senior</span>
-																								</div>
-																							</div>
-																							<div class="col-md-2 bidding-info">
-																								11.30 €
-																								<span>58.33 %</span>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="row">
-																				<div class="col-md-12 tab-navigation">
-																					<div class="row">
-																						<div class="col-md-6">
-																							<button class="btn full-width btn-no btn-cancel-settings pull-left" data-dismiss="modal" data-toggle="modal" data-target="#importTeamlistCardSingle">
-																							Back
-																							</button>
-																						</div>
-																						<div class="col-md-6">
-																							<button class="btn full-width btn-yes pull-right btn-next" type="button" data-dismiss="modal">
-																							Assign
-																							</button>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
+															<!-- @include _partials/_select-assignees-teamlist-modal.html -->
 															<!-- Select Assignee Ends-->
 															<!-- Modals Ends -->
 															<!--   Core JS Files   -->
