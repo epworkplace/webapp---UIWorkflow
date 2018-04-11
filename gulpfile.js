@@ -260,7 +260,7 @@ gulp.task('sass', ['fonts'], function() {
 
 // js tasks
 gulp.task('js', function() {
-  // var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
+  var jsFilter = $.filter(['**/*.js', '!**/*custom.js'], {restore: true});
   if (devBuild) {
     return gulp.src(js.liveIn)
 
@@ -269,7 +269,7 @@ gulp.task('js', function() {
       .pipe($.newer(dest + 'lbd/js/'))
       // .pipe($.deporder())
       // .pipe($.stripDebug())
-      // .pipe(jsFilter)
+      .pipe(jsFilter)
       .pipe($.uglify())
       .pipe($.order([
           "jquery.min.js",
@@ -303,7 +303,7 @@ gulp.task('js', function() {
       .pipe($.concat('lbd-bundle.js', {rebaseUrls: false}))
       // .pipe($.uglify())
       // .pipe($.gzip({append: false}))
-      // .pipe(jsFilter.restore)
+      .pipe(jsFilter.restore)
       .pipe($.size({ title: 'JS out '}))
       .pipe(gulp.dest(dest + 'lbd/js/'));
   }
