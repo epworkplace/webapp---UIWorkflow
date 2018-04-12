@@ -11428,6 +11428,25 @@ vertical-align: middle;
 
 /* Multiple Select Search Box Ends*/
 
+.chosen-multiple-without-image {
+  .chosen-container-multi {
+    ul {
+      height: auto;
+      padding: 11px 15px 3px !important;
+
+      li {
+        margin: 0 5px 5px 0 !important;
+
+        span {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 /*Custom Scrollbar Styles Starts*/
 
 /* Default scrollbar styles */
