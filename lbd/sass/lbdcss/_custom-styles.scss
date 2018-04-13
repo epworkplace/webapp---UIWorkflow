@@ -3673,6 +3673,96 @@ html {
   margin-bottom: 20px;
 }
 
+/* Investment status starts*/
+.investement-status {
+  font-size: 12px;
+  color: $not-started;
+  padding: 20px 15px;
+
+  [class*='-title'] {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  [class*='prev-'] {
+    font-weight: 600;
+  }
+
+  [class*='current-'] {
+    [class*='-value'] {
+      font-size: 20px;
+      color: $main;
+      font-weight: 700;
+    }
+  }
+
+  .cost-per-item {
+    font-size: 16px;
+    font-weight: 700;
+    color: $main;
+  }
+
+  .divider {
+    @include divider(1px);
+  }
+
+  .mission-bidding {
+    .bidding-cost {
+      margin-bottom: 15px;
+
+      span {
+        &.edit {
+          font-size: 12px;
+
+          i {
+            top: 0;
+          }
+
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .mission-requirements {
+    > .col-md-12 {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    [class*='required-'] {
+      padding: 10px;
+      background: $highlight-03;
+      border-radius: 4px;
+
+      .card-user {
+        height: 40px;
+        width: 40px !important;
+        padding: 0;
+
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+        }
+
+        .card-user-empty {
+          height: 40px;
+          background: $not-started;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Investment status ends*/
+
 .assigned-user-container {
   .assigned-user-module {
     margin-bottom: 15px;
