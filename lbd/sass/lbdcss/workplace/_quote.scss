@@ -4,7 +4,7 @@
         .main-panel-wrap {
             .main-panel {
                 .main-panel-page {
-                    .contract-overview-wrap-page{
+                    .contract-overview-wrap-page, .quote-overview-wrap-page{
                     	@include clearfix;
 	                    .main-panel-page-header {}
 
@@ -363,7 +363,7 @@
 }
 
 .quote-mission-list-container {
-    margin-top: 93px;
+    margin-top: 30px;
 }
 
 .no-quote-mission-container {
