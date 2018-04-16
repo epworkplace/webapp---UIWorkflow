@@ -569,33 +569,6 @@
 														<div class="tab-content tab-content-progress">
 															<div class="tab-pane active" id="content-tab1">
 																<div class="row">
-																	<!-- <div class="col-md-12 main-panel-header">
-																		<div class="row">
-																			<div class="col-md-12 header-top-panel">
-																				<div class="col-md-3 pull-left select-all-container m-0">
-																					<div class="select-all">
-																						<label class="checkbox">
-																							<input type="checkbox" data-toggle="checkbox" value="">
-																						</label>
-																						<span class="select">Select all</span>
-																					</div>
-																				</div>
-																				<div class="col-md-3 pull-right project-planner m-0">
-																					<a href="javascript:;" class="project-plan pull-right btn btn-fill">
-																						<span class="btn-label">
-																							<i class="material-icons">today</i>
-																						</span>
-																						Project Plan
-																					</a>
-																				</div>
-																				<div class="col-md-6 pull-right validate m-0">
-																					<button class="btn btn-wd btn-confirm">Pause</button>
-																					<button class="btn btn-wd btn-yes">Close</button>
-																					<button class="btn btn-fill btn-wd delete-btn">Delete</button>
-																				</div>
-																			</div>
-																		</div>
-																	</div> -->
 								                                    <div class="col-md-12 main-panel-header quote-overview-missions">
 								                                        <div class="col-md-3 pull-left select-all-container m-0">
 								                                            <div class="select-all">
@@ -744,7 +717,7 @@
 								                                                                        <span class="tempo-mission" data-toggle="tooltip" data-placement="bottom" data-container="body" title="40 art / 7 days"><i class="material-icons">autorenew</i></span>
 								                                                                        <strong class="primary-font">Translation article FR to US</strong>
 								                                                                        <div class="brief">
-								                                                                            Editorial - Translation - Blog - 400 Words
+								                                                                            <span class="job-label">Production </span>Editorial - Translation - Blog - 400 Words
 								                                                                        </div>
 								                                                                        <div class="language">
 								                                                                            <a href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-container="body" title="French">
@@ -793,7 +766,7 @@
 								                                                                    <div class="header">
 								                                                                        <strong class="primary-font">Free traslation mission</strong>
 								                                                                        <div class="brief">
-								                                                                            Editorial - Translation - Blog - 400 Words
+								                                                                            <span class="job-label">Production </span>Editorial - Translation - Blog - 400 Words
 								                                                                        </div>
 								                                                                        <div class="language-to">
 								                                                                            <a href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-container="body" title="French">
@@ -916,18 +889,13 @@
 																											</div>
 																											<strong class="primary-font">Adobe - Brand Content</strong>
 																											<div class="brief">
-																												Editorial - Blog Articles - 400 Words
-																											</div>
-																											<div class="language">
-																												<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-																													<img src="lbd/img/flag/fr.gif"/>
-																												</a>
+																												<span class="job-label">Sourcing </span>Editorial - Blog Articles - 400 Words
 																											</div>
 																										</div>
 																									</div>
 																									<div class="task-price">
 																										<div class="col-md-2 numbers">
-																											20<span>articles</span>
+																											20<span>jobs</span>
 																										</div>
 																										<div class="col-md-2 turnover">
 																											36,500.00 &#8364;<span>60.00 % margin</span>
@@ -964,8 +932,6 @@
 												</div>
 											</div>
 										</div>
-
-
 	                                </div>
 	                            </div>
 	                        </div>
@@ -1707,7 +1673,6 @@
 
 
 <!-- Modal -->
-
 <!-- Quote download modal -->
 <!-- @include _partials/_quote-download-quote-modal.html -->
 <!-- Quote Estimated duration modal -->
@@ -1720,7 +1685,9 @@
 <!-- @include _partials/_quote-sign-quote-modal.html -->
 <!-- Close Quote modal -->
 <!-- @include _partials/_quote-close-quote-modal.html -->
-
+<!-- @include _partials/_create-sourcing-modal.html -->
+<!-- @include _partials/_clients-create-new-client-modal.html -->
+<!-- Modal ends-->
 
 <!-- @include _partials/_all-js-files.html -->
 <script type="text/javascript">
@@ -1856,6 +1823,17 @@ $(function () {
         $(this).toggleClass("mission-freed");
     });
 
+/* Edit Create Sourcing modal Title*/
+	$('#editCreateSourcingTitle').click(function(e) {
+		e.preventDefault();
+		$('.modal-title-edit').show();
+		$('.modal-title').hide();
+	});
+	$('#saveModalTitle').click(function() {
+		$('.modal-title-edit').hide();
+		$('.modal-title').show();
+	});
+/* Edit Create Sourcing modal Title ends*/
 
 });
 

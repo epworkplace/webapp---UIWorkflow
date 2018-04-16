@@ -1417,6 +1417,10 @@ html {
 						.brief {
 							color: #B0B4BB;
 							font-size: 12px;
+							span.job-label{
+								color: $main;
+								font-weight: 600;
+							}
 						}
 
 						.language, .language-to {

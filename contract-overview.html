@@ -873,6 +873,8 @@
 <!-- @include _partials/_quote-create-quote-mission-modal.html -->
 <!-- Quote Browse mission modal -->
 <!-- @include _partials/_quote-browse-mission-modal.html -->
+<!-- @include _partials/_create-sourcing-modal.html -->
+<!-- @include _partials/_clients-create-new-client-modal.html -->
 <!-- Modals Ends -->
 
 <!--   Core JS Files   -->
@@ -1088,6 +1090,18 @@ $('div').delegate('.card-section-list ul li .card', 'mouseout', function(e){
                 lessLink: '<a href="#" class="morelink">See Less</a>'
             });
     });
+
+/* Edit Create Sourcing modal Title*/
+	$('#editCreateSourcingTitle').click(function(e) {
+		e.preventDefault();
+		$('.modal-title-edit').show();
+		$('.modal-title').hide();
+	});
+	$('#saveModalTitle').click(function() {
+		$('.modal-title-edit').hide();
+		$('.modal-title').show();
+	});
+/* Edit Create Sourcing modal Title ends*/
 
 });
 </script>
