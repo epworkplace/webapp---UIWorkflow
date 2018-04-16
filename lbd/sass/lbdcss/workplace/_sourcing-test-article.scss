@@ -222,6 +222,26 @@
                     }
                   }
                 }
+
+                .test-article-delivery-track {
+                  .block-title {
+                    font-size: 12px;
+                    color: #9A9FA9;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                  }
+
+                  .block-number {
+                    font-size: 18px;
+                    color: #353F53;
+                    font-weight: 700;
+
+                    span {
+                      font-size: 12px;
+                      color: #CFD1D6;
+                    }
+                  }
+                }
               }
 
               .stakeholders {
