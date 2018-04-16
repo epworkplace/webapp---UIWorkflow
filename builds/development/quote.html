@@ -1093,33 +1093,6 @@
 														<div class="tab-content tab-content-progress">
 															<div class="tab-pane active" id="content-tab1">
 																<div class="row">
-																	<!-- <div class="col-md-12 main-panel-header">
-																		<div class="row">
-																			<div class="col-md-12 header-top-panel">
-																				<div class="col-md-3 pull-left select-all-container m-0">
-																					<div class="select-all">
-																						<label class="checkbox">
-																							<input type="checkbox" data-toggle="checkbox" value="">
-																						</label>
-																						<span class="select">Select all</span>
-																					</div>
-																				</div>
-																				<div class="col-md-3 pull-right project-planner m-0">
-																					<a href="javascript:;" class="project-plan pull-right btn btn-fill">
-																						<span class="btn-label">
-																							<i class="material-icons">today</i>
-																						</span>
-																						Project Plan
-																					</a>
-																				</div>
-																				<div class="col-md-6 pull-right validate m-0">
-																					<button class="btn btn-wd btn-confirm">Pause</button>
-																					<button class="btn btn-wd btn-yes">Close</button>
-																					<button class="btn btn-fill btn-wd delete-btn">Delete</button>
-																				</div>
-																			</div>
-																		</div>
-																	</div> -->
 								                                    <div class="col-md-12 main-panel-header quote-overview-missions">
 								                                        <div class="col-md-3 pull-left select-all-container m-0">
 								                                            <div class="select-all">
@@ -1268,7 +1241,7 @@
 								                                                                        <span class="tempo-mission" data-toggle="tooltip" data-placement="bottom" data-container="body" title="40 art / 7 days"><i class="material-icons">autorenew</i></span>
 								                                                                        <strong class="primary-font">Translation article FR to US</strong>
 								                                                                        <div class="brief">
-								                                                                            Editorial - Translation - Blog - 400 Words
+								                                                                            <span class="job-label">Production </span>Editorial - Translation - Blog - 400 Words
 								                                                                        </div>
 								                                                                        <div class="language">
 								                                                                            <a href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-container="body" title="French">
@@ -1317,7 +1290,7 @@
 								                                                                    <div class="header">
 								                                                                        <strong class="primary-font">Free traslation mission</strong>
 								                                                                        <div class="brief">
-								                                                                            Editorial - Translation - Blog - 400 Words
+								                                                                            <span class="job-label">Production </span>Editorial - Translation - Blog - 400 Words
 								                                                                        </div>
 								                                                                        <div class="language-to">
 								                                                                            <a href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-container="body" title="French">
@@ -1440,18 +1413,13 @@
 																											</div>
 																											<strong class="primary-font">Adobe - Brand Content</strong>
 																											<div class="brief">
-																												Editorial - Blog Articles - 400 Words
-																											</div>
-																											<div class="language">
-																												<a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French">
-																													<img src="lbd/img/flag/fr.gif"/>
-																												</a>
+																												<span class="job-label">Sourcing </span>Editorial - Blog Articles - 400 Words
 																											</div>
 																										</div>
 																									</div>
 																									<div class="task-price">
 																										<div class="col-md-2 numbers">
-																											20<span>articles</span>
+																											20<span>jobs</span>
 																										</div>
 																										<div class="col-md-2 turnover">
 																											36,500.00 &#8364;<span>60.00 % margin</span>
@@ -1488,8 +1456,6 @@
 												</div>
 											</div>
 										</div>
-
-
 	                                </div>
 	                            </div>
 	                        </div>
@@ -2231,7 +2197,6 @@
 
 
 <!-- Modal -->
-
 <!-- Quote download modal -->
 <div aria-labelledby="download-quote-modal" class="modal fade download-quote-modal" id="download-quote-modal" role="dialog" tabindex="-1">
     <div class="modal-dialog" role="modal">
@@ -3217,7 +3182,321 @@
     </div>
 </div>
 
+<div aria-labelledby="create-sourcing-modal" class="modal fade create-sourcing-modal" id="createSourcingModal" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<span class="close">
+					<a data-dismiss="modal" href="javascript:;">
+						<i class="material-icons">
+						close
+						</i>
+					</a>
+				</span>
+				<div class="modal-title mb-15">
+					Sourcing name <span class="edit ml-10"><a href="javascript:void(0);" id="editCreateSourcingTitle">Edit <i class="material-icons">mode_edit</i></a></span>
+				</div>
+				<div class="modal-title-edit col-md-10 pl-0  mb-15">
+					<div class="input-group d-flex">
+						<input type="text" placeholder="Edit Title" class="form-control" value="Sourcing name">
+						<button type="" id="saveModalTitle" class="btn btn-fill btn-wd btn-yes">Save</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 create-sourcing-container  mb-15">
+						<div class="row">
+							<div class="col-md-5 sourcing-client-module mb-5">
+								<label>Client name <span class="required">*</span></label>
+								<select class="chosen-default" data-placeholder="Choose a client...">
+									<option value=""></option>
+									<option data-img-src="lbd/img/webedia.jpg">
+										<span class="client-id">C002</span> Webedia Group
+									</option>
+									<option data-img-src="lbd/img/apple.jpg">
+										<span class="client-id">C001</span> Apple Inc
+									</option>
+									<option data-img-src="lbd/img/adobe.jpg">
+										<span class="client-id">C003</span> Adobe Inc
+									</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 create-client-link mb-10">
+								<a href="javascript:;" data-toggle="modal" data-target="#create-new-client-modal">+ Create new client</a>
+							</div>
+						</div>
+						<hr />
+						<div class="row">
+							<div class="col-md-6 sourcing-client-module  mb-15">
+								<label>Duration</label>
+								<div class="row">
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="ex : 5">
+									</div>
+									<div class="col-md-6">
+										<select name="" class="selectpicker">
+											<option>days</option>
+											<option>weeks</option>
+											<option>months</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 sourcing-client-module">
+								<div class="row">
+									<div class="col-md-6">
+										<label>Starting date</label>
+										<input class="form-control datepicker" placeholder="Pick a date here" type="text"/>
+									</div>
+									<div class="col-md-6">
+										<label>Ending date</label>
+										<input class="form-control datepicker" placeholder="Pick a date here" type="text"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-5 sourcing-client-module  mb-15">
+								<label>Sourcing Credit</label>
+								<div class="row">
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="ex : 150000">
+									</div>
+									<div class="col-md-6">
+										<select name="" class="selectpicker">
+											<option>euros (&#8364;)</option>
+											<option>pounds (&#163;)</option>
+											<option>dollars (&#36;)</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-7 sourcing-client-module">
+								<label>Sourcing owner <span class="required">*</span></label>
+								<select class="chosen-default">
+									<option data-img-src="lbd/img/default-avatar.png">Clarisse Mercier
+									</option>
+									<option data-img-src="lbd/img/default-avatar.png">Michael Martin</option>
+									<option data-img-src="lbd/img/default-avatar.png">Seb Chateau</option>
+									<option data-img-src="lbd/img/default-avatar.png">Arun Prod</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 tab-navigation">
+						<button type="button" class="btn btn-info btn-fill btn-no pull-left" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-info btn-fill btn-yes pull-right">Create sourcing</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<div aria-labelledby="create-new-client-modal" class="modal fade create-new-client-modal" id="create-new-client-modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close">
+                    <a data-dismiss="modal" href="javascript:;">
+                        <i class="material-icons">
+                        close
+                        </i>
+                    </a>
+                </span>
+                <div class="modal-title">
+                    Create a new client
+                </div>
+                <form action="" class="form clearfix">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="clientId">
+                                    Client ID
+                                </label>
+                                <input class="form-control" id="clientId" placeholder="C017" type="text"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="clientName">
+                                    Client Name
+                                </label>
+                                <input class="form-control" id="clientName" placeholder="ex: Webedia, LVMH.." type="text"/>
+                            </div>
+                            <div class="col-md-3 pull-right">
+                                <label for="clientHashtag">
+                                    Client Hashtag
+                                </label>
+                                <input type="text" class="form-control selectpicker" id="clientHashtag" value="" placeholder="Type tags and enter" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group client-logo">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="upload-client-logo">
+                                    Client Logo
+                                </label>
+                            </div>
+                            <div class="client-logo empty">
+                                <div class="col-md-12">
+                                    <input id="upload-client-logo" type="file"/>
+                                    <a class="add-client-logo" href="javascript:;">
+                                        <div class="col-md-12">
+                                            Add an image
+                                            <span class="d-block">
+                                                from your computer
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-12">
+                                    <a class="import-from-twitter d-block" href="javascript:;">
+                                        Or import it from twitter
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group client-logo">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="upload-client-logo">
+                                    Client Logo
+                                </label>
+                            </div>
+                            <div class="client-logo full col-md-10">
+                                <div class="col-md-3 image-container">
+                                    <img class="image-loaded" src="lbd/img/blog-1.jpg">
+                                    </img>
+                                </div>
+                                <div class="col-md-9 client-desc-container">
+                                    <div class="description">
+                                        <strong>
+                                        Twitter user:
+                                        </strong>
+                                        <a class="client-name" href="javascript:;">
+                                            @Allocine
+                                        </a>
+                                    </div>
+                                    <div class="image-action">
+                                        <a class="replace" href="javascript:;">
+                                            Replace Image
+                                        </a>
+                                        <a class="remove" href="javascript:;">
+                                            Remove image
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group divider">
+                        <div class="row">
+                            <div>
+                                <label class="col-md-12" for="clientSector">
+                                    Sector
+                                </label>
+                                <div class="">
+                                    <div class="col-md-6">
+                                        <select class="chosen-default chosen-select" id="clientSector">
+                                            <option data-img-src="lbd/img/default-avatar.png">
+                                                Creation & Entertainment
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png">
+                                                Creation
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png">
+                                                Entertainment
+                                            </option>
+                                            <option data-img-src="lbd/img/default-avatar.png">
+                                                Social Media
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div>
+                                <label class="col-md-12" for="clientAddress">
+                                    Address
+                                </label>
+                                <div class="">
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" id="clientAddress" placeholder="-" rows="3">
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div>
+                                <label class="col-md-12 control-label" for="clientCountry">
+                                    Country
+                                </label>
+                                <div class="">
+                                    <div class="col-md-4">
+                                        <select class="chosen-default chosen-select flags" id="clientCountry">
+                                            <option data-img-src="lbd/img/flag/fr.gif" value="">
+                                                France
+                                            </option>
+                                            <option data-img-src="lbd/img/flag/in.gif" value="">
+                                                india
+                                            </option>
+                                            <option data-img-src="lbd/img/flag/jm.gif" value="">
+                                                Jamaica
+                                            </option>
+                                            <option data-img-src="lbd/img/flag/us.gif" value="">
+                                                US
+                                            </option>
+                                            <option data-img-src="lbd/img/flag/uk.gif" value="">
+                                                UK
+                                            </option>
+                                            <option data-img-src="lbd/img/flag/su.gif" value="">
+                                                Switzerland
+                                            </option>
+                                            <option data-img-src="lbd/img/flag/es.gif" value="">
+                                                Spain
+                                            </option>
+                                            <option data-img-src="lbd/img/flag/pol.gif" value="">
+                                                Poland
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-fill btn-wd btn-no pull-left form-control" data-dismiss="modal" type="button">
+                                Cancel
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-fill btn-wd btn-yes pull-right form-control" type="button">
+                                Create client
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal ends-->
 
 <!-- <script src="lbd/js/jquery.min.js" type="text/javascript"></script>
 <script src="lbd/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
@@ -3403,6 +3682,17 @@ $(function () {
         $(this).toggleClass("mission-freed");
     });
 
+/* Edit Create Sourcing modal Title*/
+	$('#editCreateSourcingTitle').click(function(e) {
+		e.preventDefault();
+		$('.modal-title-edit').show();
+		$('.modal-title').hide();
+	});
+	$('#saveModalTitle').click(function() {
+		$('.modal-title-edit').hide();
+		$('.modal-title').show();
+	});
+/* Edit Create Sourcing modal Title ends*/
 
 });
 
