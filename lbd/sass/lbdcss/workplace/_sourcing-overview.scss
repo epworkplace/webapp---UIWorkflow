@@ -548,7 +548,7 @@
 
 .question-list-container {
   .header-title {
-    margin-bottom: 0;
+    margin-bottom: 5px;
 
     strong {
       margin-right: 20px;
@@ -571,7 +571,41 @@
     }
   }
 
-  .question-list {
+  p.activation-alert {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a0a5af;
+  }
+
+  .template-selection-container {
+    background: $lighter-gray;
+    border-radius: 6px;
+    padding: 15px 30px;
+
+    .quizz-template-selection {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+
+      .btn-preview {
+        margin-left: 15px;
+        width: 140px !important;
+      }
+    }
+
+    a {
+      color: $main;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  /* .question-list {
     .quiz-time-section {
       margin-bottom: 20px;
 
@@ -708,7 +742,7 @@
         }
       }
     }
-  }
+  }*/
 }
 
 /*Question list container Ends*/
