@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Light Bootstrap Dashboard PRO by Creative Tim </title>
+    <!-- @include _partials/_all-meta-head.html -->
+</head>
+
+<body class="wp-app layout-3">
+	<!-- @include _partials/_main-menu.html -->
+<div class="wrapper">
+  <!-- @include _partials/_sidebar.html -->
+  <div class="container-fluid page-wrap">
+    <div class="row">
+      <div class="col-md-12 main-panel-wrap">
+        <div class="main-panel">
+          <div class="container-fluid main-panel-page">
+            <div class="row main-container quizz-surveys-list-page" id="">
+              <div class="col-md-4 tab-panel-container">
+                <div class="tab-panel outside">
+                  <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header"> </div>
+                      <div class="row">
+                        <div class="col-xs-12 page-title">
+                          <button type="button" class="navbar-toggle" data-toggle="collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                          <a class="navbar-brand" href="#">Quizz &amp; Surveys</a> </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 tab-panel-search">
+                          <div class="search-input">
+                            <input type="text" class="form-control" name="company" required placeholder="Search a Keyword..." />
+                            <div class="search-icon"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                  <div class="page-filter">
+                      <div class="status-list-container">
+                          <div class="status-title">Type</div>
+                          <div class="status-list">
+                              <ul class="btn-group btn-group-justified" data-toggle="buttons">
+                                  <li>
+                                      <a href="#quizz-list" class="btn btn-default" data-toggle="tab">
+                                          <input type="radio" id="ongoing" name="contract-tabs" value="ongoing" />
+                                          <i class="material-icons">check_box</i>
+                                          <p>Quizz</p>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="#surveys-list" class="btn btn-default" data-toggle="tab">
+                                          <input type="radio" id="validate" name="contract-tabs" value="validate" />
+                                          <i class="material-icons">event_note</i>
+                                          <p>Surveys</p>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="filter-list-container filter-list-bottom">
+                          <div class="filter-title">Filters</div>
+                          <div class="filter-list">
+                              <ul>
+                                  <li>
+                                      <div class="select-group">
+                                          <div class="form-group owners">
+                                          <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Sectors" id="owners">
+                                              <option data-hidden="true"></option>
+                                                  <option value="0">Sector 0</option>
+                                                  <option value="1">Sector 1</option>
+                                                  <option value="2">Sector 2</option>
+                                                  <option value="3">Sector 3</option>
+                                                  <option value="4">Sector 4</option>
+                                          </select>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 col-md-offset-4 main-panel-container">
+								<div class="no-data-container">
+									<div class="no-data-placeholder">
+										<h2>Play with filters or type a keyword</h2>
+										<p>Or</p>
+										<a href="javascript:;" class="btn btn-fill btn-download create">
+											<span class="btn-label">
+												<i class="material-icons">add</i>
+											</span>
+											Create a quizz or a survey
+										</a>
+									</div>
+								</div>
+                <div class="content">
+
+                  <!-- @include _partials/_quizz-surveys-list-quizz.html -->
+                  <!-- @include _partials/_quizz-surveys-list-surveys.html -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal windows starts -->
+
+<!-- Delete confirmation modal -->
+<!-- @include _partials/_delete-confirmation-modal.html -->
+<!-- Profile modal -->
+<!-- @include _partials/_profile-modal.html -->
+<!-- My profile edit and logout modal -->
+<!-- @include _partials/_my-profile-edit-logout-modal.html -->
+<!-- Create new Client modal -->
+<!-- @include _partials/_clients-create-new-client-modal.html -->
+<!-- Gloabal user profile modal -->
+<!-- @include _partials/_global-user-profile-modal.html -->
+<!-- My profile edit account information modal -->
+<!-- @include _partials/_global-new-user-profile-modal.html -->
+<!-- Change user profile image modal -->
+<!-- @include _partials/_change-user-image-modal.html -->
+<!-- My profile edit contact modal -->
+<!-- @include _partials/_my-profile-edit-contact-modal.html -->
+<!-- My profile edit address modal -->
+<!-- @include _partials/_my-profile-edit-address-modal.html -->
+<!-- My profile edit account information modal -->
+<!-- @include _partials/_my-profile-edit-acc-info-modal.html -->
+
+
+
+<!-- Modal windows ends -->
+
+
+<!--   Core JS Files   -->
+<!-- @include _partials/_all-js-files.html -->
+
+<!-- Custom Scripts -->
+
+<script>
+$(document).ready(function(){
+
+    /* Edit User contact info */
+    $(document).on('click', ".general-info .info-edit", function(e){
+        e.stopPropagation();
+        $('.contact-info-edit').slideDown();
+    });
+    $(document).on('click', ".info-edit-actions .cancel-btn, .info-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.contact-info-edit').slideUp();
+    });
+
+    /* Edit User contact informations Email */
+    $(document).on('click', ".add-new-email a.add-new-email", function(e){
+        e.stopPropagation();
+        $(this).parents('.add-new-email').fadeOut();
+        $(this).parents('.add-new-email').siblings('.add-email').fadeIn();
+    });
+    $(document).on('click', ".description-edit-actions .cancel-btn, .description-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.description-info-edit').fadeOut();
+        $('.user-description-info').fadeIn();
+    });
+
+    /* Edit User contact informations Phone */
+    $(document).on('click', ".add-new-phone a.add-new-phone", function(e){
+        e.stopPropagation();
+        $(this).parents('.add-new-phone').fadeOut();
+        $(this).parents('.add-new-phone').siblings('.add-phone').fadeIn();
+    });
+    $(document).on('click', ".add-phone .edit-actions .btn-no, .add-phone .edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).parents('.add-phone').fadeOut();
+        $(this).parents('.add-phone').siblings('.add-new-phone').fadeIn();
+    });
+
+    /* Edit User description info */
+    $(document).on('click', ".general-info .description-edit", function(e){
+        e.stopPropagation();
+        $('.user-description-info').fadeOut();
+        $('.description-info-edit').fadeIn();
+    });
+    $(document).on('click', ".description-edit-actions .cancel-btn, .description-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.description-info-edit').fadeOut();
+        $('.user-description-info').fadeIn();
+    });
+
+    /* Edit User about info */
+    $(document).on('click', ".general-info .about-edit", function(e){
+        e.stopPropagation();
+        $('.user-about-info').fadeOut();
+        $('.about-info-edit').fadeIn();
+    });
+    $(document).on('click', ".about-edit-actions .cancel-btn, .about-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.about-info-edit').fadeOut();
+        $('.user-about-info').fadeIn();
+    });
+
+    /* Edit User languages info */
+    $(document).on('click', ".general-info .languages-edit, .add-new-language .add-a-language", function(e){
+        e.stopPropagation();
+        $('.user-languages-info').fadeOut();
+        $('.language-info-edit').fadeIn();
+    });
+    $(document).on('click', ".language-edit-actions .cancel-btn, .language-edit-actions .btn-yes", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.language-info-edit').fadeOut();
+        $('.user-languages-info').fadeIn();
+    });
+    $(document).on('click', ".language-info-edit .add-a-language", function(e){
+        var newLanguageRow = ``;
+        e.stopPropagation();
+        /*$( ".user-language-edit-container .user-language-edit:last-child" ).clone().appendTo( ".user-language-edit-container" );
+        $('.user-language-edit:last-child .selectpicker').selectpicker('refresh');
+        $('.user-language-edit-container').append(newLanguageRow);*/
+    });
+    $(document).on('click', '.selectpicker', function(e){
+      $(this).selectpicker('refresh');
+      console.log($(this));
+    });
+
+    $(document).on('click', "#updateNewWebsite", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var addedWebsite = $(this).parents('.input-group').find('input').val();
+        var addedToList = '<li class="list-item card col-md-6"><label class="checkbox primary-font"><span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox">' + addedWebsite + '</label></li>';
+        if(addedWebsite){
+          $( addedToList ).insertBefore( $('.add-new-website').parents('.list-item') );
+        }
+        $('.add-new-website').parents('.list-item').show();
+        $(this).parents('.list-item.add-website').hide();
+    });
+
+
+    $(document).on('click', ".list-item .add-new-website", function(e){
+        e.stopPropagation();
+        $('.list-item.add-website').show();
+        $(this).parents('.list-item').hide();
+    });
+    $(document).on('click', "#updateNewWebsite", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var addedWebsite = $(this).parents('.input-group').find('input').val();
+        var addedToList = '<li class="list-item card col-md-6"><label class="checkbox primary-font"><span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox">' + addedWebsite + '</label></li>';
+        if(addedWebsite){
+          $( addedToList ).insertBefore( $('.add-new-website').parents('.list-item') );
+        }
+        $('.add-new-website').parents('.list-item').show();
+        $(this).parents('.list-item.add-website').hide();
+    });
+
+    $(document).on('click', ".special-users .checkbox", function(e){
+      e.stopPropagation();
+        if ($(this).hasClass('checked')) {
+            $(this).parents('.list-item').addClass('selected-in-list')
+        } else {
+            $(this).parents('.list-item').removeClass('selected-in-list')
+        }
+    });
+
+    /*Quizz list click to open Specific quizz*/
+	    $('div').delegate('#quizz-list .card-section-list ul li .card', 'click', function(e){
+	       if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
+	          /*code placed inside this condition is not executed on clicking the element #test*/
+	    e.stopPropagation();
+	          window.open('quizz.html','_blank');
+	          // $('#contributorUserProfileModal').modal('show')
+	       }
+	    });
+    /*Quizz list click to open Specific quizz ends*/
+		/*Surveys list click to open Specific survey*/
+	    $('div').delegate('#surveys-list .card-section-list ul li .card', 'click', function(e){
+	       if($(e.target).closest('.checkbox, a, button, .card-user, .quote-mission-creation, .card-draft').length === 0) {
+	          /*code placed inside this condition is not executed on clicking the element #test*/
+	    e.stopPropagation();
+	          window.open('surveys.html','_blank');
+	          // $('#contributorUserProfileModal').modal('show')
+	       }
+	    });
+    /*Surveys list click to open Specific survey ends*/
+
+    /*Read more / Read less*/
+     $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+      $(this).find('.comment').css({overflow: "hidden"});
+        }).one('shown.bs.modal shown.bs.tab', function () {
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+    });
+
+    /*$(document).on( 'shown.bs.tab', 'a[data-toggle=\'tab\']', function (e) {
+       $('.comment').readmore({
+            speed : 100,
+            collapsedHeight: 60,
+            moreLink: '<a href="#" class="morelink">See more</a>',
+            lessLink: '<a href="#" class="morelink">See Less</a>'
+        });
+    })*/
+
+    /* Edit Myprofile User name */
+    $(document).on('click', ".user-details .bo-user", function(e){
+        e.stopPropagation();
+        $(this).parents('.user-name').hide(100);
+        $(this).parents('.row').find('.edit-update-name').show(100);
+    });
+    $(document).on('click', "#updateUserProfileName", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).parents('.edit-update-name').hide(100);
+        $(this).parents('.list-head-container').find('.user-name').show(100);
+    });
+
+
+
+
+
+});
+</script>
+
+</body>
+</html>

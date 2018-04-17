@@ -135,6 +135,9 @@ $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
 .required {
     color: $delete;
 }
+label{
+	font-weight: 600;
+}
 
 .df-ac {
 	display: flex !important;

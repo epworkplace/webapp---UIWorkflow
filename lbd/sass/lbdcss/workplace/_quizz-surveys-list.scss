@@ -1,0 +1,63 @@
+/* Quizz and Surveys template CSS Starts */
+.layout-3.wp-app {
+  .page-wrap {
+    .main-panel-wrap {
+      .main-panel {
+        .main-panel-page {
+          .main-panel-page-header {}
+
+          .main-container {
+          	&.quizz-surveys-list-page{
+	            .tab-panel-container {
+
+	            }
+
+	            .main-panel-container {
+	              .content {
+	                .tab-content-container {
+	                  .contract-content-container {
+	                    .card-section-list {
+	                      ul {
+	                        li {
+	                          @include clearfix;
+	                        }
+	                      }
+
+	                      .card-contract {
+	                        height: auto;
+	                        display: -webkit-flex;
+	                        display: -moz-flex;
+	                        display: -ms-flex;
+	                        display: -o-flex;
+	                        display: flex;
+
+	                        .language-container {
+	                          margin: 0 0 0 15px;
+	                          padding: 0;
+	                          width: auto;
+	                          .language-to{
+	                          	@extend %language-breadcrum;
+	                          }
+	                        }
+
+	                      }
+	                    }
+	                  }
+	                }
+	              }
+	            }
+
+          	}
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Modal styles Starts */
+
+
+/* Modal styles Ends */
+
+/* Quizz and Surveys template CSS Ends */
