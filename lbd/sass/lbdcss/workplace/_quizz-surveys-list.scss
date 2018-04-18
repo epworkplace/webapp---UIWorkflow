@@ -56,8 +56,25 @@
 }
 
 /* Modal styles Starts */
+.quizz-surveys-creation-modal{
+	.activation-border {
+	  @include clearfix;
+		border: none;
 
+	  .activation-container {
+	    padding: 5px 0px;
+
+	    .activation-statement {
+	      font-weight: 600;
+	      color: #353F53;
+	      line-height: 0;
+	      padding-left: 0;
+	    }
+	  }
+	}
+}
 
 /* Modal styles Ends */
+
 
 /* Quizz and Surveys template CSS Ends */

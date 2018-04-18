@@ -445,7 +445,7 @@ $(document).ready(function(){
         }
     });
 
-/*    $('#wizardCardTapable').bootstrapWizard({
+    $('#wizardCardTapable').bootstrapWizard({
       tabClass: 'nav nav-pills',
       nextSelector: '.btn-next',
       previousSelector: '.btn-back',
@@ -476,7 +476,7 @@ $(document).ready(function(){
                 $(wizard).find('.btn-finish').hide();
             }
         }
-    });*/
+    });
 
 
     //contract Tag

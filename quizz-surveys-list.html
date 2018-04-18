@@ -74,6 +74,20 @@
                                           </select>
                                       </div>
                                   </li>
+                                  <li>
+                                      <div class="select-group">
+                                          <div class="form-group tag">
+                                              <select data-placeholder="Enter a tag.." class="chosen-select" multiple id="tag">
+                                                  <option value=""></option>
+                                                  <option value="0">0</option>
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                  <option value="4">4</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </li>
                               </ul>
                           </div>
                       </div>
@@ -85,7 +99,7 @@
 									<div class="no-data-placeholder">
 										<h2>Play with filters or type a keyword</h2>
 										<p>Or</p>
-										<a href="javascript:;" class="btn btn-fill btn-download create">
+										<a href="javascript:;" class="btn btn-fill btn-download create create-questionnaire-quizz" data-toggle="modal" data-target="#quizzSurveysCreation">
 											<span class="btn-label">
 												<i class="material-icons">add</i>
 											</span>
@@ -130,8 +144,8 @@
 <!-- @include _partials/_my-profile-edit-address-modal.html -->
 <!-- My profile edit account information modal -->
 <!-- @include _partials/_my-profile-edit-acc-info-modal.html -->
-
-
+<!-- Quizz surveys creation modal -->
+<!-- @include _partials/_quizz-surveys-creation-modal.html -->
 
 <!-- Modal windows ends -->
 
@@ -143,17 +157,6 @@
 
 <script>
 $(document).ready(function(){
-
-    /* Edit User contact info */
-    $(document).on('click', ".general-info .info-edit", function(e){
-        e.stopPropagation();
-        $('.contact-info-edit').slideDown();
-    });
-    $(document).on('click', ".info-edit-actions .cancel-btn, .info-edit-actions .btn-yes", function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        $('.contact-info-edit').slideUp();
-    });
 
     /* Edit User contact informations Email */
     $(document).on('click', ".add-new-email a.add-new-email", function(e){
@@ -291,6 +294,16 @@ $(document).ready(function(){
 	    });
     /*Surveys list click to open Specific survey ends*/
 
+    /* Modal particular Link Step*/
+	    $(document).on('click', '.create-questionnaire-quizz', function(e){
+					e.preventDefault();
+					$('#wizardCardTapable').bootstrapWizard('show',0)
+	    });
+	    $(document).on('click', '.create-questionnaire-survey', function(e){
+					e.preventDefault();
+					$('#wizardCardTapable').bootstrapWizard('show',1)
+	    });
+
     /*Read more / Read less*/
      $('.comment').each(function(){
         $(this).readmore({
@@ -312,14 +325,6 @@ $(document).ready(function(){
             });
     });
 
-    /*$(document).on( 'shown.bs.tab', 'a[data-toggle=\'tab\']', function (e) {
-       $('.comment').readmore({
-            speed : 100,
-            collapsedHeight: 60,
-            moreLink: '<a href="#" class="morelink">See more</a>',
-            lessLink: '<a href="#" class="morelink">See Less</a>'
-        });
-    })*/
 
     /* Edit Myprofile User name */
     $(document).on('click', ".user-details .bo-user", function(e){
@@ -334,9 +339,10 @@ $(document).ready(function(){
         $(this).parents('.list-head-container').find('.user-name').show(100);
     });
 
-
-
-
+  	tinymce.init({
+		    selector: '[id*="edit-textarea-normal"]',
+				height: "100"
+		});
 
 });
 </script>
