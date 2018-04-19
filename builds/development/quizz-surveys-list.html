@@ -2301,20 +2301,13 @@
 														<div class="row form-group">
 															<div class="col-md-12 quizz-module">
 																<label>Tags</label>
-																<select data-placeholder="Enter a tag.." class="chosen-select" multiple id="tag">
-					                                                <option value=""></option>
-					                                                <option value="0">0</option>
-					                                                <option value="1">1</option>
-					                                                <option value="2">2</option>
-					                                                <option value="3">3</option>
-					                                                <option value="4">4</option>
-					                                            </select>
+																<input type="text" class="form-control selectpicker" id="quizzSurveysHashtag-01" value="" placeholder="Type tags and enter" />
 															</div>
 														</div>
 														<div class="row">
 															<div class="col-md-12 quizz-module">
 																<label>Introduction Text</label>
-																<textarea class="form-control" id="edit-textarea-normal-03" placeholder="Type description text here.." rows="3"></textarea>
+																<textarea class="form-control" id="edit-textarea-normal-04" placeholder="Type description text here.." rows="3"></textarea>
 															</div>
 														</div>
 														<div class="row">
@@ -2406,20 +2399,13 @@
 														<div class="row form-group">
 															<div class="col-md-12 quizz-module">
 																<label>Tags</label>
-																<select data-placeholder="Enter a tag.." class="chosen-select" multiple id="tag">
-					                                                <option value=""></option>
-					                                                <option value="0">0</option>
-					                                                <option value="1">1</option>
-					                                                <option value="2">2</option>
-					                                                <option value="3">3</option>
-					                                                <option value="4">4</option>
-					                                            </select>
+																<input type="text" class="form-control selectpicker" id="quizzSurveysHashtag-02" value="" placeholder="Type tags and enter" />
 															</div>
 														</div>
 														<div class="row">
 															<div class="col-md-12 quizz-module">
 																<label>Introduction Text</label>
-																<textarea class="form-control" id="edit-textarea-normal-03" placeholder="Type description text here..." rows="3"></textarea>
+																<textarea class="form-control" id="edit-textarea-normal-05" placeholder="Type description text here..." rows="3"></textarea>
 															</div>
 														</div>
 														<div class="row">
@@ -2696,10 +2682,24 @@ $(document).ready(function(){
         $(this).parents('.list-head-container').find('.user-name').show(100);
     });
 
-  	tinymce.init({
-		    selector: '[id*="edit-textarea-normal"]',
-				height: "100"
-		});
+    /*Tags with dropdown*/
+
+	    $('[id*="quizzSurveysHashtag"]').tokenfield({
+	      autocomplete: {
+	        source: ['#LVMH','#ALCI','#ACIL','#CMNS'],
+	        delay: 100
+	      },
+	      minWidth: 10,
+	      showAutocompleteOnFocus: true
+	    })
+	    $('[id*="quizzSurveysHashtag"]').on('tokenfield:createtoken', function (event) {
+	      var existingTokens = $(this).tokenfield('getTokens');
+	      $.each(existingTokens, function(index, token) {
+	        if (token.value === event.attrs.value)
+	          event.preventDefault();
+	      });
+	    });
+	  /*Tags with dropdown ends*/
 
 });
 </script>

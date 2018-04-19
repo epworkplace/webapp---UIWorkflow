@@ -339,10 +339,24 @@ $(document).ready(function(){
         $(this).parents('.list-head-container').find('.user-name').show(100);
     });
 
-  	tinymce.init({
-		    selector: '[id*="edit-textarea-normal"]',
-				height: "100"
-		});
+    /*Tags with dropdown*/
+
+	    $('[id*="quizzSurveysHashtag"]').tokenfield({
+	      autocomplete: {
+	        source: ['#LVMH','#ALCI','#ACIL','#CMNS'],
+	        delay: 100
+	      },
+	      minWidth: 10,
+	      showAutocompleteOnFocus: true
+	    })
+	    $('[id*="quizzSurveysHashtag"]').on('tokenfield:createtoken', function (event) {
+	      var existingTokens = $(this).tokenfield('getTokens');
+	      $.each(existingTokens, function(index, token) {
+	        if (token.value === event.attrs.value)
+	          event.preventDefault();
+	      });
+	    });
+	  /*Tags with dropdown ends*/
 
 });
 </script>

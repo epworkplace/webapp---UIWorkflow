@@ -64,21 +64,23 @@
 
 /* Modal styles Starts */
 .quizz-surveys-creation-modal{
-/* 	.activation-border {
-  @include clearfix;
-	border: none;
-
-  .activation-container {
-    padding: 5px 0px;
-
-    .activation-statement {
-      font-weight: 600;
-      color: #353F53;
-      line-height: 0;
-      padding-left: 0;
-    }
-  }
-} */
+	.tokenfield{
+		.token{
+			.close{
+				line-height: normal;
+				color: $helper;
+				display: -webkit-inline-flex;
+				display: -moz-inline-flex;
+				display: -ms-inline-flex;
+				display: -o-inline-flex;
+				display: inline-flex;
+				align-items: center;
+				&:hover{
+					color: $main;
+				}
+			}
+		}
+	}
 }
 
 /* Modal styles Ends */
