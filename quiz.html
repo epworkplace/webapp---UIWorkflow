@@ -26,7 +26,7 @@
 															</div>
 															<div class="col-md-1 d-inline-flex pull-right edit">
 																<i class="material-icons">create</i>
-																<a href="javascript:;">Edit</a>
+																<a href="javascript:;" data-toggle="modal" data-target="#editQuiz">Edit</a>
 															</div>
 														</div>
 														<div class="row">
@@ -115,7 +115,14 @@
 		<!-- Select Assignee Starts-->
 		<!-- @include _partials/_select-assignees-teamlist-modal.html -->
 		<!-- Select Assignee Ends-->
+		<!-- Edit Quizz Starts-->
+		<!-- @include _partials/_edit-quiz-modal.html -->
+		<!-- Edit Quizz Ends-->
+		<!-- Edit Survey Starts-->
+		<!-- @include _partials/_edit-survey-modal.html -->
+		<!-- Edit Survey Ends-->
 		<!-- Modals Ends -->
+
 		<!--   Core JS Files   -->
 		<!-- @include _partials/_all-js-files.html -->
 		<!-- Custom scripts -->
@@ -200,7 +207,39 @@
 				// $('.job-filter-options').slideToggle(200);
 			});
 		/*Manage filter options toggle ends*/
-			});
-		</script>
+    /*Tags with dropdown*/
+	    $('[id*="quizzHashtag"]').tokenfield({
+	      autocomplete: {
+	        source: ['#LVMH','#ALCI','#ACIL','#CMNS'],
+	        delay: 100
+	      },
+	      minWidth: 10,
+	      showAutocompleteOnFocus: true
+	    })
+	    $('[id*="quizzHashtag"]').on('tokenfield:createtoken', function (event) {
+	      var existingTokens = $(this).tokenfield('getTokens');
+	      $.each(existingTokens, function(index, token) {
+	        if (token.value === event.attrs.value)
+	          event.preventDefault();
+	      });
+	    });
+	    $('[id*="surveysHashtag"]').tokenfield({
+	      autocomplete: {
+	        source: ['#LVMH','#ALCI','#ACIL','#CMNS'],
+	        delay: 100
+	      },
+	      minWidth: 10,
+	      showAutocompleteOnFocus: true
+	    })
+	    $('[id*="surveysHashtag"]').on('tokenfield:createtoken', function (event) {
+	      var existingTokens = $(this).tokenfield('getTokens');
+	      $.each(existingTokens, function(index, token) {
+	        if (token.value === event.attrs.value)
+	          event.preventDefault();
+	      });
+	    });
+	  /*Tags with dropdown ends*/
+	});
+</script>
 	</body>
 </html>
