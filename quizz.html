@@ -4,7 +4,7 @@
 		<title> Light Bootstrap Dashboard PRO by Creative Tim </title>
 		<!-- @include _partials/_all-meta-head.html -->
 	</head>
-	<body class="wp-app layout-2">
+	<body class="wp-app layout-6">
 		<!-- @include _partials/_main-menu.html -->
 		<div class="wrapper">
 			<!-- @include _partials/_sidebar.html -->
@@ -13,36 +13,85 @@
 					<div class="col-md-12 main-panel-wrap">
 						<div class="main-panel">
 							<div class="container-fluid main-panel-page">
-								<div class="job-single-offer-page">
+								<div class="quiz-main-page">
 									<div class="row main-container">
 										<div class="overlay-main-container"></div>
-										<div class="col-md-12 pb-20">
-											<div class="container-navigation col-md-12">
+										<div class="container-content">
+											<div class="content-main col-md-8">
 												<div class="row">
-													<div class="col-md-12">
+													<div class="col-md-12 question-detail-container card pt-15 pb-15">
 														<div class="row">
-															<div class="col-md-4 mb-20">
-																<ul class="nav container-nav col-md-12">
-																	<li class="active"><a href="sourcing-offers-single.html">Offer</a></li>
-																	<li><a href="sourcing-candidates-list.html">Candidate list</a></li>
-																	<li><a href="sourcing-team-list.html">Team list</a></li>
+															<div class="col-md-4 back-to-page">
+																<i class="material-icons">arrow_back</i> <a href="javascript">Back to questionnaire list</a>
+															</div>
+															<div class="col-md-1 d-inline-flex pull-right edit">
+																<i class="material-icons">create</i>
+																<a href="javascript:;">Edit</a>
+															</div>
+														</div>
+														<div class="row">
+															<h2 class="col-md-12 header-title">Quizz Fashion / Luxe</h2>
+														</div>
+														<div class="row">
+															<div class="col-md-12 tags-show">
+																<ul>
+																	<li class="label tags">E-commerce</li>
+																	<li class="label tags">Reality / Lifestyle / Luxury</li>
 																</ul>
 															</div>
 														</div>
-														<div class="page-title mb-20">
-															<div class="row">
-																<div class="col-md-4 sidebar-page-nav-container">
-																	<a class="page-navigation" href="#"><i class="material-icons">arrow_back</i> </a> <h4 class="sidebar-title">Translator FR-ENG</h4>
+														<div class="row">
+															<div class="col-md-12 questionnaire-summary mb-30">
+																<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+																<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12 questionnaire-details">
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="details">
+																			<span>Time limit</span>10:00 min
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="details">
+																			<span>Number of questions</span>10 questions
+																		</div>
+																	</div>
+																	<div class="col-md-6">
+																		<div class="details required">
+																			<span>Required score</span><i class="material-icons">check</i>7 out of 10
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
+												<div class="row">
+													<a class="col-md-12 add-question mb-30" href="javascript:;">
+														<i class="material-icons">add</i> Add a qustion
+													</a>
+												</div>
 											</div>
-										</div>
-										<div class="container-content">
-											<!-- @include _partials/_sourcing-offers-single-content-main.html -->
-											<!-- @include _partials/_sourcing-offers-single-content-aside.html -->
+											<div class="content-aside col-md-4">
+												<div class="col-md-12 card pt-15 pb-15">
+													<div class="col-md-12">
+														<div class="row">
+															<div class="col-md-12 question-number">
+																0 question - <a href="javascript:;">Add a question</a>
+															</div>
+														</div>
+														<div class="row">
+															<div class="divider"></div>
+														</div>
+														<div class="row">
+															<a href="javascript:;" class="btn btn-confirm full-width">Quizz preview</a>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>

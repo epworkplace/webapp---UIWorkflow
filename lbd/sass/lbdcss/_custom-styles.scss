@@ -11553,6 +11553,20 @@ vertical-align: middle;
   }
 }
 
+/* token starts */
+
+.tokenfield .token .close {
+  position: relative;
+  top: -7px;
+}
+
+.tokenfield.form-control {
+  height: auto;
+  padding: 5px 12px;
+}
+
+/* token ends */
+
 /*Custom Scrollbar Styles Starts*/
 
 /* Default scrollbar styles */
