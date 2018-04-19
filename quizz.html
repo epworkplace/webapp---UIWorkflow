@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Light Bootstrap Dashboard PRO by Creative Tim </title>
+		<!-- @include _partials/_all-meta-head.html -->
+	</head>
+	<body class="wp-app layout-2">
+		<!-- @include _partials/_main-menu.html -->
+		<div class="wrapper">
+			<!-- @include _partials/_sidebar.html -->
+			<div class="container-fluid page-wrap">
+				<div class="row">
+					<div class="col-md-12 main-panel-wrap">
+						<div class="main-panel">
+							<div class="container-fluid main-panel-page">
+								<div class="job-single-offer-page">
+									<div class="row main-container">
+										<div class="overlay-main-container"></div>
+										<div class="col-md-12 pb-20">
+											<div class="container-navigation col-md-12">
+												<div class="row">
+													<div class="col-md-12">
+														<div class="row">
+															<div class="col-md-4 mb-20">
+																<ul class="nav container-nav col-md-12">
+																	<li class="active"><a href="sourcing-offers-single.html">Offer</a></li>
+																	<li><a href="sourcing-candidates-list.html">Candidate list</a></li>
+																	<li><a href="sourcing-team-list.html">Team list</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="page-title mb-20">
+															<div class="row">
+																<div class="col-md-4 sidebar-page-nav-container">
+																	<a class="page-navigation" href="#"><i class="material-icons">arrow_back</i> </a> <h4 class="sidebar-title">Translator FR-ENG</h4>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="container-content">
+											<!-- @include _partials/_sourcing-offers-single-content-main.html -->
+											<!-- @include _partials/_sourcing-offers-single-content-aside.html -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modals Starts -->
+		<!-- Create a Job -->
+		<!-- @include _partials/_create-offer-job-modal.html -->
+		<!-- Manage filters -->
+		<!-- @include _partials/_sourcing-manage-filters-modal.html -->
+		<!-- Test article settings Starts -->
+		<!-- @include _partials/_test-articles-settings-modal.html -->
+		<!-- Test article settings Ends -->
+		<!-- Import modal Starts-->
+		<!-- @include _partials/_card-single-import-teamlist-modal.html -->
+		<!-- Import modal Ends-->
+		<!-- Select Assignee Starts-->
+		<!-- @include _partials/_select-assignees-teamlist-modal.html -->
+		<!-- Select Assignee Ends-->
+		<!-- Modals Ends -->
+		<!--   Core JS Files   -->
+		<!-- @include _partials/_all-js-files.html -->
+		<!-- Custom scripts -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/* Modal particular Link Step*/
+				$('#createModalAvailability').click(function(e) {
+					e.preventDefault();
+					$('#wizardCard').bootstrapWizard('show',1)
+				});
+				$('#createModalQuizz').click(function(e) {
+					e.preventDefault();
+					$('#wizardCard').bootstrapWizard('show',2)
+				});
+				$('#createModalSurvey').click(function(e) {
+					e.preventDefault();
+					$('#wizardCard').bootstrapWizard('show',3)
+				});
+				$('#createModalTestArticle').click(function(e) {
+					e.preventDefault();
+					$('#wizardCard').bootstrapWizard('show',4)
+				});
+		/* Edit offer title */
+		$(document).on('click', ".edit-offer-title", function(e){
+		e.stopPropagation();
+		var prevTitle = $(this).text();
+		$(this).hide('fast');
+		$('.offer-title-edit').find('input').val(prevTitle).focus().parents('.offer-title-edit').show('fast');
+		// $('.offer-title-edit').show('fast');
+		});
+		$(document).on('click', ".offer-title-edit .btn-yes", function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		var updatedTitle = $(this).siblings('input').val();
+		$('.offer-title-edit').hide('fast');
+		$('.edit-offer-title').text(updatedTitle).show('fast');
+		// $('.edit-offer-title').show('fast');
+		});
+		/* Edit offer title ends*/
+		/* Edit offer description */
+		$(document).on('click', ".edit-offer-content", function(e){
+		e.stopPropagation();
+		// $(this).hide()
+		$('.offer-desc-container, .edit-offer-content').slideUp();
+		$('.offer-desc-edit').slideDown();
+		});
+		$(document).on('click', ".desc-edit-actions .cancel-btn, .desc-edit-actions .btn-yes", function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$('.offer-desc-edit').slideUp();
+		$('.offer-desc-container, .edit-offer-content').slideDown();
+		});
+		/* Edit offer description ends*/
+		/*Show filter options*/
+			$(document).on('click', '.sourcing-job-filters' , function(e){
+				e.preventDefault();
+				$(this).toggleClass('open').find('i').toggleClass('rotate-90');
+				$('.job-filter-options').slideToggle(200);
+			});
+		/*Show filter options ends*/
+		/*Reset job filter options*/
+			$(document).on('click', '.clear-filter-options' , function(e){
+				e.preventDefault();
+				$(this).closest('form').reset()
+					.find('.selectpicker').selectpicker('deselectAll');
+			});
+		/*Reset job filter options ends*/
+		/*Toggle more filter for optionsEligibility filter options*/
+			/*	$(document).on('click', '.toggle-more-filters' , function(e){
+				e.preventDefault();
+				$(this).toggleClass('open');
+				$(this).parents('.eligibility-filters').find('.more-filters').slideToggle(200);
+			});*/
+		/*Toggle more filter for optionsEligibility filter options*/
+		/*Manage filter options toggle*/
+			$(document).on('click', '.include-filters [class*="add-"], .exclude-filters [class*="add-"]' , function(e){
+				e.preventDefault();
+				$(this).parents('.toggle-more-filter').hide('200');
+				$($(this).parents('.form-group').next()[0]).show('200');
+					// toShow).show('200');
+				// $(this).toggleClass('open').find('i').toggleClass('rotate-90');
+				// $('.job-filter-options').slideToggle(200);
+			});
+		/*Manage filter options toggle ends*/
+			});
+		</script>
+	</body>
+</html>

@@ -375,6 +375,7 @@ html {
             margin: 0 auto;
             position: relative;
             width: 100%;
+            min-height: 100vh;
             display: block;
             clear: both;
 
@@ -9320,6 +9321,12 @@ html {
   &.beginner {
     background: #388E3C;
     border-radius: 30px;
+  }
+
+  &.tags {
+    background: #9A9FA9;
+    border-radius: 30px;
+    margin-right: 5px;
   }
 }
 

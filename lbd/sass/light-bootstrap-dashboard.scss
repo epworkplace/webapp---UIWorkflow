@@ -1,97 +1,99 @@
 // variables and mixins
-@import "lbdcss/variables";
-@import "lbdcss/mixins";
+@import 'lbdcss/variables';
+@import 'lbdcss/mixins';
 
 // Bootstrap 4 beta
-@import "lbdcss/b4-breakpoints";
-@import "lbdcss/b4-grid";
-@import "lbdcss/b4-functions";
+@import 'lbdcss/b4-breakpoints';
+@import 'lbdcss/b4-grid';
+@import 'lbdcss/b4-functions';
 
 // Custom Variables and mixins
-@import "lbdcss/workplace/variables";
-@import "lbdcss/custom_variables";
-@import "lbdcss/mixins/custom-mixins";
-@import "lbdcss/workplace/utilities/helper";
+@import 'lbdcss/workplace/variables';
+@import 'lbdcss/custom_variables';
+@import 'lbdcss/mixins/custom-mixins';
+@import 'lbdcss/workplace/utilities/helper';
 
 // Bootstrap 4 beta custom
-@import "lbdcss/workplace/utilities/b4-utilities";
+@import 'lbdcss/workplace/utilities/b4-utilities';
 
 //plugins css
-@import "lbdcss/plugins/animate";
-@import "lbdcss/plugins/sweetalert2";
+@import 'lbdcss/plugins/animate';
+@import 'lbdcss/plugins/sweetalert2';
 
-@import "lbdcss/plugins/jquery.jvectormap.scss";
-@import "lbdcss/plugins/datatable.scss";
-@import "lbdcss/plugins/fullcalendar.scss";
-@import "lbdcss/plugins/chartist";
+@import 'lbdcss/plugins/jquery.jvectormap.scss';
+@import 'lbdcss/plugins/datatable.scss';
+@import 'lbdcss/plugins/fullcalendar.scss';
+@import 'lbdcss/plugins/chartist';
 
 // Core CSS
-@import "lbdcss/typography";
-@import "lbdcss/misc";
-@import "lbdcss/sidebar-and-main-panel";
-@import "lbdcss/buttons";
-@import "lbdcss/inputs";
-@import "lbdcss/progress-bars";
-@import "lbdcss/sliders";
-@import "lbdcss/forms";
-@import "lbdcss/alerts";
-@import "lbdcss/tables";
-@import "lbdcss/tags";
-@import "lbdcss/tooltips-and-popovers";
-@import "lbdcss/checkbox-radio-switch";
-@import "lbdcss/navbars";
-@import "lbdcss/footers";
+@import 'lbdcss/typography';
+@import 'lbdcss/misc';
+@import 'lbdcss/sidebar-and-main-panel';
+@import 'lbdcss/buttons';
+@import 'lbdcss/inputs';
+@import 'lbdcss/progress-bars';
+@import 'lbdcss/sliders';
+@import 'lbdcss/forms';
+@import 'lbdcss/alerts';
+@import 'lbdcss/tables';
+@import 'lbdcss/tags';
+@import 'lbdcss/tooltips-and-popovers';
+@import 'lbdcss/checkbox-radio-switch';
+@import 'lbdcss/navbars';
+@import 'lbdcss/footers';
 
 // Fancy Stuff
-@import "lbdcss/social-buttons";
-@import "lbdcss/dropdown";
-@import "lbdcss/cards";
-@import "lbdcss/collapse";
-@import "lbdcss/carousel";
-@import "lbdcss/plugins/datetime-picker";
-@import "lbdcss/bootstrap-select";
+@import 'lbdcss/social-buttons';
+@import 'lbdcss/dropdown';
+@import 'lbdcss/cards';
+@import 'lbdcss/collapse';
+@import 'lbdcss/carousel';
+@import 'lbdcss/plugins/datetime-picker';
+@import 'lbdcss/bootstrap-select';
 
 // SCSS for Pages
-@import "lbdcss/pages.scss";
+@import 'lbdcss/pages.scss';
 
 // Responsive adjustments
-@import "lbdcss/responsive";
-@import "lbdcss/tabs-navs-pagination";
+@import 'lbdcss/responsive';
+@import 'lbdcss/tabs-navs-pagination';
 
 // Old WP Styles (Kept the same)
-@import "lbdcss/wp-old-styles";
+@import 'lbdcss/wp-old-styles';
 
 // Custom Styles
-@import "lbdcss/custom-styles";
+@import 'lbdcss/custom-styles';
 
 // New Workplace Styles
-@import "lbdcss/workplace/job-deck-cards";
-@import "lbdcss/workplace/clients";
-@import "lbdcss/workplace/quote";
-@import "lbdcss/workplace/client-profile";
-@import "lbdcss/workplace/homepage";
-@import "lbdcss/workplace/quotes-list";
-@import "lbdcss/workplace/contributors";
-@import "lbdcss/workplace/production";
-@import "lbdcss/workplace/placeholder-content";
-@import "lbdcss/workplace/floating-box";
-@import "lbdcss/workplace/layout-2";
-@import "lbdcss/workplace/layout-3";
-@import "lbdcss/workplace/layout-4";
-@import "lbdcss/workplace/layout-5";
-@import "lbdcss/workplace/login";
-@import "lbdcss/workplace/offers-list";
-@import "lbdcss/workplace/sourcing-list";
-@import "lbdcss/workplace/sourcing-overview";
-@import "lbdcss/workplace/sourcing-candidate-list";
-@import "lbdcss/workplace/sourcing-team-list";
-@import "lbdcss/workplace/sourcing-test-article";
-@import "lbdcss/workplace/job-single-offer";
-@import "lbdcss/workplace/card-single";
-@import "lbdcss/workplace/quizz-surveys-list";
+@import 'lbdcss/workplace/job-deck-cards';
+@import 'lbdcss/workplace/clients';
+@import 'lbdcss/workplace/quote';
+@import 'lbdcss/workplace/client-profile';
+@import 'lbdcss/workplace/homepage';
+@import 'lbdcss/workplace/quotes-list';
+@import 'lbdcss/workplace/contributors';
+@import 'lbdcss/workplace/production';
+@import 'lbdcss/workplace/placeholder-content';
+@import 'lbdcss/workplace/floating-box';
+@import 'lbdcss/workplace/layout-2';
+@import 'lbdcss/workplace/layout-3';
+@import 'lbdcss/workplace/layout-4';
+@import 'lbdcss/workplace/layout-5';
+@import 'lbdcss/workplace/layout-6';
+@import 'lbdcss/workplace/login';
+@import 'lbdcss/workplace/offers-list';
+@import 'lbdcss/workplace/sourcing-list';
+@import 'lbdcss/workplace/sourcing-overview';
+@import 'lbdcss/workplace/sourcing-candidate-list';
+@import 'lbdcss/workplace/sourcing-team-list';
+@import 'lbdcss/workplace/sourcing-test-article';
+@import 'lbdcss/workplace/job-single-offer';
+@import 'lbdcss/workplace/card-single';
+@import 'lbdcss/workplace/quiz';
+@import 'lbdcss/workplace/quizz-surveys-list';
 
-/* @import "lbdcss/workplace/job-single-candidatelist";
-@import "lbdcss/workplace/job-single-teamlist"; */
+/* @import 'lbdcss/workplace/job-single-candidatelist';
+@import 'lbdcss/workplace/job-single-teamlist'; */
 
 //New Workplace media Queries
-@import "lbdcss/workplace/media-queries";
+@import 'lbdcss/workplace/media-queries';

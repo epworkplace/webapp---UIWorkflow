@@ -1,0 +1,140 @@
+.quiz-main-page {
+  .main-container {
+    .container-content {
+      width: 93.699%;
+      padding: 0;
+      margin: 0 auto 25px;
+    }
+  }
+
+  .question-detail-container {
+    .back-to-page {
+      i {
+        position: relative;
+        top: 8px;
+      }
+
+      a {
+        color: $dark-gray;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .edit {
+      i {
+        font-size: 12px;
+        margin: 0;
+        position: relative;
+        top: 4px;
+        color: #448AFF;
+      }
+
+      a {
+        font-size: 14px;
+        color: #448AFF !important;
+        text-decoration: underline;
+      }
+    }
+
+    .header-title {
+      margin: 15px 0;
+      font-size: 20px;
+      color: #353F53;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .tags-show {
+      ul {
+        padding: 0;
+        margin: 0 0 15px 0;
+
+        li {}
+      }
+    }
+
+    .questionnaire-summary {
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .questionnaire-details {
+      .details {
+        padding: 10px 15px;
+        background: $lighter-gray;
+        border-radius: 4px;
+        color: $color-darkblue;
+        font-weight: 700;
+
+        span {
+          display: block;
+          font-size: 12px;
+          font-weight: 400;
+          color: $dark-gray;
+        }
+
+        i {
+          position: relative;
+          font-size: 16px;
+          margin-right: 10px;
+          top: 4px;
+        }
+
+        &.required {
+          background: $color-blue;
+          color: #fff;
+
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  a.add-question {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-weight: 700;
+    font-weight: 16px;
+    color: $medium-dark-gray;
+    border: 2px dashed $medium-gray;
+    border-radius: 6px;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $color-blue;
+      border: 2px solid $color-blue;
+      transition: all .3s ease;
+    }
+  }
+
+  .question-number {
+    text-align: center;
+    padding: 10px 15px;
+    background: $lighter-gray;
+    border-radius: 4px;
+    color: $color-darkblue;
+
+    a {
+      color: $color-blue;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
