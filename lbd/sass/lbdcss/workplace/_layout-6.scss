@@ -27,3 +27,10 @@
 
 
 /* Layout-6 Changes Ends */
+
+/* Modal styles */
+.quizz-add-new-question-modal{
+	@extend %modal;
+}
+/* Modal styles ends */
+
