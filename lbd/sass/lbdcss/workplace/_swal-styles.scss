@@ -1,0 +1,24 @@
+/* Sweet Alert Styles Starts*/
+
+.swal2-modal, .sweet-alert {
+  .swal2-title, h2 {
+    font-size: 22px;
+    color: #353F53;
+    font-weight: 700;
+  }
+
+  .swal2-content, p {
+    font-weight: 400;
+    color: #7d889a;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+    text-align: left;
+  }
+
+  /* [class*=btn-] {
+  	width: auto !important;
+  } */
+}
+
+/* Sweet Alert Styles Ends*/
