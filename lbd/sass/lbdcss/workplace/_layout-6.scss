@@ -27,3 +27,53 @@
 
 
 /* Layout-6 Changes Ends */
+
+/* Modal styles */
+.quizz-add-new-question-modal{
+	@extend %modal;
+	.answers-list{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		li{
+			@include clearfix;
+			margin: 10px;
+			.answer-options{
+				label {
+					margin: 0;
+					margin-right: 10px;
+					height: 24px;
+				}
+				i{
+					margin-left: 10px;
+					color: $cta-icons;
+					&:hover{
+						color: $sub-heading;
+						cursor: pointer;
+					}
+				}
+			}
+			a.add-new-option{
+				color: $selected !important;
+			}
+			&.list-item.add-option{
+				display: none;
+			}
+			&:last-child{
+				margin: 0;
+			}
+		}
+	}
+	.answer-module{
+		label{
+			&.checked{
+				color: $main;
+			}
+		}
+	}
+}
+.quizz-edit-question-modal{
+	@extend .quizz-add-new-question-modal;
+}
+/* Modal styles ends */
+

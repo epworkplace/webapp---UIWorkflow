@@ -70,8 +70,8 @@
 													</div>
 												</div>
 												<div class="row">
-													<a class="col-md-12 add-question mb-30" href="javascript:;">
-														<i class="material-icons">add</i> Add a qustion
+													<a class="col-md-12 add-question mb-30" href="javascript:;" data-toggle="modal" data-target="#quizzAddNewQuestion">
+														<i class="material-icons">add</i> Add a question
 													</a>
 												</div>
 												<div class="row">
@@ -82,7 +82,7 @@
 																	<h4 class="col-md-9 question-title">Question 1 *</h4>
 																	<div class="col-md-3 question-edit">
 																		<ul>
-																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Edit"><i class="material-icons">mode_edit</i></a></li>
+																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Edit"><i class="material-icons" data-toggle="modal" data-target="#quizzEditQuestion">mode_edit</i></a></li>
 																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
 																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Delete"><i class="material-icons">delete</i></a></li>
 																		</ul>
@@ -111,7 +111,7 @@
 																	<h4 class="col-md-9 question-title">Question 2 *</h4>
 																	<div class="col-md-3 question-edit">
 																		<ul>
-																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Edit"><i class="material-icons">mode_edit</i></a></li>
+																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Edit"><i class="material-icons" data-toggle="modal" data-target="#quizzEditQuestion">mode_edit</i></a></li>
 																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
 																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Delete"><i class="material-icons">delete</i></a></li>
 																		</ul>
@@ -140,7 +140,7 @@
 																	<h4 class="col-md-9 question-title">Question 3 *</h4>
 																	<div class="col-md-3 question-edit">
 																		<ul>
-																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Edit"><i class="material-icons">mode_edit</i></a></li>
+																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Edit"><i class="material-icons" data-toggle="modal" data-target="#quizzEditQuestion">mode_edit</i></a></li>
 																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
 																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Delete"><i class="material-icons">delete</i></a></li>
 																		</ul>
@@ -169,7 +169,7 @@
 																	<h4 class="col-md-9 question-title">Question 4 *</h4>
 																	<div class="col-md-3 question-edit">
 																		<ul>
-																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Edit"><i class="material-icons">mode_edit</i></a></li>
+																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Edit"><i class="material-icons" data-toggle="modal" data-target="#quizzEditQuestion">mode_edit</i></a></li>
 																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
 																			<li><a href="javascript:;" data-placement="bottom" data-toggle="tooltip" data-container="body" title="Delete"><i class="material-icons">delete</i></a></li>
 																		</ul>
@@ -198,7 +198,7 @@
 													<div class="col-md-12">
 														<div class="row">
 															<div class="col-md-12 question-number">
-																0 question - <a href="javascript:;">Add a question</a>
+																0 question - <a href="javascript:;" data-toggle="modal" data-target="#quizzAddNewQuestion">Add a question</a>
 															</div>
 														</div>
 														<div class="row">
@@ -239,7 +239,13 @@
 		<!-- Edit Survey Starts-->
 		<!-- @include _partials/_edit-survey-modal.html -->
 		<!-- Edit Survey Ends-->
+		<!-- Quizz add new question modal -->
+		<!-- @include _partials/_quizz-add-new-question-modal.html -->
+		<!-- Quizz edit question modal -->
+		<!-- @include _partials/_quizz-editquestion-modal.html -->
+
 		<!-- Modals Ends -->
+
 		<!--   Core JS Files   -->
 		<!-- @include _partials/_all-js-files.html -->
 		<!-- Custom scripts -->
@@ -358,6 +364,28 @@
 		  });
 		/*Tags with dropdown ends*/
 
+    /* Add new option to the list */
+/*		    $(document).on('click', ".answers-list .add-new-option", function(e){
+		        e.stopPropagation();
+		        $('.list-item.add-option').show();
+		        $(this).parent('.list-item').hide();
+		    });
+		    $(document).on('click', "#updateNewOption", function(e){
+		        e.preventDefault();
+		        e.stopPropagation();
+		        var addedOption = $(this).parents('.input-group').find('input').val();
+		        var addedToList = '<li class="list-item"><div class="answer-options df-ac"><label class="checkbox primary-font"><span class="icons"><span class="first-icon fa fa-square-o"></span><span class="second-icon fa fa-check-square-o"></span></span><input data-toggle="checkbox" type="checkbox"></label></label><input class="form-control" id="" placeholder="' + addedOption + '" type="text"/><i class="material-icons" data-placement="bottom" data-toggle="tooltip" data-container="body" title="" data-original-title="Remove">delete</i></div></li>';
+		        if(addedOption){
+		          $( addedToList ).insertBefore( $('.add-new-option').parent('.list-item') );
+		        }
+		        $('.add-new-option').parents('.list-item').show();
+		        $(this).parents('.list-item.add-option').hide();
+		    });*/
+    /* Add new option to the list ends */
+
+$("body").tooltip({
+    selector: '[data-toggle="tooltip"]'
+});
 
 			});
 		</script>
