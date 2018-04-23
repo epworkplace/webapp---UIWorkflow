@@ -226,6 +226,15 @@
       }
     }
   }
+
+  .content-aside {
+    height: 100%;
+
+    .fixed-container {
+      width: 27%;
+      position: fixed;
+    }
+  }
 }
 
 /* Modal styles */
