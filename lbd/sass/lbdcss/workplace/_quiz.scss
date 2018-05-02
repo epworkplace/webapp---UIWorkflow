@@ -1,9 +1,11 @@
 .quiz-main-page {
+  width: 93.699%;
+  padding: 0;
+  margin: 0 auto 25px;
+
   .main-container {
-    .container-content {
-      width: 93.699%;
-      padding: 0;
-      margin: 0 auto 25px;
+    > .row {
+      width: 100%;
     }
   }
 
