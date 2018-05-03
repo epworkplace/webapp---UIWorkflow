@@ -1,0 +1,315 @@
+.card-overview-main-page {
+  @include clearfix;
+
+  .main-panel-page-header {
+    .right {
+      .end-date-container {
+        a.end-date {
+          span.caret-drop {
+            right: 15px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .leftside-column-container {
+    position: relative;
+    padding: 0;
+    min-height: 100vh;
+    background: #FCFDFD;
+    box-shadow: 2px 0px 5px 3px #edeff1;
+
+    .leftside-column {
+      position: fixed;
+      width: 31.5%;
+      overflow: hidden;
+      min-height: 100%;
+      height: 300px;
+      background: #FCFDFD;
+      z-index: 1;
+      overflow-x: hidden;
+      padding-top: 0;
+      padding-right: 0;
+      padding-left: 15px;
+    }
+
+    .assessment-list-container {
+      ul {
+        li {
+          .assessment-box {
+            .assessment-card {
+              a {
+                width: 58%;
+
+                span.notification {
+                  position: absolute;
+                  background-color: $default-bg;
+                  text-align: center;
+                  border-radius: 15px;
+                  min-width: 15px;
+                  padding: 0 5px;
+                  height: 15px;
+                  font-size: 12px;
+                  color: #fff;
+                  font-weight: bold;
+                  line-height: 20px;
+                  top: -5px;
+                  right: 0px;
+                  border: 2px solid #fff;
+                }
+              }
+
+              &.zindex {
+                z-index: 9999;
+              }
+
+              .assessment-label.pending {
+                color: $main;
+              }
+
+              a.assessment-cta {
+                width: 5%;
+                color: $highlight-02;
+              }
+
+              ul.dropdown-menu {
+                margin-top: -15px;
+                position: absolute;
+                z-index: 9999;
+
+                &:before {
+                  right: 12px;
+                  left: auto;
+                }
+
+                &:after {
+                  right: 13px;
+                  left: auto;
+                }
+
+                li {
+                  padding-bottom: 0;
+
+                  a {
+                    width: 100%;
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-panel-container {
+    .middle-column-container {
+      .middle-column {}
+    }
+
+    .rightside-column-container {
+      .rightside-column {
+        .notify-action-container {
+          background: $main;
+          padding-top: 10px;
+          padding-bottom: 15px;
+          border-radius: 4px;
+
+          .user-image {
+            width: 40px;
+
+            img {
+              border: 2px solid #fff;
+              max-width: 100%;
+              width: 40px;
+              height: 40px;
+              object-fit: cover;
+            }
+
+            .card-user-empty {
+              width: 40px;
+              height: 40px;
+              border: 2px solid #fff;
+              border-radius: 50%;
+            }
+          }
+
+          .notify-action-summary {
+            color: #fff;
+          }
+
+          .notify-action-button {
+            .btn-confirm {
+              border: 1px solid #fff !important;
+
+              &:hover {
+                border: 1px solid $no !important;
+              }
+            }
+          }
+        }
+
+        h4.title {
+          padding: 0;
+          margin: 0;
+          color: $main;
+          font-weight: 600;
+          font-size: 16px;
+        }
+
+        .add-files-container {
+          a.add-file-droppable, a.add-file {
+            @extend .df-ac;
+
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 15px;
+            width: 100%;
+            height: 50px;
+            color: $body;
+            text-align: center;
+            border: 2px dashed $border-color;
+            border-radius: 4px;
+            transition: all .3s ease;
+
+            &:hover {
+              border: 2px solid $selected;
+            }
+          }
+
+          a.add-file-droppable {
+            height: 100px;
+          }
+        }
+
+        .files-list-container {
+          .files-list {
+            margin-bottom: 10px;
+
+            > .row {
+              @extend .df-ac;
+
+              padding-top: 10px;
+              padding-bottom: 10px;
+
+              .file-img {
+                position: relative;
+              }
+
+              .file-name {
+                color: $main;
+                font-weight: 600;
+                word-break: break-all;
+
+                span.sub {
+                  display: block;
+                  color: $cta-icons;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* File image and type starts */
+
+span.file-type {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: -3px;
+    bottom: -3px;
+    width: 20px;
+    height: 15px;
+    border-radius: 3px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    font-size: 10px;
+    color: #fff;
+  }
+
+  &.doc {
+    &:before {
+      background: $selected;
+    }
+
+    &:after {
+      content: 'doc';
+    }
+  }
+
+  &.docx {
+    &:before {
+      background: $selected;
+      right: -8px;
+      width: 25px;
+    }
+
+    &:after {
+      content: 'docx';
+      right: -5px;
+    }
+  }
+
+  &.zip {
+    &:before {
+      background: $default-bg;
+    }
+
+    &:after {
+      content: 'zip';
+    }
+  }
+
+  &.pdf {
+    &:before {
+      background: $delete;
+    }
+
+    &:after {
+      content: 'pdf';
+    }
+  }
+
+  &.xls {
+    &:before {
+      background: $closed;
+    }
+
+    &:after {
+      content: 'xls';
+    }
+  }
+
+  &.xlsx {
+    &:before {
+      background: $closed;
+      right: -8px;
+      width: 25px;
+    }
+
+    &:after {
+      content: 'xlsx';
+      right: -5px;
+    }
+  }
+
+  i {
+    color: $cta-icons;
+  }
+}
+
+/* File image and type ends */

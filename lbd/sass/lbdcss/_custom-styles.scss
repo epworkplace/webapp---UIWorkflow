@@ -717,6 +717,10 @@ html {
                   z-index: 1;
                   background: #FCFDFD;
                   padding: 20px 16px 0 16px; */
+                  .left-panel-padding-bottom {
+                    padding-bottom: 200px;
+                  }
+
                   .navbar-default {
                     background: none;
                     padding: 0;
@@ -867,6 +871,39 @@ html {
                           list-style-type: none;
 
                           li {}
+                        }
+                      }
+                    }
+
+                    .filter-list-display {
+                      margin: 15px 0;
+
+                      .filter-title {
+                        color: #7d889a;
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                      }
+
+                      .filter-list-check-container {
+                        border: 2px solid #d7d9dc;
+                        border-radius: 4px;
+                        padding: 0 5px;
+                        margin-bottom: 10px;
+
+                        label {
+                          color: #7d889a;
+                        }
+
+                        &:hover {
+                          border: 2px solid #448AFF;
+                        }
+
+                        &.checked {
+                          border: 2px solid #448AFF;
+                        }
+
+                        &:last-child {
+                          margin-bottom: 0;
                         }
                       }
                     }
@@ -1584,6 +1621,34 @@ html {
 
           &.task-price-quote-mission {
             width: 332px;
+          }
+        }
+
+        .test-articles-candidates {
+          width: 136px;
+          float: right;
+
+          .candidates {
+            width: 136px;
+            margin-top: 33px;
+            text-align: center;
+            color: #485262;
+            font-size: 14px;
+            font-weight: 600;
+
+            i {
+              position: relative;
+              top: 5px;
+              margin-left: 5px;
+              font-size: 20px;
+            }
+
+            span {
+              display: block;
+              color: #C5C8CE;
+              font-size: 14px;
+              line-height: 1;
+            }
           }
         }
 
@@ -9325,6 +9390,12 @@ html {
 
   &.tags {
     background: #9A9FA9;
+    border-radius: 30px;
+    margin-right: 5px;
+  }
+
+  &.file-version {
+    background: #000;
     border-radius: 30px;
     margin-right: 5px;
   }

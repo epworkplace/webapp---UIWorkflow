@@ -2310,6 +2310,17 @@
 																<input type="text" class="form-control selectpicker" id="quizzSurveysHashtag-01" value="" placeholder="Type tags and enter" />
 															</div>
 														</div>
+														<div class="row form-group">
+															<div class="col-md-12 quizz-module">
+																<label>Category</label>
+																<select class="selectpicker" title="Select category">
+							                                        <option>Creation &amp; Entertainment</option>
+							                                        <option>Creation</option>
+							                                        <option>Entertainment</option>
+							                                        <option>Social Media</option>
+							                                    </select>
+															</div>
+														</div>
 														<div class="row">
 															<div class="col-md-12 quizz-module">
 																<label>Introduction Text</label>
@@ -2726,7 +2737,7 @@ $(document).ready(function(){
 		      text: "You will not be able to recover this Survey",
 		      type: "warning",
 		      showCancelButton: true,
-		      confirmButtonClass: 'btn-confirm',
+		      confirmButtonClass: 'btn, btn-confirm',
 		      confirmButtonText: 'Delete!',
 		      closeOnConfirm: false,
 		      //closeOnCancel: false
