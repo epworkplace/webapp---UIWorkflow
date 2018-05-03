@@ -2555,7 +2555,14 @@
 										<div class="col-md-8 middle-column-container">
 											<div class="row">
 												<div class="col-md-12 middle-column">
-													<div style="background-color: #64B5F6; height: 3000px;"></div>
+													<div class="row">
+														<div class="col-md-12 middle-column-card-container">
+															<div class="panel panel-default feed-card">
+																<div class="panel-body">Panel Content</div>
+																<div class="panel-footer">Panel Footer</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -2623,44 +2630,57 @@
 														</div>
 													</div>
 													<div class="row">
-														<h4 class="col-md-12 title">Files library</h4>
+														<h4 class="title">Files library</h4>
 													</div>
 													<div class="row">
+														<label>Deliveries</label>
 			                                        	<div class="col-md-12 files-list-container">
-			                                        		<label>Deliveries</label>
 			                                        		<div class="row">
 			                                        			<div class="col-md-12 card files-list">
 			                                        				<div class="row">
 			                                        					<div class="col-md-2 file-img pr-0">
-			                                        						<i class="material-icons">insert_drive_file</i>
+			                                        						<span class="file-type doc"><i class="material-icons doc">insert_drive_file</i></span>
 			                                        					</div>
 			                                        					<div class="col-md-10 file-name">
-			                                        						<span class="label file-version">V1</span>brief-Allocine_ITA_article.pdf <span>10.3Mb - 1hr ago</span>
+			                                        						<span class="label file-version">V1</span>brief-Allocine_ITA_article.pdf <span class="sub">10.3Mb - 1hr ago</span>
 			                                        					</div>
 			                                        				</div>
 			                                        			</div>
 			                                        		</div>
 			                                        	</div>
 			                                        </div>
-													<div class="row">
+			                                        <div class="row">
+														<label>Briefs(1)</label>
 			                                            <div class="col-md-12 add-files-container">
-			                                            	<label>Briefs(1)</label>
-			                                                <a class="add-file" href="javascript:;">
-																+ Add brief
-															</a>
+			                                            	<div class="row">
+				                                                <a class="add-file-droppable" href="javascript:;">
+																	<div><b>Drag and Drop your briefs</b><br />
+																	or click to add files</div>
+																</a>
+															</div>
+			                                            </div>
+			                                        </div>
+													<div class="row">
+														<label>Briefs(1)</label>
+			                                            <div class="col-md-12 add-files-container">
+			                                            	<div class="row">
+				                                                <a class="add-file" href="javascript:;">
+																	+ Add brief
+																</a>
+															</div>
 			                                            </div>
 			                                        </div>
 			                                        <div class="row">
+			                                        	<label>Attached files</label>
 			                                        	<div class="col-md-12 files-list-container">
-			                                        		<label>Attached files</label>
 			                                        		<div class="row">
 			                                        			<div class="col-md-12 card files-list">
 			                                        				<div class="row">
 			                                        					<div class="col-md-2 file-img pr-0">
-			                                        						<i class="material-icons">insert_drive_file</i>
+			                                        						<span class="file-type doc"><i class="material-icons doc">insert_drive_file</i></span>
 			                                        					</div>
 			                                        					<div class="col-md-10 file-name">
-			                                        						brief-Allocine_ITA_article.pdf <span>10.3Mb - 1hr ago</span>
+			                                        						brief-Allocine_ITA_article.pdf <span class="sub">10.3Mb - 1hr ago</span>
 			                                        					</div>
 			                                        				</div>
 			                                        			</div>
@@ -2669,10 +2689,58 @@
 			                                        			<div class="col-md-12 card files-list">
 			                                        				<div class="row">
 			                                        					<div class="col-md-2 file-img pr-0">
-			                                        						<i class="material-icons">insert_drive_file</i>
+			                                        						<span class="file-type zip"><i class="material-icons doc">insert_drive_file</i></span>
 			                                        					</div>
 			                                        					<div class="col-md-10 file-name">
-			                                        						brief-Allocine_ITA_article.pdf <span>10.3Mb - 1hr ago</span>
+			                                        						brief-Allocine_ITA_article.pdf <span class="sub">10.3Mb - 1hr ago</span>
+			                                        					</div>
+			                                        				</div>
+			                                        			</div>
+			                                        		</div>
+			                                        		<div class="row">
+			                                        			<div class="col-md-12 card files-list">
+			                                        				<div class="row">
+			                                        					<div class="col-md-2 file-img pr-0">
+			                                        						<span class="file-type pdf"><i class="material-icons doc">insert_drive_file</i></span>
+			                                        					</div>
+			                                        					<div class="col-md-10 file-name">
+			                                        						brief-Allocine_ITA_article.pdf <span class="sub">10.3Mb - 1hr ago</span>
+			                                        					</div>
+			                                        				</div>
+			                                        			</div>
+			                                        		</div>
+			                                        		<div class="row">
+			                                        			<div class="col-md-12 card files-list">
+			                                        				<div class="row">
+			                                        					<div class="col-md-2 file-img pr-0">
+			                                        						<span class="file-type xls"><i class="material-icons doc">insert_drive_file</i></span>
+			                                        					</div>
+			                                        					<div class="col-md-10 file-name">
+			                                        						brief-Allocine_ITA_article.pdf <span class="sub">10.3Mb - 1hr ago</span>
+			                                        					</div>
+			                                        				</div>
+			                                        			</div>
+			                                        		</div>
+			                                        		<div class="row">
+			                                        			<div class="col-md-12 card files-list">
+			                                        				<div class="row">
+			                                        					<div class="col-md-2 file-img pr-0">
+			                                        						<span class="file-type docx"><i class="material-icons doc">insert_drive_file</i></span>
+			                                        					</div>
+			                                        					<div class="col-md-10 file-name">
+			                                        						brief-Allocine_ITA_article.pdf <span class="sub">10.3Mb - 1hr ago</span>
+			                                        					</div>
+			                                        				</div>
+			                                        			</div>
+			                                        		</div>
+			                                        		<div class="row">
+			                                        			<div class="col-md-12 card files-list">
+			                                        				<div class="row">
+			                                        					<div class="col-md-2 file-img pr-0">
+			                                        						<span class="file-type xlsx"><i class="material-icons doc">insert_drive_file</i></span>
+			                                        					</div>
+			                                        					<div class="col-md-10 file-name">
+			                                        						brief-Allocine_ITA_article.pdf <span class="sub">10.3Mb - 1hr ago</span>
 			                                        					</div>
 			                                        				</div>
 			                                        			</div>
