@@ -106,7 +106,204 @@
 
   .main-panel-container {
     .middle-column-container {
-      .middle-column {}
+      .middle-column {
+        .middle-column-card-container {
+          .feed-card-container {
+            .feed-card {
+              color: $main;
+
+              .feed-card-status {
+                float: right;
+                text-align: right;
+
+                i {
+                  font-size: 18px;
+                  position: relative;
+                  top: 1px;
+                }
+
+                &.pending {
+                  color: $helper;
+                  font-weight: 700;
+                }
+
+                &.rework {
+                  color: $delete;
+                  font-weight: 700;
+                }
+
+                &.reported {
+                  color: $main;
+                  font-weight: 700;
+                }
+
+                &.validated {
+                  color: $closed;
+                  font-weight: 700;
+                }
+              }
+
+              .feed-card-user-container {
+                float: left;
+
+                .user-image {
+                  width: 40px;
+                  padding: 0;
+                  margin-left: 15px;
+
+                  img {
+                    max-width: 100%;
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                  }
+
+                  .card-user-empty {
+                    width: 40px;
+                    height: 40px;
+                  }
+                }
+
+                .user-desc {
+                  span.sub {
+                    display: block;
+                    color: $highlight-06;
+                    font-size: 12px;
+                  }
+                }
+              }
+
+              .feed-card-action-container {
+                .brief-image {
+                  @extend .df-ac;
+
+                  justify-content: center;
+                  background: $highlight-01;
+                  border-radius: 4px;
+                  height: 100px;
+
+                  span.file-type {
+                    position: relative;
+
+                    i {
+                      font-size: 50px;
+                    }
+
+                    &:before {
+                      content: '';
+                      position: absolute;
+                      right: -3px;
+                      bottom: 2px;
+                      width: 30px;
+                      height: 18px;
+                      border-radius: 3px;
+                    }
+
+                    &:after {
+                      content: '';
+                      position: absolute;
+                      right: 1px;
+                      bottom: 2px;
+                      font-size: 14px;
+                      color: #fff;
+                    }
+
+                    &.doc {
+                      &:before {
+                        background: $selected;
+                      }
+
+                      &:after {
+                        content: 'doc';
+                      }
+                    }
+
+                    &.docx {
+                      &:before {
+                        background: $selected;
+                        right: -8px;
+                        width: 34px;
+                      }
+
+                      &:after {
+                        content: 'docx';
+                        right: -5px;
+                      }
+                    }
+
+                    &.zip {
+                      &:before {
+                        background: $default-bg;
+                      }
+
+                      &:after {
+                        content: 'zip';
+                      }
+                    }
+
+                    &.pdf {
+                      &:before {
+                        background: $delete;
+                      }
+
+                      &:after {
+                        content: 'pdf';
+                      }
+                    }
+
+                    &.xls {
+                      &:before {
+                        background: $closed;
+                      }
+
+                      &:after {
+                        content: 'xls';
+                      }
+                    }
+
+                    &.xlsx {
+                      &:before {
+                        background: $closed;
+                        right: -8px;
+                        width: 30px;
+                      }
+
+                      &:after {
+                        content: 'xlsx';
+                        right: -5px;
+                      }
+                    }
+
+                    i {
+                      color: $cta-icons;
+                    }
+                  }
+                }
+
+                .brief-desc {
+                  .file-name {
+                    margin-bottom: 10px;
+
+                    span {
+                      display: block;
+                      color: $highlight-06;
+                      font-size: 12px;
+                    }
+                  }
+                }
+
+                a.brief-cta {
+                  color: $highlight-02;
+                }
+              }
+
+              .feed-card-feed-container {
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
     }
 
     .rightside-column-container {
@@ -220,8 +417,36 @@
 
                 span.sub {
                   display: block;
-                  color: $cta-icons;
+                  color: $highlight-02;
                   font-size: 12px;
+                }
+              }
+
+              .file-cta {
+                a {
+                  color: $highlight-02;
+                }
+
+                ul.dropdown-menu {
+                  &:before {
+                    right: 9px;
+                    left: auto;
+                  }
+
+                  &:after {
+                    right: 10px;
+                    left: auto;
+                  }
+
+                  li {
+                    padding-bottom: 0;
+
+                    a {
+                      width: 100%;
+                      display: block;
+                      color: $main;
+                    }
+                  }
                 }
               }
             }
