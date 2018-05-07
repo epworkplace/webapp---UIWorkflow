@@ -111,6 +111,7 @@
           .feed-card-container {
             .feed-card {
               color: $main;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
 
               .feed-card-status {
                 float: right;
@@ -158,6 +159,10 @@
                     object-fit: cover;
                   }
 
+                  i {
+                    color: $highlight-02;
+                  }
+
                   .card-user-empty {
                     width: 40px;
                     height: 40px;
@@ -170,6 +175,91 @@
                     color: $highlight-06;
                     font-size: 12px;
                   }
+                }
+
+                .plagiarism-index {
+                  color: $highlight-06;
+
+                  span {
+                    font-weight: 600;
+                    margin-right: 5px;
+
+                    i {
+                      position: relative;
+                      font-size: 16px;
+                      top: 2px;
+                      margin-right: 5px;
+                    }
+
+                    &.low {
+                      color: $main;
+                    }
+
+                    &.medium {
+                      color: $selected;
+                    }
+
+                    &.high {
+                      color: $delete;
+                    }
+                  }
+                }
+
+                .rating-container {
+                  span {
+                    margin-left: 5px;
+                    background: #000;
+                    border-radius: 6px;
+                    color: #fff;
+                    font-weight: 400;
+                    text-align: center;
+                    padding: 0 10px;
+
+                    i {
+                      position: relative;
+                      top: 1px;
+                      font-size: 12px;
+                      color: $default-bg;
+                    }
+                  }
+                }
+
+                .attached-files-list {
+                  label {
+                    text-transform: uppercase;
+                    color: $helper;
+                  }
+
+                  .attached-files {
+                    background: $highlight-01;
+                    padding: 0px 15px 7px;
+                    border-radius: 4px;
+                    margin-bottom: 10px;
+
+                    i {
+                      color: $cta-icons;
+                      position: relative;
+                      top: 6px;
+                      margin-left: -5px;
+                    }
+
+                    a {
+                      color: $selected;
+                      text-decoration: underline;
+
+                      &:hover {
+                        text-decoration: none;
+                      }
+                    }
+
+                    &:last-child {
+                      margin-bottom: 0;
+                    }
+                  }
+                }
+
+                .user-comment {
+                  color: $helper;
                 }
               }
 
@@ -284,7 +374,7 @@
                   .file-name {
                     margin-bottom: 10px;
 
-                    span {
+                    span.sub {
                       display: block;
                       color: $highlight-06;
                       font-size: 12px;
