@@ -269,10 +269,10 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-12 add-new-assessment">
-                                                        <a class="add-card" data-placement="bottom" href="javascript:;" rel="tooltip" title="Add a Job">
+                                                        <a class="add-card" data-placement="bottom" href="javascript:;" >
                                                             <i class="material-icons">
                                                                 add
-                                                            </i>
+                                                            </i> Create a new job
                                                         </a>
                                                     </div>
                                                 </div>
@@ -362,8 +362,8 @@
 							                                                <li><a href="javascript:;">Edit assignation</a></li>
 							                                                <li><a href="javascript:;">Delete assignation</a></li>
 							                                                <li><a href="javascript:;">View profile</a></li>
-							                                                <li><a href="javascript:;">Add time</a></li>
-							                                                <li><a href="javascript:;">Fire</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#addTimeModal">Add time</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#fireModal">Fire</a></li>
 							                                            </ul>
                                                                     </div>
                                                                 </div>
@@ -425,8 +425,8 @@
 							                                                <li><a href="javascript:;">Edit assignation</a></li>
 							                                                <li><a href="javascript:;">Delete assignation</a></li>
 							                                                <li><a href="javascript:;">View profile</a></li>
-							                                                <li><a href="javascript:;">Add time</a></li>
-							                                                <li><a href="javascript:;">Fire</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#addTimeModal">Add time</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#fireModal">Fire</a></li>
 							                                            </ul>
                                                                     </div>
                                                                 </div>
@@ -463,8 +463,8 @@
 							                                                <li><a href="javascript:;">Edit assignation</a></li>
 							                                                <li><a href="javascript:;">Delete assignation</a></li>
 							                                                <li><a href="javascript:;">View profile</a></li>
-							                                                <li><a href="javascript:;">Add time</a></li>
-							                                                <li><a href="javascript:;">Fire</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#addTimeModal">Add time</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#fireModal">Fire</a></li>
 							                                            </ul>
                                                                     </div>
                                                                 </div>
@@ -499,8 +499,8 @@
 							                                                <li><a href="javascript:;">Edit assignation</a></li>
 							                                                <li><a href="javascript:;">Delete assignation</a></li>
 							                                                <li><a href="javascript:;">View profile</a></li>
-							                                                <li><a href="javascript:;">Add time</a></li>
-							                                                <li><a href="javascript:;">Fire</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#addTimeModal">Add time</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#fireModal">Fire</a></li>
 							                                            </ul>
                                                                     </div>
                                                                 </div>
@@ -535,8 +535,8 @@
 							                                                <li><a href="javascript:;">Edit assignation</a></li>
 							                                                <li><a href="javascript:;">Delete assignation</a></li>
 							                                                <li><a href="javascript:;">View profile</a></li>
-							                                                <li><a href="javascript:;">Add time</a></li>
-							                                                <li><a href="javascript:;">Fire</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#addTimeModal">Add time</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#fireModal">Fire</a></li>
 							                                            </ul>
                                                                     </div>
                                                                 </div>
@@ -571,8 +571,8 @@
 							                                                <li><a href="javascript:;">Edit assignation</a></li>
 							                                                <li><a href="javascript:;">Delete assignation</a></li>
 							                                                <li><a href="javascript:;">View profile</a></li>
-							                                                <li><a href="javascript:;">Add time</a></li>
-							                                                <li><a href="javascript:;">Fire</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#addTimeModal">Add time</a></li>
+							                                                <li><a href="javascript:;" data-toggle="modal" data-target="#fireModal">Fire</a></li>
 							                                            </ul>
                                                                     </div>
                                                                 </div>
@@ -3245,7 +3245,7 @@
 																<ul class="dropdown-menu" role="menu">
 					                                                <li><a href="javascript:;">From Computer</a></li>
 					                                                <li><a href="javascript:;">From Google Drive</a></li>
-					                                                <li><a href="javascript:;">From Another card</a></li>
+					                                                <li><a href="javascript:;" data-toggle="modal" data-target="#importBriefCardModal">From Another card</a></li>
 					                                            </ul>
 															</div>
 			                                            </div>
@@ -3260,7 +3260,7 @@
 																<ul class="dropdown-menu" role="menu">
 					                                                <li><a href="javascript:;">From Computer</a></li>
 					                                                <li><a href="javascript:;">From Google Drive</a></li>
-					                                                <li><a href="javascript:;">From Another card</a></li>
+					                                                <li><a href="javascript:;" data-toggle="modal" data-target="#importBriefCardModal">From Another card</a></li>
 					                                            </ul>
 															</div>
 			                                            </div>
@@ -3418,7 +3418,7 @@
 <!-- Modals Starts -->
 <!-- Skip Plagiarism Modal starts -->
 <div aria-labelledby="myModalLabel" class="modal fade skip-plagiarism-modal" id="skipPlagiarismModal" role="dialog" tabindex="-1">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <button aria-label="Close" class="close" data-dismiss="modal" type="button">
@@ -3507,6 +3507,439 @@
     </div>
 </div>
 <!-- Change card Modal Ends -->
+<!-- Import brief from another card Modal Starts-->
+
+<div aria-labelledby="myModalLabel" class="modal fade import-brief-card-modal" id="importBriefCardModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+            	<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        <i class="material-icons">close</i>
+                    </span>
+                </button>
+                <div class="row">
+                    <div class="col-md-6 modal-title">
+                        Import brief from another card
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="col-md-12 import-brief-search">
+                		<label>Card name *</label>
+                		<input type="search" class="form-control" placeholder="Enter the card name..." />
+                	</div>
+                </div>
+                <div class="row">
+                	<div class="col-md-12">
+                		<div class="divider"></div>
+                	</div>
+                </div>
+                <div class="row">
+                	<div class="col-md-12 import-briefs-list">
+                		<div class="no-job-container">
+                            <div class="no-job-info">
+                                <h4>
+                                    No files found yet.
+                                </h4>
+                                <p>
+                                    Please type a related card name in teh search box !
+                                </p>
+                            </div>
+                        </div>
+                	</div>
+                </div>
+                <div class="row">
+                	<div class="col-md-12 import-briefs-list">
+                		<h4 class="title">2 file(s) found</h4>
+                		<div class="col-md-12 card brief-card checked">
+                			<div class="row">
+                				<div class="col-md-1">
+                					<label class="checkbox primary-font checked">
+                                    	<input data-toggle="checkbox" type="checkbox"/>
+                                    </label>
+                				</div>
+                				<div class="col-md-1 file-image">
+                					<i class="material-icons">insert_drive_file</i>
+                				</div>
+                				<div class="col-md-10 file-desc">
+                					<b>brief_Allocine-ITA_article.pdf</b><span class="sub">11.7Mb</span>
+                				</div>
+                			</div>
+                		</div>
+                		<div class="col-md-12 card brief-card">
+                			<div class="row">
+                				<div class="col-md-1">
+                					<label class="checkbox primary-font">
+                                    	<input data-toggle="checkbox" type="checkbox"/>
+                                    </label>
+                				</div>
+                				<div class="col-md-1 file-image">
+                					<i class="material-icons">insert_drive_file</i>
+                				</div>
+                				<div class="col-md-10 file-desc">
+                					<b>brief_Allocine-ITA_article.pdf</b><span class="sub">11.7Mb</span>
+                				</div>
+                			</div>
+                		</div>
+                	</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 tab-navigation">
+                        <button class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left" data-dismiss="modal" type="button">
+                            Cancel
+                        </button>
+                        <button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+                            Import
+                        </button>
+                    </div>
+                </div>
+            </div>
+       	</div>
+    </div>
+</div>
+
+<!-- Import brief from another card Modal Ends-->
+
+<!-- Add Time Modal Starts-->
+
+<div aria-labelledby="myModalLabel" class="modal fade add-time-modal" id="addTimeModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        <i class="material-icons">close</i>
+                    </span>
+                </button>
+                <div class="row">
+                    <div class="col-md-6 modal-title">
+                        Add time
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="col-md-12">
+                		<div class="row">
+	                		<div class="col-md-6 mb-15">
+	                			<label>Who needs more time? *</label>
+	                			<select class="selectpicker" disabled>
+									<option value="1" data-content="<img src='lbd/img/default-avatar.png'> <b>Michael Martin</b> - Proofreader" data-subtext="- Writer">Michael Martin</option>
+									<option value="2" data-content="<img src='lbd/img/default-avatar.png'> Alex Meyer - Proofreader" data-subtext="- Proofreader">Alex Meyer</option>
+									<option value="3" data-content="<img src='lbd/img/default-avatar.png'> Arun prod - Proofreader" data-subtext="- Proofreader">Arun prod</option>
+								</select>
+	                		</div>
+	                		<div class="col-md-6 mb-15">
+	                			<label>Due date *</label>
+	                			<div class="row">
+	                				<div class="col-md-6 mt-5">
+	                					<input type="text" class="form-control datepicker" placeholder="Date here">
+	                				</div>
+	                				<div class="col-md-6 mt-5">
+	                					<input type="text" class="form-control timepicker" placeholder="Time here">
+	                				</div>
+	                			</div>
+	                		</div>
+	                	</div>
+	                	<div class="row">
+	                		<div class="col-md-6 mb-15">
+	                			<label>Who needs more time? *</label>
+	                			<select class="selectpicker">
+									<option value="1" data-content="<img src='lbd/img/default-avatar.png'> <b>Michael Martin</b> - Proofreader" data-subtext="- Writer">Michael Martin</option>
+									<option value="2" data-content="<img src='lbd/img/default-avatar.png'> Alex Meyer - Proofreader" data-subtext="- Proofreader">Alex Meyer</option>
+									<option value="3" data-content="<img src='lbd/img/default-avatar.png'> Arun prod - Proofreader" data-subtext="- Proofreader">Arun prod</option>
+								</select>
+	                		</div>
+	                		<div class="col-md-6 mb-15">
+	                			<label>Due date *</label>
+	                			<div class="row">
+	                				<div class="col-md-6 mt-5">
+	                					<input type="text" class="form-control datepicker" placeholder="Date here">
+	                				</div>
+	                				<div class="col-md-6 mt-5">
+	                					<input type="text" class="form-control timepicker" placeholder="Time here">
+	                				</div>
+	                			</div>
+	                		</div>
+	                	</div>
+	                	<div class="row">
+	                		<div class="col-md-12">
+	                			<div class="divider"></div>
+	                		</div>
+	                	</div>
+	                	<div class="row">
+	                		<div class="col-md-6">
+	                			<label>Due dates for impacted stakeholders *</label>
+	                			<select class="selectpicker" disabled>
+									<option value="1" data-content="<img src='lbd/img/default-avatar.png'> <b>Michael Martin</b> - Proofreader" data-subtext="- Writer">Michael Martin</option>
+									<option value="2" data-content="<img src='lbd/img/default-avatar.png'> Alex Meyer - Proofreader" data-subtext="- Proofreader">Alex Meyer</option>
+									<option value="3" data-content="<img src='lbd/img/default-avatar.png'> Arun prod - Proofreader" data-subtext="- Proofreader">Arun prod</option>
+								</select>
+	                		</div>
+	                		<div class="col-md-6">
+	                			<label>&nbsp;</label>
+	                			<div class="row">
+	                				<div class="col-md-6 mt-5">
+	                					<input type="text" class="form-control datepicker" placeholder="Date here">
+	                				</div>
+	                				<div class="col-md-6 mt-5">
+	                					<input type="text" class="form-control timepicker" placeholder="Time here">
+	                				</div>
+	                			</div>
+	                		</div>
+	                	</div>
+	                	<div class="row">
+	                		<div class="col-md-6">
+	                			<label>&nbsp;</label>
+	                			<select class="selectpicker">
+									<option value="1" data-content="<img src='lbd/img/default-avatar.png'> <b>Michael Martin</b> - Proofreader" data-subtext="- Writer">Michael Martin</option>
+									<option value="2" data-content="<img src='lbd/img/default-avatar.png'> Alex Meyer - Proofreader" data-subtext="- Proofreader">Alex Meyer</option>
+									<option value="3" data-content="<img src='lbd/img/default-avatar.png'> Arun prod - Proofreader" data-subtext="- Proofreader">Arun prod</option>
+								</select>
+	                		</div>
+	                		<div class="col-md-6">
+	                			<label>&nbsp;</label>
+	                			<div class="row">
+	                				<div class="col-md-6 mt-5">
+	                					<input type="text" class="form-control datepicker" placeholder="Date here">
+	                				</div>
+	                				<div class="col-md-6 mt-5">
+	                					<input type="text" class="form-control timepicker" placeholder="Time here">
+	                				</div>
+	                			</div>
+	                		</div>
+	                	</div>
+                	</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 tab-navigation">
+                        <button class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left" data-dismiss="modal" type="button">
+                            Cancel
+                        </button>
+                        <button class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+                            Add time
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Time Modal Ends-->
+
+<!-- Fire Modal starts-->
+<div aria-labelledby="myModalLabel" class="modal fade fire-modal" id="fireModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        <i class="material-icons">close</i>
+                    </span>
+                </button>
+                <div class="row">
+                    <div class="col-md-6 modal-title">
+                        <span class="user-image"><img class="img-circle" src="lbd/img/default-avatar.png"></span> Fire Michael Martin
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 modal-title">
+                        <span class="user-image card-user-empty">PC</span> Fire Michael Martin
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="col-md-12 fire-modal-steps">
+                		<div class="row">
+							<div class="col-md-12">
+								<div class="col-md-12 progress-steps">
+									<div id="wizardCard">
+										<form action="" id="wizardForm" method="">
+											<div class="tab-links">
+												<ul class="nav">
+													<li>
+														<a data-toggle="tab" href="#tab-1">
+															Tab1
+														</a>
+													</li>
+													<li>
+														<a data-toggle="tab" href="#tab-2">
+															Tab2
+														</a>
+													</li>
+												</ul>
+												<div class="tab-content">
+													<div class="tab-pane" id="tab-1">
+														<div class="row">
+															<div class="col-md-12">
+																<label><b>Why do you disapprove this delivery?</b> (select at least 1 answer) *</label>
+																<div class="row">
+																	<div class="col-md-4">
+																		<div class="disapprove-reasons">
+																			<label class="checkbox primary-font">
+										                                    	<input data-toggle="checkbox" type="checkbox"/>
+										                                    	Insufficient/Irrelevent Content
+										                                    </label>
+																		</div>
+																	</div>
+																	<div class="col-md-4">
+																		<div class="disapprove-reasons checked">
+																			<label class="checkbox primary-font checked">
+										                                    	<input data-toggle="checkbox" type="checkbox"/>
+										                                    	Bad Spelling/Grammar
+										                                    </label>
+																		</div>
+																	</div>
+																	<div class="col-md-4">
+																		<div class="disapprove-reasons checked">
+																			<label class="checkbox primary-font checked">
+										                                    	<input data-toggle="checkbox" type="checkbox"/>
+										                                    	Wrong Toneof Voice/Style
+										                                    </label>
+																		</div>
+																	</div>
+																	<div class="col-md-4">
+																		<div class="disapprove-reasons">
+																			<label class="checkbox primary-font">
+										                                    	<input data-toggle="checkbox" type="checkbox"/>
+										                                    	Brief : Size, Structure, etc...
+										                                    </label>
+																		</div>
+																	</div>
+																	<div class="col-md-4">
+																		<div class="disapprove-reasons">
+																			<label class="checkbox primary-font">
+										                                    	<input data-toggle="checkbox" type="checkbox"/>
+										                                    	SEO : Keywords, links, etc...
+										                                    </label>
+																		</div>
+																	</div>
+																	<div class="col-md-4">
+																		<div class="disapprove-reasons">
+																			<label class="checkbox primary-font">
+										                                    	<input data-toggle="checkbox" type="checkbox"/>
+										                                    	Pictures
+										                                    </label>
+																		</div>
+																	</div>
+																	<div class="col-md-4">
+																		<div class="disapprove-reasons">
+																			<label class="checkbox primary-font">
+										                                    	<input data-toggle="checkbox" type="checkbox"/>
+										                                    	Wrong files / Missing files
+										                                    </label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12 mb-15">
+																<label><b>Describe your problem</b> (will be visible) *</label>
+																<textarea class="form-control" rows="6" placeholder="Write your message ..."></textarea>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12">
+																<label>Attach files</label>
+																<a class="drag-drop-brief-settings" href="javascript:;">
+																	<div class="placeholder">
+																		Drag and drop your file(s) <span> - or click here to upload</span>
+																	</div>
+																</a>
+															</div>
+															<div class="col-md-12 attach-with-gdrive">
+																<a href="javascript:;">Or add a file Google Drive</a>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12">
+																<div class="added-settings-brief">
+																	<div class="col-md-1 file-icon"><i class="material-icons pull-right">insert_drive_file</i></div>
+																	<div class="col-md-10 file-name">Allocine_brief-writer.pdf <span class="sub">10.0Mb - just now</span></div>
+																	<div class="col-md-1">
+																		<a href="javascript:;">
+																			<i class="material-icons">delete</i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12 tab-navigation">
+																<div class="row">
+																	<div class="col-md-12">
+																		<button class="btn btn-cancel btn-fill btn-wd btn-no btn-cancel-settings pull-left" type="button" data-dismiss="modal">
+																		Cancel
+																		</button>
+																		<button class="btn btn-yes btn-fill btn-wd btn-yes pull-right btn-next" type="button">
+																		Next
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane" id="tab-2">
+														<div class="row">
+															<div class="col-md-12 message-wrap">
+																<div class="row">
+																	<div class="col-md-10">
+																		<label>Message for <span>Michael Martin</span></label>
+																	</div>
+																	<div class="col-md-2 edit-message">
+																		<a href="javascript:;">Edit message</a>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="col-md-12 message-container">
+																			<p>Dear Participant,</p>
+		                                                                    <p>Your participation to <a href="javascript:;">Webedia 200 articles blog</a> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+		                                                                    <p><a href="javascript:;">Lorem ipsum dolor sit amet</a></p>
+		                                                                    <p><strong>Sed ut perspiciatis unde omnis iste natus error sit</strong> voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		                                                                    <p>Regards
+		                                                                       <br>
+		                                                                       <strong>Edit-place Editorial team</strong>
+		                                                                    </p>
+																		</div>
+																		<div class="col-md-12 message-edit-container">
+																			<div class="row">
+																				<textarea id="editSendJobConfirmMessage"></textarea>
+																				<a href="javascript:;" class="btn btn-wd btn-default pull-right mt-10 save-message">Save message</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12 tab-navigation">
+																<div class="row">
+																	<div class="col-md-12">
+																		<button class="btn btn-cancel btn-fill btn-wd btn-no btn-cancel-settings pull-left btn-back" type="button">
+																		Back
+																		</button>
+																		<button class="btn btn-yes btn-fill btn-wd btn-delete pull-right btn-finish" onclick="onFinishWizard()" type="button">
+																		Fire
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fire Modal ends-->
 
 <!-- Modals Ends -->
 
@@ -3781,7 +4214,14 @@
                 lessLink: '<a href="#" class="morelink">See Less</a>'
             });
     });
-
+         $('.edit-message a').click(function(event) {
+        	$('.edit-message, .message-container').hide('fast');
+        	$('.message-edit-container').show('fast');
+        });
+        $('.message-edit-container a.save-message').click(function(event) {
+        	$('.message-edit-container').hide('fast');
+        	$('.edit-message, .message-container').show('fast');
+        });
     });
 
     </script>

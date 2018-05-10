@@ -228,13 +228,17 @@
                   label {
                     text-transform: uppercase;
                     color: $helper;
+                    display: block;
+                    font-weight: 600;
                   }
 
                   .attached-files {
+                    display: inline-block;
                     background: $highlight-01;
                     padding: 0px 15px 7px;
                     border-radius: 4px;
                     margin-bottom: 10px;
+                    margin-right: 10px;
 
                     i {
                       color: $cta-icons;
@@ -643,3 +647,274 @@ span.file-type {
 }
 
 /* File image and type ends */
+
+/* Modal styles starts */
+
+.import-brief-card-modal {
+  .modal-title {
+    font-size: 20px;
+    color: $main;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .import-brief-search {
+    input[type='search'] {
+      background: #fff url(../img/search.svg) no-repeat 2px 5px;
+      background-size: 25px;
+      padding-left: 35px;
+    }
+  }
+
+  .import-briefs-list {
+    h4.title {
+      padding: 0;
+      margin: 0 0 5px 0;
+      color: $main;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .brief-card {
+      margin-bottom: 10px;
+      border: 1px solid transparent;
+
+      &.checked {
+        border: 1px solid $helper;
+      }
+
+      > .row {
+        @extend .df-ac;
+
+        min-height: 50px;
+
+        .checkbox {
+          margin-top: -7px;
+        }
+
+        .file-image {
+          i {
+            color: $highlight-02;
+          }
+        }
+
+        .file-desc {
+          color: $main;
+
+          span.sub {
+            display: block;
+            color: $highlight-06;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-time-modal {
+  .modal-title {
+    font-size: 20px;
+    color: $main;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .bootstrap-select.disabled {
+    cursor: not-allowed !important;
+    opacity: 1 !important;
+    background-color: transparent !important;
+    color: $main !important;
+
+    .btn.disabled {
+      cursor: not-allowed !important;
+      opacity: 1 !important;
+      background-color: transparent !important;
+      color: $main !important;
+    }
+
+    .bs-caret {
+      display: none;
+    }
+  }
+}
+
+/* Fire Modal Starts*/
+.fire-modal {
+  .modal-title {
+    font-size: 20px;
+    color: #353f53;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    span.user-image {
+      margin-right: 10px;
+
+      img {
+        max-width: 100%;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+      }
+
+      &.card-user-empty {
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #353f53;
+        background: #353f53;
+        color: #fff !important;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .fire-modal-steps {
+    ul.nav {
+      display: none;
+    }
+
+    .disapprove-reasons {
+      border-radius: 4px;
+      background: $highlight-01;
+      border: 1px solid transparent;
+      margin-bottom: 30px;
+      padding: 0 15px;
+
+      &.checked {
+        border: 1px solid $helper;
+      }
+
+      label.checkbox {
+        padding-left: 40px;
+      }
+    }
+
+    a.drag-drop-brief-settings {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 65px;
+      color: #a0a5af;
+      font-weight: 600;
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      border: 2px dashed #D7D9DC;
+      border-radius: 4px;
+      transition: all .3s ease;
+
+      span {
+        font-weight: 400;
+      }
+
+      &:hover {
+        border: 2px dashed #448AFF;
+        color: #448AFF;
+      }
+    }
+
+    .attach-with-gdrive {
+      text-align: center;
+      margin: 15px 0;
+
+      a {
+        padding-left: 28px;
+        background: url(../img/gDrive.svg) no-repeat;
+        background-size: 20px;
+        text-decoration: underline;
+      }
+    }
+
+    .added-settings-brief {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      height: 65px;
+      border: 2px solid #D7D9DC;
+      border-radius: 4px;
+
+      i {
+        color: $highlight-02;
+      }
+
+      .file-name {
+        color: $main;
+        font-weight: 700;
+
+        span.sub {
+          display: block;
+          color: $highlight-06;
+          font-size: 12px;
+        }
+      }
+
+      a {
+        i {
+          color: $highlight-02;
+        }
+      }
+    }
+
+    .message-wrap {
+      label {
+        span {
+          color: $main;
+          font-weight: 600;
+        }
+      }
+
+      .edit-message {
+        text-align: right;
+
+        a {
+          color: $selected;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .message-container {
+        background: $highlight-01;
+        padding: 30px;
+        color: $main;
+
+        p {
+          padding: 15px 0;
+          color: $main;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 1.6;
+          margin: 0;
+
+          a {
+            color: $selected;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .message-edit-container {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Fire Modal Ends*/
+
+/* Modal styles ends */
