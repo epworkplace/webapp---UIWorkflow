@@ -46,6 +46,18 @@
                                             <span class="mission">
                                                <i class="fa fa-file"></i> 20 articles
                                             </span>
+                                            <a class="edit-number" href="javascript:;">
+                                              <i class="material-icons">mode_edit</i>
+                                            </a>
+                                            <div class="edit-number-container">
+                                              <label>Objective</label>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control" name="" value="20" >
+                                                <button type="submit" class="btn btn-yes">
+                                                  <i class="material-icons">chevron_right</i>
+                                                </button>
+                                              </div>
+                                            </div>
                                         </div>
                                         <div class="col-md-4 end-date-container">
                                             <a aria-expanded="false" class="end-date" data-toggle="dropdown" href="javascript:;">
@@ -4681,6 +4693,14 @@
                     </div>
                 </div>
                 <div class="row">
+                	<div class="col-md-12">
+                		<div class="alert alert-info default">
+	                        <button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
+	                        <p><strong>Double check your files!</strong> Please make sure that all your files are here and regroup them in a single Zip file.</p>
+	                    </div>
+                	</div>
+                </div>
+                <div class="row">
 					<div class="col-md-12">
 						<label>Your delivery *</label>
 						<a class="drag-drop-brief-settings" href="javascript:;">
@@ -4749,6 +4769,14 @@
 				return;
 				$('.assessment-card').removeClass('zindex');
     	});
+
+    	/* Edit production */
+        $('a.edit-number').click(function() {
+          $('.edit-number-container').show();
+        });
+        $('.edit-number-container button').click(function() {
+          $('.edit-number-container').hide();
+        });
 
         /*Auto resize textarea*/
         $(document).ready(function() {
