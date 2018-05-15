@@ -97,6 +97,10 @@
               .end-date-container, .jobs-completed-container {
                 padding: 0;
 
+                i {
+                  font-size: 12px;
+                }
+
                 a.end-date {
                   /* width: 211px; */
                   display: block;
@@ -182,6 +186,7 @@
                         position: relative;
 
                         // top: 7px;
+                        font-size: 18px;
                         margin-right: 5px;
 
                         // font-size: 24px;
@@ -216,6 +221,10 @@
 
                 span.mission {
                   color: #485262;
+
+                  i {
+                    font-size: 12px;
+                  }
 
                   small {
                     font-size: 11px;

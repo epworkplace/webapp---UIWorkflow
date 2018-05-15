@@ -10507,53 +10507,6 @@ html {
   }
 }
 
-.disapprove-drop {
-  .bootstrap-select.btn-group {
-    button.bs-placeholder {
-      span.filter-option {
-        color: #7d889a !important;
-        font-weight: 400 !important;
-      }
-    }
-
-    span.filter-option {
-      color: #353f53 !important;
-      font-weight: 600 !important;
-
-      i {
-        color: #ee0a5f !important;
-      }
-    }
-
-    ul.dropdown-menu li a {
-      color: #353f53 !important;
-      font-weight: 600;
-
-      span.glyphicon {
-        color: #ee0a5f !important;
-      }
-
-      small {
-        color: #7d889a !important;
-        font-weight: 400;
-      }
-
-      &:hover, &:focus {
-        color: #fff !important;
-
-        span.glyphicon {
-          color: #fff !important;
-        }
-
-        small {
-          color: #fff !important;
-          font-weight: 400;
-        }
-      }
-    }
-  }
-}
-
 .rate-task-container {
   margin-bottom: 20px;
   display: -webkit-box;
@@ -12669,5 +12622,9 @@ body.mce-content-body {
 }
 
 /* Divider styles ends */
+
+span.danger {
+  color: $delete;
+}
 
 /*New WP STYLES Ends*/

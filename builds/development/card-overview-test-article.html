@@ -157,43 +157,14 @@
                                             <span class="mission">
                                                <i class="fa fa-file"></i> 20 articles
                                             </span>
-                                            <a class="edit-number" href="javascript:;">
-                                              <i class="material-icons">mode_edit</i>
-                                            </a>
-                                            <div class="edit-number-container">
-                                              <label>Objective</label>
-                                              <div class="input-group">
-                                                <input type="text" class="form-control" name="" value="20" >
-                                                <button type="submit" class="btn btn-yes">
-                                                  <i class="material-icons">chevron_right</i>
-                                                </button>
-                                              </div>
-                                            </div>
                                         </div>
                                         <div class="col-md-4 end-date-container">
                                             <a aria-expanded="false" class="end-date" data-toggle="dropdown" href="javascript:;">
                                                 <span class="title">
-                                                    End date
+                                                    Time left
                                                 </span>
-                                                <i class="fa fa-calendar"></i> Jul 03, 2019 - 04:30pm
-                                                <span class="caret-drop">
-                                                    <i class="material-icons">
-                                                        expand_more
-                                                    </i>
-                                                </span>
+                                                <i aria-hidden="true" class="fa fa-clock-o"></i> 23:59:59
                                             </a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a data-target="#changeCardDate" data-toggle="modal" href="javascript:;">
-                                                        <i class="material-icons">
-                                                            date_range
-                                                        </i>
-                                                        <span>
-                                                            Change dates
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                            </ul>
                                         </div>
                                         <a class="col-md-4 validate start-link" data-target="#deliverJob" data-toggle="modal" href="javascript:;">
                                             Send Delivery
@@ -2600,68 +2571,7 @@
 																						</div>
 																						<!-- <a href="javascript:;" class="col-md-1 brief-cta">
 																							<i class="material-icons">more_vert</i>
-																						</a> -->
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="panel-footer">
-																			<input type="text" class="form-control" placeholder="Leave a comment..." />
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12 feed-card-container">
-																	<div class="panel panel-default feed-card">
-																		<div class="panel-body">
-																			<div class="row">
-																				<div class="col-md-4 feed-card-status validated"><i class="fa fa-check" aria-hidden="true"></i> Delivery validated</div>
-																				<div class="col-md-8 feed-card-user-container">
-																					<div class="row">
-																						<div class="col-md-2 user-image">
-																							<img class="img-circle" src="lbd/img/default-avatar.png" />
-																						</div>
-																						<div class="col-md-10 user-desc">
-																							<b>Michael Martin</b> - Proofreader <span class="sub">May 30 - 09:15am</span>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="row">
-																				<div class="col-md-12 feed-card-action-container mt-15">
-																					<div class="row">
-																						<div class="col-md-3">
-																							<div class="brief-image">
-																								<span class="file-type docx"><i class="material-icons">insert_drive_file</i></span>
-																							</div>
-																						</div>
-																						<div class="col-md-9 brief-desc">
-																							<div class="file-name">
-																								<span class="label file-version">VERSION 2</span><b>brief_allocine-ITA_article.pdf</b><span class="sub">10.0Mb - just now</span>
-																							</div>
-																							<div class="row">
-																								<div class="col-md-6">
-																									<button type="button" class="btn btn-fill btn-download full-width">
-													                                                    <span class="btn-label">
-								                                                                            <i class="material-icons">file_download</i>
-								                                                                        </span>
-													                                                    Download
-													                                                </button>
-																								</div>
-																								<div class="col-md-6">
-																									<button type="button" class="btn btn-default full-width" data-toggle="modal" data-target="#moderateJobModal">
-													                                                    <span class="btn-label">
-								                                                                            <i class="material-icons">warning</i>
-								                                                                        </span>
-													                                                    Moderate
-													                                                </button>
-																								</div>
-																							</div>
-																						</div>
-																						<!-- <a href="javascript:;" class="col-md-1 brief-cta">
-																							<i class="material-icons">more_vert</i>
-																						</a> -->
+																						</a>
 																					</div>
 																				</div>
 																			</div>
@@ -3141,7 +3051,7 @@
 															</div>
 															<div class="row">
 																<div class="col-md-12 notify-action-button mt-15">
-																	<button class="btn btn-yes full-width" data-toggle="modal" data-target="#deliveryCardModal">Deliver your file</button>
+																	<button class="btn btn-yes full-width">Deliver your file</button>
 																</div>
 															</div>
 														</div>
@@ -5050,14 +4960,6 @@
 				return;
 				$('.assessment-card').removeClass('zindex');
     	});
-
-    	/* Edit production */
-        $('a.edit-number').click(function() {
-          $('.edit-number-container').show();
-        });
-        $('.edit-number-container button').click(function() {
-          $('.edit-number-container').hide();
-        });
 
         /*Auto resize textarea*/
         $(document).ready(function() {
