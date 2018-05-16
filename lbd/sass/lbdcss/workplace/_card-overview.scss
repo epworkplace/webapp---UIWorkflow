@@ -335,6 +335,16 @@
                       }
                     }
 
+                    &.rar {
+                      &:before {
+                        background: $validate;
+                      }
+
+                      &:after {
+                        content: 'rar';
+                      }
+                    }
+
                     &.gsl {
                       &:before {
                         background: $default-bg;
@@ -398,11 +408,45 @@
 
                 a.brief-cta {
                   color: $highlight-02;
+
+                  &:hover {
+                    color: $highlight-06;
+                  }
                 }
               }
 
               .feed-card-feed-container {
                 margin-top: 15px;
+
+                a.brief-cta {
+                  color: $highlight-02;
+
+                  &:hover {
+                    color: $highlight-06;
+                  }
+                }
+
+                ul.dropdown-menu {
+                  &:before {
+                    right: 9px;
+                    left: auto;
+                  }
+
+                  &:after {
+                    right: 10px;
+                    left: auto;
+                  }
+
+                  li {
+                    padding-bottom: 0;
+
+                    a {
+                      width: 100%;
+                      display: block;
+                      color: $main;
+                    }
+                  }
+                }
               }
             }
           }
@@ -618,6 +662,16 @@ span.file-type {
 
     &:after {
       content: 'zip';
+    }
+  }
+
+  &.rar {
+    &:before {
+      background: $validate;
+    }
+
+    &:after {
+      content: 'rar';
     }
   }
 
@@ -2036,8 +2090,6 @@ span.file-type {
 /* Delivery Files Modal Starts */
 
 .delivery-card-modal {
-  @extend .modal;
-
   .modal-title {
     font-size: 20px;
     color: $main;
