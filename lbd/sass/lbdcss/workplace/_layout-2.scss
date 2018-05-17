@@ -97,6 +97,10 @@
               .end-date-container, .jobs-completed-container {
                 padding: 0;
 
+                i {
+                  font-size: 12px;
+                }
+
                 a.end-date {
                   /* width: 211px; */
                   display: block;
@@ -136,9 +140,10 @@
                     top: 33px;
                     left: 30px;
 
-                    span {
+                    span.icon-flipped {
                       i {
                         color: #ee0a5f;
+                        font-size: 20px;
                       }
                     }
                   }
@@ -182,6 +187,7 @@
                         position: relative;
 
                         // top: 7px;
+                        font-size: 18px;
                         margin-right: 5px;
 
                         // font-size: 24px;
@@ -216,6 +222,10 @@
 
                 span.mission {
                   color: #485262;
+
+                  i {
+                    font-size: 12px;
+                  }
 
                   small {
                     font-size: 11px;

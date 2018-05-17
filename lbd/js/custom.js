@@ -634,6 +634,50 @@ $(document).ready(function(){
   		invalid_elements : 'div,span'
 	  });
 
+	//tinyMCE send check message user1
+	tinymce.init({
+	    selector: '#sendCheckMessageUser1',
+	    statusbar: false,
+  		menubar : false,
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
+	  });
+
+	//tinyMCE send check message user2
+	tinymce.init({
+	    selector: '#sendCheckMessageUser2',
+	    statusbar: false,
+  		menubar : false,
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
+	  });
+
+	//tinyMCE send disapprove job message
+	tinymce.init({
+	    selector: '#editDisapproveJobMessage',
+	    statusbar: false,
+  		menubar : false,
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
+	  });
+
+	//tinyMCE send Moderate job message
+	tinymce.init({
+	    selector: '#editJobModerateMessage',
+	    statusbar: false,
+  		menubar : false,
+  		content_css : "http://admin-test.edit-place.com/webapp-theme/lbd/css/tinymce.css",
+  		allow_html_in_named_anchor: true,
+  		force_p_newlines : true,
+  		invalid_elements : 'div,span'
+	  });
+
 	//Chosen Dropdown with Image
 	$(".mission-assignee, .chosen-default, .update-assignee").chosen({width:"100%"});
 
