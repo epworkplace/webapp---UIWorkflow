@@ -1029,6 +1029,20 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="activity left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="lbd/img/default-avatar.png" alt="User Avatar" class="img-circle" />
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class="pull-right text-muted">12 mins ago</small>
+                                    <p><strong class="primary-font">User Name</strong> Uploaded a new file on task <strong class="primary-font">Preliminary SEO Edit</strong></p>
+                                </div>
+                                <div class="comment">
+                                    <p><span class="atMention">@differentName</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eos qui excepturi veritatis libero delectus, pariatur voluptate beatae culpa minima fugit nulla dolores, porro facere ea, nisi. Iste, inventore sapiente repudiandae perferendis sit nihil velit nostrum iure maxime eaque, quasi dolorum optio est debitis consectetur eius incidunt blanditiis, suscipit consequatur cumque eum. Qui iste, ipsam praesentium facilis. Odit animi rem, ipsum est quis cupiditate quisquam sit eos nemo dicta. Quia.</p>
+                                </div>
+                            </div>
+                        </li>
                         <li class="left clearfix"><span class="chat-img pull-left">
                             <img src="lbd/img/default-avatar.png" alt="User Avatar" class="img-circle" />
                         </span>
@@ -1067,8 +1081,10 @@
                                     </ul>
                                 </small>
                                 </div>
-                                <p><span class="atMention">@differentName</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                </p>
+                                <div class="comment">
+                                	<p><span class="atMention">@differentName</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt repellat voluptas fugiat animi distinctio doloremque est! Quia aliquid ut error et reiciendis! Accusamus rem dolorem recusandae eligendi reiciendis sequi laudantium ipsum, incidunt omnis culpa veritatis alias, rerum voluptatum eius sunt unde. Officia quisquam officiis libero veniam temporibus deleniti, dolores reprehenderit. Deserunt porro ut inventore mollitia ab minima, quisquam voluptatum in, totam, repudiandae sit nam accusamus nostrum itaque explicabo iure, magni!.
+                                	</p>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -1914,6 +1930,28 @@ $().ready(function() {
 // plugtradejQuery detect vertical scrollbar function //
 
 $(document).ready(function(){
+
+/*Read more / Read less*/
+     $('.comment').each(function(){
+        $(this).readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+     });
+
+     $('.modal').one('show.bs.modal', function () {
+      $(this).find('.comment').css({overflow: "hidden"});
+        }).one('shown.bs.modal shown.bs.tab', function () {
+            $(this).find('.comment').readmore({
+                speed : 100,
+                collapsedHeight: 60,
+                moreLink: '<a href="#" class="morelink">See more</a>',
+                lessLink: '<a href="#" class="morelink">See Less</a>'
+            });
+    });
+
 function detectVerticalScroll(){
     var bsTable= $('.fixed-table-body tbody'); // need real DOM Node, not jQuery wrapper
     if(bsTable[0].scrollHeight>bsTable[0].clientHeight){
@@ -1989,31 +2027,6 @@ $("#circles-slider")
 //     alert('Yes it has vertical scrollbar')
 //  }
 </script>
-
-
-<script type="text/javascript">
-/*Read more / Read less*/
-     $('.comment').each(function(){
-        $(this).readmore({
-                speed : 100,
-                collapsedHeight: 60,
-                moreLink: '<a href="#" class="morelink">See more</a>',
-                lessLink: '<a href="#" class="morelink">See Less</a>'
-            });
-     });
-
-     $('.modal').one('show.bs.modal', function () {
-      $(this).find('.comment').css({overflow: "hidden"});
-        }).one('shown.bs.modal shown.bs.tab', function () {
-            $(this).find('.comment').readmore({
-                speed : 100,
-                collapsedHeight: 60,
-                moreLink: '<a href="#" class="morelink">See more</a>',
-                lessLink: '<a href="#" class="morelink">See Less</a>'
-            });
-    });
-</script>
-
 </body>
 
 </html>

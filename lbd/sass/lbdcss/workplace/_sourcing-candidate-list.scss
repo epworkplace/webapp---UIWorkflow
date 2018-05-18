@@ -418,6 +418,9 @@
                 &.reject {
                   color: #EE0A5F;
                 }
+                &.failed, &.declined{
+                	color: $rework;
+                }
 
                 i.star-rate {
                   position: relative;
