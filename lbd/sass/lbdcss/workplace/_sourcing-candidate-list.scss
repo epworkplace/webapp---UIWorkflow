@@ -396,11 +396,14 @@
               width: 420px;
 
               .numbers {
+                font-weight: 400;
+
                 i {
                   position: relative;
                   top: 5px;
                   line-height: 0;
                   font-size: 16px;
+                  font-weight: 700;
                 }
 
                 &:before, &:after {
@@ -408,18 +411,27 @@
                 }
 
                 &.done {
-                  color: #447DF7;
+                  color: $selected;
+
+                  span {
+                    color: $selected;
+                  }
                 }
 
                 &.process {
-                  color: #353f53;
+                  color: $main;
+
+                  span {
+                    color: $main;
+                  }
                 }
 
-                &.reject {
-                  color: #EE0A5F;
-                }
-                &.failed, &.declined{
-                	color: $rework;
+                &.reject, &.failed, &.declined {
+                  color: $delete;
+
+                  span {
+                    color: $delete;
+                  }
                 }
 
                 i.star-rate {
@@ -432,7 +444,7 @@
                 &.bidding {
                   .bidding-data {
                     background: #f3f5f7;
-                    color: #353f53;
+                    color: $main;
                     font-weight: 600;
                     padding: 7px 12px;
                     margin-top: -7px;
