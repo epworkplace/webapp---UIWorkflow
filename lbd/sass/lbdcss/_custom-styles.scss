@@ -9377,6 +9377,10 @@ html {
     background: #2eb1ae;
   }
 
+  &.done, &.not-start {
+    background: $done;
+  }
+
   &.senior {
     background: #FB8C00;
     border-radius: 30px;
