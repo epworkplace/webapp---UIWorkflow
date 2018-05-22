@@ -1776,6 +1776,90 @@
   }
 }
 
+// card user image, user image
+%user-image {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  position: relative;
+  border-radius: 50%;
+
+  .card-user-empty, img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-user-empty{
+  	border: 2px dashed #dfd9dc;
+  	color: #dfd9dc;
+  	font-size: 18px;
+  	position: relative;
+  	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	border-radius: 50%;
+
+  	&.user{
+  		border-style:solid;
+  		color: #fff;
+	  	&.bid-scheduled{
+	  		background: $not-started;
+	  	}
+	  	&.bidding, &.checking {
+				background: $selected;
+	  	}
+	  	&.bid-expired, &.rework, &.expired, &.plagiarism {
+	  		background: $rework;
+	  	}
+  	}
+  }
+
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+    border: 2px solid #dfd9dc;
+  }
+
+	.notification{
+		position: absolute;
+    background-color: $default-bg;
+    text-align: center;
+    border-radius: 10px;
+    min-width: 14px;
+    height: 14px;
+    top: -2px;
+    right: -2px;
+    border: 2px solid #fff;
+    &.ongoing{
+    	background: $selected;
+    }
+    &.danger {
+			background: $rework;
+    }
+    &.done{
+			background: $done;
+    }
+    &.ready{
+			background: $closed;
+    }
+	}
+  &.img-small {}
+
+  &.img-medium {}
+
+  &.img-large {}
+  &:hover{
+  	.card-user-empty, img{
+  		border:solid 2px $main;
+  	}
+  }
+}
+
 span.edit {
   i {
     font-size: 12px;
