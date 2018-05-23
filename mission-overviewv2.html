@@ -207,29 +207,29 @@
 <!-- Custom scripts -->
 
 <script type="text/javascript">
-    $(document).on('ready', function() {
-    $(".center").slick({
-    dots: false,
-    infinite: false,
-    draggable: true,
-    slidesToShow: 2,
-    /*arrows: false,*/
-    slidesToScroll: 1
-    });
-    });
-    </script>
-    <script type="text/javascript">
-    var textarea = document.getElementById('newCardTitle');
-    textarea.addEventListener('keydown', autosize);
-    function autosize(){
-    var el = this;
-    setTimeout(function(){
-    el.style.cssText = 'height:auto; padding:0';
-    /*for box-sizing other than "content-box" use:
-    el.style.cssText = '-moz-box-sizing:content-box';*/
-    el.style.cssText = 'height:' + el.scrollHeight + 'px';
-    },0);
-    }
+	$(document).on('ready', function() {
+		$(".center").slick({
+		dots: false,
+		infinite: false,
+		draggable: true,
+		slidesToShow: 2,
+		/*arrows: false,*/
+		slidesToScroll: 1
+		});
+	});
+</script>
+<script type="text/javascript">
+	var textarea = document.getElementById('newCardTitle');
+	textarea.addEventListener('keydown', autosize);
+	function autosize(){
+		var el = this;
+		setTimeout(function(){
+			el.style.cssText = 'height:auto; padding:0';
+			/*for box-sizing other than "content-box" use:
+			el.style.cssText = '-moz-box-sizing:content-box';*/
+			el.style.cssText = 'height:' + el.scrollHeight + 'px';
+			},0);
+	}
 </script>
 
 <script>
@@ -586,6 +586,55 @@
 			});
 		/*Teamlist single selection highlight*/
 
+		/*Show user info on hover of user image*/
+			$('.user-container').each(function(){
+
+			});
+			$(document).on('mouseenter', '.user-container li', function(e){
+				e.stopPropagation();
+				e.stopImmediatePropagation();
+				var thisClass = this.className;
+					// infoClass = thisClass + '-ifno',
+					// infoContainer = $(this).parents('.card-box').find(infoClass);
+				console.log(thisClass);
+				// console.log(infoClass);
+				// console.log(infoContainer);
+				// $(this).siblings('li').removeClass('active');
+				$(this).parent('.user-container').find('li').removeClass('active');
+				$(this).addClass('active');
+				$(this).parents('.card-box').find('.user-info-container li').removeClass('active');
+				$(this).parents('.card-box').find('.user-info-container').find($('.' + thisClass)).addClass('active');
+				// $('.' + thisClass).addClass('active');
+			});
+			$(document).on('mouseleave', '.user-container li', function(e){
+				e.stopPropagation();
+				e.stopImmediatePropagation();
+				$(this).removeClass('active');
+				$(this).parents('.card-box').find('.user-info-container li').removeClass('active');
+				$(this).parents('.card-box').find('.user-info-container li:first-child').addClass('active');
+				// console.log(this.className);
+			});
+			$(document).on('mouseenter', '.user-info-container li', function(e){
+				e.stopPropagation();
+				e.stopImmediatePropagation();
+				if($(this).hasClass("active")){
+				    return false;
+				} else {
+				    $(this).siblings().removeClass('active');
+				    $(this).parent('.user-info-container').find('li:first-child').addClass('active');
+				}
+			});
+			/*$(document).on('mouseleave', '.user-info-container li', function(e){
+				e.stopPropagation();
+				e.stopImmediatePropagation();
+				if($(this).hasClass("active")){
+				    return
+				} else {
+				    $(this).siblings().removeClass('active');
+				    $(this).parent('.user-info-container').find('li:first-child').addClass('active');
+				}
+			});*/
+		/*Show user info on hover of user image ends*/
 
 	});
 </script>

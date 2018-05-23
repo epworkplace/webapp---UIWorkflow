@@ -155,7 +155,7 @@
 							}
 							.user-container{
 								list-style-type: none;
-								padding: 0 0 15px 0;
+								padding: 0;
 								margin: 0;
 								display: -webkit-flex;
 								display: -moz-flex;
@@ -163,11 +163,20 @@
 								display: -o-flex;
 								display: flex;
 								align-items: center;
+								flex-flow: row wrap;
 								li{
 									display: inline-block;
-									padding-right: 8px;
+									padding: 0 8px 15px 0;
 									&:last-child{
-										padding: 0;
+										padding-bottom: 15px;
+									}
+									&:hover{
+										*{
+											pointer-events: none;
+										}
+										.card-user-empty, img{
+									  		border:solid 2px $main;
+									  	}
 									}
 								}
 								.card-user{
