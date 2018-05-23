@@ -9341,7 +9341,7 @@ html {
     background: #fec500;
   }
 
-  &.ongoing {
+  &.ongoing, &.bidding, &.checking {
     background: #11BFE3;
   }
 
@@ -9368,6 +9368,9 @@ html {
   &.paused {
     background: #353F53;
   }
+	&.done {
+		background: $done;
+	}
 
   &.draft {
     background: $highlight-06;
@@ -9379,6 +9382,17 @@ html {
 
   &.completed {
     background: #2eb1ae;
+  }
+  &.delivered {
+    background: $delivered;
+  }
+
+  &.expired{
+  	background: $rework;
+  }
+
+  &.done, &.not-start {
+    background: $done;
   }
 
   &.senior {
