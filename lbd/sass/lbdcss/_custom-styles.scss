@@ -8433,6 +8433,10 @@ html {
 .close {
   font-size: 24px !important;
   opacity: 0.5 !important;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
 }
 
 /*Project Plan List Starts*/
