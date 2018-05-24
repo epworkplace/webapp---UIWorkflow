@@ -457,13 +457,13 @@
 	// Card-box click to open Contract-overview single page
 	$(document).ready(function(){
 	    $('div').delegate('.card-box', 'click', function(e){
-	    if($(e.target).closest('.checkbox, a, button, .card-user').length === 0) {
-	        // code placed inside this condition is not executed on clicking the element #test
-	        e.stopPropagation();
-	        // console.log('Clicked on card-box');
-	        window.open('contract-overview.html','_blank');
-	    }
-	})
+		    if($(e.target).closest('.checkbox, a, button, .card-user').length === 0) {
+		        // code placed inside this condition is not executed on clicking the element #test
+		        e.stopPropagation();
+		        // console.log('Clicked on card-box');
+		        window.open('contract-overview.html','_blank');
+		    }
+		})
 
 	/* Edit bulk duplicate modal Title*/
 	  $('#editCreateMissionTitle').click(function(e) {
@@ -587,53 +587,56 @@
 		/*Teamlist single selection highlight*/
 
 		/*Show user info on hover of user image*/
-			$('.user-container').each(function(){
 
-			});
 			$(document).on('mouseenter', '.user-container li', function(e){
 				e.stopPropagation();
 				e.stopImmediatePropagation();
 				var thisClass = this.className;
-					// infoClass = thisClass + '-ifno',
-					// infoContainer = $(this).parents('.card-box').find(infoClass);
 				console.log(thisClass);
-				// console.log(infoClass);
-				// console.log(infoContainer);
-				// $(this).siblings('li').removeClass('active');
-				$(this).parent('.user-container').find('li').removeClass('active');
-				$(this).addClass('active');
-				$(this).parents('.card-box').find('.user-info-container li').removeClass('active');
-				$(this).parents('.card-box').find('.user-info-container').find($('.' + thisClass)).addClass('active');
-				// $('.' + thisClass).addClass('active');
-			});
-			$(document).on('mouseleave', '.user-container li', function(e){
-				e.stopPropagation();
-				e.stopImmediatePropagation();
-				$(this).removeClass('active');
-				$(this).parents('.card-box').find('.user-info-container li').removeClass('active');
-				$(this).parents('.card-box').find('.user-info-container li:first-child').addClass('active');
-				// console.log(this.className);
-			});
-			$(document).on('mouseenter', '.user-info-container li', function(e){
-				e.stopPropagation();
-				e.stopImmediatePropagation();
-				if($(this).hasClass("active")){
-				    return false;
+				$.fn.extend({
+				    hasClasses: function (selectors) {
+				        var self = this;
+				        for (var i in selectors) {
+				            if ($(self).hasClass(selectors[i]))
+				                return true;
+				        }
+				        return false;
+				    }
+				});
+				if($(this).parents('.card-box').hasClasses(['completed', 'draft']) || $(this).find('.card-user-empty').hasClasses(['empty']) ){
+					return false;
 				} else {
-				    $(this).siblings().removeClass('active');
-				    $(this).parent('.user-info-container').find('li:first-child').addClass('active');
+					if($(this).hasClass("active")){
+					    $(this).removeClass('active');
+					    thisClass = this.className;
+					} else {
+						$(this).parent('.user-container').find('li').removeClass('active');
+						$(this).addClass('active');
+						$(this).parents('.card-box').find('.user-info-container li').removeClass('active');
+						$(this).parents('.card-box').find('.user-info-container').find($('.' + thisClass)).addClass('active');
+					}
 				}
 			});
-			/*$(document).on('mouseleave', '.user-info-container li', function(e){
-				e.stopPropagation();
-				e.stopImmediatePropagation();
-				if($(this).hasClass("active")){
-				    return
-				} else {
-				    $(this).siblings().removeClass('active');
-				    $(this).parent('.user-info-container').find('li:first-child').addClass('active');
-				}
-			});*/
+			/*$('div').delegate('.user-container li', 'mouseenter', function(e){
+				console.log("enerted to li");
+			    if($(e.target).closest('.draft, .completed, .card-user-empty.empty').length === 0) {
+			        // code placed inside this condition is not executed on clicking the element #test
+			        e.stopPropagation();
+			        e.stopImmediatePropagation();
+			        var thisClass = this.className;
+					console.log(thisClass);
+			        if($(this).hasClass("active")){
+					    $(this).removeClass('active');
+					    thisClass = this.className;
+					} else {
+						$(this).parent('.user-container').find('li').removeClass('active');
+						$(this).addClass('active');
+						$(this).parents('.card-box').find('.user-info-container li').removeClass('active');
+						$(this).parents('.card-box').find('.user-info-container').find($('.' + thisClass)).addClass('active');
+					}
+			    }
+			})*/
+
 		/*Show user info on hover of user image ends*/
 
 	});
