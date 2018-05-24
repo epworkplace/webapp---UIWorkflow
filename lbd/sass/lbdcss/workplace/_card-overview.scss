@@ -281,115 +281,31 @@
 
                     i {
                       font-size: 50px;
+                      color: $cta-icons;
                     }
 
                     &:before {
-                      content: '';
-                      position: absolute;
                       right: -3px;
                       bottom: 2px;
                       width: 30px;
                       height: 18px;
-                      border-radius: 3px;
                     }
 
                     &:after {
-                      content: '';
-                      position: absolute;
                       right: 1px;
                       bottom: 2px;
                       font-size: 14px;
-                      color: #fff;
                     }
 
-                    &.doc {
+                    &.docx, &.xlsx, &.jpeg, &.pptx, &.json {
                       &:before {
-                        background: $selected;
-                      }
-
-                      &:after {
-                        content: 'doc';
-                      }
-                    }
-
-                    &.docx {
-                      &:before {
-                        background: $selected;
                         right: -8px;
                         width: 34px;
                       }
 
                       &:after {
-                        content: 'docx';
                         right: -5px;
                       }
-                    }
-
-                    &.zip {
-                      &:before {
-                        background: $default-bg;
-                      }
-
-                      &:after {
-                        content: 'zip';
-                      }
-                    }
-
-                    &.rar {
-                      &:before {
-                        background: $validate;
-                      }
-
-                      &:after {
-                        content: 'rar';
-                      }
-                    }
-
-                    &.gsl {
-                      &:before {
-                        background: $default-bg;
-                      }
-
-                      &:after {
-                        content: 'gsl';
-                      }
-                    }
-
-                    &.pdf {
-                      &:before {
-                        background: $delete;
-                      }
-
-                      &:after {
-                        content: 'pdf';
-                      }
-                    }
-
-                    &.xls {
-                      &:before {
-                        background: $closed;
-                      }
-
-                      &:after {
-                        content: 'xls';
-                      }
-                    }
-
-                    &.xlsx {
-                      &:before {
-                        background: $closed;
-                        right: -8px;
-                        width: 30px;
-                      }
-
-                      &:after {
-                        content: 'xlsx';
-                        right: -5px;
-                      }
-                    }
-
-                    i {
-                      color: $cta-icons;
                     }
                   }
                 }
@@ -609,9 +525,12 @@
 }
 
 /* File image and type starts */
-
 span.file-type {
   position: relative;
+
+  i {
+    color: $cta-icons;
+  }
 
   &:before {
     content: '';
@@ -632,56 +551,45 @@ span.file-type {
     color: #fff;
   }
 
-  &.doc {
+  &.doc, &.docx {
     &:before {
       background: $selected;
     }
+  }
 
+  &.doc {
     &:after {
       content: 'doc';
     }
   }
 
   &.docx {
-    &:before {
-      background: $selected;
-      right: -8px;
-      width: 25px;
-    }
-
     &:after {
       content: 'docx';
-      right: -5px;
     }
   }
 
-  &.zip {
+  &.xls, &.xlsx, &.csv {
     &:before {
-      background: $default-bg;
-    }
-
-    &:after {
-      content: 'zip';
+      background: $closed;
     }
   }
 
-  &.rar {
-    &:before {
-      background: $validate;
-    }
-
+  &.xls {
     &:after {
-      content: 'rar';
+      content: 'xls';
     }
   }
 
-  &.gsl {
-    &:before {
-      background: $default-bg;
-    }
-
+  &.csv {
     &:after {
-      content: 'gsl';
+      content: 'csv';
+    }
+  }
+
+  &.xlsx {
+    &:after {
+      content: 'xlsx';
     }
   }
 
@@ -695,31 +603,133 @@ span.file-type {
     }
   }
 
-  &.xls {
+  &.gsl, &.zip {
     &:before {
-      background: $closed;
-    }
-
-    &:after {
-      content: 'xls';
+      background: $default-bg;
     }
   }
 
-  &.xlsx {
+  &.zip {
+    &:after {
+      content: 'zip';
+    }
+  }
+
+  &.gsl {
+    &:after {
+      content: 'gsl';
+    }
+  }
+
+  &.rar {
+    &:after {
+      content: 'rar';
+    }
+  }
+
+  &.ppt, &.pptx {
     &:before {
-      background: $closed;
+      background: $validate;
+    }
+
+    &:after {
+      content: 'rar';
+    }
+  }
+
+  &.ppt {
+    &:after {
+      content: 'ppt';
+    }
+  }
+
+  &.pptx {
+    &:after {
+      content: 'pptx';
+    }
+  }
+
+  &.json, &.xml {
+    &:before {
+      background: $beginner;
+    }
+  }
+
+  &.json {
+    &:after {
+      content: 'json';
+    }
+  }
+
+  &.xml {
+    &:after {
+      content: 'xml';
+    }
+  }
+
+  &.txt {
+    &:before {
+      background: $sub-heading;
+    }
+
+    &:after {
+      content: 'txt';
+    }
+  }
+
+  &.odt {
+    &:before {
+      background: $sub-heading;
+    }
+
+    &:after {
+      content: 'odt';
+    }
+  }
+
+  &.jpg, &.jpeg, &.png {
+    &:before {
+      background: $delivered;
+    }
+  }
+
+  &.jpg {
+    &:after {
+      content: 'jpg';
+    }
+  }
+
+  &.png {
+    &:after {
+      content: 'png';
+    }
+  }
+
+  &.jpeg {
+    &:after {
+      content: 'jpeg';
+    }
+  }
+
+  &.psd {
+    &:before {
+      background: $junior;
+    }
+
+    &:after {
+      content: 'psd';
+    }
+  }
+
+  &.docx, &.xlsx, &.jpeg, &.pptx, &.json {
+    &:before {
       right: -8px;
       width: 25px;
     }
 
     &:after {
-      content: 'xlsx';
       right: -5px;
     }
-  }
-
-  i {
-    color: $cta-icons;
   }
 }
 
