@@ -1789,33 +1789,36 @@
     height: 100%;
   }
 
-  .card-user-empty{
-  	border: 2px dashed #dfd9dc;
-  	color: #dfd9dc;
-  	font-size: 18px;
-  	position: relative;
-  	display: -webkit-flex;
-  	display: -moz-flex;
-  	display: -ms-flex;
-  	display: -o-flex;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	border-radius: 50%;
+  .card-user-empty {
+    border: 2px dashed #dfd9dc;
+    color: #dfd9dc;
+    font-size: 18px;
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 
-  	&.user{
-  		border-style:solid;
-  		color: #fff;
-	  	&.bid-scheduled{
-	  		background: $not-started;
-	  	}
-	  	&.bidding, &.checking {
-				background: $selected;
-	  	}
-	  	&.bid-expired, &.rework, &.expired, &.plagiarism {
-	  		background: $rework;
-	  	}
-  	}
+    &.user {
+      border-style: solid;
+      color: #fff;
+
+      &.bid-scheduled {
+        background: $not-started;
+      }
+
+      &.bidding, &.checking {
+        background: $selected;
+      }
+
+      &.bid-expired, &.rework, &.expired, &.plagiarism {
+        background: $rework;
+      }
+    }
   }
 
   img {
@@ -1825,8 +1828,8 @@
     border: 2px solid #dfd9dc;
   }
 
-	.notification{
-		position: absolute;
+  .notification {
+    position: absolute;
     background-color: $default-bg;
     text-align: center;
     border-radius: 10px;
@@ -1835,28 +1838,34 @@
     top: -2px;
     right: -2px;
     border: 2px solid #fff;
-    &.ongoing{
-    	background: $selected;
+
+    &.ongoing {
+      background: $selected;
     }
+
     &.danger {
-			background: $rework;
+      background: $rework;
     }
-    &.done{
-			background: $done;
+
+    &.done {
+      background: $done;
     }
-    &.ready{
-			background: $closed;
+
+    &.ready {
+      background: $closed;
     }
-	}
+  }
+
   &.img-small {}
 
   &.img-medium {}
 
   &.img-large {}
-  &:hover{
-  	.card-user-empty, img{
-  		border:solid 2px $main;
-  	}
+
+  &:hover {
+    .card-user-empty, img {
+      border: solid 2px $main;
+    }
   }
 }
 
