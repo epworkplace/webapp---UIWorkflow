@@ -1170,6 +1170,14 @@ span.file-type {
 
   .disapprove-drop {
     .bootstrap-select.btn-group {
+      button.dropdown-toggle {
+        .filter-option {
+          .glyphicon-ok {
+            color: $selected !important;
+          }
+        }
+      }
+
       button.bs-placeholder {
         span.filter-option {
           color: $helper !important;
@@ -1479,6 +1487,116 @@ span.file-type {
 }
 
 /* Check and Review Modal Ends */
+
+/* Review Test Article Modal Starts */
+
+.review-test-article-modal {
+  .modal-title {
+    font-size: 20px;
+    color: $main;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .rate-delivery {
+    .out-of {
+      @extend .df-ac;
+
+      height: 38px;
+      color: $main;
+      padding-left: 0;
+
+      b {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  a.drag-drop-brief-settings {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65px;
+    color: #a0a5af;
+    font-weight: 600;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    border: 2px dashed #D7D9DC;
+    border-radius: 4px;
+    transition: all .3s ease;
+
+    span {
+      font-weight: 400;
+    }
+
+    &:hover {
+      border: 2px dashed #448AFF;
+      color: #448AFF;
+    }
+  }
+
+  .attach-with-gdrive {
+    text-align: center;
+    margin: 15px 0;
+
+    a {
+      padding-left: 28px;
+      background: url(../img/gDrive.svg) no-repeat;
+      background-size: 20px;
+      text-decoration: underline;
+    }
+  }
+
+  .added-settings-brief {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    border: 2px solid #D7D9DC;
+    border-radius: 4px;
+
+    i {
+      color: $highlight-02;
+    }
+
+    .file-name {
+      color: $main;
+      font-weight: 700;
+
+      span.sub {
+        display: block;
+        color: $highlight-06;
+        font-size: 12px;
+      }
+    }
+
+    a {
+      i {
+        color: $highlight-02;
+      }
+
+      &:hover {
+        i {
+          color: $main;
+        }
+      }
+    }
+  }
+}
+
+/* Review Test Article Modal Ends */
 
 /* Disapprove Job modal Starts */
 
