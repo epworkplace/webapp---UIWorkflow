@@ -603,7 +603,7 @@
 				        return false;
 				    }
 				});
-				if($(this).parents('.card-box').hasClasses(['completed', 'draft']) || $(this).find('.card-user-empty').hasClasses(['empty']) ){
+				if($(this).parents('.card-box').hasClasses(['completed', 'draft', 'delivered', 'ready']) || $(this).find('.card-user-empty').hasClasses(['empty']) ){
 					return false;
 				} else {
 					if($(this).hasClass("active")){

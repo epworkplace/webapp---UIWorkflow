@@ -177,22 +177,6 @@
 										.card-user-empty, img{
 									  		border:solid 2px $main;
 									  	}
-									  	/* .card-user{
-									  											  	&:before{
-									  											  		border-bottom: 11px solid $highlight-01;
-									  												    border-left: 11px solid transparent;
-									  												    border-right: 11px solid transparent;
-									  												    content: '';
-									  												    display: inline-block;
-									  												    position: absolute;
-									  												    left: calc(50% - 11px);
-									  												    bottom: -18px;
-									  											  		transition: all .3s ease;
-									  											  	}
-									  											  	&:after{
-									  											  		content: none;
-									  											  	}
-									  	} */
 									}
 
 									&.active{
@@ -275,15 +259,10 @@
 							}
 						}
 
-						&.draft, &.completed{
+						&.draft, &.ready, &.delivered, &.completed{
 							.user-container{
 								li{
-									.card-user{
-										img{
-											border-color: $closed;
-										}
-									}
-									&:hover{
+									&.active{
 										.card-user{
 											&:before, &:after{
 												content: none;
@@ -330,13 +309,6 @@
 										.card-user{
 											img{
 												border-color: $closed;
-											}
-										}
-										&:hover{
-											.card-user{
-												&:before, &:after{
-													content: none;
-												}
 											}
 										}
 									}
@@ -565,6 +537,8 @@
             padding: 0 !important;
 
             a.close {
+            	top: 0;
+            	right: 0;
                 i {
                     font-size: 18px;
                 }
