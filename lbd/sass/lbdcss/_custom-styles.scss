@@ -2160,6 +2160,14 @@ html {
   span {
     font-weight: 600;
   }
+
+  &.failed {
+    background: $delete;
+
+    &:before {
+      content: '\f06a';
+    }
+  }
 }
 
 .assessment-list-container {
@@ -2231,6 +2239,16 @@ html {
 
             &:before {
               border: 2px solid #fec500;
+            }
+          }
+
+          &.disapprove {
+            i {
+              color: $main;
+            }
+
+            &:before {
+              border: 2px solid $main;
             }
           }
 
@@ -8693,7 +8711,7 @@ html {
   opacity: 1 !important;
   background-color: #d7d9dc !important;
   border-color: #d7d9dc !important;
-  color: #fff !important;
+  color: #888 !important;
   border-radius: 6px !important;
 }
 
@@ -8702,7 +8720,7 @@ html {
   opacity: 1 !important;
   background-color: #d7d9dc !important;
   border-color: #d7d9dc !important;
-  color: #fff !important;
+  color: #888 !important;
   border-radius: 6px !important;
 }
 
@@ -9368,9 +9386,10 @@ html {
   &.paused {
     background: #353F53;
   }
-	&.done {
-		background: $done;
-	}
+
+  &.done {
+    background: $done;
+  }
 
   &.draft {
     background: $highlight-06;
@@ -9383,12 +9402,13 @@ html {
   &.completed {
     background: #2eb1ae;
   }
+
   &.delivered {
     background: $delivered;
   }
 
-  &.expired{
-  	background: $rework;
+  &.expired {
+    background: $rework;
   }
 
   &.done, &.not-start {

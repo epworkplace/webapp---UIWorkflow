@@ -192,9 +192,8 @@
 <!-- @include _partials/_my-profile-edit-address-modal.html -->
 <!-- My profile edit account information modal -->
 <!-- @include _partials/_my-profile-edit-acc-info-modal.html -->
-
-
-
+<!--Contributors new user profile modal -->
+<!-- @include _partials/_contributors-new-user-profile.html -->
 <!-- Modal windows ends -->
 
 
@@ -386,8 +385,21 @@ $(document).ready(function(){
         $(this).parents('.list-head-container').find('.user-name').show(100);
     });
 
+    /*Left profile nav tab content*/
 
-
+      $('.profile-info-navs a').click(function(event) {
+				event.preventDefault();
+				if ($(this).hasClass('active')) {
+					return false;
+				}
+				else{
+					$(this).addClass('active');
+					$(this).parent().siblings().children().removeClass('active');
+					var tab = $(this).attr("href");
+					$('.profile-container-right > .tab-content').not(tab).css('display', 'none');
+					$(tab).fadeIn();
+				}
+			});
 
 
 });

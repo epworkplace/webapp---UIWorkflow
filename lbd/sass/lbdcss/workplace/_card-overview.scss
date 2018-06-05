@@ -44,7 +44,6 @@
 
                 span.notification {
                   position: absolute;
-                  background-color: $default-bg;
                   text-align: center;
                   border-radius: 15px;
                   min-width: 15px;
@@ -57,6 +56,18 @@
                   top: -5px;
                   right: 0px;
                   border: 2px solid #fff;
+
+                  &.ongoing {
+                    background-color: $default-bg;
+                  }
+
+                  &.rework {
+                    background-color: $rework;
+                  }
+
+                  &.disapprove {
+                    background-color: $main;
+                  }
                 }
               }
 
@@ -170,6 +181,8 @@
                 }
 
                 .user-desc {
+                  word-wrap: break-word;
+
                   span.sub {
                     display: block;
                     color: $highlight-06;
@@ -208,7 +221,7 @@
                 .rating-container {
                   span {
                     margin-left: 5px;
-                    background: #000;
+                    background: $main;
                     border-radius: 6px;
                     color: #fff;
                     font-weight: 400;
@@ -313,6 +326,7 @@
                 .brief-desc {
                   .file-name {
                     margin-bottom: 10px;
+                    word-wrap: break-word;
 
                     span.sub {
                       display: block;
@@ -912,7 +926,7 @@ span.file-type {
       display: -o-flex;
       display: flex;
       align-items: center;
-      margin: 0 0 30px 0;
+      margin: 0;
       background: $highlight-01;
       border-radius: 4px;
       height: 100%;
@@ -1117,6 +1131,7 @@ span.file-type {
 
     .user-desc {
       color: $main;
+      word-wrap: break-word;
 
       span.sub {
         display: block;
@@ -1410,6 +1425,7 @@ span.file-type {
       display: -webkit-flex;
       display: flex;
       max-height: 30px;
+      word-wrap: break-word;
 
       span.fire {
         text-decoration: line-through;
@@ -1698,7 +1714,7 @@ span.file-type {
     display: -o-flex;
     display: flex;
     align-items: center;
-    margin: 0 0 30px 0;
+    margin: 0;
     background: $highlight-01;
     border-radius: 4px;
     height: 100%;
@@ -2027,6 +2043,7 @@ span.file-type {
       display: -webkit-flex;
       display: flex;
       max-height: 30px;
+      word-wrap: break-word;
 
       span.fire {
         text-decoration: line-through;
@@ -2043,7 +2060,7 @@ span.file-type {
     display: -o-flex;
     display: flex;
     align-items: center;
-    margin: 0 0 30px 0;
+    margin: 0;
     background: $highlight-01;
     border-radius: 4px;
     height: 100%;
