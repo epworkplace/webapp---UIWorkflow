@@ -388,6 +388,24 @@
 
                 .status-label {
                   line-height: 1.5;
+
+                  span.paid {
+                    > .fa-database {
+                      position: relative;
+                      top: -3px;
+                      width: 10px;
+                      font-size: 10px;
+
+                      > i {
+                        position: absolute;
+                        left: 0;
+                        width: 12px;
+                        top: 4px;
+                        font-size: 10px;
+                        background: white;
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -410,7 +428,7 @@
                   background: 000;
                 }
 
-                &.done {
+                &.done, &.done a {
                   color: $selected;
 
                   span {
@@ -418,7 +436,7 @@
                   }
                 }
 
-                &.process {
+                &.process, &.process a {
                   color: $main;
 
                   span {
@@ -426,7 +444,7 @@
                   }
                 }
 
-                &.reject, &.failed, &.declined {
+                &.reject, &.reject a, &.failed, &.failed a, &.declined, &.declined a {
                   color: $delete;
 
                   span {
@@ -499,6 +517,139 @@
           }
         }
       }
+    }
+  }
+}
+
+/*Modal styles*/
+.pay-article-modal {
+  .modal-title {
+    font-size: 20px;
+    color: $main;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .candidate-info {
+    background: $highlight-01;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: $border-color;
+      left: 50%;
+      top: 0;
+    }
+
+    title {
+      text-transform: uppercase;
+      display: block;
+      font-weight: 600;
+      font-size: 12px;
+      color: #7d889a;
+      padding: 0 15px;
+    }
+
+    .image-container {
+      width: 60px;
+      margin: 0 0 0 5px;
+
+      .list-image {
+        @extend .df-ac;
+
+        width: 60px;
+        min-height: 60px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .head-container {
+      margin: 0;
+
+      .header {
+        line-height: 1.2;
+        padding: 0;
+
+        .status-label {
+          span.dates {
+            color: #B0B4BB;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .rating {
+      padding: 20px 25px;
+
+      span {
+        margin-left: 5px;
+        background: $main;
+        border-radius: 6px;
+        color: #fff;
+        font-weight: 400;
+        text-align: center;
+        padding: 3px 15px 5px;
+
+        i {
+          position: relative;
+          top: 2px;
+          font-size: 14px;
+          color: #fec500;
+        }
+      }
+    }
+  }
+
+  .user-container {
+    padding: 15px 30px;
+
+    .user-image {
+      width: 40px;
+      padding: 0;
+      margin-left: 15px;
+
+      img {
+        max-width: 100%;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+      }
+    }
+
+    .user-desc {
+      color: $main;
+
+      span.sub {
+        display: block;
+        color: $highlight-06;
+        font-size: 12px;
+      }
+    }
+
+    .user-comment {
+      margin-top: 15px;
+      color: $helper;
     }
   }
 }

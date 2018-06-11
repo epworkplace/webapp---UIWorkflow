@@ -183,6 +183,215 @@
   }
 }
 
+// Cleint details block
+%client-details-profile {
+  margin-bottom: 20px;
+  font-size: 12px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+
+    /* * {
+        color: #a2a6b0;
+
+        a {
+            text-decoration: underline;
+        }
+    } */
+
+  [class$='-image'] {
+    @extend %user-image;
+
+    padding: 0;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+[class*='-spec'], [class*='-infos'] {
+  margin-left: 10px;
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  [class*='-id'] {
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  [class*='-name'] {
+    font-size: 22px;
+    font-weight: 600;
+    color: #353F53;
+  }
+
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .label {
+      color: #fff;
+      margin: 0 5px 5px 0;
+      line-height: normal;
+      border-radius: 7px;
+
+      &.paused {
+        background: #9a9fa9;
+      }
+    }
+  }
+
+  [class*='-seniority'] {
+    font-size: 14px;
+    color: $main;
+
+    > .label {
+      margin-right: 5px;
+      margin-left: 0 !important;
+    }
+
+    .label {
+      margin: 0 5px;
+    }
+  }
+}
+
+/* UI Circle  slider starts */
+
+%ui-slider {
+  border-radius: 10px;
+  background: #eee;
+  border: none;
+  height: 15px;
+  margin: 15px 5px;
+  border: 1px solid #bdc1c8;
+
+  .ui-slider-handle {
+    border-radius: 23px;
+    height: 23px;
+    width: 23px;
+    top: -7px;
+    margin-left: -11px;
+    background: $highlight-01;
+
+    // border: 2px solid #fffaf7;
+
+  }
+
+  .ui-slider-range {
+    border-radius: 10px;
+  }
+
+  .ui-widget-header {
+    background: $selected;
+  }
+
+  .ui-slider-pip {
+    top: 0px;
+
+    .ui-slider-line {
+      width: 1px;
+      height: 100%;
+      border-radius: 0;
+      margin-left: 0;
+      background: #bdc1c8;
+      z-index: 1;
+    }
+
+    &.ui-slider-pip-last, &.ui-slider-pip-first {
+      // top: -7px;
+
+      .ui-slider-line, .ui-slider-label {
+        display: none;
+      }
+    }
+
+    &.ui-slider-pip-selected-initial, &.ui-slider-pip-selected {
+      color: #434d5a;
+    }
+
+    &.ui-slider-pip-selected-initial {
+      font-weight: normal;
+    }
+
+    &.ui-slider-pip-selected {
+      font-weight: bold;
+    }
+  }
+}
+
+/* UI Circle slider ends */
+
+/* UI Circle  slider starts */
+%ui-slider {
+  border-radius: 10px;
+  background: #eee;
+  border: none;
+  height: 15px;
+  margin: 15px 5px;
+  border: 1px solid #bdc1c8;
+
+  .ui-slider-handle {
+    border-radius: 23px;
+    height: 23px;
+    width: 23px;
+    top: -7px;
+    margin-left: -11px;
+    background: $highlight-01;
+
+    // border: 2px solid #fffaf7;
+
+  }
+
+  .ui-slider-range {
+    border-radius: 10px;
+  }
+
+  .ui-widget-header {
+    background: $selected;
+  }
+
+  .ui-slider-pip {
+    top: 0px;
+
+    .ui-slider-line {
+      width: 1px;
+      height: 100%;
+      border-radius: 0;
+      margin-left: 0;
+      background: #bdc1c8;
+      z-index: 1;
+    }
+
+    &.ui-slider-pip-last, &.ui-slider-pip-first {
+      // top: -7px;
+
+      .ui-slider-line, .ui-slider-label {
+        display: none;
+      }
+    }
+
+    &.ui-slider-pip-selected-initial, &.ui-slider-pip-selected {
+      color: #434d5a;
+    }
+
+    &.ui-slider-pip-selected-initial {
+      font-weight: normal;
+    }
+
+    &.ui-slider-pip-selected {
+      font-weight: bold;
+    }
+  }
+}
+
+/* UI Circle slider ends */
+
 // Question container for Survey, Quiz, etc.,
 %question-container {
   padding: 20px;
@@ -510,6 +719,10 @@
 %df-ac {
   display: flex;
   align-items: center;
+}
+
+.df-fwrap {
+  flex-flow: wrap;
 }
 
 %df-ac-jcc {

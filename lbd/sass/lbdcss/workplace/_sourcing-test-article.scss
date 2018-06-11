@@ -567,6 +567,16 @@
       padding: 10px;
       margin-right: 15px;
       margin-bottom: 15px;
+      border: 1px solid transparent;
+
+      &:hover {
+        box-shadow: rgba(18, 138, 50, 0.1) 0px 0px 5px 0px;
+        border: 1px solid #448AFF;
+      }
+
+      &.selected {
+        border: 1px solid #448AFF;
+      }
 
       .check-card {
         label.checkbox {
@@ -579,6 +589,26 @@
       }
 
       .card-footer {
+        a.payment {
+          > .fa-database {
+            position: relative;
+            width: 14px;
+
+            i {
+              position: absolute;
+              left: 0.5em;
+              width: 0.8em;
+              top: 0.5em;
+              font-size: 0.8em;
+              background: white;
+            }
+          }
+
+          i {
+            color: $helper;
+          }
+        }
+
         .card-details {
           color: #9ba1aa;
 
@@ -593,17 +623,34 @@
           .test-article-rate {
             @include clearfix;
 
-            width: 60%;
+            width: 80px;
             margin: 0 auto;
             clear: both;
 
-            div {
+            span {
+              background: $main;
+              border-radius: 6px;
+              color: #fff;
+              font-weight: 400;
+              text-align: center;
+              padding: 3px 0 5px;
+              text-align: center;
+
+              i {
+                position: relative;
+                top: 3px;
+                font-size: 14px;
+                color: #fec500;
+              }
+            }
+
+            /* div {
               padding: 0;
 
               .star-rating-label {
                 font-weight: 400;
               }
-            }
+            } */
           }
         }
       }
