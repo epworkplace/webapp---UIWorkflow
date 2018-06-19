@@ -38,45 +38,45 @@
 </head>
 
 <body class="wp-app layout-3">
-	<ul class="main-nav">
-		<li>
-		    <a href="clients.html" class="nav-link">
-		        <i class="material-icons">business</i>
-		        Clients
-		    </a>
-		</li>
-		<li>
-		    <a href="quote.html" class="nav-link">
-		        <i class="material-icons">monetization_on</i>
-		        Quotes
-		    </a>
-		</li>
-		<li>
-		    <a href="contracts.html" class="nav-link">
-		        <i class="material-icons">assignment</i>
-		        Contracts
-		    </a>
-		</li>
-		<li>
-		    <a href="mission.html" class="nav-link">
-		        <i class="material-icons">alarm</i>
-		        Missions
-		    </a>
-		</li>
-		<li>
-		    <a href="quizz-surveys-list.html" class="nav-link">
-		    	<i class="material-icons">assignment_turned_in</i>
-		        Quiz &amp; Survey
-		    </a>
-		</li>
-		<li>
-		    <a href="contributors.html" class="nav-link">
-		        <i class="material-icons">face</i>
-		        Contributors
-		    </a>
-		</li>
-	</ul>
-	
+  <ul class="main-nav">
+  	<li>
+  	    <a href="clients.html" class="nav-link">
+  	        <i class="material-icons">business</i>
+  	        Clients
+  	    </a>
+  	</li>
+  	<li>
+  	    <a href="quote.html" class="nav-link">
+  	        <i class="material-icons">monetization_on</i>
+  	        Quotes
+  	    </a>
+  	</li>
+  	<li>
+  	    <a href="contracts.html" class="nav-link">
+  	        <i class="material-icons">assignment</i>
+  	        Contracts
+  	    </a>
+  	</li>
+  	<li>
+  	    <a href="mission.html" class="nav-link">
+  	        <i class="material-icons">alarm</i>
+  	        Missions
+  	    </a>
+  	</li>
+  	<li>
+  	    <a href="quizz-surveys-list.html" class="nav-link">
+  	    	<i class="material-icons">assignment_turned_in</i>
+  	        Quiz &amp; Survey
+  	    </a>
+  	</li>
+  	<li>
+  	    <a href="contributors.html" class="nav-link">
+  	        <i class="material-icons">face</i>
+  	        Contributors
+  	    </a>
+  	</li>
+  </ul>
+  
 <div class="wrapper">
   <div class="sidebar">
       <div class="logo">
@@ -1600,12 +1600,12 @@
                                                     </div>
                                                     <div class="row form-group">
                                                         <div class="col-md-9">
-                                                            <label for="contactEmail">
+                                                            <label for="userEmail">
                                                                 Email
                                                             </label>
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    <input class="form-control" id="contactEmail" placeholder="ex: m.martin@webedia.com" type="email"/>
+                                                                    <input class="form-control" id="userEmail" placeholder="ex: m.martin@webedia.com" type="email"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -3243,7 +3243,7 @@
                                                     or click here to upload/udpate it
                                                 </span>
                                             </div>
-                                            <input type="file" id="upload-contact-pic" value="Upload picture" accept="image/*" />
+                                            <input type="file" id="upload-user-pic" value="Upload picture" accept="image/*" />
                                         </span>
                                     </div>
                                 </div>
@@ -3271,6 +3271,7 @@
         </div>
     </div>
 </div>
+
 <!-- My profile edit contact modal -->
 <div aria-labelledby="myProfileEditCotnactModal" class="modal fade my-profile-edit-cotnact-modal" id="myProfileEditCotnactModal" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-lg" role="modal">
@@ -3624,335 +3625,663 @@
 </div>
 <!--Contributors new user profile modal -->
 <div aria-labelledby="contributorsUserProfileModal" class="modal fade contributors-user-profile-modal in" style="display: block;" id="contributorsUserProfileModal" role="dialog" style="" tabindex="-1">
-		<div class="modal-dialog modal-lg" role="modal">
-				<div class="modal-content">
-						<div class="modal-body">
-							<span class="close">
-									<a data-dismiss="modal" href="javascript:;">
-											<i class="material-icons">
-													close
-											</i>
-									</a>
-							</span>
-							<div class="row">
-								<div class="col-md-12 profile-main-container">
-									<div class="row">
-										<div class="col-md-4 profile-container-left pt-15">
-											<div class="profile-left-content mCustomScrollbar">
-												<div class="row">
-													<div class="client-details col-md-12">
-															<div class="col-md-2 client-image">
-																	<div class="client-image-container">
-																			<a class="change-profile-image" href="javascript:;">
-																				<img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
-																				<!-- <div class="card-user-empty user">PC</div> -->
-																			</a>
-																	</div>
-															</div>
-															<div class="col-md-11">
-																	<div class="row">
-																			<div class="client-infos col-md-12">
-																					<div class="row">
-																						<div class="client-name">
-																							<a href="javascript:;" class="edit-client-name">Michael Martin</a> <span class="client-lang"><img src="lbd/img/flag/uk.gif" class="mCS_img_loaded"></span>
-																						</div>
-																					</div>
-																					<div class="row">
-																							<div class="client-seniority">
-																									<span class="label senior">
-																											Senior
-																									</span>
-																									<!-- <span class="label junior">
-																											Junior
-																									</span>
-																									<span class="label beginner">
-																											Beginner
-																									</span> -->
-																									<span class="hidden-xs"> <span class="time-spent"> - Contributor for <span class="fw600">3 Years and 10 months</span></span></span>
-																							</div>
-																					</div>
-																			</div>
-																	</div>
-															</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<div class="row">
-															<div class="col-md-12 profile-info-navs">
-																	<ul class="btn-group btn-group-justified" data-toggle="buttons">
-																		<li>
-																				<a href="#comments" class="btn btn-default active" data-toggle="tab">
-																						<i class="material-icons">insert_comment</i>
-																						<p>Comments</p>
-																						<span class="pull-right"><i class="fa fa-caret-right"></i></span>
-																				</a>
-																			</li>
-																			<li>
-																					<a href="#my-skills" class="btn btn-default" data-toggle="tab">
-																							<i class="fa fa-edit"></i>
-																							<p>Skills</p>
-																							<span class="pull-right"><i class="fa fa-caret-right"></i></span>
-																					</a>
-																			</li>
-																			<li>
-																					<a href="#job-history" class="btn btn-default" data-toggle="tab">
-																							<i class="material-icons">work</i>
-																							<p>Job History</p>
-																							<span class="pull-right"><i class="fa fa-caret-right"></i></span>
-																					</a>
-																			</li>
-																			<li>
-																					<a href="#contributor-data" class="btn btn-default" data-toggle="tab">
-																							<i class="material-icons">data_usage</i>
-																							<p>Contributor Data</p>
-																							<span class="pull-right"><i class="fa fa-caret-right"></i></span>
-																					</a>
-																			</li>
-																			<li>
-																					<a href="#cv-external-links" class="btn btn-default" data-toggle="tab">
-																							<i class="fa fa-ellipsis-h"></i>
-																							<p>CV &amp; External Links</p>
-																							<span class="pull-right"><i class="fa fa-caret-right"></i></span>
-																					</a>
-																			</li>
-																			<li>
-																					<a href="#account-settings" class="btn btn-default" data-toggle="tab">
-																							<i class="fa fa-cog"></i>
-																							<p>Account settings</p>
-																							<span class="pull-right"><i class="fa fa-caret-right"></i></span>
-																					</a>
-																			</li>
-																	</ul>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<div class="profile-overview">
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="sec-title">
-																		Profile overview
-																	</div>
-																	<div class="row">
-																		<div class="col-md-12">
-																			<div class="info-content card">
-																				<div class="display-content clearfix">
-																					<span class="edit" data-toggle="modal" data-target="#editProfileOverview">
-																						<i class="material-icons">create</i>
-																						<a href="javascript:;">
-																							Edit
-																						</a>
-																					</span>
-																					<div class="col-md-12 section-title"><i class="fa fa-quote-left"></i> Profile Description</div>
-																					<div class="col-md-12  overview">
-																						<div class="comment" style="max-height: none; height: 60px;" data-readmore="" aria-expanded="false" id="rmjs-1"><p>
-																						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div><a href="#" class="morelink" data-readmore-toggle="" aria-controls="rmjs-1">See more</a>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row profile-contact-info">
-																		<div class="col-md-6 contact-email pr-5">
-																			<div class="info-content card">
-																				<div class="display-content clearfix">
-																					<!-- <span class="edit" data-toggle="modal" data-target="#editProfileOverview">
-																						<i class="material-icons">create</i>
-																						<a href="javascript:;">
-																							Edit
-																						</a>
-																					</span> -->
-																					<div class="col-md-12 section-title"><i class="material-icons">email</i> Email Address</div>
-																					<div class="col-md-12 overview">
-																						<div class="email">michaelmartinpro@mail.com</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="col-md-6 contact-phone pl-5">
-																			<div class="info-content card">
-																				<div class="display-content clearfix">
-																					<span class="edit" data-toggle="modal" data-target="#editProfileOverview">
-																						<i class="material-icons">create</i>
-																						<a href="javascript:;">
-																							Edit
-																						</a>
-																					</span>
-																					<div class="col-md-12 section-title"><i class="material-icons">call</i> Phone number</div>
-																					<div class="col-md-12  overview">
-																						<div class="phone-number">(+33) 06 59 86 21 55</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="sec-title">
-																		Royalties
-																	</div>
-																	<div class="row">
-																		<div class="col-md-12">
-																			<div class="user-royalties card">
-																				<div class="row">
-																					<div class="col-md-4 royalty-value pr-5">
-																							Royalties Balance
-																							<span>2 758.20 &#8364;</span>
-																					</div>
-																					<div class="col-md-4 royalty-value pr-5 pl-5">
-																							Total Royalties
-																							<span>23 972.55 &#8364;</span>
-																					</div>
-																					<div class="col-md-4 royalty-value pl-5">
-																							Generated Turnover
-																							<span>81 702.20 &#8364;</span>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12 online-status-container mb-30">
-														<div class="row">
-															<div class="col-md-7 pr-5">
-																<div class="online-status-message">
-																	<i class="material-icons">access_time</i> Last connection <span>3 hours ago</span>
-																</div>
-															</div>
-															<div class="col-md-5 pl-5">
-																<div class="online-status">
-																	<span class="status online">online</span>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12 online-status-container mb-30">
-														<div class="row">
-															<div class="col-md-7 pr-5">
-																<div class="online-status-message">
-																	<i class="material-icons">access_time</i> Last connection <span>3 hours ago</span>
-																</div>
-															</div>
-															<div class="col-md-5 pl-5">
-																<div class="online-status">
-																	<span class="status busy">online</span>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12 online-status-container mb-30">
-														<div class="row">
-															<div class="col-md-7 pr-5">
-																<div class="online-status-message">
-																	<i class="material-icons">access_time</i> Last connection <span>3 hours ago</span>
-																</div>
-															</div>
-															<div class="col-md-5 pl-5">
-																<div class="online-status">
-																	<span class="status offline">online</span>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-8 profile-container-right">
-											<div class="tab-content active" id="comments" style="display: block;">
-												<div class="col-md-12">
-													<div class="row">
-														<div class="col-md-12 p-15 ">
-															<div class="row">
-																<div class="col-md-12 modal-title">
-																	<i class="material-icons">insert_comment</i> Comments
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="col-md-12 ranking-container">
-																		<div class="col-md-2 contributor-star">
-																			<svg viewBox="0 0 50 50"><path id="Shape-Copy-3" d="M47.63,19.3l-1-.7a3.19,3.19,0,0,1-1.25-3.52l.33-1.19a3.24,3.24,0,0,0-2.62-4.06l-1.25-.21A3.19,3.19,0,0,1,39.14,7l-.21-1.25a3.23,3.23,0,0,0-4.09-2.54l-1.19.38a3.27,3.27,0,0,1-3.54-1.19l-.76-1.08A3.22,3.22,0,0,0,24.56.85l-.93.86a3.21,3.21,0,0,1-3.75.44l-1.09-.6a3.28,3.28,0,0,0-4.57,1.63l-.49,1.19a3.12,3.12,0,0,1-3.16,2L9.32,6.31A3.19,3.19,0,0,0,5.94,9.72L6.05,11a3.25,3.25,0,0,1-2,3.19L3,14.65A3.23,3.23,0,0,0,1.37,19.2L2,20.28A3.15,3.15,0,0,1,1.64,24l-.81.92a3.15,3.15,0,0,0,.6,4.77l1,.7a3.19,3.19,0,0,1,1.25,3.52l-.49,1.24a3.24,3.24,0,0,0,2.61,4.06l1.26.22A3.14,3.14,0,0,1,9.75,42L10,43.28a3.22,3.22,0,0,0,4.08,2.54l1.2-.37a3.26,3.26,0,0,1,3.54,1.19l.76,1a3.22,3.22,0,0,0,4.79.49l.92-.86A3.23,3.23,0,0,1,29,46.85l1.09.6a3.28,3.28,0,0,0,4.57-1.63l.49-1.19a3.12,3.12,0,0,1,3.16-2l1.25.06A3.18,3.18,0,0,0,43,39.28L42.9,38a3.25,3.25,0,0,1,2-3.19L46,34.35a3.22,3.22,0,0,0,1.58-4.55l-.65-1.08A3.15,3.15,0,0,1,47.31,25l.81-.92A3.14,3.14,0,0,0,47.63,19.3ZM24.45,39.71A15.21,15.21,0,1,1,39.74,24.5,15.27,15.27,0,0,1,24.45,39.71Zm9.52-17-4.35,3.57,1.31,5.36a1.19,1.19,0,0,1-1.09,1.46.79.79,0,0,1-.6-.22l-4.85-2.92-4.73,2.92a1.64,1.64,0,0,1-.6.22A1.13,1.13,0,0,1,18,31.59l1.31-5.36L15,22.66a1.17,1.17,0,0,1,.71-2.06l5.6-.38,2.12-5.14a1.2,1.2,0,0,1,2.18,0l2.12,5.14,5.61.38A1.18,1.18,0,0,1,34,22.66Z" transform="translate(0 0)"/></svg>
-																		</div>
-																		<div class="col-md-8 contributor-rank-container">
-																			<div class="row">
-																				<div class="contributor-rank">
-																					Michael Martin
-																				</div>
-																			</div>
-																			<div class="row">
-																					<div class="client-seniority">
-																							<span class="label senior">
-																									Senior
-																							</span>
-																							<!-- <span class="label junior">
-																									Junior
-																							</span>
-																							<span class="label beginner">
-																									Beginner
-																							</span> -->
-																							<span class="time-spent">since December 21, 2013</span>
-																					</div>
-																			</div>
-																		</div>
-																		<div class="col-md-3 contributor-star-edit">
-																			<a href="javascript:;" class="btn btn-default full-width">Edit</a>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-content" id="my-skills">
-												my-skills
-											</div>
-											<div class="tab-content" id="job-history">
-												job-history
-											</div>
-											<div class="tab-content" id="contributor-data">
-												contributor-data
-											</div>
-											<div class="tab-content" id="cv-external-links">
-												cv-external-links
-											</div>
-											<div class="tab-content" id="account-settings">
-												account-settings
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 navigation-container mt-15">
-						<div class="row">
-							<div class="col-md-2"><a href="javascript:;" class="pull-left profile-prev"><i class="material-icons">chevron_left</i></a></div>
-							<div class="col-md-8">
-								<div class="user-nav text-center">
-									<b>Michael Martin</b><span>01/18</span>
-								</div>
-							</div>
-							<div class="col-md-2"><a href="javascript:;" class="pull-right profile-next"><i class="material-icons">chevron_right</i></a></div>
-						</div>
-					</div>
-				</div>
-		</div>
+    <div class="modal-dialog modal-lg" role="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <span class="close">
+                    <a data-dismiss="modal" href="javascript:;">
+                        <i class="material-icons">
+                        close
+                        </i>
+                    </a>
+                </span>
+                <div class="row">
+                    <div class="col-md-12 profile-main-container">
+                        <div class="row">
+                            <div class="col-md-4 profile-container-left pt-15">
+                                <div class="profile-left-content mCustomScrollbar">
+                                    <div class="row">
+                                        <div class="client-details col-md-12">
+                                            <div class="col-md-2 client-image">
+                                                <div class="client-image-container">
+                                                    <a class="change-profile-image" href="javascript:;">
+                                                        <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
+                                                        <!-- <div class="card-user-empty user">PC</div> -->
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-11">
+                                                <div class="row">
+                                                    <div class="client-infos col-md-12">
+                                                        <div class="row">
+                                                            <div class="client-name">
+                                                                <a href="javascript:;" class="edit-client-name">Michael Martin</a> <span class="client-lang"><img src="lbd/img/flag/uk.gif" class="mCS_img_loaded"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="client-seniority">
+                                                                <span class="label senior">
+                                                                    Senior
+                                                                </span>
+                                                                <!-- <span class="label junior">
+                                                                    Junior
+                                                                </span>
+                                                                <span class="label beginner">
+                                                                    Beginner
+                                                                </span> -->
+                                                                <span class="hidden-xs"> <span class="time-spent"> - Contributor for <span class="fw600">3 Years and 10 months</span></span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-12 profile-info-navs">
+                                                    <ul class="btn-group btn-group-justified" data-toggle="buttons">
+                                                        <li>
+                                                            <a href="#comments" class="btn btn-default" data-toggle="tab">
+                                                                <i class="material-icons">insert_comment</i>
+                                                                <p>Comments</p>
+                                                                <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#my-skills" class="btn btn-default active" data-toggle="tab">
+                                                                <i class="fa fa-edit"></i>
+                                                                <p>Skills</p>
+                                                                <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#job-history" class="btn btn-default" data-toggle="tab">
+                                                                <i class="material-icons">work</i>
+                                                                <p>Job History</p>
+                                                                <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#contributor-data" class="btn btn-default" data-toggle="tab">
+                                                                <i class="material-icons">data_usage</i>
+                                                                <p>Contributor Data</p>
+                                                                <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#cv-external-links" class="btn btn-default" data-toggle="tab">
+                                                                <i class="fa fa-ellipsis-h"></i>
+                                                                <p>CV &amp; External Links</p>
+                                                                <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#account-settings" class="btn btn-default" data-toggle="tab">
+                                                                <i class="fa fa-cog"></i>
+                                                                <p>Account settings</p>
+                                                                <span class="pull-right"><i class="fa fa-caret-right"></i></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="profile-overview">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="sec-title">
+                                                            Profile overview
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="info-content card">
+                                                                    <div class="display-content clearfix">
+                                                                        <span class="edit" data-toggle="modal" data-target="#editProfileOverview">
+                                                                            <i class="material-icons">create</i>
+                                                                            <a href="javascript:;">
+                                                                                Edit
+                                                                            </a>
+                                                                        </span>
+                                                                        <div class="col-md-12 section-title">
+                                                                            <i class="fa fa-quote-left"></i> Profile Description
+                                                                        </div>
+                                                                        <div class="col-md-12  overview">
+                                                                            <div class="comment">
+                                                                                <p>
+                                                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row profile-contact-info">
+                                                            <div class="col-md-6 contact-email pr-5">
+                                                                <div class="info-content card">
+                                                                    <div class="display-content clearfix">
+                                                                        <!-- <span class="edit" data-toggle="modal" data-target="#editProfileOverview">
+                                                                            <i class="material-icons">create</i>
+                                                                            <a href="javascript:;">
+                                                                                Edit
+                                                                            </a>
+                                                                        </span> -->
+                                                                        <div class="col-md-12 section-title"><i class="material-icons">email</i> Email Address</div>
+                                                                        <div class="col-md-12 overview">
+                                                                            <div class="email">michaelmartinpro@mail.com</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 contact-phone pl-5">
+                                                                <div class="info-content card">
+                                                                    <div class="display-content clearfix">
+                                                                        <span class="edit" data-toggle="modal" data-target="#editProfileOverview">
+                                                                            <i class="material-icons">create</i>
+                                                                            <a href="javascript:;">
+                                                                                Edit
+                                                                            </a>
+                                                                        </span>
+                                                                        <div class="col-md-12 section-title"><i class="material-icons">call</i> Phone number</div>
+                                                                        <div class="col-md-12  overview">
+                                                                            <div class="phone-number">(+33) 06 59 86 21 55</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="sec-title">
+                                                            Royalties
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="user-royalties card">
+                                                                    <div class="row">
+                                                                        <div class="col-md-4 royalty-value pr-5">
+                                                                            Royalties Balance
+                                                                            <span>2 758.20 &#8364;</span>
+                                                                        </div>
+                                                                        <div class="col-md-4 royalty-value pr-5 pl-5">
+                                                                            Total Royalties
+                                                                            <span>23 972.55 &#8364;</span>
+                                                                        </div>
+                                                                        <div class="col-md-4 royalty-value pl-5">
+                                                                            Generated Turnover
+                                                                            <span>81 702.20 &#8364;</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 online-status-container mb-30">
+                                            <div class="row">
+                                                <div class="col-md-7 pr-5">
+                                                    <div class="online-status-message">
+                                                        <i class="material-icons">access_time</i> Last connection <span>3 hours ago</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 pl-5">
+                                                    <div class="online-status">
+                                                        <span class="status online">online</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 online-status-container mb-30">
+                                            <div class="row">
+                                                <div class="col-md-7 pr-5">
+                                                    <div class="online-status-message">
+                                                        <i class="material-icons">access_time</i> Last connection <span>3 hours ago</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 pl-5">
+                                                    <div class="online-status">
+                                                        <span class="status busy">online</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 online-status-container mb-30">
+                                            <div class="row">
+                                                <div class="col-md-7 pr-5">
+                                                    <div class="online-status-message">
+                                                        <i class="material-icons">access_time</i> Last connection <span>3 hours ago</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5 pl-5">
+                                                    <div class="online-status">
+                                                        <span class="status offline">online</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 profile-container-right">
+                                <div class="tab-content" id="comments">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12 p-15 ">
+                                                <div class="row">
+                                                    <div class="col-md-12 modal-title">
+                                                        <i class="material-icons">insert_comment</i> Comments
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 content-scroll">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-12 ranking-container">
+                                                                    <div class="col-md-2 contributor-star">
+                                                                        <svg viewBox="0 0 50 50"><path id="Shape-Copy-3" d="M47.63,19.3l-1-.7a3.19,3.19,0,0,1-1.25-3.52l.33-1.19a3.24,3.24,0,0,0-2.62-4.06l-1.25-.21A3.19,3.19,0,0,1,39.14,7l-.21-1.25a3.23,3.23,0,0,0-4.09-2.54l-1.19.38a3.27,3.27,0,0,1-3.54-1.19l-.76-1.08A3.22,3.22,0,0,0,24.56.85l-.93.86a3.21,3.21,0,0,1-3.75.44l-1.09-.6a3.28,3.28,0,0,0-4.57,1.63l-.49,1.19a3.12,3.12,0,0,1-3.16,2L9.32,6.31A3.19,3.19,0,0,0,5.94,9.72L6.05,11a3.25,3.25,0,0,1-2,3.19L3,14.65A3.23,3.23,0,0,0,1.37,19.2L2,20.28A3.15,3.15,0,0,1,1.64,24l-.81.92a3.15,3.15,0,0,0,.6,4.77l1,.7a3.19,3.19,0,0,1,1.25,3.52l-.49,1.24a3.24,3.24,0,0,0,2.61,4.06l1.26.22A3.14,3.14,0,0,1,9.75,42L10,43.28a3.22,3.22,0,0,0,4.08,2.54l1.2-.37a3.26,3.26,0,0,1,3.54,1.19l.76,1a3.22,3.22,0,0,0,4.79.49l.92-.86A3.23,3.23,0,0,1,29,46.85l1.09.6a3.28,3.28,0,0,0,4.57-1.63l.49-1.19a3.12,3.12,0,0,1,3.16-2l1.25.06A3.18,3.18,0,0,0,43,39.28L42.9,38a3.25,3.25,0,0,1,2-3.19L46,34.35a3.22,3.22,0,0,0,1.58-4.55l-.65-1.08A3.15,3.15,0,0,1,47.31,25l.81-.92A3.14,3.14,0,0,0,47.63,19.3ZM24.45,39.71A15.21,15.21,0,1,1,39.74,24.5,15.27,15.27,0,0,1,24.45,39.71Zm9.52-17-4.35,3.57,1.31,5.36a1.19,1.19,0,0,1-1.09,1.46.79.79,0,0,1-.6-.22l-4.85-2.92-4.73,2.92a1.64,1.64,0,0,1-.6.22A1.13,1.13,0,0,1,18,31.59l1.31-5.36L15,22.66a1.17,1.17,0,0,1,.71-2.06l5.6-.38,2.12-5.14a1.2,1.2,0,0,1,2.18,0l2.12,5.14,5.61.38A1.18,1.18,0,0,1,34,22.66Z" transform="translate(0 0)"/></svg>
+                                                                    </div>
+                                                                    <div class="col-md-8 contributor-rank-container">
+                                                                        <div class="row">
+                                                                            <div class="contributor-rank">
+                                                                                Michael Martin
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="client-seniority">
+                                                                                <span class="label senior">
+                                                                                    Senior
+                                                                                </span>
+                                                                                <!-- <span class="label junior">
+                                                                                    Junior
+                                                                                </span>
+                                                                                <span class="label beginner">
+                                                                                    Beginner
+                                                                                </span> -->
+                                                                                <span class="time-spent">since December 21, 2013</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3 contributor-star-edit">
+                                                                        <a href="javascript:;" class="btn btn-default full-width">Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 edit-ranking" style="display: none;">
+                                                                    <label for="">Contributor Rank</label>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <select class="selectpicker" name="filter">
+                                                                                <option data-content="<span class='label bronze'>Bronze</span>">Bronze</option>
+                                                                                <option data-content="<span class='label silver'>Silver</span>">Silver</option>
+                                                                                <option data-content="<span class='label gold'>Gold</span>">Gold</option>
+                                                                                <option data-content="<span class='label elite'>Elite</span>">Elite</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <button class="btn full-width btn-fill btn-confirm cancel-edit">Cancel</button>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <button class="btn full-width btn-fill btn-download save-changes">Save Changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="subsec-header">
+                                                                    Comments (2) : <a href="javascript:;" class="add-new-comment-to-list">+ Add a new comment</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <ul class="comments-list">
+                                                                    <li class="list-item add-new-comment" style="display: none;">
+                                                                        <div class="comment-container">
+                                                                            <span class="close">
+                                                                                <a data-dismiss="modal" href="javascript:;">
+                                                                                    <i class="material-icons">
+                                                                                    close
+                                                                                    </i>
+                                                                                </a>
+                                                                            </span>
+                                                                            Add a comment :
+                                                                            <textarea class="form-control" id="" placeholder="Write your comment here..." rows="3"></textarea>
+                                                                            <button class="btn btn-fill pull-right send-comment">Send comment</button>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-item">
+                                                                        <div class="comment-container">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 df-ac">
+                                                                                    <div class="user-image">
+                                                                                        <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
+                                                                                    </div>
+                                                                                    <div class="user-name">
+                                                                                        <h4>Clarisse Courtois</h4>
+                                                                                        <span class="helper-text d-block">Jan 18</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="comment">
+                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis nisi, vitae et assumenda enim sapiente accusantium odit molestias excepturi iusto laboriosam repellendus, voluptate, suscipit maxime eaque cum mollitia corrupti.</p>
+                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-item">
+                                                                        <div class="comment-container">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 df-ac">
+                                                                                    <div class="user-image">
+                                                                                        <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
+                                                                                    </div>
+                                                                                    <div class="user-name">
+                                                                                        <h4>Clarisse Courtois</h4>
+                                                                                        <span class="helper-text d-block">Jan 18</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="comment">
+                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-item">
+                                                                        <div class="comment-container">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 df-ac">
+                                                                                    <div class="user-image">
+                                                                                        <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
+                                                                                    </div>
+                                                                                    <div class="user-name">
+                                                                                        <h4>Clarisse Courtois</h4>
+                                                                                        <span class="helper-text d-block">Jan 18</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="comment">
+                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis nisi, vitae et assumenda enim sapiente accusantium odit molestias excepturi iusto laboriosam repellendus, voluptate, suscipit maxime eaque cum mollitia corrupti.</p>
+                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content active" id="my-skills" style="display: block;">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12 p-15">
+                                                <div class="row">
+                                                    <div class="col-md-12 user-skills-content-container">
+                                                        <div class="row">
+                                                            <div class="col-md-12 modal-title">
+                                                                <i class="fa fa-edit"></i> My Skills
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12 content-scroll user-skills-content">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 sub-section sub-section-user-lang">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-12">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-8 col-xs-12 sec-title">
+                                                                                        Your mothertongue :
+                                                                                    </div>
+                                                                                    <div class="col-xs-12">
+                                                                                        <div class="user-language">
+                                                                                            <ul class="language-to medium full">
+                                                                                                <li>
+                                                                                                    <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="English (UK)">
+                                                                                                        <img src="lbd/img/flag/uk.gif" class="mCS_img_loaded">
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                            English (UK)
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12 sub-section sub-section-skills">
+                                                                        <div class="col-md-12 sub-sec-header">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="row df-ac">
+                                                                                        <div class="col-xs-8 sec-title">
+                                                                                            Languages
+                                                                                        </div>
+                                                                                        <div class="col-xs-4">
+                                                                                            <div class="row">
+                                                                                                <div class="col-xs-6 declared-rating">Declared Expertise</div>
+                                                                                                <div class="col-xs-6 intern-rating">Intern Evaluation</div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 sub-sec-content">
+                                                                            <div class="row skills-contianer">
+                                                                                <section class="subsec-content-container">
+                                                                                    <div class="col-xs-8">
+                                                                                        <div class="row df-ac-mob">
+                                                                                            <div class="col-xs-5 skills-title p-0 df-ac">
+                                                                                                <div class="switch" data-off-label="" data-on-label="">
+                                                                                                    <input type="checkbox"/>
+                                                                                                </div>
+                                                                                                Writing
+                                                                                            </div>
+                                                                                            <div class="col-xs-7 df-ac">
+                                                                                                <ul class="language-to medium full">
+                                                                                                    <li>
+                                                                                                        <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French (FR)">
+                                                                                                            <img src="lbd/img/flag/fr.gif" class="mCS_img_loaded">
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="English (UK)">
+                                                                                                            <img src="lbd/img/flag/uk.gif" class="mCS_img_loaded">
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                                Frech (FR) - English (UK)
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-xs-4">
+                                                                                        <div class="row expert-level-container df-ac">
+                                                                                            <div class="col-xs-6 expert-level">
+                                                                                                <div id="skillRate1"></div>
+                                                                                            </div>
+                                                                                            <div class="col-xs-6 expert-level">
+                                                                                                <!-- <div class="star-rating-label"></div> -->
+                                                                                                <div id="editSkillRate1"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- <div class="col-sm-2 col-xs-12 skills-title">Writing</div>
+                                                                                    <div class="col-sm-10 col-xs-12">
+                                                                                        <div class="row df-ac">
+                                                                                            <div class="col-xs-9 skills-content">
+                                                                                                <ul class="language-to medium full">
+                                                                                                    <li>
+                                                                                                        <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="French">
+                                                                                                            <img src="lbd/img/flag/uk.gif" class="mCS_img_loaded">
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                                English (UK)
+                                                                                            </div>
+                                                                                            <div class="col-xs-3 p-0 expert-level">
+                                                                                                <div id="skillRate1"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div> -->
+                                                                                </section>
+                                                                            </div>
+                                                                            <div class="row skills-contianer">
+                                                                                <section class="subsec-content-container">
+                                                                                    <div class="col-xs-8">
+                                                                                        <div class="row">
+                                                                                            <div class="col-xs-5 skills-title p-0 df-ac">
+                                                                                                <div class="switch" data-off-label="" data-on-label="">
+                                                                                                    <input type="checkbox" disabled />
+                                                                                                </div>
+                                                                                                Translating
+                                                                                            </div>
+                                                                                            <!-- <div class="col-xs-7 df-ac">
+                                                                                                <ul class="language-to medium full">
+                                                                                                    <li>
+                                                                                                        <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="French (FR)">
+                                                                                                            <img src="lbd/img/flag/fr.gif" class="mCS_img_loaded">
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="English (UK)">
+                                                                                                            <img src="lbd/img/flag/uk.gif" class="mCS_img_loaded">
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                                Frech (FR) - English (UK)
+                                                                                            </div> -->
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- <div class="col-xs-4">
+                                                                                        <div class="row">
+                                                                                            <div class="col-xs-6 expert-level">
+                                                                                                <div id="skillRate1"></div>
+                                                                                            </div>
+                                                                                            <div class="col-xs-6 expert-level">
+                                                                                                <div class="star-rating-label"></div>
+                                                                                                <div id="editSkillRate1"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div> -->
+                                                                                </section>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12 sub-section sub-section-areas-of-expertise">
+                                                                        <div class="col-md-12 sub-sec-header">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="row">
+                                                                                        <div class="col-xs-7 sec-title">
+                                                                                            Areas of expertise
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 sub-sec-content">
+                                                                            <div class="row df-ac">
+                                                                                <div class="col-xs-8 skills-title">
+                                                                                    <i class="material-icons">local_dining</i>
+                                                                                    Food &amp; Cooking
+                                                                                </div>
+                                                                                <div class="col-xs-4 expert-level">
+                                                                                    <div id="skillRate1"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row df-ac">
+                                                                                <div class="col-xs-8 skills-title">
+                                                                                    <i class="fa fa-laptop"></i>
+                                                                                    Computers &amp; Technology
+                                                                                </div>
+                                                                                <div class="col-xs-4 expert-level">
+                                                                                    <div id="skillRate1"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row df-ac">
+                                                                                <div class="col-xs-8 skills-title">
+                                                                                    <i class="fa fa-shopping-basket"></i>
+                                                                                    E-commerce / Shopping
+                                                                                </div>
+                                                                                <div class="col-xs-4 expert-level">
+                                                                                    <div id="skillRate1"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="job-history">
+                                    job-history
+                                </div>
+                                <div class="tab-content" id="contributor-data">
+                                    contributor-data
+                                </div>
+                                <div class="tab-content" id="cv-external-links">
+                                    cv-external-links
+                                </div>
+                                <div class="tab-content" id="account-settings">
+                                    account-settings
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 navigation-container mt-15">
+                <div class="row">
+                    <div class="col-md-2"><a href="javascript:;" class="pull-left profile-prev"><i class="material-icons">chevron_left</i></a></div>
+                    <div class="col-md-8">
+                        <div class="user-nav text-center">
+                            <b>Michael Martin</b><span>01/18</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2"><a href="javascript:;" class="pull-right profile-next"><i class="material-icons">chevron_right</i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Modal windows ends -->
@@ -4148,7 +4477,7 @@ $(document).ready(function(){
           /*code placed inside this condition is not executed on clicking the element #test*/
     e.stopPropagation();
           /*window.open('contract-overview.html','_blank');*/
-          $('#contributorUserProfileModal').modal('show')
+          $('#contributorsUserProfileModal').modal('show')
        }
 
     });
@@ -4184,33 +4513,114 @@ $(document).ready(function(){
     })*/
 
     /* Edit Myprofile User name */
-    $(document).on('click', ".user-details .bo-user", function(e){
-        e.stopPropagation();
-        $(this).parents('.user-name').hide(100);
-        $(this).parents('.row').find('.edit-update-name').show(100);
-    });
-    $(document).on('click', "#updateUserProfileName", function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        $(this).parents('.edit-update-name').hide(100);
-        $(this).parents('.list-head-container').find('.user-name').show(100);
-    });
+      $(document).on('click', ".user-details .bo-user", function(e){
+          e.stopPropagation();
+          $(this).parents('.user-name').hide(100);
+          $(this).parents('.row').find('.edit-update-name').show(100);
+      });
+      $(document).on('click', "#updateUserProfileName", function(e){
+          e.preventDefault();
+          e.stopPropagation();
+          $(this).parents('.edit-update-name').hide(100);
+          $(this).parents('.list-head-container').find('.user-name').show(100);
+      });
 
     /*Left profile nav tab content*/
 
       $('.profile-info-navs a').click(function(event) {
-				event.preventDefault();
-				if ($(this).hasClass('active')) {
-					return false;
-				}
-				else{
-					$(this).addClass('active');
-					$(this).parent().siblings().children().removeClass('active');
-					var tab = $(this).attr("href");
-					$('.profile-container-right > .tab-content').not(tab).css('display', 'none');
-					$(tab).fadeIn();
-				}
-			});
+        event.preventDefault();
+        if ($(this).hasClass('active')) {
+          return false;
+        }
+        else{
+          $(this).addClass('active');
+          $(this).parent().siblings().children().removeClass('active');
+          var tab = $(this).attr("href");
+          $('.profile-container-right > .tab-content').not(tab).css('display', 'none');
+          $(tab).fadeIn();
+        }
+      });
+    /*Edit Contributor rank*/
+      $(document).on('click', '.contributor-star-edit a', function(e){
+        e.stopPropagation();
+        $(this).parents('.ranking-container').siblings('.edit-ranking').fadeIn();
+        $(this).parents('.ranking-container').addClass('closed');
+      });
+      $(document).on('click', '.edit-ranking .cancel-edit, .edit-ranking .save-changes', function(e){
+        e.stopPropagation();
+        $(this).parents('.edit-ranking').siblings('.ranking-container').removeClass('closed');
+        $(this).parents('.edit-ranking').fadeOut();
+      });
+    /*Edit Contributor rank*/
+
+    /*Comments add new to list*/
+      $(document).on('click', '.add-new-comment-to-list', function(e){
+        e.stopPropagation();
+        $(this).parents('.col-md-12').siblings().find('.add-new-comment').fadeIn();
+      });
+      $(document).on('click', '.comment-container .close, .send-comment', function(e){
+        e.stopPropagation();
+        $(this).parents('li').fadeOut();
+      });
+    /*Comments add new to list ends*/
+
+    /*My Skills rating starts*/
+        $('[id^="skillRate"]').each(function() {
+            $(this).rateYo({
+                numStars: 3,
+                maxValue: 3,
+                rating: 2,
+                spacing: "10px",
+                fullStar: true,
+                normalFill: "#d4d6dc",
+                ratedFill: "#353f54",
+                readOnly: true,
+                starWidth: "16px"
+            });
+        });
+    /*My Skills rating ends*/
+    /*Edit My Skills rating starts*/
+        $('[id^="editSkillRate"]').each(function() {
+            var $rateYo = $(this).rateYo({
+                numStars: 3,
+                maxValue: 3,
+                rating: 2,
+                spacing: "10px",
+                fullStar: true,
+                normalFill: "#d4d6dc",
+                ratedFill: "#353f54",
+                starWidth: "16px"
+            });
+            var rating = $rateYo.rateYo('rating');
+                  if (rating == 1) {
+                      $('.star-rating-label').text("Beginner");
+                  }
+                  else if ((rating == 2)) {
+                      $('.star-rating-label').text("Intermediate");
+                  }
+                  else if ((rating == 3)) {
+                      $('.star-rating-label').text("Expert!");
+                  }
+                  else{
+                      $('.star-rating-label').text("");
+                  }
+            $(this).click(function(){
+                var rating = $rateYo.rateYo('rating');
+                  if (rating == 1) {
+                      $(this).parent('.expert-level').find('.star-rating-label').text("Beginner");
+                  }
+                  else if ((rating == 2)) {
+                      $(this).parent('.expert-level').find('.star-rating-label').text("Intermediate");
+                  }
+                  else if ((rating == 3)) {
+                      $(this).parent('.expert-level').find('.star-rating-label').text("Expert!");
+                  }
+                  else{
+                      $(this).parent('.expert-level').find('.star-rating-label').text("");
+                  }
+            });
+        });
+    /*Edit My Skills rating ends*/
 
 
 });

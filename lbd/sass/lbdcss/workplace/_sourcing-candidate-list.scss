@@ -653,3 +653,35 @@
     }
   }
 }
+
+.send-test-article-modal {
+    @extend .disapprove-modal;
+    .send-message-display{
+        a.edit-message{
+            color: $body;
+            &:hover{
+                u{
+                    text-decoration: none;
+                }
+            }
+            i{
+                font-size: 20px;
+                margin-left: 5px;
+            }
+        }
+        .message-container {
+            border-radius: 4px;
+            p{
+                padding: 0;
+                margin-bottom: 10px;
+                font-size: 14px;
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+}
+
+/*Modal styles ends*/

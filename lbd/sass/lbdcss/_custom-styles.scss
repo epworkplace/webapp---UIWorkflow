@@ -9415,30 +9415,50 @@ html {
     background: $done;
   }
 
+  &.new, &.bronze, &.silver, &.gold, &.elite, &.senior, &.junior, &.beginner, &.tags, &.file-version {
+    border-radius: 30px;
+  }
+
+  &.new {
+    background: $rank-new;
+  }
+
+  &.bronze {
+    background: $rank-bronze;
+  }
+
+  &.silver {
+    background: $rank-silver;
+  }
+
+  &.gold {
+    background: $rank-gold;
+  }
+
+  &.elite {
+    background: $rank-elite;
+  }
+
+
   &.senior {
     background: #FB8C00;
-    border-radius: 30px;
   }
 
   &.junior {
     background: #3F51B5;
-    border-radius: 30px;
   }
 
   &.beginner {
     background: #388E3C;
-    border-radius: 30px;
   }
 
   &.tags {
     background: #9A9FA9;
-    border-radius: 30px;
     margin-right: 5px;
   }
 
   &.file-version {
     background: #000;
-    border-radius: 30px;
     margin-right: 5px;
   }
 }
