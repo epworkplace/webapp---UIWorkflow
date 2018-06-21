@@ -1308,7 +1308,7 @@
             }
 
             .profile-container-right {
-                .tab-content {
+                > .tab-content {
                     display: none;
 
                     .content-scroll{
@@ -1391,8 +1391,6 @@
                         position: relative;
                     }
 
-
-
                     .comments-list{
                         list-style-type: none;
                         padding: 0;
@@ -1451,6 +1449,15 @@
                     }
 
                     .sub-section{
+                        .last-activity{
+                            // margin-bottom: 15px;
+                            .last-connection, .active-status{
+                                color: $main;
+                                span{
+                                    font-weight: 600;
+                                }
+                            }
+                        }
                         margin-bottom: 20px;
                         .sub-sec-header {
                             border-bottom: solid 2px $divider;
@@ -1529,8 +1536,10 @@
                             .subsec-content-container{
                                 @extend %df-ac-mob;
                                 width: 100%;
+                                font-size: 12px;
 
                                 .skills-title{
+                                    font-size: 14px;
                                     .switch{
                                         margin-right: 5px;
                                     }
@@ -1582,7 +1591,421 @@
                                 }
                             }
                         }
+                        &.sub-section-areas-of-expertise{
+                            .areas-of-expertise{
+                                @extend %df-ac-mob;
+                                font-size: 12px;
+                                padding: 6px 0;
+                                .skills-title{
+                                    @extend %df-ac;
+                                    font-size: 16px;
+                                    color: $main;
+                                    font-weight: 600;
+                                    i{
+                                        color: $not-started;
+                                        margin-right: 10px;
+                                    }
+                                }
+                                .expert-level-container{
+                                    @extend %df-ac;
+                                    align-items: flex-end;
+                                    .expert-level{
+                                        @extend %df-ac-jcc;
+                                        flex-flow: column;
+                                        .star-rating-label{
+                                            color: $selected;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
+
+                    &#job-history{
+                        .tab-step-content {
+                            padding: 0 15px;
+                            // height: calc(100vh - 100px);
+                            overflow: hidden;
+                            overflow-y: auto;
+                            padding-bottom: 0px;
+
+                            .tab-content {
+                                height: auto;
+                            }
+
+                            input.search-card {
+                                background: #fff url(../img/search.svg) no-repeat 10px;
+                                background-size: 20px;
+                                padding-left: 35px;
+                            }
+
+                            [class*='-list-container'] {
+                                margin: 20px -15px;
+
+                                [class$='-list'] {
+                                    list-style-type: none;
+                                    padding: 0;
+                                    margin: 0;
+
+                                    li {
+                                        &.list-item {
+                                            @include clearfix;
+
+                                            transition: all .3s ease;
+                                            border-bottom: 2px solid $divider;
+                                            margin-bottom: 15px;
+                                            padding-bottom: 15px;
+
+                                            &:last-child {
+                                                border: none;
+                                                margin: 0;
+                                            }
+
+                                            .card-contract {
+                                                @include clearfix;
+                                                height: auto;
+                                            }
+
+                                            .client-details {
+                                                @extend %client-details;
+                                                @include clearfix;
+
+                                                padding: 0;
+                                                margin: 0;
+                                                display: block !important;
+
+                                                span.label{
+                                                    color: #fff;
+                                                }
+
+                                                .client-image{
+                                                    width: auto;
+                                                    padding: 0;
+                                                }
+
+                                                [class*='-spec'], [class*='-infos'] {
+                                                    font-size: 14px;
+                                                    width: 69%;
+
+                                                    [class*='-name'], [class*='-seniority'] {
+                                                        .label {
+                                                            margin-right: 5px;
+                                                        }
+                                                    }
+
+                                                    [class*='-name'] {
+                                                        font-size: 14px;
+                                                        font-weight: 600;
+                                                        color: $main;
+                                                    }
+
+                                                    [class*='-seniority'] {
+                                                        color: $helper;
+                                                    }
+                                                }
+
+                                                .applied-date {
+                                                    width: 20%;
+                                                    padding-right: 0px;
+                                                    .dropdown-menu{
+                                                        margin: 0;
+                                                        &:after, &:before{
+                                                            content:none;
+                                                        }
+                                                    }
+                                                }
+
+                                                .cta {
+                                                    display: flex;
+                                                    -webkit-flex-flow: row wrap;
+                                                    align-items: center;
+                                                    height: 100%;
+                                                    position: absolute;
+                                                    right: 0px;
+                                                    width: 10%;
+                                                    visibility: hidden;
+                                                    opacity: 0;
+                                                    background: #fff;
+
+                                                    > ul {
+                                                        list-style-type: none;
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        display: -webkit-flex;
+                                                        display: -moz-flex;
+                                                        display: -ms-flex;
+                                                        display: -o-flex;
+                                                        display: flex;
+                                                        width: 100%;
+                                                        justify-content: space-around;
+
+                                                        li {
+                                                            display: -webkit-inline-flex;
+                                                            display: -moz-inline-flex;
+                                                            display: -ms-inline-flex;
+                                                            display: -o-inline-flex;
+                                                            display: inline-flex;
+
+                                                            a {
+                                                                // color: $cta-icons;
+                                                                display: -webkit-flex;
+                                                                display: -moz-flex;
+                                                                display: -ms-flex;
+                                                                display: -o-flex;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                text-decoration: none;
+                                                                i{
+                                                                    color: $cta-icons;
+                                                                    &.fa{
+                                                                        font-size: 20px;
+                                                                    }
+                                                                    &:hover{
+                                                                        color: $main;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                &:hover, &:focus {
+                                                    .cta {
+                                                        visibility: visible;
+                                                        opacity: 1;
+                                                        transition: all .3s ease;
+                                                    }
+                                                }
+                                                @media (max-width: 767px){
+                                                    [class$='-image'] {
+                                                        width: 35px;
+                                                        height: 35px;
+                                                        display: -webkit-flex;
+                                                        display: -moz-flex;
+                                                        display: -ms-flex;
+                                                        display: -o-flex;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        img {
+                                                        }
+                                                    }
+                                                    [class*='-spec'], [class*='-infos'] {
+                                                        width: 63%;
+                                                    }
+                                                    .applied-date{
+                                                        width: 29%;
+                                                    }
+                                                    > .client-desc{
+                                                        display: -webkit-flex !important;
+                                                        display: -moz-flex !important;
+                                                        display: -ms-flex !important;
+                                                        display: -o-flex !important;
+                                                        display: flex !important;
+                                                        align-items: center;
+                                                        justify-content: space-between;
+                                                        font-size: 14px;
+                                                        margin-top: 5px;
+                                                        .dropdown-menu{
+                                                            margin-top: 0;
+                                                            &:after, &:before{
+                                                                content: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            #production-jobs {
+                                .cta {
+                                    // width: 20%;
+                                    ul.dropdown-menu {
+                                        li {
+                                            display: -webkit-flex;
+                                            display: -moz-flex;
+                                            display: -ms-flex;
+                                            display: -o-flex;
+                                            display: flex;
+
+                                            a {
+                                                display: -webkit-flex;
+                                                display: -moz-flex;
+                                                display: -ms-flex;
+                                                display: -o-flex;
+                                                display: flex;
+                                                flex: 1;
+                                            }
+                                        }
+
+                                        &:before, &:after {
+                                            left: auto;
+                                            right: 12px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            #test-articles {
+                                .review {
+                                    background: $highlight-03;
+                                    border-radius: 4px;
+                                    padding: 15px;
+                                    margin-top: 10px;
+                                    color: #a9aeb7;
+                                    font-size: 14px;
+
+                                    .star-rating-label {
+                                        color: $main;
+                                        font-weight: 600;
+                                    }
+
+                                    .author-post {
+                                        font-weight: 600;
+                                        text-align: right;
+
+                                        span {
+                                            font-size: 12px;
+                                            font-weight: normal;
+                                        }
+                                        @media (max-width: 767px){
+                                            text-align: left;
+                                        }
+                                    }
+
+                                    .review-rate {
+                                        .jq-ry-container {
+                                            padding: 0;
+                                        }
+                                    }
+
+                                    .review-post {
+                                        line-height: 1.6;
+                                    }
+                                }
+
+                                .cta {
+                                    align-items: unset;
+                                }
+                            }
+
+                            #quizzes, #surveys{
+                                .client-infos{
+                                    width: 80%;
+                                    .client-name{
+                                        i{
+                                            color: $selected;
+                                            &.failed{
+                                                color: $main;
+                                            }
+                                        }
+                                    }
+                                }
+                                .applied-date{
+                                    width: 20%;
+                                }
+                            }
+                        }
+                    }
+                    &#contributor-data{
+                        [class*='-datas-list-container']{
+                            list-style-type: none;
+                            padding: 0;
+                            margin: 0;
+
+                            li{
+                                &.list-item{
+                                    @include clearfix;
+                                    font-size: 12px;
+                                    position: relative;
+                                    padding: 10px 0 0px 20px;
+                                    &:before{
+                                        font-family: FontAwesome;
+                                        content: '\f111';
+                                        position: absolute;
+                                        top: 18px;
+                                        left: 8px;
+                                        font-size: 5px;
+                                        color: $main;
+                                    }
+                                    &:last-child{
+                                        padding-bottom: 10px;
+                                    }
+                                    .list-title{
+                                        color: $main;
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        // padding-left: 20px;
+                                    }
+                                    ul{
+                                        list-style-type: none;
+                                        display: -webkit-flex;
+                                        display: -moz-flex;
+                                        display: -ms-flex;
+                                        display: -o-flex;
+                                        display: flex;
+                                        flex-flow: row wrap;
+                                        padding: 0;
+                                        margin: 0 -5px;
+                                        li{
+                                            display: -webkit-inline-flex;
+                                            display: -moz-inline-flex;
+                                            display: -ms-inline-flex;
+                                            display: -o-inline-flex;
+                                            display: inline-flex;
+                                            width: calc(100% / 2);
+                                            padding: 5px 5px 0px 5px;
+                                            span{
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &#cv-external-links{
+                        .announce-startingfiles{
+                            span.add-announce-files {
+                              display: -webkit-box;
+                              display: -moz-box;
+                              display: -ms-flexbox;
+                              display: -webkit-flex;
+                              display: flex;
+                              -webkit-flex-flow: row wrap;
+                              align-items: center;
+                              justify-content: center;
+                              width: 100%;
+                              height: 115px;
+                              color: #D7D9DC;
+                              text-align: center;
+                              border: 2px dashed #D7D9DC;
+                              border-radius: 4px;
+                            }
+                        }
+                        .personal-websites, .social-media{
+                            [class*='-links']{
+                                text-decoration: underline;
+                                color: $body;
+                                display: block;
+                                padding: 5px 0 0 0;
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                        .social-media{
+                            label{
+                                text-transform: uppercase;
+                                color: $helper;
+                                // padding-top: 5px;
+                                margin: 10px 0 0;
+                            }
+                        }
+                    }
+
 
                 }
             }

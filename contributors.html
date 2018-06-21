@@ -424,6 +424,37 @@ $(document).ready(function(){
       });
     /*Comments add new to list ends*/
 
+    /*review rate Starts*/
+        $('[id^="reviewRate"]').each(function(i){
+            var $rateYo = $(this).rateYo({
+                rating: 3.5,
+                spacing: "2px",
+                numStars: 5,
+                normalFill: "#d4d6dc",
+                ratedFill: "#fec500",
+                readOnly: true,
+                starWidth: "16px"
+            });
+
+            var rating = $rateYo.rateYo('rating');
+            if (rating <= 1) {
+                $('.star-rating-label').text(rating + " / 5");
+            }
+            else if ((rating > 1) && (rating <=2)) {
+                $('.star-rating-label').text(rating + " / 5");
+            }
+            else if ((rating > 2) && (rating <=3)) {
+                $('.star-rating-label').text(rating + " / 5");
+            }
+            else if ((rating > 3) && (rating <=4)) {
+                $('.star-rating-label').text(rating + " / 5");
+            }
+            else{
+                $('.star-rating-label').text(rating + " / 5");
+            }
+        });
+    /*review rate Ends*/
+
     /*My Skills rating starts*/
         $('[id^="skillRate"]').each(function() {
             $(this).rateYo({
