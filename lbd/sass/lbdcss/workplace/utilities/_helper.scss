@@ -132,6 +132,14 @@ $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
 	font-size: 14px;
 	color: $sub-heading;
 }
+
+.sec-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $main;
+}
+
 .required {
     color: $delete;
 }
@@ -140,14 +148,34 @@ label{
 }
 
 .df-ac {
-	display: flex !important;
+	display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 	align-items: center;
+}
+
+.df-ac-mob {
+    @extend .df-ac;
+    @media (max-width: 767px){
+        flex-flow: column;
+        justify-content: center;
+    }
 }
 
 .df-ac-jc {
 	display: flex !important;
 	align-items: center;
 	justify-content: center;
+}
+
+.df-ac-jc-mob {
+    @extend .df-ac-jc;
+    @media (max-width: 767px){
+        flex-flow: column;
+        justify-content: center;
+    }
 }
 
 // full width

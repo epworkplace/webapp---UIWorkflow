@@ -717,8 +717,20 @@
 
 // Display flex and align-center the contents
 %df-ac {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   align-items: center;
+}
+
+%df-ac-mob{
+  @extend %df-ac;
+  @media (max-width: 767){
+    flex-flow: column;
+    justify-content: center;
+  }
 }
 
 .df-fwrap {
@@ -726,9 +738,20 @@
 }
 
 %df-ac-jcc {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+%df-ac-jcc-mob {
+  @extend %df-ac-jcc;
+  @media (max-width: 767){
+    flex-flow: column;
+  }
 }
 
 // Comments feeds container

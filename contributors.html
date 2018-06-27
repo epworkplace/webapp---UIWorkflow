@@ -6,7 +6,7 @@
 </head>
 
 <body class="wp-app layout-3">
-	<!-- @include _partials/_main-menu.html -->
+  <!-- @include _partials/_main-menu.html -->
 <div class="wrapper">
   <!-- @include _partials/_sidebar.html -->
   <div class="container-fluid page-wrap">
@@ -337,7 +337,7 @@ $(document).ready(function(){
           /*code placed inside this condition is not executed on clicking the element #test*/
     e.stopPropagation();
           /*window.open('contract-overview.html','_blank');*/
-          $('#contributorUserProfileModal').modal('show')
+          $('#contributorsUserProfileModal').modal('show')
        }
 
     });
@@ -373,33 +373,145 @@ $(document).ready(function(){
     })*/
 
     /* Edit Myprofile User name */
-    $(document).on('click', ".user-details .bo-user", function(e){
-        e.stopPropagation();
-        $(this).parents('.user-name').hide(100);
-        $(this).parents('.row').find('.edit-update-name').show(100);
-    });
-    $(document).on('click', "#updateUserProfileName", function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        $(this).parents('.edit-update-name').hide(100);
-        $(this).parents('.list-head-container').find('.user-name').show(100);
-    });
+      $(document).on('click', ".user-details .bo-user", function(e){
+          e.stopPropagation();
+          $(this).parents('.user-name').hide(100);
+          $(this).parents('.row').find('.edit-update-name').show(100);
+      });
+      $(document).on('click', "#updateUserProfileName", function(e){
+          e.preventDefault();
+          e.stopPropagation();
+          $(this).parents('.edit-update-name').hide(100);
+          $(this).parents('.list-head-container').find('.user-name').show(100);
+      });
 
     /*Left profile nav tab content*/
 
       $('.profile-info-navs a').click(function(event) {
-				event.preventDefault();
-				if ($(this).hasClass('active')) {
-					return false;
-				}
-				else{
-					$(this).addClass('active');
-					$(this).parent().siblings().children().removeClass('active');
-					var tab = $(this).attr("href");
-					$('.profile-container-right > .tab-content').not(tab).css('display', 'none');
-					$(tab).fadeIn();
-				}
-			});
+        event.preventDefault();
+        if ($(this).hasClass('active')) {
+          return false;
+        }
+        else{
+          $(this).addClass('active');
+          $(this).parent().siblings().children().removeClass('active');
+          var tab = $(this).attr("href");
+          $('.profile-container-right > .tab-content').not(tab).css('display', 'none');
+          $(tab).fadeIn();
+        }
+      });
+    /*Edit Contributor rank*/
+      $(document).on('click', '.contributor-star-edit a', function(e){
+        e.stopPropagation();
+        $(this).parents('.ranking-container').siblings('.edit-ranking').fadeIn();
+        $(this).parents('.ranking-container').addClass('closed');
+      });
+      $(document).on('click', '.edit-ranking .cancel-edit, .edit-ranking .save-changes', function(e){
+        e.stopPropagation();
+        $(this).parents('.edit-ranking').siblings('.ranking-container').removeClass('closed');
+        $(this).parents('.edit-ranking').fadeOut();
+      });
+    /*Edit Contributor rank*/
+
+    /*Comments add new to list*/
+      $(document).on('click', '.add-new-comment-to-list', function(e){
+        e.stopPropagation();
+        $(this).parents('.col-md-12').siblings().find('.add-new-comment').fadeIn();
+      });
+      $(document).on('click', '.comment-container .close, .send-comment', function(e){
+        e.stopPropagation();
+        $(this).parents('li').fadeOut();
+      });
+    /*Comments add new to list ends*/
+
+    /*review rate Starts*/
+        $('[id^="reviewRate"]').each(function(i){
+            var $rateYo = $(this).rateYo({
+                rating: 3.5,
+                spacing: "2px",
+                numStars: 5,
+                normalFill: "#d4d6dc",
+                ratedFill: "#fec500",
+                readOnly: true,
+                starWidth: "16px"
+            });
+
+            var rating = $rateYo.rateYo('rating');
+            if (rating <= 1) {
+                $('.star-rating-label').text(rating + " / 5");
+            }
+            else if ((rating > 1) && (rating <=2)) {
+                $('.star-rating-label').text(rating + " / 5");
+            }
+            else if ((rating > 2) && (rating <=3)) {
+                $('.star-rating-label').text(rating + " / 5");
+            }
+            else if ((rating > 3) && (rating <=4)) {
+                $('.star-rating-label').text(rating + " / 5");
+            }
+            else{
+                $('.star-rating-label').text(rating + " / 5");
+            }
+        });
+    /*review rate Ends*/
+
+    /*My Skills rating starts*/
+        $('[id^="skillRate"]').each(function() {
+            $(this).rateYo({
+                numStars: 3,
+                maxValue: 3,
+                rating: 2,
+                spacing: "10px",
+                fullStar: true,
+                normalFill: "#d4d6dc",
+                ratedFill: "#353f54",
+                readOnly: true,
+                starWidth: "16px"
+            });
+        });
+    /*My Skills rating ends*/
+    /*Edit My Skills rating starts*/
+        $('[id^="editSkillRate"]').each(function() {
+            var $rateYo = $(this).rateYo({
+                numStars: 3,
+                maxValue: 3,
+                rating: 2,
+                spacing: "10px",
+                fullStar: true,
+                normalFill: "#d4d6dc",
+                ratedFill: "#353f54",
+                starWidth: "16px"
+            });
+            var rating = $rateYo.rateYo('rating');
+                  if (rating == 1) {
+                      $('.star-rating-label').text("Beginner");
+                  }
+                  else if ((rating == 2)) {
+                      $('.star-rating-label').text("Intermediate");
+                  }
+                  else if ((rating == 3)) {
+                      $('.star-rating-label').text("Expert!");
+                  }
+                  else{
+                      $('.star-rating-label').text("");
+                  }
+            $(this).click(function(){
+                var rating = $rateYo.rateYo('rating');
+                  if (rating == 1) {
+                      $(this).parent('.expert-level').find('.star-rating-label').text("Beginner");
+                  }
+                  else if ((rating == 2)) {
+                      $(this).parent('.expert-level').find('.star-rating-label').text("Intermediate");
+                  }
+                  else if ((rating == 3)) {
+                      $(this).parent('.expert-level').find('.star-rating-label').text("Expert!");
+                  }
+                  else{
+                      $(this).parent('.expert-level').find('.star-rating-label').text("");
+                  }
+            });
+        });
+    /*Edit My Skills rating ends*/
 
 
 });
