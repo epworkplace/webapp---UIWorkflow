@@ -79,6 +79,10 @@
     padding: 0;
   }
 
+  .modal-title-edit {
+    display: none;
+  }
+
   .create-offers-job-settings {
     .chosen-container-single .chosen-single {
       height: 38px;
@@ -180,6 +184,12 @@
     }
 
     .availabilities-container {
+      .available-requirements {
+        p {
+          font-size: 14px;
+        }
+      }
+
       .availabilities-module {
         margin-bottom: 10px;
       }

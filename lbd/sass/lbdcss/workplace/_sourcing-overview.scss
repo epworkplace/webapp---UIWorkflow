@@ -414,6 +414,12 @@
     }
 
     .availabilities-container {
+      .available-requirements {
+        p {
+          font-size: 14px;
+        }
+      }
+
       .availabilities-module {
         margin-bottom: 20px;
       }

@@ -341,6 +341,16 @@
           font-size: 12px;
         }
       }
+
+      &.availability-row {
+        .header-title {
+          width: 32.666%;
+        }
+
+        .right-column {
+          width: 545px;
+        }
+      }
     }
 
     .card-section-list {
@@ -349,6 +359,7 @@
           .card-contract {
             .list-image-container {
               position: relative;
+              margin-right: 0;
 
               span.pin {
                 position: absolute;
@@ -413,8 +424,12 @@
             .task-price {
               width: 420px;
 
-              .numbers {
-                font-weight: 400;
+              .numbers, .numbers a {
+                font-weight: 700;
+
+                span {
+                  font-weight: 400;
+                }
 
                 i {
                   position: relative;
@@ -512,6 +527,37 @@
                     }
                   }
                 }
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.availability-row {
+        ul {
+          li {
+            .card-contract {
+              .list-head-container {
+                width: 23%;
+                padding-right: 0;
+              }
+
+              .task-price {
+                width: 512px;
+
+                .numbers {
+                  &.available, &.available a {
+                    color: $main;
+
+                    span {
+                      color: $main;
+                    }
+                  }
+                }
               }
             }
           }
@@ -519,6 +565,11 @@
       }
     }
   }
+}
+
+.availability-popover {
+  position: relative;
+  top: 5px;
 }
 
 /*Modal styles*/
@@ -655,33 +706,38 @@
 }
 
 .send-test-article-modal {
-    @extend .disapprove-modal;
-    .send-message-display{
-        a.edit-message{
-            color: $body;
-            &:hover{
-                u{
-                    text-decoration: none;
-                }
-            }
-            i{
-                font-size: 20px;
-                margin-left: 5px;
-            }
+  @extend .disapprove-modal;
+
+  .send-message-display {
+    a.edit-message {
+      color: $body;
+
+      &:hover {
+        u {
+          text-decoration: none;
         }
-        .message-container {
-            border-radius: 4px;
-            p{
-                padding: 0;
-                margin-bottom: 10px;
-                font-size: 14px;
-                &:last-child{
-                    margin: 0;
-                }
-            }
-        }
+      }
+
+      i {
+        font-size: 20px;
+        margin-left: 5px;
+      }
     }
 
+    .message-container {
+      border-radius: 4px;
+
+      p {
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 /*Modal styles ends*/

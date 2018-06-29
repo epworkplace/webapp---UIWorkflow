@@ -1027,64 +1027,139 @@
 																						<div class="tab-pane" id="tab-availabilities">
 																							<div class="row">
 																								<div class="col-md-12 availabilities-container">
-																									<div class="header-title">
-																										<h4 class="title">Availabilities</h4>
-																									</div>
 																									<div class="row">
-																										<div class="col-md-6 availabilities-module">
-																											<div class="col-md-12 activation-border">
-																												<div class="col-md-12 activation-container">
-																													<div class="col-md-2 activation-switch">
-																														<div class="switch switch-mini" data-off-label="" data-on-label="">
-																															<input type="checkbox"/>
-																														</div>
-																													</div>
-																													<div class="col-md-9 activation-statement">
-																														Ask for availabilties:
-																														<span class="no">
-																															NO
-																														</span>
-																														<span class="yes">
-																															YES
-																														</span>
-																													</div>
-																												</div>
-																											</div>
-																										</div>
-																									</div>
-																									<div class="available-requirements">
-																										<div class="row">
-																											<div class="col-md-3 availabilities-module">
-																												<label>From this date *</label>
-																												<input class="form-control datepicker" placeholder="Date Here" type="text"/>
-																											</div>
-																											<div class="col-md-3 availabilities-module">
-																												<label>To this date *</label>
-																												<input class="form-control datepicker" placeholder="Date Here" type="text"/>
-																											</div>
-																											<div class="col-md-3 availabilities-module">
-																												<label>Required volume max *</label>
-																												<input type="number" class="form-control" placeholder="ex : 15" />
-																											</div>
-																										</div>
-																										<div class="row">
-																											<div class="col-md-3 availabilities-module">
-																												<label>Delivery Timing</label>
-																												<select class="selectpicker">
-																													<option value="">Oneshot</option>
-																													<option value="">Recurrent</option>
-																												</select>
-																											</div>
-																											<div class="col-md-3 availabilities-module">
-																												<label>Delivery per</label>
-																												<select class="selectpicker">
-																													<option value="">Day</option>
-																													<option value="">Week</option>
-																													<option value="">Month</option>
-																												</select>
-																											</div>
-																										</div>
-																									</div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <h4 class="title">Availabilities</h4>
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-md-12 availabilities-module">
+                                                                                                                    <div class="col-md-12 activation-border">
+                                                                                                                        <div class="col-md-12 activation-container">
+                                                                                                                            <div class="col-md-2 activation-switch">
+                                                                                                                                <div class="switch switch-mini" data-off-label="" data-on-label="">
+                                                                                                                                    <input type="checkbox"/>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                            <div class="col-md-9 activation-statement">
+                                                                                                                                Ask for availabilties:
+                                                                                                                                <span class="no">
+                                                                                                                                    NO
+                                                                                                                                </span>
+                                                                                                                                <span class="yes">
+                                                                                                                                    YES
+                                                                                                                                </span>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <h4 class="title">Production capacity</h4>
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-md-12 availabilities-module">
+                                                                                                                    <div class="col-md-12 activation-border">
+                                                                                                                        <div class="col-md-12 activation-container">
+                                                                                                                            <div class="col-md-2 activation-switch">
+                                                                                                                                <div class="switch switch-mini" data-off-label="" data-on-label="">
+                                                                                                                                    <input type="checkbox"/>
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                            <div class="col-md-9 activation-statement">
+                                                                                                                                Ask for production capacity:
+                                                                                                                                <span class="no">
+                                                                                                                                    NO
+                                                                                                                                </span>
+                                                                                                                                <span class="yes">
+                                                                                                                                    YES
+                                                                                                                                </span>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="available-requirements mb-15">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <h4 class="title">Availabilities</h4>
+                                                                                                                <p><b>Please give an estimation of the mission dates</b> for contributor to share their availabilities within this period.</p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="available-requirements">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-3 availabilities-module">
+                                                                                                                <label>Start date *</label>
+                                                                                                                <input class="form-control datepicker" placeholder="Date Here" type="text" disabled />
+                                                                                                            </div>
+                                                                                                            <div class="col-md-3 availabilities-module">
+                                                                                                                <label>End date *</label>
+                                                                                                                <input class="form-control datepicker" placeholder="Date Here" type="text" disabled/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-3 availabilities-module">
+                                                                                                                <label>Start date *</label>
+                                                                                                                <input class="form-control datepicker" placeholder="Date Here" type="text"/>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-3 availabilities-module">
+                                                                                                                <label>End date *</label>
+                                                                                                                <input class="form-control datepicker" placeholder="Date Here" type="text"/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="divider"></div>
+                                                                                                    <div class="available-requirements mb-15">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <h4 class="title">Production capacity</h4>
+                                                                                                                <p>How may [<b>items</b>]does the contributor can create in [<b>a certain range of time</b>] ?</p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="available-requirements">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-6 availabilities-module">
+                                                                                                                <label>Item *</label>
+                                                                                                                <select class="selectpicker" title="Select product">
+                                                                                                                    <option data-hidden="true"></option>
+                                                                                                                    <option>Article</option>
+                                                                                                                    <option>Word</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-6 availabilities-module">
+                                                                                                                <label>Time range *</label>
+                                                                                                                <select class="selectpicker" title="Select time">
+                                                                                                                    <option data-hidden="true"></option>
+                                                                                                                    <option>1 day</option>
+                                                                                                                    <option>1 week</option>
+                                                                                                                    <option>1 month</option>
+                                                                                                                    <option>Availibility time range</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-6 availabilities-module">
+                                                                                                                <label>Item *</label>
+                                                                                                                <select class="selectpicker" title="Select product" disabled>
+                                                                                                                    <option data-hidden="true"></option>
+                                                                                                                    <option>Article</option>
+                                                                                                                    <option>Word</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-6 availabilities-module">
+                                                                                                                <label>Time range *</label>
+                                                                                                                <select class="selectpicker" title="Select time" disabled>
+                                                                                                                    <option data-hidden="true"></option>
+                                                                                                                    <option>1 day</option>
+                                                                                                                    <option>1 week</option>
+                                                                                                                    <option>1 month</option>
+                                                                                                                    <option>Availibility time range</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
 																								</div>
 																							</div>
 																							<div class="row">
@@ -2436,15 +2511,15 @@
 																		$('.overlay-main-container').show();
 																	});
 																	/* Edit Create job  Title*/
-																		$('#editCreateJobTitle').click(function(e) {
-																			e.preventDefault();
-																			$('.header-title-edit').show();
-																			$('#headerTitle').hide();
-																		});
-																		$('#saveJobTitle').click(function() {
-																			$('.header-title-edit').hide();
-																			$('#headerTitle').show();
-																		});
+																	$('#editCreateJobTitle').click(function(e) {
+																		e.preventDefault();
+																		$('.header-title-edit').show();
+																		$('#headerTitle').hide();
+																	});
+																	$('#saveJobTitle').click(function() {
+																		$('.header-title-edit').hide();
+																		$('#headerTitle').show();
+																	});
 																	$('.quizz-template-slides-container').slick({
 																		infinite: false
 																	});
