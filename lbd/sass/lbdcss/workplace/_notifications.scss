@@ -1,0 +1,141 @@
+.notification-page {
+  width: 93.699%;
+  padding: 0;
+  margin: 30px auto;
+
+  .content-container {
+    .page-title {
+      h1 {
+        margin: 0 0 15px 0;
+        padding: 0;
+        font-size: 22px;
+        font-weight: 600;
+        color: $main;
+        height: auto;
+        cursor: text;
+      }
+    }
+  }
+
+  .main-content {
+    .nav-content {
+      .side-navigation {
+        overflow: hidden;
+
+        ul.nav {
+          li {
+            a {
+              border-bottom: 1px solid $border-color;
+
+              .notification-item {
+                color: $helper;
+              }
+
+              .notification-number {
+                color: $helper;
+              }
+            }
+
+            &:hover {
+              .notification-item {
+                color: $selected;
+              }
+            }
+
+            &.active {
+              position: relative;
+
+              &:before {
+                content: '';
+                position: absolute;
+                left: -15px;
+                top: 10px;
+                width: 3px;
+                height: 20px;
+                background: $selected;
+              }
+
+              a {
+                .notification-item {
+                  color: $selected;
+                }
+              }
+            }
+
+            &:last-child {
+              a {
+                border-bottom: 1px solid transparent;
+              }
+            }
+          }
+        }
+      }
+
+      .filter-notifications {
+        h4 {
+          color: $helper;
+          font-size: 14px;
+          margin: 0;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+
+        .filter-notifications-nav {
+          ul.nav {
+            padding: 3px 0 0 0;
+
+            li {
+              border-bottom: 1px solid $border-color;
+              padding: 3px 0;
+
+              label.checkbox {
+                span.icons {
+                  margin-top: 2px;
+                }
+
+                span.tag-icon {
+                  position: relative;
+                  margin: 0 5px;
+
+                  &:before {
+                    content: '';
+                    position: absolute;
+                    left: 1px;
+                    top: -2px;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    background: $helper;
+                  }
+
+                  i.tag {
+                    position: relative;
+                    color: #fff;
+                  }
+                }
+
+                color: $helper;
+
+                &.checked {
+                  span.tag-icon {
+                    &:before {
+                      background: $main;
+                    }
+                  }
+
+                  color: $main;
+                }
+              }
+
+              &:last-child {
+                border-bottom: 1px solid transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .notification-content {}
+  }
+}
