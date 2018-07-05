@@ -1989,10 +1989,9 @@ html {
       color: #ffffff;
     }
   }
-  .sourcing-candidates-list-container{
-    li{
 
-    }
+  .sourcing-candidates-list-container {
+    li {}
   }
 }
 
@@ -6244,11 +6243,11 @@ html {
           }
 
           /* &:first-child{
-          	border-radius: 4px 4px 0 0;
-          	.card-title a{border-radius: 4px 4px 0 0;}
+            border-radius: 4px 4px 0 0;
+            .card-title a{border-radius: 4px 4px 0 0;}
           }
           &:only-child{
-          	border-radius: 4px;
+            border-radius: 4px;
           } */
           &:last-child {
             margin-bottom: 0;
@@ -9444,7 +9443,6 @@ html {
     background: $rank-elite;
   }
 
-
   &.senior {
     background: #FB8C00;
   }
@@ -12204,7 +12202,7 @@ vertical-align: middle;
   align-items: center;
   overflow: hidden;
 
-  					 /*     position: relative;
+                     /*     position: relative;
   z-index: 1;
   height: 100vh;
   width: 92px;

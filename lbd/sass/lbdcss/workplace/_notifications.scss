@@ -305,6 +305,12 @@
                 box-shadow: rgba(68, 138, 255, 1) 0px 0px 1px 1px;
               }
             }
+
+            &:nth-last-of-type(2) {
+              a.notif-card, .notif-card {
+                margin-bottom: 0;
+              }
+            }
           }
         }
 
@@ -319,6 +325,75 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Modal Container */
+.notification-settings-modal {
+  .modal-title {
+    font-size: 20px;
+    color: #353f53;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .notification-settings-container {
+    .checkbox {
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
+      background-color: #FFFFFF;
+      padding: 10px 25px 10px 35px;
+
+      .icons {
+        top: 11px;
+        left: 10px;
+      }
+
+      span.tag-icon {
+        position: relative;
+        margin: 0 5px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 1px;
+          top: -2px;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: $helper;
+        }
+
+        i.tag {
+          position: relative;
+          color: #fff;
+        }
+
+        &.mention {
+          &:before {
+            background: $selected;
+          }
+        }
+
+        &.create {
+          &:before {
+            background: $main;
+          }
+        }
+
+        &.delete {
+          &:before {
+            background: $rework;
+          }
+        }
+
+        &.ready {
+          &:before {
+            background: $delivered;
           }
         }
       }
