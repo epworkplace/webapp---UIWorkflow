@@ -12202,17 +12202,17 @@ vertical-align: middle;
   align-items: center;
   overflow: hidden;
 
-                     /*     position: relative;
-  z-index: 1;
-  height: 100vh;
-  width: 92px;
-  left: 45%;
-  top: 42%;
-  img{
-  position: absolute;
-  left: 0;
-  top: 0;
-  } */
+                   /*     position: relative;
+z-index: 1;
+height: 100vh;
+width: 92px;
+left: 45%;
+top: 42%;
+img{
+position: absolute;
+left: 0;
+top: 0;
+} */
 }
 
 .panel-body {
@@ -12353,6 +12353,19 @@ span.more {
 }
 
 /*See More Content Ends*/
+
+.preview-document-modal {
+  .modal-title {
+    font-size: 20px;
+    color: #353f53;
+    font-weight: 600;
+    margin-bottom: 0px !important;
+    margin-bottom: 20px !important;
+    word-wrap: break-word;
+  }
+}
+
+/* Preview Document Modal Ends */
 
 /*Drag and Drop Files Starts*/
 
