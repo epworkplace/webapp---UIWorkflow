@@ -197,17 +197,10 @@ html {
       }
 
       .logo {
-        padding: 10px 12px;
-        margin: 17px 0 0px;
-
-        &:after {
-          display: block;
-          content: '';
-          margin: 20px auto 0;
-          width: 85%;
-          height: 1px;
-          background-color: $divider;
-        }
+        padding: 0;
+        margin: 17px auto 30px;
+        width: 37px;
+        height: 47px;
       }
 
       .sidebar-wrapper {
