@@ -725,9 +725,10 @@
   align-items: center;
 }
 
-%df-ac-mob{
+%df-ac-mob {
   @extend %df-ac;
-  @media (max-width: 767){
+
+  @media (max-width: 767) {
     flex-flow: column;
     justify-content: center;
   }
@@ -749,7 +750,8 @@
 
 %df-ac-jcc-mob {
   @extend %df-ac-jcc;
-  @media (max-width: 767){
+
+  @media (max-width: 767) {
     flex-flow: column;
   }
 }
@@ -1877,7 +1879,7 @@
       }
 
       /* .mission-progress-status {
-      		color: $delete;
+            color: $delete;
       } */
     }
   }
@@ -2206,7 +2208,7 @@ span.edit {
     }
   }
 
-  &.gsl, &.zip {
+  &.gsl, &.zip, &.rar {
     &:before {
       background: $default-bg;
     }
