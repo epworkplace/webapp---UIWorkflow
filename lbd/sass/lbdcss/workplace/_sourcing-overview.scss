@@ -246,6 +246,21 @@
       .language-to {
         @extend %language-breadcrum;
 
+        &.single-lang {
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 14%;
+        }
+
+        &.dual-lang {
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 33%;
+        }
+
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 14%;
         width: auto;
         margin-right: 15px;
 
