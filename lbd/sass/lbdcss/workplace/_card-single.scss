@@ -17,6 +17,32 @@
       font-size: 16px;
       color: #353f53;
       font-weight: 600;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .select-all-container {
+      width: 27%;
+
+      .select-all {
+        display: block;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        height: 38px;
+        padding: 8px 15px 8px 10px;
+
+        label.checkbox {
+          margin: 0;
+          float: left;
+          min-height: 20px;
+        }
+
+        .select {
+          float: right;
+          color: #A6ABB4;
+          font-weight: 600;
+        }
+      }
     }
 
     .assignee-row {
