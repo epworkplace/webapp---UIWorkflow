@@ -198,7 +198,11 @@ html {
 
       .logo {
         padding: 10px 12px;
-        margin: 17px 0 0px;
+        // margin: 17px 0 0px;
+        padding: 0;
+        margin: 17px auto 30px;
+        width: 37px;
+        height: 47px;
 
         &:after {
           display: block;
