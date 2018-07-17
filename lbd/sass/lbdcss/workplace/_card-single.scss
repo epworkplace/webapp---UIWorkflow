@@ -8,6 +8,34 @@
     margin-bottom: 10px;
   }
 
+  .select-all-div {
+    width: 73%;
+  }
+
+  .select-all-container {
+    width: 27%;
+
+    .select-all {
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      height: 38px;
+      padding: 8px 15px 8px 10px;
+
+      label.checkbox {
+        margin: 0;
+        float: left;
+        min-height: 20px;
+      }
+
+      .select {
+        float: right;
+        color: #A6ABB4;
+        font-weight: 600;
+      }
+    }
+  }
+
   .select-assignee-container {
     margin-bottom: 20px;
 
@@ -17,6 +45,8 @@
       font-size: 16px;
       color: #353f53;
       font-weight: 600;
+      line-height: 1.6;
+      word-break: break-word;
     }
 
     .assignee-row {
@@ -47,7 +77,7 @@
       }
 
       .contributor-info {
-        width: 65.666667%;
+        width: 61%;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -64,6 +94,7 @@
       }
 
       .bidding-info {
+        width: 21%;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -78,10 +109,12 @@
         font-size: 16px;
         color: #353f53;
         font-weight: 700;
+        min-height: 50px;
 
         span {
-          color: #B0B4BB;
-          font-size: 12px;
+          color: #353f53;
+          font-size: 16px;
+          font-weight: 700;
         }
       }
     }

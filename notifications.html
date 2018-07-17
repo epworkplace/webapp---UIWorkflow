@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Light Bootstrap Dashboard PRO by Creative Tim </title>
+    <!-- @include _partials/_all-meta-head.html -->
+</head>
+<body class="wp-app layout-1">
+	<!-- @include _partials/_main-menu.html -->
+    <div class="wrapper">
+        <!-- @include _partials/_sidebar.html -->
+        <div class="container-fluid page-wrap">
+            <div class="row">
+                <div class="col-md-12 main-panel-wrap">
+                    <div class="main-panel">
+                        <div class="container-fluid main-panel-page">
+                            <div class="notification-page clearfix">
+                                <div class="col-md-12 content-container">
+                                    <div class="row">
+                                        <div class="col-md-12 page-title">
+                                            <h1>Your notifications</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 main-content">
+                                            <div class="row">
+                                                <div class="col-md-3 nav-content">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-12 side-navigation card">
+                                                                <ul class="nav nav-stacked">
+                                                                    <li class="active">
+                                                                        <a href="javascript:;">
+                                                                            <div class="row">
+                                                                                <div class="col-md-10 notification-item">All notifications</div>
+                                                                                <div class="col-md-2 notification-number">5</div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:;">
+                                                                            <div class="row">
+                                                                                <div class="col-md-10 notification-item">Internal notifications</div>
+                                                                                <div class="col-md-2 notification-number">2</div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:;">
+                                                                            <div class="row">
+                                                                                <div class="col-md-10 notification-item">External notifications</div>
+                                                                                <div class="col-md-2 notification-number">3</div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12 filter-notifications">
+                                                                <div class="row">
+                                                                    <div class="col-md-11 p-0">
+                                                                        <h4>Filter notifications</h4>
+                                                                    </div>
+                                                                    <div class="col-md-1 notifications-settings" data-toggle="tooltip" data-placement="right" data-container="body" title="Notifications Settings">
+                                                                        <a href="javascript:;" data-toggle="modal" data-target="#notificationSettingsModal">
+                                                                            <i class="material-icons">settings</i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12 card filter-notifications-nav">
+                                                                        <ul class="nav nav-stacked">
+                                                                            <li>
+                                                                                <label class="checkbox checked">
+                                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                    <span class="tag-icon"><i class="fa fa-at tag" aria-hidden="true"></i></span> Mention
+                                                                                </label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <label class="checkbox">
+                                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                    <span class="tag-icon"><i class="fa fa-comment tag" aria-hidden="true"></i></span> Comment
+                                                                                </label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <label class="checkbox">
+                                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                    <span class="tag-icon"><i class="fa fa-plus tag" aria-hidden="true"></i></span> Creation
+                                                                                </label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <label class="checkbox">
+                                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                    <span class="tag-icon"><i class="fa fa-trash-o tag" aria-hidden="true"></i></span> Deletion
+                                                                                </label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <label class="checkbox">
+                                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                    <span class="tag-icon"><i class="fa fa-hourglass-o tag" aria-hidden="true"></i></span> Time expiration
+                                                                                </label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <label class="checkbox">
+                                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                    <span class="tag-icon"><i class="fa fa-user-o tag" aria-hidden="true"></i></span> Contributor
+                                                                                </label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <label class="checkbox">
+                                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                    <span class="tag-icon"><i class="fa fa-times tag" aria-hidden="true"></i></span> Moderation
+                                                                                </label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <label class="checkbox">
+                                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                                    <span class="tag-icon"><i class="fa fa-check-square-o tag" aria-hidden="true"></i></span> Ready
+                                                                                </label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9 notification-content">
+                                                    <div class="row">
+                                                        <div class="col-md-12 unread-notif notifications-container">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <span class="notification"></span>
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title"><b>Lucie Zvanovec</b> mentioned you on <span class="hashTag">#But Quote V2</span> :</div>
+                                                                                        <div class="comment-desc"><< <span class="atMention">@ClarisseCourtois</span>, Please make sure to adjust clients quote according to out last meeting... >></div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon mention"><i class="fa fa-at tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <span class="notification"></span>
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title"><b>Lucie Zvanovec</b> commented on <span class="hashTag">#But Quote V2</span> :</div>
+                                                                                        <div class="comment-desc"><< Ending date changed to 26/10/2019 >></div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon create"><i class="fa fa-comment tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <span class="notification"></span>
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title">Last delivery has been disapproved on <span class="page-link">50 articles pour une grande marque d'electromanager</span> :</div>
+                                                                                        <div class="comment-desc"><< I found several mistakes in the first two paragraphs, Please check your delivery and send it... >></div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon delete"><i class="fa fa-times tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <span class="notification"></span>
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title"><span class="page-link">Articles 10-20</span> is to be delivered.</div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon ready"><i class="fa fa-check-square-o tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <span class="notification"></span>
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title"><b>Lucie Zvanovec</b> has created a new quote <span class="hasTag">#But Quote V2</span></div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon create"><i class="fa fa-plus tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="divider"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 read-notif notifications-container">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title"><b>Lucie Zvanovec</b> mentioned you on <span class="hashTag">#But Quote V2</span> :</div>
+                                                                                        <div class="comment-desc"><< <span class="atMention">@ClarisseCourtois</span>, Please make sure to adjust clients quote according to out last meeting... >></div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon mention"><i class="fa fa-at tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title"><b>Lucie Zvanovec</b> commented on <span class="hashTag">#But Quote V2</span> :</div>
+                                                                                        <div class="comment-desc"><< Ending date changed to 26/10/2019 >></div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon create"><i class="fa fa-comment tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title">Last delivery has been disapproved on <span class="page-link">50 articles pour une grande marque d'electromanager</span> :</div>
+                                                                                        <div class="comment-desc"><< I found several mistakes in the first two paragraphs, Please check your delivery and send it... >></div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon delete"><i class="fa fa-times tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title"><span class="page-link">Articles 10-20</span> is to be delivered.</div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon ready"><i class="fa fa-check-square-o tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="col-md-12 card notif-card">
+                                                                        <div class="row">
+                                                                            <div class="col-md-1 list-image-container">
+                                                                                <div class="list-image">
+                                                                                    <img src="lbd/img/webedia.jpg" alt="Webedia" class="img-circle">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-11 comment-container">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="comment-title"><b>Lucie Zvanovec</b> has created a new quote <span class="hasTag">#But Quote V2</span></div>
+                                                                                        <div class="tag-timing">
+                                                                                            <span class="tag-icon create"><i class="fa fa-plus tag" aria-hidden="true"></i></span> <span class="date">Sept 05, 2018</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Notifications settings modal -->
+    <!-- @include _partials/_notification-settings.html -->
+
+</body>
+
+<!--   Core JS Files   -->
+<!-- @include _partials/_all-js-files.html -->
+</html>

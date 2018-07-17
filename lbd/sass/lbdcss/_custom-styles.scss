@@ -197,21 +197,21 @@ html {
       }
 
       .logo {
-        padding: 10px 12px;
+        // padding: 10px 12px;
         // margin: 17px 0 0px;
         padding: 0;
         margin: 17px auto 30px;
         width: 37px;
         height: 47px;
 
-        &:after {
+        /* &:after {
           display: block;
           content: '';
           margin: 20px auto 0;
           width: 85%;
           height: 1px;
           background-color: $divider;
-        }
+        } */
       }
 
       .sidebar-wrapper {
@@ -1243,6 +1243,7 @@ html {
                         }
 
                         .card-user-empty {
+                          width: 60px;
                           height: 60px;
                         }
                       }
@@ -1345,6 +1346,7 @@ html {
             }
 
             .card-user-empty {
+              width: 40px;
               height: 40px;
             }
 
@@ -1454,6 +1456,8 @@ html {
             .primary-font {
               color: #485262;
               font-size: 14px;
+              display: block;
+              margin-top: 8px;
             }
 
             .brief {
@@ -1916,6 +1920,8 @@ html {
             font-weight: 400;
             font-style: italic;
             color: #B0B4BB !important;
+            display: block;
+            margin-top: 8px;
           }
         }
       }
@@ -1993,10 +1999,9 @@ html {
       color: #ffffff;
     }
   }
-  .sourcing-candidates-list-container{
-    li{
 
-    }
+  .sourcing-candidates-list-container {
+    li {}
   }
 }
 
@@ -2029,6 +2034,7 @@ html {
       }
 
       .card-user-empty {
+        width: 52px;
         height: 52px;
       }
     }
@@ -2343,6 +2349,7 @@ html {
               }
 
               .card-user-empty {
+                width: 46px;
                 height: 46px;
               }
             }
@@ -3854,6 +3861,7 @@ html {
         }
 
         .card-user-empty {
+          width: 40px;
           height: 40px;
           background: $not-started;
           color: #fff;
@@ -3920,6 +3928,7 @@ html {
       }
 
       .card-user-empty {
+        width: 30px;
         height: 30px;
 
         &.user {
@@ -3964,6 +3973,7 @@ html {
         }
 
         .card-user-empty {
+          width: 30px;
           height: 30px;
         }
       }
@@ -4626,6 +4636,7 @@ html {
           }
 
           .card-user-empty {
+            width: 40px;
             height: 40px;
           }
         }
@@ -5261,6 +5272,7 @@ html {
         }
 
         .card-user-empty {
+          width: 40px;
           height: 40px;
         }
       }
@@ -6248,11 +6260,11 @@ html {
           }
 
           /* &:first-child{
-          	border-radius: 4px 4px 0 0;
-          	.card-title a{border-radius: 4px 4px 0 0;}
+            border-radius: 4px 4px 0 0;
+            .card-title a{border-radius: 4px 4px 0 0;}
           }
           &:only-child{
-          	border-radius: 4px;
+            border-radius: 4px;
           } */
           &:last-child {
             margin-bottom: 0;
@@ -6763,6 +6775,7 @@ html {
               }
 
               .card-user-empty {
+                width: 40px;
                 height: 40px;
               }
             }
@@ -6905,6 +6918,7 @@ html {
                 }
 
                 .card-user-empty {
+                  width: 30px;
                   height: 30px;
                 }
 
@@ -7996,6 +8010,7 @@ html {
                 margin-right: 10px;
 
                 .card-user-empty {
+                  width: 40px;
                   height: 40px;
                 }
               }
@@ -8283,6 +8298,7 @@ html {
             }
 
             .card-user-empty {
+              width: 80px;
               height: 80px;
             }
           }
@@ -8453,6 +8469,7 @@ html {
   }
 
   .card-user-empty {
+    width: 40px;
     height: 40px;
   }
 }
@@ -8796,10 +8813,12 @@ html {
       }
 
       .card-user-empty {
+        width: 40px;
         height: 40px;
       }
 
       .card-user-empty {
+        width: 36px;
         height: 36px;
       }
     }
@@ -8970,6 +8989,7 @@ html {
         }
 
         .card-user-empty {
+          width: 40px;
           height: 40px;
         }
 
@@ -8981,6 +9001,7 @@ html {
         }
 
         .card-user-empty {
+          width: 40px;
           height: 40px;
         }
       }
@@ -9448,7 +9469,6 @@ html {
     background: $rank-elite;
   }
 
-
   &.senior {
     background: #FB8C00;
   }
@@ -9556,6 +9576,7 @@ html {
         }
 
         .card-user-empty {
+          width: 60px;
           height: 60px;
         }
       }
@@ -9674,6 +9695,7 @@ html {
           }
 
           .card-user-empty {
+            width: 52px;
             height: 52px;
           }
         }
@@ -9949,6 +9971,7 @@ html {
                   }
 
                   .card-user-empty {
+                    width: 30px;
                     height: 30px;
                   }
 
@@ -10337,6 +10360,7 @@ html {
       }
 
       .card-user-empty {
+        width: 52px;
         height: 52px;
       }
     }
@@ -10395,6 +10419,7 @@ html {
       }
 
       .card-user-empty {
+        width: 52px;
         height: 52px;
       }
     }
@@ -10524,6 +10549,7 @@ html {
       }
 
       .card-user-empty {
+        width: 52px;
         height: 52px;
       }
     }
@@ -10686,6 +10712,7 @@ html {
     }
 
     .card-user-empty {
+      width: 40px;
       height: 40px;
     }
   }
@@ -10883,6 +10910,7 @@ html {
       }
 
       .card-user-empty {
+        width: 52px;
         height: 52px;
       }
     }
@@ -10976,6 +11004,7 @@ html {
       }
 
       .card-user-empty {
+        width: 42px;
         height: 42px;
       }
     }
@@ -11012,6 +11041,7 @@ html {
       }
 
       .card-user-empty {
+        width: 52px;
         height: 52px;
       }
     }
@@ -11155,12 +11185,14 @@ html {
 
 .client-image-container.logout {
   .card-user-empty {
+    width: 56px;
     height: 56px;
   }
 }
 
 .client-image-container.global-user {
   .card-user-empty {
+    width: 56px;
     height: 56px;
   }
 }
@@ -11183,6 +11215,7 @@ html {
   box-shadow: 0px 0px 20px -1px rgba(67, 139, 254, 1) !important;
   color: #fff !important;
   font-size: 16px !important;
+  height: fit-content;
   word-break: break-word;
 
   p {
@@ -11872,6 +11905,7 @@ vertical-align: middle;
               }
 
               .card-user-empty {
+                width: 80px;
                 height: 80px;
               }
             }
@@ -12207,17 +12241,17 @@ vertical-align: middle;
   align-items: center;
   overflow: hidden;
 
-  					 /*     position: relative;
-  z-index: 1;
-  height: 100vh;
-  width: 92px;
-  left: 45%;
-  top: 42%;
-  img{
-  position: absolute;
-  left: 0;
-  top: 0;
-  } */
+                   /*     position: relative;
+z-index: 1;
+height: 100vh;
+width: 92px;
+left: 45%;
+top: 42%;
+img{
+position: absolute;
+left: 0;
+top: 0;
+} */
 }
 
 .panel-body {
@@ -12358,6 +12392,19 @@ span.more {
 }
 
 /*See More Content Ends*/
+
+.preview-document-modal {
+  .modal-title {
+    font-size: 20px;
+    color: #353f53;
+    font-weight: 600;
+    margin-bottom: 0px !important;
+    margin-bottom: 20px !important;
+    word-wrap: break-word;
+  }
+}
+
+/* Preview Document Modal Ends */
 
 /*Drag and Drop Files Starts*/
 

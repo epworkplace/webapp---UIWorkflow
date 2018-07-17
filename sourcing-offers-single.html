@@ -175,6 +175,7 @@
 <!-- Import modal Ends-->
 <!-- Select Assignee Starts-->
 <!-- @include _partials/_select-assignees-teamlist-modal.html -->
+<!-- @include _partials/_select-edit-assignees-teamlist-modal.html -->
 <!-- Select Assignee Ends-->
 <!-- Modals Ends -->
 
@@ -268,6 +269,17 @@
 		// $('.job-filter-options').slideToggle(200);
 	});
 /*Manage filter options toggle ends*/
+/* Edit Create job  Title*/
+    $('#editCreateJobTitle').click(function(e) {
+        e.preventDefault();
+        $('.modal-title-edit').show();
+        $('.modal-title').hide();
+    });
+    $('#saveJobTitle').click(function(e) {
+        e.preventDefault();
+        $('.modal-title-edit').hide();
+        $('.modal-title').show();
+    });
 
 	});
 

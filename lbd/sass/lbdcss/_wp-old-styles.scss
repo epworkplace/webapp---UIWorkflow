@@ -4890,7 +4890,7 @@ fieldset[disabled] .btn-neutral {
 .form-control:focus {
   + .input-group-addon, ~ .input-group-addon {
     background-color: #FFFFFF;
-    border-color: #9A9A9A;
+    border: 1px solid #ccc;
   }
 }
 

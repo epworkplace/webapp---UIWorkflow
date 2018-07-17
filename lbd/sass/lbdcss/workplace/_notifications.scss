@@ -1,0 +1,402 @@
+.notification-page {
+  width: 93.699%;
+  padding: 0;
+  margin: 30px auto;
+
+  .content-container {
+    .page-title {
+      h1 {
+        margin: 0 0 15px 0;
+        padding: 0;
+        font-size: 22px;
+        font-weight: 600;
+        color: $main;
+        height: auto;
+        cursor: text;
+      }
+    }
+  }
+
+  .main-content {
+    .nav-content {
+      .side-navigation {
+        overflow: hidden;
+
+        ul.nav {
+          li {
+            a {
+              border-bottom: 1px solid $border-color;
+
+              .notification-item {
+                color: $helper;
+              }
+
+              .notification-number {
+                color: $helper;
+              }
+            }
+
+            &:hover {
+              .notification-item {
+                color: $selected;
+              }
+            }
+
+            &.active {
+              position: relative;
+
+              &:before {
+                content: '';
+                position: absolute;
+                left: -15px;
+                top: 10px;
+                width: 3px;
+                height: 20px;
+                background: $selected;
+              }
+
+              a {
+                .notification-item {
+                  color: $selected;
+                }
+              }
+            }
+
+            &:last-child {
+              a {
+                border-bottom: 1px solid transparent;
+              }
+            }
+          }
+        }
+      }
+
+      .filter-notifications {
+        h4 {
+          color: $helper;
+          font-size: 14px;
+          margin: 0;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+
+        .notifications-settings {
+          padding: 0;
+          text-align: right;
+
+          a {
+            color: $helper;
+          }
+        }
+
+        .filter-notifications-nav {
+          ul.nav {
+            padding: 3px 0 0 0;
+
+            li {
+              border-bottom: 1px solid $border-color;
+              padding: 3px 0;
+
+              label.checkbox {
+                span.icons {
+                  margin-top: 2px;
+                }
+
+                span.tag-icon {
+                  position: relative;
+                  margin: 0 5px;
+
+                  &:before {
+                    content: '';
+                    position: absolute;
+                    left: 1px;
+                    top: -2px;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    background: $helper;
+                  }
+
+                  i.tag {
+                    position: relative;
+                    color: #fff;
+                  }
+                }
+
+                color: $helper;
+
+                &.checked {
+                  span.tag-icon {
+                    &:before {
+                      background: $main;
+                    }
+                  }
+
+                  color: $main;
+                }
+              }
+
+              &:last-child {
+                border-bottom: 1px solid transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .notification-content {
+      .notifications-container {
+        ul {
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style-type: none;
+
+            a.notif-card, .notif-card {
+              padding: 15px;
+              margin-bottom: 10px;
+              border: 1px solid #fff;
+              -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
+              -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
+              box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.1);
+              position: relative;
+
+              .list-image-container {
+                span.notification {
+                  position: absolute;
+                  text-align: center;
+                  border-radius: 15px;
+                  min-width: 15px;
+                  padding: 0 5px;
+                  height: 15px;
+                  font-size: 12px;
+                  font-weight: bold;
+                  line-height: 20px;
+                  top: 2px;
+                  right: 2px;
+                  border: 2px solid #fff;
+                  background-color: #ee0a5f;
+                  z-index: 9;
+                }
+
+                .list-image {
+                  width: 50px;
+                  height: 50px;
+                  position: relative;
+
+                  img {
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    left: 5px;
+                    top: 4.5px;
+                    object-fit: cover;
+                  }
+
+                  .card-user-empty {
+                    height: 40px;
+                  }
+
+                  &.empty-image {
+                    width: 50px;
+                    height: 50px;
+                    border: 2px dashed #d7d9dc;
+                    color: #d7d9dc;
+                    border-radius: 50px;
+                    position: relative;
+                    display: -webkit-flex;
+                    display: -moz-flex;
+                    display: -ms-flex;
+                    display: -o-flex;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:before {
+                      content: '\E8A6';
+                      font-family: 'Material Icons';
+                      position: absolute;
+                      top: -4px;
+                      left: 5px;
+                      font-size: 35px;
+                    }
+
+                    img, .card-user-empty {
+                      position: unset;
+                      top: unset;
+                      left: unset;
+                      z-index: 1;
+                      object-fit: cover;
+                    }
+                  }
+                }
+              }
+
+              .comment-container {
+                color: $main;
+
+                span.hashTag, span.page-link {
+                  color: $selected;
+                  text-decoration: underline;
+                }
+
+                span.atMention {
+                  font-weight: 700;
+                }
+
+                .tag-timing {
+                  margin-top: 5px;
+
+                  span.date {
+                    color: $helper;
+                    font-size: 12px;
+                  }
+
+                  .tag-icon {
+                    position: relative;
+                    margin: 0 10px 0 0;
+
+                    &:before {
+                      content: '';
+                      position: absolute;
+                      left: 1px;
+                      top: -2px;
+                      width: 22px;
+                      height: 22px;
+                      border-radius: 50%;
+                      background: $helper;
+                    }
+
+                    i.tag {
+                      position: relative;
+                      color: #fff;
+                    }
+
+                    &.mention {
+                      &:before {
+                        background: $selected;
+                      }
+                    }
+
+                    &.create {
+                      &:before {
+                        background: $main;
+                      }
+                    }
+
+                    &.delete {
+                      &:before {
+                        background: $rework;
+                      }
+                    }
+
+                    &.ready {
+                      &:before {
+                        background: $delivered;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &:hover {
+                box-shadow: rgba(68, 138, 255, 1) 0px 0px 1px 1px;
+              }
+            }
+
+            &:nth-last-of-type(2) {
+              a.notif-card, .notif-card {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        &.read-notif {
+          ul {
+            li {
+              a.notif-card, .notif-card {
+                background: #FDFDFD;
+
+                .comment-container {
+                  color: $helper;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Modal Container */
+.notification-settings-modal {
+  .modal-title {
+    font-size: 20px;
+    color: #353f53;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .notification-settings-container {
+    .checkbox {
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
+      background-color: #FFFFFF;
+      padding: 10px 25px 10px 35px;
+
+      .icons {
+        top: 11px;
+        left: 10px;
+      }
+
+      span.tag-icon {
+        position: relative;
+        margin: 0 5px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 1px;
+          top: -2px;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: $helper;
+        }
+
+        i.tag {
+          position: relative;
+          color: #fff;
+        }
+
+        &.mention {
+          &:before {
+            background: $selected;
+          }
+        }
+
+        &.create {
+          &:before {
+            background: $main;
+          }
+        }
+
+        &.delete {
+          &:before {
+            background: $rework;
+          }
+        }
+
+        &.ready {
+          &:before {
+            background: $delivered;
+          }
+        }
+      }
+    }
+  }
+}

@@ -617,7 +617,7 @@ span.file-type {
     }
   }
 
-  &.gsl, &.zip {
+  &.gsl, &.zip, &.rar {
     &:before {
       background: $default-bg;
     }
@@ -823,36 +823,36 @@ span.file-type {
       }
     }
 
-    		/* .brief-card {
-    			margin-bottom: 10px;
-    			border: 1px solid transparent;
+            /* .brief-card {
+                margin-bottom: 10px;
+                border: 1px solid transparent;
 
-    			&.checked {
-    				border: 1px solid $helper;
-    			}
+                &.checked {
+                    border: 1px solid $helper;
+                }
 
-    			> .row {
-    				@extend .df-ac;
+                > .row {
+                    @extend .df-ac;
 
-    				min-height: 50px;
+                    min-height: 50px;
 
-    				.file-image {
-    					i {
-    						color: $highlight-02;
-    					}
-    				}
+                    .file-image {
+                        i {
+                            color: $highlight-02;
+                        }
+                    }
 
-    				.file-desc {
-    					color: $main;
+                    .file-desc {
+                        color: $main;
 
-    					span.sub {
-    						display: block;
-    						color: $highlight-06;
-    						font-size: 12px;
-    					}
-    				}
-    			}
-    		} */
+                        span.sub {
+                            display: block;
+                            color: $highlight-06;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            } */
   }
 }
 
