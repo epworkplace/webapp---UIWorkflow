@@ -181,7 +181,7 @@
                 }
 
                 .user-desc {
-                  word-wrap: break-word;
+                  word-wrap: break-all;
 
                   span.sub {
                     display: block;
@@ -326,7 +326,7 @@
                 .brief-desc {
                   .file-name {
                     margin-bottom: 10px;
-                    word-wrap: break-word;
+                    word-wrap: break-all;
 
                     span.sub {
                       display: block;
@@ -1131,7 +1131,7 @@ span.file-type {
 
     .user-desc {
       color: $main;
-      word-wrap: break-word;
+      word-wrap: break-all;
 
       span.sub {
         display: block;
@@ -1425,7 +1425,7 @@ span.file-type {
       display: -webkit-flex;
       display: flex;
       max-height: 30px;
-      word-wrap: break-word;
+      word-wrap: break-all;
 
       span.fire {
         text-decoration: line-through;
@@ -2043,7 +2043,7 @@ span.file-type {
       display: -webkit-flex;
       display: flex;
       max-height: 30px;
-      word-wrap: break-word;
+      word-wrap: break-all;
 
       span.fire {
         text-decoration: line-through;

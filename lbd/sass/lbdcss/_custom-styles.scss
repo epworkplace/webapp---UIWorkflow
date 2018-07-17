@@ -7174,7 +7174,7 @@ html {
             font-size: 14px;
 
             .comment {
-              word-wrap: break-word;
+              word-wrap: break-all;
             }
 
             p {
@@ -8012,7 +8012,7 @@ html {
                 font-size: 14px;
                 color: #354052;
                 font-weight: 600;
-                word-wrap: break-word;
+                word-wrap: break-all;
               }
 
               .stakeholder-designation {
@@ -8036,7 +8036,7 @@ html {
                   display: block;
                   width: 100%;
                   text-align: right;
-                  word-break: break-word;
+                  word-break: break-all;
                 }
               }
             }
@@ -11205,7 +11205,7 @@ html {
   color: #fff !important;
   font-size: 16px !important;
   height: fit-content;
-  word-break: break-word;
+  word-break: break-all;
 
   p {
     color: #fff;
@@ -11452,6 +11452,11 @@ vertical-align: middle;
       width: 30px;
       height: 30px;
       border-radius: 50%;
+    }
+
+    .card-user-empty {
+      width: 30px;
+      height: 30px;
     }
 
     li {
@@ -12349,7 +12354,7 @@ span.no {
 }
 
 span.more {
-  word-wrap: break-word;
+  word-wrap: break-all;
 }
 
 .morelink {
@@ -12389,7 +12394,7 @@ span.more {
     font-weight: 600;
     margin-bottom: 0px !important;
     margin-bottom: 20px !important;
-    word-wrap: break-word;
+    word-wrap: break-all;
   }
 }
 
