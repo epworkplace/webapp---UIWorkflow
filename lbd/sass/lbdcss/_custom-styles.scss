@@ -7276,7 +7276,6 @@ html {
           .files-droppped {
             a {
               i {
-                position: relative;
                 font-size: 16px;
                 top: 3px;
                 margin-right: 5px;
@@ -7287,13 +7286,24 @@ html {
 
                 i {
                   font-size: 24px;
+                  position: relative;
+                  top: 6px;
                 }
 
                 span.file-type {
                   margin-right: 12px;
 
+                  &:before {
+                    z-index: 1;
+                  }
+
+                  &:after {
+                    z-index: 9;
+                  }
+
                   i {
-                    position: static;
+                    position: relative;
+                    top: 6px;
                     margin-right: 0;
                     color: $main;
                     font-size: 24px;
