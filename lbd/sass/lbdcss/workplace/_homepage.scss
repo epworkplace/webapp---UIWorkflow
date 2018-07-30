@@ -46,6 +46,7 @@
         }
 
         .card-user-empty {
+          width: 39px;
           height: 39px;
         }
       }
@@ -426,6 +427,7 @@
                 }
 
                 .card-user-empty {
+                  width: 40px;
                   height: 40px;
                 }
               }
@@ -478,6 +480,7 @@
 
         .hot-client {
           width: 52px;
+          height: 52px;
           margin-bottom: 20px;
           margin-right: 20px;
 
@@ -488,6 +491,7 @@
           }
 
           .card-user-empty {
+            width: 52px;
             height: 52px;
           }
         }
@@ -811,6 +815,7 @@
         &[class*='notifications-'] {
           .user-image {
             width: 40px;
+            height: 40px;
             padding: 0;
 
             // margin-right: 5px;
@@ -824,10 +829,12 @@
 
             .card-user {
               padding: 0;
+              width: 40px;
               height: 40px;
             }
 
             .card-user-empty {
+              width: 40px;
               height: 40px;
             }
           }
