@@ -170,7 +170,7 @@ gulp.task('clean-bundle', function(){
 // build HTML files
 gulp.task('html', function() {
   var page = gulp.src(html.in)
-             // .pipe($.newer(html.out))
+             .pipe($.newer(html.out))
              .pipe($.preprocess({ context: html.context }))
              /*.pipe($.replace(/.\jpg|\.png|\.tiff/g, '.webp'))*/;
   if (!devBuild) {
@@ -616,7 +616,10 @@ gulp.task('watch', function() {
   gulp.watch(fonts.in, ['fonts']);
 
   // sass changes
-  gulp.watch([css.watch], ['sass']);
+  // gulp.watch([css.watch], ['sass']);
+  $.watch(css.watch, $.batch(function (events, done) {
+    gulp.start(['sass'], done);
+  }));
 
   // pluginCSS changes
   gulp.watch([css.pluginCSS.watch], ['css']);

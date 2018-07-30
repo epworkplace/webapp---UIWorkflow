@@ -57,7 +57,7 @@
                                                 <div class="col-md-12 profile-info-navs">
                                                     <ul class="btn-group btn-group-justified" data-toggle="buttons">
                                                         <li>
-                                                            <a href="#comments" class="btn btn-default" data-toggle="tab">
+                                                            <a href="#comments" class="btn btn-default active" data-toggle="tab">
                                                                 <i class="material-icons">insert_comment</i>
                                                                 <p>Comments</p>
                                                                 <span class="pull-right"><i class="fa fa-caret-right"></i></span>
@@ -85,7 +85,7 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#cv-external-links" class="btn btn-default active" data-toggle="tab">
+                                                            <a href="#cv-external-links" class="btn btn-default" data-toggle="tab">
                                                                 <i class="fa fa-ellipsis-h"></i>
                                                                 <p>CV &amp; External Links</p>
                                                                 <span class="pull-right"><i class="fa fa-caret-right"></i></span>
@@ -251,7 +251,7 @@
                                 </div>
                             </div>
                             <div class="col-md-8 profile-container-right">
-                                <div class="tab-content" id="comments">
+                                <div class="tab-content active" id="comments">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-12 p-15 ">
@@ -315,96 +315,102 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="subsec-header">
-                                                                    Comments (2) : <a href="javascript:;" class="add-new-comment-to-list">+ Add a new comment</a>
+                                                            <div class="col-md-12 sub-section">
+                                                                <div class="clearfix">
+                                                                    <div class="col-md-12 sub-sec-header mb-10">
+                                                                        <div class="row df-ac">
+                                                                            <div class="col-xs-12 sec-title">
+                                                                                Comments (2) : <a href="javascript:;" class="add-new-comment-to-list">+ Add a new comment</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12 p-0">
+                                                                        <ul class="comments-list">
+                                                                            <li class="list-item add-new-comment" style="display: none;">
+                                                                                <div class="comment-container">
+                                                                                    <span class="close">
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="material-icons">
+                                                                                            close
+                                                                                            </i>
+                                                                                        </a>
+                                                                                    </span>
+                                                                                    Add a comment :
+                                                                                    <textarea class="form-control" id="" placeholder="Write your comment here..." rows="3"></textarea>
+                                                                                    <button class="btn btn-fill pull-right send-comment">Send comment</button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 df-ac">
+                                                                                            <div class="user-image">
+                                                                                                <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
+                                                                                            </div>
+                                                                                            <div class="user-name">
+                                                                                                <h4>Clarisse Courtois</h4>
+                                                                                                <span class="helper-text d-block">Jan 18</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="comment">
+                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis nisi, vitae et assumenda enim sapiente accusantium odit molestias excepturi iusto laboriosam repellendus, voluptate, suscipit maxime eaque cum mollitia corrupti.</p>
+                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 df-ac">
+                                                                                            <div class="user-image">
+                                                                                                <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
+                                                                                            </div>
+                                                                                            <div class="user-name">
+                                                                                                <h4>Clarisse Courtois</h4>
+                                                                                                <span class="helper-text d-block">Jan 18</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="comment">
+                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="comment-container">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12 df-ac">
+                                                                                            <div class="user-image">
+                                                                                                <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
+                                                                                            </div>
+                                                                                            <div class="user-name">
+                                                                                                <h4>Clarisse Courtois</h4>
+                                                                                                <span class="helper-text d-block">Jan 18</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="comment">
+                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis nisi, vitae et assumenda enim sapiente accusantium odit molestias excepturi iusto laboriosam repellendus, voluptate, suscipit maxime eaque cum mollitia corrupti.</p>
+                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-md-12">
-                                                                <ul class="comments-list">
-                                                                    <li class="list-item add-new-comment" style="display: none;">
-                                                                        <div class="comment-container">
-                                                                            <span class="close">
-                                                                                <a data-dismiss="modal" href="javascript:;">
-                                                                                    <i class="material-icons">
-                                                                                    close
-                                                                                    </i>
-                                                                                </a>
-                                                                            </span>
-                                                                            Add a comment :
-                                                                            <textarea class="form-control" id="" placeholder="Write your comment here..." rows="3"></textarea>
-                                                                            <button class="btn btn-fill pull-right send-comment">Send comment</button>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="list-item">
-                                                                        <div class="comment-container">
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 df-ac">
-                                                                                    <div class="user-image">
-                                                                                        <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
-                                                                                    </div>
-                                                                                    <div class="user-name">
-                                                                                        <h4>Clarisse Courtois</h4>
-                                                                                        <span class="helper-text d-block">Jan 18</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12">
-                                                                                    <div class="comment">
-                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis nisi, vitae et assumenda enim sapiente accusantium odit molestias excepturi iusto laboriosam repellendus, voluptate, suscipit maxime eaque cum mollitia corrupti.</p>
-                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="list-item">
-                                                                        <div class="comment-container">
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 df-ac">
-                                                                                    <div class="user-image">
-                                                                                        <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
-                                                                                    </div>
-                                                                                    <div class="user-name">
-                                                                                        <h4>Clarisse Courtois</h4>
-                                                                                        <span class="helper-text d-block">Jan 18</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12">
-                                                                                    <div class="comment">
-                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="list-item">
-                                                                        <div class="comment-container">
-                                                                            <div class="row">
-                                                                                <div class="col-md-12 df-ac">
-                                                                                    <div class="user-image">
-                                                                                        <img class="img-circle img-responsive mCS_img_loaded" src="lbd/img/default-avatar.png">
-                                                                                    </div>
-                                                                                    <div class="user-name">
-                                                                                        <h4>Clarisse Courtois</h4>
-                                                                                        <span class="helper-text d-block">Jan 18</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row">
-                                                                                <div class="col-md-12">
-                                                                                    <div class="comment">
-                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum perferendis nisi, vitae et assumenda enim sapiente accusantium odit molestias excepturi iusto laboriosam repellendus, voluptate, suscipit maxime eaque cum mollitia corrupti.</p>
-                                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, maxime, consectetur. Fugiat, distinctio, eos! Alias.</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -692,7 +698,7 @@
                                                                                 </li>
                                                                             </ul>
                                                                             <div class="tab-content tab-content-progress">
-                                                                                <div class="tab-pane" id="job-offer">
+                                                                                <div class="tab-pane active" id="job-offer">
                                                                                     <div class="row">
                                                                                         <div class="pull-left cards-view col-xs-12 col-sm-4 col-md-4 text-right">
                                                                                             <select class="selectpicker" title="Filter...">
@@ -925,7 +931,7 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="tab-pane active" id="production-jobs">
+                                                                                <div class="tab-pane" id="production-jobs">
                                                                                     <div class="row">
                                                                                         <div class="pull-left cards-view col-xs-12 col-sm-4 col-md-4 text-right">
                                                                                             <select class="selectpicker" title="Filter...">
@@ -2208,7 +2214,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-content active" id="cv-external-links" style="display: block;">
+                                <div class="tab-content" id="cv-external-links">
                                     <div class="col-md-12">
                                         <div class="row">
                                             <div class="col-md-12 p-15">
@@ -2345,7 +2351,148 @@
                                     </div>
                                 </div>
                                 <div class="tab-content" id="account-settings">
-                                    account-settings
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12 p-15">
+                                                <div class="row">
+                                                    <div class="col-md-12 user-skills-content-container">
+                                                        <div class="row">
+                                                            <div class="col-md-12 modal-title">
+                                                                <i class="fa fa-cog"></i> Account settings
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12 content-scroll user-skills-content">
+                                                                <div class="row">
+                                                                    <div class="col-md-12 sub-section">
+                                                                        <div class="col-md-12 sub-sec-header">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="row">
+                                                                                        <div class="col-xs-12 sec-title">
+                                                                                            Contributor address
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 sub-sec-content">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 p-0">
+                                                                                    <label for="">Address</label>
+                                                                                    <span class="d-block">2 rue Paul vaillant Couturier</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 p-0">
+                                                                                    <label for="">ZIP / Postal Code</label>
+                                                                                    <span class="d-block">92300</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 p-0">
+                                                                                    <label for="">City</label>
+                                                                                    <span class="d-block">Levellois-Perret</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12 sub-section website-settings">
+                                                                        <div class="col-md-12 sub-sec-header">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="row">
+                                                                                        <div class="col-xs-12 sec-title">
+                                                                                            Website and Mailing
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 sub-sec-content">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4 p-0">
+                                                                                    <label for="">Language</label>
+                                                                                    <span class="form-control">English</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 p-0">
+                                                                                    <label for="">Subscribe to </label>
+                                                                                    <ul class="subscribtion-list">
+                                                                                        <li class="selected">
+                                                                                            Edit palce newsletter
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            Mail alerting
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12 sub-section">
+                                                                        <div class="col-md-12 sub-sec-header no-border">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="row">
+                                                                                        <div class="col-xs-12 sec-title">
+                                                                                            Change Password
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-5 p-0">
+                                                                                    <label for="">New Password</label>
+                                                                                    <input class="form-control" name="" type="text" value="" placeholder="" />
+                                                                                </div>
+                                                                                <div class="col-sm-5">
+                                                                                    <label for="">Confirm Password</label>
+                                                                                    <input class="form-control" name="" type="text" value="" placeholder="" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-12 sub-section">
+                                                                        <div class="col-md-12 sub-sec-header no-border">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="row">
+                                                                                        <div class="col-xs-12 sec-title">
+                                                                                            More Actions
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 p-0">
+                                                                            <ul class="more-actions-list">
+                                                                                <li>
+                                                                                    <a href="javascript:;">Blacklist this profile</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="javascript:;">Delete this profile</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

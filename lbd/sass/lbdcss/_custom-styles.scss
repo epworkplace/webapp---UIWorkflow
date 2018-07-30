@@ -197,10 +197,21 @@ html {
       }
 
       .logo {
+        // padding: 10px 12px;
+        // margin: 17px 0 0px;
         padding: 0;
         margin: 17px auto 30px;
         width: 37px;
         height: 47px;
+
+        /* &:after {
+          display: block;
+          content: '';
+          margin: 20px auto 0;
+          width: 85%;
+          height: 1px;
+          background-color: $divider;
+        } */
       }
 
       .sidebar-wrapper {
@@ -4599,15 +4610,81 @@ html {
 
     .candidate-list-card {
       position: relative;
-      padding: 20px;
       margin-bottom: 12px;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
       align-items: center;
       border: 1px solid transparent;
+
+      .panel-body{
+        position: relative;
+        border-radius: 4px 4px 0 0;
+      }
+      .panel-footer{
+        background: #fff;
+        border-radius: 0 0 4px 4px;
+        ul{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          li{
+            display: -webkit-inline-flex;
+            display: -moz-inline-flex;
+            display: -ms-inline-flex;
+            display: -o-inline-flex;
+            display: inline-flex;
+            align-items: center;
+            border-right: solid 2px $border-color;
+            padding: 0 10px;
+            &:first-child{
+              padding-left: 0;
+            }
+            &:last-child{
+              border:none;
+            }
+            &.job-status{
+              &:before{
+                  font-family: FontAwesome;
+                  display: inline-block;
+                  margin-right: 5px;
+              }
+              &.declined{
+                color: $delete;
+                &:before{
+                  content: "\f00d";
+                }
+              }
+              &.approved{
+                color: $selected;
+                &:before{
+                  content: "\f00c";
+                }
+              }
+            }
+            &.status-comment{
+              a{
+                color: $main;
+                text-decoration: underline;
+              }
+              .popover{
+                padding: 15px;
+                width: 100%;
+                .popover-content{
+                  padding: 0;
+                }
+                .comment-time{
+                  font-size: 11px;
+                  color: $body;
+                  padding-bottom: 10px;
+                }
+                p{
+                  font: 12px;
+                  margin: 0;
+                  line-height: normal;
+                }
+              }
+            }
+          }
+        }
+      }
 
       .candidate-info {
         padding: 0;
@@ -4730,10 +4807,6 @@ html {
         border: 1px solid #447DF7;
       }
 
-      &.unselected {
-        opacity: 0.4;
-      }
-
       .cta-container {
         visibility: hidden;
         opacity: 0;
@@ -4744,6 +4817,7 @@ html {
         width: 40%;
         height: 100%;
         background: #fff;
+        border-radius: 0 4px 4px 0;
 
         .cta {
           display: flex;
@@ -4800,6 +4874,20 @@ html {
           visibility: visible;
           opacity: 1;
           transition: all .3s ease;
+        }
+        &.unselected{
+          .cta-container{
+            visibility: hidden;
+            opacity: 0;
+            transition: all .3s ease;
+          }
+        }
+      }
+
+      &.unselected {
+        .panel-body{
+          opacity: 0.4;
+          background: $highlight-02;
         }
       }
     }
