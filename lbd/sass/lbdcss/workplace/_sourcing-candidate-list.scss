@@ -304,7 +304,17 @@
   .content {
     .tab-content {
       .main-panel-header {
+        height: auto !important;
+
+        .header-top-panel {
+          .select-all-container, .project-planner {
+            margin-top: 0;
+          }
+        }
+
         .validate {
+          margin-top: 0;
+
           button {
             float: left !important;
           }
@@ -570,6 +580,39 @@
 .availability-popover {
   position: relative;
   top: 5px;
+}
+
+.export-button {
+  .btn.btn-drop {
+    border: 1px solid #ddd;
+    background: transparent;
+    color: $helper;
+    text-align: left;
+    position: relative;
+
+    &:before {
+      content: 'more_vert';
+      font-family: 'Material Icons';
+      position: absolute;
+      top: 0;
+      right: 5px;
+      font-size: 24px;
+      color: $helper;
+    }
+
+    &:hover {
+      background: $highlight-02;
+    }
+  }
+
+  ul.dropdown-menu {
+    width: 100%;
+
+    &:before, &:after {
+      content: none;
+      border: none;
+    }
+  }
 }
 
 /*Modal styles*/
