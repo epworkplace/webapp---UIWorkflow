@@ -157,6 +157,7 @@
 
               .feed-card-user-container {
                 float: left;
+                word-wrap: break-word;
 
                 .user-image {
                   width: 40px;
@@ -281,6 +282,8 @@
               }
 
               .feed-card-action-container {
+                word-wrap: break-word;
+
                 .brief-image {
                   @extend .df-ac;
 
