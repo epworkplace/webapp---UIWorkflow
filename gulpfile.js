@@ -576,7 +576,7 @@ $.watch([dest + '**/*.css'], $.batch(function (events, done) {
 
 // browserSync.watch(dest + 'lbd/js/custom.js').on('change', reload);
 
-/*  // html changes
+  /*// html changes
   gulp.watch(html.watch, ['html', reload]);
   // gulp.watch(html.watch).on('change', reload);
 
@@ -584,9 +584,13 @@ $.watch([dest + '**/*.css'], $.batch(function (events, done) {
   gulp.watch(images.in, ['images']);
 
   // font changes
-  gulp.watch(fonts.in, ['fonts']);
+  gulp.watch(fonts.in, ['fonts']);*/
 
-  // sass changes
+    $.watch([dest + '**/*.css'], $.batch(function (events, done) {
+      gulp.start(browserSync.stream(), done);
+    }));
+
+  /*// sass changes
   gulp.watch([css.watch], ['sass']);
 
   // pluginCSS changes
