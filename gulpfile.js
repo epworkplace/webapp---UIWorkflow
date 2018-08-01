@@ -621,9 +621,7 @@ gulp.task('watch', function() {
 
   // sass changes
   // gulp.watch([css.watch], ['sass']);
-  $.watch(css.watch, $.batch(function (events, done) {
-    gulp.start(['sass'], done);
-  }));
+  $.watch(css.watch, ['sass']);
 
   // pluginCSS changes
   gulp.watch([css.pluginCSS.watch], ['css']);
