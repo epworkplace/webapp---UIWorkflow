@@ -2989,7 +2989,7 @@
                                                                             <div class="panel-footer">
                                                                                 <ul class="">
                                                                                     <li class="job-status declined">Job refused</li>
-                                                                                    <li class="status-comment"><a href="javascript:;" data-toggle="popover" data-placement="bottom" data-html="true" data-trigger="focus" data-content="<b>Withdrawn </b><br><span class='d-block comment-time'>September  07 - 01:00am</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque consequatur voluptates nisi sed odit fugiat, magni cum voluptas corporis quis, sapiente ullam quia aliquam mollitia, ipsum sunt sit eos ut.</p>" data-original-title="" title="">Read comment</a></li>
+                                                                                    <li class="status-comment"><a href="javascript:;" data-toggle="popover" data-placement="bottom" data-html="true" data-class="test" data-trigger="focus" data-content="<span class='hidden-title'></span><b>Withdrawn </b><br><span class='d-block comment-time'>September  07 - 01:00am</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque consequatur voluptates nisi sed odit fugiat, magni cum voluptas corporis quis, sapiente ullam quia aliquam mollitia, ipsum sunt sit eos ut.</p>" title="">Read comment</a></li>
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
@@ -5748,34 +5748,11 @@ $('div').delegate('.card-section-list ul li .card', 'click', function(e){
                     touchScroll:true
                 })*/
 
-            $('.modal').on('shown.bs.modal', function () {
-                console.log('modal opened');
-            })
-            var $slider = $(".slickSlider");
-            $slider.
-            on('init', function () {
-                mouseWheel($slider);
-            }).
-            slick({
-                dots: true,
-                vertical: true,
-                infinite: false,
-                adaptiveHeight: true });
+            $(".status-comment a[data-toggle=popover]").on("show.bs.popover", function(){
+                $(".popover").addClass("read-comment-popover");
+            });
 
-            function mouseWheel($slider) {
-                $(window).on('wheel', { $slider: $slider }, mouseWheelHandler);
-            }
-            function mouseWheelHandler(event) {
-                event.preventDefault();
-                var $slider = event.data.$slider;
-                var delta = event.originalEvent.deltaY;
-                if (delta > 0) {
-                    $slider.slick('slickPrev');
-                } else
-                {
-                    $slider.slick('slickNext');
-                }
-            }
+
         </script>
         <style>
              /* #scrollifyTest .modal-body{
