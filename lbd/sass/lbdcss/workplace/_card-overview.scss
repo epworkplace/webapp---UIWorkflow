@@ -163,12 +163,18 @@
                   width: 40px;
                   padding: 0;
                   margin-left: 15px;
+                  background: $main;
+                  border-radius: 50%;
 
                   img {
                     max-width: 100%;
                     width: 40px;
                     height: 40px;
-                    object-fit: cover;
+                    object-fit: contain;
+                  }
+
+                  &.files {
+                    background: transparent;
                   }
 
                   i {
@@ -397,13 +403,16 @@
 
           .user-image {
             width: 40px;
+            height: 40px;
+            background: $main;
+            border-radius: 50%;
 
             img {
               border: 2px solid #fff;
               max-width: 100%;
               width: 40px;
               height: 40px;
-              object-fit: cover;
+              object-fit: contain;
             }
 
             .card-user-empty {
@@ -896,12 +905,14 @@ span.file-type {
 
     span.user-image {
       margin-right: 10px;
+      background: $main;
+      border-radius: 50%;
 
       img {
         max-width: 100%;
         width: 40px;
         height: 40px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       &.card-user-empty {

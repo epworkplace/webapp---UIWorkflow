@@ -335,6 +335,7 @@ html {
               width: 44px;
               margin: 0 auto;
               background: $main;
+              border-radius: 50%;
 
               .profile_img {
                 max-width: 100%;
@@ -1235,12 +1236,14 @@ html {
                         height: 60px;
                         float: left;
                         margin-right: 30px;
+                        background: $main;
+                        border-radius: 50%;
 
                         img {
                           max-width: 100%;
                           width: 60px;
                           height: 60px;
-                          object-fit: cover;
+                          object-fit: contain;
                         }
 
                         .card-user-empty {
@@ -1336,14 +1339,16 @@ html {
             height: 50px;
             margin-top: 10px;
             position: relative;
+            background: $main;
+            border-radius: 50%;
 
             img {
-              width: 40px;
-              height: 40px;
+              width: 44px;
+              height: 44px;
               position: absolute;
-              left: 5px;
-              top: 4.5px;
-              object-fit: cover;
+              left: 3px;
+              top: 3px;
+              object-fit: contain;
             }
 
             .card-user-empty {
@@ -1365,6 +1370,7 @@ html {
               display: flex;
               align-items: center;
               justify-content: center;
+              background: #fff;
 
               &:before {
                 content: '\E8A6';
@@ -2027,11 +2033,13 @@ html {
     .user-image {
       width: 52px;
       padding: 0;
+      background: $main;
+      border-radius: 50%;
 
       img {
         width: 52px;
         height: 52px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .card-user-empty {
@@ -2341,12 +2349,14 @@ html {
               position: relative;
               padding: 0;
               width: 50px;
+              background: $main;
+              border-radius: 50%;
 
               img {
                 max-width: 100%;
                 width: 46px;
                 height: 46px;
-                object-fit: cover;
+                object-fit: contain;
               }
 
               .card-user-empty {
@@ -3854,11 +3864,13 @@ html {
         height: 40px;
         width: 40px !important;
         padding: 0;
+        background: $main;
+        border-radius: 50%;
 
         img {
           width: 40px;
           height: 40px;
-          object-fit: cover;
+          object-fit: contain;
         }
 
         .card-user-empty {
@@ -3920,12 +3932,14 @@ html {
     .user-image {
       width: 30px;
       margin-right: 10px;
+      background: $main;
+      border-radius: 50%;
 
       img {
         max-width: 100%;
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .card-user-empty {
@@ -3966,11 +3980,13 @@ html {
         height: 30px;
         padding: 0;
         margin-right: 20px;
+        background: $main;
+        border-radius: 50%;
 
         img {
           width: 30px;
           height: 30px;
-          object-fit: cover;
+          object-fit: contain;
         }
 
         .card-user-empty {
@@ -4714,13 +4730,15 @@ html {
         .candidate-image {
           width: 40px;
           padding: 0;
+          background: $main;
+          border-radius: 50%;
 
           img {
             display: block;
             max-width: 100%;
             width: 40px;
             height: 40px;
-            object-fit: cover;
+            object-fit: contain;
           }
 
           .card-user-empty {
@@ -5362,13 +5380,15 @@ html {
       .assignee-image {
         width: 40px;
         padding: 0;
+        background: $main;
+        border-radius: 50%;
 
         img {
           display: block;
           max-width: 100%;
           width: 40px;
           height: 40px;
-          object-fit: cover;
+          object-fit: contain;
         }
 
         .card-user-empty {
@@ -6865,13 +6885,15 @@ html {
             .candidate-image {
               width: 40px;
               padding: 0;
+              background: $main;
+              border-radius: 50%;
 
               img {
                 display: block;
                 max-width: 100%;
                 width: 40px;
                 height: 40px;
-                object-fit: cover;
+                object-fit: contain;
               }
 
               .card-user-empty {
@@ -7008,13 +7030,15 @@ html {
                 height: 30px;
                 margin-right: 30px;
                 position: relative;
+                background: $main;
+                border-radius: 50%;
 
                 img {
                   display: block;
                   max-width: 100%;
                   width: 30px;
                   height: 30px;
-                  object-fit: cover;
+                  object-fit: contain;
                 }
 
                 .card-user-empty {
@@ -7552,6 +7576,8 @@ html {
               .chosen-single {
                 .chose-image-small {
                   margin: 0 13px 0 0;
+                  object-fit: contain;
+                  background: $main;
                 }
               }
 
@@ -8310,13 +8336,15 @@ html {
           .client-image {
             width: 80px;
             height: 80px;
+            background: $main;
+            border-radius: 50%;
 
             img {
               max-width: 100%;
               display: block;
               width: 80px;
               height: 80px;
-              object-fit: cover;
+              object-fit: contain;
             }
 
             .card-user-empty {
@@ -8437,6 +8465,8 @@ html {
     .user-image {
       float: left;
       margin: 0 20px 0 0;
+      background: $main;
+      border-radius: 50%;
 
       .card-user-empty {
         width: 40px;
@@ -8482,12 +8512,14 @@ html {
 
 .user-image {
   width: 40px;
+  background: $main;
+  border-radius: 50%;
 
   img {
     max-width: 100%;
     width: 40px;
     height: 40px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .card-user-empty {
@@ -8503,6 +8535,12 @@ html {
   top: 15px;
   right: 15px;
   z-index: 10;
+}
+
+.chose-image-small, .chose-image-list {
+  margin: 0 13px 0 0;
+  object-fit: contain;
+  background: $main;
 }
 
 /*Project Plan List Starts*/
@@ -8829,9 +8867,10 @@ html {
       img {
         width: 40px;
         height: 40px;
-        object-fit: cover;
+        object-fit: contain;
         max-width: 100%;
         display: block;
+        background: $main;
       }
 
       .card-user-empty {
@@ -9002,12 +9041,14 @@ html {
         width: 40px;
         padding: 0;
         margin-right: 5px;
+        background: $main;
+        border-radius: 50%;
 
         img {
           max-width: 100%;
           width: 40px;
           height: 40px;
-          object-fit: cover;
+          object-fit: contain;
         }
 
         .card-user-empty {
@@ -9590,11 +9631,13 @@ html {
     .modal-body {
       .user-image {
         width: 100px;
+        background: $main;
+        border-radius: 50%;
 
         img {
           width: 60px;
           height: 60px;
-          object-fit: cover;
+          object-fit: contain;
         }
 
         .card-user-empty {
@@ -9707,13 +9750,15 @@ html {
         .candidate-image {
           width: 52px;
           padding: 0;
+          background: $main;
+          border-radius: 50%;
 
           img {
             display: block;
             max-width: 100%;
             width: 52px;
             height: 52px;
-            object-fit: cover;
+            object-fit: contain;
           }
 
           .card-user-empty {
@@ -9983,13 +10028,15 @@ html {
                   height: 30px;
                   margin-right: 30px;
                   position: relative;
+                  background: $main;
+                  border-radius: 50%;
 
                   img {
                     display: block;
                     max-width: 100%;
                     width: 30px;
                     height: 30px;
-                    object-fit: cover;
+                    object-fit: contain;
                   }
 
                   .card-user-empty {
@@ -10372,13 +10419,15 @@ html {
     .candidate-image {
       width: 52px;
       padding: 0;
+      background: $main;
+      border-radius: 50%;
 
       img {
         display: block;
         max-width: 100%;
         width: 52px;
         height: 52px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .card-user-empty {
@@ -10431,13 +10480,15 @@ html {
     .candidate-image {
       width: 52px;
       padding: 0;
+      background: $main;
+      border-radius: 50%;
 
       img {
         display: block;
         max-width: 100%;
         width: 52px;
         height: 52px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .card-user-empty {
@@ -10561,13 +10612,15 @@ html {
     .candidate-image {
       width: 52px;
       padding: 0;
+      background: $main;
+      border-radius: 50%;
 
       img {
         display: block;
         max-width: 100%;
         width: 52px;
         height: 52px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .card-user-empty {
@@ -10725,12 +10778,14 @@ html {
     width: 40px;
     padding: 0;
     margin-right: 5px;
+    background: $main;
+    border-radius: 50%;
 
     img {
       max-width: 100%;
       width: 40px;
       height: 40px;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .card-user-empty {
@@ -10922,13 +10977,15 @@ html {
     .candidate-image {
       width: 52px;
       padding: 0;
+      background: $main;
+      border-radius: 50%;
 
       img {
         display: block;
         max-width: 100%;
         width: 52px;
         height: 52px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .card-user-empty {
@@ -11016,13 +11073,15 @@ html {
       height: 42px;
       margin-right: 0;
       padding: 0 5px;
+      background: $main;
+      border-radius: 50%;
 
       img {
         max-width: 100%;
         display: block;
         width: 42px;
         height: 42px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .card-user-empty {
@@ -11053,13 +11112,15 @@ html {
     .candidate-image {
       width: 52px;
       padding: 0;
+      background: $main;
+      border-radius: 50%;
 
       img {
         display: block;
         max-width: 100%;
         width: 52px;
         height: 52px;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .card-user-empty {
@@ -11198,10 +11259,12 @@ html {
 }
 
 .client-image-container {
+  border-radius: 50%;
+
   img {
     width: 50px;
     height: 50px;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 
@@ -11916,7 +11979,6 @@ vertical-align: middle;
             .user-image {
               width: 95px;
               height: 95px;
-              background: #fff;
               -webkit-border-radius: 50%;
               -moz-border-radius: 50%;
               border-radius: 50%;
@@ -11924,11 +11986,13 @@ vertical-align: middle;
               -moz-box-shadow: 0px 10px 30px 0 rgba(53, 63, 83, 0.2);
               box-shadow: 0px 10px 30px 0 rgba(53, 63, 83, 0.2);
               position: relative;
+              background: $main;
+              border-radius: 50%;
 
               img {
                 width: 80px;
                 height: 80px;
-                object-fit: cover;
+                object-fit: contain;
                 position: absolute;
                 left: 7.5px;
                 top: 7.4px;
