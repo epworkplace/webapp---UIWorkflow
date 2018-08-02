@@ -418,12 +418,15 @@
 
               .client-image {
                 width: 40px;
+                height: 40px;
                 padding: 0;
+                background: $main;
+                border-radius: 50%;
 
                 img {
                   width: 40px;
                   height: 40px;
-                  object-fit: cover;
+                  object-fit: contain;
                 }
 
                 .card-user-empty {
@@ -483,11 +486,13 @@
           height: 52px;
           margin-bottom: 20px;
           margin-right: 20px;
+          background: $main;
+          border-radius: 50%;
 
           img {
             width: 52px;
             height: 52px;
-            object-fit: cover;
+            object-fit: contain;
           }
 
           .card-user-empty {
@@ -517,10 +522,18 @@
   align-items: center;
 
   .user-image {
-    padding: 6px 0 !important;
+    padding: 0 !important;
     margin-right: 15px;
+    width: 39px;
+    height: 39px;
+
+    img {
+      width: 39px;
+      height: 39px;
+    }
 
     .card-user-empty {
+      width: 39px;
       height: 39px;
     }
   }
@@ -817,6 +830,12 @@
             width: 40px;
             height: 40px;
             padding: 0;
+            background: $main;
+            border-radius: 50%;
+
+            &.comment {
+              background: transparent;
+            }
 
             // margin-right: 5px;
 
@@ -824,7 +843,7 @@
               max-width: 100%;
               width: 40px;
               height: 40px;
-              object-fit: cover;
+              object-fit: contain;
             }
 
             .card-user {
