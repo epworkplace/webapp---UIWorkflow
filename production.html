@@ -3,6 +3,7 @@
 <head>
     <title> Light Bootstrap Dashboard PRO by Creative Tim </title>
     <!-- @include _partials/_all-meta-head.html -->
+
 </head>
 
 <body class="wp-app layout-2">
@@ -99,7 +100,7 @@
                                               </div>
                                             </div>
                                         </div>
-                                        <a class="col-md-4 validate start-link" data-target="#deliverJob" data-toggle="modal" href="javascript:;">
+                                        <a class="col-md-4 validate start-link" data-target="#scrollifyTest" data-toggle="modal" href="javascript:;">
                                             Deliver Job
                                         </a>
                                     </div>
@@ -3671,7 +3672,7 @@
         <!-- Modal -->
         <!-- Scrollify test modal -->
         <div aria-labelledby="myModalLabel" class="modal fade delivery-job-modal" id="scrollifyTest" role="dialog" tabindex="-1">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         <button aria-label="Close" class="close" data-dismiss="modal" type="button">
@@ -5535,10 +5536,137 @@ $('div').delegate('.card-section-list ul li .card', 'click', function(e){
                     touchScroll:true
                 })*/
 
-            $(".status-comment a[data-toggle=popover]").on("show.bs.popover", function(){
+            /*$(".status-comment a[data-toggle=popover]").on("show.bs.popover", function(){
                 $(".popover").addClass("read-comment-popover");
-            });
+            });*/
 
+
+            $('.modal').on('shown.bs.modal', function () {
+                console.log('modal opened');
+                /*var $slider = $(".slickSlider");
+                var afterChange = function(slider,i) {
+                var slideHeight = jQuery(slider.$slides[i] ).height();
+                jQuery(slider.$slider ).height( slideHeight);
+              };
+                $slider.
+                on('init', function () {
+                    mouseWheel($slider);
+                }).
+                slick({
+                    dots: false,
+                    vertical: true,
+                    infinite: false,
+                    arrows: false,
+                    onAfterChange: afterChange,
+                    adaptiveHeight: true });
+
+                function mouseWheel($slider) {
+                    $(window).on('wheel', { $slider: $slider }, mouseWheelHandler);
+                }
+                function mouseWheelHandler(event) {
+                    event.preventDefault();
+                    var $slider = event.data.$slider;
+                    var delta = event.originalEvent.deltaY;
+                    if (delta > 0) {
+                        $slider.slick('slickNext');
+                    } else
+                    {
+                        $slider.slick('slickPrev');
+                    }
+                }
+                Slick.prototype.updateAdaptiveHeight = function() {
+
+                        var _ = this;
+
+                    if (_.options.adaptiveHeight === true) {
+                        var first_slide     = _.currentSlide;
+                        var last_slide      = _.currentSlide + _.options.slidesToScroll;
+                        if(last_slide > _.slideCount) {
+                                last_slide      = _.slideCount;
+                                first_slide     = last_slide - _.options.slidesToScroll;
+                        }
+
+                        var final_h = 0;
+                        var i_item = 0;
+                        _.$slider.find(".slick-track").children(_.options.slide + ":not(.slick-cloned)").each(function() {
+                                if(i_item >= first_slide && i_item < last_slide) {
+                                    var h = $(this).outerHeight();
+
+                                    if(h > final_h) {
+                                        final_h = h;
+                                    }
+
+                                }
+
+                                i_item++;
+                            });
+
+                        _.$slider.find(".slick-list, .slick-track")
+                                .animate({
+                                        height: final_h + "px"
+                                }, _.options.speed);
+                        }
+                    };*/
+
+                    /*var $slider = $(".slickSlider");
+                    $slider.
+                    on('init', function () {
+                        mouseWheel($slider);
+                    }).
+                    bxSlider({
+                        mode: 'vertical',
+                        adaptiveHeight: true,
+                        adaptiveHeightSpeed: 500,
+                        controls: false,
+                        pager: false,
+                        keyboardEnabled: true });
+
+                    function mouseWheel($slider) {
+                        $(window).on('wheel', { $slider: $slider }, mouseWheelHandler);
+                    }
+                    function mouseWheelHandler(event) {
+                        event.preventDefault();
+                        var $slider = event.data.$slider;
+                        var delta = event.originalEvent.deltaY;
+                        if (delta > 0) {
+                            $slider.bxSlider('goToNextSlide');
+                        } else
+                        {
+                            $slider.bxSlider('goToPrevSlide');
+                        }
+                    }*/
+
+                    /*$('.slickSlider').bxSlider({
+                        mode: 'vertical',
+                        adaptiveHeight: true,
+                        adaptiveHeightSpeed: 500,
+                        controls: false,
+                        pager: false,
+                        infiniteLoop: false,
+                        keyboardEnabled: true
+                    });*/
+
+                    var slider = $('.slickSlider').bxSlider({
+                        mode: 'vertical',
+                        adaptiveHeight: true,
+                        adaptiveHeightSpeed: 500,
+                        controls: false,
+                        pager: false,
+                        keyboardEnabled: true
+                    });
+
+                    $('.slickSlider').mousewheel(function(event, delta, deltaX, deltaY) {
+                    if (delta > 0) {
+                    slider.goToPrevSlide();
+                    }
+                    if (deltaY < 0){
+                    slider.goToNextSlide();
+                    }
+                    event.stopPropagation();
+                    event.preventDefault();
+                    });
+
+            })
 
         </script>
         <style>
