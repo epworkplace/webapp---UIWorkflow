@@ -861,6 +861,10 @@
             background: $main;
             border-radius: 50%;
 
+            &.comment-icon {
+              background: transparent;
+            }
+
             img {
               width: 40px;
               height: 40px;
