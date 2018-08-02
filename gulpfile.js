@@ -620,8 +620,8 @@ gulp.task('watch', function() {
   gulp.watch(fonts.in, ['fonts']);
 
   // sass changes
-  // gulp.watch([css.watch], ['sass']);
-  $.watch(css.watch, ['sass']);
+  gulp.watch([css.watch], ['sass']);
+  // $.watch(css.watch, ['sass']);
 
   // pluginCSS changes
   gulp.watch([css.pluginCSS.watch], ['css']);
