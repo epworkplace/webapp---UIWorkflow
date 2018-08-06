@@ -62,13 +62,16 @@
 
       .user-image {
         width: 40px;
-        padding: 7px 0 0 0;
+        height: 40px;
+        padding: 0;
+        background: $main;
+        border-right: 50%;
 
         img {
           max-width: 100%;
           width: 40px;
           height: 40px;
-          object-fit: cover;
+          object-fit: contain;
         }
 
         .card-user-empty {

@@ -73,9 +73,9 @@
       </div>
       <div class="modal-body">
         <ul class="bxslider">
-          <li><h3>Slide 01</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet deserunt pariatur dolore! Eaque in consequatur impedit eos illo, sint reprehenderit earum illum velit sequi nam praesentium iste eveniet deserunt?</p></li>
-          <li><h3>Slide 02</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cumque amet quae esse pariatur veniam asperiores, laudantium necessitatibus fuga architecto molestiae exercitationem aut accusantium, omnis deserunt doloribus fugit earum non.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat perspiciatis soluta perferendis, modi unde totam similique omnis. Maxime assumenda provident est architecto, sed in dolore numquam consequuntur, repellendus quidem natus.</p></li>
-          <li><h3>Slide 03</h3><p>Lorem ipsum, dolor sit amet consectetur adipisici</p></li>
+          <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet deserunt pariatur dolore! Eaque in consequatur impedit eos illo, sint reprehenderit earum illum velit sequi nam praesentium iste eveniet deserunt?</p></li>
+          <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cumque amet quae esse pariatur veniam asperiores, laudantium necessitatibus fuga architecto molestiae exercitationem aut accusantium, omnis deserunt doloribus fugit earum non.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat perspiciatis soluta perferendis, modi unde totam similique omnis. Maxime assumenda provident est architecto, sed in dolore numquam consequuntur, repellendus quidem natus.</p></li>
+          <li><p>Lorem ipsum, dolor sit amet consectetur adipisici</p></li>
         </ul>
 
         <div class="bx-pager hide">
@@ -234,6 +234,21 @@
                 $slider.on('wheel', (function(e) {
                   e.preventDefault();
 
+<<<<<<< HEAD
+            $('#scrollifyTest').on('shown.bs.modal', function(){
+                /*var $slider = $(".slider-for");
+                $slider.
+                on('init', function () {
+                    mouseWheel($slider);
+                }).
+                slick({
+                    dots: true,
+                    vertical: false,
+                    adaptiveHeight: true,
+                    infinite: false });
+
+                function mouseWheel($slider) {
+=======
                   if (e.originalEvent.deltaY < 0) {
                     $(this).slick('slickPrev');
                   } else {
@@ -242,6 +257,7 @@
                 }));
 
                 /*function mouseWheel($slider) {
+>>>>>>> 7bb699b45fc20423fc7e48f30f01ad648527e2b3
                     $(window).on('wheel', { $slider: $slider }, mouseWheelHandler);
                 }
                 function mouseWheelHandler(event) {
@@ -254,6 +270,16 @@
                     {
                         $slider.slick('slickPrev');
                     }
+<<<<<<< HEAD
+                }
+
+                 $('a[data-slide]').click(function(e) {
+                   e.preventDefault();
+                   var slideno = $(this).data('slide');
+                   $('.slider-for').slick('slickGoTo', slideno - 1);
+                 });*/
+                 var slider = $('.slider-for').bxSlider({
+=======
                 }*/
 
                  /*$('a[data-slide]').click(function(e) {
@@ -262,6 +288,7 @@
                    $('.slider-for').slick('slickGoTo', slideno - 1).find('.slick-list').css({'height':'100% !important'});
                  });*/
                  /*var slider = $('.slider-for').bxSlider({
+>>>>>>> 7bb699b45fc20423fc7e48f30f01ad648527e2b3
                         mode: 'vertical',
                         adaptiveHeight: true,
                         adaptiveHeightSpeed: 500,
@@ -286,6 +313,15 @@
                            slider.goToSlide(index);
                     });
 
+<<<<<<< HEAD
+            });
+                function quickView() {
+                  var slider2 = $('.bxslider').bxSlider({pagerCustom: '.bx-pager', adaptiveHeight: true, keyboardEnabled: true, controls: false });
+                  setTimeout(function() { slider2.reloadSlider();}, 200);
+                }
+                $(".quickview").on("click", quickView);
+                $('#myModal').on('bs.hidden.modal', quickView);
+=======
 
             });*/
 
@@ -316,6 +352,7 @@
                     }));
                 });
             });
+>>>>>>> 7bb699b45fc20423fc7e48f30f01ad648527e2b3
 
                 function quickView() {
                   var slider2 = $('.bxslider').bxSlider({pagerCustom: '.bx-pager', adaptiveHeight: true, keyboardEnabled: true, controls: false });
