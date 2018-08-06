@@ -237,8 +237,28 @@
                 // $('#myModal').on('bs.hidden.modal', quickView);
 
             // $(document).on('click', '.quickview', quickview);
-            $('#scrollifyTest').on('hidden.bs.modal', function(){
+            /*$('#scrollifyTest').on('hidden.bs.modal', function(){
                 location.reload();
+            });*/
+            /*(function(){
+                    $(".modal").on("hidden.bs.modal", function(){
+                        $(this).removeData();
+                    });
+            });*/
+            $(document).ready(function(){
+                var originalModal = $('.modal').clone();
+                console.log(originalModal);
+                $(document).on('hidden.bs.modal', '.modal', function () {
+                    $('.modal').remove();
+                    var myClone = originalModal.clone();
+                    $('body').append(myClone);
+                });
+            });
+            $(document).find('.slick-list').attr('tabindex', 0).focus();
+            $('.slider-for').on('init', function() {
+              setTimeout(function() {
+                $(document).find('.slick-list').attr('tabindex', 0).focus();
+              }, 100);
             });
         </script>
 
