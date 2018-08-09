@@ -1,37 +1,37 @@
 /* helper utility styles */
 .helper-text {
-	font-size: 12px;
-	text-transform: none !important;
-	color: $helper;
-	font-weight: 400;
+    font-size: 12px;
+    text-transform: none !important;
+    color: $helper;
+    font-weight: 400;
 
-	&.text-01 {
-		font-size: 14px;
-	}
+    &.text-01 {
+        font-size: 14px;
+    }
 
-	&.text-02 {
-		font-size: 13px;
-	}
+    &.text-02 {
+        font-size: 13px;
+    }
 
-	&.text-03 {
-		font-size: 11px;
-	}
+    &.text-03 {
+        font-size: 11px;
+    }
 
-	&.text-04 {
-		font-size: 10px;
-	}
+    &.text-04 {
+        font-size: 10px;
+    }
 
-	[class$='by'] {
-		font-weight: 600;
-	}
+    [class$='by'] {
+        font-weight: 600;
+    }
 }
 
 /* Icon inside icon */
 /* i{
-	position: relative;
-	i{
-		position: absolute;
-	}
+    position: relative;
+    i{
+        position: absolute;
+    }
 } */
 /* Icon inside icon ends*/
 
@@ -41,96 +41,96 @@ $dimensions: ("m": "margin", "p": "padding");
 $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
 
 @each $dim in $dimensions {
-	@for $i from 0 through 6 {
-		$size: $i * 5;
+    @for $i from 0 through 6 {
+        $size: $i * 5;
 
-		.#{nth($dim, 1)}-#{$size} {
-			#{nth($dim, 2)}: #{$size}px !important;
-		}
-	}
+        .#{nth($dim, 1)}-#{$size} {
+            #{nth($dim, 2)}: #{$size}px !important;
+        }
+    }
 
-	@each $dir in $directions {
-		@for $i from 0 through 6 {
-			$size: $i * 5;
+    @each $dir in $directions {
+        @for $i from 0 through 6 {
+            $size: $i * 5;
 
-			.#{nth($dim, 1)}#{nth($dir, 1)}-#{$size} {
-				#{nth($dim, 2)}-#{nth($dir, 2)}: #{$size}px !important;
-			}
-		}
-	}
+            .#{nth($dim, 1)}#{nth($dir, 1)}-#{$size} {
+                #{nth($dim, 2)}-#{nth($dir, 2)}: #{$size}px !important;
+            }
+        }
+    }
 }
 
 // button with 48% styles
 .btn-yes {
-	@include custom-btn($yes, $yes-hover);
+    @include custom-btn($yes, $yes-hover);
 }
 
 .btn-no {
-	@include custom-btn($no, $main);
+    @include custom-btn($no, $main);
 }
 
 .btn-disapprove, .btn-delete {
-	@include custom-btn($delete, $delete-hover);
+    @include custom-btn($delete, $delete-hover);
 }
 
 .btn-confirm, .btn-pause {
-	@include custom-btn($main, $not-started);
+    @include custom-btn($main, $not-started);
 }
 
 .btn-download {
-	@include custom-btn($default-bg, $default-bg-hover);
+    @include custom-btn($default-bg, $default-bg-hover);
 }
 
 
 
 .btn-yes.btn-no-final {
-	@include custom-btn-no-final($yes, $yes-hover);
+    @include custom-btn-no-final($yes, $yes-hover);
 }
 
 .btn-no.btn-no-final {
-	@include custom-btn-no-final($no, $main);
+    @include custom-btn-no-final($no, $main);
 }
 
 .btn-disapprove.btn-no-final {
-	@include custom-btn-no-final($delete, $delete-hover);
+    @include custom-btn-no-final($delete, $delete-hover);
 }
 
 .btn-confirm.btn-no-final {
-	@include custom-btn-no-final($main, $not-started);
+    @include custom-btn-no-final($main, $not-started);
 }
 
 .btn-download.btn-no-final {
-	@include custom-btn-no-final($default-bg, $default-bg-hover);
+    @include custom-btn-no-final($default-bg, $default-bg-hover);
 }
 
 .btn-logout {
-	@include custom-btn-nofill-hover(#fff, $default-bg-hover, $delete);
+    @include custom-btn-nofill-hover(#fff, $default-bg-hover, $delete);
 }
 
 // button styles ends
 
 .main-font {
-	font-size: 14px;
-	color: $main;
-	font-weight: 600;
+    font-size: 14px;
+    color: $main;
+    font-weight: 600;
 }
 
 .fw600 {
-	font-weight: 600 !important;
+    font-weight: 600 !important;
 }
 
 .fw700 {
-	font-weight: 700 !important;
+    font-weight: 700 !important;
 }
 
 .text-none {
-	text-transform: none !important;
-	font-weight: normal !important;
+    text-transform: none !important;
+    font-weight: normal !important;
 }
 
 .primary-font {
-	font-size: 14px;
-	color: $sub-heading;
+    font-size: 14px;
+    color: $sub-heading;
 }
 
 .sec-title {
@@ -144,16 +144,16 @@ $directions: ("t": "top", "b": "bottom", "r": "right", "l": "left");
     color: $delete;
 }
 label{
-	font-weight: 600;
+    font-weight: 600;
 }
 
 .df-ac {
-	display: -webkit-flex;
+    display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-	align-items: center;
+    align-items: center;
 }
 
 .df-ac-mob {
@@ -165,9 +165,9 @@ label{
 }
 
 .df-ac-jc {
-	display: flex !important;
-	align-items: center;
-	justify-content: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 }
 
 .df-ac-jc-mob {
@@ -180,57 +180,57 @@ label{
 
 // full width
 .full-width {
-	width: 100% !important;
+    width: 100% !important;
 }
 
 .auto-width {
-	width: auto !important;
+    width: auto !important;
 }
 
 .auto-height {
-	height: auto !important;
+    height: auto !important;
 }
 
 // background color classes
 .bg-yes {
-	background: $yes !important;
+    background: $yes !important;
 }
 
 // background-highlight styles
 .highlight-bg {
-	padding: 15px;
-	background: $highlight-01 !important;
+    padding: 15px;
+    background: $highlight-01 !important;
 
-	.d-block {
-		margin-bottom: 5px;
+    .d-block {
+        margin-bottom: 5px;
 
-		&:last-child {
-			margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
 
-			// margin-top: 15px;
+            // margin-top: 15px;
 
-		}
-	}
+        }
+    }
 }
 
 // Divider line style
 
 .divider{
-	@include divider();
+    @include divider();
 }
 
 .chosen-container-single {
-	.chosen-single {
-		line-height: normal;
-		display: flex;
-		height: 38px;
-		align-items: center;
-		box-sizing: border-box;
+    .chosen-single {
+        line-height: normal;
+        display: flex;
+        height: 38px;
+        align-items: center;
+        box-sizing: border-box;
 
-		div {
-			b {
-				background-position-y: 13px;
-			}
-		}
-	}
+        div {
+            b {
+                background-position-y: 13px;
+            }
+        }
+    }
 }

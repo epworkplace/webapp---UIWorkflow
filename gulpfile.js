@@ -586,10 +586,6 @@ $.watch([dest + '**/*.css'], $.batch(function (events, done) {
   // font changes
   gulp.watch(fonts.in, ['fonts']);*/
 
-    $.watch([dest + '**/*.css'], $.batch(function (events, done) {
-      gulp.start(browserSync.stream(), done);
-    }));
-
   /*// sass changes
   gulp.watch([css.watch], ['sass']);
 

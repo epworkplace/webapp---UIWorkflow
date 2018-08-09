@@ -463,7 +463,7 @@
 		        // console.log('Clicked on card-box');
 		        window.open('contract-overview.html','_blank');
 		    }
-		})
+		});
 
 	/* Edit bulk duplicate modal Title*/
 	  $('#editCreateMissionTitle').click(function(e) {
@@ -559,7 +559,7 @@
 				$('.wp-app').css({
 					overflow: 'hidden'
 				});
-			})
+			});
 		});
 		$('.settings-wrap .close a, .settings-wrap .tab-navigation button.btn-cancel-settings').click(function() {
             $('.overlay-main-container, .settings-wrap').fadeOut(function(){
@@ -569,7 +569,7 @@
                 $('.wp-app.layout-5').css({
                     'overflow-y': 'hidden'
                 });
-            })
+            });
         });
 
 		/*Job filter select alljobs starts*/
@@ -588,35 +588,81 @@
 
 		/*Show user info on hover of user image*/
 
-			$(document).on('mouseenter', '.user-container li', function(e){
-				e.stopPropagation();
-				e.stopImmediatePropagation();
-				var thisClass = this.className;
-				console.log(thisClass);
-				$.fn.extend({
-				    hasClasses: function (selectors) {
-				        var self = this;
-				        for (var i in selectors) {
-				            if ($(self).hasClass(selectors[i]))
-				                return true;
-				        }
-				        return false;
-				    }
-				});
-				if($(this).parents('.card-box').hasClasses(['completed', 'draft', 'delivered', 'ready']) || $(this).find('.card-user-empty').hasClasses(['empty']) ){
-					return false;
-				} else {
-					if($(this).hasClass("active")){
-					    /*$(this).removeClass('active');
-					    thisClass = this.className;*/
-					} else {
-						$(this).parent('.user-container').find('li').removeClass('active');
-						$(this).addClass('active');
-						$(this).parents('.card-box').find('.user-info-container li').removeClass('active');
-						$(this).parents('.card-box').find('.user-info-container').find($('.' + thisClass)).addClass('active');
-					}
-				}
+            $.fn.extend({
+                hasClasses: function (selectors) {
+                    var self = this;
+                    for (var i in selectors) {
+                        if ($(self).hasClass(selectors[i]))
+                            return true;
+                    }
+                    return false;
+                },
+                addActive: function(selectors){
+                    $(this).find('li.default').addClass('active');
+                },
+                removeActive: function(selectors){
+                    $(this).find('li').removeClass('active');
+                }
+            });
+
+            $('.decks .card-box').each(function(){
+                var defaultClass = $(this).find('.user-container').find('li').hasClass('default'),
+                    defaultInfoClass = $(this).find('.user-info-container').find('li').hasClass('default');
+                        if ( !(defaultClass) || !(defaultInfoClass) ) {
+                            $(this).find('.user-container').find('li').removeClass('active');
+                            console.log("FALSE");
+                        } else if ( (defaultClass) && (defaultInfoClass) ) {
+                            $(this).find('.user-container, .user-info-container').find('li.default').addClass('active');
+                            console.log("TRUE");
+                        }
+            });
+
+            $(document).on('mouseenter', '.user-container li', function(e){
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                var thisClass = this.className,
+                    thisClassJoined = thisClass.split(' ').join('.'),
+                    infoClass = $(this).parents('.card-box').find('.user-info-container li').hasClass(thisClass);
+
+
+                if($(this).parents('.card-box').hasClasses(['completed', 'draft', 'delivered', 'ready']) || $(this).find('.card-user-empty').hasClasses(['empty']) ) {
+                    return false;
+                } else if (!(infoClass)){
+                    $(this).parent('.user-container').find('li').removeClass('active');
+                    $(this).parents('.card-box').find('.user-info-container li').removeClass('active');
+                } else if (infoClass){
+                    if($(this).hasClass("active")){
+                        return false;
+                    }
+                    $(this).parent('.user-container').find('li').removeClass('active');
+                    $(this).parent('.user-container').find($('.' + thisClassJoined)).addClass('active');
+                    $(this).parents('.card-box').find('.user-info-container li').removeClass('active');
+                    $(this).parents('.card-box').find('.user-info-container').find($('.' + thisClassJoined)).addClass('active');
+                }
 			});
+            $(document).on('mouseleave', '.card-box', function(e){
+                e.stopPropagation();
+                e.stopImmediatePropagation();
+                var thisClass = $(this).find('.user-container li').hasClass('default'),
+                    infoClass = $(this).find('.user-info-container li').hasClass('default');
+
+                if ( !(thisClass) || !(infoClass) ) {
+                    $(this).find('.user-container li, .user-info-container li').removeClass('active');
+                    // $(this).find('.user-info-container li').removeClass('active');
+                    console.log("Either of the div don't have class 'default'.");
+                    return false;
+                } else if ( (thisClass) && (infoClass) ) {
+                    $(this).find('.user-container li').removeClass('active');
+                    $(this).find(('.user-container li.default')).addClass('active');
+                    $(this).find('.user-info-container li').removeClass('active');
+                    $(this).find('.user-info-container li.default').addClass('active');
+                    console.log("Both of the div have class 'default'.");
+                }
+
+                if($(this).parents('.card-box').hasClasses(['completed', 'draft', 'delivered', 'ready']) || $(this).find('.card-user-empty').hasClasses(['empty']) ){
+                    return false;
+                }
+            });
 			/*$('div').delegate('.user-container li', 'mouseenter', function(e){
 				console.log("enerted to li");
 			    if($(e.target).closest('.draft, .completed, .card-user-empty.empty').length === 0) {
@@ -638,6 +684,14 @@
 			})*/
 
 		/*Show user info on hover of user image ends*/
+        /*Teamlist single selection highlight*/
+            $(document).on('click', '.card-status .checkbox', function(e){
+                e.preventDefault();
+                // e.stipImmediatePropogation();
+                // $(this).parents('.card-box').siblings().removeClass('selected');
+                $(this).parents('.card-box').toggleClass('selected');
+            });
+        /*Teamlist single selection highlight*/
 
 	});
 </script>
