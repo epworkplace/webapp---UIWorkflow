@@ -652,10 +652,8 @@
                     console.log("Either of the div don't have class 'default'.");
                     return false;
                 } else if ( (thisClass) && (infoClass) ) {
-                    $(this).find('.user-container li').removeClass('active');
-                    $(this).find(('.user-container li.default')).addClass('active');
-                    $(this).find('.user-info-container li').removeClass('active');
-                    $(this).find('.user-info-container li.default').addClass('active');
+                    $(this).find('.user-container li, .user-info-container li').removeClass('active');
+                    $(this).find(('.user-container li.default, .user-info-container li.default')).addClass('active');
                     console.log("Both of the div have class 'default'.");
                 }
 
@@ -684,14 +682,14 @@
 			})*/
 
 		/*Show user info on hover of user image ends*/
-        /*Teamlist single selection highlight*/
+        /*Cards selection highlight*/
             $(document).on('click', '.card-status .checkbox', function(e){
                 e.preventDefault();
                 // e.stipImmediatePropogation();
                 // $(this).parents('.card-box').siblings().removeClass('selected');
                 $(this).parents('.card-box').toggleClass('selected');
             });
-        /*Teamlist single selection highlight*/
+        /*Cards selection highlight*/
 
 	});
 </script>
