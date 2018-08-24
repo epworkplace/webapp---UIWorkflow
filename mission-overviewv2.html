@@ -691,6 +691,20 @@
             });
         /*Cards selection highlight*/
 
+        /* Add Assignee Select duplicate Start*/
+
+        $('.job-role-title a').click(function(e) {
+            e.preventDefault();
+            $(this).parent('.job-role-title').next('.job-assigned').children('.assignee-selector').addClass('d-block');
+        });
+
+        $('.assignee-selector .bootstrap-select').change(function(e) {
+            $(this).parent('.assignee-selector').removeClass('d-block');
+            $(this).parent('.assignee-selector').next('.selected-assignee-list').append('<div class="row"> <div class="col-md-12"> <div class="col-md-12 selected-assignee-container"> <div class="row df-ac"> <div class="col-md-2 user-image"> <img src="lbd/img/default-avatar.png" class="img-circle"> </div><div class="col-md-5 assignee-info"> <div class="contributor-name">Michael Martin</div></div><div class="col-md-4 price-info"> <div class="input-group"> <input type="text" class="form-control" aria-describedby="euro" value="11.30"> <span class="input-group-addon" id="euro">&#8364;</span> </div></div><div class="col-md-1 delete-assignee"> <a href="javascript:;"> <i class="material-icons">delete</i> </a> </div></div></div></div></div>')
+        });
+
+        /* Add Assignee Select duplicate End*/
+
 	});
 </script>
 
