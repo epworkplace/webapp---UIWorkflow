@@ -412,23 +412,27 @@
 }
 
 .quote-mission-creation {
-  height: 193px !important;
-  padding: 15px 3px !important;
+  height: auto !important;
+  padding: 15px !important;
 
-  .check {
+  /*   .check {
     padding: 0 15px !important;
   }
 
   .list-image-container {
     margin: 0px 20px 0 5px !important;
   }
-
+   */
   .list-head-quote-mission-creation {
-    width: 75% !important;
+    width: 100% !important;
+
+    /* width: 75% !important;
     margin-top: -6px !important;
-    margin-bottom: 7px;
+    margin-bottom: 7px; */
 
     .header {
+      margin-top: -10px;
+
       label {
         font-size: 12px;
         font-weight: 400;
@@ -439,16 +443,14 @@
 
       input[type='text'] {
         font-size: 16px;
-        border: 0;
-        padding: 0;
-        margin: -7px 0 0 0;
+        margin-bottom: 10px;
       }
     }
   }
 
-  a.delete-create-mission {
+  /* a.delete-create-mission {
     margin-top: 10px;
-  }
+  } */
 }
 
 .mission-type-creation {

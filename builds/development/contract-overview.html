@@ -1350,29 +1350,18 @@
 	                                															<div class="col-md-12 card card-mission quote-mission-creation">
 	                                																<div class="row">
 	                                																	<div class="col-md-12">
-	                                																		<div class="col-md-1 check">
-	                                																			<label class="checkbox">
-	                                																				<input id="contract1" type="checkbox" data-toggle="checkbox" value="">
-	                                																			</label>
-	                                																		</div>
-	                                																		<div class="col-md-1 list-image-container">
-	                                																			<div class="list-image empty-image" id="" data-value="60"></div>
-	                                																		</div>
-	                                																		<div class="col-md-6 list-head-container list-head-quote-mission-creation">
+	                                																		<div class="col-md-12 list-head-container list-head-quote-mission-creation">
 	                                																			<div class="header">
-	                                																				<label>Mission name</label>
-	                                																				<input type="text" class="form-control" value="" placeholder="Type title here">
+	                                																				<label>Create a new mission</label>
+	                                																				<input type="text" class="form-control" value="" id="createMissionTitle" placeholder="Mission title">
 	                                																			</div>
 	                                																		</div>
-	                                																		<a class="col-md-1 pull-right delete-create-mission" href="javascript:;" data-toggle="tooltip" data-container="body" data-placement="bottom" title="Delete">
-	                                																			<i class="material-icons">delete</i>
-	                                																		</a>
 	                                																	</div>
 	                                																</div>
 	                                																<div class="row">
 	                                																	<div class="col-md-12 mission-type-creation">
 	                                																		<div class="col-md-4">
-	                                																			<select name="" class="selectpicker" title="Service">
+	                                																			<select name="" class="selectpicker" title="Choose Service">
 	                                																				<option>Service 1</option>
 	                                																				<option>Service 2</option>
 	                                																				<option>Service 3</option>
@@ -1399,7 +1388,7 @@
 	                                																</div>
 	                                																<div class="row">
 	                                																	<div class="col-md-12">
-	                                																		<div class="col-md-5">
+	                                																		<div class="col-md-6">
 	                                																			<div class="row">
 	                                																				<div class="col-md-6">
 	                                																					<select class="chosen-default flags">
@@ -1421,8 +1410,15 @@
 	                                																				</div>
 	                                																			</div>
 	                                																		</div>
-	                                																		<div class="col-md-4 pull-right">
-	                                																			<button type="" data-toggle="modal" data-target="#createQuoteMissionModal" class="btn btn-fill btn-yes pull-right">Edit Details</button>
+	                                																		<div class="col-md-6">
+	                                                                                                            <div class="row">
+	                                                                                                                <div class="col-md-6">
+	                                                                                                                    <button type="" class="btn btn-fill btn-confirm full-width">Cancel</button>
+	                                                                                                                </div>
+	                                                                                                                <div class="col-md-6">
+	                                                                                                                    <button type="" data-toggle="modal" data-target="#createQuoteMissionModal" id="createMissionTitleBtn" class="btn btn-fill btn-yes full-width disabled">Create mission</button>
+	                                                                                                                </div>
+	                                                                                                            </div>
 	                                																		</div>
 	                                																	</div>
 	                                																</div>
@@ -3801,6 +3797,18 @@
 </script>
 
 <script>
+/*Script to disable create Mission if title is empty*/
+$(document).ready(function(){
+    $('#createMissionTitle').on('keyup', function() {
+        if($(this).val().length == 0) {
+            $('#createMissionTitleBtn').addClass('disabled')
+        }
+        else{
+            $('#createMissionTitleBtn').removeClass('disabled')
+        }
+    });
+});
+
 // Card-mission click to open Specific mission
 $(document).ready(function(){
 $('div').delegate('.card-section-list ul li .card', 'click', function(e){

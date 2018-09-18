@@ -1099,6 +1099,18 @@
 </script>
 
 <script>
+/*Script to disable create Mission if title is empty*/
+$(document).ready(function(){
+    $('#createMissionTitle').on('keyup', function() {
+        if($(this).val().length == 0) {
+            $('#createMissionTitleBtn').addClass('disabled')
+        }
+        else{
+            $('#createMissionTitleBtn').removeClass('disabled')
+        }
+    });
+});
+
 // Card-mission click to open Specific mission
 $(document).ready(function(){
 $('div').delegate('.card-section-list ul li .card', 'click', function(e){
