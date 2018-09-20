@@ -1717,7 +1717,18 @@ $(document).ready(function() {
             overflow: 'hidden'
         });
     });
+});
 
+/*Script to disable create Mission if title is empty*/
+$(document).ready(function(){
+    $('#createMissionTitle').on('keyup', function() {
+        if($(this).val().length == 0) {
+            $('#createMissionTitleBtn').addClass('disabled')
+        }
+        else{
+            $('#createMissionTitleBtn').removeClass('disabled')
+        }
+    });
 });
 
 /*Plagiarism Progress*/
