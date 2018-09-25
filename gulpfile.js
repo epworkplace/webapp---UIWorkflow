@@ -88,7 +88,6 @@ var
           source + 'lbd/js/ggdrive.js',
           source + 'lbd/js/jquery.MultiFileQuote.js',
           source + 'lbd/js/bootstrap-show-password.min.js',
-          source + 'lbd/js/lightbox.min.js',
           source + 'lbd/js/custom.js'],
     out: dest + 'lbd/js/'
   },
@@ -298,10 +297,9 @@ gulp.task('js', function() {
           "jquery.MultiFileQuote.js",
           // "bootstrap-select.js",
           "bootstrap-show-password.min.js",
-          "countdown.js",
-          "lightbox.min.js"
+          "countdown.js"
           // "lbd/js/custom.js"
-          ]))
+        ]))
       .pipe($.concat('lbd-bundle.js', {rebaseUrls: false}))
       // .pipe($.uglify())
       // .pipe($.gzip({append: false}))
