@@ -568,10 +568,10 @@
                 </div>
                 <div class="panel-footer">
                     <div class="input-group">
-                        <textarea id="btn-input" rows="1" class="form-control mention theSelector" placeholder="your Message"></textarea>
-                        <span class="input-group-btn attach-comment-file">
-                        	<a href="javascript:;"><i class="material-icons">attach_file</i></a>
-                        </span>
+                        <textarea id="btn-input" rows="1" class="form-control mention theSelector" data-emojiable="true" placeholder="your Message"></textarea>
+                        <!-- <span class="input-group-btn attach-comment-file">
+                            <a href="javascript:;"><i class="material-icons">attach_file</i></a>
+                        </span> -->
                         <span class="input-group-btn">
                             <button class="btn btn-primary btn-fill" id="btn-chat">Envoyer</button>
                         </span>
@@ -1170,4 +1170,19 @@
 
 <!--   Core JS Files   -->
 <!-- @include _partials/_all-js-files.html -->
+  <!-- ** Don't forget to Add jQuery here ** -->
+      <script>
+      $(function() {
+        // Initializes and creates emoji set from sprite sheet
+        window.emojiPicker = new EmojiPicker({
+          emojiable_selector: '[data-emojiable=true]',
+          assetsPath: 'lbd/lib/emoji-picker-master/lib/img/',
+          popupButtonClasses: 'fa fa-smile-o'
+        });
+        // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+        // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+        // It can be called as many times as necessary; previously converted input fields will not be converted again
+        window.emojiPicker.discover();
+      });
+    </script>
 </html>

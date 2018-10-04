@@ -395,6 +395,12 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
                       source + 'lbd/lib/validation-engine/jquery.validationEngine.js',
                       source + 'lbd/lib/validation-engine/validationEngine.jquery.css',
                       source + 'lbd/lib/matchmedia/matchMedia.js',
+                      /*emoji-starts*/
+                      source + 'lbd/lib/emoji-picker-master/lib/js/config.js',
+                      source + 'lbd/lib/emoji-picker-master/lib/js/util.js',
+                      source + 'lbd/lib/emoji-picker-master/lib/js/jquery.emojiarea.js',
+                      source + 'lbd/lib/emoji-picker-master/lib/js/emoji-picker.js',
+                      /*emoji-ends*/
                       source + 'lbd/lib/readmore-js/readmore.js'])
       .pipe($.size({title: 'jsLibsLive in '}))
       .pipe($.newer(dest + 'lbd/lib/'))
@@ -418,6 +424,12 @@ gulp.task('jsliblive', ['tinymce','slick-fonts'], function() {
           "jquery.validationEngine-fr.js",
           "jquery.validationEngine.js",
           "matchMedia.js",
+          /*emoji-starts*/
+          "config.js",
+          "util.js",
+          "jquery.emojiarea.js",
+          "emoji-picker.js",
+          /*emoji-ends*/
           "readmore.js"
           ]))
       .pipe($.concat('plugins-bundle.js'))
