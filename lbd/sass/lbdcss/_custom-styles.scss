@@ -2078,7 +2078,7 @@ html {
       width: 15px;
       color: #d3d3d3;
       padding: 10px 0;
-      margin: 1px 0 0 21px;
+      margin: 1px 0 0 10px;
 
       &:hover {
         color: #555;
@@ -9479,6 +9479,10 @@ html {
 
   &.delete {
     background: #ee0a5f;
+  }
+
+  &.plagiarism {
+    background: $rework;
   }
 
   &.not-started {
